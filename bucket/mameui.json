@@ -1,0 +1,30 @@
+{
+    "version": "0.245",
+    "description": "MAMEUI is the x64 GUI version of MAME on the Windows platform.",
+    "homepage": "http://www.mameui.info/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.mameui.info/MAMEUI.7z",
+            "hash": "f611c40d934a43b1fb6634f5aafff74e4d3e595eb2edbc9b94855278972d578e",
+            "extract_dir": "MAMEUI",
+            "shortcuts": [
+                [
+                    "MAMEUI.exe",
+                    "MAMEUI"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "regex": "MAMEUI v\\.([\\d]+) Download",
+        "replace": "0.${1}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://www.mameui.info/MAMEUI.7z"
+            }
+        }
+    }
+}
