@@ -16,7 +16,6 @@ To make a new manifest contribution, please read the [Contributing Guide](https:
 
 ----
 
-#### To use this template
+#### Work in Progress
 
-- Modify the Readme.md and the bin/auto-pr.ps1 files accordingly.
-- Enable GitHub Actions for this repository.
+This repo is still a W.I.P. and it is too early to use it at this point in time.
