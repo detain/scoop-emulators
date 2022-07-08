@@ -1,0 +1,40 @@
+{
+    "version": "2022.07.3",
+    "description": "Nintendo 64 emulator",
+    "homepage": "https://m64p.github.io/",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/m64p/m64p/blob/main/LICENSE"
+    },
+    "url": "https://github.com/m64p/m64p/releases/download/v2022.07.3/m64p-win64-6d24363.zip",
+    "hash": "deb7be272d10c0daac6ab754d213e9d930289b43f59e573d7df3404080aa78fa",
+    "extract_dir": "mupen64plus",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\mupen64plus-gui.ini\")) {",
+        "   New-Item    \"$dir\\mupen64plus-gui.ini\" -Type File | Out-Null",
+        "   Set-Content \"$dir\\mupen64plus-gui.ini\" '[General]'",
+        "   Add-Content \"$dir\\mupen64plus-gui.ini\" 'version=2'",
+        "   Add-Content \"$dir\\mupen64plus-gui.ini\" 'configDirPath=$APP_PATH$/config'",
+        "}"
+    ],
+    "bin": [
+        [
+            "mupen64plus-gui.exe",
+            "m64p"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mupen64plus-gui.exe",
+            "m64p"
+        ]
+    ],
+    "persist": "config",
+    "checkver": {
+        "github": "https://github.com/m64p/m64p",
+        "regex": "v([\\d\\.]+)\\/m64p-win64-(?<commit>[\\da-f]{7})\\."
+    },
+    "autoupdate": {
+        "url": "https://github.com/m64p/m64p/releases/download/v$version/m64p-win64-$matchCommit.zip"
+    }
+}

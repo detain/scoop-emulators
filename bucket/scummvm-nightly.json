@@ -1,0 +1,52 @@
+{
+    "version": "0dede3f8",
+    "homepage": "https://www.scummvm.org/",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/scummvm/scummvm/blob/master/COPYING"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-0dede3f8.zip",
+            "hash": "290a77b751cde3832bb26539bbf6636c76fc37d1af298572d9293632fa8d2046",
+            "extract_dir": "windows-x86-master-0dede3f8"
+        },
+        "64bit": {
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-0dede3f8.zip",
+            "hash": "b09e286d77006a2eb85bdff7ae05107a17cd94fc27bc1450f7b4bc9546156e4e",
+            "extract_dir": "windows-x86-64-master-0dede3f8"
+        }
+    },
+    "bin": "win32dist-mingw/scummvm.exe",
+    "shortcuts": [
+        [
+            "scummvm.exe",
+            "ScummVM (nightly)"
+        ]
+    ],
+    "persist": [
+        "scummvm.ini",
+        "saves",
+        "themes",
+        "extras"
+    ],
+    "checkver": {
+        "url": "https://buildbot.scummvm.org/dailybuilds/master/?C=M;O=D",
+        "regex": "windows-x86-64-master-([a-f0-9]{8}).zip"
+    },
+    "autoupdate": {
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "architecture": {
+            "32bit": {
+                "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-$version.zip",
+                "extract_dir": "windows-x86-master-$version"
+            },
+            "64bit": {
+                "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-$version.zip",
+                "extract_dir": "windows-x86-64-master-$version"
+            }
+        }
+    }
+}

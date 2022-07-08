@@ -1,0 +1,43 @@
+{
+    "version": "0.7.58",
+    "description": "Microsoft Xbox emulator",
+    "homepage": "https://xemu.app",
+    "license": {
+        "identifier": "GPL-2.0",
+        "url": "https://github.com/mdetainson/xemu/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mdetainson/xemu/releases/download/v0.7.58/xemu-win-release.zip",
+            "hash": "b7f535566cf3effe2c27e448aebcd81080bf4ab074a99183b2558a5afc82d92a"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-item \"$persist_dir\\bios\" -ItemType Directory | Out-Null",
+        "   New-item \"$persist_dir\\data\" -ItemType Directory | Out-Null",
+        "}"
+    ],
+    "bin": "xemu.exe",
+    "shortcuts": [
+        [
+            "xemu.exe",
+            "Xemu"
+        ]
+    ],
+    "persist": [
+        "bios",
+        "data"
+    ],
+    "checkver": {
+        "github": "https://github.com/mdetainson/xemu"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mdetainson/xemu/releases/download/v$version/xemu-win-release.zip"
+            }
+        }
+    }
+}
