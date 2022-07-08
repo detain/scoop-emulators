@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml) [![Excavator](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml)
 
-A [Scoop](https://scoop.sh) bucket 🪣for console 🎮and arcade 🕹emulators.
+A 🥄[Scoop](https://scoop.sh) 🪣bucket for 🎮console and 🕹arcade emulators.
 
 How do I install these manifests?
 ---------------------------------
