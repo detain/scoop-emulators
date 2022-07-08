@@ -1,0 +1,10 @@
+{
+    "version": "0.96.4",
+    "url": "https://downloads.sourceforge.net/project/acme-crossass/win32/acme0.96.4win.zip",
+    "hash": "3b6dc41880adda5c1915510369ebf5ccbdfd42f3bc1b5a6830275d25ee46f0cb",
+    "extract_dir": "acme0.96.4win/acme",
+    "bin": "acme.exe",
+    "env_set": {
+        "ACME": "$dir\\ACME_LIB"
+    }
+}
