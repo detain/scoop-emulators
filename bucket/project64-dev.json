@@ -6,20 +6,24 @@
         "identifier": "GPL-2.0",
         "url": "https://github.com/project64/project64/blob/develop/license.md"
     },
-    "url": "https://www.pj64-emu.com/file/setup-project64-Dev-4-0-0-5830-3576bb2/",
-    "hash": "48ecbe4256535a1400faa925b0a6ca64170bda3674e595d5760731203181d988",
-    "bin": [
-        [
-            "Project64.exe",
-            "Project64-dev"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "Project64.exe",
-            "Project64 (dev)"
-        ]
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.pj64-emu.com/file/setup-project64-Dev-4-0-0-5830-3576bb2/",
+            "hash": "48ecbe4256535a1400faa925b0a6ca64170bda3674e595d5760731203181d988",
+            "bin": [
+                [
+                    "Project64.exe",
+                    "Project64-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Project64.exe",
+                    "Project64 (dev)"
+                ]
+            ]
+        }
+    },
     "persist": [
         "Config",
         "Logs",
