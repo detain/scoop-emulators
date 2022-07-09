@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://www.pj64-emu.com/public-releases",
-        "regex": "(.+?) (?<url>.*)",
+        "regex": "(?<version>.+?) (?<url>.*)",
         "script": [
             "$ProgressPreference = 'SilentlyContinue'",
             "#$json = Get-Content bucket\\project64.json | ConvertFrom-Json",
@@ -37,7 +37,7 @@
             "$bregex = New-Object System.Text.RegularExpressions.Regex(\"window.location = '\/(?<url>[^']+)'\")",
             "$bmatch = $bregex.Matches($bpage) | Select-Object -First 1",
             "$rurl = $bmatch.Groups['url'].Value",
-            "$curl = $json.homepage + $bmatch.Groups['url'].Value",
+            "$curl = $json.homepage + $rurl",
             "$cpage = (Invoke-WebRequest -Method Head $curl).RawContent",
             "$cregex = New-Object System.Text.RegularExpressions.Regex(\"filename=`\"Project64-(?<version>[\\d.]+-[\\d]+-[0-9a-f]+`)\")",
             "$cmatch = $cregex.Matches($cpage) | Select-Object -First 1",
@@ -47,6 +47,6 @@
         ]
     },
     "autoupdate": {
-        "url": "https://www.pj64-emu.com/$matchUrl#/dl.zip"
+        "url": "https://www.pj64-emu.com/$matchUrl"
     }
 }
