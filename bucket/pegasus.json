@@ -18,12 +18,12 @@
     ],
     "checkver": {
         "github": "https://github.com/mmatyas/pegasus-frontend",
-        "regex": "weekly_(?<week>[\\dw]+)/pegasus-fe_([\\w\\d-]+)_win-mingw-static.zip"
+        "regex": "download/(?<version>[wa][^/]+)/pegasus-fe_([^\\.]+)_win-mingw-static.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mmatyas/pegasus-frontend/releases/download/weekly_$matchWeek/pegasus-fe_$version_win-mingw-static.zip"
+                "url": "https://github.com/mmatyas/pegasus-frontend/releases/download/$version/pegasus-fe_$version_win-mingw-static.zip"
             }
         }
     }
