@@ -48,7 +48,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 ##### Version and Auto Update Problems
 
 - *fceux-dev*: couldn't match '(?<job32>[\w]{16}) (?<job64>[\w]{16}) (?<build>[\d]+) (?<commit>[a-f0-9]{8})' in https://ci.appveyor.com/api/projects/zeromus/fceux
-- *pegasus*: couldn't match 'weekly_(?<week>[\dw]+)/pegasus-fe_([\w\d-]+)_win-mingw-static.zip' in https://github.com/mmatyas/pegasus-frontend/releases/latest
 
 #### Missing Version Checking or Auto-Updating Code
 
