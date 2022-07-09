@@ -27,9 +27,9 @@
         "url": "https://www.pj64-emu.com/public-releases",
         "regex": "(.+?) (?<url>.*)",
         "script": [
-            "#$json = Get-Content bucket\\project64.json | ConvertFrom-Json",
-            "#$page = (Invoke-WebRequest $json.checkver.url).Content",
             "$ProgressPreference = 'SilentlyContinue'",
+            "#$json = Get-Content bucket\\project64.json | ConvertFrom-Json",
+            "$page = (Invoke-WebRequest $json.checkver.url).Content",
             "$aregex = New-Object System.Text.RegularExpressions.Regex(\"<a href=`\"\/`(?<url>[^`\"]*`)`\">Project64`\\s+`(?<version>v?[`\\d.]+`)`\\s+Zip<\/a>\")",
             "$amatch = $aregex.Matches($page) | Select-Object -First 1",
             "$burl = $json.homepage + $amatch.Groups['url'].Value",
