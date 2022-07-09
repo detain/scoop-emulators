@@ -24,18 +24,18 @@
             ]
         },
         "64bit": {
-            "url": "https://ci.appveyor.com/api/buildjobs/3ook8m0cg4bd1u37/artifacts/qfceux64.zip",
-            "hash": "d4e87af6bf593ce05e12b1e49f9609569d175f624d6dbd9412e4a94bf5d59b87",
+            "url": "https://github.com/detain/scoop-emulators-cache/raw/master/fceux-dev/fceux64.zip",
+            "hash": "d35657c0812b1399cfd0169baf0691375c2a2bafe4925bf9760d15598fccef44",
             "extract_dir": "bin",
             "bin": [
                 [
-                    "qfceux.exe",
+                    "fceux64.exe",
                     "fceux-dev"
                 ]
             ],
             "shortcuts": [
                 [
-                    "qfceux.exe",
+                    "fceux64.exe",
                     "FCEUX (dev)"
                 ]
             ]
