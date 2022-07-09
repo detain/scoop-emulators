@@ -6,7 +6,7 @@
         "identifier": "GPL-2.0",
         "url": "https://github.com/project64/project64/blob/develop/license.md"
     },
-    "url": "https://www.pj64-emu.com/file/project64-3-0-0-5632-f83bee9#/dl.zip",
+    "url": "https://www.pj64-emu.com/file/project64-3-0-0-5632-f83bee9/",
     "hash": "6e2d123a0d665576649c16dc0cb902d70f9a1072a5fbcd23a5ab4cf3854dd07f",
     "shortcuts": [
         [
@@ -30,11 +30,11 @@
             "$ProgressPreference = 'SilentlyContinue'",
             "#$json = Get-Content bucket\\project64.json | ConvertFrom-Json",
             "$page = (Invoke-WebRequest $json.checkver.url).Content",
-            "$aregex = New-Object System.Text.RegularExpressions.Regex(\"<a href=`\"\/`(?<url>[^`\"]*`)`\">Project64`\\s+`(?<version>v?[`\\d.]+`)`\\s+Zip<\/a>\")",
+            "$aregex = New-Object System.Text.RegularExpressions.Regex(\"<a href=`\"/`(?<url>[^`\"]*`)`\">Project64`\\s+`(?<version>v?[`\\d.]+`)`\\s+Zip</a>\")",
             "$amatch = $aregex.Matches($page) | Select-Object -First 1",
             "$burl = $json.homepage + $amatch.Groups['url'].Value",
             "$bpage = (Invoke-WebRequest $burl).Content",
-            "$bregex = New-Object System.Text.RegularExpressions.Regex(\"window.location = '\/(?<url>[^']+)'\")",
+            "$bregex = New-Object System.Text.RegularExpressions.Regex(\"window.location = '/(?<url>[^']+)'\")",
             "$bmatch = $bregex.Matches($bpage) | Select-Object -First 1",
             "$rurl = $bmatch.Groups['url'].Value",
             "$curl = $json.homepage + $rurl",
@@ -47,6 +47,6 @@
         ]
     },
     "autoupdate": {
-        "url": "https://www.pj64-emu.com/$matchUrl"
+        "url": "https://www.pj64-emu.com/$url"
     }
 }
