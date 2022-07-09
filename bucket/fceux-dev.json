@@ -47,6 +47,7 @@
         "    New-Item \"$dir\\fceux.cfg\" -Type File | Out-Null",
         "}"
     ],
+    "depends": "scoop-validator",
     "persist": [
         "cheats",
         "fcs",
