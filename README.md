@@ -37,9 +37,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
  |  |  |
 [1][0][1] cc65
        > The remote server returned an error: (502) Bad Gateway. (https://dl.bintray.com/cdtdoug/tools/cc65-2.18.7z)
-[2][0][2] fceux-dev
-       > The remote server returned an error: (404) Not Found. (https://ci.appveyor.com/api/buildjobs/3ook8m0cg4bd1u37/artifacts/qfceux64.zip)
-       > The remote server returned an error: (404) Not Found. (https://ci.appveyor.com/api/buildjobs/rrfsttxumuo7yr9o/artifacts/fceux.zip)
 [1][0][1] reicast
        > The remote server returned an error: (404) Not Found. (http://reicast-builds-windows.s3.amazonaws.com/builds/heads/stable-333b7c536071ea77b0ecc46e534cb28206e471b4/reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.zip)
 [1][0][1] vice
