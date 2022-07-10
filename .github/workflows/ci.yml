@@ -29,6 +29,7 @@ jobs:
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
+          add-type -assemblyName "Scoop.Validator"
           .\scoop_core\test\bin\init.ps1
           .\scoop-emulators\bin\test.ps1
   test_pwsh:
