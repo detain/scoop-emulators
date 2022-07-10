@@ -20,6 +20,11 @@ jobs:
         with:
           repository: ScoopInstaller/Scoop
           path: 'scoop_core'
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v4
+        with:
+          modules-to-cache: PSScriptAnalyzer, BuildHelpers, Pester:4.10.1
+          shell: powershell
       - name: Init and Test
         shell: powershell
         run: |
@@ -40,6 +45,11 @@ jobs:
         with:
           repository: ScoopInstaller/Scoop
           path: 'scoop_core'
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v4
+        with:
+          modules-to-cache: PSScriptAnalyzer, BuildHelpers, Pester:4.10.1
+          shell: pwsh
       - name: Init and Test
         shell: pwsh
         run: |
