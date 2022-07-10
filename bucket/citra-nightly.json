@@ -42,7 +42,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/citra-emu/citra-nightly/releases/download/nightly-$version/citra-windows-$matchEnv-$matchCommit.$matchZip"
+                "url": "https://github.com/citra-emu/citra-nightly/releases/download/nightly-$matcBuild/citra-windows-$matchEnv-$matchCommit.$matchZip"
             }
         },
         "extract_dir": "nightly-$matchEnv"
