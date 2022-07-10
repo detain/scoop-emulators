@@ -24,4 +24,3 @@ labels: "package-request"
 **Download link(s):** [URL(s)/link(s)]
 
 **Some indication of popularity/repute:** [GitHub stars/software reviews etc.]
-

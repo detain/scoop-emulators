@@ -38,4 +38,3 @@ You will need to complete a PR checklist and ensure your manifest meets our mini
 - does it pass `bin/checkver.ps1` and `bin/checkurls.ps1`?
 - does it have a version?
 - does it have a url to the release along with its sha256 hash?
-
