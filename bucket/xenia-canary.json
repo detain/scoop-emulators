@@ -1,16 +1,16 @@
 {
-    "version": "1d00372",
-    "description": "Microsoft Xbox 360 emulator",
+    "version": "6e753c6",
+    "description": "Xbox 360 Research Emulator (development version)",
     "homepage": "https://xenia.jp",
     "license": {
         "identifier": "BSD-3-Clause",
         "url": "https://github.com/xenia-canary/xenia-canary/blob/canary_pr/LICENSE"
     },
-    "url": "https://github.com/xenia-canary/xenia-canary/releases/download/1d00372/xenia_canary.zip",
-    "hash": "7c9ffabe2432f371cae76b1291ed765a75663993fbc9d91ec757fd855fc551bd",
+    "url": "https://github.com/xenia-canary/xenia-canary/releases/download/6e753c6/xenia_canary.zip",
+    "hash": "b7dd6fea7b3237f17604e451d074e87ca77b4360867d10d09f02480376eae625",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
-        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
         "   New-item \"$persist_dir\\portable.txt\" -ItemType File | Out-Null",
         "   New-item \"$persist_dir\\xenia-canary.config.toml\" -ItemType File | Out-Null",
         "   if (Test-Path \"$env:USERPROFILE\\Documents\\Xenia\") {",
@@ -24,7 +24,7 @@
     "shortcuts": [
         [
             "xenia_canary.exe",
-            "Xenia (canary)"
+            "Xenia Canary"
         ]
     ],
     "persist": [

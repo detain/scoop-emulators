@@ -1,6 +1,6 @@
 {
     "version": "1.26.2f",
-    "description": "Nintendo Wii U emulator",
+    "description": "Experimental software to emulate Wii U applications on PC",
     "homepage": "https://cemu.info/",
     "license": {
         "identifier": "Freeware",
@@ -8,7 +8,7 @@
     },
     "suggest": {
         "cemuhook": "cemuhook",
-        "vcredist2015-2022": "extras/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
