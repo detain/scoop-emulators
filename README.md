@@ -57,14 +57,10 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
  |  |
 [ ][ ] 64tass
 [ ][ ] acme
-[ ][ ] bizhawk
 [ ][ ] cc65
 [ ][ ] epsxe
 [ ][ ] fbneo-nightly
-[ ][ ] gbeplus
-[ ][ ] higan
 [ ][ ] model-b
-[ ][ ] mupen64plus
 [ ][ ] nester
 [ ][ ] nestopia
 [ ][ ] play
