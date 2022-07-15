@@ -60,11 +60,12 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 [ ][ ] bizhawk
 [ ][ ] cc65
 [ ][ ] epsxe
+[ ][ ] fbneo-nightly
 [ ][ ] gbeplus
 [ ][ ] higan
-[ ][ ] kegafusion
 [ ][ ] model-b
 [ ][ ] mupen64plus
+[ ][ ] nester
 [ ][ ] nestopia
 [ ][ ] play
 [ ][ ] reicast
