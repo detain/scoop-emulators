@@ -1,10 +1,12 @@
 {
-    "version": "1.4.0",
+    "version": "1.6",
     "description": "A gameboy trying to emulate ALL the peripherals for the gameboy",
     "homepage": "https://github.com/shonumi/gbe-plus",
-    "license": {"identifier": "GPL-2.0"},
-    "url": "https://github.com/shonumi/gbe-plus/releases/download/1.4/gbe_plus_1.4.7z",
-    "hash": "3c9c35f96b5bffb3a43972f6b144fe9a45faf88f6f8c2e3fb05232df08567511",
+    "license": {
+        "identifier": "GPL-2.0"
+    },
+    "url": "https://github.com/shonumi/gbe-plus/releases/download/1.6/gbe_plus_1.6.7z",
+    "hash": "dc5600e6661113fefed19642a34924d9238c0a981037044d7e8dbd29c2fbab3f",
     "extract_dir": "gbe-plus",
     "bin": "gbe_plus_qt.exe",
     "shortcuts": [
@@ -13,5 +15,9 @@
             "gbeplus",
             "gbe+"
         ]
-    ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/shonumi/gbe-plus/releases/download/$version/gbe_plus_$version.7z"
+    }
 }
