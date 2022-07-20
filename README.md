@@ -59,8 +59,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 [ ][ ] epsxe
 [ ][ ] fbneo-nightly
 [ ][ ] model-b
-[ ][ ] nester
-[ ][ ] nestopia
 [ ][ ] play
 [ ][ ] reicast
 [ ][A] retroarch-nightly
