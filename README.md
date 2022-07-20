@@ -55,7 +55,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 [C]heckver
  | [A]utoupdate
  |  |
-[ ][ ] acme
 [ ][ ] cc65
 [ ][ ] epsxe
 [ ][ ] fbneo-nightly
