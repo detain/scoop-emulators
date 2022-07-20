@@ -39,8 +39,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
        > The remote server returned an error: (502) Bad Gateway. (https://dl.bintray.com/cdtdoug/tools/cc65-2.18.7z)
 [1][0][1] reicast
        > The remote server returned an error: (404) Not Found. (http://reicast-builds-windows.s3.amazonaws.com/builds/heads/stable-333b7c536071ea77b0ecc46e534cb28206e471b4/reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.zip)
-[1][0][1] vice
-       > The remote server returned an error: (404) Not Found. (https://downloads.sourceforge.net/projects/vice-emu/experimental%20binaries/GTK3VICE-3.3-win32.7z)
 [1][0][1] visualboyadvance
        > The operation has timed out (https://downloads.sourceforge.net/project/vba/VisualBoyAdvance/1.7.2/VisualBoyAdvance-1.7.2.zip)
 ```
@@ -54,9 +52,7 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 ```
 [C]heckver
  | [A]utoupdate
- |  |
 [ ][ ] cc65
-[ ][ ] epsxe
 [ ][ ] fbneo-nightly
 [ ][ ] model-b
 [ ][ ] play
