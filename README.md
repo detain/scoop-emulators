@@ -55,7 +55,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 [C]heckver
  | [A]utoupdate
  |  |
-[ ][ ] 64tass
 [ ][ ] acme
 [ ][ ] cc65
 [ ][ ] epsxe
@@ -66,7 +65,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 [ ][ ] play
 [ ][ ] reicast
 [ ][A] retroarch-nightly
-[ ][ ] vice
 [ ][A] visualboyadvance-m-nightly
 [ ][ ] xformer
 [ ][ ] yabause
@@ -96,6 +94,5 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 - [Robbbert/mameui: MAMEUI - MAME with a windows frontend](https://github.com/Robbbert/mameui)
 - [Mataniko/IV-Play: IV/Play - A small and powerful MAME front-end.](https://github.com/Mataniko/IV-Play)
 - [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
-- [Steem SSE download | SourceForge.net](https://sourceforge.net/projects/steemsse/)
 - [Releases · 7800-devtools/a7800](https://github.com/7800-devtools/a7800/releases)
 - [EightyOne Sinclair Emulator - Browse Files at SourceForge.net](https://sourceforge.net/projects/eightyone-sinclair-emulator/files/)
