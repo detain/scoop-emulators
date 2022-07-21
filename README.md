@@ -35,7 +35,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 
 #### Emulators To Add
 
-- [punesemu/puNES: Qt-based Nintendo Entertaiment System emulator and NSF/NSFe Music Player (Linux, FreeBSD, OpenBSD and Windows)](https://github.com/punesemu/puNES)
 - [Zibri/VICE: The fresher build on the net :D](https://github.com/Zibri/VICE/)
 - [captainys/TOWNSEMU: FM Towns Emulator "Tsugaru"](https://github.com/captainys/TOWNSEMU)
 - [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
