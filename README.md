@@ -36,18 +36,11 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 #### Emulators To Add
 
 - [punesemu/puNES: Qt-based Nintendo Entertaiment System emulator and NSF/NSFe Music Player (Linux, FreeBSD, OpenBSD and Windows)](https://github.com/punesemu/puNES)
-- [openMSX/openMSX: the MSX emulator that aims for perfection](https://github.com/openMSX/openMSX)
 - [Zibri/VICE: The fresher build on the net :D](https://github.com/Zibri/VICE/)
 - [captainys/TOWNSEMU: FM Towns Emulator "Tsugaru"](https://github.com/captainys/TOWNSEMU)
 - [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
-- [drhelius/Gearboy: Game Boy + Gameboy Color emulator](https://github.com/drhelius/Gearboy)
-- [drhelius/Gearsystem: Sega Master System / Game Gear / SG-1000 emulator for iOS, macOS, Raspberry Pi, Windows, Linux, BSD and RetroArch.](https://github.com/drhelius/Gearsystem)
 - [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
 - [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
-- [tonioni/WinUAE: WinUAE Amiga emulator](https://github.com/tonioni/WinUAE)
 - [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
-- [Raine : Latest version](http://raine.1emulation.com/download/latest.html)
-- [SDLMAME for Ubuntu](https://sdlmame.wallyweek.org/download/)
 - [Mataniko/IV-Play: IV/Play - A small and powerful MAME front-end.](https://github.com/Mataniko/IV-Play)
 - [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
-- [Releases · 7800-devtools/a7800](https://github.com/7800-devtools/a7800/releases)
