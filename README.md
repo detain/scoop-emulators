@@ -26,7 +26,7 @@ To make a new manifest contribution, please read the [Contributing Guide](./CONT
 
 ### Issues
 
-_Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
+_Note_ I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
 
 #### Scoop and Bucket Links
 
