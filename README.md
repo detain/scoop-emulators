@@ -35,8 +35,6 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 
 #### Emulators To Add
 
-- [Zibri/VICE: The fresher build on the net :D](https://github.com/Zibri/VICE/)
-- [captainys/TOWNSEMU: FM Towns Emulator "Tsugaru"](https://github.com/captainys/TOWNSEMU)
 - [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
 - [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
 - [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)

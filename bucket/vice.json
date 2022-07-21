@@ -1,0 +1,32 @@
+{
+    "version": "42487",
+    "description": "Updated builds of the VICE emulator",
+    "homepage": "https://github.com/Zibri/VICE",
+    "license": "GPL-2.0",
+    "url": "https://github.com/Zibri/VICE/releases/download/r42487/GTK3VICE-3.6.2-dev-win64-r42487.7z",
+    "hash": "3db7c3ae2808aa737f8646712486d9d0de1338e9459a27e99be0553d471665ec",
+    "extract_dir": "GTK3VICE-3.6.2-win64",
+    "bin": [
+        "c1541.exe",
+        "cartconv.exe",
+        "petcat.exe",
+        "vsid.exe",
+        "x128.exe",
+        "x64.exe",
+        "x64dtv.exe",
+        "x64sc.exe",
+        "xcbm2.exe",
+        "xcbm5x0.exe",
+        "xpet.exe",
+        "xplus4.exe",
+        "xscpu64.exe",
+        "xvic.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/Zibri/VICE",
+        "re": "\\/releases\\/tag\\/r([0-9]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Zibri/VICE/releases/download/r42487/GTK3VICE-3.6.2-dev-win64-r$version.7z"
+    }
+}
