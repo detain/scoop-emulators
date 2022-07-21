@@ -39,5 +39,4 @@ _Note_ I setup the [bin/checkhealth.sh][./bin/checkhealth.sh] script to run the 
 - [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
 - [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
 - [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
-- [Mataniko/IV-Play: IV/Play - A small and powerful MAME front-end.](https://github.com/Mataniko/IV-Play)
 - [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
