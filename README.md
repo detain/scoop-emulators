@@ -18,12 +18,12 @@ To make a new manifest contribution, please read the [Contributing Guide](./CONT
 
 _Note_ I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
 
-#### Scoop and Bucket Links
+### Scoop and Bucket Links
 
 - [Scoop Wiki - Persistent data](https://github.com/ScoopInstaller/Scoop/wiki/Persistent-data)
 - [nightly.link](https://nightly.link/)
 
-#### Emulators To Add
+### Emulators To Add
 
 - [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
 - [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
@@ -31,7 +31,7 @@ _Note_ I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the 
 - [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
 - [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
 
-#### Other Buckets I Incorporated
+### Other Buckets I Incorporated
 
 ❤ Thank you guys for all your hard work and getting us this far (read: i got it from here)
 
