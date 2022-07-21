@@ -8,16 +8,6 @@ A 🥄[Scoop](https://scoop.sh) 🪣bucket for 🎮console and 🕹arcade emulat
 
 To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain/scoop-emulators`. To install, do `scoop install <manifest>`.
 
-## Other Buckets I Incorporated
-
-❤ Thank you guys for all your hard work and getting us this far (read: i got it from here)
-
-- [borger/scoop-emulators](https://github.com/borger/scoop-emulators)
-- [dschaefer/scoop-tools816](https://github.com/dschaefer/scoop-tools816)
-- [hermanjustnu/scoop-emulators](https://github.com/hermanjustnu/scoop-emulators)
-- [littleli/Scoop-AtariEmulators](https://github.com/littleli/Scoop-AtariEmulators)
-- [ProfElements/EmulatorBucket](https://github.com/ProfElements/EmulatorBucket)
-
 ## Development Notes
 
 ### How do I contribute new manifests?
@@ -40,3 +30,13 @@ _Note_ I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the 
 - [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
 - [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
 - [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
+
+#### Other Buckets I Incorporated
+
+❤ Thank you guys for all your hard work and getting us this far (read: i got it from here)
+
+- [borger/scoop-emulators](https://github.com/borger/scoop-emulators)
+- [dschaefer/scoop-tools816](https://github.com/dschaefer/scoop-tools816)
+- [hermanjustnu/scoop-emulators](https://github.com/hermanjustnu/scoop-emulators)
+- [littleli/Scoop-AtariEmulators](https://github.com/littleli/Scoop-AtariEmulators)
+- [ProfElements/EmulatorBucket](https://github.com/ProfElements/EmulatorBucket)
