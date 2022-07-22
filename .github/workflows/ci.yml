@@ -30,7 +30,7 @@ jobs:
         run: |
           $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
           .\scoop_core\test\bin\init.ps1
-          add-type -assemblyName "Scoop.Validator"
+          #add-type -assemblyName "Scoop.Validator"
           .\scoop-emulators\bin\test.ps1
   test_pwsh:
     name: PowerShell
