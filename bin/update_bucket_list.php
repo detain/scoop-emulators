@@ -11,8 +11,8 @@ foreach (glob(__DIR__.'/../bucket/*.json') as $fileName) {
         continue;
     $link = $json['url'] ?? $json['architecture']['64bit']['url'];
     $table .= "| [{$name}](./bucket/{$name}.json) | [{$home}]({$json['homepage']}) | [{$dl}](".(is_array($link) ? implode(") [{$dl}](", $link) : $link).") | {$json['version']} | {$json['description']} |\n";
-    $list .= "* [{$name}](./bucket/{$name}.json) [{$home}]({$json['homepage']}) {$json['version']} [{$dl}](".(is_array($link) ? implode(") [{$dl}](", $link) : $link).") {$json['description']}\n";
+    $list .= "* [{$name}](./bucket/{$name}.json) {$json['version']} [{$home}]({$json['homepage']}) [{$dl}](".(is_array($link) ? implode(") [{$dl}](", $link) : $link).") {$json['description']}\n";
 }
-$readme = preg_replace('/(## Emulator List\r?\n\r?\n)(.*)(\r?\n## Development Notes)/msuU', "\$1{$table}\n{$list}\$3", file_get_contents(__DIR__.'/../README.md'));
+$readme = preg_replace('/(## Emulator List\r?\n\r?\n)(.*)(\r?\n## Development Notes)/msuU', "\$1{$list}\$3", file_get_contents(__DIR__.'/../README.md'));
 file_put_contents(__DIR__.'/../README.md', $readme);
 
