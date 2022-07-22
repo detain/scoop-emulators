@@ -11,7 +11,7 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 ## Emulator List
 
 | Name | 🏠 | 📥 | Version | Description |
-|-|-|-|
+|-|-|-|-|-|
 | [64tass](./bucket/64tass.json) | [🏠](https://sourceforge.net/projects/tass64/) | [📥](https://sourceforge.net/projects/tass64/files/binaries/64tass-1.56.2625.zip/download) | 1.56.2625 | An assembler for the legendary 6502 processor and it's derivatives  |
 | [a7800](./bucket/a7800.json) | [🏠](https://github.com/7800-devtools/a7800) | [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) | 5.2 | An Atari 7800 emulator |
 | [acme](./bucket/acme.json) | [🏠](https://sourceforge.net/projects/acme-crossass/) | [📥](https://sourceforge.net/projects/acme-crossass/files/win32/acme0.97win.zip/download) | 0.97 | multi-platform cross assembler for 6502/6510/65816 cpu |

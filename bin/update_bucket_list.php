@@ -2,7 +2,7 @@
 $home = '🏠';
 $dl = '📥';
 $table = "| Name | {$home} | {$dl} | Version | Description |\n";
-$table .= "|-|-|-|\n";
+$table .= "|-|-|-|-|-|\n";
 foreach (glob(__DIR__.'/../bucket/*.json') as $fileName) {
 	$json = json_decode(file_get_contents($fileName), true);
 	$name = basename($fileName, '.json');
