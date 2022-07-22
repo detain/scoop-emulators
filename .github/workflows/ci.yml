@@ -34,8 +34,8 @@ jobs:
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
-          .\scoop_validator\bin\build.ps1
-          .\scoop_validator\bin\install.ps1
+          .\scoop_validator\build.ps1
+          .\scoop_validator\install.ps1
           .\scoop_core\test\bin\init.ps1
           add-type -assemblyName "Scoop.Validator"
           .\scoop-emulators\bin\test.ps1
