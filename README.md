@@ -164,8 +164,6 @@ To make a new emulator contribution, please read the [Contributing Guide](./CONT
 
 #### Emulators To Add
 
-* [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
-* [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
 * [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
 * [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
 * [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
