@@ -20,11 +20,6 @@ jobs:
         with:
           repository: ScoopInstaller/Scoop
           path: 'scoop_core'
-      - name: Checkout Scoop Validator
-        uses: actions/checkout@v3
-        with:
-          repository: ScoopInstaller/Validator
-          path: 'scoop_validator'
       - name: Init Test Suite
         uses: potatoqualitee/psmodulecache@v4
         with:
@@ -34,10 +29,9 @@ jobs:
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
-          .\scoop_validator\build.ps1
-          .\scoop_validator\install.ps1
           .\scoop_core\test\bin\init.ps1
-          add-type -assemblyName "Scoop.Validator"
+          #add-type -assemblyName "Scoop.Validator"
+          add-type -assemblyName "*Scoop*"
           .\scoop-emulators\bin\test.ps1
   test_pwsh:
     name: PowerShell
