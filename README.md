@@ -1,26 +1,36 @@
 # Scoop Emulators Bucket
 
-[![Tests](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml) [![Excavator](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/detain/scoop-emulators/master.svg?style=flat-square&label=AppVeyor&logo=appveyor)](https://ci.appveyor.com/project/detain/scoop-emulators/branch/master) [![Repo size](https://img.shields.io/github/repo-size/detain/scoop-emulators.svg?style=flat-square)](https://github.com/detain/scoop-emulators)
-
 A 🥄[Scoop](https://scoop.sh) 🪣bucket for 🎮console and 🕹arcade emulators.
 
-## How do I install these manifests?
+[![Tests](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/ci.yml)
+[![Excavator](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml/badge.svg)](https://github.com/detain/scoop-emulators/actions/workflows/excavator.yml)
+[![AppVeyor Build Status](https://img.shields.io/appveyor/ci/detain/scoop-emulators/master.svg?style=flat-square&label=AppVeyor&logo=appveyor)](https://ci.appveyor.com/project/detain/scoop-emulators/branch/master)
+[![Repo size](https://img.shields.io/github/repo-size/detain/scoop-emulators.svg?style=flat-square)](https://github.com/detain/scoop-emulators)
 
-To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain/scoop-emulators`. To install, do `scoop install <manifest>`.
+## How do I use this?
+
+```cmd
+scoop bucket add emulators https://github.com/detain/scoop-emulators
+scoop list
+scoop install <emulator>
+scoop update
+scoop update *
+scoop uninstall <emulator>
+```
 
 ## Emulator List
 
-* [🏠](https://sourceforge.net/projects/tass64/) [📥](https://sourceforge.net/projects/tass64/files/binaries/64tass-1.56.2625.zip/download) [64tass](./bucket/64tass.json) _1.56.2625_ An assembler for the legendary 6502 processor and it's derivatives 
+* [🏠](https://sourceforge.net/projects/tass64/) [📥](https://sourceforge.net/projects/tass64/files/binaries/64tass-1.56.2625.zip/download) [64tass](./bucket/64tass.json) _1.56.2625_ An assembler for the legendary 6502 processor and it's derivatives
 * [🏠](https://github.com/7800-devtools/a7800) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [a7800](./bucket/a7800.json) _5.2_ An Atari 7800 emulator
 * [🏠](https://sourceforge.net/projects/acme-crossass/) [📥](https://sourceforge.net/projects/acme-crossass/files/win32/acme0.97win.zip/download) [acme](./bucket/acme.json) _0.97_ multi-platform cross assembler for 6502/6510/65816 cpu
 * [🏠](http://www.virtualdub.org/altirra.html) [📥](http://www.virtualdub.org/downloads/Altirra-4.01.zip) [altirra](./bucket/altirra.json) _4.01_ Altirra is the 8-bit Atari emulator focusing on high-quality emulation, sometimes over speed and polish
 * [🏠](https://github.com/AppleWin/AppleWin) [📥](https://github.com/AppleWin/AppleWin/releases/download/v1.30.11.0/AppleWin1.30.11.0.zip) [applewin](./bucket/applewin.json) _1.30.11.0_ Apple II emulator for Windows
 * [🏠](https://aranym.github.io/) [📥](https://github.com/aranym/aranym/releases/download/ARANYM_1_1_0/aranym-1.1.0-cygwin-i386-sdl2-setup.exe#/dl.7z) [aranym](./bucket/aranym.json) _1.1.0_ ARAnyM is a VM designed and developed for running 32-bit Atari ST/TT/Falcon operating systems (TOS, FreeMiNT, MagiC and Linux-m68k) and TOS/GEM applications on any kind of hardware
-* [🏠](https://github.com/Robbbert/store1) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [arcade64](./bucket/arcade64.json) _0_ MAME with working arcade games only 
+* [🏠](https://github.com/Robbbert/store1) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [arcade64](./bucket/arcade64.json) _0_ MAME with working arcade games only
 * [🏠](https://ares-emulator.github.io/) [📥](https://github.com/ares-emulator/ares/releases/download/v129/ares-windows.zip) [ares](./bucket/ares.json) _129_ Multi-system emulator focused on accuracy and preservation
 * [🏠](http://asap.sourceforge.net) [📥](https://downloads.sourceforge.net/project/asap/asap/5.2.0/asap-5.2.0-win32.msi) [asap](./bucket/asap.json) _5.2.0_ ASAP is a player of Atari 8-bit chiptunes for modern computers and mobile devices
 * [🏠](https://atari800.github.io) [📥](https://github.com/atari800/atari800/releases/download/ATARI800_4_2_0/atari800-4.2.0-win32-sdl.zip) [atari800](./bucket/atari800.json) _4.2.0_ Portable and free Atari 8-bit emulator
-* [🏠](http://www.xl-project.com/) [📥](http://www.xl-project.com/download/atari%2b%2b_win_1.81.zip) [atariplusplus](./bucket/atariplusplus.json) _1.81_  Atari++ is an emulator of the Atari eight bit computers, namely the Atari 400 and 800, the Atari 400XL, 800XL and 130XE, and the Atari 5200 game console
+* [🏠](http://www.xl-project.com/) [📥](http://www.xl-project.com/download/atari%2b%2b_win_1.81.zip) [atariplusplus](./bucket/atariplusplus.json) _1.81_ Atari++ is an emulator of the Atari eight bit computers, namely the Atari 400 and 800, the Atari 400XL, 800XL and 130XE, and the Atari 5200 game console
 * [🏠](http://b-em.bbcmicro.com) [📥](http://b-em.bbcmicro.com/B-emv2.2Win.zip) [b-em](./bucket/b-em.json) _2.2_ B-em is a BBC Micro emulator
 * [🏠](http://www.mkw.me.uk/beebem/) [📥](http://www.mkw.me.uk/beebem/BeebEm418.zip) [beebem](./bucket/beebem.json) _4.18_ BeebEm is a BBC Micro and Master 128 emulator
 * [🏠](https://github.com/Davidobot/BetterJoy) [📥](https://github.com/Davidobot/BetterJoy/releases/download/v7.1/BetterJoy_v7.1.zip) [betterjoy](./bucket/betterjoy.json) _v7.1_ A remapping program for Nintendo Switch controllers
@@ -43,7 +53,7 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 * [🏠](https://dolphin-emu.org/) [📥](https://dl.dolphin-emu.org/builds/0c/ca/dolphin-master-5.0-16793-x64.7z) [dolphin-beta](./bucket/dolphin-beta.json) _5.0-16793_ A Nintendo GameCube and Wii emulator
 * [🏠](https://dolphin-emu.org/) [📥](https://dl.dolphin-emu.org/builds/51/06/dolphin-master-5.0-16952-x64.7z) [dolphin-dev](./bucket/dolphin-dev.json) _5.0-16952_ A Nintendo GameCube and Wii emulator, with enhancements and Netplay. (development version)
 * [🏠](https://dolphin-emu.org/) [📥](https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe#/dolphin.lzma) [dolphin](./bucket/dolphin.json) _5.0_ A Nintendo GameCube and Wii emulator, with enhancements and Netplay.
-* [🏠](https://github.com/leniad/dsp-emulator) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [dsp-emulator](./bucket/dsp-emulator.json) _0_ Dsp emulator 
+* [🏠](https://github.com/leniad/dsp-emulator) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [dsp-emulator](./bucket/dsp-emulator.json) _0_ Dsp emulator
 * [🏠](https://github.com/stenzek/duckstation/) [📥](https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip) [duckstation](./bucket/duckstation.json) _20220708-g82965f7_ Sony PlayStation emulator
 * [🏠](https://sourceforge.net/projects/eightyone-sinclair-emulator/) [📥](https://sourceforge.net/projects/eightyone-sinclair-emulator/files/EightyOne%20V1.29.zip/download) [eightyone](./bucket/eightyone.json) _1.29_ Emulator for the range of ZX home computers made by Sinclair Research (and their clones) in the 1980s, primarily the ZX80 and ZX81 but also includes the ZX Spectrum models. As well as emulating the machines themselves, various add-on interfaces are supported, including storage devices, hi-res graphics, custom character sets, sound and colour cards.
 * [🏠](http://electrem.emuunlim.com/) [📥](http://electrem.emuunlim.com/files/future/ElectrEmWin32v06c.zip) [electrem](./bucket/electrem.json) _0.6c_ ElectrEm is an emulator of the Acorn Electron, an 8bit microcomputer first launched in 1983
@@ -58,12 +68,12 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 * [🏠](https://github.com/flyinghead/flycast) [📥](https://github.com/flyinghead/flycast/releases/download/v1.3/flycast-win64-1.3.zip) [flycast](./bucket/flycast.json) _1.3_ Sega Dreamcast, Naomi and Atomiswave emulator
 * [🏠](https://github.com/shonumi/gbe-plus) [📥](https://github.com/shonumi/gbe-plus/releases/download/1.6/gbe_plus_1.6.7z) [gbeplus](./bucket/gbeplus.json) _1.6_ A gameboy trying to emulate ALL the peripherals for the gameboy
 * [🏠](https://github.com/drhelius/Gearboy) [📥](https://github.com/drhelius/Gearboy/releases/download/gearboy-3.4.0/Gearboy-3.4.0-Windows.zip) [gearboy](./bucket/gearboy.json) _3.4.0_ Game Boy / Gameboy Color emulator for iOS, macOS, Raspberry Pi, Windows, Linux, BSD and RetroArch.
-* [🏠](https://github.com/drhelius/Gearsystem) [📥](https://github.com/drhelius/Gearsystem/releases/download/gearsystem-3.4.1/Gearsystem-3.4.1-Windows.zip) [gearsystem](./bucket/gearsystem.json) _3.4.1_ Sega Master System / Game Gear / SG-1000 emulator for iOS, macOS, Raspberry Pi, Windows, Linux, BSD and RetroArch. 
+* [🏠](https://github.com/drhelius/Gearsystem) [📥](https://github.com/drhelius/Gearsystem/releases/download/gearsystem-3.4.1/Gearsystem-3.4.1-Windows.zip) [gearsystem](./bucket/gearsystem.json) _3.4.1_ Sega Master System / Game Gear / SG-1000 emulator for iOS, macOS, Raspberry Pi, Windows, Linux, BSD and RetroArch.
 * [🏠](http://handy.sourceforge.net) [📥](https://downloads.sourceforge.net/project/handy/handy/Handy%200.95/Handy-0.95.zip) [handy](./bucket/handy.json) _0.95_ An Atari Lynx Emulator for Windows 95/98/NT/2000
 * [🏠](https://hatari.tuxfamily.org) [📥](https://download.tuxfamily.org/hatari/2.4.0/hatari-2.4_windows64.zip) [hatari](./bucket/hatari.json) _2.4.0_ An Atari ST/STE/TT/Falcon emulator that aims to emulate the hardware of a ST as accurately as possible
 * [🏠](https://higan.byuu.org/) [📥](https://github.com/higan-emu/higan/releases/download/v110/higan-v110-windows-x86_64.zip) [higan](./bucket/higan.json) _110_ A multi-system emulator that is quite large.
-* [🏠](https://github.com/Mataniko/IV-Play) [📥](https://github.com/Mataniko/IV-Play/releases/download/v1.8.3/IV-Play.exe) [iv-play](./bucket/iv-play.json) _1.8.3_ IV/Play - A small and powerful MAME front-end. 
-* [🏠](https://github.com/jpcsp/jpcsp) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [jpcsp](./bucket/jpcsp.json) _0_ PSP Emulator written in Java 
+* [🏠](https://github.com/Mataniko/IV-Play) [📥](https://github.com/Mataniko/IV-Play/releases/download/v1.8.3/IV-Play.exe) [iv-play](./bucket/iv-play.json) _1.8.3_ IV/Play - A small and powerful MAME front-end.
+* [🏠](https://github.com/jpcsp/jpcsp) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [jpcsp](./bucket/jpcsp.json) _0_ PSP Emulator written in Java
 * [🏠](https://www.carpeludum.com/kega-fusion/) [📥](https://www.carpeludum.com/download/Fusion364.zip) [kega-fusion](./bucket/kega-fusion.json) _3.64_ SEGA Genesis / Mega Drive emulator
 * [🏠](https://m64p.github.io/) [📥](https://github.com/m64p/m64p/releases/download/v2022.07.10/m64p-win64-4374d1f.zip) [m64p](./bucket/m64p.json) _2022.07.10_ Nintendo 64 emulator
 * [🏠](http://mamedev.org) [📥](https://github.com/mamedev/mame/releases/download/mame0245/mame0245b_64bit.exe#/dl.7z) [mame](./bucket/mame.json) _0.245_ Arcade machine emulator
@@ -81,8 +91,8 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 * [🏠](https://github.com/nba-emu/NanoBoyAdvance) [📥](https://github.com/nba-emu/NanoBoyAdvance/releases/download/v1.5/NanoBoyAdvance-1.5-win64.zip) [nanoboyadvance](./bucket/nanoboyadvance.json) _1.5_ NanoBoyAdvance is a Game Boy Advance emulator focused on accuracy.
 * [🏠](https://sourceforge.net/p/nester-emu/wiki/Home/) [📥](https://sourceforge.net/projects/nester-emu/files/nester-emu/public%20beta%204a/nester_publicbeta4a.zip/download) [nester](./bucket/nester.json) _publicbeta4a_ Nintendo Entertainment System emulator for Windows
 * [🏠](http://nestopia.sourceforge.net/) [📥](https://sourceforge.net/projects/nestopia/files/Nestopia/v1.40/Nestopia140bin.zip/download) [nestopia](./bucket/nestopia.json) _1.40_ A portable and cycle-accurate NES/Famicom emulator written in C++
-* [🏠](https://github.com/quietust/nintendulator) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [nintendulator](./bucket/nintendulator.json) _0_ NES emulator for Windows 
-* [🏠](https://github.com/Hydr8gon/NooDS) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [noods](./bucket/noods.json) _0_ A (hopefully!) speedy DS emulator 
+* [🏠](https://github.com/quietust/nintendulator) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [nintendulator](./bucket/nintendulator.json) _0_ NES emulator for Windows
+* [🏠](https://github.com/Hydr8gon/NooDS) [📥](https://github.com/7800-devtools/a7800/releases/download/v5.2/a7800-win-v5.2.zip) [noods](./bucket/noods.json) _0_ A (hopefully!) speedy DS emulator
 * [🏠](https://openmsx.fixato.net/) [📥](https://openmsx.fixato.net/builds/windows/x64/openmsx-18.0-77-gce68d2ac2-windows-vc-x64-bin.zip) [openmsx-dev](./bucket/openmsx-dev.json) _18.0-77-gce68d2ac2_ Cycle-accurate MSX emulator (Development builds)
 * [🏠](https://openmsx.org/) [📥](https://github.com/openMSX/openMSX/releases/download/RELEASE_18_0/openmsx-18.0-windows-vc-x64-bin.zip) [openmsx](./bucket/openmsx.json) _18.0_ Cycle-accurate MSX emulator
 * [🏠](https://pcsx2.net/) [📥](https://github.com/PCSX2/pcsx2/releases/download/v1.7.3110/pcsx2-v1.7.3110-windows-64bit-AVX2-Qt.7z) [pcsx2-dev](./bucket/pcsx2-dev.json) _1.7.3110_ A feature rich FOSS PlayStation 2 emulator (development version)
@@ -141,33 +151,31 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 
 ## Development Notes
 
-### How do I contribute new manifests?
+* I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
 
-To make a new manifest contribution, please read the [Contributing Guide](./CONTRIBUTING.md).
+### How do I contribute new emulators?
 
-### Issues
+To make a new emulator contribution, please read the [Contributing Guide](./CONTRIBUTING.md).
 
-_Note_ I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
+### Issues and To-Do
 
-### Scoop and Bucket Links
+* Improve [checkver, autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate), and [persist](https://github.com/ScoopInstaller/Scoop/wiki/Persistent-data) usage
+* Cache files in another repo to circumvent expiring download links
 
-- [Scoop Wiki - Persistent data](https://github.com/ScoopInstaller/Scoop/wiki/Persistent-data)
-- [nightly.link](https://nightly.link/)
+#### Emulators To Add
 
-### Emulators To Add
-
-- [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
-- [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
-- [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
-- [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
-- [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
+* [Hydr8gon/NooDS: A (hopefully!) speedy NDS emulator](https://github.com/Hydr8gon/NooDS)
+* [jpcsp/jpcsp: Jpcsp - PSP Emulator written in Java](https://github.com/jpcsp/jpcsp)
+* [leniad/dsp-emulator: Dsp emulator](https://github.com/leniad/dsp-emulator)
+* [Robbbert/store1: ARCADE64 - MAME with working arcade games only](https://github.com/Robbbert/store1)
+* [quietust/nintendulator: NES emulator for Windows](https://github.com/quietust/nintendulator)
 
 ### Other Buckets I Incorporated
 
 ❤ Thank you guys for all your hard work and getting us this far (read: i got it from here)
 
-- [borger/scoop-emulators](https://github.com/borger/scoop-emulators)
-- [dschaefer/scoop-tools816](https://github.com/dschaefer/scoop-tools816)
-- [hermanjustnu/scoop-emulators](https://github.com/hermanjustnu/scoop-emulators)
-- [littleli/Scoop-AtariEmulators](https://github.com/littleli/Scoop-AtariEmulators)
-- [ProfElements/EmulatorBucket](https://github.com/ProfElements/EmulatorBucket)
+* [borger/scoop-emulators](https://github.com/borger/scoop-emulators)
+* [dschaefer/scoop-tools816](https://github.com/dschaefer/scoop-tools816)
+* [hermanjustnu/scoop-emulators](https://github.com/hermanjustnu/scoop-emulators)
+* [littleli/Scoop-AtariEmulators](https://github.com/littleli/Scoop-AtariEmulators)
+* [ProfElements/EmulatorBucket](https://github.com/ProfElements/EmulatorBucket)
