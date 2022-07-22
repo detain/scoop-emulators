@@ -9,7 +9,7 @@ foreach (glob(__DIR__.'/../bucket/*.json') as $fileName) {
 	if (!isset($json['description']) || empty($json['description']) || !isset($json['homepage']) || empty($json['homepage']))
 		continue;
 	$link = $json['url'] ?? $json['architecture']['64bit']['url'];
-	$table .= "| [{$name}](./bucket/{$name}.json) | [{$home}]({$json['homepage']}) | [{$dl}](".(is_array($link) ? implode(")[{$dl}](", $link) : $link).") | {$json['version']} | {$json['description']} |\n";
+	$table .= "| [{$name}](./bucket/{$name}.json) | [{$home}]({$json['homepage']}) | [{$dl}](".(is_array($link) ? implode(") [{$dl}](", $link) : $link).") | {$json['version']} | {$json['description']} |\n";
 }
 $readme = file_get_contents(__DIR__.'/../README.md');
 preg_match_all('/^## Emulator List.*^## Development Notes/msuU', $readme, $matches);
