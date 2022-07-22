@@ -111,7 +111,7 @@ To add this bucket, run `scoop bucket add <bucketname> https://github.com/detain
 | ryujinx | [🏠](https://ryujinx.org/) | A simple, experimental Nintendo Switch emulator |
 | saint | [🏠](http://leonard.oxg.free.fr/SainT/saint.html) | SainT is a Windows based cycle accurate ATARI-ST emulator |
 | sameboy | [🏠](https://sameboy.github.io/) | A Game Boy and Game Boy Color emulator written in C |
-| scummvm-nightly | [🏠](https://www.scummvm.org/) |  |
+| scummvm-nightly | [🏠](https://www.scummvm.org/) | ScummVM is a program which allows you to run certain classic graphical adventure and role-playing games |
 | scummvm | [🏠](https://www.scummvm.org/) | ScummVM is a program which allows you to run certain classic graphical adventure and role-playing games |
 | snes9x-dev | [🏠](http://www.snes9x.com/) | Nintendo SNES (Super Nintendo Entertainment System) emulator |
 | snes9x | [🏠](http://www.snes9x.com/) | Nintendo SNES (Super Nintendo Entertainment System) emulator |
