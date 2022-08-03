@@ -154,6 +154,32 @@ scoop uninstall <emulator>
 
 * I setup the [bin/checkhealth.sh](./bin/checkhealth.sh) script to run the checkvers.ps1, checkurls.ps1, and missing-checkurls.ps1 scripts hiding the results without problems
 
+### Problems / Bugs
+
+#### Missing Checkver or Autoupdate
+
+* cc65
+* fbneo-nightly
+* model-b
+* play
+* reicast
+* retroarch-nightly
+* visualboyadvance-m-nightly
+* xformer
+* yabause
+* z26
+
+#### Broken Download URLs
+
+* cc65
+* reicast
+
+#### Version Check problems:
+
+* fceux-dev
+* fceux-dev1
+* fceux-dev2
+
 ### How do I contribute new emulators?
 
 To make a new emulator contribution, please read the [Contributing Guide](./CONTRIBUTING.md).
