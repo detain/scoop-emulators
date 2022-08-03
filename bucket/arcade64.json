@@ -1,0 +1,22 @@
+{
+    "version": "0.246",
+    "description": "MAME with working arcade games only ",
+    "homepage": "https://github.com/Robbbert/store1",
+    "license": "GPL-2.0",
+    "url": "https://arcade.mameworld.info/arcade246.7z",
+    "hash": "58b5956066911e0723e70a09bffbc6e7646377422b9838b110748f80cb97f3eb",
+    "bin": "arcade64.exe",
+    "shortcuts": [
+        [
+            "arcade64.exe",
+            "Arcade64"
+        ]
+    ],
+    "checkver": {
+        "url": "https://arcade.mameworld.info/",
+        "re": ">&nbsp;&nbsp;ARCADE64 ([0-9\\.]*)\\.0 \\(64-bit, GUI\\)"
+    },
+    "autoupdate": {
+        "url": "https://arcade.mameworld.info/arcade$minorVersion.7z"
+    }
+}
