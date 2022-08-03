@@ -7,7 +7,8 @@
     },
     "url": "https://sourceforge.net/projects/acme-crossass/files/win32/acme0.97win.zip/download#/acme.zip",
     "hash": "68f7c80c23806eced6ab96622d8e22b500ed76b4d34a01af33461dee04edc359",
-    "bin": "acme.exe",
+    "extract-dir": "acme0.97win"
+    "bin": "acme\\acme.exe",
     "env_set": {
         "ACME": "$dir\\ACME_LIB"
     },
@@ -17,5 +18,6 @@
     },
     "autoupdate": {
         "url": "https://sourceforge.net/projects/acme-crossass/files/win32/acme$versionwin.zip/download#/acme.zip",
+        "extract-dir": "acme$versionwin"
     }
 }
