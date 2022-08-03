@@ -5,7 +5,7 @@
     "license": "GPL-3.0",
     "url": "https://github.com/drhelius/Gearsystem/releases/download/gearsystem-3.4.1/Gearsystem-3.4.1-Windows.zip",
     "hash": "02536bce829baa11f5cb2989af1341d268fa83efc3f59bcbd28535f5769bcb8e",
-    "extract_dir": "Gearsystem-$versuib-Windows",
+    "extract_dir": "Gearsystem-3.4.1-Windows",
     "bin": "Gearsystem.exe",
     "shortcuts": [
         [
@@ -19,6 +19,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/drhelius/Gearsystem/releases/download/gearsystem-$version/Gearsystem-$version-Windows.zip",
-        "extract_dir": "Gearsystem-$versuib-Windows"
+        "extract_dir": "Gearsystem-$version-Windows"
     }
 }
