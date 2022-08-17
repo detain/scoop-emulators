@@ -1,13 +1,13 @@
 {
-    "version": "2.4.0",
+    "version": "2.4.1",
     "description": "An Atari ST/STE/TT/Falcon emulator that aims to emulate the hardware of a ST as accurately as possible",
     "homepage": "https://hatari.tuxfamily.org",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://download.tuxfamily.org/hatari/2.4.0/hatari-2.4_windows64.zip",
-            "hash": "f871a6063b762f21831fb4bcdc7c23a6f7726720fce800aa74bed95230818c5c",
-            "extract_dir": "hatari-2.4_windows64",
+            "url": "https://download.tuxfamily.org/hatari/2.4.1/hatari-2.4.1_windows64.zip",
+            "hash": "422441ba8070bc769a6bd256fedc1a65b1332769eee7e9d0b02a8dd374d88fcb",
+            "extract_dir": "hatari-2.4.1_windows64",
             "bin": "hatari.exe",
             "shortcuts": [
                 [
@@ -17,9 +17,9 @@
             ]
         },
         "32bit": {
-            "url": "https://download.tuxfamily.org/hatari/2.4.0/hatari-2.4_windows.zip",
-            "hash": "007b42882d9fe201cafa8035493eb62149ea99143fa7db773cd455f0d1833e63",
-            "extract_dir": "hatari-2.3.1_windows",
+            "url": "https://download.tuxfamily.org/hatari/2.4.1/hatari-2.4.1_windows.zip",
+            "hash": "eb06a822fdd77bea60f254a50c0158478dd036de4c25cbc7f0e08cff9280eebe",
+            "extract_dir": "hatari-2.4.1_windows",
             "bin": "hatari.exe",
             "shortcuts": [
                 [
