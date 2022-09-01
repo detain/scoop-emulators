@@ -33,8 +33,8 @@
     ],
     "checkver": {
         "url": "https://www.ppsspp.org/downloads.html",
-        "regex": "Download ((?<major>\\d)\\.(?<minor>\\d{1,3})\\.(?<patch>\\d{1,3})) zip",
-        "replace": "${major}.${minor}.${patch}"
+        "regex": "files/([\\d]+)_([\\d]+)_([\\d]+)/ppsspp_win.zip",
+        "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {
         "url": "https://www.ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
