@@ -1,11 +1,11 @@
 {
-    "version": "42487",
+    "version": "3.6.2-42517",
     "description": "Updated builds of the VICE emulator",
     "homepage": "https://github.com/Zibri/VICE",
     "license": "GPL-2.0",
-    "url": "https://github.com/Zibri/VICE/releases/download/r42487/GTK3VICE-3.6.2-dev-win64-r42487.7z",
-    "hash": "3db7c3ae2808aa737f8646712486d9d0de1338e9459a27e99be0553d471665ec",
-    "extract_dir": "GTK3VICE-3.6.2-dev-win64-r42487",
+    "url": "https://github.com/Zibri/VICE/releases/download/r42517/GTK3VICE-3.6.2-dev-win64-r42517.7z",
+    "hash": "4f1df54b34ef05997daa03b017ba0a96c3fe337f3e00fcd8a8f1f2c8c629b437",
+    "extract_dir": "GTK3VICE-3.6.2-dev-win64-r42517",
     "bin": [
         "bin\\c1541.exe",
         "bin\\cartconv.exe",
@@ -24,10 +24,11 @@
     ],
     "checkver": {
         "github": "https://github.com/Zibri/VICE",
-        "re": "\\/releases\\/tag\\/r([0-9]+)"
+        "regex": "GTK3VICE-(?<release>[\\d.]+)-dev-win64-r(?<build>[\\d]+).7z",
+        "replace": "${release}-${build}"
     },
     "autoupdate": {
-        "url": "https://github.com/Zibri/VICE/releases/download/r42487/GTK3VICE-3.6.2-dev-win64-r$version.7z",
-        "extract_dir": "GTK3VICE-3.6.2-dev-win64-r$version"
+        "url": "https://github.com/Zibri/VICE/releases/download/r$matchBuild/GTK3VICE-$matchRelease-dev-win64-r$matchBuild.7z",
+        "extract_dir": "GTK3VICE-$matchRelease-dev-win64-r$matchBuild"
     }
 }
