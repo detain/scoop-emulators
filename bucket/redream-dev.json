@@ -32,7 +32,7 @@
     ],
     "checkver": {
         "url": "https://redream.io/download",
-        "regex": "v(\\d\\.\\d\\.\\d-\\d{4}-g[a-f0-9]+)"
+        "regex": "v([\\d.]+-\\d{4}-g[a-f0-9]+)"
     },
     "autoupdate": {
         "architecture": {
