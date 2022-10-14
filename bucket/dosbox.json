@@ -1,0 +1,18 @@
+{
+    "##": [
+        "name:DOSBox",
+        "author:Peter Veenstra (Qbix)",
+        "cmd:%BIN% %ROM%",
+        "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dosbox/emulator_logo.png",
+        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dosbox/emulator_screen_01.jpg"
+    ],
+    "version": "0.74",
+    "description": "DOSBox is a DOS-emulator that uses the SDL-library which makes DOSBox very easy to port to different platforms.",
+    "homepage": "http://www.dosbox.com/",
+    "license": "Freeware",
+    "url": "https://consolo.is.cc/emu/dosbox/0.74.7z",
+    "hash": "b1c97faee47b727cff7c62fc23315ad75a7305333e9ad3a75d5f0ebe04c07a6b ",
+    "bin": [
+        "DOSBox.exe"
+    ]
+}
