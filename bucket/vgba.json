@@ -6,15 +6,13 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/vgba/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vgba/emulator_screen_01.jpg"
     ],
-    "version": "5.4",
+    "version": "6.4",
     "description": "Virtual GameBoy Advance is a Nintendo Game Boy Advance emulator.",
     "homepage": "http://fms.komkon.org/VGBA/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vgba/5.4.7z",
-    "hash": "0edd55d7ee57cf22e7fe7431f3e66d5763b9598975eb7b0fc8d6588baf0bdac8",
-    "bin": [
-        "VGBA.exe"
-    ],
+    "url": "http://fms.komkon.org/VGBA/VGBA64-Windows-bin.zip",
+    "hash": "5f4a62f4e4dfba9713effd47b58148cc61d861135964f7963ec590d75aa462df",
+    "bin": "VGBA.exe",
     "shortcuts": [
         [
             "VGBA.exe",
