@@ -1,0 +1,23 @@
+{
+    "version": "4.3",
+    "description": "MasterGear (MG) is a program that emulates 8bit SEGA videogames on your computer. It runs games made for SEGA MasterSystem (Mark3 in Japan) and GameGear, as well as their predecessors: SG1000, SC3000, SF7000, and Mark2. MG will also help hobbyists who still write software for these systems to debug their works without using rare and costly development hardware.",
+    "homepage": "http://fms.komkon.org/MG",
+    "license": "Freeware",
+    "url": "https://consolo.is.cc/emu/speccy/4.3.7z",
+    "hash": "856806137b94413b1087b17183fe732485b68205a4cae0db70f44353035ecec5",
+    "bin": [
+        "MG.exe"
+    ],
+    "shortcuts": [
+        [
+            "MG.exe",
+            "MasterGear"
+        ]
+    ],
+    "checkver": {
+        "regex": "<I>The Latest Version of MasterGear is ([\\d\\.]+)!</I>"
+    },
+    "autoupdate": {
+        "url": "http://fms.komkon.org/MG/MG$cleanVersion-Windows-bin.zip"
+    }
+}

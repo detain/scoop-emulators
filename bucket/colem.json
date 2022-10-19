@@ -14,5 +14,18 @@
     "hash": "cd52cdda4e6fd7c70899c4f83d631d62b0c540f9572dc518622ec732e1c29869",
     "bin": [
         "ColEm.exe"
-    ]
+    ],
+    "shortcuts": [
+        [
+            "ColEm.exe",
+            "ColEm"
+        ]
+    ],
+    "checkver": {
+        "url": "http://fms.komkon.org/ColEm/",
+        "regex": "<A HREF=\"(?<file>[^\"]+\"]\"[^>]+><B>[^>]+><B>ColEm (?<version>[\\d\\.]+) Windows</B></A>"
+    },
+    "autoupdate": {
+        "url": "http://fms.komkon.org/ColEm/$matchFile"
+    }
 }

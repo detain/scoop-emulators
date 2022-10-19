@@ -14,5 +14,17 @@
     "hash": "27a5ee0dc94754fd877abf4c4b423edbd3a617c637bdd41339476834d72f0320",
     "bin": [
         "VGB.exe"
-    ]
+    ],
+    "shortcuts": [
+        [
+            "VGB.exe",
+            "Virtual GameBoy"
+        ]
+    ],
+    "checkver": {
+        "regex": "<I>The Latest VGB Version is ([\\d\\.]+)!</I>"
+    },
+    "autoupdate": {
+        "url": "http://fms.komkon.org/VGB/VGB$cleanVersion-Windows-bin.zip"
+    }
 }

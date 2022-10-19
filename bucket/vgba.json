@@ -14,5 +14,17 @@
     "hash": "0edd55d7ee57cf22e7fe7431f3e66d5763b9598975eb7b0fc8d6588baf0bdac8",
     "bin": [
         "VGBA.exe"
-    ]
+    ],
+    "shortcuts": [
+        [
+            "VGBA.exe",
+            "Virtual GameBoy Advance"
+        ]
+    ],
+    "checkver": {
+        "regex": "<I>Latest Released Version of VGBA is ([\\d\\.]+)!</I>"
+    },
+    "autoupdate": {
+        "url": "http://fms.komkon.org/VGBA/VGBA$cleanVersion-Windows-bin.zip"
+    }
 }
