@@ -6,15 +6,13 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/vgb/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vgb/emulator_screen_01.jpg"
     ],
-    "version": "5.1",
+    "version": "6.0",
     "description": "Virtual GameBoy (VGB) is an emulator of the Nintendo Game Boy, Super Game Boy and Game Boy Color.",
     "homepage": "http://fms.komkon.org/VGB/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vgb/5.1.7z",
-    "hash": "27a5ee0dc94754fd877abf4c4b423edbd3a617c637bdd41339476834d72f0320",
-    "bin": [
-        "VGB.exe"
-    ],
+    "url": "http://fms.komkon.org/VGB/VGB60-Windows-bin.zip",
+    "hash": "43f86d32ab45c563564b2762225aa3cf9e60579d58e8d7ff9642cd9f9ea90d89",
+    "bin": "VGB.exe",
     "shortcuts": [
         [
             "VGB.exe",
@@ -22,7 +20,7 @@
         ]
     ],
     "checkver": {
-        "regex": "<I>The Latest VGB Version is ([\\d\\.]+)!</I>"
+        "regex": "<I>The Latest VGB Version is ([\\d\\.]+)[^\\d\\.]"
     },
     "autoupdate": {
         "url": "http://fms.komkon.org/VGB/VGB$cleanVersion-Windows-bin.zip"
