@@ -13,5 +13,17 @@
     "hash": "12a18c23c799964103e3ea4ec1cdd917c3ee3d9f5e987fe3d7f0d9a68a3edd30",
     "bin": [
         "Ootake.exe"
-    ]
+    ],
+    "shortcuts": [
+        [
+            "Ootake.exe",
+            "Ootake"
+        ]
+    ],
+    "checkver": {
+        "regex": ">Ootake[\\s\\r\\n]+(?<version>[\\d\\.]+) "
+    },
+    "autoupdate": {
+        "url": "https://www.ouma.jp/file/Ootake$cleanVersion.zip"
+    }
 }
