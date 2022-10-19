@@ -1,0 +1,38 @@
+{
+    "version": "1126c39c",
+    "description": "A newer experimental ps2 emulator.",
+    "homepage": "https://purei.org",
+    "license": "BSD-2-Clause",
+    "architecture": {
+        "32bit": {
+            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/1126c39c/Play-x86-32.exe#/dl.7z",
+            "hash": "1b638ec4e12d69df4e4f2bdb54e945616204832e7450c3b1bf0092bcb4cb2c9c"
+        },
+        "64bit": {
+            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/1126c39c/Play-x86-64.exe#/dl.7z",
+            "hash": "3274eb06690449fa998a7bffa2302aa26663ad1a57bcce76aa6cb05fa439bfb1"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
+    "bin": "Play.exe",
+    "shortcuts": [
+        [
+            "Play.exe",
+            "Play (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://services.purei.org/api/builds",
+        "jsonpath": "$.commitHash"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$version/Play-x86-32.exe#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$version/Play-x86-64.exe#/dl.7z"
+            }
+        }
+    }
+}
