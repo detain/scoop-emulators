@@ -77,8 +77,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "source.fixAll.sortJSON": true
-      },
-
+    },
     "sort-json.settings.orderOverride": [
         "version",
         "description",
@@ -111,5 +110,8 @@
     "editor.defaultFormatter": "richie5um2.vscode-sort-json",
     "editor.formatOnSave": true,
     "prettier.enable": false,
-    "html.format.enable": false
+    "html.format.enable": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    }
 }
