@@ -63,14 +63,15 @@
         ]
     },
     "checkver": {
-        "regex": "Download latest experimental version \\(v((?<version>[\\d.]+)[\\w]*?),"
+        "url": "https://github.com/cemu-project/Cemu/tags",
+        "regex": "tag/v([^\"]+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cemu.info/releases/cemu_$matchVersion.zip"
+                "url": "https://github.com/cemu-project/Cemu/releases/download/v$version/cemu-$version-windows-x64.zip"
             }
         },
-        "extract_dir": "cemu_$matchVersion"
+        "extract_dir": "cemu_$version"
     }
 }
