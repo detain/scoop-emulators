@@ -33,14 +33,19 @@
         "settings"
     ],
     "checkver": {
-        "github": "https://github.com/Davidobot/BetterJoy",
-        "regex": "download/(?<build>v[\\d\\.]+[a-z]?)",
-        "replace": "${1}"
+        "url": "https://api.github.com/repos/Davidobot/BetterJoy/releases/latest",
+        "script": [
+            "$version = json_path $page $.tag_name",
+            "$file = json_path $page $.assets[0].name",
+            "Write-Output \"$version $file\""
+        ],
+        "regex": "(?<version>[^ ]+) (?<file>.*)",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Davidobot/BetterJoy/releases/download/$matchBuild/BetterJoy_$matchBuild.zip"
+                "url": "https://github.com/Davidobot/BetterJoy/releases/download/$matchVersion/$matchFile"
             }
         }
     }
