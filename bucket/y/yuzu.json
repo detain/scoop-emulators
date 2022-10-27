@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-0-1211/yuzu-windows-msvc-20221025-d8e3380ea.7z",
-            "hash": "9883bed2ab422ed9e0aa0feea5b848fdc52a97f65035f694ef4b8c34d8c3ed0c"
+            "url": "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-0-1211/yuzu-windows-msvc-20221025-d8e3380ea.tar.xz",
+            "hash": "a2e6b63dde3d984e1e46d0aec1f340b097f58d417e8a9d036d64ab7a65ffa225"
         }
     },
     "extract_dir": "yuzu-windows-msvc",
@@ -39,13 +39,19 @@
         "plugins"
     ],
     "checkver": {
-        "github": "https://github.com/yuzu-emu/yuzu-mainline",
-        "regex": "download/mainline-([\\d.-]+)/yuzu-windows-msvc-(?<date>[\\d]{8})-(?<commit>[\\da-f]+).7z"
+        "url": "https://api.github.com/repos/yuzu-emu/yuzu-mainline/releases/latest",
+        "script": [
+            "$version = json_path $page $.tag_name",
+            "$file = json_path $page $.assets[6].name",
+            "Write-Output \"$version $file\""
+        ],
+        "regex": "mainline-(?<version>[^ ]+) (?<file>.*)",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-$version/yuzu-windows-msvc-$matchDate-$matchCommit.7z"
+                "url": "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-$matchVersion/$matchFile"
             }
         }
     }
