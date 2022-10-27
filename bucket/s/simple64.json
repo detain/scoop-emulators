@@ -1,40 +1,54 @@
 {
     "version": "2022.08.9",
-    "description": "Nintendo 64 emulator",
-    "homepage": "https://m64p.github.io/",
+    "description": "simple64 is an emulator based on a heavily modified version of mupen64plus-core, and ParaLLEl RSP/RDP. It includes a GUI, netplay, automatic updater, controller configuration, and much more! It should give you the best out-of-the-box experience available for N64 gaming. There are no plugins to download.",
+    "homepage": "https://simple64.github.io/",
     "license": {
         "identifier": "GPL-3.0",
-        "url": "https://github.com/m64p/m64p/blob/main/LICENSE"
+        "url": "https://github.com/simple64/simple64/blob/main/LICENSE"
     },
-    "url": "https://github.com/m64p/m64p/releases/download/v2022.08.9/m64p-win64-fbf2c91.zip",
-    "hash": "6320e8f1520a5b0c6b70a0b85d700214bc124d4cf900b3690e164d9e28fe3b2e",
-    "extract_dir": "mupen64plus",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/simple64/simple64/releases/download/v2022.08.9/m64p-win64-fbf2c91.zip",
+            "hash": "6320e8f1520a5b0c6b70a0b85d700214bc124d4cf900b3690e164d9e28fe3b2e",
+        }
+    },
+    "extract_dir": "simple64",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\mupen64plus-gui.ini\")) {",
-        "   New-Item    \"$dir\\mupen64plus-gui.ini\" -Type File | Out-Null",
-        "   Set-Content \"$dir\\mupen64plus-gui.ini\" '[General]'",
-        "   Add-Content \"$dir\\mupen64plus-gui.ini\" 'version=2'",
-        "   Add-Content \"$dir\\mupen64plus-gui.ini\" 'configDirPath=$APP_PATH$/config'",
+        "if (!(Test-Path \"$persist_dir\\simple64-gui.ini\")) {",
+        "   New-Item    \"$dir\\simple64-gui.ini\" -Type File | Out-Null",
+        "   Set-Content \"$dir\\simple64-gui.ini\" '[General]'",
+        "   Add-Content \"$dir\\simple64-gui.ini\" 'version=2'",
+        "   Add-Content \"$dir\\simple64-gui.ini\" 'configDirPath=$APP_PATH$/config'",
         "}"
     ],
     "bin": [
         [
-            "mupen64plus-gui.exe",
-            "m64p"
+            "simple64-gui.exe",
+            "simple64"
         ]
     ],
     "shortcuts": [
         [
-            "mupen64plus-gui.exe",
-            "m64p"
+            "simple64-gui.exe",
+            "simple64"
         ]
     ],
     "persist": "config",
     "checkver": {
-        "github": "https://github.com/m64p/m64p",
-        "regex": "v([\\d\\.]+)\\/m64p-win64-(?<commit>[\\da-f]{7})\\."
+        "url": "https://api.github.com/repos/simple64/simple64/releases/latest",
+        "script": [
+            "$version = json_path $page $.tag_name",
+            "$file = json_path $page $.assets[0].name",
+            "Write-Output \"$version $file\""
+        ],
+        "regex": "(?<version>[^ ]+) (?<file>.*)",
+        "replace": "${version}"
     },
     "autoupdate": {
-        "url": "https://github.com/m64p/m64p/releases/download/v$version/m64p-win64-$matchCommit.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/simple64/simple64/releases/download/$matchVersion/$matchFile"
+            }
+        }
     }
 }
