@@ -6,13 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/zesarux/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/zesarux/emulator_screen_01.jpg"
     ],
-    "version": "4.3",
+    "version": "10.2",
     "description": "ZEsarUX is an emulator for the Sinclair ZX Spectrum, ZX81 and ZX80, the Cambridge Z88, the Jupiter Ace, the Chloe 140 SE and 280 SE, the Prism, the Timex TS 2068, the TBBlue / ZX Spectrum Next, the Sam Coupe and the Amstrad CPC 464.",
-    "homepage": "https://sourceforge.net/projects/zesarux/",
+    "homepage": "https://github.com/chernandezba/zesarux",
     "license": "GNU GPLv3",
-    "url": "https://consolo.is.cc/emu/zesarux/4.3.7z",
-    "hash": "337a74f22cecd32a084a79c0a9e3bb73be956da0b67fa7f61420953a2138fee7",
-    "bin": [
-        "zesarux.exe"
-    ]
+    "url": [
+        "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-10.2/ZEsarUX_windows-10.2.zip",
+        "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-10.2/ZEsarUX_extras-10.2.zip"
+    ],
+    "hash": [
+        "3515be40bef414b8aff06c358ab813d34dab86143717af1f12394b191a795320",
+        "5f0a54bf519fc9d5f77e9da0662e1a66f0a7524ab6bf3098b758f8529a8b36b5"
+    ],
+    "bin": "zesarux.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/chernandezba/zesarux/releases/latest",
+        "jsonp": "$.name",
+        "regex": "ZEsarUX-(?<version>[^\"]+)",
+        "replace": "${version}"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-$version/ZEsarUX_windows-$version.zip",
+            "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-$version/ZEsarUX_extras-$version.zip"
+        ]
+    }
 }
