@@ -26,8 +26,16 @@
         "mappings"
     ],
     "checkver": {
-        "url": "https://github.com/flyinghead/flycast/actions/workflows/c-cpp.yml?query=branch%3Amaster+is%3Asuccess",
-        "regex": "([a-f0-9]{7})<"
+        "url": "https://api.github.com/repos/flyinghead/flycast/actions/workflows/c-cpp.yml/runs?branch=master&is=success",
+        "script": [
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
+            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
+            "$file = json_path $page $.assets[0].name",
+            "Write-Output \"$version $file\""
+        ],
+        "regex": "(?<version>[^ ]+) (?<file>.*)",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
