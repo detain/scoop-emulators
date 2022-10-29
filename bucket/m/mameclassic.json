@@ -1,18 +1,15 @@
 {
-    "##": [
-        "name:M.A.M.E. classic (till v0.161)",
-        "author:M.A.M.E. team",
-        "cmd:%BIN% %ROM%",
-        "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/mameclassic/emulator_logo.png",
-        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mameclassic/emulator_screen_01.jpg"
-    ],
-    "version": "0.161-win32",
-    "description": "MAME (an acronym of Multiple Arcade Machine Emulator) is a free and open source emulator designed to recreate the hardware of arcade game systems in software on modern personal computers and other platforms. The intention is to preserve gaming history by preventing vintage games from being lost or forgotten.",
-    "homepage": "http://mamedev.org/",
+    "version": "9.5.0",
+    "description": "Mame Classic is the first Windows Front-End for M.A.M.E. to feature independent default settings for raster and vector games! Works with Windows 98, ME, 2000, XP, & Vista.",
+    "homepage": "https://mameclassic.mameworld.info/",
     "license": "GNU GPLv2, BSD-3-Clause",
-    "url": "https://consolo.is.cc/emu/mameclassic/0.161-win32.7z",
-    "hash": "dc56759d3b0cf93c570978726f1126676ae1ed59b15fe888e37a1548355c7a1b",
-    "bin": [
-        "mame.exe"
-    ]
+    "url": "http://mameclassic.mameworld.info/downloads/FP950.zip",
+    "hash": "dacd1599e0f3d932fa759fb1ecdbd158d109b66142b6c27a4cd02d0825322c6c",
+    "bin": "MClassic.exe",
+    "checkver": {
+        "regex": "Version ([\\d\\.]+) -"
+    },
+    "autoupdate": {
+        "url": "http://mameclassic.mameworld.info/downloads/FP$cleanVersion.zip"
+    }
 }
