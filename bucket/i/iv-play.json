@@ -12,8 +12,12 @@
             "IV-Play"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "http://www.mameui.info/",
+        "regex": "href=\"(?<file>[^\"]+\\.zip)\"[^>]+><strong>IV/Play (?<ver>[\\d\\.]+) Download",
+        "replace": "${ver}"
+    },
     "autoupdate": {
-        "url": "https://github.com/Mataniko/IV-Play/releases/download/v$version/IV-Play.exe"
+        "url": "http://www.mameui.info/$matchFile"
     }
 }
