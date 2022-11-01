@@ -5,14 +5,7 @@
     "license": "BSD-3-Clause",
     "url": "https://github.com/vpinball/pinmame/releases/download/v3.5-217-bd54096/Main.Download.-.VPinMAME35.zip",
     "hash": "29ea0f3791b2d8e22f1b6af3e1b08489104e8b0c83f5c8944401f7b2a5c2ad20",
-    "architecture": {
-        "32bit": {
-            "bin": "PinMAME.exe"
-        },
-        "64bit": {
-            "bin": "PinMAME32.exe"
-        }
-    },
+    "bin": "PinMAME.exe"
     "checkver": {
         "url": "https://api.github.com/repos/vpinball/pinmame/releases/latest",
         "script": [
