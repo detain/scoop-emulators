@@ -19,7 +19,7 @@
         "replace": "${version}"
     },
     "autoupdate": {
-        "url": "$matchMain"
+        "url": "https://github.com/vpinball/pinmame/releases/download/v$version/Main.Download.-.VPinMAME$majorVersion$minorVersion.zip"
     }
 }
 
