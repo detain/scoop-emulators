@@ -49,7 +49,6 @@ scoop uninstall <emulator>
 
 * [Attract-Mode v2.6.2](https://www.emucr.com/2022/02/attract-mode-v262.html) --- [Attract-Mode Emulator Frontend](http://attractmode.org/)
 * [FEEL FrontEnd v1.9.8.6](https://www.emucr.com/2020/06/feel-frontend-v1986.html) --- [FEEL FrontEnd Home | FEEL FrontEnd](https://feelfrontend.altervista.org/)
-* [pfeMame v2.25.7](https://www.emucr.com/2022/09/pfemame-v2257.html) --- [pfeMAME download | SourceForge.net](https://sourceforge.net/projects/pfemame/)
 * [ExtraMAME v22.5](https://www.emucr.com/2022/08/extramame-v225.html) --- [ExtraMAME - MAME, Emulator, Arcade, GUI Wrapper.](https://www.wintools.net/extramame/)
 * [ClrMamePro v4.046b](https://www.emucr.com/2022/08/clrmamepro-v4046b.html) --- [clrmamepro](https://mamedev.emulab.it/clrmamepro/#zipmax) --- [Rebuilder v0.03](http://www.emucr.com/2022/10/rebuilder-v003.html)
 
