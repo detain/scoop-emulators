@@ -3,15 +3,13 @@
     "description": "PinMAME emulates the hardware found in almost every solid state pinball machine created from the earliest days of CPU-controlled machines (mid 1970's) through 2014 (Stern SAM), with around 750 emulated unique Pinball machines and many more clones/revisions (overall more than 2500 sets). ",
     "homepage": "https://github.com/vpinball/pinmame",
     "license": "BSD-3-Clause",
+    "url": "https://github.com/vpinball/pinmame/releases/download/v3.5-217-bd54096/Main.Download.-.VPinMAME35.zip",
+    "hash": "29ea0f3791b2d8e22f1b6af3e1b08489104e8b0c83f5c8944401f7b2a5c2ad20",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/vpinball/pinmame/releases/download/v3.5-217-bd54096/Main.Download.-.VPinMAME35.zip",
-            "hash": "29ea0f3791b2d8e22f1b6af3e1b08489104e8b0c83f5c8944401f7b2a5c2ad20",
             "bin": "PinMAME.exe"
         },
         "64bit": {
-            "url": "https://github.com/vpinball/pinmame/releases/download/v3.5-217-bd54096/Main.Download.-.VPinMAME35.zip",
-            "hash": "29ea0f3791b2d8e22f1b6af3e1b08489104e8b0c83f5c8944401f7b2a5c2ad20",
             "bin": "PinMAME32.exe"
         }
     },
@@ -28,14 +26,7 @@
         "replace": "${version}"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "$matchMain"
-            },
-            "32bit": {
-                "url": "$matchMain"
-            }
-        }
+        "url": "$matchMain"
     }
 }
 
