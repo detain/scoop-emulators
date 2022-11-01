@@ -53,11 +53,9 @@ scoop uninstall <emulator>
 * [NegaMAME v0.248.1](https://www.emucr.com/2022/09/negamame-v02481.html) --- [BabelSoft / 博语软件](http://babelsoft.net/products/negamame.htm)
 * [MESSUI v0.248](https://www.emucr.com/2022/09/messui-v0248.html) --- [The MESSUI Place](http://messui.1emulation.com/)
 * [HBMAME v0.245.8](https://www.emucr.com/2022/10/hbmame-v02458.html) --- [The HBMAME Place - HBMAME](http://hbmame.1emulation.com/)
-* [GroovyMame v0.248 SwitchRes v2.002m](https://www.emucr.com/2022/09/groovymame-v0248-switchres-v2002m.html) --- [antonioginer/GroovyMAME: GroovyMAME is a M.A.M.E. fork aimed at CRT monitors](https://github.com/antonioginer/GroovyMAME/)
 * [ExtraMAME v22.5](https://www.emucr.com/2022/08/extramame-v225.html) --- [ExtraMAME - MAME, Emulator, Arcade, GUI Wrapper.](https://www.wintools.net/extramame/)
 * [ClrMamePro v4.046b](https://www.emucr.com/2022/08/clrmamepro-v4046b.html) --- [clrmamepro](https://mamedev.emulab.it/clrmamepro/#zipmax) --- [Rebuilder v0.03](http://www.emucr.com/2022/10/rebuilder-v003.html)
 * [BletchMAME](https://www.bletchmame.org/)
-* [vpinball/pinmame: PinMAME - Pinball Multiple Arcade Machine Emulator](https://github.com/vpinball/pinmame)
 
 #### frontends
 
