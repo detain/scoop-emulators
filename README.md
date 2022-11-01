@@ -47,12 +47,8 @@ scoop uninstall <emulator>
 
 #### mame
 
-* [Mame Classic v9.5.0](https://www.emucr.com/2022/06/mame-classic-v950.html) --- [MAME Classic](https://mameclassic.mameworld.info/)
-* [mGalaxy v9.0](https://www.emucr.com/2022/06/mgalaxy-v90.html) --- [Home - mGalaxy](https://www.mgalaxy.com/)
-* [QMC2 v0.243](https://www.emucr.com/2022/04/qmc2-v0243.html) --- [qmc2/qmc2-mame-fe: QMC2 - M.A.M.E. Catalog / Launcher II](https://github.com/qmc2/qmc2-mame-fe/)
 * [Attract-Mode v2.6.2](https://www.emucr.com/2022/02/attract-mode-v262.html) --- [Attract-Mode Emulator Frontend](http://attractmode.org/)
 * [FEEL FrontEnd v1.9.8.6](https://www.emucr.com/2020/06/feel-frontend-v1986.html) --- [FEEL FrontEnd Home | FEEL FrontEnd](https://feelfrontend.altervista.org/)
-* [WolfMame v0.249](https://www.emucr.com/2022/10/wolfmame-v0249.html) --- [mahlemiut/wolfmame: WolfMAME](https://github.com/mahlemiut/wolfmame)
 * [pfeMame v2.25.7](https://www.emucr.com/2022/09/pfemame-v2257.html) --- [pfeMAME download | SourceForge.net](https://sourceforge.net/projects/pfemame/)
 * [NegaMAME v0.248.1](https://www.emucr.com/2022/09/negamame-v02481.html) --- [BabelSoft / 博语软件](http://babelsoft.net/products/negamame.htm)
 * [MESSUI v0.248](https://www.emucr.com/2022/09/messui-v0248.html) --- [The MESSUI Place](http://messui.1emulation.com/)
@@ -107,7 +103,6 @@ scoop uninstall <emulator>
 #### atari
 
 * [Stella Git (2022/10/20)](https://www.emucr.com/2022/10/stella-git-20221020.html)
-* [Steem SSE v4.1.2 R5](https://www.emucr.com/2022/10/steem-sse-v412-r5.html)
 * [Hatari v2.4.1](https://www.emucr.com/2022/08/hatari-v241.html)
 * [Gopher2600 v0.19.3](https://www.emucr.com/2022/10/gopher2600-v0193.html)
 * [Altirra v4.10 Test 22](https://www.emucr.com/2022/10/altirra-v410-test-22.html)
