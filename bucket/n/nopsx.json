@@ -7,13 +7,19 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nopsx/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-03.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-04.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-05.png"
     ],
-    "version": "1.9",
+    "version": "2.1",
     "description": "No$PSX is a no thrills PSX emulator that doesn’t require a copy of the bios. It can run almost every PS1 game. The only downside to No$PSX is that if offers no enhancement features.",
     "homepage": "http://problemkaputt.de/index.htm",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nopsx/1.9.7z",
-    "hash": "eaf3113abbbed282b374c6e6d1a2557f3c3d6b9560cfe5014d173a550cba4fe7",
-    "bin": [
-        "NO$PSX.exe"
-    ]
+    "url": "http://problemkaputt.de/no$psx.zip",
+    "hash": "461f1391b42ae810d6c1167ed69ba5590b63090b57cfba30c39644dcf381da65",
+    "bin": "NO$PSX.exe",
+    "checkver": {
+        "url": "http://problemkaputt.de/psx.htm",
+        "regex": "HREF=\"(?<zip>[^\"]+)\">no\\$psx v(?<ver>[\\d\\.]+) Windows",
+        "replace": "${ver}"
+    },
+    "autoupdate": {
+        "url": "http://problemkaputt.de/$matchZip"
+    }
 }
