@@ -1,0 +1,29 @@
+{
+    "version": "0",
+    "description": "Homebrew development oriented fork of Mesen-S. Mesen-S is a cross-platform SNES emulator for Windows & Linux built in C++ and C#.",
+    "homepage": "https://github.com/NovaSquirrel/Mesen-SX",
+    "license": "GPL-3",
+    "url": "https://github.com/NovaSquirrel/Mesen-SX/suites/8980458640/artifacts/413169929#dl.zip",
+    "hash": "226ce2fc98dae3c2a4da217707713559cf5665d5ecac0f13af4b4476ca0235f0",
+    "bin": [
+        "Mesen-S.exe"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/NovaSquirrel/Mesen-SX/actions/workflows/win-build.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
+            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$cont = (Invoke-WebRequest $artUrl).Content | ConvertFrom-Json",
+            "$artId = $cont.artifacts[0].id",
+            "Write-Output \"$suiteId $artId $runId $date $sha\""
+        ],
+        "regex": "^(?<suite>[^ ]+) (?<art>[^ ]+) (?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/NovaSquirrel/Mesen-SX/suites/$matchSuite/artifacts/$matchArt#dl.zip"
+    }
+}

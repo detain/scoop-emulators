@@ -191,14 +191,3 @@ scoop uninstall <emulator>
 * [ColecoDS v7.7](https://www.emucr.com/2022/09/colecods-v77.html)
 * [NooDS Git (2022/10/04)](https://www.emucr.com/2022/10/noods-git-20221004.html)
 * [DeSmuME Git (2022/10/24)](https://www.emucr.com/2022/10/desmume-git-20221024.html)
-
-#### gameboy/color/advance
-
-* [PyBoy v1.5.2](https://www.emucr.com/2022/10/pyboy-v152.html)
-* [NanoBoyAdvance Git (2022/10/04)](https://www.emucr.com/2022/10/nanoboyadvance-git-20221004.html)
-* [Gearboy Git (2022/09/28)](https://www.emucr.com/2022/09/gearboy-git-20220928.html)
-
-#### snes
-
-* [Mesen-SX Git (2022/10/27)](https://www.emucr.com/2022/10/mesen-sx-git-20221027.html)
-* [Mesen-X Git (2022/10/25)](https://www.emucr.com/2022/10/mesen-x-git-20221025.html)
