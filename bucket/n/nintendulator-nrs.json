@@ -1,0 +1,15 @@
+{
+    "version": "202209121316",
+    "description": "NintendulatorNRS is a Famicom/NES (and its derivate such as the VRT chipsets) emulator for Windows. It is a fork of Nintendulator (by Quietust) maintained by NewRisingSun which offers an extremly wide compatibility.",
+    "homepage": "https://symphoniae.com/nrs/NintendulatorNRS/",
+    "license": "GPL-2",
+    "url": "https://symphoniae.com/nrs/NintendulatorNRS/NintendulatorNRS-202209121316.7z",
+    "hash": "c9758c0a465b0e6098a974c833fa29cc86975207b5b371c3f5f84bf470113257",
+    "bin": "Nintendulator.exe",
+    "checkver": {
+        "regex": "NintendulatorNRS-([\\d\\.]+).7z"
+    },
+    "autoupdate": {
+        "url": "https://symphoniae.com/nrs/NintendulatorNRS/NintendulatorNRS-$version.7z"
+    }
+}
