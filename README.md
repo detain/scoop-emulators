@@ -218,5 +218,3 @@ scoop uninstall <emulator>
 
 * [rokuyon (2022/10/20)](https://www.emucr.com/2022/10/rokuyon-20221020.html)
 * [Cen64 Git (2022/10/02)](https://www.emucr.com/2022/10/cen64-git-20221002.html)
-* [N64 Git (2022/10/17)](https://www.emucr.com/2022/10/n64-git-20221017.html)
-* [m64p v2022.08.9](https://www.emucr.com/2022/08/m64p-v2022089.html)

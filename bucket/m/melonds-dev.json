@@ -25,7 +25,7 @@
     ],
     "persist": "melonDS.ini",
     "checkver": {
-        "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&is=success",
+        "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",

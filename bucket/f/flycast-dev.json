@@ -26,7 +26,7 @@
         "mappings"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/flyinghead/flycast/actions/workflows/c-cpp.yml/runs?branch=master&is=success",
+        "url": "https://api.github.com/repos/flyinghead/flycast/actions/workflows/c-cpp.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
