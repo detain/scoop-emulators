@@ -196,15 +196,9 @@ scoop uninstall <emulator>
 
 * [PyBoy v1.5.2](https://www.emucr.com/2022/10/pyboy-v152.html)
 * [NanoBoyAdvance Git (2022/10/04)](https://www.emucr.com/2022/10/nanoboyadvance-git-20221004.html)
-* [SkyEmu Git (2022/10/24)](https://www.emucr.com/2022/10/skyemu-git-20221024.html)
-* [BGB v1.5.10](https://www.emucr.com/2022/10/bgb-v1510.html)
 * [Gearboy Git (2022/09/28)](https://www.emucr.com/2022/09/gearboy-git-20220928.html)
 
 #### snes
 
 * [Mesen-SX Git (2022/10/27)](https://www.emucr.com/2022/10/mesen-sx-git-20221027.html)
 * [Mesen-X Git (2022/10/25)](https://www.emucr.com/2022/10/mesen-x-git-20221025.html)
-
-#### nes
-
-* [NintendulatorNRS (2022/09/12)](https://www.emucr.com/2022/09/nintendulatornrs-20220912.html)
