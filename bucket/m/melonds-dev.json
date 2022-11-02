@@ -1,13 +1,13 @@
 {
-    "version": "0.9.4",
+    "version": "1511-20221028-4ef2e1f",
     "description": "Nintendo DS emulator",
     "homepage": "http://melonds.kuribo64.net/",
     "license": {
         "identifier": "GPL-3.0",
         "url": "https://github.com/Arisotura/melonDS/blob/master/LICENSE"
     },
-    "url": "https://github.com/Arisotura/melonDS/releases/download/0.9.4/melonDS_0.9.4_win_x64.7z",
-    "hash": "8df7ae6293e358dcc4ff9728c72d02886893b89422171f04bb663355fa7faa07",
+    "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
+    "hash": "9602f46f21fa7537775d8f13d91eb4c1403ca22255ec5b6db62b710b426a0380",
     "installer": {
         "script": [
             "$FILE = 'melonDS.ini'",
@@ -40,7 +40,6 @@
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {
-        "url": "https://github.com/melonDS-emu/melonDS/suites/$matchSuite/artifacts/$matchArtifact"
+        "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
     }
 }
-
