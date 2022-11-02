@@ -47,7 +47,6 @@ scoop uninstall <emulator>
 
 #### mame
 
-* [Attract-Mode v2.6.2](https://www.emucr.com/2022/02/attract-mode-v262.html) --- [Attract-Mode Emulator Frontend](http://attractmode.org/)
 * [FEEL FrontEnd v1.9.8.6](https://www.emucr.com/2020/06/feel-frontend-v1986.html) --- [FEEL FrontEnd Home | FEEL FrontEnd](https://feelfrontend.altervista.org/)
 
 #### frontends
