@@ -1,0 +1,52 @@
+{
+    "version": "101-20221024-8f89341",
+    "description": "PSP Emulator written in Java ",
+    "homepage": "https://github.com/jpcsp/jpcsp",
+    "license": "GPL-2.0",
+    "architecture": {
+        "32bit": {
+            "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip",
+            "hash": "b5e067d46d4ce45d25cd10417cf6588577a39683a1d92ae51d60978c48e3f007",
+            "bin": "start-windows-x86.bat",
+            "shortcuts": [
+                [
+                    "start-windows-x86.bat",
+                    "jpcsp"
+                ]
+            ]
+        },
+        "64bit": {
+            "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip",
+            "hash": "cf27195c4d5286aea300244ba11660c0c48efeb6af94c31c327c835eef441105",
+            "bin": "start-windows-amd64.bat",
+            "shortcuts": [
+                [
+                    "start-windows-amd64.bat",
+                    "jpcsp"
+                ]
+            ]
+        }
+    },
+    "extract_dir": "jpcsp",
+    "checkver": {
+        "url": "https://api.github.com/repos/jpcsp/jpcsp/actions/workflows/main.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip"
+            },
+            "64bit": {
+                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip"
+            }
+        }
+    }
+}
