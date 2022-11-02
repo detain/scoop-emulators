@@ -106,6 +106,20 @@ scoop uninstall <emulator>
 
 * [b2 v20220801](https://www.emucr.com/2022/08/b2-v20220801.html)
 
+#### tandy tsr color3
+
+* [VCC v2.1.0.7](https://www.emucr.com/2022/10/vcc-v2107.html)
+
+#### commodore 64/amiga
+
+* [WinVICE r42564](https://www.emucr.com/2022/10/winvice-r42564.html)
+* [WinUAE v4.9.2 Beta 3](https://www.emucr.com/2022/10/winuae-v492-beta-3.html)
+* [vAmiga v2.1](https://www.emucr.com/2022/08/vamiga-v21.html)
+* [Z64K (2022/10/10)](https://www.emucr.com/2022/10/z64k-20221010.html)
+* [Hoxs64 v1.1.1.2](https://www.emucr.com/2022/09/hoxs64-v1112.html)
+* [hpsx64 v0400](https://www.emucr.com/2022/10/hpsx64-v0400.html)
+* [JC64Dis v2.3](https://www.emucr.com/2022/10/jc64dis-v23.html)
+
 #### elektronica bk
 
 * [BK Emulator v3.13.2210.9969](https://www.emucr.com/2022/10/bk-emulator-v31322109969.html)
@@ -134,18 +148,6 @@ scoop uninstall <emulator>
 * [Emu71 v1.16](https://www.emucr.com/2022/08/emu71-v116.html)
 * [Free42 v3.0.15](https://www.emucr.com/2022/10/free42-v3015.html)
 
-#### sega dreamcast
-
-* [Flycast Dojo v0.5.6](https://www.emucr.com/2022/10/flycast-dojo-v056.html)
-
-#### sega mastersystem/gamegear
-
-* [GearSystem Git (2022/09/28)](https://www.emucr.com/2022/09/gearsystem-git-20220928.html)
-
-#### sega model 3
-
-* [Supermodel Git (2022/10/16)](https://www.emucr.com/2022/10/supermodel-git-20221016.html)
-
 #### laserdisc
 
 * [Hypseus Singe v2.10.1](https://www.emucr.com/2022/10/hypseus-singe-v2101.html)
@@ -172,6 +174,18 @@ scoop uninstall <emulator>
 * [no$psx v2.1](https://www.emucr.com/2022/08/nopsx-v21.html)
 * [PCSX-Redux Git (2022/10/17)](https://www.emucr.com/2022/10/pcsx-redux-git-20221017.html)
 
+#### sega dreamcast
+
+* [Flycast Dojo v0.5.6](https://www.emucr.com/2022/10/flycast-dojo-v056.html)
+
+#### sega mastersystem/gamegear
+
+* [GearSystem Git (2022/09/28)](https://www.emucr.com/2022/09/gearsystem-git-20220928.html)
+
+#### sega model 3
+
+* [Supermodel Git (2022/10/16)](https://www.emucr.com/2022/10/supermodel-git-20221016.html)
+
 #### nintendo ds
 
 * [ColecoDS v7.7](https://www.emucr.com/2022/09/colecods-v77.html)
@@ -181,8 +195,6 @@ scoop uninstall <emulator>
 #### gameboy/color/advance
 
 * [PyBoy v1.5.2](https://www.emucr.com/2022/10/pyboy-v152.html)
-* [SameBoy v0.15.6](https://www.emucr.com/2022/09/sameboy-v0156.html)
-* [mGBA Git (2022/10/23)](https://www.emucr.com/2022/10/mgba-git-20221023.html)
 * [NanoBoyAdvance Git (2022/10/04)](https://www.emucr.com/2022/10/nanoboyadvance-git-20221004.html)
 * [SkyEmu Git (2022/10/24)](https://www.emucr.com/2022/10/skyemu-git-20221024.html)
 * [BGB v1.5.10](https://www.emucr.com/2022/10/bgb-v1510.html)
@@ -192,29 +204,7 @@ scoop uninstall <emulator>
 
 * [Mesen-SX Git (2022/10/27)](https://www.emucr.com/2022/10/mesen-sx-git-20221027.html)
 * [Mesen-X Git (2022/10/25)](https://www.emucr.com/2022/10/mesen-x-git-20221025.html)
-* [bsnes-mt v1.3.4](https://www.emucr.com/2022/09/bsnes-mt-v134.html)
-* [bsnes-plus Git (2022/09/04)](https://www.emucr.com/2022/09/bsnes-plus-git-20220904.html)
 
 #### nes
 
-* [Fceux Git (2022/10/13)](https://www.emucr.com/2022/10/fceux-git-20221013.html)
 * [NintendulatorNRS (2022/09/12)](https://www.emucr.com/2022/09/nintendulatornrs-20220912.html)
-
-#### tandy tsr color3
-
-* [VCC v2.1.0.7](https://www.emucr.com/2022/10/vcc-v2107.html)
-
-#### commodore 64/amiga
-
-* [WinVICE r42564](https://www.emucr.com/2022/10/winvice-r42564.html)
-* [WinUAE v4.9.2 Beta 3](https://www.emucr.com/2022/10/winuae-v492-beta-3.html)
-* [vAmiga v2.1](https://www.emucr.com/2022/08/vamiga-v21.html)
-* [Z64K (2022/10/10)](https://www.emucr.com/2022/10/z64k-20221010.html)
-* [Hoxs64 v1.1.1.2](https://www.emucr.com/2022/09/hoxs64-v1112.html)
-* [hpsx64 v0400](https://www.emucr.com/2022/10/hpsx64-v0400.html)
-* [JC64Dis v2.3](https://www.emucr.com/2022/10/jc64dis-v23.html)
-
-#### nintendo 64
-
-* [rokuyon (2022/10/20)](https://www.emucr.com/2022/10/rokuyon-20221020.html)
-* [Cen64 Git (2022/10/02)](https://www.emucr.com/2022/10/cen64-git-20221002.html)
