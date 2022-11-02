@@ -181,13 +181,3 @@ scoop uninstall <emulator>
 #### sega mastersystem/gamegear
 
 * [GearSystem Git (2022/09/28)](https://www.emucr.com/2022/09/gearsystem-git-20220928.html)
-
-#### sega model 3
-
-* [Supermodel Git (2022/10/16)](https://www.emucr.com/2022/10/supermodel-git-20221016.html)
-
-#### nintendo ds
-
-* [ColecoDS v7.7](https://www.emucr.com/2022/09/colecods-v77.html)
-* [NooDS Git (2022/10/04)](https://www.emucr.com/2022/10/noods-git-20221004.html)
-* [DeSmuME Git (2022/10/24)](https://www.emucr.com/2022/10/desmume-git-20221024.html)
