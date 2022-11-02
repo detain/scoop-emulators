@@ -170,14 +170,4 @@ scoop uninstall <emulator>
 
 #### playstation
 
-* [Jpcsp Git (2022/10/25)](https://www.emucr.com/2022/10/jpcsp-git-20221025.html)
-* [no$psx v2.1](https://www.emucr.com/2022/08/nopsx-v21.html)
 * [PCSX-Redux Git (2022/10/17)](https://www.emucr.com/2022/10/pcsx-redux-git-20221017.html)
-
-#### sega dreamcast
-
-* [Flycast Dojo v0.5.6](https://www.emucr.com/2022/10/flycast-dojo-v056.html)
-
-#### sega mastersystem/gamegear
-
-* [GearSystem Git (2022/09/28)](https://www.emucr.com/2022/09/gearsystem-git-20220928.html)
