@@ -3,8 +3,8 @@
     "description": "Cen64 is a Cycle-Accurate Nintendo 64 Simulator.",
     "homepage": "https://github.com/n64dev/cen64",
     "license": "BSD-3-Clause",
-    "url": "https://github.com/n64dev/cen64/suites/$matchSuiteId/artifacts/$matchArtId#dl.zip",
-    "hash": "1",
+    "url": "https://github.com/n64dev/cen64/suites/8571278999/artifacts/383483256#dl.zip",
+    "hash": "fd4a381de8edace7b9317d0356c5d4b7a9ee9cbc267bc3b922f970d553891537",
     "bin": [
         "cen64.exe"
     ],
@@ -24,7 +24,7 @@
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        "url": "https://github.com/n64dev/cen64/suites/$matchSuite/artifacts/$matchArt"
+        "url": "https://github.com/n64dev/cen64/suites/$matchSuite/artifacts/$matchArt#dl.zip"
     }
 }
 
