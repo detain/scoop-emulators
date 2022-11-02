@@ -21,7 +21,7 @@
     "bin": "zesarux.exe",
     "checkver": {
         "url": "https://api.github.com/repos/chernandezba/zesarux/releases/latest",
-        "jsonp": "$.name",
+        "jsonpath": "$.name",
         "regex": "ZEsarUX-(?<version>[^\"]+)",
         "replace": "${version}"
     },

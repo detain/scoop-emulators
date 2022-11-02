@@ -167,7 +167,3 @@ scoop uninstall <emulator>
 #### videoton tv computer
 
 * [WinTVC v1.3.0](https://www.emucr.com/2022/10/wintvc-v130.html)
-
-#### playstation
-
-* [PCSX-Redux Git (2022/10/17)](https://www.emucr.com/2022/10/pcsx-redux-git-20221017.html)

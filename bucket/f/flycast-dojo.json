@@ -20,7 +20,7 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/blueminder/flycast-dojo/releases",
-        "jsonp": "$.[0].tag_name",
+        "jsonpath": "$.[0].tag_name",
         "regex": "dojo-([\\d\\.]+)"
     },
     "autoupdate": {
