@@ -1,16 +1,16 @@
 {
-    "version": "20221102-efc8513d",
+    "version": "20221103-efc8513d",
     "description": "A newer experimental ps2 emulator.",
     "homepage": "https://purei.org",
     "license": "BSD-2-Clause",
     "architecture": {
         "32bit": {
             "url": "https://s3.us-east-2.amazonaws.com/playbuilds/efc8513d/Play-x86-32.exe#/dl.7z",
-            "hash": "8e520e1cf8c48bf74e251f9766e260abe9aab3f8869e593bb1e7fd36c1570c26"
+            "hash": "806deaf7232d609347dbeb894d5b787cf68d01f41d4685df6cd8e1149cc143d4"
         },
         "64bit": {
             "url": "https://s3.us-east-2.amazonaws.com/playbuilds/efc8513d/Play-x86-64.exe#/dl.7z",
-            "hash": "c5c33141a340da1a9c0e749ca93a0cb680be5df7682a1bdd6209ee9d7413344e"
+            "hash": "7a313454d18f70f2a9749b6c0186507aaf9b7e8e07e89cb17b885093406fe5dd"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
