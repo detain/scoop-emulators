@@ -42,16 +42,3 @@ scoop uninstall <emulator>
 
 * Improve [checkver, autoupdate](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate), and [persist](https://github.com/ScoopInstaller/Scoop/wiki/Persistent-data) usage
 * Cache files in another repo to circumvent expiring download links
-
-### emulators im in the middle of adding into here or setting up with checkver/autoupdate
-
-#### frontends
-
-* [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
-* [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
-* [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
-* [QEMU v7.1](https://www.emucr.com/2022/08/qemu-v71.html)
-* [vDos (2022/05/01)](https://www.emucr.com/2022/10/vdos-20220501.html)
-* [VirtualBox v7.0](https://www.emucr.com/2022/10/virtualbox-v70.html)
-* [Wine v7.19](https://www.emucr.com/2022/10/wine-v719.html)
-* [XEMU v0.7.71](https://www.emucr.com/2022/10/xemu-v0771.html)
