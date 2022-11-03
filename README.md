@@ -98,10 +98,6 @@ scoop uninstall <emulator>
 
 * [AppleWin v1.30.12.0](https://www.emucr.com/2022/09/applewin-v130120.html)
 
-##### acorn bbc
-
-* [b2 v20220801](https://www.emucr.com/2022/08/b2-v20220801.html)
-
 #### commodore 64/amiga
 
 * [WinUAE v4.9.2 Beta 3](https://www.emucr.com/2022/10/winuae-v492-beta-3.html)
