@@ -62,6 +62,3 @@ scoop uninstall <emulator>
 * [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
 * [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
 * [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
-* [Playnite v10.3](https://www.emucr.com/2022/09/playnite-v103.html)
-* [RomVault v3.5.1](https://www.emucr.com/2022/10/romvault-v351.html)*
-* [86Box v3.7.1](https://www.emucr.com/2022/08/86box-v371.html)
