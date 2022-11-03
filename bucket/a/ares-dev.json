@@ -1,0 +1,23 @@
+{
+    "version": "965-20221031-98bd187",
+    "description": "ares is a multi-system emulator that began development on October 14th, 2004. It is a descendent of higan and bsnes, and focuses on accuracy and preservation.",
+    "homepage": "https://github.com/ares-emulator/ares",
+    "license": "https://raw.githubusercontent.com/ares-emulator/ares/master/LICENSE",
+    "url": "https://nightly.link/ares-emulator/ares/workflows/build/master/ares-windows.zip",
+    "hash": "96de07d80ca704748dc08d5b18c87d7482b7d67f9551d7c3d0c9092e1af43c98",
+    "bin": "ares.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/ares-emulator/ares/actions/workflows/build.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/ares-emulator/ares/workflows/build/master/ares-windows.zip"
+    }
+}
