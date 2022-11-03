@@ -1,0 +1,31 @@
+{
+    "version": "3.13.2211.10133",
+    "description": "BK Emulator is a Linux/SDL emulator for Soviet (russian) Electronica BK series:БК-0010,БК-0010.01 , БК-0011(М).",
+    "homepage": "https://gid.pdp-11.ru/",
+    "license": "",
+    "architecture": {
+        "32bit": {
+            "url": "https://gid.pdp-11.ru/f/3.13.2211.10133/BK_v3.13_x86.rar",
+            "hash": "0f9b9a158f805363eb69a58990119c45dfd68f1d1717c67468dc291fc903a376"
+        },
+        "64bit": {
+            "url": "https://gid.pdp-11.ru/f/3.13.2211.10133/BK_v3.13_x64.rar",
+            "hash": "82c3862c2803a64b115c281fea4f7675755cc17e6a01de1d461907c437ed197a"
+        }
+    },
+    "bin": "",
+    "checkver": {
+        "url": "https://gid.pdp-11.ru/bkemu.html",
+        "regex": "v([\\d\\.]+)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gid.pdp-11.ru/f/$version/BK_v$majorVersion.$minorVersion_x86.rar"
+            },
+            "64bit": {
+                "url": "https://gid.pdp-11.ru/f/$version/BK_v$majorVersion.$minorVersion_x64.rar"
+            }
+        }
+    }
+}

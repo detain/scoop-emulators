@@ -102,13 +102,8 @@ scoop uninstall <emulator>
 
 * [b2 v20220801](https://www.emucr.com/2022/08/b2-v20220801.html)
 
-#### tandy tsr color3
-
-* [VCC v2.1.0.7](https://www.emucr.com/2022/10/vcc-v2107.html)
-
 #### commodore 64/amiga
 
-* [WinVICE r42564](https://www.emucr.com/2022/10/winvice-r42564.html)
 * [WinUAE v4.9.2 Beta 3](https://www.emucr.com/2022/10/winuae-v492-beta-3.html)
 * [vAmiga v2.1](https://www.emucr.com/2022/08/vamiga-v21.html)
 * [Z64K (2022/10/10)](https://www.emucr.com/2022/10/z64k-20221010.html)
