@@ -114,8 +114,6 @@ scoop uninstall <emulator>
 #### amstrad cpc
 
 * [Caprice32 Git (2022/10/03)](https://www.emucr.com/2022/10/caprice32-git-20221003.html)
-* [Caprice Forever v22.10](https://www.emucr.com/2022/10/caprice-forever-v2210.html)
-* [CPCEMU v2.5](https://www.emucr.com/2022/08/cpcemu-v25.html)
 
 ##### vg5k ?
 
@@ -142,10 +140,6 @@ scoop uninstall <emulator>
 #### bandai wonderswan
 
 * [StoicGoose v002](https://www.emucr.com/2022/08/stoicgoose-v002.html)
-
-#### fujitsu fm towns
-
-* [Tsugaru (2022/09/24)](https://www.emucr.com/2022/09/tsugaru-20220924.html)
 
 #### videoton tv computer
 
