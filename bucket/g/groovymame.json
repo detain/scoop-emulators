@@ -13,10 +13,10 @@
             "$dl = json_path $page $.assets[2].browser_download_url",
             "Write-Output \"$dl $name\""
         ],
-        "regex": "^(?<dl>[^ ]+) GroovyMAME (?<ver>[^ ]*) - Switchres (?<minor>.*)$",
+        "regex": "^https://github.com/antonioginer/GroovyMAME/releases/download/(?<dl>[^ ]+) GroovyMAME (?<ver>[^ ]*) - Switchres (?<minor>.*)$",
         "replace": "${ver}-${minor}"
     },
     "autoupdate": {
-        "url": "$matchDl"
+        "url": "https://github.com/antonioginer/GroovyMAME/releases/download/$matchDl"
     }
 }
