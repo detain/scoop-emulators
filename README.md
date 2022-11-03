@@ -119,10 +119,6 @@ scoop uninstall <emulator>
 
 * [DCVG5K 2022.10.20](https://www.emucr.com/2022/10/dcvg5k-20221020.html)
 
-#### symbian os
-
-* [EKA2L1 Git (2022/10/14)](https://www.emucr.com/2022/10/eka2l1-git-20221014.html)
-
 #### calculators
 
 * [Emu42 v1.29](https://www.emucr.com/2022/10/emu42-v128.html)
@@ -136,10 +132,6 @@ scoop uninstall <emulator>
 #### zx spectrum
 
 * [SpecEmu v3.2 build 2022.10.01](https://www.emucr.com/2022/10/specemu-v32-build-20221001.html)
-
-#### bandai wonderswan
-
-* [StoicGoose v002](https://www.emucr.com/2022/08/stoicgoose-v002.html)
 
 #### videoton tv computer
 
