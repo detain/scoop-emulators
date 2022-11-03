@@ -1,0 +1,17 @@
+{
+    "version": "2022.9.20",
+    "description": "MS-DOS Player is MS-DOS emulator running on Win32-x64 command prompt. 16bit MS-DOS compatible commands can be exexuted on Win32-x64 envrionment.",
+    "homepage": "http://takeda-toshiya.my.coocan.jp/msdos/index.html",
+    "license": "Unknown",
+    "url": "http://takeda-toshiya.my.coocan.jp/msdos/msdos.7z",
+    "hash": "56564998c5d5351adf7211a13f7ed4d8229e175fb58dd6ded9cf81af52f3a29c",
+    "bin": "msdos.exe",
+    "checkver": {
+        "url": "http://takeda-toshiya.my.coocan.jp/msdos/index.html",
+        "regex": "Binaries and Source Codes .i86/v30/i286/i386/i486.<.a> \\((?<month>[^/]+)/(?<day>[^/]+)/(?<year>\\d\\d\\d\\d)\\)",
+        "replace": "${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "http://takeda-toshiya.my.coocan.jp/msdos/msdos.7z"
+    }
+}

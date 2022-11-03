@@ -55,8 +55,6 @@ scoop uninstall <emulator>
 * [VirtualBox v7.0](https://www.emucr.com/2022/10/virtualbox-v70.html)
 * [Wine v7.19](https://www.emucr.com/2022/10/wine-v719.html)
 * [XEMU v0.7.71](https://www.emucr.com/2022/10/xemu-v0771.html)
-* [DOSBox-Staging Git (2022/10/27)](https://www.emucr.com/2022/10/dosbox-staging-git-20221027.html)
-* [DOSBox-X v2022.09.0](https://www.emucr.com/2022/09/dosbox-x-v2022090.html)
 * [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
 * [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
 * [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
