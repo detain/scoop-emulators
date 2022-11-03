@@ -47,14 +47,11 @@ scoop uninstall <emulator>
 
 #### frontends
 
-* [ES-DE v1.2.6](https://www.emucr.com/2022/08/es-de-v126.html)
-* [LaunchBox v12.15](https://www.emucr.com/2022/09/launchbox-v1215.html)
-* [MS-DOS Player for Win32-x64 (2022/09/20)](https://www.emucr.com/2022/09/ms-dos-player-for-win32-x64-20220920.html)
+* [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
+* [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
+* [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
 * [QEMU v7.1](https://www.emucr.com/2022/08/qemu-v71.html)
 * [vDos (2022/05/01)](https://www.emucr.com/2022/10/vdos-20220501.html)
 * [VirtualBox v7.0](https://www.emucr.com/2022/10/virtualbox-v70.html)
 * [Wine v7.19](https://www.emucr.com/2022/10/wine-v719.html)
 * [XEMU v0.7.71](https://www.emucr.com/2022/10/xemu-v0771.html)
-* [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
-* [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
-* [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
