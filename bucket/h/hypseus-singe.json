@@ -1,0 +1,28 @@
+{
+    "version": "2.10.1",
+    "description": "Hypseus is a fork of Matt Ownby's Daphne. A program to play laserdisc arcade games on a PC, Mac or Raspberry Pi. This version includes Singe support for Fan Made and American Laser Games.",
+    "homepage": "https://github.com/DirtBagXon/hypseus-singe",
+    "license": "GPL-3",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v2.10.1/Hypseus.Singe-v2.10.1-win32.zip",
+            "hash": "1011bc44dd142327275ac8c0eda17dded1d32acefe15f89b555beb4b0a9450ae"
+        },
+        "64bit": {
+            "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v2.10.1/Hypseus.Singe-v2.10.1-win64.zip",
+            "hash": "ae80aff4f8d27be839e1760386701e37a9c39d2c087ccc2035061f6befffe293"
+        }
+    },
+    "bin": "hypseus.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v$version/Hypseus.Singe-v$version-win32.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v$version/Hypseus.Singe-v$version-win64.zip"
+            }
+        }
+    }
+}

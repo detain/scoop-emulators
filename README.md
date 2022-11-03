@@ -125,10 +125,6 @@ scoop uninstall <emulator>
 * [Emu71 v1.16](https://www.emucr.com/2022/08/emu71-v116.html)
 * [Free42 v3.0.15](https://www.emucr.com/2022/10/free42-v3015.html)
 
-#### laserdisc
-
-* [Hypseus Singe v2.10.1](https://www.emucr.com/2022/10/hypseus-singe-v2101.html)
-
 #### zx spectrum
 
 * [SpecEmu v3.2 build 2022.10.01](https://www.emucr.com/2022/10/specemu-v32-build-20221001.html)
