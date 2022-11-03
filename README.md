@@ -45,10 +45,6 @@ scoop uninstall <emulator>
 
 ### emulators im in the middle of adding into here or setting up with checkver/autoupdate
 
-#### mame
-
-* [FEEL FrontEnd v1.9.8.6](https://www.emucr.com/2020/06/feel-frontend-v1986.html) --- [FEEL FrontEnd Home | FEEL FrontEnd](https://feelfrontend.altervista.org/)
-
 #### frontends
 
 * [FB Alpha Shuffle v2.4.0 (2022/09/29)](https://www.emucr.com/2022/09/fb-alpha-shuffle-v240-20220929.html)
