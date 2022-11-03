@@ -47,18 +47,14 @@ scoop uninstall <emulator>
 
 #### frontends
 
-* [FB Alpha Shuffle v2.4.0 (2022/09/29)](https://www.emucr.com/2022/09/fb-alpha-shuffle-v240-20220929.html)
 * [ES-DE v1.2.6](https://www.emucr.com/2022/08/es-de-v126.html)
 * [LaunchBox v12.15](https://www.emucr.com/2022/09/launchbox-v1215.html)
 * [MS-DOS Player for Win32-x64 (2022/09/20)](https://www.emucr.com/2022/09/ms-dos-player-for-win32-x64-20220920.html)
 * [QEMU v7.1](https://www.emucr.com/2022/08/qemu-v71.html)
-* [ScummVM v2.6.0](https://www.emucr.com/2022/08/scummvm-v260.html)
 * [vDos (2022/05/01)](https://www.emucr.com/2022/10/vdos-20220501.html)
 * [VirtualBox v7.0](https://www.emucr.com/2022/10/virtualbox-v70.html)
 * [Wine v7.19](https://www.emucr.com/2022/10/wine-v719.html)
 * [XEMU v0.7.71](https://www.emucr.com/2022/10/xemu-v0771.html)
-* [AQZ Netplay Input Plugin Git (2022/09/04)](https://www.emucr.com/2022/09/aqz-netplay-input-plugin-git-20220904.html)
-* [CEMU Graphic Packs v883](https://www.emucr.com/2022/08/cemu-graphic-packs-v883.html)
 * [DOSBox-Staging Git (2022/10/27)](https://www.emucr.com/2022/10/dosbox-staging-git-20221027.html)
 * [DOSBox-X v2022.09.0](https://www.emucr.com/2022/09/dosbox-x-v2022090.html)
 * [DSP Emulator v0.21WIP4 (2022/10/25)](https://www.emucr.com/2022/10/dsp-emulator-v021wip4-20221025.html)
@@ -67,21 +63,11 @@ scoop uninstall <emulator>
 * [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
 * [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
 * [Playnite v10.3](https://www.emucr.com/2022/09/playnite-v103.html)
-* [Raine v0.94.7](https://www.emucr.com/2022/10/raine-v0947.html)
-* [Rebuilder v0.03](https://www.emucr.com/2022/10/rebuilder-v003.html)
-* [ROMSorter R6](https://www.emucr.com/2022/10/romsorter-r6.html)
 * [RomVault v3.5.1](https://www.emucr.com/2022/10/romvault-v351.html)*
 * [86Box v3.7.1](https://www.emucr.com/2022/08/86box-v371.html)
 * [Ares Git (2022/10/10)](https://www.emucr.com/2022/10/ares-git-20221010.html)
 * [Common Source Code Project (2022/10/14)](https://www.emucr.com/2022/10/common-source-code-project-20221014.html)
 * [Ludo v0.16.19](https://www.emucr.com/2022/09/ludo-v01619.html)
 * [WinArcadia & AmiArcadia v29.12](https://www.emucr.com/2022/10/winarcadia-amiarcadia-v2912.html)
-* [MedGui Reborn v0.120](https://www.emucr.com/2022/08/medgui-reborn-v0120.html)
 * [Mednafen v1.31.0-UNSTABLE](https://www.emucr.com/2022/08/mednafen-v1310-unstable.html)
 * [PinballX v5.54](https://www.emucr.com/2022/09/pinballx-v554.html)
-
-#### controller
-
-* [DS4Windows v3.1.2](https://www.emucr.com/2022/08/ds4windows-v312.html)
-* [JoyToKey v6.9.1](https://www.emucr.com/2022/08/joytokey-v691.html)
-* [AntiMicroX v3.3.1](https://www.emucr.com/2022/10/antimicrox-v331.html)

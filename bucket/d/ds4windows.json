@@ -1,0 +1,28 @@
+{
+    "version": "3.1.9",
+    "description": "DS4Windows is a portable program that allows you to get the best experience while using a DualShock 4 on your PC. By emulating a Xbox 360 controller, many more games are accessible.",
+    "homepage": "https://github.com/Ryochan7/DS4Windows",
+    "license": "MIT",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v3.1.9/DS4Windows_3.1.9_x86.zip",
+            "hash": "9da62275cb6c93d102c9965d68ad0892780c9b05445b6bda934e965c5ed0cf44"
+        },
+        "64bit": {
+            "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v3.1.9/DS4Windows_3.1.9_x64.zip",
+            "hash": "8b1e3313c009a78148401c6f45c487e45e627e0c93e771c27d3fa801b50a5b98"
+        }
+    },
+    "bin": "DS4Windows.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v$version/DS4Windows_$version_x86.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v$version/DS4Windows_$version_x64.zip"
+            }
+        }
+    }
+}

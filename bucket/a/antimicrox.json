@@ -1,0 +1,13 @@
+{
+    "version": "3.3.1",
+    "description": "AntiMicroX is a graphical program used to map gamepad keys to keyboard, mouse, scripts and macros. You can use this program to control any desktop application with a gamepad on Linux🐧 and Windows 🪟. It can be also used for generating SDL2 configuration (useful for mapping atypical gamepads to generic ones like xbox360).",
+    "homepage": "https://github.com/AntiMicroX/antimicrox",
+    "license": "GPL-3",
+    "url": "https://github.com/AntiMicroX/antimicrox/releases/download/3.3.1/antimicrox-3.3.1-PortableWindows-AMD64.zip",
+    "hash": "ba7b3c8923a7fbd465cf7447626e2c62641e421f8d396f8918cb3d235208e6ca",
+    "bin": "antimicrox.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AntiMicroX/antimicrox/releases/download/$version/antimicrox-$version-PortableWindows-AMD64.zip"
+    }
+}
