@@ -111,10 +111,6 @@ scoop uninstall <emulator>
 * [hpsx64 v0400](https://www.emucr.com/2022/10/hpsx64-v0400.html)
 * [JC64Dis v2.3](https://www.emucr.com/2022/10/jc64dis-v23.html)
 
-#### elektronica bk
-
-* [BK Emulator v3.13.2210.9969](https://www.emucr.com/2022/10/bk-emulator-v31322109969.html)
-
 #### cps + neogeo arcade
 
 * [Caname v0.67.248](https://www.emucr.com/2022/09/caname-v067248.html)
