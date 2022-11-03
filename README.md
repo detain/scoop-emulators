@@ -68,6 +68,5 @@ scoop uninstall <emulator>
 * [Ares Git (2022/10/10)](https://www.emucr.com/2022/10/ares-git-20221010.html)
 * [Common Source Code Project (2022/10/14)](https://www.emucr.com/2022/10/common-source-code-project-20221014.html)
 * [Ludo v0.16.19](https://www.emucr.com/2022/09/ludo-v01619.html)
-* [WinArcadia & AmiArcadia v29.12](https://www.emucr.com/2022/10/winarcadia-amiarcadia-v2912.html)
 * [Mednafen v1.31.0-UNSTABLE](https://www.emucr.com/2022/08/mednafen-v1310-unstable.html)
 * [PinballX v5.54](https://www.emucr.com/2022/09/pinballx-v554.html)
