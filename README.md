@@ -57,8 +57,6 @@ scoop uninstall <emulator>
 * [XEMU v0.7.71](https://www.emucr.com/2022/10/xemu-v0771.html)
 * [DOSBox-Staging Git (2022/10/27)](https://www.emucr.com/2022/10/dosbox-staging-git-20221027.html)
 * [DOSBox-X v2022.09.0](https://www.emucr.com/2022/09/dosbox-x-v2022090.html)
-* [DSP Emulator v0.21WIP4 (2022/10/25)](https://www.emucr.com/2022/10/dsp-emulator-v021wip4-20221025.html)
-* [DuckStation Git (2022/10/23)](https://www.emucr.com/2022/10/duckstation-git-20221023.html)
 * [Emulicious (2022/09/30)](https://www.emucr.com/2022/10/emulicious-20220930.html)
 * [GameEx v18.29](https://www.emucr.com/2022/10/gameex-v1829.html)
 * [Joyce v2.5](https://www.emucr.com/2022/08/joyce-v25.html)
