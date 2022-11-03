@@ -1,0 +1,13 @@
+{
+    "version": "0.19.3",
+    "description": "Gopher2600 is an emulator for the Atari 2600. Whilst the performance is not as efficient as some other emulators it is none-the-less suitable for playing games, on a reasonably modern computer, at the required 60fps. (The development machine for Gopher2600 has been an i3-3225, dating from around 2012.)",
+    "homepage": "https://github.com/JetSetIlly/Gopher2600",
+    "license": "GPL-3",
+    "url": "https://github.com/JetSetIlly/Gopher2600/releases/download/v0.19.3/gopher2600_windows_amd64.exe",
+    "hash": "407349987e80e1cb23183c3017f1da9a4dc61e5e52076e2a11c1daeffa5d9e9a",
+    "bin": "gopher2600_windows_amd64.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/JetSetIlly/Gopher2600/releases/download/v$version/gopher2600_windows_amd64.exe"
+    }
+}
