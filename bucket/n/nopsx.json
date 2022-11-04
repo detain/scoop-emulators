@@ -9,13 +9,14 @@
     ],
     "version": "2.1",
     "description": "No$PSX is a no thrills PSX emulator that doesn’t require a copy of the bios. It can run almost every PS1 game. The only downside to No$PSX is that if offers no enhancement features.",
-    "homepage": "http://problemkaputt.de/index.htm",
-    "license": "Freeware",
+    "homepage": "http://problemkaputt.de/psx.htm",
+    "license": "Unknown",
     "url": "http://problemkaputt.de/no$psx.zip",
     "hash": "461f1391b42ae810d6c1167ed69ba5590b63090b57cfba30c39644dcf381da65",
-    "bin": "NO$PSX.exe",
+    "bin": [
+        "NO$PSX.exe"
+    ],
     "checkver": {
-        "url": "http://problemkaputt.de/psx.htm",
         "regex": "HREF=\"(?<zip>[^\"]+)\">no\\$psx v(?<ver>[\\d\\.]+) Windows",
         "replace": "${ver}"
     },

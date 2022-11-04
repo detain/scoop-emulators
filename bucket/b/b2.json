@@ -5,9 +5,10 @@
     "license": "Unknown",
     "url": "https://github.com/tom-seddon/b2/releases/download/b2-20220803-132314-6a7ed04/b2-windows-20220803-132314-6a7ed04.zip",
     "hash": "98b32c01f592c96f2a36d2f9d9c6ce6029e2f0b5e8f211f7abcd740d588e4bee",
-    "bin": "b2.exe",
+    "bin": [
+        "b2.exe"
+    ],
     "checkver": {
-        "type": "github",
         "regex": "/releases/tag/b2-(\\d{8}-\\d+-[\\da-f]{7})"
     },
     "autoupdate": {
