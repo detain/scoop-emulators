@@ -26,6 +26,8 @@
             ]
         }
     },
+    "extract_dir": "Stella-6.7",
+    "persist": "config",
     "innosetup": true,
     "checkver": {
         "github": "https://github.com/stella-emu/stella"
@@ -38,6 +40,7 @@
             "32bit": {
                 "url": "https://github.com/stella-emu/stella/releases/download/$version/Stella-$version-win32.exe"
             }
-        }
+        },
+        "extract_dir": "Stella-$version"
     }
 }

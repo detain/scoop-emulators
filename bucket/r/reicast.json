@@ -1,14 +1,14 @@
 {
-    "version": "20.01.27",
+    "version": "20.02.03",
     "description": "Dreamcast Emulator",
     "homepage": "https://reicast.com",
-    "license": "GPL-2.0",
-    "url": "https://consolo.is.cc/emulationking/reicast/reicast-win_x64-27-01-2020.zip",
-    "hash": "6d4fd682ec6c1ac74c51c29545ea5a2f894868ecc180c6fb1dc03aa15444bc15",
-    "bin": "reicast-win_x64-RelWithDebInfo-5122cdb6550e678a1cb2adfeab513c1251a6d5aa.exe",
+    "license": {"identifier": "GPL-2.0"},
+    "url": "http://reicast-builds-windows.s3.amazonaws.com/builds/heads/stable-333b7c536071ea77b0ecc46e534cb28206e471b4/reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.zip",
+    "hash": "556eccd84fbf463ca7d32cdb6decf51254d929088db6010c447071f54da416ed",
+    "bin": "reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.exe",
     "shortcuts": [
         [
-            "reicast-win_x64-RelWithDebInfo-5122cdb6550e678a1cb2adfeab513c1251a6d5aa.exe",
+            "reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.exe",
             "reicast.exe",
             "reicast"
         ]
