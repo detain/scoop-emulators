@@ -6,9 +6,13 @@
     "suggest": {
         "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://dl.dolphin-emu.org/builds/48/41/dolphin-master-5.0-17824-x64.7z",
-    "hash": "a120966a09cc298d1b8d733a8b1f81adaa2943cd8c2576c2525bf142b356a083",
-    "extract_dir": "Dolphin-x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.dolphin-emu.org/builds/48/41/dolphin-master-5.0-17824-x64.7z",
+            "hash": "a120966a09cc298d1b8d733a8b1f81adaa2943cd8c2576c2525bf142b356a083",
+            "extract_dir": "Dolphin-x64"
+        }
+    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
@@ -40,6 +44,10 @@
         "replace": "${major}-${build}"
     },
     "autoupdate": {
-        "url": "https://dl.dolphin-emu.org/builds/$matchRand1/$matchRand2/dolphin-master-$matchMajor-$matchBuild-x64.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.dolphin-emu.org/builds/$matchRand1/$matchRand2/dolphin-master-$matchMajor-$matchBuild-x64.7z"
+            }
+        }
     }
 }

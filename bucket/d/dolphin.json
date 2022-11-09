@@ -4,10 +4,15 @@
     "homepage": "https://dolphin-emu.org/",
     "license": "GPL-2.0-or-later",
     "suggest": {
-        "Microsoft Visual C++ Runtime 2019": "extras/vcredist2019"
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe#/dolphin.lzma",
-    "hash": "e1b3ae8fc890c6588e5656f77ef2747ae7ddfc90b6530b240c0c5b9d0ab3ce8c",
+    "notes": "There is an auto-update feature with also includes whiching to a 'dev' version.",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe#/dolphin.lzma",
+            "hash": "e1b3ae8fc890c6588e5656f77ef2747ae7ddfc90b6530b240c0c5b9d0ab3ce8c"
+        }
+    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
@@ -33,6 +38,10 @@
         "regex": "https://dl-mirror.dolphin-emu.org/([\\d.]+)/dolphin-x64"
     },
     "autoupdate": {
-        "url": "https://dl-mirror.dolphin-emu.org/$version/dolphin-x64-$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://dl-mirror.dolphin-emu.org/$version/dolphin-x64-$version.exe#/dl.7z"
+            }
+        }
     }
 }
