@@ -14,7 +14,7 @@
         "script": [
             "if (!(Test-Path \"$persist_dir\")) {",
             "   '[Main]', 'SettingsVersion = 3', '[AutoUpdater]', 'CheckAtStartup = false' | Set-Content \"$dir\\settings.ini\"",
-            "   New-item \"$dir\\portable.txt\" -ItemType File | Out-Null",
+            "   New-Item \"$dir\\portable.txt\" -ItemType File | Out-Null",
             "}"
         ]
     },

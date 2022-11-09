@@ -11,5 +11,10 @@
             "z26.exe",
             "z26"
         ]
-    ]
+    ],
+    "checkver": "version ([\\d.]+)\\.",
+    "autoupdate": {
+        "url": "http://www.whimsey.com/z26/z26_$cleanVersion_win10.zip",
+        "extract_dir": "z26_$cleanVersion_win10"
+    }
 }

@@ -11,7 +11,7 @@
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
-        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
         "   New-Item \"$persist_dir\\redream.cfg\" -Type File | Out-Null",
         "}"
     ],
