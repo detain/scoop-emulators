@@ -3,6 +3,7 @@
     "description": "This repository attempts to modernize the DOSBox project by using current development practices and tools, fixing issues, adding features that better support today's systems, and sending patches upstream.",
     "homepage": "https://github.com/dosbox-staging/dosbox-staging",
     "license": "Unknown",
+    "notes": "For config file examples, see: https://github.com/dosbox-staging/dosbox-staging/wiki/Config-file-examples",
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/dosbox-staging/dosbox-staging/workflows/windows-msvc/main/dosbox-staging-windows-x86-v0.80.0-alpha-166-gf8239f.zip",
@@ -13,7 +14,23 @@
             "hash": "f170a4785844a0195d5a433e824814c91b5e190715888643e9ae5207317e97ee"
         }
     },
-    "bin": "dosbox-x.exe",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\dosbox-staging.conf\")) { New-Item -ItemType File \"$dir\\dosbox-staging.conf\" | Out-Null }",
+    "bin": [
+        "dosbox.exe",
+        "dosbox_with_debugger.exe"
+    ],
+    "shortcuts": [
+        [
+            "dosbox.exe",
+            "DOSBox Staging"
+        ]
+    ],
+    "persist": [
+        "dosbox-staging.conf",
+        "glshaders",
+        "mt32-roms",
+        "soundfonts"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/dosbox-staging/dosbox-staging/actions/workflows/windows-msys2.yml/runs?branch=main&status=success",
         "script": [
