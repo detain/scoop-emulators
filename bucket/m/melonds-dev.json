@@ -3,8 +3,12 @@
     "description": "Nintendo DS emulator",
     "homepage": "http://melonds.kuribo64.net/",
     "license": "GPL-3.0",
-    "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
-    "hash": "d1f1bea1568b73a4cd6450725234b679debca1a78e66185a98745337138105bd",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
+            "hash": "d1f1bea1568b73a4cd6450725234b679debca1a78e66185a98745337138105bd"
+        }
+    },
     "installer": {
         "script": [
             "$FILE = 'melonDS.ini'",
@@ -17,7 +21,7 @@
     "shortcuts": [
         [
             "melonDS.exe",
-            "melonDS"
+            "melonDS (dev)"
         ]
     ],
     "persist": "melonDS.ini",
@@ -37,6 +41,10 @@
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {
-        "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
+            }
+        }
     }
 }

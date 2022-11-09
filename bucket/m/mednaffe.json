@@ -4,6 +4,9 @@
     "homepage": "https://github.com/AmatCoder/mednaffe/",
     "license": "GPL-3.0",
     "depends": "sudo",
+    "suggest": {
+        "mednafen": "mednafen"
+    },
     "url": "https://github.com/AmatCoder/mednaffe/releases/download/0.9.2/mednaffe-0.9.2-win.zip",
     "hash": "e172f24c656dbc0d07bbeb67de03481b119be155997749697d12f9f33b60af00",
     "pre_install": [
