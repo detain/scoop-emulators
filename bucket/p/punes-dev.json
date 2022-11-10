@@ -1,0 +1,51 @@
+{
+    "version": "237-20221109-08c79de",
+    "description": "Qt-based Nintendo Entertaiment System emulator and NSF/NSFe Music Player (Direct3D Version)",
+    "homepage": "https://github.com/punesemu/puNES",
+    "license": "GPL-2.0",
+    "architecture": {
+        "32bit": {
+            "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.d3d9.zip",
+            "hash": "47733f84cb29488ab1bb49256943360bf59099ba5263d741173d60a8f85cc5e2",
+            "bin": "punes.exe",
+            "shortcuts": [
+                [
+                    "punes.exe",
+                    "puNES (Direct3D)"
+                ]
+            ]
+        },
+        "64bit": {
+            "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.d3d9.zip",
+            "hash": "26635ca791dd71484b54d1fe8436e3f3e37bff3704f5f4f111278cb75ba4ac3b",
+            "bin": "punes64.exe",
+            "shortcuts": [
+                [
+                    "punes64.exe",
+                    "puNES (Direct3D)"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.d3d9.zip"
+            },
+            "64bit": {
+                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.d3d9.zip"
+            }
+        }
+    }
+}
