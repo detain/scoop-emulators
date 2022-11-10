@@ -1,0 +1,56 @@
+{
+    "##": [
+        "name:Mupen64+",
+        "author:richard42g",
+        "cmd:%BIN% %ROM%",
+        "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_logo.png",
+        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_screen_01.jpg"
+    ],
+    "version": "28-20221001-g2ac8682",
+    "description": "Mupen64Plus is a Nintendo 64 emulator.",
+    "homepage": "https://mupen64plus.org",
+    "license": "GNU GPLv2",
+    "suggest": {
+        "Needed?": "extras/vcredist2015"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-g2ac8682.zip",
+            "hash": "36447237a93b15537a4bb9dea1d3de5af8c8708aa80dab32730a3fd115c92b79"
+        },
+        "64bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-g2ac8682.zip",
+            "hash": "ccb8e9514f469a4e70699b53bb93daff24f0c1b5f18b4bf36cdf9484ec67b3e6"
+        }
+    },
+    "bin": "mupen64plus-ui-console.exe",
+    "shortcuts": [
+        [
+            "mupen64plus-ui-console.exe",
+            "Mupen64+ UI Console (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/mupen64plus/mupen64plus-core/actions/workflows/build.yml/runs?branch=master&status=success",
+        "script": [
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$url = 'https://api.github.com/repos/mupen64plus/mupen64plus-core/releases'",
+            "$cont = (Invoke-WebRequest $url).Content | ConvertFrom-Json",
+            "$file = $cont.assets[0].name",
+            "Write-Output \"$runId $date $file\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>[^ ]+)-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ mupen64plus-core-msvc-x64-(?<hash>[^\\.]+)\\.zip$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-$matchHash.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-$matchHash.zip"
+            }
+        }
+    }
+}
