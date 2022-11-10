@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ppsspp.org/files/1_13_2/ppsspp_win.zip",
+            "url": "http://ppsspp.org/files/1_13_2/ppsspp_win.zip",
             "hash": "e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20",
             "bin": [
                 [
@@ -24,7 +24,7 @@
             ]
         },
         "arm64": {
-            "url": "https://ppsspp.org/files/1_13_2/PPSSPPWindowsARM64.zip",
+            "url": "http://ppsspp.org/files/1_13_2/PPSSPPWindowsARM64.zip",
             "hash": "98b964a82464ddacc0abe1830f29ffb2094825df6b20c608426c3455f2b9eff8",
             "bin": [
                 [
@@ -59,10 +59,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
+                "url": "http://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
             },
             "arm64": {
-                "url": "https://ppsspp.org/files/$underscoreVersion/PPSSPPWindowsARM64.zip"
+                "url": "http://ppsspp.org/files/$underscoreVersion/PPSSPPWindowsARM64.zip"
             }
         }
     }
