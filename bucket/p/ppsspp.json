@@ -23,6 +23,22 @@
                 ]
             ]
         },
+        "32bit": {
+            "url": "http://ppsspp.org/files/1_13_2/ppsspp_win.zip",
+            "hash": "e73c5d639bdf7c39edb1263830f49a84d6061bd64810cd69994911e10faaeb20",
+            "bin": [
+                [
+                    "PPSSPPWindows.exe",
+                    "ppsspp"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "PPSSPPWindows.exe",
+                    "PPSSPP"
+                ]
+            ]
+        },
         "arm64": {
             "url": "http://ppsspp.org/files/1_13_2/PPSSPPWindowsARM64.zip",
             "hash": "98b964a82464ddacc0abe1830f29ffb2094825df6b20c608426c3455f2b9eff8",
@@ -40,7 +56,6 @@
             ]
         }
     },
-    "extract_dir": "ppsspp",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
@@ -59,6 +74,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
+                "url": "http://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
+            },
+            "32bit": {
                 "url": "http://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
             },
             "arm64": {
