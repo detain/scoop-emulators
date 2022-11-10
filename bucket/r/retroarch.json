@@ -26,7 +26,12 @@
         "    if (!(Test-Path \"$persist_dir\\content_$_.lpl\")) { New-Item \"$dir\\content_$_.lpl\" | Out-Null }",
         "}"
     ],
-    "bin": "retroarch.exe",
+    "bin": [
+        [
+            "retroarch.exe",
+            "retroarch"
+        ]
+    ],
     "shortcuts": [
         [
             "retroarch.exe",
