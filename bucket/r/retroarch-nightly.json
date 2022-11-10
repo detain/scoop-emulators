@@ -11,10 +11,12 @@
     "architecture": {
         "32bit": {
             "url": "https://buildbot.libretro.com/nightly/windows/x86/RetroArch.7z",
+            "hash": "1",
             "extract_dir": "RetroArch-Win32"
         },
         "64bit": {
             "url": "https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch.7z",
+            "hash": "1",
             "extract_dir": "RetroArch-Win64"
         }
     },
@@ -26,13 +28,13 @@
     "bin": [
         [
             "retroarch.exe",
-            "retroarch-nightly"
+            "retroarch-dev"
         ]
     ],
     "shortcuts": [
         [
             "retroarch.exe",
-            "RetroArch (nightly)"
+            "RetroArch (dev)"
         ]
     ],
     "persist": [
@@ -53,6 +55,11 @@
         "content_history.lpl",
         "retroarch.cfg"
     ],
+    "checkver": {
+        "url": "https://buildbot.libretro.com/nightly/windows/x86_64/",
+        "regex": "(?smi)(\\d{4}-\\d{2}-\\d{2})_RetroArch\\.7z",
+        "reverse": true
+    },
     "autoupdate": {
         "architecture": {
             "32bit": {
