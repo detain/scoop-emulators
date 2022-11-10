@@ -6,27 +6,20 @@
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.d3d9.zip",
-            "hash": "47733f84cb29488ab1bb49256943360bf59099ba5263d741173d60a8f85cc5e2",
-            "bin": "punes.exe",
-            "shortcuts": [
-                [
-                    "punes.exe",
-                    "puNES (Direct3D) (dev)"
-                ]
-            ]
+            "hash": "47733f84cb29488ab1bb49256943360bf59099ba5263d741173d60a8f85cc5e2"
         },
         "64bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.d3d9.zip",
-            "hash": "26635ca791dd71484b54d1fe8436e3f3e37bff3704f5f4f111278cb75ba4ac3b",
-            "bin": "punes64.exe",
-            "shortcuts": [
-                [
-                    "punes64.exe",
-                    "puNES (Direct3D) (dev)"
-                ]
-            ]
+            "hash": "26635ca791dd71484b54d1fe8436e3f3e37bff3704f5f4f111278cb75ba4ac3b"
         }
     },
+    "bin": "punes.exe",
+    "shortcuts": [
+        [
+            "punes.exe",
+            "puNES (Direct3D) (dev)"
+        ]
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",
         "script": [

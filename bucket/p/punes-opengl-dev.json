@@ -6,27 +6,20 @@
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.opengl.zip",
-            "hash": "876fef5ac2795693e0bc5c0a072ca1b42bf6abe4f017bc74d0d0274f8e48469e",
-            "bin": "punes.exe",
-            "shortcuts": [
-                [
-                    "punes.exe",
-                    "puNES (OpenGL) (dev)"
-                ]
-            ]
+            "hash": "876fef5ac2795693e0bc5c0a072ca1b42bf6abe4f017bc74d0d0274f8e48469e"
         },
         "64bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.opengl.zip",
-            "hash": "1b684a48df04b1c5840f12e3fb8bf413936f5b5ad1b3ec5e58340694a59694b1",
-            "bin": "punes64.exe",
-            "shortcuts": [
-                [
-                    "punes64.exe",
-                    "puNES (OpenGL) (dev)"
-                ]
-            ]
+            "hash": "1b684a48df04b1c5840f12e3fb8bf413936f5b5ad1b3ec5e58340694a59694b1"
         }
     },
+    "bin": "punes.exe",
+    "shortcuts": [
+        [
+            "punes.exe",
+            "puNES (OpenGL) (dev)"
+        ]
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",
         "script": [
