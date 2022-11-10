@@ -1,5 +1,5 @@
 {
-    "version": "nightly",
+    "version": "0",
     "description": "Emulator for arcade games and select consoles",
     "homepage": "https://github.com/finalburnneo/FBNeo",
     "license": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt",
@@ -15,7 +15,7 @@
             "shortcuts": [
                 [
                     "fbneo.exe",
-                    "FinalBurn Neo (nightly)"
+                    "FinalBurn Neo (dev)"
                 ]
             ]
         },
@@ -30,7 +30,7 @@
             "shortcuts": [
                 [
                     "fbneo64.exe",
-                    "FinalBurn Neo (nightly)"
+                    "FinalBurn Neo (dev)"
                 ]
             ]
         }
@@ -44,5 +44,26 @@
         "savestates",
         "screenshots",
         "support"
-    ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/finalburnneo/FBNeo/actions/workflows/nightly-release.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/Windows.x32.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/Windows.x64.zip"
+            }
+        }
+    }
 }
