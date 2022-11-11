@@ -22,12 +22,14 @@
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" | Out-Null }",
     "bin": [
-        "EmuHawk.exe",
         [
             "EmuHawk.exe",
             "BizHawk (dev)"
         ],
-        "DiscoHawk.exe"
+        [
+            "DiscoHawk.exe",
+            "DiscoHawk (dev)"
+        ]
     ],
     "shortcuts": [
         [
