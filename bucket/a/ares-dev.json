@@ -1,12 +1,12 @@
 {
-    "version": "986-20221121-d1847c9",
+    "version": "989-20221123-09aa634",
     "description": "ares is a multi-system emulator that began development on October 14th, 2004. It is a descendent of higan and bsnes, and focuses on accuracy and preservation.",
     "homepage": "https://github.com/ares-emulator/ares",
     "license": "https://raw.githubusercontent.com/ares-emulator/ares/master/LICENSE",
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/ares-emulator/ares/workflows/build/master/ares-windows.zip",
-            "hash": "4b2b2418aad3d300993d41ef0b75a8dc0ff6dd0904061c50d9a52b220555d132"
+            "hash": "d50af6e6bb5492190640427511ab8a3dad74c368a1acb65cf873260f26290bf7"
         }
     },
     "bin": "ares.exe",
