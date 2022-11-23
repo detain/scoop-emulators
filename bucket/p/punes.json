@@ -7,7 +7,12 @@
         "32bit": {
             "url": "https://github.com/punesemu/puNES/releases/download/v0.109/punes-0.109-i686-win-d3d9.zip",
             "hash": "1c829d829a56708aafdc4089415f4fcac645ab6e871e6fbd18828d2a7ce5a418",
-            "bin": "punes.exe",
+            "bin": [
+                [
+                    "punes.exe",
+                    "puNES (Direct3D)"
+                ]
+            ],
             "shortcuts": [
                 [
                     "punes.exe",
@@ -18,7 +23,12 @@
         "64bit": {
             "url": "https://github.com/punesemu/puNES/releases/download/v0.109/punes-0.109-x86_64-win-d3d9.zip",
             "hash": "2b75965baafe8b7709d439bb5bdf5be72d5dc3dac77186f74789c443bb737350",
-            "bin": "punes64.exe",
+            "bin": [
+                [
+                    "punes64.exe",
+                    "puNES (Direct3D)"
+                ]
+            ],
             "shortcuts": [
                 [
                     "punes64.exe",

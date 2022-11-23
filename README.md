@@ -105,7 +105,6 @@ scoop uninstall <emulator>
 ##### TODO / Fixes
 
 * Not installing Correectly
-  * duckstation
   * punes-dev
   * punes-opengl-dev
   * qemu
