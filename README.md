@@ -101,3 +101,41 @@ scoop uninstall <emulator>
 * [GitHub - punesemu/puNES: Qt-based Nintendo Entertaiment System emulator and NSF/NSFe Music Player (Linux, FreeBSD, OpenBSD and Windows)](https://github.com/punesemu/puNES)
 * [DuckStation Git (2022/11/03) - EmuCR](https://www.emucr.com/2022/11/duckstation-git-20221103.html)
 * [GitHub - stenzek/duckstation: Fast PlayStation 1 emulator for x86-64/AArch32/AArch64](https://github.com/stenzek/duckstation)
+
+##### TODO / Fixes
+
+```
+   [-] D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\n\nopsx.json has 3 Errors!
+      [*] Error: JSON does not match any schemas from 'anyOf'.
+        [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\n\nopsx.json:14:47
+        [^] Path: http://scoop.sh/draft/schema#/definitions/uriOrArrayOfUris/AnyOf
+        [*] Error: Invalid type. Expected Array but got String.
+          [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\n\nopsx.json:14:47
+          [^] Path: http://scoop.sh/draft/schema#/definitions/uriOrArrayOfUris/anyOf/1/Type
+        [*] Error: JSON is valid against schema from 'not'.
+          [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\n\nopsx.json:14:47
+          [^] Path: http://scoop.sh/draft/schema#/definitions/uriOrArrayOfUris/anyOf/0/Not
+   [-] D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxpoly.json has 1 Error!
+      [*] Error: Property 'shortcut' has not been defined and the schema does not allow additional properties.
+        [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxpoly.json:14:15
+        [^] Path: http://scoop.sh/draft/schema#/AdditionalProperties
+  [-] D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxspectrum4.json has 3 Errors!
+      [*] Error: JSON does not match any schemas from 'anyOf'.
+        [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxspectrum4.json:9:17
+        [^] Path: http://scoop.sh/draft/schema#/definitions/checkver/AnyOf
+        [*] Error: Invalid type. Expected String but got Object.
+          [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxspectrum4.json:9:17
+          [^] Path: http://scoop.sh/draft/schema#/definitions/checkver/anyOf/0/Type
+        [*] Error: String '' does not validate against format 'uri'.
+          [^] Line: D:\a\scoop-emulators\scoop-emulators\my_bucket\bucket\z\zxspectrum4.json:10:17
+          [^] Path: http://scoop.sh/draft/schema#/definitions/checkver/anyOf/1/properties/url/Format
+```
+
+* Not installing Correectly
+  * ares-dev
+  * duckstation
+  * openmsx-dev
+  * punes-dev
+  * punes-opengl-dev
+  * qemu
+
