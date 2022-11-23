@@ -1,26 +1,29 @@
 {
-    "##": [
-        "name:no$psx",
-        "author:Martin Korth",
-        "cmd:%BIN% %ROM%",
-        "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nopsx/emulator_logo.jpg",
-        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nopsx/emulator_screen_01.jpg",
-        "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-03.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-04.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/nopsx-PSX-Emulator-Pic-05.png"
-    ],
     "version": "2.1",
     "description": "No$PSX is a no thrills PSX emulator that doesn’t require a copy of the bios. It can run almost every PS1 game. The only downside to No$PSX is that if offers no enhancement features.",
-    "homepage": "http://problemkaputt.de/psx.htm",
-    "license": "Unknown",
-    "url": "http://problemkaputt.de/no$psx.zip",
-    "hash": "461f1391b42ae810d6c1167ed69ba5590b63090b57cfba30c39644dcf381da65",
+    "homepage": "https://problemkaputt.de/psx.htm",
+    "license": "Freeware",
+    "architecture": {
+        "32bit": {
+            "url": "https://problemkaputt.de/no$psx.zip",
+            "hash": "461f1391b42ae810d6c1167ed69ba5590b63090b57cfba30c39644dcf381da65"
+        }
+    },
     "bin": [
-        "NO$PSX.exe"
+        [
+            "NO$PSX.exe",
+            "No$Psx"
+        ]
     ],
     "checkver": {
         "regex": "HREF=\"(?<zip>[^\"]+)\">no\\$psx v(?<ver>[\\d\\.]+) Windows",
         "replace": "${ver}"
     },
     "autoupdate": {
-        "url": "http://problemkaputt.de/$matchZip"
+        "architecture": {
+            "32bit": {
+                "url": "https://problemkaputt.de/$matchZip"
+            }
+        }
     }
 }
