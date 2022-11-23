@@ -10,7 +10,9 @@
         }
     },
     "extract_dir": "zxpoly-emul-2.3.1",
-    "bin": "zxpoly.exe",
+    "bin": [
+        "zxpoly.exe"
+    ],
     "shortcut": [
         [
             "zxpoly.exe",
