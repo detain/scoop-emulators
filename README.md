@@ -102,9 +102,3 @@ scoop uninstall <emulator>
 * [DuckStation Git (2022/11/03) - EmuCR](https://www.emucr.com/2022/11/duckstation-git-20221103.html)
 * [GitHub - stenzek/duckstation: Fast PlayStation 1 emulator for x86-64/AArch32/AArch64](https://github.com/stenzek/duckstation)
 
-##### TODO / Fixes
-
-* Not installing Correectly
-  * punes-dev
-  * punes-opengl-dev
-  * qemu
