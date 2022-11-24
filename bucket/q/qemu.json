@@ -13,6 +13,7 @@
             "hash": "sha512:b2c7d9f68df233eb9010453f4ece43417444e85ab7877064b26a166c3f1e9e533f6e2b19d5e8abfb2af1c0d2bbd83f94f3ea5dcefdeca0f5b9942f2b65c8801b"
         }
     },
+    "innosetup": true,
     "env_add_path": ".",
     "checkver": "<strong>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})</strong>: New QEMU installers \\((?<version>[\\d.a-z\\-]+)\\)",
     "autoupdate": {
