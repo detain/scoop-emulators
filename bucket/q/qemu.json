@@ -5,28 +5,53 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221123.exe",
-            "hash": "a113379a867b00c9d33d799697171899940cbac41fb225632ec0e1fd19efb934"
+            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221123.exe#qemu.zip",
+            "hash": "a113379a867b00c9d33d799697171899940cbac41fb225632ec0e1fd19efb934",
+            "bin": [
+                "qemu-system-x86_64w.exe",
+                "qemu-system-x86_64.exe"
+            ],
+            "shortcuts": [
+                [
+                    "qemu-system-x86_64w.exe",
+                    "Qemu x86_64 (no console)"
+                ],
+                [
+                    "qemu-system-x86_64.exe",
+                    "Qemu x86_64 (console)"
+                ]
+            ]
         },
         "32bit": {
-            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221123.exe",
-            "hash": "af08fa3160777529362346632124216223c53c9635e249454ca09c39f3fb5b75"
+            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221123.exe#qemu.zip",
+            "hash": "af08fa3160777529362346632124216223c53c9635e249454ca09c39f3fb5b75",
+            "bin": [
+                "qemu-system-i386w.exe",
+                "qemu-system-i386.exe",
+            ],
+            "shortcuts": [
+                [
+                    "qemu-system-i386w.exe",
+                    "Qemu i386 (no console)"
+                ],
+                [
+                    "qemu-system-i386.exe",
+                    "Qemu i386 (console)"
+                ]
+            ]
         }
     },
-    "innosetup": true,
+    "extract_to": "qemu",
     "env_add_path": ".",
     "checkver": "<strong>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})</strong>: New QEMU installers \\((?<version>[\\d.a-z\\-]+)\\)",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-$matchYear$matchMonth$matchDay.exe"
+                "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-$matchYear$matchMonth$matchDay.exe#qemu.zip"
             },
             "32bit": {
-                "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-$matchYear$matchMonth$matchDay.exe"
+                "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-$matchYear$matchMonth$matchDay.exe#qemu.zip"
             }
-        },
-        "hash": {
-            "url": "$urlNoExt.sha512"
         }
     }
 }
