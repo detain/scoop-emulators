@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221123.exe#qemu.zip",
+            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221123.exe",
             "hash": "a113379a867b00c9d33d799697171899940cbac41fb225632ec0e1fd19efb934",
             "bin": [
                 "qemu-system-x86_64w.exe",
@@ -23,7 +23,7 @@
             ]
         },
         "32bit": {
-            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221123.exe#qemu.zip",
+            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221123.exe",
             "hash": "af08fa3160777529362346632124216223c53c9635e249454ca09c39f3fb5b75",
             "bin": [
                 "qemu-system-i386w.exe",
