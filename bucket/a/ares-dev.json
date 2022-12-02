@@ -9,7 +9,16 @@
             "hash": "416f975fcafdd5a1550f7dbff0d0656ea5ed55f923b266e499fbd715ff09f2c7"
         }
     },
-    "bin": "ares.exe",
+    "extract_dir": "ares-nightly",
+    "bin": [
+        "ares.exe"
+    ],
+    "shortcuts": [
+        [
+            "ares.exe",
+            "ares (dev)"
+        ]
+    ],
     "post_install": [
         "if (!(Test-Path \"$persist_dir\\settings.bml.bak\")) {",
         "   New-Item -ItemType File \"$dir\\settings.bml\" | Out-Null",

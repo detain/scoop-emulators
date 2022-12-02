@@ -10,7 +10,9 @@
         }
     },
     "extract_dir": "ares-v130.1",
-    "bin": "ares.exe",
+    "bin": [
+        "ares.exe"
+    ],
     "shortcuts": [
         [
             "ares.exe",
