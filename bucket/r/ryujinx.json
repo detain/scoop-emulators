@@ -14,6 +14,15 @@
         }
     },
     "extract_dir": "publish",
+    "bin": [
+        "Ryujinx.exe"
+    ],
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx"
+        ]
+    ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-Item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
@@ -24,14 +33,9 @@
         "   }",
         "}"
     ],
-    "bin": "Ryujinx.exe",
-    "shortcuts": [
-        [
-            "Ryujinx.exe",
-            "Ryujinx"
-        ]
+    "persist": [
+        "portable"
     ],
-    "persist": "portable",
     "checkver": {
         "github": "https://github.com/Ryujinx/release-channel-master"
     },

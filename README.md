@@ -87,9 +87,6 @@ scoop uninstall <emulator>
 * [GitHub - Gaston900/PSArcadeClassic: An emulator that focuses on combining the source code ARCADE + HBMAME + simplifying the list and thus keeping the roms more stable.](https://github.com/Gaston900/PSArcadeClassic)
 * [Command.dat v0.249 - EmuCR](https://www.emucr.com/2022/11/commanddat-v0249.html)
 * [progetto-SNAPS Command.dat](https://www.progettosnaps.net/command/)
-* [Cemu v2.0-11 - EmuCR](https://www.emucr.com/2022/11/cemu-v20-11.html)
-* [Cemu Emulator](http://cemu.info/)
-* [Releases · cemu-project/Cemu](https://github.com/cemu-project/Cemu/releases)
 * [LnxSpectrum v1.8.7 - EmuCR](https://www.emucr.com/2022/11/lnxspectrum-v187.html)
 * [Download – www.ilnx.cz](https://www.ilnx.cz/downl/)
 * [GameEx v18.30 - EmuCR](https://www.emucr.com/2022/11/gameex-v1830.html)
@@ -97,8 +94,3 @@ scoop uninstall <emulator>
 * [Problem loading page](http://www.gameex.net/)
 * [OpenTTD v13.0-beta1 - EmuCR](https://www.emucr.com/2022/11/openttd-v130-beta1.html)
 * [OpenTTD | Download | Testing](https://www.openttd.org/downloads/openttd-releases/testing)
-* [puNES Git (2022/11/03) - EmuCR](https://www.emucr.com/2022/11/punes-git-20221103.html)
-* [GitHub - punesemu/puNES: Qt-based Nintendo Entertaiment System emulator and NSF/NSFe Music Player (Linux, FreeBSD, OpenBSD and Windows)](https://github.com/punesemu/puNES)
-* [DuckStation Git (2022/11/03) - EmuCR](https://www.emucr.com/2022/11/duckstation-git-20221103.html)
-* [GitHub - stenzek/duckstation: Fast PlayStation 1 emulator for x86-64/AArch32/AArch64](https://github.com/stenzek/duckstation)
-
