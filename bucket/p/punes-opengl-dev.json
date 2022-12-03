@@ -16,14 +16,31 @@
     "bin": [
         [
             "punes.exe",
-            "puNES (OpenGL) (dev)"
+            "puNES (OpenGL) (dev)",
+            "--portable"
         ]
     ],
     "shortcuts": [
         [
             "punes.exe",
-            "puNES (OpenGL) (dev)"
+            "puNES (OpenGL) (dev)",
+            "--portable"
         ]
+    ],
+    "persist": [
+        "bios",
+        "cheat",
+        "diff",
+        "jsc",
+        "pgs",
+        "prb",
+        "save",
+        "screenshot",
+        "shp",
+        "tmp",
+        "input.cfg",
+        "puNES.cfg",
+        "recent.cfg"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",

@@ -10,13 +10,15 @@
             "bin": [
                 [
                     "punes.exe",
-                    "puNES (Direct3D)"
+                    "puNES (Direct3D)",
+                    "--portable"
                 ]
             ],
             "shortcuts": [
                 [
                     "punes.exe",
-                    "puNES (Direct3D)"
+                    "puNES (Direct3D)",
+                    "--portable"
                 ]
             ]
         },
@@ -26,17 +28,34 @@
             "bin": [
                 [
                     "punes64.exe",
-                    "puNES (Direct3D)"
+                    "puNES (Direct3D)",
+                    "--portable"
                 ]
             ],
             "shortcuts": [
                 [
                     "punes64.exe",
-                    "puNES (Direct3D)"
+                    "puNES (Direct3D)",
+                    "--portable"
                 ]
             ]
         }
     },
+    "persist": [
+        "bios",
+        "cheat",
+        "diff",
+        "jsc",
+        "pgs",
+        "prb",
+        "save",
+        "screenshot",
+        "shp",
+        "tmp",
+        "input.cfg",
+        "puNES.cfg",
+        "recent.cfg"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
