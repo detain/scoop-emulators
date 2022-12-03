@@ -6,7 +6,7 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_screen_01.jpg"
     ],
-    "version": "35-20221124-ge04f5b8",
+    "version": "40-20221203-gf63e1b3",
     "description": "Mupen64Plus is a Nintendo 64 emulator.",
     "homepage": "https://mupen64plus.org",
     "license": "GNU GPLv2",
@@ -15,12 +15,12 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-ge04f5b8.zip",
-            "hash": "c35d09b755355736249cd051288514b80b55a3cf2eb3e227b7813d8874c6b002"
+            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-gf63e1b3.zip",
+            "hash": "e9dce3ccaa0538f489ab6bcc8e7beede56016fd3cb70a86e36c3f392746d4f08"
         },
         "64bit": {
-            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-ge04f5b8.zip",
-            "hash": "ad0a3241762e8301d070533b6f6491858b17ccb0d2591a18a8b78a04bbc6a336"
+            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-gf63e1b3.zip",
+            "hash": "79f5987781d1fa343c2e870e2e502a8f188654a117b362ea8955089f0f5c725f"
         }
     },
     "bin": "mupen64plus-ui-console.exe",
