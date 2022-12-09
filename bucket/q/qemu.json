@@ -1,12 +1,12 @@
 {
-    "version": "7.2.0-rc3",
+    "version": "7.2.0-rc4",
     "description": "A generic and open source machine emulator and virtualizer.",
     "homepage": "https://qemu.weilnetz.de/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221130.exe#dl.7z",
-            "hash": "66f80e34baa5d7a9fcc506704810fb7006e8a0aafac24fc6f76dbf05528c91f9",
+            "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20221208.exe#dl.7z",
+            "hash": "586aa11f145c0e867335a91538c9059b32fec6d50d19dea7405c5a3a657ee19e",
             "bin": [
                 "qemu-system-x86_64w.exe",
                 "qemu-system-x86_64.exe"
@@ -23,8 +23,8 @@
             ]
         },
         "32bit": {
-            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221130.exe#dl.7z",
-            "hash": "2425e75e7de2a75e28584326056450fb8f932e72dadbd9c66f3c42a283ed80f4",
+            "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-20221208.exe#dl.7z",
+            "hash": "d5c04c9a1699145110a58b58df9ff309d8be4736874c9617ce3b5c0d4163392a",
             "bin": [
                 "qemu-system-i386w.exe",
                 "qemu-system-i386.exe"
