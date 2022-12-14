@@ -1,0 +1,67 @@
+{
+    "version": "1.1.0-ldn3.0.1",
+    "description": "A simple, experimental Nintendo Switch emulator.  The LDN edition adds multiplayer support",
+    "homepage": "https://ryujinx.org/",
+    "license": "MIT",
+    "notes": [
+        "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
+        "Learn more at https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.patreon.com/file?h=74910544&i=12353060",
+            "hash": "0bcfa8d79aa458e3408019c576de6644bcc9fb5587b684dcd7d8712d93fb68fa"
+        }
+    },
+    "extract_dir": "publish",
+    "bin": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx LDN"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx LDN"
+        ]
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-Item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\Ryujinx\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\Ryujinx\\*\" -Destination \"$persist_dir\\portable\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\Ryujinx\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "persist": "portable",
+    "checkver": {
+        "script": [
+            "$url = 'https://github.com/Ryujinx/Ryujinx/wiki/Multiplayer-(LDN-Local-Wireless)-Guide'",
+            "$fileMatch = 'Link--primary.*Windows: https://www.patreon.com/([^<]*)<'",
+            "$avaMatch = 'Link--primary.*Windows.*Avalonia.*: https://www.patreon.com/([^<]*)<'",
+            "$verMatch = 'Link--primary.*Download LDN (.*) here'",
+            "$cont = (Invoke-WebRequest $url -UseBasicParsing).Content",
+            "if(!($cont -match $fileMatch)) { error \"Could not match windows dl url '$fileMatch' on '$url'\"; break }",
+            "$fileUrl = $matches[1]",
+            "$fileUrl = $fileUrl.Replace('&amp;', '&')",
+            "if(!($cont -match $avaMatch)) { error \"Could match ava ui build dl url '$avaMatch' on '$url'\"; break }",
+            "$avaUrl = $matches[1]",
+            "$avaUrl = $avaUrl.Replace('&amp;', '&')",
+            "if(!($cont -match $verMatch)) { error \"Could match '$verMatch' on '$url'\"; break }",
+            "$version = $matches[1]",
+            "Write-Output \"$fileUrl $avaUrl $version\""
+        ],
+        "regex": "^(?<file>[^ ]+) (?<ava>[^ ]+) (?<version>.*)$",
+        "replace": "1.1.0-ldn${version}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.patreon.com/$matchFile"
+            }
+        }
+    }
+}
