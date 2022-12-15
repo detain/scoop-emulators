@@ -1,12 +1,12 @@
 {
-    "version": "108-20221213-abdfb2a",
+    "version": "109-20221215-f562cfb",
     "description": "PSP Emulator written in Java ",
     "homepage": "https://github.com/jpcsp/jpcsp",
     "license": "GPL-2.0",
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip",
-            "hash": "6c7eac7d1930d904f8fcf2d4ebace895767726ca9d30c65b8c3cf6c6afb1d2a7",
+            "hash": "0a9c09c1698bb976591e2a6ea22cb0a71cb31abeae8cc19140b6b6e9cae5f26d",
             "bin": "start-windows-x86.bat",
             "shortcuts": [
                 [
@@ -17,7 +17,7 @@
         },
         "64bit": {
             "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip",
-            "hash": "2e1255242e865457545f40c837a1b13605e48d0bff3c057d741b35f37de354d1",
+            "hash": "507fdff06cdc29c7cec2c39407d55895393f3d756abfa305c87835d871dd4c7f",
             "bin": "start-windows-amd64.bat",
             "shortcuts": [
                 [
