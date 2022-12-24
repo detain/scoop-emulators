@@ -1,10 +1,10 @@
 {
-    "version": "77-20221206-c98f8ab",
+    "version": "78-20221222-61e5213",
     "description": "Mesen X is a cross-platform (Windows & Linux) NES/Famicom emulator built in C++ and C#. This fork is meant to gather development efforts from different forks. Not under active development but pull requests are welcome.",
     "homepage": "https://github.com/NovaSquirrel/Mesen-X/",
     "license": "GPL-3",
     "url": "https://nightly.link/NovaSquirrel/Mesen-X/workflows/win-build/master/Mesen-win.zip",
-    "hash": "579f98ab4fc260b44c86ef817d0b6190826693b4c091f2e5b887ea8355fe11cb",
+    "hash": "279869c6b09c7853e47d1f0f86c85c13e11898019d068c122f7a7bbd2240b986",
     "bin": "Mesen.exe",
     "checkver": {
         "url": "https://api.github.com/repos/NovaSquirrel/Mesen-X/actions/workflows/win-build.yml/runs?branch=master&status=success",
