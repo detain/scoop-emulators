@@ -1,5 +1,5 @@
 {
-    "version": "2023-01-03",
+    "version": "2023-01-04",
     "description": "Frontend for emulators, game engines and media players (nightly)",
     "homepage": "https://www.retroarch.com/",
     "license": "GPL-3.0",
@@ -11,12 +11,12 @@
     "architecture": {
         "32bit": {
             "url": "https://buildbot.libretro.com/nightly/windows/x86/RetroArch.7z",
-            "hash": "b93b696b1c2b07389007fff4f86b24f99a174c01a560cb0835e4a0263d10e721",
+            "hash": "bfb2764f414e66fe6b06881662a31e664c758d44add1b55cd5b2ae009eefcfad",
             "extract_dir": "RetroArch-Win32"
         },
         "64bit": {
             "url": "https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch.7z",
-            "hash": "f0d100608c21a07d6c57814b97ecdce6e8a2ecfebe6925bc6ef62192baa54e4f",
+            "hash": "eb41ad6bf3f336e7b0b6376d14d1e1ece961307841fd9db593c164bb6ae3d980",
             "extract_dir": "RetroArch-Win64"
         }
     },
