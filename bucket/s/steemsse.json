@@ -1,13 +1,13 @@
 {
-    "version": "4.1.2",
+    "version": "4.1.0",
     "description": "ST Enhanced EMulator Sensei Software Edition",
     "homepage": "https://sourceforge.net/projects/steemsse",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.1/v4.1.2/Steem.SSE.4.1.2.Win64.D3D.R5.zip",
-            "hash": "2dbe87bcb49134f0587cbd476309c32df54205828c544008fc532490917d996d",
-            "extract_dir": "Steem.SSE.4.1.2.Win64.D3D",
+            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.1/v4.1.0/Steem.SSE.4.1.0.Win64.D3D.R7.zip",
+            "hash": "sha1:52e4fa6d6817d3e76a90a0457de2e34c2c700a98",
+            "extract_dir": "Steem.SSE.4.1.0.Win64.D3D",
             "bin": "Steem64D3D.exe",
             "shortcuts": [
                 [
@@ -17,9 +17,9 @@
             ]
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.1/v4.1.2/Steem.SSE.4.1.2.Win32.D3D.R5.zip",
-            "hash": "d50dd4508779221d4ecaa0e2686c5fd03b381e48d9f5a853acb112823dcffa01",
-            "extract_dir": "Steem.SSE.4.1.2.Win32.D3D",
+            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.1/v4.1.0/Steem.SSE.4.1.0.Win32.D3D.R7.zip",
+            "hash": "sha1:00cddb301791cb154576e02bad94b5f3fb7df517",
+            "extract_dir": "Steem.SSE.4.1.0.Win32.D3D",
             "bin": "Steem32D3D.exe",
             "shortcuts": [
                 [
@@ -46,4 +46,3 @@
         }
     }
 }
-
