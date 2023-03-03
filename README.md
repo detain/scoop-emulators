@@ -26,3 +26,5 @@ scoop uninstall <emulator>
 
 ## Development Notes
 
+* make sure you have these added:
+  * pcxs2-git ryuinx-git fpps4-git flycast-git desmume-git vita3k-git visualboyadvance-m-git skyemu-git fbneo-git openmsx-git dolphin-git ppsspp-git simcoupe hypseus-singe flycast-dojo winvice-dev yuzu-git fceux-git mgba-git ares-git xm6pro-68k  pcsx-redux-git project64-git eka2l1-git common-source-code-project pc6001vx nintendulator citra-git xenia-git duckstation-git stella-git dosbox-staging-git mesen openttd rpcs3-git snex9x-git punes-git bizhawk-git bkemulator windspro cemu simple64 cspect megui-reborn hades-git mesen-x-git wine rmg noods-git nintendulatornrs winuae z64k eightyone retrobat redream melonds-git play-git retro-virtual-machine launchbox xemu rokuyon mutsu tsugaru b2
