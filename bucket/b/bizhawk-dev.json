@@ -3,7 +3,7 @@
         "The requirements are listed in https://github.com/TASVideos/BizHawk-Prereqs/blob/master/README",
         "The list of firmware-specific directories to persist comes from the base directories listed in BizHawk's /src/BizHawk.Client.Common/config/PathEntryCollection.cs"
     ],
-    "version": "3387-20230312-9d6a732c",
+    "version": "3389-20230313-51dab928",
     "description": "BizHawk is a multi-platform emulator with full rerecording support and Lua scripting. BizHawk focuses on core accuracy and power user tools while still being an easy-to-use emulator for casual gaming",
     "homepage": "http://tasvideos.org/BizHawk.html",
     "license": "MIT",
@@ -16,8 +16,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/3916866455/artifacts/download?file_type=archive#dl.zip",
-            "hash": "e4dbd3c83ab04bc8b23f1760eb0fb075a13e067d38943ef4e8ed45a4e9bc89b3"
+            "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/3918909227/artifacts/download?file_type=archive#dl.zip",
+            "hash": "70ad092d5554832f1887cb071f1d5d951e0e8a522fd6706c96557dc73ab042e9"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" | Out-Null }",
