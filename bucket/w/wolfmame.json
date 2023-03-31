@@ -1,10 +1,10 @@
 {
-    "version": "0.251",
+    "version": "0.253",
     "description": "WolfMAME is a build which is optimized for MARP - MAME Action Replay Page, where literally thousands of MAME fans play, save and upload highscore attempts. WolfMAME does not allow the player to pause games, use cheats, change DIP switches etc to gain an unfair advantage.",
     "homepage": "https://github.com/mahlemiut/wolfmame",
     "license": "https://raw.githubusercontent.com/mahlemiut/wolfmame/master/COPYING",
-    "url": "https://github.com/mahlemiut/wolfmame/releases/download/wolf251/wolfmame-0251.7z",
-    "hash": "544e1ce5007cd97cc32c9262588ec99a16e62debe831bcb0af898868c17df9f8",
+    "url": "https://github.com/mahlemiut/wolfmame/releases/download/wolf253/wolfmame-0253.7z",
+    "hash": "f1d47402481d82b5c4a826e562d86b5e26c7a49c001f4d30be8642638874a4e6",
     "bin": "mame.exe",
     "checkver": {
         "regex": "/releases/tag/wolf(?<ver>[\\d\\.]+)",
