@@ -26,5 +26,67 @@ scoop uninstall <emulator>
 
 ## Development Notes
 
-* make sure you have these added:
-  * pcxs2-git ryuinx-git fpps4-git flycast-git desmume-git vita3k-git visualboyadvance-m-git skyemu-git fbneo-git openmsx-git dolphin-git ppsspp-git simcoupe hypseus-singe flycast-dojo winvice-dev yuzu-git fceux-git mgba-git ares-git xm6pro-68k  pcsx-redux-git project64-git eka2l1-git common-source-code-project pc6001vx nintendulator citra-git xenia-git duckstation-git stella-git dosbox-staging-git mesen openttd rpcs3-git snex9x-git punes-git bizhawk-git bkemulator windspro cemu simple64 cspect megui-reborn hades-git mesen-x-git wine rmg noods-git nintendulatornrs winuae z64k eightyone retrobat redream melonds-git play-git retro-virtual-machine launchbox xemu rokuyon mutsu tsugaru b2
+### Emulators to Add
+
+These are emulators that received at least 10 updates since 2000 and are currently missing from scoop or unmatched
+
+* #cspect
+* 86box
+* arcade
+* avocado
+* bigpemu
+* binjgb
+* bk_emulator
+* bsnes-plus
+* caname
+* caprice_forever
+* clrmamepro
+* common_source_code_project
+* cpcec_/_zxsec
+* denise
+* dobiestation
+* ds4windows
+* dsp_emulator
+* emma
+* emu_loader
+* emulicious
+* fb_alpha_shuffle
+* fb_neo
+* flycast_dojo
+* fpps4
+* gameex
+* gameloader_all_rh
+* hitachi_mb-s1
+* hypseus_singe
+* jrommanager
+* launchbox
+* m64p
+* mame32_more!
+* mame32k
+* mameui64
+* mark5_emulator
+* medgui_reborn
+* mesen2
+* ms-dos_player_for_win32-x64
+* n64
+* neko_project
+* nesicide
+* nintendulatornrs
+* nmamex2
+* nostlan
+* nulldc-bear
+* openttd
+* pantheon
+* pcsx-redux
+* rmg
+* romvault
+* ssf_previewver
+* steem_sse
+* swiss
+* vb81_xur
+* vvctre
+* winarcadia_&_amiarcadia
+* winds_pro
+* wine
+* x360ce
+* zx-poly
