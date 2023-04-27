@@ -1,10 +1,10 @@
 {
-    "version": "2.4.9",
+    "version": "2.4.11",
     "description": "Steam ROM Manager adds non-Steam games to steam in bulk and manages their artwork assets",
     "homepage": "https://github.com/SteamGridDB/steam-rom-manager",
     "license": "GPL-3.0",
-    "url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.4.9/Steam-ROM-Manager-portable-2.4.9.exe",
-    "hash": "9f59d2507cab51bb79b41d63a8fe9e76efd9f34b41f1ca41d13de646fbab8c37",
+    "url": "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.4.11/Steam-ROM-Manager-portable-2.4.11.exe",
+    "hash": "1671484783a6ee5e769be02d448e0effbcb64328206ad3b55184347a2677975b",
     "installer": {
         "script": "Rename-Item \"$dir\\steam-rom-manager-portable-$version.exe\" 'steam-rom-manager.exe' -Force"
     },
