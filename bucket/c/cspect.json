@@ -1,0 +1,20 @@
+{
+    "##": "name:#CSpect",
+    "version": "2.19.2.1",
+    "description": "CSpect is a ZX Spectrum emulator for Windows.",
+    "homepage": "http://cspect.org/",
+    "license": "MIT",
+    "url": "http://www.javalemmings.com/public/zxnext/CSpect2_19_2_1.zip",
+    "hash": "91bb9c291cd2fd285c443f07bb26558c4c9c5c7f9757b1af59eca83c135f5bd3",
+    "bin": [
+        "cspect.exe",
+        "CSpect"
+    ],
+    "checkver": {
+        "url": "https://dailly.blogspot.com/",
+        "regex": "CSpect V(\\d[\\.\\d]+)<"
+    },
+    "autoupdate": {
+        "url": "http://www.javalemmings.com/public/zxnext/CSpect$underscoreVersion.zip"
+    }
+}
