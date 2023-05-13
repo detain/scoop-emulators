@@ -3,7 +3,7 @@
         "name:Mesen2",
         "logo:https://2.bp.blogspot.com/-uVbj8LUOaYs/V35eFxQuf1I/AAAAAAAAVHc/LMq6m5XGqkMyD2zr24A20JOYhl-0-014gCLcB/s320/GetIcon.jpg"
     ],
-    "version": "180-20230508-da0825a",
+    "version": "183-20230513-8a08187",
     "description": [
         "Mesen is a NES/Famicom emulator and NSF player. It is still a work in progress - some features are currently incomplete or may change in future versions.",
         "",
@@ -21,8 +21,10 @@
     "homepage": "https://github.com/SourMesen/Mesen2",
     "license": "Unknown",
     "url": "https://nightly.link/SourMesen/Mesen2/workflows/build/master/Mesen%20%28Windows%29.zip",
-    "hash": "f2051c56279b7270bee2dbd4feac3aa4b4765f277d07df3620f572eadd392b86",
-    "bin": [],
+    "hash": "8e09891e3fedbaff7898701d64f733ab35cc1f32368cba6f60edf19c8fc0a8dc",
+    "bin": [
+        
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/SourMesen/Mesen2/actions/workflows/build.yml/runs?event=push&branch=master&status=success",
         "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
