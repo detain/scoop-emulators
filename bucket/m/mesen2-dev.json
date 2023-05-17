@@ -23,8 +23,11 @@
     "url": "https://nightly.link/SourMesen/Mesen2/workflows/build/master/Mesen%20%28Windows%29.zip",
     "hash": "3c562f08f94c8a14f2e4008956da6853e78a474b6fc838698e15611d7b2d6afd",
     "bin": [
-        
-    ],
+        [
+            "Mesen.exe",
+            "Mesen2-dev"
+        ]
+   ],
     "checkver": {
         "url": "https://api.github.com/repos/SourMesen/Mesen2/actions/workflows/build.yml/runs?event=push&branch=master&status=success",
         "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
