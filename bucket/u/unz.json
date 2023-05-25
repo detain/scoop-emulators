@@ -6,13 +6,18 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/unz/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/unz/emulator_screen_01.jpg"
     ],
-    "version": "0.5L30",
-    "description": "UNZ is a Fujitsu FM Towns and FM Marty emulator.",
-    "homepage": "http://members.at.infoseek.co.jp/townsemu/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/unz/0.5L30.7z",
-    "hash": "8e2cc8e22c35cdce316ed06d186a9efb9ed7d51b2cfaae417166d57cd5eddae5",
-    "bin": [
-        "Unz.exe"
-    ]
+    "version": "1.0.5",
+    "description": "Twombit is a portable emulator for the 2-bit Ferranti ULA video chip used in the Sinclair ZX80 and ZX81.",
+    "homepage": "https://sourceforge.net/projects/twombit/",
+    "license": "GPL-2.0-only",
+    "url": "https://sourceforge.net/projects/twombit/files/v%201.0.5/twombit_win.zip/download",
+    "hash": "2ce22ec2b4982b6f4ade03605fd67112376d41951e508c2610f26fb96836a2ca",
+    "bin": "twombit.exe",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/twombit/files/",
+        "regex": "v (\\d[\\d\\.]*)"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/twombit/files/v%20$version/twombit_win.zip/download"
+    }
 }
