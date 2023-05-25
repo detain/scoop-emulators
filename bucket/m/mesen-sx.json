@@ -1,10 +1,10 @@
 {
-    "version": "25-20221106-c85dd78",
+    "version": "26-20230525-a28503b",
     "description": "Homebrew development oriented fork of Mesen-S. Mesen-S is a cross-platform SNES emulator for Windows & Linux built in C++ and C#.",
     "homepage": "https://github.com/NovaSquirrel/Mesen-SX",
     "license": "GPL-3",
     "url": "https://nightly.link/NovaSquirrel/Mesen-SX/workflows/win-build/master/Mesen-S-win.zip",
-    "hash": "a08e9b5346af7069883651ff185b6c1c497e737f16082220bf1c9416c795bacd",
+    "hash": "8c1f56e6644234665c359a56fb7bca091d2f59f86a053cddd0cc0d6777ef7ba1",
     "bin": "Mesen-S.exe",
     "checkver": {
         "url": "https://api.github.com/repos/NovaSquirrel/Mesen-SX/actions/workflows/win-build.yml/runs?branch=master&status=success",
