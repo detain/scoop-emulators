@@ -6,12 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sdltrs/emulator_screen_01.jpg"
     ],
     "version": "1.1.0",
-    "description": "sdltrs is a Tandy/Radio Shack TRS80 series emulator.",
+    "description": "TRS-80 Model I/III/4/4P emulator for Windows and Linux",
     "homepage": "http://sdltrs.sourceforge.net/",
-    "license": "BSD Licence",
-    "url": "https://consolo.is.cc/emu/sdltrs/1.1.0.7z",
-    "hash": "756be1ad94da9f3847cfdc2a6e93ab6c577052aacd4cccbce488751e28b636a5",
-    "bin": [
-        "sdltrs.exe"
-    ]
+    "license": "GPL-2.0-only",
+    "url": "https://sourceforge.net/projects/sdltrs/files/Release-1.1.0/sdltrs_win32_1_1_0.zip/download",
+    "hash": "d779e956080af99041b1cdedb3e169fc4df9551e63d52957cc110a0ef09014ed",
+    "bin": "sdltrs",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/sdltrs/files/",
+        "regex": "Release-([0-9\\.]+)"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/sdltrs/files/Release-$version/sdltrs_win32_$underscoreVersion.zip/download"
+    }
 }
