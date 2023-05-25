@@ -7,13 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/supergcube/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2015/03/SuperGCube-Nintendo-GameCube-Emulator-Pic-01.jpg"
     ],
-    "version": "0.4a",
+    "version": "20051211",
     "description": "SuperGCube is the continuation of the open source emulator GCube. However it made a decision to make it solely a windows project. The decision to continue the source code of GCube was made due to the original code base.",
     "homepage": "http://supergcube.sourceforge.net",
-    "license": "GNU GPLv2",
-    "url": "https://consolo.is.cc/emu/supergcube/0.4a.7z",
-    "hash": "99eb0e1dc95bafd95f2774ded5b0c45cb7634d709fa8447bec143394f39b4fc2",
+    "license": "GPL-2.0-only",
+    "url": "https://sourceforge.net/projects/gcemu-project/files/gcemu/GCEmu-20051211/gcemu-release_20051211.zip/download",
+    "hash": "1ce28d7bfb5407e435b7a94d419063e698edc7135196a677682215bad3240133",
     "bin": [
-        "gcube.exe"
-    ]
+        "supergcube.exe",
+        "plugins/*",
+        "roms/*"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/supergcube/rss",
+        "regex": "gcemu-release_(\\d+).zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/gcemu-project/files/gcemu/GCEmu-$version/gcemu-release_$version.zip/download"
+    }
 }
