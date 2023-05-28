@@ -9,10 +9,14 @@
     "version": "0.5.1",
     "description": "The KC85 connects to the Internet and can access USB storage media. This is made possible by the new module M052. This includes both a network interface and a USB host port.",
     "homepage": "http://kcemu.sourceforge.net/kcemu/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/kcemu/0.5.1.7z",
-    "hash": "e5b03f5343a4fcae4c37d9d567f7a80c850ff3b43e7431abb87949c63d0404af",
-    "bin": [
-        "kcemu.exe"
-    ]
+    "license": "GPL-2.0-or-later",
+    "url": "https://sourceforge.net/projects/kcemu/files/KCemu-win32/KCemu-0.5.1/KCemu-0.5.1.exe/download",
+    "hash": "78b28a4946aef8aebcd569f0a7ef6d4c974be5a9b39249ec8c588a91e9f0e14a",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/kcemu/rss?path=/KCemu-win32",
+        "regex": "KCemu-(\\d+(?:\\.\\d+)+).exe"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/kcemu/files/KCemu-win32/KCemu-$version/KCemu-$version.exe/download"
+    }
 }
