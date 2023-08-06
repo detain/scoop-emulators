@@ -1,10 +1,10 @@
 {
-    "version": "1302-20230806-856df74",
+    "version": "1305-20230806-49c1403",
     "description": "NanoboyAdvance is a Nintendo Game Boy Advance (TM) emulator written in C++17. The goal is to create a minimal, accurate and reasonably efficient Game Boy Advance emulator in modern C++. The emulator implements the core hardware completely and with high accuracy. Almost all games can be emulated without any known issues, even the 'Classic NES' titles which abuse a variety of edge-cases and undefined behaviour.",
     "homepage": "https://github.com/nba-emu/NanoBoyAdvance",
     "license": "GPL-3",
     "url": "https://nightly.link/nba-emu/NanoBoyAdvance/workflows/build/master/NanoBoyAdvance-win64.zip",
-    "hash": "e04375a4d44f3f2f293649949e6ac59e20ce3872f2f7f70f682d46a4b09b8b48",
+    "hash": "477dc41aa7f4a13ea29576fd7f3bfd8eba5060e1b195faeb332d0c46ec8db389",
     "bin": "NanoBoyAdvance.exe",
     "checkver": {
         "url": "https://api.github.com/repos/nba-emu/NanoBoyAdvance/actions/workflows/build.yml/runs?branch=master&status=success",
