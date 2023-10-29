@@ -1,17 +1,17 @@
 {
-    "version": "4.048",
+    "version": "4.048a",
     "description": "ClrMamePro is a so-called ROM-manager. With every new release of MAME a lot has been changed. New gamesets have been added, some have been removed, etc.",
     "homepage": "https://mamedev.emulab.it/clrmamepro/",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp4048_64.zip",
-            "hash": "216c3141140bd56b8ab7b44fb8fe6e9577bdc482fe1f879b16b0c33ab1a97956",
+            "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp4048a_64.zip",
+            "hash": "ed5fd0843a8849d95fa9f588d93d0af5f417ab4fa7a218de317ba48a9409fc80",
             "bin": "cmpro64.exe"
         },
         "32bit": {
-            "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp4048_32.zip",
-            "hash": "9dd49e474e738c7ccaa583071d01bfd9ae8938f56ff0df10449fff1832d6bf38",
+            "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp4048a_32.zip",
+            "hash": "1c35fa0551248123efe0bc00a819443a23727acb5b78e2e986e6699ec516ddeb",
             "bin": "cmpro.exe"
         }
     },
