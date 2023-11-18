@@ -1,12 +1,12 @@
 {
-    "version": "1756-20231115-665ef86",
+    "version": "1760-20231118-78a874d",
     "description": "Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast.",
     "homepage": "https://github.com/flyinghead/flycast",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://flycast-builds.s3.amazonaws.com/win/heads/master-665ef86cf0a0dcd029a338e397b8a59092b335e0/flycast.zip",
-            "hash": "d709402cf3217d95cf950e80c1d270c7b35d8683c37b2e1ce42a292b8e722846"
+            "url": "https://flycast-builds.s3.amazonaws.com/win/heads/master-78a874d20ef5ff5e655713ee3e27e2f94e726621/flycast.zip",
+            "hash": "99367d4c2a0c95e86b6a45604355368841d7a1a824aa390bb0b135834d63f2ae"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\emu.cfg\")) { New-Item -ItemType File \"$dir\\emu.cfg\" | Out-Null }",
