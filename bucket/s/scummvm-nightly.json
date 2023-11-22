@@ -1,18 +1,18 @@
 {
-    "version": "f5522775",
+    "version": "d7d5c1f6",
     "description": "ScummVM is a program which allows you to run certain classic graphical adventure and role-playing games",
     "homepage": "https://www.scummvm.org/",
     "license": "GPL-3.0",
     "architecture": {
         "32bit": {
-            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-f5522775.zip",
-            "hash": "698540b291ad74396fb0538824ba0fd9bae08f924662d9c2d1724600cad5f4e9",
-            "extract_dir": "windows-x86-master-f5522775"
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-d7d5c1f6.zip",
+            "hash": "198cc8754a707d3d6c9f2d3634743596db16858d9ab9b10b4f104127ebc12a22",
+            "extract_dir": "windows-x86-master-d7d5c1f6"
         },
         "64bit": {
-            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-f5522775.zip",
-            "hash": "19e07c2d3acf42765227efcd6dd060856d879953f7dbd8b28fa4124b80280ebc",
-            "extract_dir": "windows-x86-64-master-f5522775"
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-d7d5c1f6.zip",
+            "hash": "c71fcef3da087ce437f448cde23b9c86e28ceee9be74f9276456d117df5ffc7d",
+            "extract_dir": "windows-x86-64-master-d7d5c1f6"
         }
     },
     "bin": "win32dist-mingw/scummvm.exe",
