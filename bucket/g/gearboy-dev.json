@@ -1,10 +1,10 @@
 {
-    "version": "312-20240103-c23b114",
+    "version": "316-20240107-ba895d2",
     "description": "Gearboy is a Nintendo Game Boy emulator written in C++. The emulator is focused on readability of source code, but nevertheless it has good compatibility. A lot of effort has gone into this in order to follow OOP and keep it as simple as possible.",
     "homepage": "https://github.com/drhelius/Gearboy",
     "license": "GPL-3",
     "url": "https://nightly.link/drhelius/Gearboy/workflows/gearboy/master/Windows%20binary.zip",
-    "hash": "53798e3419486a1c8f30f9f16e7510281d2b738829fb91f90048a00443355c1b",
+    "hash": "e1d31ad838f8944e186292a05ded20ebadc94ff810c703a5c950c82c280e7ea3",
     "bin": "Gearboy.exe",
     "checkver": {
         "url": "https://api.github.com/repos/drhelius/Gearboy/actions/workflows/gearboy.yml/runs?branch=master&status=success",
