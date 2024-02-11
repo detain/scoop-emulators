@@ -1,12 +1,12 @@
 {
-    "version": "1779-290c4ccd",
+    "version": "1780-2229d327",
     "description": "Nintendo NES and Famicom emulator",
     "homepage": "http://www.fceux.com",
     "license": "GPL-2.0",
     "architecture": {
         "32bit": {
             "url": "https://github.com/TASEmulators/fceux/releases/download/interim-build/fceux-win32.zip",
-            "hash": "81263ecd6f29b9b23bbd84f7f4624214636e19be951e7c42e5c7e9f3971a175c",
+            "hash": "d1eb94ca915bbfc10dc91128167cdd014e245d101f5ce66b5e586fd422b103e2",
             "bin": [
                 [
                     "fceux64.exe",
@@ -22,7 +22,7 @@
         },
         "64bit": {
             "url": "https://github.com/TASEmulators/fceux/releases/download/interim-build/fceux-win64.zip",
-            "hash": "23f01aec63690e549b45b129cfc2b28c93c4c537ba181e3df3d541f235783e11",
+            "hash": "610ae0a30f4931ab831d2f483ce32f7b6bef5a249800585ad43e966633398607",
             "bin": [
                 [
                     "fceux64.exe",
