@@ -1,16 +1,16 @@
 {
-    "version": "677-20240218-2d0f3d4",
+    "version": "678-20240218-92b843e",
     "description": "Qt-based Nintendo Entertainment System emulator and NSF/NSFe Music Player (Direct3D Version)",
     "homepage": "https://github.com/punesemu/puNES",
     "license": "GPL-2.0",
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.d3d9.zip",
-            "hash": "d98ef7983a5f28b7012651eda4fd8fe77aa8bf04b1b4b149a4a196ef66bdfe57"
+            "hash": "a4855a20963f55bcbe6769b8cddf99cc347e4ca48d4ce7548ff85ac8a2905850"
         },
         "64bit": {
             "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.d3d9.zip",
-            "hash": "6d2d284d9d089f12fb530a1f97e6cd33cd040702e6832752ed81e96a704606ac"
+            "hash": "59d38189d0ede7b6874236d7bd9d8d8e06fcb16992f9b3ac72fac4cf23592633"
         }
     },
     "bin": [
