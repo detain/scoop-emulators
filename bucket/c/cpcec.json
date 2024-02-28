@@ -1,12 +1,15 @@
 {
     "##": "name:CPCEC / ZXSEC",
-    "version": "20220806",
+    "version": "20240224",
     "description": "CPCEC is an emulator for the Amstrad CPC computer.",
     "homepage": "http://cngsoft.no-ip.org/cpcec.htm",
     "license": "MIT",
-    "url": "http://cngsoft.no-ip.org/cpcec-20220806.zip",
-    "hash": "598cce9de4f12521fb29c67be7d0bfa92dee490cdb69801b02fd3b3f8f40985b",
-    "bin": ["cpcec.exe","CPCEC"],
+    "url": "http://cngsoft.no-ip.org/cpcec-20240224.zip",
+    "hash": "44700476b9547969903215272745d1e2c4510333ce7c0a657595e7358f471844",
+    "bin": [
+        "cpcec.exe",
+        "CPCEC"
+    ],
     "autoupdate": {
         "url": "http://cngsoft.no-ip.org/cpcec-$version.zip"
     },
