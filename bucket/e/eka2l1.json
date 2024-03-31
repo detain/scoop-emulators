@@ -1,10 +1,10 @@
 {
-    "version": "764-20240331-15fb2d3",
+    "version": "765-20240331-36055a0",
     "description": "EKA2L1 is a Experimental Symbian OS emulator, written in C++ 17. The emulator currently emulates Symbian OS's EKA2 behavior (with planned EKA1 support), and reimplement most of its critical app servers. It can already boot many EKA2's apps and games, with EKA1 being worked on at the moment.",
     "homepage": "https://github.com/EKA2L1/EKA2L1",
     "license": "GPL-3",
     "url": "https://github.com/EKA2L1/EKA2L1/releases/download/continous/windows-latest.zip",
-    "hash": "192a00454623a37faae75b2df122ee7e0e3245865064dc1e4a0883a08be77449",
+    "hash": "220022b44cf4d027c14efca13b5b685653083665463a946b442e9a21c40271b5",
     "bin": "",
     "checkver": {
         "url": "https://api.github.com/repos/EKA2L1/EKA2L1/actions/workflows/build.yml/runs?branch=master&status=success",
