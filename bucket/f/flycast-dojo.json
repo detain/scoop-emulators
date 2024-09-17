@@ -1,10 +1,10 @@
 {
-    "version": "6.52",
+    "version": "6.53",
     "description": "Flycast Dojo is a fork of Flycast, a multi-platform Sega Dreamcast, Naomi and Atomiswave emulator derived from Reicast, with a focus on netplay features and replay. We intend to keep Flycast Dojo updated with the latest downstream changes made to the parent project. Flycast is a multi-platform Sega Dreamcast, Naomi and Atomiswave emulator derived from reicast.",
     "homepage": "http://flycast.dojo.ooo/",
     "license": "GPL-2.0",
-    "url": "https://github.com/blueminder/flycast-dojo/releases/download/dojo-6.52/flycast-dojo-6.52.zip",
-    "hash": "f4547568e3735d372b05a8b98fa676394ea7b12eaa8225c6c69b73d9ce75b4cc",
+    "url": "https://github.com/blueminder/flycast-dojo/releases/download/dojo-6.53/flycast-dojo-6.53.zip",
+    "hash": "8d2c673c72a48eafe28e27cff8296300bbe9220a39bd8f57c930231a3856711f",
     "pre_install": "if (!(Test-Path \"$persist_dir\\emu.cfg\")) { New-Item -ItemType File \"$dir\\emu.cfg\" | Out-Null }",
     "bin": "flycast.exe",
     "shortcuts": [
