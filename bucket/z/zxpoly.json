@@ -1,15 +1,15 @@
 {
-    "version": "2.3.3",
+    "version": "2.3.4",
     "description": "ZX-Poly platform info page and its emulator. It is a multi-CPU ZXSpectrum clone.",
     "homepage": "https://github.com/raydac/zxpoly",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/raydac/zxpoly/releases/download/2.3.3/zxpoly-emul-2.3.3-windows-amd64-jdk.zip",
-            "hash": "127086ede40a3c88ea290892fae3dca6e7fd00d8cfc837229fa88aef40b4f9d5"
+            "url": "https://github.com/raydac/zxpoly/releases/download/2.3.4/zxpoly-emul-2.3.4-windows-amd64-jdk.zip",
+            "hash": "9be4236e6ab581e49c33082481bf5ef20d47535ddef1a535467369260a3fbb54"
         }
     },
-    "extract_dir": "zxpoly-emul-2.3.3",
+    "extract_dir": "zxpoly-emul-2.3.4",
     "bin": "zxpoly.exe",
     "shortcuts": [
         [
