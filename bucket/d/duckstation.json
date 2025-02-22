@@ -1,5 +1,5 @@
 {
-    "version": "20250220-g373c83c",
+    "version": "20250222-g3ea26cc",
     "description": "Sony PlayStation emulator",
     "homepage": "https://github.com/stenzek/duckstation/",
     "license": "GPL-3.0-only",
@@ -11,7 +11,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip",
-            "hash": "5cece7f728265d2e550584f2a559374d393302019573d4979f42125c94ee555d",
+            "hash": "5ddafc34237203db4a2fc5b9bd32e04ffa1f61dc01dd7145c5c6b7eed85d2679",
             "bin": "duckstation-qt-x64-ReleaseLTCG.exe",
             "shortcuts": [
                 [
@@ -22,7 +22,7 @@
         },
         "arm64": {
             "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-arm64-release.zip",
-            "hash": "76b3aab709b370f59d5152870b91d350ad32c688ace84a74c1f9d4fa340ad496",
+            "hash": "5978bb67b86beb8d9feb5846ce3190904cc980fd64caa1714546205036daeaba",
             "bin": "duckstation-qt-ARM64-ReleaseLTCG.exe",
             "shortcuts": [
                 [
