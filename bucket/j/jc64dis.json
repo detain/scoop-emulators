@@ -1,10 +1,10 @@
 {
-    "version": "2.9",
+    "version": "3.0",
     "description": "The JC64 is an emulator that try to 100% emulate a C64 (with the actual knowledge about the various C64 chips) using the Java language. You must have a powerful system to run this program. Sorry, the real emulation is the priority goal, unlike the speed emulation is the secondary goal. The Java language is used due to his multiplatform and OOP characteristics. The emulator is Threads based (multi-cpu system can take advantage of this). The actual Vic code is very experimental: uses of dot clock for a 1 to 1 implementation of Vic II chip.",
     "homepage": "https://github.com/ice00/jc64/",
     "license": "GPL-2.0",
-    "url": "https://github.com/ice00/jc64/releases/download/2.9/jc64dis-java.zip",
-    "hash": "d57411103ba3606b64c38abd212d58949e516d47078e0543a737eb429932cadc",
+    "url": "https://github.com/ice00/jc64/releases/download/3.0/jc64dis-java.zip",
+    "hash": "8afd4454e9857c77e26ceb3b48a70b08a7e7b42ed452e3fe46fd78a3c8c6bb73",
     "bin": [
         "JC64dis.exe",
         "jc64dis.bat"
