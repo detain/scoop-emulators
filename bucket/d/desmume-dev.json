@@ -1,10 +1,10 @@
 {
-    "version": "956f64d",
+    "version": "4591158",
     "description": "Nintendo DS emulator",
     "homepage": "https://desmume.org",
     "license": "GPL-2.0",
     "url": "https://nightly.link/TASEmulators/desmume/workflows/build_win/master/desmume-win-x64.zip",
-    "hash": "842d7ec6b38876bf3d1509f63268ee3851c26e99b6456cef64184d6da233e945",
+    "hash": "9bdda51e4f756994ba13f8f417f6a360023f87c912cfe21667be34260fc49ac8",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\desmume.ini\")) {",
         "    New-Item \"$dir\\desmume.ini\" -Type File | Out-Null",
