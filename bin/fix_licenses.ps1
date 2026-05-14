@@ -28,7 +28,7 @@ Get-ChildItem -Recurse -Filter "*.json" | ForEach-Object {
         # Match the license value with quotes around it
         $pattern = '"' + [regex]::Escape($oldLicense) + '"'
         $replacement = '"' + $newLicense + '"'
-        
+
         if ($content -match $pattern) {
             $content = $content -replace $pattern, $replacement
             Write-Host "Fixed: $($_.Name) -> $newLicense" -ForegroundColor Yellow
