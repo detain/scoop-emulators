@@ -16,20 +16,35 @@ param(
 
 $ErrorActionPreference = "Continue"
 $issues = @()
-$fixes = @()
 
 Write-Host "=== Scoop Emulators Bucket Validator ===" -ForegroundColor Cyan
 Write-Host ""
 
-# 1. Check for empty descriptions
-Write-Host "[1/6] Checking for empty descriptions..." -ForegroundColor Yellow
-$emptyDesc = Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw | ConvertFrom-Json
-    if ([string]::IsNullOrWhiteSpace($content.description)) {
-        $_.FullName
+# Helper function to safely parse JSON with better error handling
+function Safe-ConvertFrom-Json {
+    param([string]$Path)
+    try {
+        # Try to fix common line ending issues first
+        $content = Get-Content -Path $Path -Raw -Encoding UTF8
+        $content = $content -replace "`r`n", "`n"  # Normalize line endings
+        return @{ Success = $true; Data = ($content | ConvertFrom-Json) }
+    } catch {
+        return @{ Success = $false; Error = $_.Exception.Message; Path = $Path }
     }
 }
-if ($emptyDesc) {
+
+# 1. Check for empty descriptions
+Write-Host "[1/6] Checking for empty descriptions..." -ForegroundColor Yellow
+$emptyDesc = @()
+foreach ($file in Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json") {
+    $result = Safe-ConvertFrom-Json -Path $file.FullName
+    if ($result.Success) {
+        if ([string]::IsNullOrWhiteSpace($result.Data.description)) {
+            $emptyDesc += $file.FullName
+        }
+    }
+}
+if ($emptyDesc.Count -gt 0) {
     Write-Host "  FOUND $($emptyDesc.Count) manifests with empty descriptions" -ForegroundColor Red
     $emptyDesc | ForEach-Object { $issues += "Empty description: $_" }
 } else {
@@ -39,14 +54,14 @@ if ($emptyDesc) {
 # 2. Check for invalid JSON
 Write-Host "[2/6] Checking for invalid JSON..." -ForegroundColor Yellow
 $invalidJson = @()
-Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | ForEach-Object {
-    try {
-        Get-Content $_.FullName -Raw | ConvertFrom-Json | Out-Null
-    } catch {
-        $invalidJson += $_.FullName
+foreach ($file in Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json") {
+    $result = Safe-ConvertFrom-Json -Path $file.FullName
+    if (-not $result.Success) {
+        $invalidJson += $file.FullName
+        Write-Host "    Invalid: $($file.Name) - $($result.Error.Split('.')[0])" -ForegroundColor DarkYellow
     }
 }
-if ($invalidJson) {
+if ($invalidJson.Count -gt 0) {
     Write-Host "  FOUND $($invalidJson.Count) invalid JSON files" -ForegroundColor Red
     $invalidJson | ForEach-Object { $issues += "Invalid JSON: $_" }
 } else {
@@ -55,13 +70,14 @@ if ($invalidJson) {
 
 # 3. Check for missing version field
 Write-Host "[3/6] Checking for missing version field..." -ForegroundColor Yellow
-$missingVersion = Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw | ConvertFrom-Json
-    if (-not $content.version) {
-        $_.FullName
+$missingVersion = @()
+foreach ($file in Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json") {
+    $result = Safe-ConvertFrom-Json -Path $file.FullName
+    if ($result.Success -and -not $result.Data.version) {
+        $missingVersion += $file.FullName
     }
 }
-if ($missingVersion) {
+if ($missingVersion.Count -gt 0) {
     Write-Host "  FOUND $($missingVersion.Count) manifests missing version" -ForegroundColor Red
     $missingVersion | ForEach-Object { $issues += "Missing version: $_" }
 } else {
@@ -71,19 +87,21 @@ if ($missingVersion) {
 # 4. Check for non-SPDX licenses
 Write-Host "[4/6] Checking for non-SPDX licenses..." -ForegroundColor Yellow
 $nonSpdx = @()
-Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw | ConvertFrom-Json
-    $license = $content.license
-    if ($license -match '(GNU\s+GPL|GPLv|Open\s+Source|Shareware)' -and $license -notmatch 'http') {
-        $relativePath = $_.FullName -replace [regex]::Escape((Get-Location).Path), '.'
-        $nonSpdx += [PSCustomObject]@{
-            File = $relativePath
-            License = $license
-            Suggested = ($license -replace 'GNU\s+', '' -replace 'GPLv', 'GPL-')
+foreach ($file in Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json") {
+    $result = Safe-ConvertFrom-Json -Path $file.FullName
+    if ($result.Success) {
+        $license = $result.Data.license
+        if ($license -match '(GNU\s+GPL|GPLv|Open\s+Source|Shareware)' -and $license -notmatch 'http') {
+            $relativePath = $file.FullName -replace [regex]::Escape((Get-Location).Path + '\'), '.\'
+            $nonSpdx += [PSCustomObject]@{
+                File = $relativePath
+                License = $license
+                Suggested = ($license -replace 'GNU\s+', '' -replace 'GPLv', 'GPL-')
+            }
         }
     }
 }
-if ($nonSpdx) {
+if ($nonSpdx.Count -gt 0) {
     Write-Host "  FOUND $($nonSpdx.Count) manifests with non-SPDX licenses" -ForegroundColor Red
     $issues += "See non_spdx_licenses.csv for details"
     $nonSpdx | Export-Csv -Path "non_spdx_licenses.csv" -NoTypeInformation
@@ -94,13 +112,14 @@ if ($nonSpdx) {
 
 # 5. Check for external autoupdate references
 Write-Host "[5/6] Checking for external autoupdate references..." -ForegroundColor Yellow
-$externalRefs = Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw
+$externalRefs = @()
+foreach ($file in Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json") {
+    $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
     if ($content -match 'raw\.githubusercontent\.com/[^/]+/[^/]+/[^/]+/bucket/') {
-        $_.FullName
+        $externalRefs += $file.FullName
     }
 }
-if ($externalRefs) {
+if ($externalRefs.Count -gt 0) {
     Write-Host "  FOUND $($externalRefs.Count) manifests with external references" -ForegroundColor Red
     $externalRefs | ForEach-Object { $issues += "External autoupdate: $_" }
 } else {
@@ -112,19 +131,24 @@ Write-Host "[6/6] Running URL validation (sample)..." -ForegroundColor Yellow
 $sampleFiles = Get-ChildItem -Path $BucketPath -Recurse -Filter "*.json" | Get-Random -Count 20
 $urlIssues = @()
 foreach ($file in $sampleFiles) {
-    $content = Get-Content $file.FullName -Raw | ConvertFrom-Json
-    if ($content.url -match 'https?://') {
-        try {
-            $response = Invoke-WebRequest -Uri $matches[0] -Method Head -TimeoutSec 10 -ErrorAction Stop
-            if ($response.StatusCode -ge 400) {
-                $urlIssues += "$($file.Name): $($matches[0]) returned $($response.StatusCode)"
+    $result = Safe-ConvertFrom-Json -Path $file.FullName
+    if ($result.Success -and $result.Data.url) {
+        $url = $result.Data.url
+        # Extract full URL using proper regex
+        if ($url -match 'https?://[^\s"''<>]+') {
+            $fullUrl = $matches[0].TrimEnd('"', "'", ',')
+            try {
+                $response = Invoke-WebRequest -Uri $fullUrl -Method Head -TimeoutSec 10 -ErrorAction Stop
+                if ($response.StatusCode -ge 400) {
+                    $urlIssues += "$($file.Name): $fullUrl returned $($response.StatusCode)"
+                }
+            } catch {
+                $urlIssues += "$($file.Name): $fullUrl - $($_.Exception.Message.Split('.')[0])"
             }
-        } catch {
-            $urlIssues += "$($file.Name): $($matches[0]) - $($_.Exception.Message)"
         }
     }
 }
-if ($urlIssues) {
+if ($urlIssues.Count -gt 0) {
     Write-Host "  FOUND $($urlIssues.Count) URL issues (in sample)" -ForegroundColor Yellow
     $urlIssues | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkYellow }
 } else {
@@ -170,8 +194,8 @@ foreach (`$item in `$licenses) {
     `$newLicense = `$licenseMap[`$oldLicense]
     if (`$newLicense) {
         `$content = Get-Content `$file -Raw
-        `$content = `$content -replace [regex]::Escape(`"`"`"license`"`": `"`"$oldLicense`"`""), "`"`"license`"`": `"`"$newLicense`"`""
-        Set-Content -Path `$file -Value `$content -NoNewline
+        `$content = `$content -replace [regex]::Escape("`"`"license`"`": `"`"$oldLicense`"`""), "`"`"license`"`": `"`"$newLicense`"`""
+        Set-Content -Path `$file -Value `$content -NoNewline -Encoding UTF8
         Write-Host "Fixed: `$file -> `$newLicense"
     }
 }

@@ -19,19 +19,24 @@ $fixed = 0
 $skipped = 0
 
 Get-ChildItem -Recurse -Filter "*.json" | ForEach-Object {
-    $content = Get-Content $_.FullName -Raw
+    $filePath = $_.FullName
+    $content = Get-Content -Path $filePath -Raw -Encoding UTF8
     $original = $content
 
-    foreach ($old in $licenseMap.Keys) {
-        $new = $licenseMap[$old]
-        if ($content -match [regex]::Escape($old)) {
-            $content = $content -replace [regex]::Escape("`"$old"`""), "`"$new`""
-            Write-Host "Fixed: $($_.Name) -> $new" -ForegroundColor Yellow
+    foreach ($oldLicense in $licenseMap.Keys) {
+        $newLicense = $licenseMap[$oldLicense]
+        # Match the license value with quotes around it
+        $pattern = '"' + [regex]::Escape($oldLicense) + '"'
+        $replacement = '"' + $newLicense + '"'
+        
+        if ($content -match $pattern) {
+            $content = $content -replace $pattern, $replacement
+            Write-Host "Fixed: $($_.Name) -> $newLicense" -ForegroundColor Yellow
         }
     }
 
     if ($content -ne $original) {
-        Set-Content -Path $_.FullName -Value $content -NoNewline -Encoding UTF8
+        Set-Content -Path $filePath -Value $content -NoNewline -Encoding UTF8
         $fixed++
     } else {
         $skipped++
