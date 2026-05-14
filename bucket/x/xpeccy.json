@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:Xpeccy",
         "author:SAM style",
@@ -9,10 +9,24 @@
     "version": "0.6.20170406",
     "description": "Xpeccy is a ZX Spectrum, Russian Clone and MSX-1 emulator. NOTE: BIOS images are required for ALL emulated systems except for the 48K Spectrum. These files must be placed in a 'roms' subdirectory and the emulator configured accordingly (Right-Click on screen to access menu).",
     "homepage": "https://github.com/samstyle/Xpeccy",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
     "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4",
     "bin": [
         "xpeccy.exe"
-    ]
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "extract_dir": "xpeccy-{{version}}",
+    "checkver": {
+        "url": "https://github.com/samstyle/Xpeccy/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "command": "scoop install xpeccy",
+        "exit_code": 0,
+        "scheduled": "daily"
+    }
 }

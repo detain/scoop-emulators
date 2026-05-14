@@ -1,18 +1,34 @@
 {
     "version": "20.02.03",
-    "description": "Dreamcast Emulator",
+    "description": "reicast is a Dreamcast emulator",
     "homepage": "https://reicast.com",
-    "license": {
-        "identifier": "GPL-2.0"
-    },
+    "license": "GPL-2.0-only",
     "url": "http://reicast-builds-windows.s3.amazonaws.com/builds/heads/stable-333b7c536071ea77b0ecc46e534cb28206e471b4/reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.zip",
     "hash": "556eccd84fbf463ca7d32cdb6decf51254d929088db6010c447071f54da416ed",
-    "bin": "reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.exe",
+    "bin": [
+        "reicast.exe"
+    ],
     "shortcuts": [
         [
             "reicast-win_x64-RelWithDebInfo-333b7c536071ea77b0ecc46e534cb28206e471b4.exe",
             "reicast.exe",
             "reicast"
         ]
-    ]
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "extract_dir": "reicast",
+    "checkver": {
+        "url": "https://github.com/reicast/reicast-emulator/releases/latest",
+        "regex": "reicast-emulator/releases/tag/r(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "command": "reicast -version",
+        "url": "https://github.com/reicast/reicast-emulator/releases/latest",
+        "regex": "reicast-emulator/releases/tag/r(\\d+\\.\\d+\\.\\d+)",
+        "filter": "-n 1",
+        "property": "version",
+        "fallback": "https://github.com/reicast/reicast-emulator/releases"
+    }
 }

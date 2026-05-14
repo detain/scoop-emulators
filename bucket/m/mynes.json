@@ -9,10 +9,27 @@
     "version": "6.3.10",
     "description": "My NES is a portable, open source, low level Nintendo Entertainment Systema and Famicom emulator.",
     "homepage": "http://sourceforge.net/projects/mynes/",
-    "license": "GNU GPLv3",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/mynes/6.3.10.7z",
     "hash": "94b1bc4b68ac0e406247ef2ed38e506dc3ff400178ce11143e1f868f4a73e4ab",
     "bin": [
-        "MyNes.exe"
-    ]
+        "mynes.exe"
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/mynes/rss",
+        "regex": "<title>Release ([\\d.]+)\\s",
+        "matchIndex": 1
+    },
+    "autoupdate": {
+        "checkver": true,
+        "filters": [
+            {
+                "match": "^my.*\\.exe$",
+                "url": "https://sourceforge.net/projects/mynes/files/latest/download/mynes-{{version}}-win64.zip"
+            }
+        ]
+    }
 }

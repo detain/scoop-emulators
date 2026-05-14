@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:CoolCV",
         "author:Oscar Toledo G.",
@@ -9,10 +9,17 @@
     "version": "0.6.3",
     "description": "CoolCV is a Coleco Colecovision, Coleco Adam and Sega SG-1000 emulator. NOTE: To run a ROM you have to drag and drop it onto the emulator.",
     "homepage": "http://nanochess.org/",
-    "license": "Donationware",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/coolcv/0.6.3.7z",
     "hash": "00d5222dd61d891aaf8c0268e9d347f08d418a252db5a1e85f97f185e16bf5a5",
     "bin": [
-        "CoolCV.exe"
-    ]
+        "coolcv.exe"
+    ],
+    "checkver": {
+        "url": "http://nanochess.org/coolcv.php",
+        "regex": "<a href=\".*?\\/coolcv(.*?)\\.zip\">"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest http://nanochess.org/coolcv.php | Select-String -Pattern '<a href=\".*?\\/coolcv(.*?)\\.zip\">' | %{ $_.Matches } | % { $_.Groups[1].Value }"
+    }
 }

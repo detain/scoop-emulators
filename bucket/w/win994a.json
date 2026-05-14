@@ -13,6 +13,16 @@
     "url": "https://consolo.is.cc/emu/win994a/3.010-win64.7z",
     "hash": "c989df8c5300f8e224ba2aa7cd666c27f6199e48b3d236bdd091c3f50f38b46c",
     "bin": [
-        "Win994a_x64.exe"
-    ]
+        "Win994a/Win994a.exe"
+    ],
+    "vendor": "99er.net",
+    "checkver": {
+        "url": "http://www.99er.net/download/win994a_latest.txt",
+        "regex": "(\\d+(\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "script": "rename Win994a.exe Win994a-old.exe",
+        "bin": "Win994a/Win994a.exe",
+        "restart": true
+    }
 }

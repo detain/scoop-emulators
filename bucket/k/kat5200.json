@@ -10,10 +10,26 @@
     "version": "0.7.1",
     "description": "Kat5200 is an advanced open-source Atari 5200 emulator. Unlike most Atari 5200 emulators, Kat5200 requires the Atari 5200’s BIOS to be able to function.",
     "homepage": "http://kat5200.jillybunch.com/",
-    "license": "GNU GPL",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
     "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c",
     "bin": [
         "kat5200.exe"
-    ]
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "extract_dir": "kat5200-{version}-win",
+    "checkver": {
+        "url": "https://github.com/jillybunch/kat5200/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest https://github.com/jillybunch/kat5200/releases/latest -UseBasicParsing | Select-Object -ExpandProperty Content | %{ $_ -match 'v(\\d+\\.\\d+\\.\\d+)' } | ForEach-Object { $Matches[1] }",
+        "filter": {
+            "type": "regex",
+            "pattern": "(.*)"
+        }
+    }
 }

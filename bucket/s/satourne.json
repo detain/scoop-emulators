@@ -14,6 +14,22 @@
     "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
     "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f",
     "bin": [
-        "satourne_3_win32.exe"
-    ]
+        "Satourne.exe"
+    ],
+    "checkver": {
+        "url": "http://www.satourne.consollection.com/download/satourne.txt",
+        "regex": "Current version : (.*)"
+    },
+    "autoupdate": {
+        "url": "http://www.satourne.consollection.com/download/",
+        "filter": "a[href$='.zip']:first",
+        "attr": "href",
+        "split": "/",
+        "index": -1
+    },
+    "architecture": [
+        "x86",
+        "x64"
+    ],
+    "extract_dir": "."
 }

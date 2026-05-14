@@ -6,12 +6,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/basiliskii/emulator_screen_01.jpg"
     ],
     "version": "2015.02.26",
-    "description": "Basilisk II is an Apple 68k Macintosh emulator.",
+    "description": "Basilisk II is a free, portable, Open Source 68k Mac emulator",
     "homepage": "http://basilisk.cebix.net/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/basiliskii/2015.02.26.7z",
     "hash": "8eaad61738d96109081901d5e2f32d6b8d97b08c006ec7ba172fea179c96ef76",
     "bin": [
-        "BasiliskII.exe"
-    ]
+        "basiliskii"
+    ],
+    "checkver": {
+        "url": "http://basilisk.cebix.net/downloads/",
+        "regex": "BasiliskII-([0-9\\.]+)-[Ww]indows\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://basilisk.cebix.net/downloads/",
+        "regex": "BasiliskII-([0-9\\.]+)-[Ww]indows\\.zip",
+        "bin": "basiliskii.exe",
+        "msi": false
+    }
 }

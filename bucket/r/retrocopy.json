@@ -13,6 +13,16 @@
     "url": "https://consolo.is.cc/emu/retrocopy/0.960-win64.7z",
     "hash": "16c032c7805e1eaeb5153876308485e6c5a111ebbe4884815d198ab30c68d14f",
     "bin": [
-        "retrocopy64.exe"
-    ]
+        "retrocopy.exe"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/",
+        "regex": "retrocopy-(\\d+\\.\\d+(?:\\.\\d+)?)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/",
+        "regex": "retrocopy-(\\d+\\.\\d+(?:\\.\\d+)?)\\.zip",
+        "bin": "retrocopy.exe",
+        "zip": true
+    }
 }

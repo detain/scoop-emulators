@@ -10,10 +10,18 @@
     "version": "0.81pre3",
     "description": "CXBX is one of the few Xbox emulators that have managed to succesfully run commercial Xbox games. It is currently one of the few remaining hopes of seeing the original Xbox fully emulated.",
     "homepage": "https://github.com/Echelon9/cxbx-shogun",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/cxbx/0.81pre3.7z",
     "hash": "535400f6228598f821b5ec7d1bc5949f4d9f81bf3c8564c5144ae8943782511d",
     "bin": [
-        "Cxbx.exe"
-    ]
+        "cxbx.exe"
+    ],
+    "checkver": {
+        "url": "https://github.com/Echelon9/cxbx-shogun/releases/latest",
+        "regex": "cxbx-shogun-(\\d+\\.\\d+\\.\\d+(?:\\.\\d+)?)-.*-x64\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Echelon9/cxbx-shogun/releases/download/v{version}/cxbx-shogun-{version}-setup.exe",
+        "hash": "sha256:6b881cf2b227d6aae69e70fc8389d9ab6f0d6f94baa5a27a13821d82e1cecc90"
+    }
 }

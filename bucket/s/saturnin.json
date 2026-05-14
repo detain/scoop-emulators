@@ -9,10 +9,20 @@
     "version": "0.40",
     "description": "Saturnin is an emulator for the Sega Saturn system and Sega Titan Video, developed by Runik. It is programmed in Visual C++ 6.0 for the coding, OpenGL for the display video and Lex/Flex for the reading of the Saturn files.",
     "homepage": "http://saturnin.consollection.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/saturnin/0.40.7z",
     "hash": "cfed46f25f742320a0968481cd9fda89967ccf8baec694d069867a5f3604cbab",
     "bin": [
-        "Saturnin.exe"
-    ]
+        "saturnin.exe"
+    ],
+    "architecture": "x64",
+    "checkver": {
+        "url": "https://api.github.com/repos/binarycrafts/saturnin/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "variable": "$version",
+        "url": "https://github.com/binarycrafts/saturnin/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    }
 }

@@ -9,10 +9,38 @@
     "version": "0.5.9b3",
     "description": "FakeNES is a portable, Open Source Nintendo Entertainment System and Famicom emulator.",
     "homepage": "http://fakenes.sourceforge.net/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/fakenes/0.5.9b3.7z",
     "hash": "aa2cbcd13f164a5f9fa6fb83d7d4c85c12fc1dc3ddcb1193a318ff8e0240cced",
     "bin": [
-        "fakenesw.exe"
-    ]
+        "fakenes.exe",
+        "fakenes"
+    ],
+    "checkver": {
+        "url": "http://downloads.sourceforge.net/project/fakenes/fakenes/",
+        "regex": "fakenes-(\\d+\\.\\d+)-src\\.tar\\.bz2",
+        "bin": [
+            {
+                "regex": "fakenes-(\\d+\\.\\d+)-bin\\.zip"
+            }
+        ]
+    },
+    "autoupdate": {
+        "script": "psake.cmd",
+        "targets": {
+            "build": [
+                {
+                    "exe": "make.bat"
+                }
+            ],
+            "test": [
+                {
+                    "exe": "fakenes.exe",
+                    "args": [
+                        "-test"
+                    ]
+                }
+            ]
+        }
+    }
 }

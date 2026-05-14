@@ -10,10 +10,18 @@
     "version": "0.08.1",
     "description": "NeutrinoSX2 was one of the earliest open-source attempts to emulate the PlayStation 2 system. While unable to emulate commercial games, it helped create an understanding of how the PS2 could be emulated.",
     "homepage": "http://nsx2.emulation64.com/about.html",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/neutrinosx2/0.08.1.7z",
     "hash": "ff6d81d82514f3ed9ee55b5635a16fc6a0897a13cf6229844dff2a6b4ea368b5",
     "bin": [
-        "nSX2.exe"
-    ]
+        "nsx2.exe"
+    ],
+    "checkver": {
+        "url": "http://nsx2.emulation64.com/",
+        "regex": "NeutrinoSX2 (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://nsx2.emulation64.com/download/NeutrinoSX2%20v0.08.1.zip",
+        "checksum": "sha256:70eb9f2b64040882d939f4b0c7dfde37bb41d8a82c4a97e813e9ad3f4f6318dc"
+    }
 }

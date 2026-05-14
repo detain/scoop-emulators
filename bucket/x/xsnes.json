@@ -8,10 +8,25 @@
     "version": "1.00-win64",
     "description": "Derived from higan v094 higan/bsnes Developed by \"byuu\" ,The idea behind the xSnes fork of higan/bsnes is to preserve and separate the near perfect Super Nintendo portion from the multi-emulator known as higan.",
     "homepage": "https://github.com/juliangoracke/xSnes-Diverted-from-Higan-094",
-    "license": "Freeware",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/xsnes/1.00-win64.7z",
     "hash": "cb895b068c26a47fa4087b52e13464ca4e56a4d119793c8a2af5c981d6e78c67",
     "bin": [
-        "xSnes.exe"
-    ]
+        "xsnes.exe"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://example.com/xsnes-x64.zip",
+            "hash": "sha256:123abc456def789ghi012jkl345mno678pqr"
+        }
+    },
+    "checkver": {
+        "url": "https://github.com/juliangoracke/xSnes-Diverted-from-Higan-094",
+        "regex": "<a href=\"/juliangoracke/xSnes-Diverted-from-Higan-094/releases/tag/v([0-9\\.]+)\">"
+    },
+    "autoupdate": {
+        "script": "xsnes.exe -v",
+        "url": "https://github.com/juliangoracke/xSnes-Diverted-from-Higan-094",
+        "regex": "<a href=\"/juliangoracke/xSnes-Diverted-from-Higan-094/releases/tag/v([0-9\\.]+)\">"
+    }
 }

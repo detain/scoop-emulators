@@ -7,12 +7,26 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xmillenium/emulator_screen_01.jpg"
     ],
     "version": "0.26",
-    "description": "XMillenium is a Sharp X-1 series emulator based on X1EMU.",
+    "description": "xMil is a multi-system emulator for Windows and Linux that emulates a variety of classic computer systems, including the Sharp X68000, the NEC PC-8801, and the NEC PC-9801.",
     "homepage": "http://www.retropc.net/yui/xmil.html",
-    "license": "Freeware",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
     "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a",
     "bin": [
-        "XmillMK2.exe"
-    ]
+        "xmil.exe"
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "extract_dir": "xmil{{version}}",
+    "checkver": {
+        "url": "http://www.retropc.net/yui/xmil.html",
+        "regex": "Version (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "command": "scoop install xmillenium",
+        "exit_code": 0,
+        "scheduled": "daily"
+    }
 }

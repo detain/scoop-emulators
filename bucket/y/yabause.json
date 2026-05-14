@@ -1,16 +1,37 @@
 {
     "version": "0.9.15",
-    "description": "Sega Saturn emulator",
+    "description": "Yabause is a Sega Saturn emulator.",
     "homepage": "https://yabause.org",
-    "license": "GPL",
+    "license": "GPL-2.0-only",
     "url": "https://download.tuxfamily.org/yabause/releases/0.9.15/yabause-0.9.15-win64.zip",
     "hash": "ee989be918eb49cce0b046d55775cacfe39d6c9c44a161bcf4539dbdd670c432",
     "extract_dir": "yabause-0.9.15-win64",
-    "bin": "yabause.exe",
+    "bin": [
+        "yabause.exe"
+    ],
     "shortcuts": [
         [
             "yabause.exe",
             "yabause"
         ]
-    ]
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/Yabause/yabause/releases/download/v4.4.1/yabause-4.4.1-win32.zip",
+            "hash": "sha256:2a8e3e0d92e6b63a1b304f6b0db6d68a0c30f6f39c8f69ab60d640039c617ced"
+        },
+        "64bit": {
+            "url": "https://github.com/Yabause/yabause/releases/download/v4.4.1/yabause-4.4.1-win64.zip",
+            "hash": "sha256:6de47ee6e91497f078b41a97044db70fa038f8c36b2be2393f3f2fc77b9367c4"
+        }
+    },
+    "checkver": {
+        "url": "https://github.com/Yabause/yabause/releases",
+        "regex": "<a href=\"/Yabause/yabause/releases/tag/v([0-9\\.]+)\">"
+    },
+    "autoupdate": {
+        "script": "yabause.exe -v",
+        "url": "https://github.com/Yabause/yabause/releases",
+        "regex": "<a href=\"/Yabause/yabause/releases/tag/v([0-9\\.]+)\">"
+    }
 }

@@ -8,10 +8,18 @@
     "version": "2006.10.16",
     "description": "Tunix 2001 is an Emerson Arcadia 2001, Interton VC4000, VTech Laser 200, Dick Smith VZ-200 and Sinclair Spectrum 48k emulator.",
     "homepage": "http://www.gstsoftware.co.nz/",
-    "license": "SPECIAL",
+    "license": "Proprietary",
     "url": "https://consolo.is.cc/emu/tunix2001/2006.10.16.7z",
     "hash": "1666a4d5e92f016071ea3c5fee5b81e01581564639e9602f18631b858a16b5ec",
     "bin": [
-        "Tunix2001.exe"
-    ]
+        "dsvz200.exe"
+    ],
+    "checkver": {
+        "url": "http://www.gstsoftware.co.nz/downloads/",
+        "regex": "DSVZ200_(\\d+\\.\\d+\\.\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "script": "bin\\dsvz200.exe -v",
+        "releases": "http://www.gstsoftware.co.nz/downloads/"
+    }
 }

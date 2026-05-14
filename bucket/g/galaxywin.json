@@ -8,10 +8,29 @@
     "version": "0.3",
     "description": "Galaxy Win is an emulator for the Galaksija computer. It is a Windows port of the DOS GALAKSIJA emulator by Miodrag Jevremovic.",
     "homepage": "http://emulator.galaksija.org/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/galaxywin/0.3.7z",
     "hash": "c519ea0600a3f8b3dcd9fa875ff946b4e8837b99b24df551587ca649b12a7448",
     "bin": [
-        "Galaxy.exe"
-    ]
+        "GalaxyWin.exe"
+    ],
+    "checkver": {
+        "mode": "github",
+        "user": "mmil",
+        "repo": "GalaxyWin",
+        "filter": "v*.*.*",
+        "asset": "GalaxyWin-{version}.zip",
+        "regex": "GalaxyWin-(\\d+\\.\\d+\\.\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "sha256": "caa215a33409c7b25f179d33c8cbbdcd3c3d11a3e833a99a1f872d1a7a41fba1",
+        "cmd": "Extract-7Zip -Path \"$packageDir\\GalaxyWin-{version}.zip\" -Destination $packageDir",
+        "installer": [
+            {
+                "type": "copy",
+                "path": "$packageDir\\GalaxyWin.exe",
+                "destination": "$env:ProgramFiles\\GalaxyWin"
+            }
+        ]
+    }
 }

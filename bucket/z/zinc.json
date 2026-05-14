@@ -8,10 +8,29 @@
     "version": "1.1",
     "description": "ZiNc is an emulator for various arcade games which ran on modified Sony PlayStation hardware. It does not emulate any other games, including other 3D games.",
     "homepage": "http://www.emuhype.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/zinc/1.1.7z",
     "hash": "53b48e393fb559bc3cab0345a3d557fa8b0bbfab701bb400eb535bd9a438dc69",
     "bin": [
-        "ZiNc.exe"
-    ]
+        "zinc.exe"
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://www.emuhype.com/files/zinc122-win32.zip",
+            "hash": "sha256:d8b6a90671d2ca9e9aa7e35f8d15ab41311fbc0fb819d60de1ce40d88004f802"
+        },
+        "64bit": {
+            "url": "http://www.emuhype.com/files/zinc122-win64.zip",
+            "hash": "sha256:db7d2b27e1b7de1b754fd196f7cc34d8c7127d3b183c9f7db2d3728f1a5a62c5"
+        }
+    },
+    "checkver": {
+        "url": "http://www.emuhype.com/",
+        "regex": "<a href=\"http://www.emuhype.com/files/zinc([0-9\\.]+)-win[0-9]+.zip\">Download Zinc ([0-9\\.]+)</a>"
+    },
+    "autoupdate": {
+        "script": "zinc.exe --version",
+        "url": "http://www.emuhype.com/",
+        "regex": "<a href=\"http://www.emuhype.com/files/zinc([0-9\\.]+)-win[0-9]+.zip\">Download Zinc ([0-9\\.]+)</a>"
+    }
 }

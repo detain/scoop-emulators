@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:Daedalus",
         "author:StrmnNrmn",
@@ -7,12 +7,37 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/daedalus/emulator_screen_01.jpg"
     ],
     "version": "0.07b",
-    "description": "Daedalus is a Nintendo N64 emulator.",
+    "description": "Daedalus is a Nintendo 64 emulator for Windows and PSP.",
     "homepage": "https://sourceforge.net/projects/daedalus-n64/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/daedalus/0.07b.7z",
     "hash": "eb4d35b8e8a84ba449c987a8fcc3923524164ccf1082e9ba0820aee8263e1b31",
     "bin": [
-        "Daedalus.exe"
+        "daedalus.exe"
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/daedalus-n64/rss",
+        "regex": "daedalus-n64-(\\d+\\.\\d+\\.\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/daedalus-n64/files/latest/download",
+        "hash": "sha256:{{HASH}}"
+    },
+    "keywords": [
+        "emulator",
+        "nintendo",
+        "n64"
+    ],
+    "silent": true,
+    "shortcuts": [
+        {
+            "Name": "Daedalus Emulator",
+            "Description": "Run Daedalus Emulator",
+            "IconPath": "{app}\\daedalus.ico",
+            "Target": "[binary]"
+        }
     ]
 }

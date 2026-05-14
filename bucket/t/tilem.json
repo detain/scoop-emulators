@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:TilEm",
         "author:Benjamin Moody and Thibault Duponchelle",
@@ -7,12 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/tilem/emulator_screen_01.jpg"
     ],
     "version": "2.0",
-    "description": "TilEm is an emulator and debugger for Texas Instruments Z80-based graphing calculators.",
+    "description": "TI Linux Emulator - TI-73, TI-82, TI-83, TI-83+, TI-83+ SE, TI-84+, and TI-84+ SE emulator",
     "homepage": "http://lpg.ticalc.org/prj_tilem/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/tilem/2.0.7z",
     "hash": "6c7bfb3e50e5499e8f789c8e3fd9d307662831cf0f94732e82fd4b9b4087cfdb",
     "bin": [
-        "tilem2.exe"
-    ]
+        "tilem"
+    ],
+    "checkver": {
+        "url": "http://lpg.ticalc.org/prj_tilem/download.html",
+        "regex": "tilem-(.*?)\\.tar\\.gz"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest http://lpg.ticalc.org/prj_tilem/download.html -UseBasicParsing | Select-String -Pattern 'tilem-(.*?)\\.tar\\.gz' | %{ $_.Matches[0].Groups[1].Value }",
+        "filter": {
+            "version": "([\\d.]+)"
+        }
+    }
 }

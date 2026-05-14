@@ -8,11 +8,19 @@
     ],
     "version": "0.1.0-win64",
     "description": "Nucleus is a Sony Playstation 3 emulator. NOTE: This emulator requires PS3 firmware keys to be placed in a file named 'keys.xml' next to the executable.",
-    "homepage": "http://github.com/AlexAltea/nucleus/releases",
-    "license": "GNU GPLv2",
+    "homepage": "https://github.com/AlexAltea/nucleus/releases",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/nucleus/0.1.0-win64.7z",
     "hash": "38058a889769bc768aecabc880def0b008d6246be78ae1bbf0792b8a7a98fb5b",
     "bin": [
-        "nucleus-windows.exe"
-    ]
+        "nucleus.exe"
+    ],
+    "checkver": {
+        "url": "https://github.com/AlexAltea/nucleus/releases/latest",
+        "regex": "nucleus-v(\\d+\\.\\d+\\.\\d+)-windows-x86_64\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AlexAltea/nucleus/releases/latest/download/nucleus-v${version}-windows-x86_64.7z",
+        "checksum": "sha256:ec0bf17767c98e55de34258a03d0f7c64a9a56d7b14f0b46e92c230986eb7266"
+    }
 }

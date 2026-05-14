@@ -13,6 +13,17 @@
     "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
     "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef",
     "bin": [
-        "cpcemu.exe"
-    ]
+        "CPCemu.exe"
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "checkver": {
+        "url": "http://www.cpc-emu.org/download/",
+        "regex": "href=\"CPCemu-v(\\d+\\.\\d+).zip\""
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest -Uri 'http://www.cpc-emu.org/download/CPCemu-v{version}.zip' -OutFile '$dir\\CPCemu.zip'; Expand-Archive -Path '$dir\\CPCemu.zip' -DestinationPath '$dir'; Remove-Item '$dir\\CPCemu.zip'; Move-Item '$dir\\CPCemu-v{version}\\CPCemu.exe' '$dir'; Remove-Item '$dir\\CPCemu-v{version}'"
+    }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:MZ-800",
         "author:Michael Hucik aka chaky",
@@ -8,10 +8,35 @@
     "version": "1.0.3",
     "description": "MZ800Emu is a Sharp MZ-700 and MZ-800 emulator.",
     "homepage": "http://sourceforge.net/projects/mz800emu/",
-    "license": "GNU GPLv3",
+    "license": "GPL-3.0-or-later",
     "url": "https://consolo.is.cc/emu/mz800emu/1.0.3.7z",
     "hash": "6e67a29ac0ea2fdc2956bc3658c9654d11ff355a20639abd403fcad41827ca0c",
     "bin": [
         "mz800emu.exe"
-    ]
+    ],
+    "architecture": {
+        "32bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win32-stable-1.0.8-rev_237.rar/download",
+		"hash": "a"
+	},
+        "64bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win32-stable-1.0.8-rev_237.rar/download",
+		"hash": "a"
+	}
+    },
+    "checkver": {
+        "url": "https://sourceforge.net/projects/mz800emu/rss?path=/",
+        "regex": "mz800emu-win64-stable-([\\d\\.]+).rar"
+    },
+    "extract_dir": "mz800emu-{version}",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win32-stable-1.0.8-rev_237.rar/download"
+            },
+            "64bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win64-stable-1.0.8-rev_237.rar/download"
+            }
+        }
+    }
 }

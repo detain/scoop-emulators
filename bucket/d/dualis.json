@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:Dualis",
         "author:Mic",
@@ -10,10 +10,18 @@
     "version": "20.4",
     "description": "Dualis is a NDS emulator that never really got far, its primary purpose ended up being able to run some homebrew and demo software that’s made to test functionality. It fails to run any commercial ROMs.",
     "homepage": "https://dualis.1emu.net/files/index.html",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/dualis/20.4.7z",
     "hash": "0574f52159ca6df77450231d0256bd5de735129b032dba0e01205bdb49043dc0",
     "bin": [
         "dualis.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://dualis.1emu.net/files/",
+        "regex": "dualis-(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
+    },
+    "autoupdate": {
+        "script": "bin\\dualis.exe --version",
+        "releases": "https://dualis.1emu.net/files/"
+    }
 }

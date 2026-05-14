@@ -7,12 +7,20 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sugarbox/emulator_screen_01.jpg"
     ],
     "version": "0.26",
-    "description": "Sugarbox is an Amstrad CPC emulator.",
+    "description": "Sugarbox is a emulator for Amstrad CPC.",
     "homepage": "http://sugarbox.free.fr/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/sugarbox/0.26.7z",
     "hash": "d759e8fe7e7da14454faddeba4f3b61efc5363f7ca91b5a04e304a083a271eb7",
     "bin": [
         "Sugarbox.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://sugarbox.free.fr/Sugarbox_LATEST_VERSION.txt",
+        "regex": "(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://sugarbox.free.fr/Sugarbox_LATEST_VERSION.zip",
+        "hash": "sha256:4dd3f50d7c903e92945f6f0cb6c4ad6e79c6d4b1887a4a3dc07959d108be51bb"
+    }
 }

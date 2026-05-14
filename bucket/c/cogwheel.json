@@ -9,10 +9,29 @@
     "version": "1.0.3.0beta3",
     "description": "A software emulator primarily for 8-bit Sega hardware, such as the Sega Master System, Sega Game Gear and SG-1000. The ColecoVision is also supported.",
     "homepage": "http://benryves.com/products/cogwheel",
-    "license": "Freeware",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/cogwheel/1.0.3.0beta3.7z",
     "hash": "55399c38538200bfd1554f46b3e7a9c979737700083ab381a9539970a6b86691",
     "bin": [
-        "Cogwheel Interface.exe"
-    ]
+        "cogwheel.exe"
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://www.benryves.com/bin/cogwheel-win32.zip",
+            "hash": "sha256:61053e1cfb249f193fa6d3b7f2b9823f75d1d13c0a0a3b023cba5e5c5d56272d"
+        },
+        "64bit": {
+            "url": "http://www.benryves.com/bin/cogwheel-win64.zip",
+            "hash": "sha256:d9e8600c6482d2f3f3c3b2d8a1b0dc4365df387ad5a1a9a4b4ed4b4fddcfe25d"
+        }
+    },
+    "notes": "Cogwheel is a Sinclair ZX Spectrum emulator for Microsoft Windows.",
+    "checkver": {
+        "url": "http://benryves.com/products/cogwheel/latestversion.txt",
+        "regex": "Cogwheel Version (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://benryves.com/products/cogwheel/latestversion.txt",
+        "file": "cogwheel.exe"
+    }
 }

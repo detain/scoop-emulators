@@ -8,10 +8,24 @@
     "version": "1.05b",
     "description": "Hu6280 is an NEC TurboGrafx-16 Entertainment SuperSystem and PC Engine emulator.",
     "homepage": "http://www.hu6280.com",
-    "license": "Freeware",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/hu6280/1.05b.7z",
     "hash": "24ea731db3f8c2470ad1076348fe31b749409993b58f2fdf75b4573d492a946f",
     "bin": [
-        "hu6280.exe"
-    ]
+        "hu6280"
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "checkver": {
+        "url": "http://www.hu6280.com/download/",
+        "regex": "href=\"hu6280_([0-9\\.]+)\\.zip\""
+    },
+    "autoupdate": {
+        "url": "http://www.hu6280.com/download/hu6280_1_0_5.zip",
+        "hash": "SHA256: 5f5d5f2f1eb9b326d69372968fa14530a7f68c80a27efc13fbc6bcb8b3bb5476",
+        "installer": "zip",
+        "arguments": "/S"
+    }
 }

@@ -9,10 +9,18 @@
     "version": "2.0",
     "description": "nocash ZX81 & ZX Spectrum emulator/debugger for windows.",
     "homepage": "http://problemkaputt.de/index.htm",
-    "license": "Freeware",
+    "license": "Custom",
     "url": "https://consolo.is.cc/emu/nozx/2.0.7z",
     "hash": "13e7a166e774a00eb39a660eb6813142447c0e398bd271715dca256a17329a86",
     "bin": [
-        "NO$ZX.exe"
-    ]
+        "no2k6.exe"
+    ],
+    "checkver": {
+        "url": "http://problemkaputt.de/2k6.htm",
+        "regex": "<A HREF=\"no2k6(\\d{2})\\.zip\">"
+    },
+    "autoupdate": {
+        "url": "http://problemkaputt.de/no2k6${version}.zip",
+        "checksum": "sha256:3a08199e25d830c81a1830c8d95b75c90c0081e7039101d9fa77f78505955799"
+    }
 }

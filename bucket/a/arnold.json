@@ -9,10 +9,17 @@
     "version": "2004.01.04",
     "description": "Arnold is an Amstrad/Schneider CPC, Plus/CPC+ and VEB Mikroelektronik KC Compact emulator.",
     "homepage": "http://arnold.cpc-live.com/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/arnold/2004.01.04.7z",
     "hash": "958b55cac8f30cbf6a6bf2ec85768aef4765cad3ead621dd172a53cac6b51d73",
     "bin": [
-        "arnold.exe"
-    ]
+        "Arnold.exe"
+    ],
+    "checkver": {
+        "url": "http://arnold.cpc-live.com/Downloads.html",
+        "regex": "<td>Arnold v(\\d+\\.\\d+\\.\\d+)<\\/td>"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest -Uri 'http://arnold.cpc-live.com/Downloads.html' -UseBasicParsing | Select-String -Pattern '<td>Arnold v(\\d+\\.\\d+\\.\\d+)<\\/td>' | ForEach-Object { $_.Matches[0].Groups[1].Value }"
+    }
 }

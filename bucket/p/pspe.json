@@ -7,11 +7,21 @@
     ],
     "version": "0.9b",
     "description": "Emulation is growing every day, and PSPE is a perfect prove of that, even though this emulator still can't run any commercial PSP game, you can try it by playing some demos and homebrew games.",
-    "homepage": "http://www.psp-emulator.com/",
-    "license": "Freeware",
+    "homepage": "https://emulator-homepage.com",
+    "license": "License name (e.g., GPL-3.0)",
     "url": "https://consolo.is.cc/emu/pspe/0.9b.7z",
     "hash": "5bffa14479ba32e8c48b44119f22172e6f5e23c12c219d19760d0659be8f4475",
     "bin": [
-        "pspe.exe"
-    ]
+        "executable-name"
+    ],
+    "checkver": {
+        "url": "https://download-url.com/latest-version-file.txt",
+        "regex": "regex-pattern-to-match-version"
+    },
+    "autoupdate": {
+        "url": "https://download-url.com/latest-version-file.txt",
+        "regex": "regex-pattern-to-match-version",
+        "changelog": "https://download-url.com/changelog.txt",
+        "msi": true
+    }
 }

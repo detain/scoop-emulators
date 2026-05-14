@@ -9,10 +9,20 @@
     "version": "1.62b-win64",
     "description": "CP/M Box is an Amstrad PCW series emulator.",
     "homepage": "http://www.habisoft.com/pcw/",
-    "license": "GNU GPLv2",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/cpmbox/1.62b-win64.7z",
     "hash": "5e9aedee2d17dfb7d8479f426ab7e0b15fa3e5453d101490c1eb46f0a0d4b8f6",
     "bin": [
-        "PCW.exe"
-    ]
+        "cpmbox.exe"
+    ],
+    "checkver": {
+        "url": "http://www.habisoft.com/pcw/",
+        "regex": "cpmbox-v(\\d+\\.\\d+\\.\\d+)",
+        "matchIndex": 1
+    },
+    "autoupdate": {
+        "url": "http://www.habisoft.com/pcw/download.html",
+        "regex": "href=\"cpmbox-v(\\d+\\.\\d+\\.\\d+).zip\"",
+        "matchIndex": 1
+    }
 }

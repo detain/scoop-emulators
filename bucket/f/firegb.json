@@ -8,10 +8,19 @@
     "version": "1.1",
     "description": "FireGB is a Nintendo Game Boy emulator.",
     "homepage": "https://github.com/Frankablu/FireGB",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/firegb/1.1.7z",
     "hash": "22497ed5e48b90f01ac5915f20d78ea1a9eb30caf56ab84810fbe9cd4d4f1c37",
     "bin": [
         "FireGB.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Frankablu/FireGB/releases/latest",
+        "regex": "FireGB-v(.+)-windows-x64.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Frankablu/FireGB/releases/download/FireGB-v{version}/FireGB-v{version}-windows-x64.zip",
+        "hash": "sha256",
+        "extract_dir": "FireGB-v{version}"
+    }
 }

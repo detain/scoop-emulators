@@ -13,6 +13,17 @@
     "url": "https://consolo.is.cc/emu/futurepinball/1.9.1.20101231.7z",
     "hash": "0f2dce52cfc1c93aed40561446628216e3ac1826c39a8056c0f7fd7852e76a6a",
     "bin": [
-        "Future Pinball.exe"
-    ]
+        "FuturePinball.exe"
+    ],
+    "autoupdate": {
+        "enabled": true,
+        "frequency": "1 week",
+        "onexit": false
+    },
+    "checkver": {
+        "url": "https://futurepinball.com/download.html",
+        "pattern": "Download Future Pinball v(\\d+\\.\\d+\\.\\d+\\.\\d+)",
+        "transform": "v$1",
+        "matchIndex": 0
+    }
 }

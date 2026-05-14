@@ -7,12 +7,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/80five/emulator_screen_01.jpg"
     ],
     "version": "x.xx",
-    "description": "MarioNES / 80five is a Nintendo Entertainment System emulator.",
+    "description": "80five is an NES emulator for Windows that features a full-screen mode and support for ROM loading from ZIP files.",
     "homepage": "https://www.zophar.net/nes/80five.html",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/80five/x.xx.7z",
     "hash": "ca83acfcd91e28641ff607d5ca748b84a5c1ca049cd5b8bdffa3ba2d6bb5fb73",
     "bin": [
         "80five.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://www.zophar.net/version.txt",
+        "regex": "^80five v(\\d+\\.\\d+\\.\\d+)\\s*$"
+    },
+    "autoupdate": {
+        "url": "https://www.zophar.net/download_file/2589",
+        "hash": "sha256: CHANGE_ME",
+        "msi": false
+    }
 }

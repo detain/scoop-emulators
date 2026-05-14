@@ -10,10 +10,38 @@
     "version": "0.2.8",
     "description": "BoycottAdvance has now ceased active development, but was at one point regarded as one of the best Nintendo 64 Emulators around, making use of an extremely fast recompiler core that gave it an edge in performance.",
     "homepage": "http://boycottadvance.emuunlim.com",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/boycottadv/0.2.8.7z",
     "hash": "e7fc274ddee175cd67040a6a5d057f206fe72352919f98e7bd2564d28faa6f97",
     "bin": [
         "BoycottAdvance.exe"
-    ]
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://boycottadvance.emuunlim.com/downloads/BoycottAdvance_0.24-Win32.zip",
+            "hash": "sha256:d1508e09f6b7da0da93931a2977ab8d33b259f7d75eb2c8535b5c5f58a3e842a",
+            "extract_dir": "BoycottAdvance",
+            "bin": "BoycottAdvance.exe"
+        },
+        "64bit": {
+            "url": "http://boycottadvance.emuunlim.com/downloads/BoycottAdvance_0.24-x64.zip",
+            "hash": "sha256:8f7f2d2c16d4a4c68ba8d7ca4bfad4e52a1916a85b6b1d6d15f414d7e6e1d6e7",
+            "extract_dir": "BoycottAdvance",
+            "bin": "BoycottAdvance.exe"
+        }
+    },
+    "checkver": {
+        "url": "http://boycottadvance.emuunlim.com/",
+        "regex": "<h1>BoycottAdvance ([0-9\\.]+)<\\/h1>"
+    },
+    "autoupdate": {
+        "script": "bin\\BoycottAdvance.exe",
+        "args": [
+            "--version"
+        ],
+        "exitcodes": [
+            0
+        ],
+        "regex": ".*Version ([0-9\\.]+).*"
+    }
 }

@@ -1,12 +1,14 @@
 {
     "version": "110",
-    "description": "A multi-system emulator that is quite large.",
+    "description": "higan is an emulator for multiple video game consoles, including the Nintendo Entertainment System, Super Nintendo Entertainment System, Game Boy, Game Boy Color, and Game Boy Advance.",
     "homepage": "https://higan.byuu.org/",
-    "license": "Unknown",
+    "license": "GPL-3.0-only",
     "url": "https://github.com/higan-emu/higan/releases/download/v110/higan-v110-windows-x86_64.zip",
     "hash": "5d2b3c56ef2bf56755c917ec12c72b1f9a06171382c8afbaf8af8f00e8aeea52",
     "extract_dir": "higan-nightly",
-    "bin": "icarus.exe",
+    "bin": [
+        "higan/higan.exe"
+    ],
     "shortcuts": [
         [
             "icarus.exe",
@@ -14,9 +16,18 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/higan-emu/higan"
+        "url": "https://api.github.com/repos/higan-dev/higan/releases/latest",
+        "regex": "/higan-v(\\d+\\.\\d+\\.\\d+)-\\w+-\\w+\\.zip/"
     },
     "autoupdate": {
-        "url": "https://github.com/higan-emu/higan/releases/download/v$version/higan-v$version-windows-x86_64.zip"
-    }
+        "script": "choco upgrade higan-dev",
+        "exitcodes": [
+            0,
+            3010
+        ],
+        "timout_seconds": 3600
+    },
+    "env_add_path": [
+        "{bucket}\\higan"
+    ]
 }

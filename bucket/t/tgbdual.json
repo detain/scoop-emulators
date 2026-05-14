@@ -14,6 +14,16 @@
     "url": "https://consolo.is.cc/emu/tgbdual/8.3.7z",
     "hash": "3e0da16e038e8a5a11a2cdf83a1c08e8fea64d4ad291918a321f49d142783733",
     "bin": [
-        "TGB_Dual.exe"
-    ]
+        "snesgt.exe"
+    ],
+    "checkver": {
+        "url": "http://gigo.retrogames.com/snesgt.html",
+        "regex": "<b>Latest Version:</b> ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://gigo.retrogames.com/snesgt.html",
+        "regex": "Download SNESGT ([\\d.]+)",
+        "path": "/snesgt.zip",
+        "hash": "md5:cd64e43fa53684c8be3d3b9a702d747f"
+    }
 }

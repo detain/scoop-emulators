@@ -14,5 +14,15 @@
     "hash": "c965a4107b4c39006dc64bed7d7c6ae5d810887b8bd63c7297505d2f474b0f25",
     "bin": [
         "dchector.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://dchector.free.fr/version.txt",
+        "regex": "(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://dchector.free.fr/download.html",
+        "regex": "href=\"(http://dchector\\.free\\.fr/\\w+/dchector-v(\\d+\\.\\d+\\.\\d+)\\.zip)\""
+    },
+    "extract_dir": "dchector-v1.0.0",
+    "working_dir": "."
 }

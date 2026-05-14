@@ -9,10 +9,29 @@
     "version": "1.1.2",
     "description": "YAPE is a Commodore 264 family emulator. It's an 8-bit microcomputer family from the once-great-now-defunct Commodore Business Machines Ltd. They were released as a successor to the immensely popular Commodore 64 supposedly to either compete with the ZX Spectrum or other micros but eventually failed to gain market success and the whole line was dumped within a couple of years. However they were hugely popular in a few countries such as Hungary, Germany or Italy (to a certain extent also in the UK).",
     "homepage": "http://yape.plus4.net",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/yape/1.1.2.7z",
     "hash": "9e0d11cea449f6d8536f972def59705026e5c821e002c4476990cad6e843ed64",
     "bin": [
-        "Yape.exe"
-    ]
+        "yape.exe"
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://yape.plus4.net/files/yape_v1.0.zip",
+            "hash": "sha256:83c8e2e9f9c24d2d2b858c8a3fb1db3e74c7d16e11f8b7dc97b87c95d40d746f"
+        },
+        "64bit": {
+            "url": "http://yape.plus4.net/files/yape_v1.0_x64.zip",
+            "hash": "sha256:1c6851f6d05a6a8c9c54f68c1a6cd11b599e8f5365e5c28f5bc44d5eddf3a005"
+        }
+    },
+    "checkver": {
+        "url": "http://yape.plus4.net/download.htm",
+        "regex": "<a href=\"files/yape_v([0-9\\.]+)\\.zip\">Download YAPE</a>"
+    },
+    "autoupdate": {
+        "script": "yape.exe -v",
+        "url": "http://yape.plus4.net/download.htm",
+        "regex": "<a href=\"files/yape_v([0-9\\.]+)\\.zip\">Download YAPE</a>"
+    }
 }

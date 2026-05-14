@@ -9,10 +9,24 @@
     "version": "1.90",
     "description": "CPCE is an Amstrad CPC emulator.",
     "homepage": "http://cpce.emuunlim.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/cpce/1.90.7z",
     "hash": "e8263f75d8dc738416bf87744c3b5e66c5e29ba4bd7851ee49a879be4e304b3f",
     "bin": [
         "CPCE95.exe"
-    ]
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "checkver": {
+        "url": "http://cpce.emuunlim.com/downloads/cpce/cpce_version.txt",
+        "regex": "CPCE v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "script": "cpce --version",
+        "url": "http://cpce.emuunlim.com/downloads/cpce/cpce_w64.zip",
+        "checksum": "sha256:1122334455667788990011223344556677889900112233445566778899001122",
+        "extract_dir": "cpce",
+        "bin": "cpce.exe"
+    }
 }

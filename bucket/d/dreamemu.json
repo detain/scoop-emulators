@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:DreamEmu",
         "author:Lord Cheese",
@@ -9,10 +9,18 @@
     "version": "0.0.4.1",
     "description": "Dreamemu is an emulator for the Sega Dreamcast console. Dreamemu is in very early stages of development and currently discontinued.",
     "homepage": "http://www.dreamemu.net/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/dreamemu/0.0.4.1.7z",
     "hash": "0ef36beb01a9f757c3defd2044e6525aef84fa3557eba47562de389c7bccab2a",
     "bin": [
-        "Dreamemu.exe"
-    ]
+        "dreamemu.exe"
+    ],
+    "checkver": {
+        "url": "http://www.dreamemu.net/files/",
+        "regex": "dreamemu_(\\d+\\.\\d+\\.\\d+\\.\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "script": "bin\\dreamemu.exe --version",
+        "releases": "http://www.dreamemu.net/files/"
+    }
 }

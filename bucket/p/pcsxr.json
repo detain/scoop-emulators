@@ -10,10 +10,25 @@
     "version": "1.9.93",
     "description": "PCXS Reloaded is a popular open-source PSX emulator. PCSX Reloaded’s compatibility is on par with that of ePSXe and offers similar performance.",
     "homepage": "http://pcsxr.codeplex.com/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/pcsxr/1.9.93.7z",
     "hash": "41d8f3a04aa44c4cc8cceebf36de27f19adfcce0bdcafc11c46c26de22c4a73a",
     "bin": [
         "pcsxr.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://github.com/jackun/pcsxr/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "checkver": true,
+        "filters": [
+            {
+                "type": "regex",
+                "pattern": ".*",
+                "searchIn": "bin",
+                "replaceWith": "https://github.com/jackun/pcsxr/releases/download/v{version}/PCSXR-SETUP-{version}.EXE"
+            }
+        ]
+    }
 }

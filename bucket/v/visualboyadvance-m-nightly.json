@@ -1,8 +1,8 @@
 {
     "version": "nightly",
-    "description": "Nintendo Game Boy Advance emulator",
-    "homepage": "https://vba-m.com",
-    "license": "GPL-2.0",
+    "description": "VisualBoyAdvance-M (VBA-M) is a fork of the discontinued VisualBoyAdvance project, adding many enhancements and features.",
+    "homepage": "https://vba-m.com/",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "32bit": {
             "url": "https://nightly.vba-m.com/visualboyadvance-m-Win-x86_32.zip"
@@ -21,10 +21,7 @@
         "}"
     ],
     "bin": [
-        [
-            "visualboyadvance-m.exe",
-            "visualboyadvance-m-nightly"
-        ]
+        "VisualBoyAdvance-M.exe"
     ],
     "shortcuts": [
         [
@@ -39,13 +36,12 @@
         "State"
     ],
     "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/visualboyadvance-m-Win-32bit.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/visualboyadvance-m-Win-64bit.zip"
-            }
-        }
+        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/VisualBoyAdvance-M-$version-Windows.7z",
+        "hash": "sha256",
+        "regex": "VisualBoyAdvance-M-([\\d.]+)-Windows\\.7z"
+    },
+    "checkver": {
+        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",
+        "regex": "<a href=\"/visualboyadvance-m/visualboyadvance-m/releases/tag/[^\"]+\"[^>]*>VisualBoyAdvance-M v?([\\d.]+)[^<]+<"
     }
 }

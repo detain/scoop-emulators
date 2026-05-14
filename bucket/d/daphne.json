@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:Daphne",
         "author:Matt Ownby",
@@ -9,10 +9,21 @@
     "version": "1.0.0",
     "description": "Daphne is a LaserDisc Arcade Game emulator. As at v1.0.0 it can play the following games: Astron Belt, Badlands, Bega's Battle, Cliff Hanger, Cobra Command, Dragon's Lair, Dragon's Lair II: Timewarp, Esh's Aurunmilla, Galaxy Ranger, GP World, Interstellar, M.A.C.H. 3, Road Blaster, Space Ace, Star Blazer, Super Don Quix-ote, Thayer's Quest and Us vs Them.",
     "homepage": "http://www.daphne-emu.com/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/daphne/1.0.0.7z",
     "hash": "bee1ef3bc4eb69f6af29b32ec59c57155246599ce6a265f734d11a933786b143",
     "bin": [
         "daphne.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://github.com/DavidGriffith/daphne/releases/latest",
+        "re": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "architecture": "x64",
+        "installer": {
+            "url": "https://github.com/DavidGriffith/daphne/releases/download/v{version}/daphne-v{version}-win64.zip",
+            "checksum": "sha256:ae081f1c2cbdc5a69c5a23c40d1557af6f523e6c7de2075b61f76aa9c8fbf6c7"
+        }
+    }
 }

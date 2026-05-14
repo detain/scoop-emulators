@@ -9,10 +9,20 @@
     "version": "1.3.2.4",
     "description": "4DO is an open-source, low-level emulator based on the FreeDO source code. This is one of the best emulators for the 3DO.",
     "homepage": "http://fourdo.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/4do/1.3.2.4.7z",
     "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
     "bin": [
         "4DO.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://github.com/4do/4do/releases",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)",
+        "index": 1
+    },
+    "autoupdate": {
+        "url": "https://github.com/4do/4do/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)",
+        "index": 1
+    }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:Emu64",
         "author:Thorsten Kattanek",
@@ -9,10 +9,23 @@
     "version": "5.0.15-win64",
     "description": "Emu64 is a low-level emulation program, which emulates the Commodore 64. The operation of Emu64 is simpler than that of a real C64. All important functions are accessible with the mouse. Not only is the C64 was modeled, but also various extra hardware such as datasette, floppy drive or the use of modules.",
     "homepage": "http://www.emu64-projekt.de/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/emu64/5.0.15-win64.7z",
     "hash": "eb1b2dd2c3d40261d93c10b5b706ee97149bb532496ba010f53ea1a01b1500d8",
     "bin": [
         "emu64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://www.emu64-projekt.de/download.htm",
+        "regex": "href=\"(.*?)\">EMU64 v(.*?)<\\/a>",
+        "match": 2
+    },
+    "autoupdate": {
+        "url": "http://www.emu64-projekt.de/download.htm",
+        "split": "\n",
+        "regex": "href=\"(.*?)\">EMU64 v(.*?)<\\/a>",
+        "filename": "EMU64-{version}.zip"
+    },
+    "extract_dir": "EMU64-{version}",
+    "checksum_type": "sha256"
 }

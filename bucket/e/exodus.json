@@ -10,10 +10,36 @@
     "version": "2.0.1",
     "description": "Exodus is a highly accurate SEGA Genesis emulator that was primarily designed as a debugger. While not great for game emulation, it is useful as a development tool for the SEGA Genesis.",
     "homepage": "http://exodusemulator.com",
-    "license": "Freeware",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/exodus/2.0.1.7z",
     "hash": "40f8f96398a374c594c3291751296f2d7e28b0b49fcbb269199eb5e312f6f52c",
     "bin": [
         "Exodus.exe"
-    ]
+    ],
+    "architecture": [
+        "x86",
+        "x64"
+    ],
+    "binaries": [
+        {
+            "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x86.zip",
+            "checksum": "sha256:<your_checksum_here>",
+            "architecture": "x86"
+        },
+        {
+            "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x64.zip",
+            "checksum": "sha256:<your_checksum_here>",
+            "architecture": "x64"
+        }
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/exodusemulator/exodus/releases/latest",
+        "regex": "Exodus-(\\d+\\.\\d+\\.\\d+)-win-x(86|64)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x{arch}.zip",
+        "checksum": "sha256:<your_checksum_here>",
+        "architecture": "{arch}",
+        "bin": "Exodus.exe"
+    }
 }

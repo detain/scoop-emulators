@@ -7,12 +7,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmo5/emulator_screen_01.jpg"
     ],
     "version": "11",
-    "description": "DCMO5 is a Thomson MO5 emualtor. Screenshot from Author's Website.",
+    "description": "DCMO5 is a Thomson MO5 emulator for Windows, MacOS X, Linux, and Raspberry Pi.",
     "homepage": "http://dcmo5.free.fr",
-    "license": "GNU GPLv3",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/dcmo5/11.7z",
     "hash": "e105c200955f6d24856390abb00bebc700c0bb7da29b2e7587e4fc4217fb7de8",
     "bin": [
-        "dcmo5.exe"
-    ]
+        "dcmo5"
+    ],
+    "checkver": {
+        "url": "http://dcmo5.free.fr/releases/",
+        "regex": "dcmo5-([\\d\\.]+)-src\\.tar\\.gz"
+    },
+    "autoupdate": {
+        "url": "http://dcmo5.free.fr/releases/dcmo5-{version}-src.tar.gz",
+        "hash": "sha256",
+        "regex": "dcmo5-([\\d\\.]+)-src\\.tar\\.gz"
+    }
 }

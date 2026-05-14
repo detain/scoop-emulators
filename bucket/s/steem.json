@@ -13,6 +13,16 @@
     "url": "https://consolo.is.cc/emu/steem/3.2.7z",
     "hash": "a73ff35ee7016445878d6ab657e06faf89d57920b997f998ec4db467ec4a6d30",
     "bin": [
-        "Steem.exe"
-    ]
+        "STEEM.EXE"
+    ],
+    "checkver": {
+        "url": "http://steem.atari.st/download.htm",
+        "regex": "<h2>Latest Release \\((.*?)\\)<\\/h2>",
+        "index": 1
+    },
+    "autoupdate": {
+        "url": "http://steem.atari.st/download.htm",
+        "regex": "<a href=\"(http:\\/\\/.*?\\/steem-.*?)\\.zip\">",
+        "download": "$1.zip"
+    }
 }

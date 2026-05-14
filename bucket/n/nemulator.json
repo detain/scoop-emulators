@@ -9,11 +9,30 @@
     ],
     "version": "4.2",
     "description": "Nemulator is regarded as one of the best NES emulators around. Nemulator offers support for almost all of the NES’s features including undocumented and unofficial features.",
-    "homepage": "http://nemulator.com/",
-    "license": "Freeware",
+    "homepage": "https://sourceforge.net/projects/mz800emu/",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/nemulator/4.2.7z",
     "hash": "08e80c002d2e74e22f6526ff1ddc39d9141acf6c33ee0be68f96ee78a6df7c77",
     "bin": [
-        "nemulator.exe"
-    ]
+        "mz800emu.exe"
+    ],
+    "architecture": [
+        "x64",
+        "x86"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/",
+        "regex": "mz800emu-win64-stable-([\\d\\.]+).rar"
+    },
+    "extract_dir": "mz800emu-{version}",
+    "autoupdate": {
+        "architecture": [
+            "32bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win32-stable-1.0.8-rev_237.rar/download"
+            },
+            "64bit": {
+                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win64-stable-1.0.8-rev_237.rar/download"
+            }
+        "url": "https://sourceforge.net/projects/mz800emu/files/mz800emu/mz800emu-{version}/mz800emu-{version}-win32.zip/download"
+    }
 }

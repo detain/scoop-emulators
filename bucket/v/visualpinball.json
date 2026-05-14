@@ -11,8 +11,30 @@
     "homepage": "http://www.randydavis.com/vp/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/visualpinball/10.1.7z",
-    "hash": "6b4ef5ac95b01f8b17079ae0aef456f10957d2a6d7e03c494ca94a9729f3471b",
+    "hash": "md5:3d9e5e5dcd1cc36670a5b5f5b5a390fe",
     "bin": [
-        "VPinballX.exe"
-    ]
+        "VPinballX.exe",
+        "VPinMAME.dll",
+        "VPinMAME.xml",
+        "VPinMAME.in",
+        "VPinMAME.chm",
+        "VPinMAME.pdf",
+        "VPinMAME.exe",
+        "VPTest.exe",
+        "Setup.exe"
+    ],
+    "checkver": {
+        "url": "http://www.randydavis.com/vp/",
+        "regex": "<td>Visual Pinball ([\\d\\.]+)<\\/td>",
+        "index": 1
+    },
+    "autoupdate": {
+        "script": "VPinballX.exe",
+        "args": [
+            "/version"
+        ],
+        "exitcodes": [
+            0
+        ]
+    }
 }

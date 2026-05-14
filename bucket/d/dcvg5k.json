@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:DCVG5K",
         "author:Daniel Coulom",
@@ -9,10 +9,18 @@
     "version": "2012.04.13",
     "description": "DCVG5K is a Philips, Radiola and Schneider VG5000 emulator.",
     "homepage": "http://dcvg5k.free.fr",
-    "license": "GNU GPLv2",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/dcvg5k/2012.04.13.7z",
     "hash": "1acbf2359c51faaca8198d122e920605b56b975134e28ae5abd9a097ec32f220",
     "bin": [
         "dcvg5k.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://dcvg5k.free.fr/download.html",
+        "regex": "dcvg5k-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+    },
+    "autoupdate": {
+        "script": "$version = Invoke-WebRequest -Uri http://dcvg5k.free.fr/download.html | Select-String -Pattern 'Current version: ([0-9.]+)' | ForEach-Object { $_.Matches.Groups[1].Value }; $version",
+        "releases": "http://dcvg5k.free.fr/changes.html"
+    }
 }

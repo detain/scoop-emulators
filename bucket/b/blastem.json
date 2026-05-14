@@ -10,10 +10,19 @@
     "version": "0.4.1",
     "description": "BlastEM is an extremely accurate SEGA Genesis emulator. Thanks to its accuracy, it has support for almost every Genesis game. BlastEM is heavily optimized and can run on weaker systems.",
     "homepage": "http://rhope.retrodev.com/files/blastem.html",
-    "license": "GNU GPLv3",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/blastem/0.4.1.7z",
     "hash": "1ae4efa8aa2517fa97253a5737c2d72091cc2da0aeaa7d58ccadc15c718dd314",
     "bin": [
         "blastem.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://rhope.retrodev.com/files/blastem.html",
+        "regex": "Latest version: (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://rhope.retrodev.com/files/blastem.html",
+        "regex": "href=\"blastem-(\\d+\\.\\d+\\.\\d+)-src.zip\""
+    },
+    "binroot": ""
 }

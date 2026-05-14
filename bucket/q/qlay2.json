@@ -9,10 +9,26 @@
     "version": "0.95",
     "description": "QLAY2 is a Sinclair QL emulator. It is a port of QLAY.",
     "homepage": "http://www.jadiam.org/QL/QLAY2/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/qlay2/0.95.7z",
     "hash": "028da05ef15977dc3b602fe4e72a7d6ded4e20ae49c3f1fdb06b6280941be23b",
     "bin": [
         "qlay2.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://www.jadiam.org/QL/QLAY2/qlay2_win32.zip",
+        "regex": "QLAY2 (\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "script": "qlay2.ps1",
+        "url": "http://www.jadiam.org/QL/QLAY2/qlay2_win32.zip",
+        "checksum": "sha256:<SHA256 HASH>",
+        "arguments": [
+            "--no-interactive",
+            "--no-progress",
+            "--force",
+            "--installer",
+            "--silent"
+        ]
+    }
 }

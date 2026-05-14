@@ -7,12 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/quasi88/emulator_screen_01.jpg"
     ],
     "version": "0.6.4",
-    "description": "Portable PC-8801 emulator for Unix/X11, Mac OS X, and Windows.",
+    "description": "Quasi88 is an emulator for the NEC PC-8801 series of computers.",
     "homepage": "http://www.eonet.ne.jp/~showtime/quasi88/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/quasi88/0.6.4.7z",
     "hash": "264d03503dc22f0ba4cc1f64350aa3a18da46b8297561365150cd729446f9dce",
     "bin": [
-        "QUASI88win32.exe"
-    ]
+        "quasi88"
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "checkver": {
+        "url": "http://www.eonet.ne.jp/~showtime/quasi88/",
+        "regex": "href=\"quasi88[\\d.]*\\.zip\">"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest http://www.eonet.ne.jp/~showtime/quasi88/ -UseBasicParsing | Select-String -Pattern 'href=\"quasi88[\\d.]*\\.zip\">' | %{$_ -match '(\\d+(?:\\.\\d+)*)'} | Out-Null; $matches[1]",
+        "url": "http://www.eonet.ne.jp/~showtime/quasi88/quasi88.zip",
+        "checksum": "sha256:<insert SHA256 checksum of the latest release>"
+    }
 }

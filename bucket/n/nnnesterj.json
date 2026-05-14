@@ -9,10 +9,18 @@
     "version": "0.23",
     "description": "NNNesterJ is a Nintendo Entertainment System emulator based on NesterJ.",
     "homepage": "http://www.emulation9.com/nnnesterj",
-    "license": "Freeware",
+    "license": "Custom",
     "url": "https://consolo.is.cc/emu/nnnesterj/0.23.7z",
     "hash": "5ca05fb880d6ffee9cfcf49705bf60ead00a174fca2eb1a79e6810fd1b2ac81d",
     "bin": [
-        "nnnesterJ.exe"
-    ]
+        "nnnesterj.exe"
+    ],
+    "checkver": {
+        "url": "http://www.emulation9.com/nnnesterj",
+        "regex": "nnnesterj (\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://www.emulation9.com/download/nesten.zip",
+        "checksum": "sha256:e719d6e2a16810426ce6b373f6b21473b4f3846ab9a6e2e88b4a056ae7d16b75"
+    }
 }

@@ -10,10 +10,20 @@
     "version": "2.5-dos",
     "description": "PC Atari Emulator was one of the very first Atari 2600 emulators. It is a highly optimized emulator with a very easy to use interface.",
     "homepage": "http://pcae.vg-network.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/pcae/2.5-dos.7z",
     "hash": "68e1ca7b7d0a34b361360e0300237b1ff3975c7ed7a3a165064ee147d5570198",
     "bin": [
-        "pcaewin.dsk"
-    ]
+        "pcae.exe"
+    ],
+    "checkver": {
+        "url": "http://pcae.vg-network.com/download.html",
+        "regex": "pcae-(\\d+\\.\\d+\\.\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://pcae.vg-network.com/download.html",
+        "regex": "pcae-(\\d+\\.\\d+\\.\\d+)\\.zip",
+        "use_github": false,
+        "persist_exe": true
+    }
 }

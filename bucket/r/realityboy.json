@@ -9,10 +9,18 @@
     "version": "0.84.0",
     "description": "Reality Boy is a Nintendo Virtual Boy emulator.",
     "homepage": "http://goliathindustries.com/vb",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/realityboy/0.84.0.7z",
     "hash": "7e667147d6c6094f7bf31fc934d873dabce91a892d42ffd7e72db82f37cd8243",
     "bin": [
-        "rboy_front.exe"
-    ]
+        "RealityBoy.exe"
+    ],
+    "checkver": {
+        "url": "http://goliathindustries.com/vb/",
+        "regex": "Download Reality Boy v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "http://goliathindustries.com/vb/",
+        "regex": "href=\"(RealityBoy\\d+\\.\\d+\\.\\d+\\.zip)\""
+    }
 }

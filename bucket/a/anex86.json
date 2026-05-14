@@ -14,5 +14,33 @@
     "hash": "2c9dd2351f81d87f549c454b06e15b8185ab61185e32873f00ad275884494ff9",
     "bin": [
         "anex86.exe"
-    ]
+    ],
+    "extract_dir": "anex86",
+    "install": [
+        {
+            "cmd": "cp",
+            "args": [
+                "$bin",
+                "$install_dir"
+            ]
+        }
+    ],
+    "uninstall": [
+        {
+            "cmd": "rm",
+            "args": [
+                "$install_dir/$bin"
+            ]
+        }
+    ],
+    "checkver": {
+        "url": "https://example.com/anex86/latest-version.txt",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)",
+        "match_group": 1
+    },
+    "autoupdate": {
+        "exe": "anex86.exe",
+        "args": [],
+        "kill": true
+    }
 }

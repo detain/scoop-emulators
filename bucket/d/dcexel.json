@@ -13,6 +13,14 @@
     "url": "https://consolo.is.cc/emu/dcexel/2012.04.7z",
     "hash": "30856b4fcf32bf1e520b4d60892d1b081ec42f2f4b97050e4bd529bf437e702a",
     "bin": [
-        "dcexel.exe"
-    ]
+        "DC_EXEL.exe"
+    ],
+    "checkver": {
+        "url": "http://dcexel.free.fr/",
+        "regex": "<a href=\"DC_EXEL([^\"]*)\">"
+    },
+    "autoupdate": {
+        "url": "http://dcexel.free.fr/",
+        "regex": "<a href=\"DC_EXEL([^\"]*)\">"
+    }
 }

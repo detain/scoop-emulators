@@ -9,10 +9,34 @@
     "version": "1.01-win64",
     "description": "meisei is an MSX emulator. NOTE: BIOS is NOT required but will improve emulation and allow access to extra features.",
     "homepage": "http://www.jadiam.org/QL/",
-    "license": "Postcardware",
+    "license": "MIT",
     "url": "https://consolo.is.cc/emu/ql2k/1.01-win64.7z",
     "hash": "6f13ce3d763bf9cd0d2a74b37edb34015300f32c268511d4bc29dea0ee898704",
     "bin": [
-        "QL2K-x64.exe"
-    ]
+        "ql2k.exe"
+    ],
+    "architecture": "x64",
+    "version_scheme": "major.minor.patch",
+    "version_separator": "-",
+    "checkver": {
+        "mode": "regex",
+        "url": "http://www.jadiam.org/QL/",
+        "regex": "<a href=\"ql2k.zip\">ql2k-(.*?)\\.zip"
+    },
+    "autoupdate": {
+        "command": "ql2k.exe",
+        "args": [
+            "--version"
+        ],
+        "filters": [
+            {
+                "find": "QL2K Version",
+                "replace": ""
+            },
+            {
+                "find": "\\.",
+                "replace": ","
+            }
+        ]
+    }
 }

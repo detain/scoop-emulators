@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:FS-UAE Amiga",
         "author:Frode Solheim",
@@ -9,10 +9,24 @@
     "version": "2.8.3-win64",
     "description": "FS-UAE is an Amiga emulator for Windows, Linux and Mac OS X based on UAE/WinUAE, with a focus on emulating games. Features include emulation of Amiga 500, 1200, 4000, CD32 and CDTV, perfectly smooth scrolling on 50Hz displays, support for floppy images in ADF and IPF formats, CD-ROM images in ISO or BIN/CUE format, mounting folders on your computer as Amiga hard drives, support for Picasso 96 drivers for high-color and high-resolution Workbench displays, and more....",
     "homepage": "http://fs-uae.net/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/fs-uae/2.8.3-win64.7z",
     "hash": "76fc35dce8c839281c663e6ce55465a7670558517c78098316198a27b0d6bbb5",
     "bin": [
-        "fs-uae.exe"
-    ]
+        "fs-uae"
+    ],
+    "checkver": {
+        "url": "https://fs-uae.net/stable/latest-version.txt",
+        "regex": "([0-9\\.]+)"
+    },
+    "autoupdate": {
+        "url": "https://fs-uae.net/stable/latest/windows",
+        "hash": "sha256",
+        "regex": "fs-uae-[0-9\\.]+-windows\\.7z",
+        "keep": [
+            "ChangeLog.txt",
+            "LICENSE.txt",
+            "README.txt"
+        ]
+    }
 }

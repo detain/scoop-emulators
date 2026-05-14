@@ -13,6 +13,17 @@
     "url": "https://consolo.is.cc/emu/emuz2000/0.95.5.7z",
     "hash": "e95d20fb096580a6c311976fc2fe51f77bf30a77cfc5793dee15149409eef3d8",
     "bin": [
-        "EmuZ2000TF.exe"
-    ]
+        {
+            "url": "http://www5d.biglobe.ne.jp/~object/emuz2000_v{version}.zip",
+            "hash": "sha256:0517af6b8a0cddc34d0f1c9a1e8cfe332bae0d958aee7f77e33f82a7e78b365e"
+        }
+    ],
+    "checkver": {
+        "url": "http://www5d.biglobe.ne.jp/~object/",
+        "regex": "href=\"emuz2000_v(\\d+\\.\\d+\\.\\d+)\\.zip\""
+    },
+    "autoupdate": {
+        "command": "emuz2000 --version",
+        "ignoreexitcode": true
+    }
 }

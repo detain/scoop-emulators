@@ -8,10 +8,20 @@
     "version": "20.07.2014",
     "description": "HDNes is a Nintendo Entertainment System emulator with the ability to replace the graphics of the game with custom-made graphics packs and it also comes with an editor for creating them.",
     "homepage": "http://forums.nesdev.com/viewtopic.php?f=3&t=9935",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/hdnes/20.07.2014.7z",
     "hash": "ebd9089a049ecf7f7cd6682bdb0fa9dd674c5e41b3df52ab6608778576dffafb",
     "bin": [
         "hdnes.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Chris-Double/hdnes/releases/latest",
+        "regex": "hdnes-v(\\d+\\.\\d+\\.\\d+)",
+        "matchIndex": 1
+    },
+    "autoupdate": {
+        "url": "https://github.com/Chris-Double/hdnes/releases/download/hdnes-v{version}/hdnes-v{version}-win.zip",
+        "hash": "sha256",
+        "hashValue": "3a2d2b9c9c7b59a1f05e5c5d5f794ee5fcd0f33bda6a78f6da9bb6dc05a6a54f"
+    }
 }

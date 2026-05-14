@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:PSPEmu",
         "author:Soywiz",
@@ -9,10 +9,31 @@
     "version": "r301",
     "description": "PSPEmu is a Sony Playstation Portable emulator.",
     "homepage": "http://pspemu.soywiz.com",
-    "license": "GNU GPLv3",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/dpspemu/r301.7z",
     "hash": "9c26e9d582b80f7791f34a6325fd813273a8a83333f217e79b8098d2d7278f27",
     "bin": [
-        "pspemu.exe"
-    ]
+        "cpspemu.exe"
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://pspemu.soywiz.com/files/releases/cpspemu-win32.zip",
+            "hash": "sha256:48d83c726ef1a5b26228c8fb2e72d3b3de27b7f9295fa5d5b1bf5e4f4a1614c8"
+        },
+        "64bit": {
+            "url": "http://pspemu.soywiz.com/files/releases/cpspemu-win64.zip",
+            "hash": "sha256:7f0491c8d8407d938eeb68e4b98c90e9816c0cd6ed9c6d04e6a47a7b2d6b3043"
+        }
+    },
+    "checkver": {
+        "url": "http://pspemu.soywiz.com/files/releases/version.txt",
+        "regex": "^(\\d+\\.\\d+\\.\\d+)$"
+    },
+    "autoupdate": {
+        "exe": "cpspemu.exe",
+        "args": [
+            "--version"
+        ],
+        "exit_code": "0"
+    }
 }

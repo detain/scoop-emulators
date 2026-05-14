@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:GEST",
         "author:TM",
@@ -10,10 +10,24 @@
     "version": "1.1.1",
     "description": "GEST is a highly compatible and somewhat accurate Game Boy Color emulator that was built upon the Visual Boy Advance codebase. GEST improved upon the original VBA code by increasing the amount of features it emulated.",
     "homepage": "http://koti.mbnet.fi/gest_emu/",
-    "license": "GNU GPLv2",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/gest/1.1.1.7z",
     "hash": "ab8fc4af0d621df16d63d3c41f9a5d14b09a025fc05a9d3347e811883756e0cb",
     "bin": [
-        "GEST.exe"
-    ]
+        "gest.exe"
+    ],
+    "architecture": "x64",
+    "checkver": {
+        "url": "http://koti.mbnet.fi/gest_emu/",
+        "regex": "Download\\s*gest\\s*(\\d+\\.\\d+(?:\\.\\d+)?)"
+    },
+    "autoupdate": {
+        "script": "$bin -v | grep -Eo \"[0-9]+\\.[0-9]+(\\.[0-9]+)?\"",
+        "url": "http://koti.mbnet.fi/~atpat/gest/gest.zip",
+        "hash": "sha256:9f9d3d3aa7652cbe1e28968d944cc57aa12a0c77e04e0b776d2fbc609df1b013"
+    },
+    "env_add_path": [
+        "$dir"
+    ],
+    "bin_symlink": true
 }

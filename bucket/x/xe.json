@@ -14,5 +14,14 @@
     "hash": "c42656ec82e3c4b9e509223ff2fc33ccc3544951025e332c9b2bd8e6805baf1d",
     "bin": [
         "xe.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "http://www.xe-emulator.com/",
+        "regex": "<a[^>]*href=\"https://sourceforge.net/projects/xe-emulator/files/XE%20%5Bversion%5D/XE%20%5Bversion%5D%20%28Windows%29.exe/download\"[^>]*>([^<]+)<\\/a>",
+        "matchIndex": 1
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/xe-emulator/rss",
+        "releases": true
+    }
 }

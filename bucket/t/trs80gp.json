@@ -14,5 +14,18 @@
     "hash": "187ca5e788ab3145180895ec327f1358ae4c548a27b90e6e52d979dffd3643c5",
     "bin": [
         "trs80gp.exe"
-    ]
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "http://members.shaw.ca/gp2000/download/trs80gp-111.zip",
+            "hash": "sha256:9f9dfcb28120f8c33fa37d31d3c4646de71c6c63f6df3f6d61af5c5e5e5d2c44"
+        }
+    },
+    "checkver": {
+        "url": "http://members.shaw.ca/gp2000/trs80gp.html",
+        "regex": "trs80gp-([\\d\\.]+)\\.zip"
+    },
+    "autoupdate": {
+        "command": "cp trs80gp.exe $Env:ProgramFiles/trs80gp/."
+    }
 }

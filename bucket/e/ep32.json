@@ -7,12 +7,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ep32/emulator_screen_01.jpg"
     ],
     "version": "1.20",
-    "description": "ep32 is an Enterprise Computers Enterprise emulator.",
+    "description": "EP32 is a freeware EP128 and OP128 emulator for Windows",
     "homepage": "http://www.ep128.hu/Ep_Emulator_eng.htm",
-    "license": "GNU GPLv2",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/ep32/1.20.7z",
     "hash": "ad84b41c9c1a58c3ca47a9d2660d910279d5e2f502850f978be1e0dbfa3ae887",
     "bin": [
-        "ep32.exe"
-    ]
+        "ep32/ep32.exe"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "http://www.ep128.hu/downloads/ep32v100win64.zip",
+            "hash": "SHA256",
+            "hash_value": "f1086ca84835eab94c6fca71e211204849c8a9d61d0ce10a79f5393b92c3d7b3"
+        },
+        "32bit": {
+            "url": "http://www.ep128.hu/downloads/ep32v100win32.zip",
+            "hash": "SHA256",
+            "hash_value": "9f0c9a77b64e08e8c0e0a76ea6805e0b6f89a6df09753d58b9c02f8c8b46d087"
+        }
+    },
+    "autoupdate": {
+        "url": "http://www.ep128.hu/versions/ep32version.txt",
+        "regex": "Version ([0-9\\.]+)",
+        "match_index": 1
+    }
 }

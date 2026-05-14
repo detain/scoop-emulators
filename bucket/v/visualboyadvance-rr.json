@@ -8,11 +8,30 @@
     ],
     "version": "23.6",
     "description": "VBA-ReRecording is the re-recording branch of the stable 1.7.2 version of VisualBoyAdvance, The primary function of this branch is to expand features related to the creation of Tool-assisted movies.",
-    "homepage": "https://code.google.com/archive/p/vba-rerecording/",
-    "license": "Freeware",
+    "homepage": "https://github.com/visualboyadvance-m/visualboyadvance-m",
+    "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/visualboyadvance-rr/23.6.7z",
     "hash": "820662d259f41dda866273a48559057a9943296dadc704bf9a8bc0622cfff825",
     "bin": [
         "vba-v24m-svn480.exe"
-    ]
+    ],
+    "extract_dir": "VisualBoyAdvance-M",
+    "checkver": {
+        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",
+        "pattern": "/visualboyadvance-m/visualboyadvance-m/releases/tag/v(\\d+\\.\\d+\\.\\d+)",
+        "transform": "\\1"
+    },
+    "autoupdate": {
+        "exe": "VisualBoyAdvance-M.exe",
+        "args": [
+            "-nogui"
+        ],
+        "exitcodes": [
+            0
+        ],
+        "match": "version (\\d+\\.\\d+\\.\\d+)",
+        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/latest/download/VisualBoyAdvance-M.zip",
+        "hash": "sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "extract_dir": "VisualBoyAdvance-M"
+    }
 }

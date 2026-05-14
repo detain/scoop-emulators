@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:VBjin-OVR",
         "author:Jay Mattis",
@@ -9,10 +9,18 @@
     "version": "3.0",
     "description": "VBjin-OVR is a Virtual Boy Emulator for Windows with support for the Oculus Rift VR display device.",
     "homepage": "https://github.com/braindx/vbjin-ovr",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/vbjin-ovr/3.0.7z",
     "hash": "29759bd0cb73e7c98230f0fafc9ef9287a1fb8f98ce24ee9a5f8b6ddda4d676f",
     "bin": [
-        "VBjin-OVR.exe"
-    ]
+        "vbjin.exe"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/braindx/vbjin-ovr/releases/latest",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "sha256": true,
+        "msi": false
+    }
 }

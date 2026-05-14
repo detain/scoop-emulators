@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:DGen",
         "author:DGen was originally written by Dave. It was ported to SDL by Joe Groff and Phil K. Hornung. It was resurrected by tamentis in 2008 and is maintained by zamaz since september 2011.",
@@ -7,12 +7,20 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dgen/emulator_screen_01.jpg"
     ],
     "version": "1.33-win64",
-    "description": "DGen is a Sega Mega Drive and Genesis emulator.",
+    "description": "A Sega Genesis/Mega Drive emulator for Windows.",
     "homepage": "http://sourceforge.net/projects/dgen/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/dgen/1.33-win64.7z",
     "hash": "c34685a140661ffbc53df1a22d65d3f5c6a122225b9497f480947a1a139d57a8",
     "bin": [
         "dgen.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/dgen/rss",
+        "regex": "dgen-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+    },
+    "autoupdate": {
+        "script": "$version = ./dgen.exe -v | Select-Object -First 1; $version = $version -replace 'DGen version '; $version",
+        "releases": "https://sourceforge.net/projects/dgen/files/dgen/"
+    }
 }

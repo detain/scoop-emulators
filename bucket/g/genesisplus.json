@@ -10,10 +10,20 @@
     "version": "1.2a",
     "description": "Genesis Plus is a popular accurate SEGA Genesis emulator. It makes use of the MAME projects CPU and SOUND cores to help its emulation. It is regarded as one of the most accurate Genesis emulators.",
     "homepage": "http://www.techno-junk.org/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/genesisplus/1.2a.7z",
     "hash": "8d60427139bed6652f15649cf9ef935d26c98ad94910c30d05dc01c5ef2dae28",
     "bin": [
-        "gen.exe"
-    ]
+        "GenesisPlus"
+    ],
+    "extract_dir": "{bin}",
+    "autoupdate": {
+        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg",
+        "checksum": "sha256:{{$url := 'https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg'}}{{$exe := (new-object System.Uri $url).Segments[-1]}}{{(new-object System.Net.WebClient).DownloadString('https://github.com/drhelius/Genesis-Plus-GX/releases/latest') -match 'GenesisPlus-GX.dmg.{1,30}([0-9a-fA-F]+)';$matches[1]}}"
+    },
+    "checkver": {
+        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest",
+        "regex": "GenesisPlus-GX.dmg.{1,30}([0-9a-fA-F]+)",
+        "version_format": "regex:$1"
+    }
 }

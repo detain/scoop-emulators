@@ -7,12 +7,52 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nulldcn/emulator_screen_01.jpg"
     ],
     "version": "1.04r136",
-    "description": "NullDC Naomi is a Sega Naomi emulator.",
+    "description": "nullDC is a free, open source 32-bit Sega Dreamcast and Sega NAOMI emulator for Windows",
     "homepage": "http://github.com/skmp/nulldc",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/nulldcn/1.04r136.7z",
     "hash": "1acb0440073dc877270b3f1709b2c5466707986a8da73dcc6f4bde0a18e75c05",
     "bin": [
-        "nullDC_Win32_Release-NoTrace.exe"
-    ]
+        "nulldc.exe"
+    ],
+    "urls": [
+        {
+            "url": "https://github.com/skmp/nulldc/releases/download/{version}/nulldc_{version}_x86.7z",
+            "checksum": "sha256:7b6162e2bb6f4638e8b6886b7a8289242abf10597c321de39a6f0c3ec56c9d91"
+        },
+        {
+            "url": "https://github.com/skmp/nulldc/releases/download/{version}/nulldc_{version}_x64.7z",
+            "checksum": "sha256:bf4008aa68b1cb078dd444f49f9d9c8bfc6e10b6a2c6cb97b6c39fa55a7a68c3"
+        }
+    ],
+    "extract_dir": "bin",
+    "keep": [
+        "plugins",
+        "vmu",
+        "readme.txt"
+    ],
+    "checkver": {
+        "url": "https://github.com/skmp/nulldc/releases/latest",
+        "pattern": "v(\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "chocolatey": false,
+        "msiexec": false,
+        "installer": [
+            {
+                "type": "archive",
+                "silent": true,
+                "args": "/qn",
+                "file": "nulldc_{version}_x86.7z",
+                "path": "bin"
+            },
+            {
+                "type": "archive",
+                "silent": true,
+                "args": "/qn",
+                "file": "nulldc_{version}_x64.7z",
+                "path": "bin"
+            }
+        ]
+    }
 }

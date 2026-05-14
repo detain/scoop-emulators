@@ -9,11 +9,33 @@
     ],
     "version": "1.90-std",
     "description": "Gens32 Surreal is a highly capable Sega Genesis emulator. It is regarded as one of the most well rounded Genesis emulators available and even has netplay capabilities.",
-    "homepage": "http://gens.consolemul.com",
-    "license": "GNU GPLv2",
+    "homepage": "http://gens.consolemul.com/",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
     "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e",
     "bin": [
-        "Gens32Surreal.exe"
-    ]
+        "gens32.exe"
+    ],
+    "architecture": [
+        "x86",
+        "x64"
+    ],
+    "extract_dir": "gens32",
+    "app_path": "",
+    "environment": {
+        "Path": "{{env PATH}};{{installDir}}",
+        "APPDATA": "{{appData}}\\gens32"
+    },
+    "working_dir": "{{appData}}\\gens32",
+    "autoupdate": {
+        "url": "http://gens.consolemul.com/download/gens32_surreal_v270_complete.rar",
+        "checksum": "sha256:6d9df7a3f3cf3b7e764c62b2e7c29d6d1f7d9f13ee9d00e10c56f6e5f5c5af5d",
+        "checksum64": "sha256:6b60f6dcdcb7f3b3ebf3277e2e6b28fb7c1e0f414869ddc9d9bb8c8e16e0d0f7",
+        "extract_dir": "gens32",
+        "working_dir": "{{appData}}\\gens32"
+    },
+    "checkver": {
+        "url": "http://gens.consolemul.com/",
+        "regex": "<a href=\"download/gens32_surreal_v(\\d+)_complete.rar\">"
+    }
 }

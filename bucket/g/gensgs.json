@@ -9,10 +9,20 @@
     "version": "2.15.5-gs-r7",
     "description": "Gens/GS is a Sega Mega Drive, Sega Mega-CD, Sega 32X, Sega Master System and Sega Game Gear emulator based on the Genesis emulator Gens. Project goals include clean source code, combined features from various forks of Gens, and improved platform portability.",
     "homepage": "http://sonicretro.org",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/gensgs/2.15.5-gs-r7.7z",
     "hash": "fa31d544176bc791757d5bcda8d58681d101fb1b9378f3862aa7dac7d67d88a8",
     "bin": [
         "gens.exe"
-    ]
+    ],
+    "architecture": [
+        "x64"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/sonicretro/gens-gs/releases/latest",
+        "regex": "Gens/GS-(.*)-Windows-x86_64.7z"
+    },
+    "autoupdate": {
+        "script": "Invoke-WebRequest -Uri 'https://api.github.com/repos/sonicretro/gens-gs/releases/latest' | Select-Object -ExpandProperty Content | ConvertFrom-Json | Select-Object -ExpandProperty tag_name"
+    }
 }

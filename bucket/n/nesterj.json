@@ -9,10 +9,21 @@
     "version": "0.51b",
     "description": "nesterJ is a Nintendo Entertainment System and Famicom emulator based on 'nester public beta 3' by Darren Ranalli.",
     "homepage": "http://www.dcn.ne.jp/~otim2/nesterj/en/",
-    "license": "GNU GPLv2",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/nesterj/0.51b.7z",
     "hash": "e0eb46904d99533931cc50a5ee217cd8f905e729af34c64cc5bc29322b0ef97e",
     "bin": [
-        "nesterJ.exe"
-    ]
+        "nesterj.exe"
+    ],
+    "extract_dir": "nesterj",
+    "checkver": {
+        "url": "http://www.dcn.ne.jp/~otim2/nesterj/en/",
+        "regex": "NesterJ Version (\\d+\\.\\d+)\\s",
+        "match": 1
+    },
+    "autoupdate": {
+        "url": "http://www.dcn.ne.jp/~otim2/nesterj/en/",
+        "chocolatey": false,
+        "ignore_hash": false
+    }
 }

@@ -9,10 +9,20 @@
     "version": "2.0.10-x64",
     "description": "ep128emu is a portable emulator of the Enterprise 64/128, ZX Spectrum 48/128, and Amstrad CPC 464/664/6128 computers",
     "homepage": "https://sourceforge.net/projects/ep128emu/",
-    "license": "GNU GPLv2",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/ep128emu/2.0.10-x64.7z",
     "hash": "a142cf1a641bc89862f86b28b11adf22b5250998bd80a9501bcdf4d0ad3a952a",
     "bin": [
         "ep128emu.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu",
+        "regex": "ep128emu-(\\d+\\.\\d+\\.\\d+)-win64\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu",
+        "regex": "ep128emu-(\\d+\\.\\d+\\.\\d+)-win64\\.zip",
+        "bin": "ep128emu.exe",
+        "zip": true
+    }
 }

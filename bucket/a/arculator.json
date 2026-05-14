@@ -8,10 +8,22 @@
     "version": "0.99",
     "description": "Arculator emulates an old-style Archimedes (A3xx,A4xx,A3000,A540) with an ARM2 or ARM3, 4, 8 or 16 megabytes of RAM, and a single floppy drive.",
     "homepage": "http://b-em.bbcmicro.com/arculator/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/arculator/0.99.7z",
     "hash": "c8a74273fa09891b8b894d7782fef200ee385319e1822ea22237239410f1501b",
     "bin": [
-        "Arculator.exe"
-    ]
+        {
+            "url": "http://b-em.bbcmicro.com/arculator/downloads/arculator-{{version}}-win32.zip",
+            "hash": "sha256:<INSERT HASH HERE>",
+            "extract": true
+        }
+    ],
+    "checkver": {
+        "url": "http://b-em.bbcmicro.com/arculator/",
+        "regex": "<td>Current version:<\\/td>\\s*<td>([\\d\\.]+)<\\/td>"
+    },
+    "autoupdate": {
+        "url": "https://github.com/davidgiven/arculator/releases/latest",
+        "regex": "v([\\d\\.]+)"
+    }
 }

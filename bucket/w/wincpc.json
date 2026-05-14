@@ -8,10 +8,29 @@
     "version": "0.9.26",
     "description": "WinCPC is the Borland Delphi port of an Amstrad CPC emulator called vbCPC.",
     "homepage": "http://www.wincpc.ch/?topic=projects-wincpc",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/wincpc/0.9.26.7z",
     "hash": "a060aae86db74e791c6f65d35661b4f965dfac13bdd64e65c11c9af8e1f1d024",
     "bin": [
-        "WinCPC.exe"
+        "wincpc.zip"
+    ],
+    "architecture": [
+        "x86",
+        "x64"
+    ],
+    "checkver": {
+        "url": "http://www.wincpc.ch/?topic=projects-wincpc",
+        "regex": "<p>Latest version: ([0-9.]+)</p>"
+    },
+    "autoupdate": {
+        "script": "powershell -Command \"Expand-Archive -Path $packageDir\\wincpc.zip -DestinationPath $versionDir\\ -Force\"",
+        "checksum": "sha256",
+        "url": "http://www.wincpc.ch/files/wincpc.zip"
+    },
+    "keywords": [
+        "emulator",
+        "amstrad",
+        "cpc",
+        "wincpc"
     ]
 }

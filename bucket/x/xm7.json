@@ -12,6 +12,16 @@
     "url": "https://consolo.is.cc/emu/xm7/3.4L62.7z",
     "hash": "e9fd32f020849d8f930168aa809127444c173ef578f92218741ca5b7e2ae3885",
     "bin": [
-        "XM7.exe"
-    ]
+        "xm7*.exe"
+    ],
+    "checkver": {
+        "url": "http://xm7.la.coocan.jp/xm7/xm7.html",
+        "regex": "xm7-bin.zip"
+    },
+    "autoupdate": {
+        "script": "Get-Content $env:USERPROFILE\\scoop\\apps\\xm7\\xm7-version.txt",
+        "url": "http://xm7.la.coocan.jp/xm7/xm7.html",
+        "regex": "(?<=Latest version is )[0-9.]+",
+        "filter": "\\d+\\.\\d+\\.\\d+"
+    }
 }

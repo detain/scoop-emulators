@@ -1,4 +1,4 @@
-{
+﻿{
     "##": [
         "name:PearPC",
         "author:Sebastian Biallas and Others",
@@ -8,11 +8,33 @@
     ],
     "version": "0.5",
     "description": "PearPC (PowerPC Architecture Emulator) is an PowerPC emulator. NOTE: PearPC requires a client OS (such as Darwin for PowerPC, Mac OS X or Mandrake Linux 9.1 for PowerPC) that runs in the emulator.",
-    "homepage": "http://github.com/sebastianbiallas/pearpc",
-    "license": "GNU GPLv2",
+    "homepage": "https://github.com/sebastianbiallas/pearpc",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/pearpc/0.5.7z",
     "hash": "025d76bb4a5b8b09c2949336fd4804dc6c43dc938d6eef85e95459df9d2ae25f",
     "bin": [
         "ppc.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/sebastianbiallas/pearpc/releases/latest",
+        "regex": "\"tag_name\": \"([^\"]+)\""
+    },
+    "autoupdate": {
+        "script": "powershell",
+        "args": [
+            "Invoke-WebRequest",
+            "-UseBasicParsing",
+            "-Uri",
+            "https://github.com/sebastianbiallas/pearpc/releases/latest/download/pearpc-{{version}}.zip",
+            "-OutFile",
+            "$env:ScoopApps/pearpc/pearpc.zip",
+            ";",
+            "Expand-Archive",
+            "-Path",
+            "$env:ScoopApps/pearpc/pearpc.zip",
+            "-DestinationPath",
+            "$env:ScoopApps/pearpc",
+            "-Force"
+        ]
+    }
 }
