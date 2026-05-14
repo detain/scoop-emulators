@@ -30,7 +30,6 @@
         "regex": "Download Version (\\d+\\.\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "command": "elkulator.exe --version",
         "pattern": "Elkulator (\\d+\\.\\d+\\.\\d+\\.\\d+)"
     }
 }

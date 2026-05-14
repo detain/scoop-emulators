@@ -23,7 +23,6 @@
         "regex": "href=\"emuz2000_v(\\d+\\.\\d+\\.\\d+)\\.zip\""
     },
     "autoupdate": {
-        "command": "emuz2000 --version",
         "ignoreexitcode": true
     }
 }

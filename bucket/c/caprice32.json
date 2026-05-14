@@ -20,8 +20,6 @@
         "pattern": "<title>caprice32 ([\\d.]+) released<\\/title>"
     },
     "autoupdate": {
-        "script": "caprice32.exe --version",
-        "command": "caprice32.exe --update",
         "restart": true
     }
 }

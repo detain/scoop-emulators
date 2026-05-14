@@ -31,8 +31,7 @@
         "regex": "Version (\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "command": "scoop install xmillenium",
-        "exit_code": 0,
-        "scheduled": "daily"
+        "url": "https://consolo.is.cc/emu/xmillenium/{{version}}.7z",
+        "hash": "auto"
     }
 }

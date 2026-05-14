@@ -26,6 +26,5 @@
         "regex": "trs80gp-([\\d\\.]+)\\.zip"
     },
     "autoupdate": {
-        "command": "cp trs80gp.exe $Env:ProgramFiles/trs80gp/."
     }
 }

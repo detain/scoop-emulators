@@ -31,8 +31,7 @@
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "command": "scoop install xqemu",
-        "exit_code": 0,
-        "scheduled": "daily"
+        "url": "https://consolo.is.cc/emu/xqemu/{{version}}.7z",
+        "hash": "auto"
     }
 }

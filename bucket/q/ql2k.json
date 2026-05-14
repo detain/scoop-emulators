@@ -29,7 +29,6 @@
         "regex": "<a href=\"ql2k.zip\">ql2k-(.*?)\\.zip"
     },
     "autoupdate": {
-        "command": "ql2k.exe",
         "args": [
             "--version"
         ],

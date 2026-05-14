@@ -31,8 +31,7 @@
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "command": "scoop install xpeccy",
-        "exit_code": 0,
-        "scheduled": "daily"
+        "url": "https://consolo.is.cc/emu/xpeccy/{{version}}.7z",
+        "hash": "auto"
     }
 }

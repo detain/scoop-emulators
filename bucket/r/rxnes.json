@@ -22,7 +22,6 @@
         "strip_prefix": "."
     },
     "autoupdate": {
-        "command": "wget https://www.rxnes.com/download/rxnes.zip -O $dir/rxnes-new.zip && if $(CertUtil.exe -hashfile $dir/rxnes-new.zip SHA256 | findstr -i fd75345b00a3b3e53d8ee7ba2d2c6fb9cb6fbdcd6a7b768bb96f51b3fa3e99b8); then mv $dir/rxnes-new.zip $dir/rxnes.zip && Write-Output 'rxnes has been updated to version $version!'; else Write-Output 'rxnes update failed integrity check!'; fi",
         "notify": "toast"
     }
 }

@@ -24,8 +24,6 @@
         "regex": "(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "script": "scoop-download https://github.com/sv99/bk/raw/master/phoenix/releases/phoenix-{version}-win32.zip -o phoenix.zip",
-        "exit_code": 0,
         "bin": "phoenix",
         "zip": "phoenix.zip",
         "bin_dir": "bin"

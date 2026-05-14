@@ -28,8 +28,6 @@
         "pattern": "<a href=\"https://github\\.com/lisaem/lisaem/releases/tag/v(\\d+\\.\\d+\\.\\d+)\"[^>]*>lisaem-\\1-win64\\.zip<\\/a>"
     },
     "autoupdate": {
-        "command": "refreshenv && scoop update lisaem",
-        "checkver": true,
-        "exit_code": "3010"
+        "checkver": true
     }
 }

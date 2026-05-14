@@ -29,7 +29,6 @@
         "extract": "$dirpath = (Get-Item $installer).DirectoryName"
     },
     "autoupdate": {
-        "command": "scoop install redmsx",
         "checkver": {
             "url": "http://www.msxblue.com/files/RedMSXSetup.exe",
             "type": "msi",
