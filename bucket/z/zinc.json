@@ -29,8 +29,13 @@
         "regex": "<a href=\"http://www.emuhype.com/files/zinc([0-9\\.]+)-win[0-9]+.zip\">Download Zinc ([0-9\\.]+)</a>"
     },
     "autoupdate": {
-        "script": "zinc.exe --version",
-        "url": "http://www.emuhype.com/",
-        "regex": "<a href=\"http://www.emuhype.com/files/zinc([0-9\\.]+)-win[0-9]+.zip\">Download Zinc ([0-9\\.]+)</a>"
+        "architecture": {
+            "32bit": {
+                "url": "http://www.emuhype.com/files/zinc$version-win32.zip"
+            },
+            "64bit": {
+                "url": "http://www.emuhype.com/files/zinc$version-win64.zip"
+            }
+        }
     }
 }
