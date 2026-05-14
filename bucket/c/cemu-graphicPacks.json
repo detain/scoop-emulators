@@ -1,0 +1,18 @@
+{
+    "version": "977",
+    "description": "Community Graphic Packs for Cemu",
+    "homepage": "https://github.com/cemu-project/cemu_graphic_packs",
+    "license": "CC0-1.0",
+    "notes": [
+        "This is a data pack for Cemu containing community graphic packs.",
+        "Extract to your Cemu folder to use."
+    ],
+    "url": "https://github.com/cemu-project/cemu_graphic_packs/releases/download/Github977/graphicPacks977.zip",
+    "hash": "9bff908f721955a31ae3dc5c92eaf4291ac84261a0e6defaaed2cb33757c96c7",
+    "checkver": {
+        "github": "https://github.com/cemu-project/cemu_graphic_packs"
+    },
+    "autoupdate": {
+        "url": "https://github.com/cemu-project/cemu_graphic_packs/releases/download/Github$version/graphicPacks$version.zip"
+    }
+}

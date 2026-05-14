@@ -1,0 +1,29 @@
+{
+    "version": "0.3.1",
+    "description": "A lightweight Game Boy Advance emulator for Windows, macOS, and Linux.",
+    "homepage": "https://github.com/RikkiGibson/DreamPotato",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RikkiGibson/DreamPotato/releases/download/v0.3.1/DreamPotato-Windows-x64-v0.3.1.zip",
+            "hash": ""
+        }
+    },
+    "bin": "DreamPotato.exe",
+    "shortcuts": [
+        [
+            "DreamPotato.exe",
+            "DreamPotato"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/RikkiGibson/DreamPotato"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RikkiGibson/DreamPotato/releases/download/v$version/DreamPotato-Windows-x64-v$version.zip"
+            }
+        }
+    }
+}

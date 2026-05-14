@@ -1,0 +1,26 @@
+{
+    "version": "4.0",
+    "description": "A new generation, open-source graphics plugin for N64 emulators.",
+    "homepage": "https://github.com/gonetz/GLideN64",
+    "license": "Other",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gonetz/GLideN64/releases/download/Public_Release_4_0/GLideN64_Public_Release_4.0.7z",
+            "hash": ""
+        }
+    },
+    "notes": [
+        "This is a graphics plugin for N64 emulators (Mupen64Plus, Project64, etc.)",
+        "Extract the DLL files to your emulator's plugin directory."
+    ],
+    "checkver": {
+        "github": "https://github.com/gonetz/GLideN64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gonetz/GLideN64/releases/download/Public_Release_$version/GLideN64_Public_Release_$version.7z"
+            }
+        }
+    }
+}

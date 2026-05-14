@@ -1,0 +1,29 @@
+{
+    "version": "5.4.0",
+    "description": "Simple Launcher is a high-performance, open-source emulator frontend built with C# and WPF.",
+    "homepage": "https://github.com/drpetersonfernandes/SimpleLauncher",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release5.4.0/release_5.4.0_win-x64.zip",
+            "hash": "dc60ce940e4e7ffb597223f6c0f5f8e84e3b59f5b9fdda7ea27999f78e2db00c"
+        }
+    },
+    "bin": "Simple Launcher.exe",
+    "shortcuts": [
+        [
+            "Simple Launcher.exe",
+            "SimpleLauncher"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/drpetersonfernandes/SimpleLauncher"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release$version/release_$version_win-x64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "version": "1.6.1",
+    "description": "ColecoVision emulator and debugger for macOS, Windows, Linux, BSD and RetroArch.",
+    "homepage": "https://github.com/drhelius/Gearcoleco",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.6.1/Gearcoleco-1.6.1-desktop-windows-x64.zip",
+            "hash": "3856136f3c3fcc0b5498ebfddca3792597cd5598b37a19fe61c74f6d098cc3df",
+            "extract_dir": "Gearcoleco-1.6.1-desktop-windows-x64"
+        }
+    },
+    "bin": "Gearcoleco.exe",
+    "shortcuts": [
+        [
+            "Gearcoleco.exe",
+            "Gearcoleco"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/drhelius/Gearcoleco"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drhelius/Gearcoleco/releases/download/$version/Gearcoleco-$version-desktop-windows-x64.zip",
+                "extract_dir": "Gearcoleco-$version-desktop-windows-x64"
+            }
+        }
+    }
+}

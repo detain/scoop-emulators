@@ -1,0 +1,29 @@
+{
+    "version": "26.01",
+    "description": "A Game Boy Advance emulator for Windows and Android.",
+    "homepage": "https://github.com/Callum5042/RetroGBm",
+    "license": "MIT",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/Callum5042/RetroGBm/releases/download/v26.01/RetroGBm-Win32.zip",
+            "hash": ""
+        }
+    },
+    "bin": "RetroGBm.exe",
+    "shortcuts": [
+        [
+            "RetroGBm.exe",
+            "RetroGBm"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Callum5042/RetroGBm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/Callum5042/RetroGBm/releases/download/v$version/RetroGBm-Win32.zip"
+            }
+        }
+    }
+}

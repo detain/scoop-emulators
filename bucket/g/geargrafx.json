@@ -1,0 +1,31 @@
+{
+    "version": "1.7.7",
+    "description": "PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator, debugger, and embedded MCP server for macOS, Windows, Linux, BSD and RetroArch.",
+    "homepage": "https://github.com/drhelius/Geargrafx",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.7.7/Geargrafx-1.7.7-desktop-windows-x64.zip",
+            "hash": "23b75001ff39e2b04cf1e8e81b48d79a044fd9d94e4c37fc521d65b0f2f30912",
+            "extract_dir": "Geargrafx-1.7.7-desktop-windows-x64"
+        }
+    },
+    "bin": "Geargrafx.exe",
+    "shortcuts": [
+        [
+            "Geargrafx.exe",
+            "Geargrafx"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/drhelius/Geargrafx"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drhelius/Geargrafx/releases/download/$version/Geargrafx-$version-desktop-windows-x64.zip",
+                "extract_dir": "Geargrafx-$version-desktop-windows-x64"
+            }
+        }
+    }
+}
