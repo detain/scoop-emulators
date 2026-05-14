@@ -6,15 +6,13 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/jynx/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/jynx/emulator_screen_01.jpg"
     ],
-    "version": "1.0.8",
+    "version": "v1.0.8",
     "description": "Jynx is an emulator for the Camputers Lynx computer. See http://jynxemulator.wordpress.com/ for more information.",
     "homepage": "https://github.com/jonathan-markland/Jynx",
     "license": "MIT",
     "url": "https://consolo.is.cc/emu/jynx/1.0.8.7z",
     "hash": "f7ecb391f5a2781ce1207d6fb2dfc24c707f38e09fd3194f33c02047d8b18ca7",
-    "bin": [
-        "jynx.exe"
-    ],
+    "bin": "jynx.exe",
     "extract_dir": "Jynx",
     "checkver": {
         "url": "https://api.github.com/repos/jonathan-markland/Jynx/releases/latest",
@@ -23,14 +21,12 @@
     },
     "autoupdate": {
         "checkver": true,
-        "filters": [
-            {
-                "type": "regexp",
-                "pattern": "^Jynx-v\\d+\\.\\d+\\.\\d+-win64\\.zip$",
-                "strip_prefix": "Jynx-",
-                "strip_suffix": "-win64.zip",
-                "match_type": "contains"
-            }
-        ]
+        "filters": {
+            "type": "regexp",
+            "pattern": "^Jynx-v\\d+\\.\\d+\\.\\d+-win64\\.zip$",
+            "strip_prefix": "Jynx-",
+            "strip_suffix": "-win64.zip",
+            "match_type": "contains"
+        }
     }
 }
