@@ -19,7 +19,6 @@
         "regex": "v(\\d+(?:\\.\\d+)+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nulldcn/{{version}}.7z",
-        "hash": "1acb0440073dc877270b3f1709b2c5466707986a8da73dcc6f4bde0a18e75c05"
+        "extract_dir": "bin"
     }
 }
