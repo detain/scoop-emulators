@@ -1,0 +1,17 @@
+{
+    "##": [
+        "name:Swiss"
+    ],
+    "version": "1.0.0.0",
+    "description": "The swiss army knife of GameCube homebrew.",
+    "homepage": "https://github.com/emukidid/swiss-gc",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/emukidid/swiss-gc/releases/download/v0.6r1443/swiss_r1443.7z",
+    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
+    "extract_dir": "swiss_r1443",
+    "bin": "swiss_{{version}}_nintendont.elf",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/emukidid/swiss-gc/releases/download/v$version/swiss_$version.7z"
+    }
+}

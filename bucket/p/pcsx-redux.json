@@ -1,0 +1,35 @@
+﻿{
+    "##": [
+        "name:PCSX-Redux",
+        "logo:https://1.bp.blogspot.com/-sOIbENTD55M/YROzTC82NMI/AAAAAAAAYLo/M1rx8MedU_s_ZanD_nJtuTclRXqnPhpdwCLcBGAsYHQ/s320/3a810ac7-0de3-43b8-bde1-43b14f008743.png"
+    ],
+    "version": "1.0.0",
+    "description": "An actively developed fork of PCSX-Reloaded",
+    "homepage": "https://github.com/grumpycoders/pcsx-redux",
+    "license": "GPL-2.0-only",
+    "url": "",
+    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
+    "bin": [
+        "pcsx.exe"
+    ],
+    "checkver": {
+        "url": "https://github.com/grumpycoders/pcsx-redux/releases/latest",
+        "re": "pcsx-redux-v(\\d+\\.\\d+\\.\\d+)-win64\\.7z"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/grumpycoders/pcsx-redux/releases/download/v{{version}}/pcsx-redux-v{{version}}-win64.7z",
+            "hash": "sha256:5d303035bbd29e1f30e68231c04f8e2e34a9f7d1f1e19fa785a20c0a14d7f2b2"
+        }
+    },
+    "autoupdate": {
+        "checkver": true,
+        "changelog": "https://github.com/grumpycoders/pcsx-redux/releases"
+    },
+    "environment": {
+        "PATH": ";$dir$"
+    },
+    "suggest": {
+        "psxgames": "A bucket that contains PSX game ROMs to play with pcsx-redux."
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "##": [
+        "name:Wine",
+        "logo:https://4.bp.blogspot.com/-mC31yjDQdbc/VyXwfPqTZaI/AAAAAAAAU9U/Spp53iWwSJ4uOw7exnU9xEIQLlfX4nhTACLcB/s320/winehq_logo_text.png"
+    ],
+    "version": "6.0",
+    "description": "Wine is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, and BSD.",
+    "homepage": "http://www.winehq.org/",
+    "license": "LGPL-2.1",
+    "url": "https://dl.winehq.org/wine-builds/windows/x86_64/winehq-staging-6.0-x86_64.zip",
+    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
+    "bin": [
+        "wine64.exe",
+        "wineboot.exe",
+        "winecfg.exe",
+        "wineconsole.exe",
+        "winedbg.exe",
+        "winefile.exe",
+        "winepath.exe",
+        "regedit.exe",
+        "regsvr32.exe"
+    ],
+    "autoupdate": {
+        "url": "https://dl.winehq.org/wine-builds/windows/"
+    },
+    "checkver": {
+        "url": "https://www.winehq.org/news/",
+        "regex": "The Wine stable release (\\d[\\.\\d]+) is now available"
+    }
+}

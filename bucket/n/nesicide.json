@@ -1,0 +1,21 @@
+{
+    "##": [
+        "name:NESICIDE",
+        "logo:https://4.bp.blogspot.com/-objsV_vxzZg/Tn_WzmW0xKI/AAAAAAAAA-4/AcCFXg3hUPE/s400/logo.png"
+    ],
+    "version": "3.4.1",
+    "description": "NESICIDE is a software application for creating Nintendo Entertainment System (NES) games. It includes several tools for creating graphics, music, and code, as well as a debugger and emulator.",
+    "homepage": "https://github.com/christopherpow/nesicide",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/christopherpow/nesicide/releases/download/v3.4.1/Nesicide-3.4.1-win32.zip",
+    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
+    "bin": "nesicide.exe",
+    "autoupdate": {
+        "url": "https://github.com/christopherpow/nesicide/releases/latest",
+        "regex": "Nesicide-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+    },
+    "checkver": {
+        "url": "https://github.com/christopherpow/nesicide/releases",
+        "regex": "Nesicide-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "##": [
+        "name:Emulicious"
+    ],
+    "version": "1.4.6",
+    "description": "Emulicious is a free to use multi-system emulator for Windows, Linux, and macOS. It supports Game Boy, Game Boy Color, and Game Boy Advance.",
+    "homepage": "http://emulicious.net/",
+    "license": "MIT",
+    "url": "https://github.com/albertodemichelis/emulicious/releases/download/v1.4.6/emulicious-v1.4.6-windows.zip",
+    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
+    "bin": "emulicious.exe",
+    "autoupdate": {
+        "url": "https://github.com/albertodemichelis/emulicious/releases/latest",
+        "regex": "emulicious-v(\\d+\\.\\d+\\.\\d+)-windows.zip"
+    },
+    "checkver": {
+        "url": "https://github.com/albertodemichelis/emulicious/releases",
+        "regex": "emulicious-v(\\d+\\.\\d+\\.\\d+)-windows.zip"
+    }
+}
