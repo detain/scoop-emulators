@@ -14,10 +14,16 @@
     "bin": [
         "frodo.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/frodo/4.1.7z",
+            "hash": "b93602e317343eb9bb4dd293f373372dec5d6998bd7395ce09686697e9df3634"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/frodo/4.1.7z",
+            "hash": "b93602e317343eb9bb4dd293f373372dec5d6998bd7395ce09686697e9df3634"
+        }
+    },
     "checkver": {
         "url": "http://frodo.cebix.net/",
         "regex": "Stable version:\\s*(\\d+(?:\\.\\d+)+)"

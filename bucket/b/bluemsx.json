@@ -15,10 +15,16 @@
     "bin": [
         "bluemsx.exe"
     ],
-    "architecture": [
-        "x86",
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/bluemsx/2.8.2.7z",
+            "hash": "ec01b65d455d902ffb0a9e82906ecc35dfefcd5d169f07026d0f4bb76c349af1"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/bluemsx/2.8.2.7z",
+            "hash": "ec01b65d455d902ffb0a9e82906ecc35dfefcd5d169f07026d0f4bb76c349af1"
+        }
+    },
     "checkver": {
         "url": "http://www.bluemsx.com",
         "regex": "Download BlueMSX (\\d+\\.\\d+(?:\\.\\d+)?)"

@@ -15,9 +15,12 @@
     "bin": [
         "daedalus.exe"
     ],
-    "architecture": [
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/daedalus/0.07b.7z",
+            "hash": "eb4d35b8e8a84ba449c987a8fcc3923524164ccf1082e9ba0820aee8263e1b31"
+        }
+    },
     "checkver": {
         "url": "https://sourceforge.net/projects/daedalus-n64/rss",
         "regex": "daedalus-n64-(\\d+\\.\\d+\\.\\d+)\\.zip"

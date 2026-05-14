@@ -15,10 +15,16 @@
     "bin": [
         "Klive.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/klive/1.1.7z",
+            "hash": "1a4f2342d32cf60e46d20e23a4f899de3c4063b371cc02e9ea2b39d37a2db460"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/klive/1.1.7z",
+            "hash": "1a4f2342d32cf60e46d20e23a4f899de3c4063b371cc02e9ea2b39d37a2db460"
+        }
+    },
     "extract_dir": "Klive",
     "checkver": {
         "url": "https://api.github.com/repos/hsaturn/klive/releases/latest",

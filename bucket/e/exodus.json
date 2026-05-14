@@ -16,10 +16,16 @@
     "bin": [
         "Exodus.exe"
     ],
-    "architecture": [
-        "x86",
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/exodus/2.0.1.7z",
+            "hash": "40f8f96398a374c594c3291751296f2d7e28b0b49fcbb269199eb5e312f6f52c"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/exodus/2.0.1.7z",
+            "hash": "40f8f96398a374c594c3291751296f2d7e28b0b49fcbb269199eb5e312f6f52c"
+        }
+    },
     "binaries": [
         {
             "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x86.zip",

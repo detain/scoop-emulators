@@ -16,6 +16,16 @@
     "bin": [
         "Satourne.exe"
     ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
+            "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
+            "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f"
+        }
+    },
     "checkver": {
         "url": "http://www.satourne.consollection.com/download/satourne.txt",
         "regex": "Current version : (.*)"
@@ -27,9 +37,5 @@
         "split": "/",
         "index": -1
     },
-    "architecture": [
-        "x86",
-        "x64"
-    ],
     "extract_dir": "."
 }

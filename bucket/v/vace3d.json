@@ -15,7 +15,12 @@
     "bin": [
         "vace3d.exe"
     ],
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/vace3d/1.0.7z",
+            "hash": "a9661a472e1b43de9ca35dad811ee121c7bfae7522c3be1d15378806febc0d12"
+        }
+    },
     "checkver": {
         "url": "https://www.jupiter-ace.co.uk/downloads/vace3d.zip",
         "type": "sha256",

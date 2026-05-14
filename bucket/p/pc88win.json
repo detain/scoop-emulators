@@ -14,10 +14,16 @@
     "bin": [
         "pc88win.exe"
     ],
-    "architecture": [
-        "x86",
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/pc88win/1.14.7z",
+            "hash": "d98de53fb4c3ba3ad44d817e9ca0864b9bd94a0774abe315c6ac42d2290a487e"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/pc88win/1.14.7z",
+            "hash": "d98de53fb4c3ba3ad44d817e9ca0864b9bd94a0774abe315c6ac42d2290a487e"
+        }
+    },
     "checkver": {
         "url": "http://hwbb.gyao.ne.jp/soltin/pc88win.html",
         "regex": "Latest version: (\\d+\\.\\d+(\\.\\d+)?)",

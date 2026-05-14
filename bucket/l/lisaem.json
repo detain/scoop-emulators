@@ -15,9 +15,12 @@
     "bin": [
         "lisaem.exe"
     ],
-    "architecture": [
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/lisaem/1.2.6.7z",
+            "hash": "e24e2a6026b72cd279e4172f641d635dcd58200f40fa30d9025fbf0b42d19a28"
+        }
+    },
     "extract_dir": "lisaem-$version-win64",
     "checksum_type": "sha256",
     "checkver": {

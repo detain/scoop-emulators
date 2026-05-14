@@ -15,10 +15,16 @@
     "bin": [
         "xmil.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
+            "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
+            "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a"
+        }
+    },
     "extract_dir": "xmil{{version}}",
     "checkver": {
         "url": "http://www.retropc.net/yui/xmil.html",

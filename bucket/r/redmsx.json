@@ -15,7 +15,12 @@
     "bin": [
         "RedMSX.exe"
     ],
-    "architecture": "x86_64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/redmsx/1.4.7z",
+            "hash": "f520f186e6a8ed281ab7a8880c812ce0f70f85ab7a86d69cdb218b262b9b8d6c"
+        }
+    },
     "checkver": {
         "url": "http://www.msxblue.com/files/RedMSXSetup.exe",
         "type": "msi",

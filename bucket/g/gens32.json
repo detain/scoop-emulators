@@ -16,10 +16,16 @@
     "bin": [
         "gens32.exe"
     ],
-    "architecture": [
-        "x86",
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
+            "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
+            "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e"
+        }
+    },
     "extract_dir": "gens32",
     "app_path": "",
     "environment": {

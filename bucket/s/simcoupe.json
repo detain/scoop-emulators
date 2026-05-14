@@ -15,7 +15,12 @@
     "bin": [
         "simcoupe.exe"
     ],
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/simcoupe/1.0.7z",
+            "hash": "12e55c1cc0bed30e1c2633f15029921320256a26641ead8a66f9edfe5def3c76"
+        }
+    },
     "checkver": {
         "url": "https://simcoupe.org/latest.txt",
         "regex": "simcoupe-(\\d+(?:\\.\\d+)*).zip",

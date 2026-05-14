@@ -13,7 +13,12 @@
     "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/1.30.2/agatemulator-1.30.2.exe/download",
     "hash": "93cd45ddeeef8c7088fbbc14e183a1a299b69821861f99ddbb2e7465c57e9495",
     "bin": "AGAT.exe",
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/1.30.2/agatemulator-1.30.2.exe/download",
+            "hash": "93cd45ddeeef8c7088fbbc14e183a1a299b69821861f99ddbb2e7465c57e9495"
+        }
+    },
     "checkver": {
         "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/",
         "regex": ">(\\d[\\.\\d]*)<"

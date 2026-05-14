@@ -16,10 +16,16 @@
     "bin": [
         "kat5200.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
+            "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
+            "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c"
+        }
+    },
     "extract_dir": "kat5200-{version}-win",
     "checkver": {
         "url": "https://github.com/jillybunch/kat5200/releases/latest",

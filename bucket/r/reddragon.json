@@ -14,7 +14,12 @@
     "bin": [
         "redragon.exe"
     ],
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/reddragon/0.38.7z",
+            "hash": "b3b677d352570dea881ce5cbd51f13d3deda9fc8a55376335f7d9f2ce8ff8579"
+        }
+    },
     "checkver": {
         "url": "http://www.vtemulation.net/files/redragon/latest.txt",
         "regex": "Version ([0-9\\.]+)"

@@ -14,7 +14,12 @@
     "bin": [
         "hpsx64.exe"
     ],
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/hpsx64/019.7z",
+            "hash": "85519a117ef111d014935479ff5fd643e0d18de4a74541ea11b030ba0b35a994"
+        }
+    },
     "checkver": {
         "url": "https://sourceforge.net/projects/hpsx64/rss",
         "regex": "<link>.+?/hpsx64-(\\d+\\.\\d+(\\.\\d+)?)\\.zip/download</link>",

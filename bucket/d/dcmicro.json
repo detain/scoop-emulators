@@ -15,10 +15,16 @@
     "bin": [
         "dcalice.exe"
     ],
-    "architecture": [
-        "x86",
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/dcmicro/1.0.7z",
+            "hash": "ceaf7b83e70dc3480787f04021dfc7f452701631745c6d8013462ab60efaf344"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/dcmicro/1.0.7z",
+            "hash": "ceaf7b83e70dc3480787f04021dfc7f452701631745c6d8013462ab60efaf344"
+        }
+    },
     "checkver": {
         "url": "http://alice32.free.fr/",
         "regex": "<a href=\"dcalice-win32-64-(.*?)\\.zip\">"

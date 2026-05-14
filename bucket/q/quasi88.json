@@ -15,9 +15,12 @@
     "bin": [
         "quasi88"
     ],
-    "architecture": [
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/quasi88/0.6.4.7z",
+            "hash": "264d03503dc22f0ba4cc1f64350aa3a18da46b8297561365150cd729446f9dce"
+        }
+    },
     "checkver": {
         "url": "http://www.eonet.ne.jp/~showtime/quasi88/",
         "regex": "href=\"quasi88[\\d.]*\\.zip\">"

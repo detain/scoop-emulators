@@ -15,9 +15,12 @@
     "bin": [
         "dcmoto64.exe"
     ],
-    "architecture": [
-        "x64"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/dcmoto/2012.11.23.7z",
+            "hash": "29cc28fc33bc24ecdf1c3cad67227d64f73ce692128ba8a3b3795a6543b029d1"
+        }
+    },
     "autoupdate": {
         "script": "Invoke-WebRequest 'http://dcmoto.free.fr/' | Select-String -Pattern 'Download Version ([0-9\\.]+)' | ForEach-Object { $_.Matches.Groups[1].Value }",
         "url": "http://dcmoto.free.fr/files/dcmoto_{version}_x64.zip",

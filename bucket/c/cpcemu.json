@@ -15,10 +15,16 @@
     "bin": [
         "CPCemu.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
+            "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
+            "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef"
+        }
+    },
     "checkver": {
         "url": "http://www.cpc-emu.org/download/",
         "regex": "href=\"CPCemu-v(\\d+\\.\\d+).zip\""

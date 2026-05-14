@@ -15,10 +15,16 @@
     "bin": [
         "xpeccy.exe"
     ],
-    "architecture": [
-        "x64",
-        "x86"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
+            "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4"
+        },
+        "32bit": {
+            "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
+            "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4"
+        }
+    },
     "extract_dir": "xpeccy-{{version}}",
     "checkver": {
         "url": "https://github.com/samstyle/Xpeccy/releases/latest",

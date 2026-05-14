@@ -15,7 +15,12 @@
     "bin": [
         "ql2k.exe"
     ],
-    "architecture": "x64",
+    "architecture": {
+        "64bit": {
+            "url": "https://consolo.is.cc/emu/ql2k/1.01-win64.7z",
+            "hash": "6f13ce3d763bf9cd0d2a74b37edb34015300f32c268511d4bc29dea0ee898704"
+        }
+    },
     "version_scheme": "major.minor.patch",
     "version_separator": "-",
     "checkver": {
