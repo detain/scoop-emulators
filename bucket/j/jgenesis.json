@@ -1,0 +1,33 @@
+{
+    "version": "0.12.1",
+    "description": "jgenesis is a cross-platform multi-console emulator supporting Sega Genesis / Sega CD / SNES / Master System / Game Gear",
+    "homepage": "https://github.com/jsgroth/jgenesis",
+    "license": "GPL-3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jsgroth/jgenesis/releases/download/v0.12.1/jgenesis-0.12.1-gui-windows-x86_64.zip",
+            "hash": "sha256:76fdbd9ed937d349d753779c17bbe8b082dd6bee10e7ac2140504128b5626815",
+            "extract_dir": "jgenesis-0.12.1-gui-windows-x86_64"
+        }
+    },
+    "bin": "jgenesis.exe",
+    "shortcuts": [
+        [
+            "jgenesis.exe",
+            "jgenesis"
+        ]
+    ],
+    "persist": [
+        "config",
+        "saves"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jsgroth/jgenesis/releases/download/v$version/jgenesis-$version-gui-windows-x86_64.zip",
+                "extract_dir": "jgenesis-$version-gui-windows-x86_64"
+            }
+        }
+    }
+}

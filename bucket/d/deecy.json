@@ -1,0 +1,28 @@
+{
+    "version": "0.6.1",
+    "description": "Deecy is a Dreamcast and PlayStation emulator written in Zig",
+    "homepage": "https://github.com/Senryoku/Deecy",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Senryoku/Deecy/releases/download/v0.6.1/Deecy-x86_64-windows.zip"
+        }
+    },
+    "bin": "Deecy.exe",
+    "shortcuts": [
+        [
+            "Deecy.exe",
+            "Deecy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Senryoku/Deecy"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Senryoku/Deecy/releases/download/v$version/Deecy-x86_64-windows.zip"
+            }
+        }
+    }
+}

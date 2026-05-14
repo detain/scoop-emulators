@@ -1,0 +1,44 @@
+{
+    "version": "3.10.0",
+    "description": "VICE is an emulator collection which emulates the C64, the C64-DTV, the C128, the VIC20, practically all PET models, the PLUS4 and the CBM-II (aka C610)",
+    "homepage": "https://github.com/VICE-Team/svn-mirror",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/VICE-Team/svn-mirror/releases/download/3.10.0/GTK3VICE-3.10-win64.zip",
+            "hash": "sha256:beb3791d90e98f7e012c0028f26fbaa6545c8fce676f852a67f8ad893dee9d08",
+            "extract_dir": "GTK3VICE-3.10-win64"
+        }
+    },
+    "bin": [
+        "bin\\c1541.exe",
+        "bin\\cartconv.exe",
+        "bin\\petcat.exe",
+        "bin\\vsid.exe",
+        "bin\\x128.exe",
+        "bin\\x64.exe",
+        "bin\\x64dtv.exe",
+        "bin\\x64sc.exe",
+        "bin\\xcbm2.exe",
+        "bin\\xcbm5x0.exe",
+        "bin\\xpet.exe",
+        "bin\\xplus4.exe",
+        "bin\\xscpu64.exe",
+        "bin\\xvic.exe"
+    ],
+    "shortcuts": [
+        [
+            "bin\\x64.exe",
+            "GTK3VICE"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/VICE-Team/svn-mirror/releases/download/$version/GTK3VICE-$version-win64.zip",
+                "extract_dir": "GTK3VICE-$version-win64"
+            }
+        }
+    }
+}

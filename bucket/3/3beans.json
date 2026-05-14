@@ -1,0 +1,21 @@
+{
+    "version": "Rolling Release",
+    "description": "A low-level 3DS emulator",
+    "homepage": "https://github.com/Hydr8gon/3Beans",
+    "license": "GPL-3.0",
+    "url": "https://github.com/Hydr8gon/3Beans/releases/download/release/3beans-windows.zip",
+    "hash": "",
+    "bin": "3beans.exe",
+    "shortcuts": [
+        [
+            "3beans.exe",
+            "3Beans"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Hydr8gon/3Beans"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Hydr8gon/3Beans/releases/download/release/3beans-windows.zip"
+    }
+}

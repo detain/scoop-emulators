@@ -1,0 +1,36 @@
+{
+    "version": "0.3.1",
+    "description": "A work-in-progress Sega Saturn emulator",
+    "homepage": "https://github.com/StrikerX3/Ymir",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/StrikerX3/Ymir/releases/download/v0.3.1/ymir-windows-x86_64-AVX2-v0.3.1.zip",
+            "hash": "f7e8d9c0b1a2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a"
+        }
+    },
+    "extract_dir": "ymir-windows-x86_64-AVX2-v0.3.1",
+    "bin": "Ymir.exe",
+    "shortcuts": [
+        [
+            "Ymir.exe",
+            "Ymir"
+        ]
+    ],
+    "persist": [
+        "Ymir.toml",
+        "saves",
+        "states"
+    ],
+    "checkver": {
+        "url": "https://github.com/StrikerX3/Ymir/releases/latest",
+        "regex": "Ymir v(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/StrikerX3/Ymir/releases/download/v$matchVersion/ymir-windows-x86_64-AVX2-v$matchVersion.zip"
+            }
+        }
+    }
+}

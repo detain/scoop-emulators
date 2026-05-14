@@ -1,0 +1,23 @@
+{
+    "version": "0.58.0",
+    "description": "EMUZE is an emulation frontend that bundles and pre-configures multiple emulators for a console-like retro gaming experience",
+    "homepage": "https://github.com/bmsuseluda/emuze",
+    "license": "GPL-3.0",
+    "url": "https://github.com/bmsuseluda/emuze/releases/download/v0.58.0/emuze-Setup-0.58.0.exe",
+    "hash": "",
+    "bin": [
+        "EMUZE.exe"
+    ],
+    "shortcuts": [
+        [
+            "EMUZE.exe",
+            "EMUZE"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/bmsuseluda/emuze"
+    },
+    "autoupdate": {
+        "url": "https://github.com/bmsuseluda/emuze/releases/download/v$version/emuze-Setup-$version.exe"
+    }
+}

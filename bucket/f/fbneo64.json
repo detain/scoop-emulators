@@ -1,0 +1,45 @@
+{
+    "version": "1.0.0.2",
+    "description": "Final Burn Neo is an emulator for arcade games and select consoles (64-bit)",
+    "homepage": "https://github.com/finalburnneo/FBNeo",
+    "license": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt",
+    "notes": [
+        "",
+        "Some users will get an error message when they start the emulator because the default renderer is using Direct3D 7.",
+        "",
+        "To change the renderer, go to Video > Select blitter.",
+        ""
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/finalburnneo/FBNeo/releases/download/v1.0.0.2/windows-x86_64.zip",
+            "hash": "sha256:c1ed255e84ec3c7efac42b6db8dbbd3bed2ca7bbba84fced9366e33c2945309c"
+        }
+    },
+    "extract_dir": "fbneo",
+    "bin": "fbneo64.exe",
+    "shortcuts": [
+        [
+            "fbneo64.exe",
+            "Final Burn Neo (64-bit)"
+        ]
+    ],
+    "persist": [
+        "avi",
+        "config",
+        "neocdiso",
+        "recordings",
+        "roms",
+        "savestates",
+        "screenshots",
+        "support"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/v$version/windows-x86_64.zip"
+            }
+        }
+    }
+}

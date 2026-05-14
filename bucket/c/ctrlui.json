@@ -1,0 +1,24 @@
+{
+    "version": "2.3.1.0",
+    "description": "CtrlUI is a Windows application, game, and emulator launcher for game controllers with overlay interface",
+    "homepage": "https://github.com/dumbie/CtrlUI",
+    "license": "MIT",
+    "url": "https://github.com/dumbie/CtrlUI/releases/download/release/CtrlUI.zip",
+    "hash": "",
+    "extract_dir": "CtrlUI",
+    "bin": [
+        "Launcher.exe"
+    ],
+    "shortcuts": [
+        [
+            "Launcher.exe",
+            "CtrlUI"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/dumbie/CtrlUI"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dumbie/CtrlUI/releases/download/release/CtrlUI.zip"
+    }
+}

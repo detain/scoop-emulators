@@ -1,0 +1,21 @@
+{
+    "version": "alpha-1",
+    "description": "ChonkyStation is a PlayStation 1 emulator fork",
+    "homepage": "https://github.com/liuk7071/ChonkyStation4",
+    "license": "GPL-3.0",
+    "url": "https://github.com/liuk7071/ChonkyStation4/releases/download/alpha-1/ChonkyStation4.exe",
+    "hash": "",
+    "bin": "ChonkyStation4.exe",
+    "shortcuts": [
+        [
+            "ChonkyStation4.exe",
+            "ChonkyStation4"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/liuk7071/ChonkyStation4"
+    },
+    "autoupdate": {
+        "url": "https://github.com/liuk7071/ChonkyStation4/releases/download/alpha-1/ChonkyStation4.exe"
+    }
+}

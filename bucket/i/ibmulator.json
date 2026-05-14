@@ -1,0 +1,33 @@
+{
+    "version": "0.19",
+    "description": "IBMulator is an IBM PC/XT (5150) emulator focusing on early hardware and software compatibility",
+    "homepage": "https://github.com/barotto/IBMulator",
+    "license": "GPL-3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/barotto/IBMulator/releases/download/v0.19/ibmulator-0.19-windows.x86_64.zip",
+            "hash": "sha256:bd87b931ff487e6d515ed8d40fd1388085c5d254add4d990363d9e95adf03014",
+            "extract_dir": "ibmulator-0.19-windows.x86_64"
+        }
+    },
+    "bin": "IBMulator.exe",
+    "shortcuts": [
+        [
+            "IBMulator.exe",
+            "IBMulator"
+        ]
+    ],
+    "persist": [
+        "ibmulator.ini",
+        "keymap.map"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/barotto/IBMulator/releases/download/v$version/ibmulator-$version-windows.x86_64.zip",
+                "extract_dir": "ibmulator-$version-windows.x86_64"
+            }
+        }
+    }
+}

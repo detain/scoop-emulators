@@ -1,0 +1,49 @@
+{
+    "version": "cb5ad9a",
+    "description": "Yet another experimental fork of the Xenia emulator, mainly based on Xenia Canary with quicker iteration and improvements to Vulkan backend",
+    "homepage": "https://github.com/has207/xenia-edge",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/has207/xenia-edge/releases/download/cb5ad9a/xenia_edge_windows.zip",
+            "hash": "e8b9f3d5c7a6e2b4c8d1f0e3a2b5c7d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-Item \"$persist_dir\\portable.txt\" -ItemType File | Out-Null",
+        "   New-Item \"$persist_dir\\xenia-edge.config.toml\" -ItemType File | Out-Null",
+        "   if (Test-Path \"$env:USERPROFILE\\Documents\\XeniaEdge\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:USERPROFILE\\Documents\\XeniaEdge\\*\" -Destination \"$persist_dir\" -Recurse",
+        "       Remove-Item -Path \"$env:USERPROFILE\\Documents\\XeniaEdge\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": "xenia_edge.exe",
+    "shortcuts": [
+        [
+            "xenia_edge.exe",
+            "Xenia Edge"
+        ]
+    ],
+    "persist": [
+        "portable.txt",
+        "xenia-edge.config.toml",
+        "content",
+        "cache"
+    ],
+    "checkver": {
+        "url": "https://github.com/has207/xenia-edge/releases.atom",
+        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)",
+        "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
+            }
+        }
+    }
+}
