@@ -6,15 +6,16 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nulldcn/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nulldcn/emulator_screen_01.jpg"
     ],
-    "version": "1.04r136",
+    "version": [
+        "atars.githubusercontent.com\">",
+        ""
+    ],
     "description": "nullDC is a free, open source 32-bit Sega Dreamcast and Sega NAOMI emulator for Windows",
     "homepage": "http://github.com/skmp/nulldc",
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/nulldcn/1.04r136.7z",
     "hash": "1acb0440073dc877270b3f1709b2c5466707986a8da73dcc6f4bde0a18e75c05",
-    "bin": [
-        "nulldc.exe"
-    ],
+    "bin": "nulldc.exe",
     "urls": [
         {
             "url": "https://github.com/skmp/nulldc/releases/download/{version}/nulldc_{version}_x86.7z",
