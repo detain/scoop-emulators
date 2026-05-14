@@ -37,11 +37,5 @@
         "url": "https://dolphin-emu.org/download/",
         "regex": "https://dl-mirror.dolphin-emu.org/([\\d.]+)/dolphin-x64"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dl-mirror.dolphin-emu.org/$version/dolphin-x64-$version.exe#/dl.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

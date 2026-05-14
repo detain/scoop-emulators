@@ -25,14 +25,5 @@
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://nightly.link/joncampbell123/dosbox-x/workflows/vsbuild32/master/dosbox-x-vsbuild-win32-20221031163854.zip"
-            },
-            "64bit": {
-                "url": "https://nightly.link/joncampbell123/dosbox-x/workflows/vsbuild64/master/dosbox-x-vsbuild-win64-20221031163852.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

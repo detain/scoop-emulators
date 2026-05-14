@@ -19,9 +19,6 @@
         "regex": "xm7-bin.zip"
     },
     "autoupdate": {
-        "script": "Get-Content $env:USERPROFILE\\scoop\\apps\\xm7\\xm7-version.txt",
-        "url": "http://xm7.la.coocan.jp/xm7/xm7.html",
-        "regex": "(?<=Latest version is )[0-9.]+",
-        "filter": "\\d+\\.\\d+\\.\\d+"
+        "url": "http://xm7.la.coocan.jp/xm7/xm7.html"
     }
 }

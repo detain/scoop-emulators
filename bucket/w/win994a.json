@@ -20,9 +20,5 @@
         "url": "http://www.99er.net/download/win994a_latest.txt",
         "regex": "(\\d+(\\.\\d+)+)"
     },
-    "autoupdate": {
-        "script": "rename Win994a.exe Win994a-old.exe",
-        "bin": "Win994a/Win994a.exe",
-        "restart": true
-    }
+    "autoupdate": {}
 }

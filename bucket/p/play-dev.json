@@ -36,14 +36,5 @@
         "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<commit>.*)$",
         "replace": "${year}${month}${day}-${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$matchCommit/Play-x86-32.exe#/dl.7z"
-            },
-            "64bit": {
-                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$matchCommit/Play-x86-64.exe#/dl.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

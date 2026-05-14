@@ -20,11 +20,5 @@
         "regex": "href=\"(?<file>[^\"]+\\.7z)\"><strong>MAMEUI v?\\.(?<ver>[\\d]+) ",
         "replace": "0.${ver}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://www.mameui.info/$matchFile"
-            }
-        }
-    }
+    "autoupdate": {}
 }

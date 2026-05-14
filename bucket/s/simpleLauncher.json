@@ -19,11 +19,5 @@
     "checkver": {
         "github": "https://github.com/drpetersonfernandes/SimpleLauncher"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release$version/release_$version_win-x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

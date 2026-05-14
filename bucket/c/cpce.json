@@ -26,10 +26,7 @@
         "regex": "CPCE v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "script": "cpce --version",
         "url": "http://cpce.emuunlim.com/downloads/cpce/cpce_w64.zip",
-        "checksum": "sha256:1122334455667788990011223344556677889900112233445566778899001122",
-        "extract_dir": "cpce",
-        "bin": "cpce.exe"
+        "extract_dir": "cpce"
     }
 }

@@ -37,8 +37,7 @@
     ],
     "autoupdate": {
         "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/VisualBoyAdvance-M-$version-Windows.7z",
-        "hash": "sha256",
-        "regex": "VisualBoyAdvance-M-([\\d.]+)-Windows\\.7z"
+        "hash": "sha256"
     },
     "checkver": {
         "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",

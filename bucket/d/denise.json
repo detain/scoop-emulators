@@ -23,17 +23,6 @@
         "Denise.exe",
         "Denise"
     ],
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://sourceforge.net/projects/deniseemu/files/v%20$version/denise_win32_v$version.zip/download",
-                "extract_dir": "denise_win32_v$version"
-            },
-            "64bit": {
-                "url": "https://sourceforge.net/projects/deniseemu/files/v%20$version/denise_win64_v$version.zip/download",
-                "extract_dir": "denise_win64_v$version"
-            }
-        }
-    },
+    "autoupdate": {},
     "checkver": "sourceforge"
 }

@@ -75,11 +75,6 @@
         "regex": "tag/v([^\"]+)\""
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/cemu-project/Cemu/releases/download/v$version/cemu-$version-windows-x64.zip"
-            }
-        },
         "extract_dir": "Cemu_$version"
     }
 }

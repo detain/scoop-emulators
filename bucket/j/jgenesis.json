@@ -22,12 +22,5 @@
         "saves"
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/jsgroth/jgenesis/releases/download/v$version/jgenesis-$version-gui-windows-x86_64.zip",
-                "extract_dir": "jgenesis-$version-gui-windows-x86_64"
-            }
-        }
-    }
+    "autoupdate": {}
 }

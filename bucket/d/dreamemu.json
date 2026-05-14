@@ -19,8 +19,5 @@
         "url": "http://www.dreamemu.net/files/",
         "regex": "dreamemu_(\\d+\\.\\d+\\.\\d+\\.\\d+)\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dreamemu.exe --version",
-        "releases": "http://www.dreamemu.net/files/"
-    }
+    "autoupdate": {}
 }

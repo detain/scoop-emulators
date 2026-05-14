@@ -20,8 +20,5 @@
         "regex": "version ([\\d\\.]+)",
         "url": "http://atariarea.krap.pl/PLus/index_us.htm"
     },
-    "autoupdate": {
-        "script": "rename-item -path \"$home/Atari800WinPLus\" -newname \"$version\"",
-        "dontzip": true
-    }
+    "autoupdate": {}
 }

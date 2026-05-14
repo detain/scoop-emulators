@@ -38,11 +38,6 @@
         "replace": "${build}-${date}"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/citra-emu/citra-nightly/releases/download/nightly-$matchBuild/citra-windows-$matchEnv-$matchDate-$matchCommit.$matchZip"
-            }
-        },
         "extract_dir": "nightly-$matchEnv"
     }
 }

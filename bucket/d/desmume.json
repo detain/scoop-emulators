@@ -45,23 +45,5 @@
         "regex": "release_([^_]*)_([^_]*)_([^_\"]*)",
         "replace": "${1}.${2}.${3}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/TASEmulators/desmume/releases/download/release_$underscoreVersion/desmume-$version-win64.zip",
-                "bin": [
-                    [
-                        "DeSmuME_$version_x64.exe",
-                        "desmume-stable"
-                    ]
-                ],
-                "shortcuts": [
-                    [
-                        "DeSmuME_$version_x64.exe",
-                        "desmume-stable"
-                    ]
-                ]
-            }
-        }
-    }
+    "autoupdate": {}
 }

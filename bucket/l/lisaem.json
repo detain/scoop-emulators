@@ -23,11 +23,6 @@
     },
     "extract_dir": "lisaem-$version-win64",
     "checksum_type": "sha256",
-    "checkver": {
-        "mode": "regex",
-        "pattern": "<a href=\"https://github\\.com/lisaem/lisaem/releases/tag/v(\\d+\\.\\d+\\.\\d+)\"[^>]*>lisaem-\\1-win64\\.zip<\\/a>"
-    },
-    "autoupdate": {
-        "checkver": true
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

@@ -23,11 +23,5 @@
         "mappings"
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/flyinghead/flycast/releases/download/v$version/flycast-win64-$version.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

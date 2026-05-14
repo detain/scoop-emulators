@@ -19,9 +19,6 @@
         "regex": "BasiliskII-([0-9\\.]+)-[Ww]indows\\.zip"
     },
     "autoupdate": {
-        "url": "http://basilisk.cebix.net/downloads/",
-        "regex": "BasiliskII-([0-9\\.]+)-[Ww]indows\\.zip",
-        "bin": "basiliskii.exe",
-        "msi": false
+        "url": "http://basilisk.cebix.net/downloads/"
     }
 }

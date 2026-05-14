@@ -31,11 +31,5 @@
         "url": "https://redream.io/download",
         "regex": "v([\\d.]+-\\d{4}-g[a-f0-9]+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://redream.io/download/redream.x86_64-windows-v$version.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

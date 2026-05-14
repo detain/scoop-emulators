@@ -33,14 +33,6 @@
         "github": "https://github.com/stella-emu/stella"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/stella-emu/stella/releases/download/$version/Stella-$version-x64.exe"
-            },
-            "32bit": {
-                "url": "https://github.com/stella-emu/stella/releases/download/$version/Stella-$version-win32.exe"
-            }
-        },
         "extract_dir": "Stella-$version"
     }
 }

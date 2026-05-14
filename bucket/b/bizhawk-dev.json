@@ -100,11 +100,5 @@
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>[^ ]+) (?<run>.*)",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/$matchRun/artifacts/download?file_type=archive#dl.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

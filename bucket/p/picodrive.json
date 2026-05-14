@@ -21,10 +21,6 @@
         "matchIndex": 1
     },
     "autoupdate": {
-        "url": "https://github.com/notaz/picodrive/releases/download/v{version}/picodrive_win32_{version}.zip",
-        "checksum": "sha256",
-        "extract": [
-            "picodrive.exe"
-        ]
+        "url": "https://github.com/notaz/picodrive/releases/download/v{version}/picodrive_win32_{version}.zip"
     }
 }

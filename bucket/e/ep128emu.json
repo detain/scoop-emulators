@@ -20,9 +20,6 @@
         "regex": "ep128emu-(\\d+\\.\\d+\\.\\d+)-win64\\.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu",
-        "regex": "ep128emu-(\\d+\\.\\d+\\.\\d+)-win64\\.zip",
-        "bin": "ep128emu.exe",
-        "zip": true
+        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu"
     }
 }

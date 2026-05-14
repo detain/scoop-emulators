@@ -19,22 +19,5 @@
         "url": "https://api.github.com/repos/sebastianbiallas/pearpc/releases/latest",
         "regex": "\"tag_name\": \"([^\"]+)\""
     },
-    "autoupdate": {
-        "script": "powershell",
-        "args": [
-            "Invoke-WebRequest",
-            "-UseBasicParsing",
-            "-Uri",
-            "https://github.com/sebastianbiallas/pearpc/releases/latest/download/pearpc-{{version}}.zip",
-            "-OutFile",
-            "$env:ScoopApps/pearpc/pearpc.zip",
-            ";",
-            "Expand-Archive",
-            "-Path",
-            "$env:ScoopApps/pearpc/pearpc.zip",
-            "-DestinationPath",
-            "$env:ScoopApps/pearpc",
-            "-Force"
-        ]
-    }
+    "autoupdate": {}
 }

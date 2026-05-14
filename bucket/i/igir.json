@@ -13,11 +13,5 @@
     "checkver": {
         "github": "https://github.com/emmercm/igir"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/emmercm/igir/releases/download/v$version/igir-$version-Windows-x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

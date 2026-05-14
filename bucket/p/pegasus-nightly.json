@@ -21,11 +21,5 @@
         "url": "https://api.github.com/repos/mmatyas/pegasus-frontend/releases/tags/continuous",
         "regex": "continuous/pegasus-fe_([\\w\\d-]+)_win-mingw-static.zip"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/mmatyas/pegasus-frontend/releases/download/continuous/pegasus-fe_$version_win-mingw-static.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

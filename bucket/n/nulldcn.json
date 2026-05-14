@@ -36,24 +36,5 @@
         "url": "https://github.com/skmp/nulldc/releases/latest",
         "pattern": "v(\\d+(?:\\.\\d+)+)"
     },
-    "autoupdate": {
-        "chocolatey": false,
-        "msiexec": false,
-        "installer": [
-            {
-                "type": "archive",
-                "silent": true,
-                "args": "/qn",
-                "file": "nulldc_{version}_x86.7z",
-                "path": "bin"
-            },
-            {
-                "type": "archive",
-                "silent": true,
-                "args": "/qn",
-                "file": "nulldc_{version}_x64.7z",
-                "path": "bin"
-            }
-        ]
-    }
+    "autoupdate": {}
 }

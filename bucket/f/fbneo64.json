@@ -35,11 +35,5 @@
         "support"
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/finalburnneo/FBNeo/releases/download/v$version/windows-x86_64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

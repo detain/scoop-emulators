@@ -22,9 +22,7 @@
         }
     },
     "autoupdate": {
-        "script": "Invoke-WebRequest 'http://dcmoto.free.fr/' | Select-String -Pattern 'Download Version ([0-9\\.]+)' | ForEach-Object { $_.Matches.Groups[1].Value }",
-        "url": "http://dcmoto.free.fr/files/dcmoto_{version}_x64.zip",
-        "checksum": "sha256"
+        "url": "http://dcmoto.free.fr/files/dcmoto_{version}_x64.zip"
     },
     "checkver": {
         "url": "http://dcmoto.free.fr/",

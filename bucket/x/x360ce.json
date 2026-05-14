@@ -20,14 +20,5 @@
         }
     },
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/x360ce/x360ce/releases/download/$version/x360ce_x86.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/x360ce/x360ce/releases/download/$version/x360ce_x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

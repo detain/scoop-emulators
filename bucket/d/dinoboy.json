@@ -18,8 +18,5 @@
         "url": "http://www.pradsprojects.com/dinoboy.html",
         "regex": "Download Dinoboy (\\d+\\.\\d+\\.\\d+)"
     },
-    "autoupdate": {
-        "script": "bin\\dinoboy.exe -v",
-        "releases": "http://www.pradsprojects.com/dinoboy.html"
-    }
+    "autoupdate": {}
 }

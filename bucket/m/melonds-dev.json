@@ -40,11 +40,5 @@
         "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

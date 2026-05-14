@@ -20,8 +20,6 @@
         "regex": "href=\"joyce-(\\d+\\.\\d+\\.\\d+)\\.tar\\.gz\""
     },
     "autoupdate": {
-        "url": "http://www.seasip.info/Unix/Joyce/joyce-%s.tar.gz",
-        "msi": true,
-        "msiSilent": true
+        "url": "http://www.seasip.info/Unix/Joyce/joyce-%s.tar.gz"
     }
 }

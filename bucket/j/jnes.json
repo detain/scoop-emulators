@@ -17,8 +17,7 @@
         "jnes.exe"
     ],
     "autoupdate": {
-        "url": "http://jabosoft.com/files/jnes/latest.html",
-        "regex": "<a href=\"(http://jabosoft.com/files/jnes/jnes[0-9\\.]+.zip)\">"
+        "url": "http://jabosoft.com/files/jnes/latest.html"
     },
     "checkver": {
         "url": "http://jabosoft.com/files/jnes/latest.html",

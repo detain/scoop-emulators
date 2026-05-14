@@ -31,11 +31,7 @@
         "regex": "Current version : (.*)"
     },
     "autoupdate": {
-        "url": "http://www.satourne.consollection.com/download/",
-        "filter": "a[href$='.zip']:first",
-        "attr": "href",
-        "split": "/",
-        "index": -1
+        "url": "http://www.satourne.consollection.com/download/"
     },
     "extract_dir": "."
 }

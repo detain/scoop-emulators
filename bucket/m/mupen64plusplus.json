@@ -26,8 +26,6 @@
         "regex": "minivmac-(\\d+\\.\\d+\\.\\d+)-src\\.tar\\.gz"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/minivmac/rss?path=/minivmac",
-        "regex": "minivmac-(\\d+\\.\\d+\\.\\d+)-src\\.tar\\.gz",
-        "ignorecase": true
+        "url": "https://sourceforge.net/projects/minivmac/rss?path=/minivmac"
     }
 }

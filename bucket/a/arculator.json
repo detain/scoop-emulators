@@ -23,7 +23,6 @@
         "regex": "<td>Current version:<\\/td>\\s*<td>([\\d\\.]+)<\\/td>"
     },
     "autoupdate": {
-        "url": "https://github.com/davidgiven/arculator/releases/latest",
-        "regex": "v([\\d\\.]+)"
+        "url": "https://github.com/davidgiven/arculator/releases/latest"
     }
 }

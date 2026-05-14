@@ -60,16 +60,5 @@
     "checkver": {
         "github": "https://github.com/mgba-emu/mgba"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/mgba-emu/mgba/releases/download/$version/mGBA-$version-win32.7z",
-                "extract_dir": "mGBA-$version-win32"
-            },
-            "64bit": {
-                "url": "https://github.com/mgba-emu/mgba/releases/download/$version/mGBA-$version-win64.7z",
-                "extract_dir": "mGBA-$version-win64"
-            }
-        }
-    }
+    "autoupdate": {}
 }

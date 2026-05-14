@@ -29,14 +29,5 @@
         "regex": "mz800emu-win64-stable-([\\d\\.]+).rar"
     },
     "extract_dir": "mz800emu-{version}",
-    "autoupdate": {
-        "architecture": {
-            "x64": {
-                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-win64-stable-$version.rar/download"
-            },
-            "x86": {
-                "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-win32-stable-$version.rar/download"
-            }
-        }
-    }
+    "autoupdate": {}
 }

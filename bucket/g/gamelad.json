@@ -20,13 +20,5 @@
         "url": "https://www.gameex.com/download/",
         "regex": "href=\"(https:\\/\\/www\\.gameex\\.com\\/files\\/gameex\\/GameExEvolutionInstall\\.exe)\""
     },
-    "autoupdate": {
-        "exe": "GameEx.exe",
-        "args": "--update",
-        "check_exit_code": [
-            0,
-            42
-        ],
-        "git": false
-    }
+    "autoupdate": {}
 }

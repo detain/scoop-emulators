@@ -20,10 +20,5 @@
         "regex": "SIMH V(\\d+\\.\\d+)",
         "match_index": 1
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest http://simh.trailing-edge.com/sources/README.TXT | Select-String 'SIMH V([0-9]+\\.[0-9]+)' | %{$_.Matches[0].Groups[1].Value}",
-        "bin": [
-            "BIN/simhv{version}.exe"
-        ]
-    }
+    "autoupdate": {}
 }

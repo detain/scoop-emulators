@@ -35,11 +35,5 @@
     "checkver": {
         "github": "https://github.com/Ryujinx/release-channel-master"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Ryujinx/release-channel-master/releases/download/$version/ryujinx-$version-win_x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

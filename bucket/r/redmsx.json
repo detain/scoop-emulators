@@ -28,13 +28,5 @@
         "expect": "^\\d+\\.\\d+\\.\\d+$",
         "extract": "$dirpath = (Get-Item $installer).DirectoryName"
     },
-    "autoupdate": {
-        "checkver": {
-            "url": "http://www.msxblue.com/files/RedMSXSetup.exe",
-            "type": "msi",
-            "command": "$version = [System.Diagnostics.FileVersionInfo]::GetVersionInfo('$dirpath\\RedMSX.exe').FileVersion; Write-Output $version",
-            "expect": "^\\d+\\.\\d+\\.\\d+$",
-            "extract": "$dirpath = (Get-Item $installer).DirectoryName"
-        }
-    }
+    "autoupdate": {}
 }

@@ -45,11 +45,5 @@
         "regex": "mainline-(?<version>[^ ]+) (?<file>.*)",
         "replace": "${version}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-$matchVersion/$matchFile"
-            }
-        }
-    }
+    "autoupdate": {}
 }

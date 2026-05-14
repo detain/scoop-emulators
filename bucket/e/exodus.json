@@ -43,9 +43,6 @@
         "regex": "Exodus-(\\d+\\.\\d+\\.\\d+)-win-x(86|64)\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x{arch}.zip",
-        "checksum": "sha256:<your_checksum_here>",
-        "architecture": "{arch}",
-        "bin": "Exodus.exe"
+        "url": "https://github.com/exodusemulator/exodus/releases/download/v{version}/Exodus-{version}-win-x{arch}.zip"
     }
 }

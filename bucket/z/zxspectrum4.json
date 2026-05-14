@@ -14,11 +14,5 @@
         "regex": "Latest Version <span class=\"style7\">(?<ver>[\\d\\.]+)</span> Build: <span class=\"style7\">(?<build>\\d+)</span>",
         "replace": "${ver}-${build}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://www.zxspectrum4.net/downloads/ZXSpectrum4.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

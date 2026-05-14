@@ -19,8 +19,5 @@
         "url": "http://xega.emucamp.com/downloads/",
         "regex": "dreamvmu-(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dreamvmu.exe --version",
-        "releases": "http://xega.emucamp.com/downloads/"
-    }
+    "autoupdate": {}
 }

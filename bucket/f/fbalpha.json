@@ -38,14 +38,5 @@
         "url": "https://www.fbalpha.com/downloads/",
         "regex": "Current Version: <span class=\"bold\">(?<version>[\\d\\.]+)<"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://static.fbalpha.com/files/fba_029743.7z"
-            },
-            "64bit": {
-                "url": "https://static.fbalpha.com/files/fba64_029743.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

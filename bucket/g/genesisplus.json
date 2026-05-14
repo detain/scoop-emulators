@@ -18,8 +18,7 @@
     ],
     "extract_dir": "{bin}",
     "autoupdate": {
-        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg",
-        "checksum": "sha256:{{$url := 'https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg'}}{{$exe := (new-object System.Uri $url).Segments[-1]}}{{(new-object System.Net.WebClient).DownloadString('https://github.com/drhelius/Genesis-Plus-GX/releases/latest') -match 'GenesisPlus-GX.dmg.{1,30}([0-9a-fA-F]+)';$matches[1]}}"
+        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg"
     },
     "checkver": {
         "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest",

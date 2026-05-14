@@ -19,11 +19,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/raydac/zxpoly/releases/download/$version/zxpoly-emul-$version-windows-amd64-jdk.zip"
-            }
-        },
         "extract_dir": "zxpoly-emul-$version"
     }
 }

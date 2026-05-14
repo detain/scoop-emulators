@@ -27,7 +27,6 @@
         "regex": "Download\\s*gest\\s*(\\d+\\.\\d+(?:\\.\\d+)?)"
     },
     "autoupdate": {
-        "script": "$bin -v | grep -Eo \"[0-9]+\\.[0-9]+(\\.[0-9]+)?\"",
         "url": "http://koti.mbnet.fi/~atpat/gest/gest.zip",
         "hash": "sha256:9f9d3d3aa7652cbe1e28968d944cc57aa12a0c77e04e0b776d2fbc609df1b013"
     },

@@ -24,11 +24,5 @@
         "url": "http://www.komkon.org/~dekogel/adamem.html",
         "regex": "adamem ([\\d\\.]+)"
     },
-    "autoupdate": {
-        "script": "adamem.exe --version",
-        "exitcodes": [
-            0
-        ],
-        "regex": "(\\d+\\.\\d+\\.\\d+)"
-    }
+    "autoupdate": {}
 }

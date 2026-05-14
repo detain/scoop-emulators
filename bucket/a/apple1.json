@@ -26,7 +26,5 @@
         "url": "http://www.rittwage.com/dp.php?pg=apple",
         "regex": "<h2>Download Apple 1 Emulator \\(version (\\d+\\.\\d+\\.\\d+)\\)</h2>"
     },
-    "autoupdate": {
-        "script": "if (Get-RemoteFileHash '{{version}}' '{{url}}' 'sha256') { Write-Output '{{version}}' }"
-    }
+    "autoupdate": {}
 }

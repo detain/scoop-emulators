@@ -21,8 +21,5 @@
         "regex": "<a href=\"kigb_(\\d+(?:\\.\\d+)+)_win\\.zip\">",
         "match": 1
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest http://kigb.emuunlim.com/download.html -UseBasicParsing | Select-String '<a href=\"kigb_(\\d+(?:\\.\\d+)+)_win\\.zip\">' | foreach { $_.Matches.Groups[1].Value }",
-        "bin": "kigb.exe"
-    }
+    "autoupdate": {}
 }

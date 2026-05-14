@@ -18,8 +18,5 @@
         "url": "http://www.atarihq.com/vectrex/download/",
         "regex": "dve(\\d+\\.\\d+\\.\\d+)\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dve.exe --version",
-        "releases": "http://www.atarihq.com/vectrex/download/"
-    }
+    "autoupdate": {}
 }

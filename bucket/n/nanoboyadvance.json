@@ -17,11 +17,5 @@
     ],
     "persist": "config.toml",
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/nba-emu/NanoBoyAdvance/releases/download/v$version/NanoBoyAdvance-$version-win64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

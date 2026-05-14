@@ -15,14 +15,5 @@
     },
     "bin": "hypseus.exe",
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v$version/Hypseus.Singe-v$version-win32.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v$version/Hypseus.Singe-v$version-win64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

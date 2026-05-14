@@ -33,12 +33,5 @@
         ]
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/VICE-Team/svn-mirror/releases/download/$version/GTK3VICE-$version-win64.zip",
-                "extract_dir": "GTK3VICE-$version-win64"
-            }
-        }
-    }
+    "autoupdate": {}
 }

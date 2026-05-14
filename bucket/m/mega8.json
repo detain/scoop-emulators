@@ -29,8 +29,5 @@
         "url": "https://github.com/rururutan/m88/releases/latest",
         "regex": "m88[._-]v?(\\d+(?:\\.\\d+)+)[._-]win(?:32|64)\\.zip"
     },
-    "autoupdate": {
-        "source": "github",
-        "chocolatey": false
-    }
+    "autoupdate": {}
 }

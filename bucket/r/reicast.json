@@ -27,10 +27,6 @@
         "regex": "reicast-emulator/releases/tag/r(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "url": "https://github.com/reicast/reicast-emulator/releases/latest",
-        "regex": "reicast-emulator/releases/tag/r(\\d+\\.\\d+\\.\\d+)",
-        "filter": "-n 1",
-        "property": "version",
-        "fallback": "https://github.com/reicast/reicast-emulator/releases"
+        "url": "https://github.com/reicast/reicast-emulator/releases/latest"
     }
 }

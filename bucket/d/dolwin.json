@@ -20,8 +20,5 @@
         "url": "http://www.emulation64.com/files/info/86/dolwin.html/",
         "regex": "dolwin-(\\d+\\.\\d+)"
     },
-    "autoupdate": {
-        "script": "bin\\dolwin.exe -v",
-        "releases": "http://www.emulation64.com/files/info/86/dolwin.html/"
-    }
+    "autoupdate": {}
 }

@@ -39,11 +39,5 @@
         "regex": "(?<version>[^ ]+) (?<file>.*)",
         "replace": "${version}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Davidobot/BetterJoy/releases/download/$matchVersion/$matchFile"
-            }
-        }
-    }
+    "autoupdate": {}
 }

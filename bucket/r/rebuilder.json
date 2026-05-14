@@ -13,11 +13,5 @@
     "checkver": {
         "regex": ">rebuilder 64bit&nbsp;(.*)</a>"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://mamedev.emulab.it/clrmamepro/binaries/rebuilder_v$cleanVersion.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

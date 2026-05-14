@@ -21,18 +21,6 @@
             "hash": "1fd9dcd03e8667f67c250ce0a9f1c3bfdc54dd3b9d2b221719f4c545fee62dbd"
         }
     },
-    "checkver": {
-        "url": "https://api.github.com/repos/intv0/jzintv/releases/latest",
-        "regex": "jzintv_(\\d+\\.\\d+(\\.\\d+)?)_windows_x64.zip",
-        "matchIndex": 1
-    },
-    "autoupdate": {
-        "checkver": true,
-        "filters": [
-            {
-                "pattern": ".*jzintv.*\\.zip",
-                "url": "https://github.com/intv0/jzintv/releases/download/{version}/jzintv_{version}_windows_x64.zip"
-            }
-        ]
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

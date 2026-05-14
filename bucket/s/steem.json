@@ -21,8 +21,6 @@
         "index": 1
     },
     "autoupdate": {
-        "url": "http://steem.atari.st/download.htm",
-        "regex": "<a href=\"(http:\\/\\/.*?\\/steem-.*?)\\.zip\">",
-        "download": "$1.zip"
+        "url": "http://steem.atari.st/download.htm"
     }
 }

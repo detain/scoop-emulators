@@ -61,14 +61,5 @@
         "url": "https://www.retroarch.com/?page=platforms",
         "regex": "The current stable version is:\\s+([\\d.]+)</"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://buildbot.libretro.com/stable/$version/windows/x86/RetroArch.7z"
-            },
-            "64bit": {
-                "url": "https://buildbot.libretro.com/stable/$version/windows/x86_64/RetroArch.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

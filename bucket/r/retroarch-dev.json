@@ -60,14 +60,5 @@
         "regex": "(?smi)(\\d{4}-\\d{2}-\\d{2})_RetroArch\\.7z",
         "reverse": true
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://buildbot.libretro.com/nightly/windows/x86/RetroArch.7z"
-            },
-            "64bit": {
-                "url": "https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

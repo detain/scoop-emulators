@@ -33,16 +33,5 @@
         "url": "https://sourceforge.net/projects/steemsse/rss",
         "re": "/Steem\\.SSE\\.(?<version>[\\d.]+)\\.Win64\\.(?<tag>D3D\\.R[\\d\\.]+)\\.zip"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%20$majorVersion.$minorVersion/v$version/Steem.SSE.$version.Win64.$matchTag.zip",
-                "extract_dir": "Steem.SSE.$version.Win64.D3D"
-            },
-            "32bit": {
-                "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%20$majorVersion.$minorVersion/v$version/Steem.SSE.$version.Win32.$matchTag.zip",
-                "extract_dir": "Steem.SSE.$version.Win32.D3D"
-            }
-        }
-    }
+    "autoupdate": {}
 }

@@ -21,7 +21,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/amaiorano/nes-emu/releases/latest/download/nes-emu-{version}-windows.zip",
-        "hash": "sha256",
-        "regex": "nes-emu-([\\d\\.]+)-windows\\.zip"
+        "hash": "sha256"
     }
 }

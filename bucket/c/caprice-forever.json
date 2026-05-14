@@ -18,14 +18,5 @@
     "checkver": {
         "regex": "charger la version ([\\d\\.]+) \\(Win64\\)"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://www.cpc-power.com/cpcarchives/download/Emulateurs/%5BWin32%5D%20Caprice_Forever_v$version.7z"
-            },
-            "64bit": {
-                "url": "https://www.cpc-power.com/cpcarchives/download/Emulateurs/%5BWin64%5D%20Caprice_Forever_v$version.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

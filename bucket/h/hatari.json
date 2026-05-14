@@ -33,16 +33,5 @@
         "url": "https://hatari.tuxfamily.org/news.html",
         "regex": ": Version ([\\d.]+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.tuxfamily.org/hatari/$version/hatari-$version_windows64.zip",
-                "extract_dir": "hatari-$version_windows64"
-            },
-            "32bit": {
-                "url": "https://download.tuxfamily.org/hatari/$version/hatari-$version_windows.zip",
-                "extract_dir": "hatari-$version_windows"
-            }
-        }
-    }
+    "autoupdate": {}
 }

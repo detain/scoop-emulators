@@ -19,9 +19,6 @@
         "regex": "regex-pattern-to-match-version"
     },
     "autoupdate": {
-        "url": "https://download-url.com/latest-version-file.txt",
-        "regex": "regex-pattern-to-match-version",
-        "changelog": "https://download-url.com/changelog.txt",
-        "msi": true
+        "url": "https://download-url.com/latest-version-file.txt"
     }
 }

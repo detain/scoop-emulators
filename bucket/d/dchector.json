@@ -20,8 +20,7 @@
         "regex": "(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "url": "http://dchector.free.fr/download.html",
-        "regex": "href=\"(http://dchector\\.free\\.fr/\\w+/dchector-v(\\d+\\.\\d+\\.\\d+)\\.zip)\""
+        "url": "http://dchector.free.fr/download.html"
     },
     "extract_dir": "dchector-v1.0.0",
     "working_dir": "."

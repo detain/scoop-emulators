@@ -30,11 +30,5 @@
     "checkver": {
         "github": "https://github.com/mborgerson/xemu"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/mborgerson/xemu/releases/download/v$version/xemu-win-release.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

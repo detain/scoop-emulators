@@ -19,8 +19,5 @@
         "url": "http://dcvg5k.free.fr/download.html",
         "regex": "dcvg5k-(\\d+\\.\\d+\\.\\d+)-win32.zip"
     },
-    "autoupdate": {
-        "script": "$version = Invoke-WebRequest -Uri http://dcvg5k.free.fr/download.html | Select-String -Pattern 'Current version: ([0-9.]+)' | ForEach-Object { $_.Matches.Groups[1].Value }; $version",
-        "releases": "http://dcvg5k.free.fr/changes.html"
-    }
+    "autoupdate": {}
 }

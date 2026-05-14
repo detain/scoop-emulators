@@ -20,9 +20,6 @@
         "regex": "retrocopy-(\\d+\\.\\d+(?:\\.\\d+)?)\\.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/",
-        "regex": "retrocopy-(\\d+\\.\\d+(?:\\.\\d+)?)\\.zip",
-        "bin": "retrocopy.exe",
-        "zip": true
+        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/"
     }
 }

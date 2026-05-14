@@ -20,12 +20,5 @@
     "checkver": {
         "github": "https://github.com/drhelius/Geargrafx"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/drhelius/Geargrafx/releases/download/$version/Geargrafx-$version-desktop-windows-x64.zip",
-                "extract_dir": "Geargrafx-$version-desktop-windows-x64"
-            }
-        }
-    }
+    "autoupdate": {}
 }

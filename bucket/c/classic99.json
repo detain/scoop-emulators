@@ -28,13 +28,6 @@
     },
     "autoupdate": {
         "url": "http://www.harmlesslion.com/cgi-bin/update.pl?product=classic99&version=__VERSION__",
-        "downloadUrl": "http://www.harmlesslion.com/cgi-bin/download.pl?product=classic99&os=win32&version=__LATEST__",
-        "checksumUrl": "http://www.harmlesslion.com/cgi-bin/checksum.pl?product=classic99&os=win32&version=__LATEST__",
-        "splitter": "\r\n",
-        "hash": "sha256",
-        "installer": {
-            "scope": "user",
-            "file": "Classic99Setup.exe"
-        }
+        "hash": "sha256"
     }
 }

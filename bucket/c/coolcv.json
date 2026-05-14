@@ -19,7 +19,5 @@
         "url": "http://nanochess.org/coolcv.php",
         "regex": "<a href=\".*?\\/coolcv(.*?)\\.zip\">"
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest http://nanochess.org/coolcv.php | Select-String -Pattern '<a href=\".*?\\/coolcv(.*?)\\.zip\">' | %{ $_.Matches } | % { $_.Groups[1].Value }"
-    }
+    "autoupdate": {}
 }

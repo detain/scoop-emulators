@@ -24,11 +24,5 @@
     "checkver": {
         "regex": "openmsx-([\\d.]+)-windows-vc-x64-bin\\.zip"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/openMSX/openMSX/releases/download/RELEASE_$majorVersion_$minorVersion/openmsx-$version-windows-vc-x64-bin.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

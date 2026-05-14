@@ -28,19 +28,5 @@
         "url": "http://www.jadiam.org/QL/",
         "regex": "<a href=\"ql2k.zip\">ql2k-(.*?)\\.zip"
     },
-    "autoupdate": {
-        "args": [
-            "--version"
-        ],
-        "filters": [
-            {
-                "find": "QL2K Version",
-                "replace": ""
-            },
-            {
-                "find": "\\.",
-                "replace": ","
-            }
-        ]
-    }
+    "autoupdate": {}
 }

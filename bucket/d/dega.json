@@ -19,8 +19,5 @@
         "url": "https://sourceforge.net/projects/dega/rss",
         "regex": "dega-(\\d+\\.\\d+)-win32.zip"
     },
-    "autoupdate": {
-        "script": "$version = ./dega.exe -v | Select-Object -First 1; $version = $version -replace 'dega ', ''; $version",
-        "releases": "https://sourceforge.net/projects/dega/files/dega/"
-    }
+    "autoupdate": {}
 }

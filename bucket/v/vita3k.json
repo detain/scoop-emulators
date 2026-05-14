@@ -51,11 +51,5 @@
         ],
         "regex": "(\\d+-[a-f0-9]{7})"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

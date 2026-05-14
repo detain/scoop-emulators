@@ -15,14 +15,5 @@
     },
     "bin": "DS4Windows.exe",
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v$version/DS4Windows_$version_x86.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/Ryochan7/DS4Windows/releases/download/v$version/DS4Windows_$version_x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

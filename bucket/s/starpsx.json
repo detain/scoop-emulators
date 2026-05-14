@@ -19,11 +19,5 @@
     "checkver": {
         "github": "https://github.com/kaezrr/starpsx"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/kaezrr/starpsx/releases/download/v$version/StarPSX-$version-windows-x86_64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

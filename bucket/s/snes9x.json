@@ -52,14 +52,5 @@
     "checkver": {
         "github": "https://github.com/snes9xgit/snes9x"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/snes9xgit/snes9x/releases/download/$version/snes9x-$version-win32.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/snes9xgit/snes9x/releases/download/$version/snes9x-$version-win32-x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

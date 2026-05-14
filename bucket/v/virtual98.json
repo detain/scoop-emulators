@@ -25,13 +25,7 @@
         "regex": "Latest version: ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "http://hwbb.gyao.ne.jp/soltin/virtual98.html",
-        "regex": "Latest version: ([\\d.]+)",
-        "filter": {
-            "type": "regex",
-            "pattern": "Virtual98 ([\\d.]+)"
-        },
-        "bin": "Virtual98.exe"
+        "url": "http://hwbb.gyao.ne.jp/soltin/virtual98.html"
     },
     "extract_dir": "Virtual98",
     "app_path": "Virtual98\\Virtual98.exe",

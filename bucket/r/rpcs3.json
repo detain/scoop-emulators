@@ -55,15 +55,5 @@
         "regex": "/rpcs3-binaries-win/releases/download/build-(?<fullhash>[0-9a-f]+)/rpcs3-v(?<build>[0-9]+\\.[0-9]+\\.[0-9]+\\-[0-9]+)-(?<shorthash>[0-9a-f]{8})",
         "replace": "${build}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/rpcs3/rpcs3-binaries-win/releases/download/build-$matchFullhash/rpcs3-v$matchBuild-$matchShorthash_win64.7z",
-                "hash": {
-                    "url": "https://rpcs3.net/compatibility?b",
-                    "regex": "Windows SHA-256: ($sha256)"
-                }
-            }
-        }
-    }
+    "autoupdate": {}
 }

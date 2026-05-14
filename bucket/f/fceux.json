@@ -55,14 +55,5 @@
         "github": "https://github.com/TASEmulators/fceux",
         "regex": "fceux-([\\d.]+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "http://sourceforge.net/projects/fceultra/files/Binaries/$version/fceux-$version-win32.zip/download#/fceux.zip"
-            },
-            "64bit": {
-                "url": "http://sourceforge.net/projects/fceultra/files/Binaries/$version/qfceux-$version-win64.zip/download#/qfceux.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

@@ -26,14 +26,5 @@
         "url": "http://s-sasaji.ddo.jp/bml3mk5/download.htm",
         "regex": "mbs1_win32_(\\d+).zip"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win32_$version.zip"
-            },
-            "64bit": {
-                "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win64_$version.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

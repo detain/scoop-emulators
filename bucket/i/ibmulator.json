@@ -22,12 +22,5 @@
         "keymap.map"
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/barotto/IBMulator/releases/download/v$version/ibmulator-$version-windows.x86_64.zip",
-                "extract_dir": "ibmulator-$version-windows.x86_64"
-            }
-        }
-    }
+    "autoupdate": {}
 }

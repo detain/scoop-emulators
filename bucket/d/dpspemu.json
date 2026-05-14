@@ -29,10 +29,5 @@
         "url": "http://pspemu.soywiz.com/files/releases/version.txt",
         "regex": "^(\\d+\\.\\d+\\.\\d+)$"
     },
-    "autoupdate": {
-        "exe": "cpspemu.exe",
-        "args": [
-            "--version"
-        ]
-    }
+    "autoupdate": {}
 }

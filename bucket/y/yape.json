@@ -30,8 +30,6 @@
         "regex": "<a href=\"files/yape_v([0-9\\.]+)\\.zip\">Download YAPE</a>"
     },
     "autoupdate": {
-        "script": "yape.exe -v",
-        "url": "http://yape.plus4.net/download.htm",
-        "regex": "<a href=\"files/yape_v([0-9\\.]+)\\.zip\">Download YAPE</a>"
+        "url": "http://yape.plus4.net/download.htm"
     }
 }

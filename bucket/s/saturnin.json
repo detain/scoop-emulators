@@ -26,8 +26,6 @@
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "variable": "$version",
-        "url": "https://github.com/binarycrafts/saturnin/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://github.com/binarycrafts/saturnin/releases/latest"
     }
 }

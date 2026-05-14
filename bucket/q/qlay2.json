@@ -20,15 +20,6 @@
         "regex": "QLAY2 (\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "script": "qlay2.ps1",
-        "url": "http://www.jadiam.org/QL/QLAY2/qlay2_win32.zip",
-        "checksum": "sha256:<SHA256 HASH>",
-        "arguments": [
-            "--no-interactive",
-            "--no-progress",
-            "--force",
-            "--installer",
-            "--silent"
-        ]
+        "url": "http://www.jadiam.org/QL/QLAY2/qlay2_win32.zip"
     }
 }

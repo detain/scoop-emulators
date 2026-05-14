@@ -29,8 +29,6 @@
         "regex": "<p>Latest version: ([0-9.]+)</p>"
     },
     "autoupdate": {
-        "script": "powershell -Command \"Expand-Archive -Path $packageDir\\wincpc.zip -DestinationPath $versionDir\\ -Force\"",
-        "checksum": "sha256",
         "url": "http://www.wincpc.ch/files/wincpc.zip"
     },
     "keywords": [

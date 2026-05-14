@@ -20,7 +20,6 @@
         "regex": "nucleus-v(\\d+\\.\\d+\\.\\d+)-windows-x86_64\\.7z"
     },
     "autoupdate": {
-        "url": "https://github.com/AlexAltea/nucleus/releases/latest/download/nucleus-v${version}-windows-x86_64.7z",
-        "checksum": "sha256:ec0bf17767c98e55de34258a03d0f7c64a9a56d7b14f0b46e92c230986eb7266"
+        "url": "https://github.com/AlexAltea/nucleus/releases/latest/download/nucleus-v${version}-windows-x86_64.7z"
     }
 }

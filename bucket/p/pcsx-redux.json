@@ -12,20 +12,14 @@
     "bin": [
         "pcsx.exe"
     ],
-    "checkver": {
-        "url": "https://github.com/grumpycoders/pcsx-redux/releases/latest",
-        "re": "pcsx-redux-v(\\d+\\.\\d+\\.\\d+)-win64\\.7z"
-    },
+    "checkver": true,
     "architecture": {
         "64bit": {
             "url": "https://github.com/grumpycoders/pcsx-redux/releases/download/v{{version}}/pcsx-redux-v{{version}}-win64.7z",
             "hash": "sha256:5d303035bbd29e1f30e68231c04f8e2e34a9f7d1f1e19fa785a20c0a14d7f2b2"
         }
     },
-    "autoupdate": {
-        "checkver": true,
-        "changelog": "https://github.com/grumpycoders/pcsx-redux/releases"
-    },
+    "autoupdate": {},
     "environment": {
         "PATH": ";$dir$"
     },

@@ -15,10 +15,7 @@
     "bin": [
         "neonds.exe"
     ],
-    "autoupdate": {
-        "enabled": true,
-        "days": 7
-    },
+    "autoupdate": {},
     "checkver": {
         "url": "https://api.github.com/repos/neonds-dev/neonds/releases/latest",
         "regex": "v(.*)\"",

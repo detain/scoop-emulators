@@ -30,7 +30,6 @@
         "regex": "Download BlueMSX (\\d+\\.\\d+(?:\\.\\d+)?)"
     },
     "autoupdate": {
-        "url": "http://www.bluemsx.com/",
-        "regex": "href=\"(http://files\\.bluemsx\\.com/releases/BlueMSX-(\\d+\\.\\d+(?:\\.\\d+)?)-bin\\.zip)\""
+        "url": "http://www.bluemsx.com/"
     }
 }

@@ -26,9 +26,7 @@
         }
     },
     "autoupdate": {
-        "url": "http://www.ep128.hu/versions/ep32version.txt",
-        "regex": "Version ([0-9\\.]+)",
-        "match_index": 1
+        "url": "http://www.ep128.hu/versions/ep32version.txt"
     },
     "checkver": {
         "url": "http://www.ep128.hu/versions/ep32version.txt",

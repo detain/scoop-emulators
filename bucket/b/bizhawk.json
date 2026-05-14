@@ -86,11 +86,5 @@
     "checkver": {
         "github": "https://github.com/TASVideos/BizHawk"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/TASVideos/BizHawk/releases/download/$version/BizHawk-$version-win-x64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

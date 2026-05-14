@@ -16,19 +16,6 @@
     "bin": [
         "pcsxr.exe"
     ],
-    "checkver": {
-        "url": "https://github.com/jackun/pcsxr/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
-    },
-    "autoupdate": {
-        "checkver": true,
-        "filters": [
-            {
-                "type": "regex",
-                "pattern": ".*",
-                "searchIn": "bin",
-                "replaceWith": "https://github.com/jackun/pcsxr/releases/download/v{version}/PCSXR-SETUP-{version}.EXE"
-            }
-        ]
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

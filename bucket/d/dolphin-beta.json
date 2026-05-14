@@ -43,11 +43,5 @@
         "regex": "\\/(?<rand1>.{2})\\/(?<rand2>.{2})\\/dolphin-master-(?<major>[\\d\\.]+)-(?<build>[\\d]+)",
         "replace": "${major}-${build}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dl.dolphin-emu.org/builds/$matchRand1/$matchRand2/dolphin-master-$matchMajor-$matchBuild-x64.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

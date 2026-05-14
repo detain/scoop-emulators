@@ -28,13 +28,5 @@
         "regex": "<td>Visual Pinball ([\\d\\.]+)<\\/td>",
         "index": 1
     },
-    "autoupdate": {
-        "script": "VPinballX.exe",
-        "args": [
-            "/version"
-        ],
-        "exitcodes": [
-            0
-        ]
-    }
+    "autoupdate": {}
 }

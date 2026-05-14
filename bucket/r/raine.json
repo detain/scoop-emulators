@@ -67,20 +67,5 @@
         "url": "https://raine.1emulation.com/download/latest.html",
         "regex": "Available files for version ([\\d.]+[a-zA-Z]?)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://raine.1emulation.com/archive/raine64-$version.7z",
-                    "https://raine.1emulation.com/archive/dlls64-0.92x.7z"
-                ]
-            },
-            "32bit": {
-                "url": [
-                    "https://raine.1emulation.com/archive/raine32-$version.7z",
-                    "https://raine.1emulation.com/archive/dlls32-0.92x.7z"
-                ]
-            }
-        }
-    }
+    "autoupdate": {}
 }

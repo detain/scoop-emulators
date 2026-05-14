@@ -20,7 +20,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/davidgiven/hhugboy/releases/download/hhugboy-v{version}/hhugboy-v{version}-win32.zip",
-        "hash": "sha256",
-        "regex": "hhugboy-v(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
+        "hash": "sha256"
     }
 }

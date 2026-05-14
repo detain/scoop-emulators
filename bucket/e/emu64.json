@@ -21,10 +21,7 @@
         "match": 2
     },
     "autoupdate": {
-        "url": "http://www.emu64-projekt.de/download.htm",
-        "split": "\n",
-        "regex": "href=\"(.*?)\">EMU64 v(.*?)<\\/a>",
-        "filename": "EMU64-{version}.zip"
+        "url": "http://www.emu64-projekt.de/download.htm"
     },
     "extract_dir": "EMU64-{version}",
     "checksum_type": "sha256"

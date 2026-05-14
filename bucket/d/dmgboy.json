@@ -19,8 +19,5 @@
         "url": "https://github.com/marcosd4s/dmgboy/releases",
         "regex": "dmgboy-win-x64-(\\d+\\.\\d+\\.\\d+)\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dmgboy.exe -v",
-        "releases": "https://github.com/marcosd4s/dmgboy/releases"
-    }
+    "autoupdate": {}
 }

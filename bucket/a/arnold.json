@@ -19,7 +19,5 @@
         "url": "http://arnold.cpc-live.com/Downloads.html",
         "regex": "<td>Arnold v(\\d+\\.\\d+\\.\\d+)<\\/td>"
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest -Uri 'http://arnold.cpc-live.com/Downloads.html' -UseBasicParsing | Select-String -Pattern '<td>Arnold v(\\d+\\.\\d+\\.\\d+)<\\/td>' | ForEach-Object { $_.Matches[0].Groups[1].Value }"
-    }
+    "autoupdate": {}
 }

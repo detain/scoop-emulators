@@ -19,8 +19,5 @@
         "url": "https://sourceforge.net/projects/dgen/rss",
         "regex": "dgen-(\\d+\\.\\d+\\.\\d+)-win32.zip"
     },
-    "autoupdate": {
-        "script": "$version = ./dgen.exe -v | Select-Object -First 1; $version = $version -replace 'DGen version '; $version",
-        "releases": "https://sourceforge.net/projects/dgen/files/dgen/"
-    }
+    "autoupdate": {}
 }

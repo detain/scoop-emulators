@@ -19,8 +19,5 @@
         "regex": "SheepShaver ([\\d.-]+)",
         "index": 1
     },
-    "autoupdate": {
-        "trigger": "SheepShaver",
-        "context": "env:\\PATH"
-    }
+    "autoupdate": {}
 }

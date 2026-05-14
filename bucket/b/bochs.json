@@ -21,11 +21,5 @@
         "url": "http://bochs.sourceforge.net/getcurrent.html",
         "regex": "<b>Latest release:<\\/b> Bochs ([\\d.]+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://downloads.sourceforge.net/project/bochs/bochs/$version/Bochs-win64-$version.exe#/dl.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

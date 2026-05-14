@@ -19,11 +19,5 @@
         "regex": "HREF=\"(?<zip>[^\"]+)\">no\\$psx v(?<ver>[\\d\\.]+) Windows",
         "replace": "${ver}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://problemkaputt.de/psxtny.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

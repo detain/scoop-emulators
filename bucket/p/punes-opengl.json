@@ -57,14 +57,5 @@
         "recent.cfg"
     ],
     "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/punesemu/puNES/releases/download/v$version/punes-$version-i686-win-opengl.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/punesemu/puNES/releases/download/v$version/punes-$version-x86_64-win-opengl.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

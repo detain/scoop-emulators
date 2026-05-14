@@ -21,12 +21,6 @@
     },
     "autoupdate": {
         "url": "https://fs-uae.net/stable/latest/windows",
-        "hash": "sha256",
-        "regex": "fs-uae-[0-9\\.]+-windows\\.7z",
-        "keep": [
-            "ChangeLog.txt",
-            "LICENSE.txt",
-            "README.txt"
-        ]
+        "hash": "sha256"
     }
 }

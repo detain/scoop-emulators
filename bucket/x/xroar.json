@@ -30,8 +30,6 @@
         "regex": "<a href=\"http://www.6809.org.uk/xroar/xroar-([0-9\\.]+)-win32.zip\""
     },
     "autoupdate": {
-        "script": "xroar.exe -v",
-        "url": "http://www.6809.org.uk/xroar/",
-        "regex": "<a href=\"http://www.6809.org.uk/xroar/xroar-([0-9\\.]+)-win32.zip\""
+        "url": "http://www.6809.org.uk/xroar/"
     }
 }

@@ -25,22 +25,5 @@
             }
         ]
     },
-    "autoupdate": {
-        "script": "psake.cmd",
-        "targets": {
-            "build": [
-                {
-                    "exe": "make.bat"
-                }
-            ],
-            "test": [
-                {
-                    "exe": "fakenes.exe",
-                    "args": [
-                        "-test"
-                    ]
-                }
-            ]
-        }
-    }
+    "autoupdate": {}
 }

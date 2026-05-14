@@ -45,11 +45,5 @@
         "github": "https://github.com/pineappleEA/pineapple-src",
         "regex": "EA-(\\d+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/pineappleEA/pineapple-src/releases/download/EA-$version/Windows-Yuzu-EA-$version.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

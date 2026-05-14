@@ -25,7 +25,5 @@
         "url": "https://api.github.com/repos/sonicretro/gens-gs/releases/latest",
         "regex": "Gens/GS-(.*)-Windows-x86_64.7z"
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest -Uri 'https://api.github.com/repos/sonicretro/gens-gs/releases/latest' | Select-Object -ExpandProperty Content | ConvertFrom-Json | Select-Object -ExpandProperty tag_name"
-    }
+    "autoupdate": {}
 }

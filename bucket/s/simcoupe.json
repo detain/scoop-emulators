@@ -26,10 +26,5 @@
         "regex": "simcoupe-(\\d+(?:\\.\\d+)*).zip",
         "matchIndex": 1
     },
-    "autoupdate": {
-        "args": [
-            "--version"
-        ],
-        "pattern": "SimCoupe v(\\d+(?:\\.\\d+)*),"
-    }
+    "autoupdate": {}
 }

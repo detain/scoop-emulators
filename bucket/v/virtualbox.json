@@ -69,14 +69,6 @@
         "regex": "VirtualBox-(?<version>[\\d\\w.]+)-(?<revision>[\\d]+)-Win.exe"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://download.virtualbox.org/virtualbox/$matchHead/VirtualBox-$version-$matchRevision-Win.exe#/setup.exe",
-                    "https://download.virtualbox.org/virtualbox/$matchHead/Oracle_VM_VirtualBox_Extension_Pack-$matchHead.vbox-extpack"
-                ]
-            }
-        },
         "hash": {
             "url": "https://www.virtualbox.org/download/hashes/$matchHead/SHA256SUMS"
         }

@@ -16,18 +16,6 @@
         "MEKA.exe"
     ],
     "extract_dir": "MEKA",
-    "checkver": {
-        "url": "http://www.smspower.org/meka/releases/",
-        "pattern": "href=\"MEKA_(\\d+\\.\\d+)_bin\\.zip\""
-    },
-    "autoupdate": {
-        "checkver": true,
-        "changelog": "http://www.smspower.org/meka/history",
-        "filters": [
-            {
-                "pattern": "^MEKA_(\\d+\\.\\d+)_bin\\.zip$",
-                "url": "http://www.smspower.org/meka/releases/MEKA_$1_bin.zip"
-            }
-        ]
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

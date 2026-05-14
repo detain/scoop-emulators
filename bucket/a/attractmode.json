@@ -18,14 +18,5 @@
         "url": "http://attractmode.org/download.html",
         "regex": "Attract-Mode ([\\d\\.]+) - 64-bit Binary"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/mickelson/attract/releases/download/v$version/attract-v$version-win32.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/mickelson/attract/releases/download/v$version/attract-v$version-win64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

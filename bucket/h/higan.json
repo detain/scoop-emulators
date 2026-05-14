@@ -19,14 +19,7 @@
         "url": "https://api.github.com/repos/higan-dev/higan/releases/latest",
         "regex": "/higan-v(\\d+\\.\\d+\\.\\d+)-\\w+-\\w+\\.zip/"
     },
-    "autoupdate": {
-        "script": "choco upgrade higan-dev",
-        "exitcodes": [
-            0,
-            3010
-        ],
-        "timout_seconds": 3600
-    },
+    "autoupdate": {},
     "env_add_path": [
         "{bucket}\\higan"
     ]

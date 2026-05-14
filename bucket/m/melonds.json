@@ -32,11 +32,5 @@
     "checkver": {
         "github": "https://github.com/melonDS-emu/melonDS"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Arisotura/melonDS/releases/download/$version/melonDS_$version_win_x64.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

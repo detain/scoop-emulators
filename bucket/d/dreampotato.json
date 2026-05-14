@@ -19,11 +19,5 @@
     "checkver": {
         "github": "https://github.com/RikkiGibson/DreamPotato"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/RikkiGibson/DreamPotato/releases/download/v$version/DreamPotato-Windows-x64-v$version.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

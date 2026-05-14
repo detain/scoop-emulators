@@ -47,11 +47,6 @@
         "replace": "${build}-${date}"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/citra-emu/citra-canary/releases/download/canary-$matchBuild/citra-windows-$matchEnv-$matchDate-$matchCommit.$matchZip"
-            }
-        },
         "extract_dir": "canary-$matchEnv"
     }
 }

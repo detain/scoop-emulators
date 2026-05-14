@@ -29,17 +29,5 @@
         "match_group": 1,
         "strip_regex": "[^0-9.]"
     },
-    "autoupdate": {
-        "executable": "1964.exe",
-        "args": [],
-        "exit_codes": [
-            0
-        ],
-        "checkver": {
-            "url": "http://www.1964emu.com/downloads/",
-            "pattern": "<a href=\"/files/1964_(.*?)\\.zip\">",
-            "match_group": 1,
-            "strip_regex": "[^0-9.]"
-        }
-    }
+    "autoupdate": {}
 }

@@ -57,11 +57,5 @@
         "regex": "^(?<file>[^ ]+) (?<ava>[^ ]+) (?<version>.*)$",
         "replace": "1.1.0-ldn${version}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.patreon.com/$matchAva"
-            }
-        }
-    }
+    "autoupdate": {}
 }

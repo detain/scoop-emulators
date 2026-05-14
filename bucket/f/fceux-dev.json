@@ -63,14 +63,5 @@
         "regex": "(?<job32>[\\w]{16}) (?<job64>[\\w]{16}) (?<build>[\\d]+) (?<commit>[a-f0-9]{8})",
         "replace": "${build}-${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/TASEmulators/fceux/releases/download/interim-build/fceux-win32.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/TASEmulators/fceux/releases/download/interim-build/fceux-win64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

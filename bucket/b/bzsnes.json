@@ -25,10 +25,7 @@
         "url": "https://api.github.com/repos/byuu/bass/releases/latest",
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
-    "autoupdate": {
-        "releases": "byuu/bass",
-        "token": "{{PERSONAL_ACCESS_TOKEN}}"
-    },
+    "autoupdate": {},
     "env": {
         "PATH": "{PATH};$dir"
     }

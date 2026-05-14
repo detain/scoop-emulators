@@ -29,7 +29,5 @@
         "url": "http://www.cpc-emu.org/download/",
         "regex": "href=\"CPCemu-v(\\d+\\.\\d+).zip\""
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest -Uri 'http://www.cpc-emu.org/download/CPCemu-v{version}.zip' -OutFile '$dir\\CPCemu.zip'; Expand-Archive -Path '$dir\\CPCemu.zip' -DestinationPath '$dir'; Remove-Item '$dir\\CPCemu.zip'; Move-Item '$dir\\CPCemu-v{version}\\CPCemu.exe' '$dir'; Remove-Item '$dir\\CPCemu-v{version}'"
-    }
+    "autoupdate": {}
 }

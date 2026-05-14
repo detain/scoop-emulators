@@ -28,10 +28,5 @@
         "url": "http://frodo.cebix.net/",
         "regex": "Stable version:\\s*(\\d+(?:\\.\\d+)+)"
     },
-    "autoupdate": {
-        "script": "{ bucketDir \\}\\frodo\\frodo.bat update",
-        "exitcodes": [
-            0
-        ]
-    }
+    "autoupdate": {}
 }

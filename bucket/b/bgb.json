@@ -32,14 +32,5 @@
         "url": "http://bgb.bircd.org/",
         "regex": "\\(current version: <span class=\"bgbver\">BGB ([\\d\\.]+)<\\/span>"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "http://bgb.bircd.org/bgb.zip"
-            },
-            "64bit": {
-                "url": "http://bgb.bircd.org/bgbw64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

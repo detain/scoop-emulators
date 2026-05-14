@@ -20,12 +20,6 @@
         "regex": "<h3>Download VirtuaNES ([\\d.]+) Released!<\\/h3>"
     },
     "autoupdate": {
-        "url": "http://virtuanes.s1.xrea.com:8080/",
-        "regex": "<h3>Download VirtuaNES ([\\d.]+) Released!<\\/h3>",
-        "bin": "virtuanes.exe",
-        "keep": [
-            "plugins",
-            "screenshots"
-        ]
+        "url": "http://virtuanes.s1.xrea.com:8080/"
     }
 }

@@ -41,11 +41,5 @@
         "regex": "v(?<version>[^ ]+) (?<file>.*)",
         "replace": "${version}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/simple64/simple64/releases/download/v$matchVersion/$matchFile"
-            }
-        }
-    }
+    "autoupdate": {}
 }

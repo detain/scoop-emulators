@@ -30,8 +30,6 @@
         "regex": "<a href=\"/Yabause/yabause/releases/tag/v([0-9\\.]+)\">"
     },
     "autoupdate": {
-        "script": "yabause.exe -v",
-        "url": "https://github.com/Yabause/yabause/releases",
-        "regex": "<a href=\"/Yabause/yabause/releases/tag/v([0-9\\.]+)\">"
+        "url": "https://github.com/Yabause/yabause/releases"
     }
 }

@@ -20,8 +20,5 @@
         "url": "https://dualis.1emu.net/files/",
         "regex": "dualis-(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dualis.exe --version",
-        "releases": "https://dualis.1emu.net/files/"
-    }
+    "autoupdate": {}
 }

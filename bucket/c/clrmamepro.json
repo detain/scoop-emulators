@@ -18,14 +18,5 @@
     "checkver": {
         "regex": ">clrmamepro 64bit&nbsp;(.*)</a>"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp$cleanVersion_64.zip"
-            },
-            "32bit": {
-                "url": "https://mamedev.emulab.it/clrmamepro/binaries/cmp$cleanVersion_32.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

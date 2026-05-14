@@ -21,18 +21,6 @@
             "hash": "94b1bc4b68ac0e406247ef2ed38e506dc3ff400178ce11143e1f868f4a73e4ab"
         }
     },
-    "checkver": {
-        "url": "https://sourceforge.net/projects/mynes/rss",
-        "regex": "<title>Release ([\\d.]+)\\s",
-        "matchIndex": 1
-    },
-    "autoupdate": {
-        "checkver": true,
-        "filters": [
-            {
-                "match": "^my.*\\.exe$",
-                "url": "https://sourceforge.net/projects/mynes/files/latest/download/mynes-{{version}}-win64.zip"
-            }
-        ]
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

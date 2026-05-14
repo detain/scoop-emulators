@@ -71,17 +71,5 @@
         "url": "https://www.ppsspp.org/downloads.html",
         "regex": "Download ([\\d.]+) zip"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
-            },
-            "32bit": {
-                "url": "http://ppsspp.org/files/$underscoreVersion/ppsspp_win.zip"
-            },
-            "arm64": {
-                "url": "http://ppsspp.org/files/$underscoreVersion/PPSSPPWindowsARM64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

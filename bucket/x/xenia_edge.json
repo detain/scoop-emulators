@@ -39,11 +39,5 @@
         "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)",
         "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

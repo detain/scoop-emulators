@@ -19,10 +19,5 @@
         "url": "http://lpg.ticalc.org/prj_tilem/download.html",
         "regex": "tilem-(.*?)\\.tar\\.gz"
     },
-    "autoupdate": {
-        "script": "Invoke-WebRequest http://lpg.ticalc.org/prj_tilem/download.html -UseBasicParsing | Select-String -Pattern 'tilem-(.*?)\\.tar\\.gz' | %{ $_.Matches[0].Groups[1].Value }",
-        "filter": {
-            "version": "([\\d.]+)"
-        }
-    }
+    "autoupdate": {}
 }

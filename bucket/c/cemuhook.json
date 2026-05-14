@@ -28,11 +28,5 @@
     "checkver": {
         "regex": "cemuhook_(?<cemu>[\\d_a-z]+).zip\">Cemu hook ([\\d.]+) for"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://files.sshnuke.net/cemuhook_$matchCemu.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

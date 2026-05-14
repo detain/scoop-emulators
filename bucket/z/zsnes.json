@@ -30,14 +30,5 @@
         "url": "http://www.zsnes.com/",
         "regex": "<a href=\"http://www.zsnes.com/files/[^\"]+\">Download ZSNES ([0-9\\.]+)</a>"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "http://www.zsnes.com/zsnes_win32_${version}.zip"
-            },
-            "64bit": {
-                "url": "http://www.zsnes.com/zsnes_win64_${version}.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

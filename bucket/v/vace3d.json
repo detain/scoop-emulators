@@ -26,7 +26,5 @@
         "type": "sha256",
         "pattern": "\"checksum\": \"([a-f0-9]{64})\""
     },
-    "autoupdate": {
-        "script": "Rename-Item -Path \"$args[0]\" -NewName \"vace3d_old.exe\" -Force; Invoke-WebRequest -Uri \"$args[1]\" -OutFile \"$args[0]\""
-    }
+    "autoupdate": {}
 }

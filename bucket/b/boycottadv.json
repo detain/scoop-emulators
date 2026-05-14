@@ -34,14 +34,5 @@
         "url": "http://boycottadvance.emuunlim.com/",
         "regex": "<h1>BoycottAdvance ([0-9\\.]+)<\\/h1>"
     },
-    "autoupdate": {
-        "script": "bin\\BoycottAdvance.exe",
-        "args": [
-            "--version"
-        ],
-        "exitcodes": [
-            0
-        ],
-        "regex": ".*Version ([0-9\\.]+).*"
-    }
+    "autoupdate": {}
 }

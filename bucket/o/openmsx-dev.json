@@ -31,11 +31,5 @@
         "regex": "openmsx-(?<ver>[\\d.]+)-(?<build>[\\d]+)-g(?<commit>[^-]+)-windows-vc-x64-bin\\.zip",
         "replace": "${ver}-${build}-g${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://openmsx.fixato.net/builds/windows/x64/openmsx-$version-windows-vc-x64-bin.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

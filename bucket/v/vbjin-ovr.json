@@ -19,8 +19,5 @@
         "url": "https://api.github.com/repos/braindx/vbjin-ovr/releases/latest",
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
-    "autoupdate": {
-        "sha256": true,
-        "msi": false
-    }
+    "autoupdate": {}
 }

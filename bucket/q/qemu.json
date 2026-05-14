@@ -44,14 +44,5 @@
     "extract_to": "qemu",
     "env_add_path": ".",
     "checkver": "<strong>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})</strong>: New QEMU installers \\((?<version>[\\d.a-z\\-]+)\\)",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-$matchYear$matchMonth$matchDay.exe#dl.7z"
-            },
-            "32bit": {
-                "url": "https://qemu.weilnetz.de/w32/qemu-w32-setup-$matchYear$matchMonth$matchDay.exe#dl.7z"
-            }
-        }
-    }
+    "autoupdate": {}
 }

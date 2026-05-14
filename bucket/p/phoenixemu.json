@@ -33,14 +33,5 @@
         "url": "http://www.arts-union.ru/node/24",
         "regex": "Версия ([\\d.]+).JAG"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://www.arts-union.ru/sites/default/files/ph$cleanVersionjag-win64.zip"
-            },
-            "32bit": {
-                "url": "http://www.arts-union.ru/sites/default/files/ph$cleanVersionjag-win32.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

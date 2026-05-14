@@ -22,15 +22,5 @@
         "asset": "GalaxyWin-{version}.zip",
         "regex": "GalaxyWin-(\\d+\\.\\d+\\.\\d+)\\.zip"
     },
-    "autoupdate": {
-        "sha256": "caa215a33409c7b25f179d33c8cbbdcd3c3d11a3e833a99a1f872d1a7a41fba1",
-        "cmd": "Extract-7Zip -Path \"$packageDir\\GalaxyWin-{version}.zip\" -Destination $packageDir",
-        "installer": [
-            {
-                "type": "copy",
-                "path": "$packageDir\\GalaxyWin.exe",
-                "destination": "$env:ProgramFiles\\GalaxyWin"
-            }
-        ]
-    }
+    "autoupdate": {}
 }

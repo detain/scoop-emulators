@@ -20,11 +20,5 @@
         "regex": "/tag/v(.*)\"",
         "match": 1
     },
-    "autoupdate": {
-        "exe": "gekko.exe",
-        "args": [
-            "-v"
-        ],
-        "match": "Gekko-{{version}}"
-    }
+    "autoupdate": {}
 }

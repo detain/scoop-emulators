@@ -26,11 +26,5 @@
         "url": "https://github.com/StrikerX3/Ymir/releases/latest",
         "regex": "Ymir v(?<version>[\\d.]+)"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/StrikerX3/Ymir/releases/download/v$matchVersion/ymir-windows-x86_64-AVX2-v$matchVersion.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

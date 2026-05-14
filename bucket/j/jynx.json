@@ -14,19 +14,6 @@
     "hash": "f7ecb391f5a2781ce1207d6fb2dfc24c707f38e09fd3194f33c02047d8b18ca7",
     "bin": "jynx.exe",
     "extract_dir": "Jynx",
-    "checkver": {
-        "url": "https://api.github.com/repos/jonathan-markland/Jynx/releases/latest",
-        "pattern": "v(.+?)\"",
-        "strip_prefix": "v"
-    },
-    "autoupdate": {
-        "checkver": true,
-        "filters": {
-            "type": "regexp",
-            "pattern": "^Jynx-v\\d+\\.\\d+\\.\\d+-win64\\.zip$",
-            "strip_prefix": "Jynx-",
-            "strip_suffix": "-win64.zip",
-            "match_type": "contains"
-        }
-    }
+    "checkver": true,
+    "autoupdate": {}
 }

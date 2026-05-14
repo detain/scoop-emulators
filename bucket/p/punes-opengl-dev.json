@@ -58,14 +58,5 @@
         "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact32>\\d+) (?<artifact64>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.opengl.zip"
-            },
-            "64bit": {
-                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.opengl.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

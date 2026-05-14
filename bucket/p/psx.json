@@ -31,9 +31,5 @@
         "regex": "Download PSX \\(V(\\d+\\.\\d+\\.\\d+)\\) Windows binaries",
         "index": 1
     },
-    "autoupdate": {
-        "script": "psxr --version",
-        "exitCode": "0",
-        "match": "(\\d+\\.\\d+\\.\\d+)"
-    }
+    "autoupdate": {}
 }

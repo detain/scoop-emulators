@@ -38,14 +38,5 @@
     "checkver": {
         "github": "https://github.com/visualboyadvance-m/visualboyadvance-m"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/visualboyadvance-m-Win-32bit.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/visualboyadvance-m-Win-64bit.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

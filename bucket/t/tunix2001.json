@@ -18,8 +18,5 @@
         "url": "http://www.gstsoftware.co.nz/downloads/",
         "regex": "DSVZ200_(\\d+\\.\\d+\\.\\d+)\\.zip"
     },
-    "autoupdate": {
-        "script": "bin\\dsvz200.exe -v",
-        "releases": "http://www.gstsoftware.co.nz/downloads/"
-    }
+    "autoupdate": {}
 }

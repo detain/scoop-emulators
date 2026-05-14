@@ -19,7 +19,5 @@
         "url": "https://api.github.com/repos/kindredemu/kindred/releases/latest",
         "regex": "Kindred v(\\d+\\.\\d+\\.\\d+)"
     },
-    "autoupdate": {
-        "script": "Get-Content $env:SCOOP_CACHE\\kindred\\latest-version.txt"
-    }
+    "autoupdate": {}
 }

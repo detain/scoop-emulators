@@ -43,14 +43,5 @@
         "regex": "^(?<version>[^ ]+) (?<year>[^ ]+)-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ mupen64plus-core-msvc-x64-(?<hash>[^\\.]+)\\.zip$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-$matchHash.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-$matchHash.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }

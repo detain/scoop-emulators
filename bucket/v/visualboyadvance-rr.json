@@ -22,14 +22,6 @@
         "transform": "\\1"
     },
     "autoupdate": {
-        "exe": "VisualBoyAdvance-M.exe",
-        "args": [
-            "-nogui"
-        ],
-        "exitcodes": [
-            0
-        ],
-        "match": "version (\\d+\\.\\d+\\.\\d+)",
         "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/latest/download/VisualBoyAdvance-M.zip",
         "hash": "sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
         "extract_dir": "VisualBoyAdvance-M"

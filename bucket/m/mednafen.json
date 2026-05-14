@@ -50,14 +50,5 @@
         "regex": "mednafen-(?<version>[\\d.]+).tar.xz",
         "replace": "${1}"
     },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://mednafen.github.io/releases/files/mednafen-$matchVersion-win32.zip"
-            },
-            "64bit": {
-                "url": "https://mednafen.github.io/releases/files/mednafen-$matchVersion-win64.zip"
-            }
-        }
-    }
+    "autoupdate": {}
 }
