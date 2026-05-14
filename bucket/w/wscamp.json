@@ -14,5 +14,12 @@
     "hash": "2320bb9e6c09b1e51e183e83c90685e5e7d2ba6b65632f1ff74bb4a4efaf66a8",
     "bin": [
         "WSCamp.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/wscamp/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/wscamp/$version.7z"
+    }
 }

@@ -14,5 +14,12 @@
     "hash": "1c33ba2b95153a9cc60f295ea34f8263a17f9512d47020fcd6c59aabd1c52a8b",
     "bin": [
         "WinKawaks.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/winkawaks/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/winkawaks/$version.7z"
+    }
 }

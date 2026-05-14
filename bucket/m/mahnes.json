@@ -13,5 +13,12 @@
     "hash": "8fceb6e3b34af31d3a9185e9778448328667ede83896b64bd76b7a42123006a3",
     "bin": [
         "MahNES.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/mahnes/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/mahnes/$version.7z"
+    }
 }

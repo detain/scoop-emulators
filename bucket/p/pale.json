@@ -14,5 +14,12 @@
     "hash": "83357cd9f6b5e9a2587d1eb472625bfc0b2e7f4ae4e775ff93fd47d947602f8f",
     "bin": [
         "Pale.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pale/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pale/$version.7z"
+    }
 }

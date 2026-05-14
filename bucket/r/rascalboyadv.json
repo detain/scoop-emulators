@@ -15,5 +15,12 @@
     "hash": "2a5f3f142c237ba6744e48daf76002b2fa94e503fc69cd0773047b96fd4910e1",
     "bin": [
         "RascalBoy.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/rascalboyadv/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/rascalboyadv/$version.7z"
+    }
 }

@@ -14,5 +14,12 @@
     "hash": "d50ef4033e78054102ff69d5005090f07e26f52488000ad6b81bd4c638af27d2",
     "bin": [
         "pcejin.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pcejin/",
+        "regex": "(svn\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pcejin/$version.7z"
+    }
 }

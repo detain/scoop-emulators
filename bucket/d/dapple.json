@@ -13,5 +13,11 @@
     "hash": "20f145ec30b9a74025a6f82593fc2c0f944be576eac76ba379c99b4d7694f25a",
     "bin": [
         "dap.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/dapple/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dapple/$version.7z"
+    }
 }

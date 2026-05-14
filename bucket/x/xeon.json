@@ -15,5 +15,12 @@
     "hash": "de447afcbf90da77fab338523a460595fce0662a03267cdcfffa6ed13faee0a1",
     "bin": [
         "Xeon.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/xeon/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/xeon/$version.7z"
+    }
 }

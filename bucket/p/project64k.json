@@ -14,5 +14,12 @@
     "hash": "90d7c1d19ba1659ce107b42035e1649e061c0ca34b7b793ee7c9db8ae221694f",
     "bin": [
         "Project64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/project64k/",
+        "regex": "([\\d.-]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/project64k/$version.7z"
+    }
 }

@@ -14,5 +14,12 @@
     "hash": "fd43189ec706184085590d38f0f3ef966815dc11a95057b09514f153f8da14e0",
     "bin": [
         "faux1.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/faux1/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/faux1/$version.7z"
+    }
 }

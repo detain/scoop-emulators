@@ -13,5 +13,12 @@
     "hash": "e9838944001934ab4f06bf874e9d8e426656e353ed7a62cba68ab796770b5e8b",
     "bin": [
         "ParaJVE.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/parajve/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/parajve/$version.7z"
+    }
 }

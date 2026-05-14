@@ -15,5 +15,12 @@
     "hash": "e4938db19874e60a46da8810212a44cbbc7ee6a6416a11355c91c40e3144a1e1",
     "bin": [
         "PS2EMU.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ps2emu/",
+        "regex": "(alpha\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ps2emu/$version.7z"
+    }
 }

@@ -14,5 +14,12 @@
     "hash": "b6c400cb76331253f83f81af65baede3a3fc5e9b42ea178f548714f5fdd8dcc5",
     "bin": [
         "VMC10.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/virtualmc10/",
+        "regex": "([\\d.]+[a-z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/virtualmc10/$version.7z"
+    }
 }

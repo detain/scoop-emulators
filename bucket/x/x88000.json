@@ -14,5 +14,12 @@
     "hash": "372aea7fe1c21fedbe1e202efbd7569da93943771e6b9513506f36573ab174c6",
     "bin": [
         "x88x3.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/x88000/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/x88000/$version.7z"
+    }
 }

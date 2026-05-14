@@ -14,5 +14,12 @@
     "hash": "85abdc9c647fd92234451b4a3b73181d6c4c4fb82638f5d7be3ad8e49c5afe39",
     "bin": [
         "pcsx.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pcsxrr/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pcsxrr/$version.7z"
+    }
 }

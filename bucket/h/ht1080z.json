@@ -14,5 +14,12 @@
     "hash": "08a6d814fa0b6151aba675c0b0d19eec0e24e24a4170f56e16588a982bd60418",
     "bin": [
         "HT1080Z.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ht1080z/",
+        "regex": "([\\d.]+-win64)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ht1080z/$version.7z"
+    }
 }

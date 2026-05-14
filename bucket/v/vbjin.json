@@ -15,5 +15,12 @@
     "hash": "7acdf4729e762058b5986e145c2fa67b0ddf6bc627a2dc2625b833906ee48c30",
     "bin": [
         "vbjin.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vbjin/",
+        "regex": "(svn\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vbjin/$version.7z"
+    }
 }

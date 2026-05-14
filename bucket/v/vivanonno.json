@@ -14,5 +14,12 @@
     "hash": "1f2ea240a34485c0b90f65bb376cecad9a34e8b4c654a1000462eb3e974a3e02",
     "bin": [
         "vivanonno.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vivanonno/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vivanonno/$version.7z"
+    }
 }

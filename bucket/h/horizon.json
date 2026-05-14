@@ -14,5 +14,12 @@
     "hash": "346e40dcbd454e676932d44a7b61cb285543ec6a0eec26d14cb4037f7a89c236",
     "bin": [
         "Horizon 2.1.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/horizon/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/horizon/$version.7z"
+    }
 }

@@ -14,5 +14,12 @@
     "hash": "0c6b4794838d2b43b363097c0b962672be3d6785b26fac763609adbe7b1990bd",
     "bin": [
         "RockNESX.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/rocknesx/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/rocknesx/$version.7z"
+    }
 }

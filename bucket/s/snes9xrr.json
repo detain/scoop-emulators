@@ -14,5 +14,12 @@
     "hash": "227800cbeaa171a70c4bdb11fa7987036a6d74a8c9e809dfcf460e23defac127",
     "bin": [
         "snes9x.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/snes9xrr/",
+        "regex": "([\\d.r]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/snes9xrr/$version.7z"
+    }
 }

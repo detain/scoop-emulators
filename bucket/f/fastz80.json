@@ -14,5 +14,12 @@
     "hash": "8275f0252a802afa353b4c6ccc471b60c590724cd41694f857589a99150115bc",
     "bin": [
         "FastZ80.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/fastz80/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/fastz80/$version.7z"
+    }
 }

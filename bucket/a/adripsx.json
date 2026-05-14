@@ -14,5 +14,11 @@
     "hash": "7db1fcca351823d853d6d594623d65bf25d0fc6bf79df11486a2ff4311a69e11",
     "bin": [
         "AdriILE.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/adripsx/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/adripsx/$version.7z"
+    }
 }

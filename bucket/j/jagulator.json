@@ -15,5 +15,12 @@
     "hash": "0e013e5db0b0509fab733e4641702c677bdbb052bb8edc1d061bd97eb4d5b621",
     "bin": [
         "jagulator.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/jagulator/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/jagulator/$version.7z"
+    }
 }

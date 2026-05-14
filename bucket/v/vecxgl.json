@@ -13,5 +13,12 @@
     "hash": "86b84d8086d9067a479b6e5daba8fec2f5818121b080da04fea8658521d72ef4",
     "bin": [
         "vecxgl.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vecxgl/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vecxgl/$version.7z"
+    }
 }

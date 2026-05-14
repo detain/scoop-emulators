@@ -14,5 +14,12 @@
     "hash": "5dc4fd801cb53cb3d70447ba50e30ff87b871b8911fc4c5152ae5d70cf3d9b3c",
     "bin": [
         "Yabause-Devmiyax 09.04.2016.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/yabaused/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/yabaused/$version.7z"
+    }
 }

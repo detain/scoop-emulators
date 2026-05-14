@@ -14,5 +14,12 @@
     "hash": "9bf4162d78de3ac1b4a1eb3a7b09fa0257b127d59801e9c9334b1680ece26734",
     "bin": [
         "nemu64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nemu64/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nemu64/$version.7z"
+    }
 }

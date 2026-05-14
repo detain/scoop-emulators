@@ -14,5 +14,12 @@
     "hash": "1e4eb6187eeddb783be35e00713d10db6d94855b33ca5db1d33895b5a867e664",
     "bin": [
         "PK201.EXE"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pk201/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pk201/$version.7z"
+    }
 }

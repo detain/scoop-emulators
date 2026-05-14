@@ -14,5 +14,11 @@
     "hash": "8d24483f25986978e7a0c934019e23a11f46fbfd0f3ebf4c3ac104ce9a29f97b",
     "bin": [
         "EMU.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/emu/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/emu/$version.7z"
+    }
 }

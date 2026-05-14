@@ -13,5 +13,12 @@
     "hash": "80b15c500c7c3f86580bc111b751ff2283a1f7080f4b01a2cbb86ea5740a4941",
     "bin": [
         "WINSTEM.EXE"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/stem/",
+        "regex": "([\\d.-]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/stem/$version.7z"
+    }
 }

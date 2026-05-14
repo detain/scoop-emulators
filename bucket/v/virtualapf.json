@@ -13,5 +13,12 @@
     "hash": "931f5189e45e563da5eea28aad5a4cd208be1871720b62eabadbbc8e9a5a688e",
     "bin": [
         "vapf.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/virtualapf/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/virtualapf/$version.7z"
+    }
 }

@@ -14,5 +14,11 @@
     "hash": "1ba7cb9f62fb21e8eac20639b186d3332e19a98af35f788779503be32531b9da",
     "bin": [
         "emulator.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/cps3emulator/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/cps3emulator/$version.7z"
+    }
 }

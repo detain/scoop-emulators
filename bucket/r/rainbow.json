@@ -15,5 +15,12 @@
     "hash": "bd5539686dc2ce00afc056e1522d33220e0f4fee0f73b4245ae86422518d5260",
     "bin": [
         "Rainbow 2.2.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/rainbow/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/rainbow/$version.7z"
+    }
 }

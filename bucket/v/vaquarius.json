@@ -14,5 +14,12 @@
     "hash": "e2b91154d2da59fdd646dd7568cc81cbabdb51cbc455f1003a879d9021f5b374",
     "bin": [
         "aquarius.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vaquarius/",
+        "regex": "([\\d.]+[a-z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vaquarius/$version.7z"
+    }
 }

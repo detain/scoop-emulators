@@ -14,5 +14,12 @@
     "hash": "b6990ae8f1466fdcd6417082478ae98ee3bd01c1bbc2ebbc5e83d989a8e831d3",
     "bin": [
         "nanowasp.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nanowasp/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nanowasp/$version.7z"
+    }
 }

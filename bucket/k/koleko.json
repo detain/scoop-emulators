@@ -13,5 +13,12 @@
     "hash": "35e3d845b952b87550790bda0e9af524a205bd70f75ba8cda14e95e15755786a",
     "bin": [
         "koleko_vos.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/koleko/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/koleko/$version.7z"
+    }
 }

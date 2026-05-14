@@ -14,5 +14,12 @@
     "hash": "4b8ef52835e34821fc9b5c64e561d2533289c3addb0cff1d9eb56733abdae1fa",
     "bin": [
         "GMB.BAT"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nogmb/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nogmb/$version.7z"
+    }
 }

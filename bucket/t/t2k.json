@@ -14,5 +14,12 @@
     "hash": "f84953629a059014edcd034a694b93dc1e6a743c5164a039746234c97cebc293",
     "bin": [
         "t2k.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/t2k/",
+        "regex": "([\\d.]+[a-z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/t2k/$version.7z"
+    }
 }

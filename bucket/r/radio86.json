@@ -13,5 +13,12 @@
     "hash": "ca62fa637780d041e1713cdd238a096d64788dde093357e3c73cb9ff55a6006c",
     "bin": [
         "radio86.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/radio86/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/radio86/$version.7z"
+    }
 }

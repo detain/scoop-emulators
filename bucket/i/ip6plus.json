@@ -14,5 +14,12 @@
     "hash": "e12171344a9550b298d1ae07567c8b92aa91e158332d407e5d9d5c1289cfad51",
     "bin": [
         "iP6.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ip6plus/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ip6plus/$version.7z"
+    }
 }

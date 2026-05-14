@@ -14,5 +14,11 @@
     "hash": "1c0c49b0137dade47db17afb3404528792dd296a00fbf5011953f89198b712a7",
     "bin": [
         "CalcEm.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/calcem/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/calcem/$version.7z"
+    }
 }

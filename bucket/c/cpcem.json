@@ -13,5 +13,11 @@
     "hash": "f3a3e16ee7d7b069248d8a97a9b927a0ed8db497054d93c976479322adce7d8e",
     "bin": [
         "CPC-EM.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/cpcem/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/cpcem/$version.7z"
+    }
 }

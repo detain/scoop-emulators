@@ -14,5 +14,12 @@
     "hash": "3452a8f6e695cd7fbb4068f308aed159b2872a10b30e1c1258016e52c63520b8",
     "bin": [
         "HomeLab.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/hola/",
+        "regex": "([\\d.]+[a-zA-Z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/hola/$version.7z"
+    }
 }

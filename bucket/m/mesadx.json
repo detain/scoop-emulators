@@ -14,5 +14,12 @@
     "hash": "9a46a8dbef77dcb353fb5b5aeafab3f86b242e5bb112f79af01a2ce978b7e07c",
     "bin": [
         "MesaDX.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/mesadx/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/mesadx/$version.7z"
+    }
 }

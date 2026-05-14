@@ -14,5 +14,12 @@
     "hash": "3d7494428cc7a2644458dc016902ea00c62aa0857f338d2ac375c77b50ad67eb",
     "bin": [
         "p6vwemu3.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pc6001vw/",
+        "regex": "([\\da-f]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pc6001vw/$version.7z"
+    }
 }

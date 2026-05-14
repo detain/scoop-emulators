@@ -13,5 +13,11 @@
     "hash": "8093ece04b736e184fc0abe8ffc867eefc7ead80f00fa4d2b0ce0d16b39f6939",
     "bin": [
         "DreamGBA_Loader.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/dreamgbatng/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dreamgbatng/$version.7z"
+    }
 }

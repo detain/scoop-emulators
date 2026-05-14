@@ -13,5 +13,12 @@
     "hash": "7816f37a005f5061478f5e3801ebd4bf76efd74bb6eeee690e734fb581647fdd",
     "bin": [
         "WinBoycott.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/winboycott/",
+        "regex": "([\\d.]+[a-z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/winboycott/$version.7z"
+    }
 }

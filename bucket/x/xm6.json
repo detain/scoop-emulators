@@ -14,5 +14,12 @@
     "hash": "435f6f5249305e04dbebe58e2f6c398495d7fc6d71e6827618d507a5f628d5c8",
     "bin": [
         "xm6g.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/xm6/",
+        "regex": "([\\d.]+-[a-z]+\\d*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/xm6/$version.7z"
+    }
 }

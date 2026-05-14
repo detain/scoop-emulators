@@ -14,5 +14,12 @@
     "hash": "10ec21294bd7abf3d0f3a672d1235d9ca0013062376a4d5429b63a402c1a365d",
     "bin": [
         "WinVZ300.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/winvz300/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/winvz300/$version.7z"
+    }
 }

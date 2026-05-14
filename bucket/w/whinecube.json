@@ -15,5 +15,12 @@
     "hash": "d6bc4b82053ce05edd2c252d7d31896e034598411a8729f6d57a2354a3ae49ca",
     "bin": [
         "WhineCube.vcproj"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/whinecube/",
+        "regex": "(Release\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/whinecube/$version.7z"
+    }
 }

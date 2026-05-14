@@ -13,5 +13,12 @@
     "hash": "a3d77211665b550cbd7ac075262134b32e62b82206c6eae42d5651c18d0b41f4",
     "bin": [
         "NESTCL95.EXE"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nesticle/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nesticle/$version.7z"
+    }
 }

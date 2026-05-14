@@ -13,5 +13,12 @@
     "hash": "2b9d8db2b6a564e75c9c58bbfbb3fda202e246d3d58f703de6208438000fbace",
     "bin": [
         "sw_emu.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/shortwaves/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/shortwaves/$version.7z"
+    }
 }

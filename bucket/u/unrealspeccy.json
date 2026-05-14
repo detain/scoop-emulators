@@ -14,5 +14,12 @@
     "hash": "95dfe26811d8b5dae52d9742e40a9aa71ef9a26ce4e06a001f27c3b1f132e4b4",
     "bin": [
         "unreal.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/unrealspeccy/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/unrealspeccy/$version.7z"
+    }
 }

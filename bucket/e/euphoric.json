@@ -13,5 +13,11 @@
     "hash": "76a96f524b369bd813c866575dff1414f887e1517eb9780d9ba56b37100f282d",
     "bin": [
         "euphoric.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/euphoric/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/euphoric/$version.7z"
+    }
 }

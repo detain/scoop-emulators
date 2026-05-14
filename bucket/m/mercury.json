@@ -14,5 +14,12 @@
     "hash": "f9ee31d792188f0be532a2c3a793f0b154e235140047f79733ce136acae9e9b3",
     "bin": [
         "Mercury.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/mercury/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/mercury/$version.7z"
+    }
 }

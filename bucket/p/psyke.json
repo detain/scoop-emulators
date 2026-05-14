@@ -14,5 +14,12 @@
     "hash": "5fcd4ace77b675b3e87bc8a93c844fb75fcef85761694004ff6c59e39848df12",
     "bin": [
         "Psyke.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/psyke/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/psyke/$version.7z"
+    }
 }

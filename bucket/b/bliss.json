@@ -14,5 +14,11 @@
     "hash": "28c7f05e2513aa11ee72a14e6ad54594af2b259891afe46e08898b4630677a89",
     "bin": [
         "Bliss.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/bliss/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/bliss/$version.7z"
+    }
 }

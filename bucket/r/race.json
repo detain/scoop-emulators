@@ -14,5 +14,12 @@
     "hash": "17e9c4741b0ec7a47ff9b3193367378490c90461d3ae8c3cd7a9e5af5b95a42a",
     "bin": [
         "main.cpp"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/race/",
+        "regex": "([\\d-]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/race/$version.7z"
+    }
 }

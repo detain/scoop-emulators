@@ -14,5 +14,11 @@
     "hash": "8681ef061be184ff1b9b7bc20bd2f22a3eb480a2fe47710c29ea9a9c32b2b0bf",
     "bin": [
         "AqEmu.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/aqemu/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/aqemu/$version.7z"
+    }
 }

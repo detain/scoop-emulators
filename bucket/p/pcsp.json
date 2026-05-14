@@ -15,5 +15,12 @@
     "hash": "682c54a609c9eeb85457e3f4a190046bb4c22bbeb787d5592d1fe04b79e6a271",
     "bin": [
         "pcsp.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pcsp/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pcsp/$version.7z"
+    }
 }

@@ -13,5 +13,12 @@
     "hash": "208a074a56f4661d354924b5c6571d9cbb7e6ca7bbe08bc7deaf9d74c6d18d7d",
     "bin": [
         "snem.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/snem/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/snem/$version.7z"
+    }
 }

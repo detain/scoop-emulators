@@ -14,5 +14,11 @@
     "hash": "680fef23a41344be3887862380ab10d44e331b0ae28fc1cba14d64435c9f48c3",
     "bin": [
         "Calice32.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/calice/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/calice/$version.7z"
+    }
 }

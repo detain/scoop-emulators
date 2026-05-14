@@ -14,5 +14,12 @@
     "hash": "75f59fb38049dcc20a7991f93cca3f4750ba12387635f242739f8401f7d2fa5f",
     "bin": [
         "SWFOpener.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/swfopener/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/swfopener/$version.7z"
+    }
 }

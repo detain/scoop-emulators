@@ -14,5 +14,12 @@
     "hash": "359e5b54e95e8e9d897e504ffc5c374c7dc4f11f77a834623765c3831410752b",
     "bin": [
         "NO$SNS.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nosns/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nosns/$version.7z"
+    }
 }

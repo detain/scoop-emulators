@@ -13,5 +13,12 @@
     "hash": "dbcd1f331f9a206179f9117aee6c9b7eb70dac9fe82ef1fb1c56b3b9685b0bfd",
     "bin": [
         "Hyper64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/hyper64/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/hyper64/$version.7z"
+    }
 }

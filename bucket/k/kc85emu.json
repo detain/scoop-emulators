@@ -14,5 +14,12 @@
     "hash": "97a49fb64b6d2989b1a554b7e1236ce66001ead4455cb67a8793177943b81460",
     "bin": [
         "KC85EMU.EXE"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/kc85emu/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/kc85emu/$version.7z"
+    }
 }

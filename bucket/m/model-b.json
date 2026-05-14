@@ -10,5 +10,12 @@
             "modelb.exe",
             "model-b"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "http://modelb.bbcmicro.com/latest/",
+        "regex": "modelb-dx8-(\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://modelb.bbcmicro.com/latest/modelb-dx8-$version.zip"
+    }
 }

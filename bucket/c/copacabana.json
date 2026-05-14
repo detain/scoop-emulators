@@ -14,5 +14,11 @@
     "hash": "f50414ecc05e6cae8ba534268767fa193866831fb1461da1b6aaeee0175bdefc",
     "bin": [
         "CoPaCabana.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/copacabana/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/copacabana/$version.7z"
+    }
 }

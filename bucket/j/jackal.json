@@ -14,5 +14,12 @@
     "hash": "dce692de1ad4b711bfa744e6934b692056e15f2f74de8cbf934bf69ae8e02132",
     "bin": [
         "jackal.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/jackal/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/jackal/$version.7z"
+    }
 }

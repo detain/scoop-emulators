@@ -14,5 +14,12 @@
     "hash": "56752e921c71a947a880d397fc0a2792707c132c705ad97419693d5e5ae68bca",
     "bin": [
         "psinex pc emulator.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/psinex/",
+        "regex": "(r\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/psinex/$version.7z"
+    }
 }

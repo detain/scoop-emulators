@@ -13,5 +13,11 @@
     "hash": "d96b0159204677e0c9fbb7d24c7d846fac80aca2ebc9b7e56b7d0747af9d6b4c",
     "bin": [
         "Emukon.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/emukon/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/emukon/$version.7z"
+    }
 }

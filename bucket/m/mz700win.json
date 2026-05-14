@@ -13,5 +13,12 @@
     "hash": "d8ca72c041469e37a485815be550919f90c66bad392050e2ff1a3b233fcb22a9",
     "bin": [
         "mz700win.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/mz700win/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/mz700win/$version.7z"
+    }
 }

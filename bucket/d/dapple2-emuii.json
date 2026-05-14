@@ -13,5 +13,11 @@
     "hash": "7fcb03dd567fbf0dbf0d5ba072b38e994122b6c637b6b11f76f3b97ec063bd09",
     "bin": [
         "emu2.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/dapple2-emuii/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dapple2-emuii/$version.7z"
+    }
 }

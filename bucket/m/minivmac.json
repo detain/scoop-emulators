@@ -14,5 +14,12 @@
     "hash": "2cac213d91d600f7d64f846fc336c6c64b2ba9beb29a5aefde8614c432d536e7",
     "bin": [
         "Mini vMac.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/minivmac/",
+        "regex": "([\\d.-]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/minivmac/$version.7z"
+    }
 }

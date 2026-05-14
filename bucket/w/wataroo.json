@@ -14,5 +14,12 @@
     "hash": "7abbbb8944418cd32878ee2eb57c77c530f4dc2b74091e0f82fd0fb5aceae1c0",
     "bin": [
         "Wataroo.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/wataroo/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/wataroo/$version.7z"
+    }
 }

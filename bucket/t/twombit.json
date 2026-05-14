@@ -14,5 +14,12 @@
     "hash": "fcfb5f6e5ce7c9053c50006710f0152db012d25be38326966bd3f8b2903a7e6c",
     "bin": [
         "TwoMBit.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/twombit/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/twombit/$version.7z"
+    }
 }

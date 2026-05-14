@@ -14,5 +14,12 @@
     "hash": "c5fdc8141544bf56cb1bf9a52b556cce3dad87b3b2680495e620a0a50d1e1a09",
     "bin": [
         "NO$CPC.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nocpc/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nocpc/$version.7z"
+    }
 }

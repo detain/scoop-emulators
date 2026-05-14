@@ -13,5 +13,11 @@
     "hash": "92ee41f1a1992abf5de730af872d7716c607c65bd43b7ea62d66e3c43761a33c",
     "bin": [
         "CPE.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/cpe/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/cpe/$version.7z"
+    }
 }

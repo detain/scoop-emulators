@@ -14,5 +14,12 @@
     "hash": "68c815e04d65632ce15354418d995dcd33ca93bd5af1c9e9f7ba1d143241ffc8",
     "bin": [
         "Fbas-x64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/fbalphashuffle/",
+        "regex": "([\\d.]+-win64)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/fbalphashuffle/$version.7z"
+    }
 }

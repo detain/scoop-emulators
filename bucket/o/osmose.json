@@ -14,5 +14,12 @@
     "hash": "ca613bd4ebcc9eaebb33c00cce2853deed41bfbee8620546d6545629515b4748",
     "bin": [
         "Osmose.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/osmose/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/osmose/$version.7z"
+    }
 }

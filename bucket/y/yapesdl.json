@@ -13,5 +13,12 @@
     "hash": "92d65f3d6064476e679d4a416fa176654b6a1ad32bd5586a1af78f497843ba0c",
     "bin": [
         "YapeSDL.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/yapesdl/",
+        "regex": "([\\d.]+-[a-z]+\\d*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/yapesdl/$version.7z"
+    }
 }

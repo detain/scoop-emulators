@@ -14,5 +14,12 @@
     "hash": "76056ba519391878836fa98b71f7f5115be357890335d5de841780e1d43e9ed2",
     "bin": [
         "np2.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/nekoprojectii/",
+        "regex": "([\\d.]+-win64)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/nekoprojectii/$version.7z"
+    }
 }

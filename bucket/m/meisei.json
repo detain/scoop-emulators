@@ -14,5 +14,12 @@
     "hash": "afaa1b136af599a6da75d4006af451978f44a09e500c37152682a60952b925d9",
     "bin": [
         "meisei.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/meisei/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/meisei/$version.7z"
+    }
 }

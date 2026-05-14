@@ -14,5 +14,12 @@
     "hash": "3d1fb64f8540010e2015289c51ac8c795c55b37a7f20987e5f4644e6250c4cab",
     "bin": [
         "Ti994w.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ti994w/",
+        "regex": "([\\d.]+[a-z]*\\d*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ti994w/$version.7z"
+    }
 }

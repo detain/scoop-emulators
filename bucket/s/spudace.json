@@ -14,5 +14,12 @@
     "hash": "4df727be0a3a42f82abc80e04173641aebc12f9ed6357be4288a4fe3b354827b",
     "bin": [
         "SpudACE.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/spudace/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/spudace/$version.7z"
+    }
 }

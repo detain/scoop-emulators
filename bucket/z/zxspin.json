@@ -14,5 +14,12 @@
     "hash": "dc98915e7fc04dfcf3f310ce891353e9f2b7b53dd260c72ae3003468ebfced8d",
     "bin": [
         "ZXSpin.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/zxspin/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/zxspin/$version.7z"
+    }
 }

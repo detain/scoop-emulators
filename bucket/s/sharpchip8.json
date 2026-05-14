@@ -14,5 +14,12 @@
     "hash": "b4092c9d01fcd26fafbee866f840ee2155fca12ec0fd0a49c11b240356feb387",
     "bin": [
         "SharpChip-8.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/sharpchip8/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/sharpchip8/$version.7z"
+    }
 }

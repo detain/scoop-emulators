@@ -14,5 +14,12 @@
     "hash": "4401d42829ac133f0c0f44fda1384b9d0dfbc64fec3481d46716687ab20fdf5d",
     "bin": [
         "Genieous.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/genieous/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/genieous/$version.7z"
+    }
 }

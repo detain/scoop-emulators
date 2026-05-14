@@ -14,5 +14,11 @@
     "hash": "3995ebb74bb801bdf4bbcfd59e523e02eb4b55f89319375b9644d9580451239e",
     "bin": [
         "3DOplay.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://code.google.com/archive/p/3doplay/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/3doplay/$version.7z"
+    }
 }

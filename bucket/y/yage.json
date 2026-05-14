@@ -14,5 +14,12 @@
     "hash": "3513bbbe99dd9f36e3b83030874758f7f4ebcf17690c3665199df3c7108d6a34",
     "bin": [
         "YAGE.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/yage/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/yage/$version.7z"
+    }
 }

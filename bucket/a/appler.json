@@ -13,5 +13,11 @@
     "hash": "5481e7649c9b385530e96844d28f300b6b39b553e287111429952c68339655c0",
     "bin": [
         "APPLER.COM"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/appler/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/appler/$version.7z"
+    }
 }

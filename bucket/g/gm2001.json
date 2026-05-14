@@ -13,5 +13,12 @@
     "hash": "23224524b9cf6e0d37ed6fbf9e2a87ada5f34038713e37fc5eb68f5597cc45a5",
     "bin": [
         "GM2001.EXE"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/gm2001/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/gm2001/$version.7z"
+    }
 }

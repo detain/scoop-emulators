@@ -13,5 +13,12 @@
     "hash": "8a80bfa4b639323903a842a110850616a6921c10dc872687887168378438adfc",
     "bin": [
         "5200.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vss/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vss/$version.7z"
+    }
 }

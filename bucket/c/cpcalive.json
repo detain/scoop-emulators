@@ -14,5 +14,11 @@
     "hash": "79f08d77196c497b9c0eeabfcbf03dc6a0369a478dd88b7414ff37d4950b4d84",
     "bin": [
         "CpcAlive (Vista,7).bat"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/cpcalive/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/cpcalive/$version.7z"
+    }
 }

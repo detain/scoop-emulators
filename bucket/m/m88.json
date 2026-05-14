@@ -13,5 +13,12 @@
     "hash": "4ce5ce5d934d2808bae71b3a3f522042313bb4891fd00d021288a7b5adb8776a",
     "bin": [
         "M88.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/m88/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/m88/$version.7z"
+    }
 }

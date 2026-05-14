@@ -15,5 +15,11 @@
     "hash": "16eb1720d58ff7249d2b8da8ae54f1c0babd57877b2c26d16808b82d326b847e",
     "bin": [
         "Chankast_alpha_25.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/chankast/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/chankast/$version.7z"
+    }
 }

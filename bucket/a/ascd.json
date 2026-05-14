@@ -14,5 +14,11 @@
     "hash": "09961fb001e49d34ab0b3227c6daefff867128857a4a435aa1bf62cdec8887d1",
     "bin": [
         "Ascd.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ascd/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ascd/$version.7z"
+    }
 }

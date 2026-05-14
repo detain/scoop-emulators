@@ -13,5 +13,12 @@
     "hash": "29745968029c5a5411f3370a38210f0731a654c5686b809affc74a57b9176edc",
     "bin": [
         "NAOMI.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/makaron/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/makaron/$version.7z"
+    }
 }

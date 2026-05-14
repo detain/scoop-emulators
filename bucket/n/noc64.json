@@ -14,5 +14,12 @@
     "hash": "c9b2f690e86ea46ed96b2b9aa264130809142a48ad811080cc4e12231041191c",
     "bin": [
         "NO$C64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/noc64/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/noc64/$version.7z"
+    }
 }

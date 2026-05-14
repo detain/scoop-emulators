@@ -13,5 +13,12 @@
     "hash": "297edd11d213f31f4eb751261544a17a18f4f694992144a526b567be78b29024",
     "bin": [
         "WinTVCx64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/wintvc/",
+        "regex": "([\\d.]+-[a-z]+\\d*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/wintvc/$version.7z"
+    }
 }

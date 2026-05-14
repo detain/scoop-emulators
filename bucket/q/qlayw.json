@@ -14,5 +14,12 @@
     "hash": "bdf4ced45ea715c2f97eb903042de6b6f25b82d177d2c648db72c522393be12b",
     "bin": [
         "qlayw.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/qlayw/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/qlayw/$version.7z"
+    }
 }

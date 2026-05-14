@@ -13,5 +13,12 @@
     "hash": "4aca86da120976c685d78cb3fa37bcf7fdabddd78b88041fc4557de55db4fad0",
     "bin": [
         "ubee512.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ubee512/",
+        "regex": "([\\d.]+-[a-z]+\\d*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ubee512/$version.7z"
+    }
 }

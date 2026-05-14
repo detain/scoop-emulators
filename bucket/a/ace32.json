@@ -13,5 +13,11 @@
     "hash": "99eece4528559d9722124e84d14e668167c67e37033f9c9e6c5f55923f8f4f5a",
     "bin": [
         "ACE32XP.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ace32/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ace32/$version.7z"
+    }
 }

@@ -13,5 +13,12 @@
     "hash": "73b5f8de7bd637c7e5c37d7622462213bcd07d4723303e0f282a49f05a0157ff",
     "bin": [
         "NeuSneM.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/neusnem/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/neusnem/$version.7z"
+    }
 }

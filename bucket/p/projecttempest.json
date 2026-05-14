@@ -15,5 +15,12 @@
     "hash": "37bc0239be0ad483f22d72dffff820a14e2582ba393321014908209c507ad4c8",
     "bin": [
         "PT.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/projecttempest/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/projecttempest/$version.7z"
+    }
 }

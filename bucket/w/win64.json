@@ -13,5 +13,12 @@
     "hash": "1191b3b2c27cc2b09f1c7a01f08109fac0bb3fba558c9d7cd6c9b8202855b469",
     "bin": [
         "Win64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/win64/",
+        "regex": "([\\d.]+[a-z]*)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/win64/$version.7z"
+    }
 }

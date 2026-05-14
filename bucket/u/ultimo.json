@@ -14,5 +14,12 @@
     "hash": "d3e27a2f3604f342271d79f7fba0a89016c70d821ddd7851cf8b524c588f000a",
     "bin": [
         "Ultimo.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ultimo/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ultimo/$version.7z"
+    }
 }

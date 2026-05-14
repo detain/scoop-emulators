@@ -14,5 +14,11 @@
     "hash": "eb95f1d7b9ff6b5534867dd70c88a1218e3efdee6b28159aa894f7ccaf433523",
     "bin": [
         "Emulator3000.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/emulator3000/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/emulator3000/$version.7z"
+    }
 }

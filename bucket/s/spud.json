@@ -13,5 +13,12 @@
     "hash": "6a603a315603a8aeeaebbeb80a74d42e9440faddbaed707cb1f230a9c93a8443",
     "bin": [
         "Spud.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/spud/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/spud/$version.7z"
+    }
 }

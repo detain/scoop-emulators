@@ -14,5 +14,11 @@
     "hash": "4957570ea79c4f512cc0e7b7aa96135d41fdaad32f40e5a046cb69623489e006",
     "bin": [
         "WinVMS.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/directvms/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/directvms/$version.7z"
+    }
 }

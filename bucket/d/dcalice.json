@@ -14,5 +14,11 @@
     "hash": "dd5c7bed6a1690026b787a3f05d43ed56529050f9fa428a0abba6b4e27edf402",
     "bin": [
         "dcalice.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/dcalice/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dcalice/$version.7z"
+    }
 }

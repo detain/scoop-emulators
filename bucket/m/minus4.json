@@ -13,5 +13,12 @@
     "hash": "408f9af5654f050499a7c04cc693f19a7523d51775bae6590f48606069d9ca96",
     "bin": [
         "minus4w.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/minus4/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/minus4/$version.7z"
+    }
 }

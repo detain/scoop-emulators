@@ -14,5 +14,12 @@
     "hash": "137c376d9ee67dc16b09b6a24f49e4017bd0e071f29976a179745b335a14f711",
     "bin": [
         "Minimon.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/minimon/",
+        "regex": "([\\d-]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/minimon/$version.7z"
+    }
 }

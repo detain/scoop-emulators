@@ -14,5 +14,12 @@
     "hash": "0255412023c9058fe7df1389e04bd184cb3e1d97d65aa2ed5bbe071026220043",
     "bin": [
         "vb64.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vb64/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vb64/$version.7z"
+    }
 }

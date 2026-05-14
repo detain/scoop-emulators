@@ -14,5 +14,12 @@
     "hash": "cdfb6a5f2b9239904466d60e666cd4d9a6f7179aa5518bfde87c73225ab276b3",
     "bin": [
         "MakaronEX.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/makaronex/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/makaronex/$version.7z"
+    }
 }

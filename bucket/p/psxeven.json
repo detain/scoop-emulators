@@ -8,12 +8,19 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/PSXeven-PSX-Emulator-Pic-01.jpg"
     ],
     "version": "0.19",
-    "description": "PSXeven is a speedy emulator for the PlayStation 1. It features a simple user interface and a decent set of features such as a memory card manager.",
+    "description": "PSXeven is a speedy emulator for the PlayStation 1. It features a simple user interface and a decent set of features such as a memory card manager.",
     "homepage": "http://batard.psxfanatics.com",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/psxeven/0.19.7z",
     "hash": "ad61fc48d88aa38586d7122723b52e7158f6d95a01d01689820831d674b94675",
     "bin": [
         "PSXeven_v0.19.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/psxeven/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/psxeven/$version.7z"
+    }
 }

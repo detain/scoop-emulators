@@ -14,5 +14,11 @@
     "hash": "55879294b77d39a2b82812ca9d722fb4ebca23bb3dc1f7e866ff27455bf7b25a",
     "bin": [
         "bsnes.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/bsnesclassic/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/bsnesclassic/$version.7z"
+    }
 }

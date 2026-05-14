@@ -14,5 +14,12 @@
     "hash": "6f558f1dbf6e7240adb40040d9f55063a2c8c9d920cb2d173b30ac97be60a812",
     "bin": [
         "FreeDO.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/freedo/",
+        "regex": "([\\d.]+-alpha)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/freedo/$version.7z"
+    }
 }

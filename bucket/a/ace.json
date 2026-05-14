@@ -14,5 +14,11 @@
     "hash": "f96e9b451d6f2fb092c59845a88b5d04ae4a8e0cccaa83177e4504f77c56f7e9",
     "bin": [
         "ace.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ace/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ace/$version.7z"
+    }
 }

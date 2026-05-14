@@ -14,5 +14,12 @@
     "hash": "39c9c2fbc649673f17b3de756641eeb54249e913d369514469af8520373ba7b7",
     "bin": [
         "UberNES.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/ubernes/",
+        "regex": "(\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ubernes/$version.7z"
+    }
 }

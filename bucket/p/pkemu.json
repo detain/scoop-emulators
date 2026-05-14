@@ -14,5 +14,12 @@
     "hash": "d4a76c930dcceb8b315e043846bf8c7e24a5f11e8d64092225ced4187b4d2e1b",
     "bin": [
         "pkemu.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/pkemu/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/pkemu/$version.7z"
+    }
 }

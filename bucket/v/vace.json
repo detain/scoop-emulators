@@ -14,5 +14,12 @@
     "hash": "f94c7298bed97b2930eb9ae1a30105dc3fca71c9faa1c22699e9be894171ce01",
     "bin": [
         "Vace.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/vace/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/vace/$version.7z"
+    }
 }

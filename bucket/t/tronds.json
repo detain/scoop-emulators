@@ -15,5 +15,12 @@
     "hash": "0fae963cad00b883aacdf37fdbb6886a7ba4cc1d335c4f243ece67a9cdaaae49",
     "bin": [
         "TronDS.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/tronds/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/tronds/$version.7z"
+    }
 }

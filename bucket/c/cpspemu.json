@@ -14,5 +14,11 @@
     "hash": "18e3369dca12c451f6c632cc2905861be3c5281a6fc58c6688a6e4e3c3b1199f",
     "bin": [
         "cspspemu.exe"
-    ]
+    ],
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/cpspemu/"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/cpspemu/$version.7z"
+    }
 }
