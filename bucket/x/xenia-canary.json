@@ -1,5 +1,5 @@
 {
-    "version": "20250126163205-a4412ad",
+    "version": "20260514212615-cebbdb6",
     "description": "Xbox 360 Research Emulator (development version)",
     "homepage": "https://xenia.jp",
     "license": "BSD-3-Clause",
@@ -45,5 +45,7 @@
         "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)_canary_experimental",
         "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
