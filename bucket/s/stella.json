@@ -1,6 +1,6 @@
 {
     "homepage": "https://stella-emu.github.io",
-    "version": "6.7.1",
+    "version": "7.0",
     "license": "GPL-2.0-or-later",
     "description": "Atari 2600 VCS emulator",
     "depends": "extras/vcredist2017",
@@ -26,7 +26,7 @@
             ]
         }
     },
-    "extract_dir": "Stella-6.7.1",
+    "extract_dir": "Stella-7.0",
     "persist": "config",
     "innosetup": true,
     "checkver": {
