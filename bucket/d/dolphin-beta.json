@@ -1,5 +1,5 @@
 {
-    "version": "2603-377",
+    "version": "2603-379",
     "description": "A Nintendo GameCube and Wii emulator",
     "homepage": "https://dolphin-emu.org/",
     "license": "GPL-2.0-or-later",
@@ -43,5 +43,7 @@
         "regex": "\\/(?<rand1>.{2})\\/(?<rand2>.{2})\\/dolphin-master-(?<major>[\\d\\.]+)-(?<build>[\\d]+)",
         "replace": "${major}-${build}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
