@@ -1,5 +1,5 @@
 {
-    "version": "3223-20250505-4d81dfd",
+    "version": "4539-20260514-c784d9d",
     "description": "Emulator for arcade games and select consoles",
     "homepage": "https://github.com/finalburnneo/FBNeo",
     "license": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt",
@@ -58,5 +58,7 @@
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
