@@ -1,5 +1,5 @@
 {
-    "version": "2415-20250312-2860aa9",
+    "version": "3209-20260514-cf144bc",
     "description": "Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast.",
     "homepage": "https://github.com/flyinghead/flycast",
     "license": "GPL-2.0-only",
@@ -37,5 +37,7 @@
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
