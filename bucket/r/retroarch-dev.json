@@ -1,5 +1,5 @@
 {
-    "version": "2026-05-14",
+    "version": "2026-05-15",
     "description": "Frontend for emulators, game engines and media players (nightly)",
     "homepage": "https://www.retroarch.com/",
     "license": "GPL-3.0-only",
@@ -60,5 +60,7 @@
         "regex": "(?smi)(\\d{4}-\\d{2}-\\d{2})_RetroArch\\.7z",
         "reverse": true
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
