@@ -1,5 +1,5 @@
 {
-    "version": "4.2.1",
+    "version": "5.3",
     "description": "Emulator of x86-based machines based on PCem.",
     "homepage": "https://github.com/86Box/86Box",
     "license": "GPL-2.0-only",
@@ -29,5 +29,7 @@
         "jsonpath": "$.assets[*].browser_download_url",
         "regex": "v(?<version>[\\d.]+)/86Box-Windows-64-b(?<build>\\d+)\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
