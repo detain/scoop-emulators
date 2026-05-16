@@ -6,18 +6,18 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/caprice32/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/caprice32/emulator_screen_01.jpg"
     ],
-    "version": "4.2.0",
+    "version": "727861",
     "description": "Caprice32 is a software emulator of the Amstrad CPC 8bit home computer series. The emulator faithfully imitates the CPC464, CPC664, and CPC6128 models. By recreating the operations of all hardware components at a low level, the emulator achieves a high degree of compatibility with original CPC software.",
     "homepage": "http://sourceforge.net/projects/caprice32/",
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/caprice32/4.2.0.7z",
     "hash": "9b902364cf96bcae583e819c700e23cc3260b8c0de7112d1af2e00ebe0379ffd",
-    "bin": [
-        "cap32.exe"
-    ],
+    "bin": "cap32.exe",
     "checkver": {
         "url": "https://sourceforge.net/projects/caprice32/rss?path=/caprice32",
         "pattern": "<title>caprice32 ([\\d.]+) released<\\/title>"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
