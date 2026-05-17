@@ -1,5 +1,5 @@
 {
-    "version": "3420-20260511-889e26e",
+    "version": "3424-20260517-c851d65",
     "description": "Nintendo DS emulator",
     "homepage": "http://melonds.kuribo64.net/",
     "license": "GPL-3.0-only",
@@ -40,5 +40,7 @@
         "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
