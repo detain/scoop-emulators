@@ -1,5 +1,5 @@
 {
-    "version": "9061-20260427",
+    "version": "9064-20260517",
     "description": "A fast, accurate, and portable GBA emulator (development version)",
     "homepage": "https://mgba.io/",
     "license": "MPL-2.0",
@@ -66,5 +66,7 @@
         "regex": "build-(?<year>20\\d{2})-(?<month>\\d{2})-(?<day>\\d{2})-win32-(?<ver>[\\d]+)-(?<git>\\w{40})\\.7z",
         "replace": "$4-$1$2$3"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
