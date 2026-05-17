@@ -1,5 +1,5 @@
 {
-    "version": "1996-506cbb45",
+    "version": "1997-2c1e2c45",
     "description": "Nintendo NES and Famicom emulator",
     "homepage": "http://www.fceux.com",
     "license": "GPL-2.0-only",
@@ -63,5 +63,7 @@
         "regex": "(?<job32>[\\w]{16}) (?<job64>[\\w]{16}) (?<build>[\\d]+) (?<commit>[a-f0-9]{8})",
         "replace": "${build}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
