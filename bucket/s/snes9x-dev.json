@@ -1,5 +1,5 @@
 {
-    "version": "1.63-1578",
+    "version": "1.63-1579",
     "description": "Nintendo SNES (Super Nintendo Entertainment System) emulator",
     "homepage": "http://www.snes9x.com/",
     "license": "Freeware",
@@ -45,5 +45,7 @@
         "url": "https://ci.appveyor.com/api/projects/snes9x/snes9x",
         "regex": "\"jobId\":\"(?<win32>.*?)\".*?arch=win32,.*?\"jobId\":\"(?<x64>.*?)\".*?arch=win32-x64,.*\"version\":\"(?<version>.*?)\".*\"commitId\":\"(?<commit>.{7}).*\""
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
