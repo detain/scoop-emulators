@@ -1,5 +1,5 @@
 {
-    "version": "alpha16-97-g6740ab6",
+    "version": "alpha16-98-g0da5604",
     "description": "Pegasus is a graphical frontend for browsing your game library and launching all kinds of emulators from the same place",
     "homepage": "https://pegasus-frontend.org/",
     "license": "GPL-3.0-or-later",
@@ -21,5 +21,7 @@
         "url": "https://api.github.com/repos/mmatyas/pegasus-frontend/releases/tags/continuous",
         "regex": "continuous/pegasus-fe_([\\w\\d-]+)_win-mingw-static.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
