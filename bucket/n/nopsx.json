@@ -1,5 +1,5 @@
 {
-    "version": "2.2",
+    "version": "2.3",
     "description": "No$PSX is a no thrills PSX emulator that doesn’t require a copy of the bios. It can run almost every PS1 game. The only downside to No$PSX is that if offers no enhancement features.",
     "homepage": "https://problemkaputt.de/psx.htm",
     "license": "Freeware",
@@ -19,5 +19,7 @@
         "regex": "HREF=\"(?<zip>[^\"]+)\">no\\$psx v(?<ver>[\\d\\.]+) Windows",
         "replace": "${ver}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
