@@ -1,10 +1,10 @@
 {
-    "version": "91-20260613-1b06c6f",
+    "version": "92-20260614-db9c7de",
     "description": "Rokuyon is An experimental N64 emulator",
     "homepage": "https://github.com/Hydr8gon/rokuyon",
     "license": "GPL-3",
     "url": "https://nightly.link/Hydr8gon/rokuyon/workflows/autobuild/main/rokuyon-windows.zip",
-    "hash": "5a8e5c8eb773ebb7234855117e14d0b7105098c29e8fd12a3c279bd7cbc49be2",
+    "hash": "fea13c4d3dbacdb0680897146fd49ed5b6570c57a5efab387cdac87dc70a3c7d",
     "bin": "rokuyon.exe",
     "checkver": {
         "url": "https://api.github.com/repos/Hydr8gon/rokuyon/actions/workflows/autobuild.yml/runs?branch=main&status=success",
