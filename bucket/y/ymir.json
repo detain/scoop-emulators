@@ -1,5 +1,5 @@
 {
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "A work-in-progress Sega Saturn emulator",
     "homepage": "https://github.com/StrikerX3/Ymir",
     "license": "GPL-2.0-or-later",
@@ -26,5 +26,7 @@
         "url": "https://github.com/StrikerX3/Ymir/releases/latest",
         "regex": "Ymir v(?<version>[\\d.]+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
