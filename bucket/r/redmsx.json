@@ -6,15 +6,13 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/redmsx/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/redmsx/emulator_screen_01.jpg"
     ],
-    "version": "1.4",
+    "version": "1.0",
     "description": "RedMSX is an MSX emulator with advanced support for Windows 10",
     "homepage": "http://redmsx.msxblue.com/index.htm",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/redmsx/1.4.7z",
     "hash": "f520f186e6a8ed281ab7a8880c812ce0f70f85ab7a86d69cdb218b262b9b8d6c",
-    "bin": [
-        "RedMSX.exe"
-    ],
+    "bin": "RedMSX.exe",
     "architecture": {
         "64bit": {
             "url": "https://consolo.is.cc/emu/redmsx/1.4.7z",
@@ -28,5 +26,7 @@
         "expect": "^\\d+\\.\\d+\\.\\d+$",
         "extract": "$dirpath = (Get-Item $installer).DirectoryName"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
