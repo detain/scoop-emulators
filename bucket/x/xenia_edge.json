@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/has207/xenia-edge/releases/download/cb5ad9a/xenia_edge_windows.zip",
-            "hash": "e8b9f3d5c7a6e2b4c8d1f0e3a2b5c7d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5"
+            "hash": "4c599a626472d99b4d17256ad15b6daf318b61eb89d4684a5fb52d655e7ca688"
         }
     },
     "pre_install": [
@@ -39,5 +39,7 @@
         "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)",
         "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
