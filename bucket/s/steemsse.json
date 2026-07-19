@@ -1,5 +1,5 @@
 {
-    "version": "4.2.0",
+    "version": "4.2.1",
     "description": "ST Enhanced EMulator Sensei Software Edition",
     "homepage": "https://sourceforge.net/projects/steemsse",
     "license": "GPL-3.0-only",
@@ -33,5 +33,7 @@
         "url": "https://sourceforge.net/projects/steemsse/rss",
         "re": "/Steem\\.SSE\\.(?<version>[\\d.]+)\\.Win64\\.(?<tag>D3D\\.R[\\d\\.]+)\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
