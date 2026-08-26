@@ -3,7 +3,7 @@
         "name:x360ce",
         "logo:https://2.bp.blogspot.com/-yPwVNXceWCQ/V1PvWilKhMI/AAAAAAAAVEI/Pxgpoe8tfhgGGo_YqsVbyA6x_ggm-69PACLcB/s320/xboxControllerFront.png"
     ],
-    "version": "3.2.9.82",
+    "version": "4.18.0.0",
     "description": "Xbox 360 Controller Emulator (a wrapper library that translates the xinput calls to directinput calls) which allows your controller (GamePad, Joystick, Wheel, ...) to function like an Xbox 360 controller on a Windows PC. For example it allows you to play Grand Theft Auto (GTA) game with Logitech wheel.",
     "homepage": "https://github.com/x360ce/x360ce",
     "license": "",
@@ -20,5 +20,7 @@
         }
     },
     "checkver": "github",
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
