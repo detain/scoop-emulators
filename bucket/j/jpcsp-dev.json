@@ -1,5 +1,5 @@
 {
-    "version": "153-20241201-cd20cf3",
+    "version": "158-20260924-00ac4d6",
     "description": "PSP Emulator written in Java ",
     "homepage": "https://github.com/jpcsp/jpcsp",
     "license": "GPL-2.0-only",
@@ -39,5 +39,7 @@
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
