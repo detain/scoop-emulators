@@ -1,5 +1,5 @@
 {
-    "version": "26.4",
+    "version": "26.10",
     "description": "Caprice Forever is a Amstrad CPC emulator for Windows.",
     "homepage": "https://www.cpc-power.com/cpcarchives/index.php?page=articles&num=445",
     "license": "Unknown",
@@ -18,5 +18,7 @@
     "checkver": {
         "regex": "charger la version ([\\d\\.]+) \\(Win64\\)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
