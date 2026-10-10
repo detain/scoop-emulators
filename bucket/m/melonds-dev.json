@@ -1,12 +1,16 @@
 {
     "version": "3479-20260823-906e9eb",
     "description": "Nintendo DS emulator",
-    "homepage": "http://melonds.kuribo64.net/",
+    "homepage": "https://melonds.kuribo64.net/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
-            "hash": "d26318c7ec1eb68ff67138ca6fa507831f62bfd8b83b1f2a8fec55afa5f3abe0"
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/30483829067/melonDS-windows-x86_64.zip",
+            "hash": "6a48ada6026d816fd8d40d68e83d7fdc161a642e32f18fed5ff5ef9380b787d0"
+        },
+        "arm64": {
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/30483829067/melonDS-windows-arm64.zip",
+            "hash": "8867480d867f08a6f30af84474cb1eef89056aa68a535a8be2aab4daf5a33bb7"
         }
     },
     "installer": {
@@ -26,21 +30,33 @@
     ],
     "persist": "melonDS.ini",
     "checkver": {
-        "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&status=success",
+        "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&status=success&per_page=1",
         "script": [
-            "$sha = json_path $page $.workflow_runs[0].head_sha",
-            "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
-            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
+            "$run = json_path $page $.workflow_runs[0].run_number",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "$cont = (Invoke-WebRequest $artUrl).Content | ConvertFrom-Json",
-            "$artId = $cont.artifacts[0].id",
-            "Write-Output \"$runId $date $suiteId $artId $sha\""
+            "$runId = json_path $page $.workflow_runs[0].id",
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "Write-Output \"$run $date $runId $sha\""
         ],
-        "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<runid>\\d+) (?<commit>[\\da-f]{7})[\\da-f]+$",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/$matchRunid/melonDS-windows-x86_64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/runs/$matchRunid/artifacts",
+                    "regex": "\"name\":\\s*\"melonDS-windows-x86_64\"[\\s\\S]*?\"digest\":\\s*\"sha256:$sha256\""
+                }
+            },
+            "arm64": {
+                "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/$matchRunid/melonDS-windows-arm64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/runs/$matchRunid/artifacts",
+                    "regex": "\"name\":\\s*\"melonDS-windows-arm64\"[\\s\\S]*?\"digest\":\\s*\"sha256:$sha256\""
+                }
+            }
+        }
     }
 }
