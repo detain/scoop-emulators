@@ -1,5 +1,5 @@
 {
-    "version": "21.0",
+    "version": "22.0",
     "description": "Cycle-accurate MSX emulator",
     "homepage": "https://openmsx.org/",
     "license": "GPL-2.0-only",
@@ -24,5 +24,7 @@
     "checkver": {
         "regex": "openmsx-([\\d.]+)-windows-vc-x64-bin\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        
+    }
 }
