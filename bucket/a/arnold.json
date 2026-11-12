@@ -12,12 +12,12 @@
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/arnold/2004.01.04.7z",
     "hash": "958b55cac8f30cbf6a6bf2ec85768aef4765cad3ead621dd172a53cac6b51d73",
-    "bin": [
-        "Arnold.exe"
-    ],
+    "bin": "Arnold.exe",
     "checkver": {
-        "url": "http://arnold.cpc-live.com/Downloads.html",
-        "regex": "<td>Arnold v(\\d+\\.\\d+\\.\\d+)<\\/td>"
+        "url": "https://consolo.is.cc/emu/arnold/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/arnold/$version.7z"
+    }
 }

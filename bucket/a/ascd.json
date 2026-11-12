@@ -6,19 +6,18 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/ascd/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ascd/emulator_screen_01.jpg"
     ],
-    "version": "1.00",
-    "description": "ASCD is a Sam Coupe and Sinclair ZX Spectrum emulator.",
-    "homepage": "http://keprt.cz",
+    "version": "1.8",
+    "description": "SAM Coupe and Sinclair ZX Spectrum emulator",
+    "homepage": "http://www.keprt.cz/progs/ascd/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ascd/1.00.7z",
-    "hash": "09961fb001e49d34ab0b3227c6daefff867128857a4a435aa1bf62cdec8887d1",
-    "bin": [
-        "Ascd.exe"
-    ],
+    "url": "http://www.keprt.cz/progs/ascd/Ascd1.8.zip",
+    "hash": "58c36cd793d2fa0c1e6f97eefba2c603421baf51895e6d33acb2edb0d0db129d",
+    "bin": "Ascd.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ascd/"
+        "url": "http://www.keprt.cz/progs/ascd/",
+        "regex": "Ascd([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ascd/$version.7z"
+        "url": "http://www.keprt.cz/progs/ascd/Ascd$version.zip"
     }
 }

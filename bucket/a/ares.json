@@ -2,11 +2,11 @@
     "version": "148",
     "description": "Multi-system emulator focused on accuracy and preservation",
     "homepage": "https://ares-emulator.github.io/",
-    "license": "https://raw.githubusercontent.com/ares-emulator/ares/master/LICENSE",
+    "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/v141/ares-windows.zip",
-            "hash": "129a3a5bd8640db4424f241759a88debd51d6f432de8a2cf0874527bdcf1019b"
+            "url": "https://github.com/ares-emulator/ares/releases/download/v148/ares-windows-x64.zip",
+            "hash": "fa97958e1d359e3fe254353f87b6508f2762a959d7eb264c69965ad002037298"
         }
     },
     "extract_dir": "ares-v148",
@@ -42,9 +42,14 @@
         "Debugging"
     ],
     "checkver": {
-        "github": "https://github.com/ares-emulator/ares/"
+        "github": "https://github.com/ares-emulator/ares"
     },
     "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ares-emulator/ares/releases/download/v$version/ares-windows-x64.zip"
+            }
+        },
         "extract_dir": "ares-v$version"
     }
 }

@@ -6,18 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/aurex2/emulator_screen_01.jpg"
     ],
     "version": "rc4",
-    "description": "Aurex is a Ruputer emulator, It supports several applications & various games.",
-    "homepage": "http://www.megadriver.info/~fumi/aurex/",
+    "description": "Seiko Ruputer emulator",
+    "homepage": "https://www.megadriver.info/aurex/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/aurex2/rc4.7z",
-    "hash": "30db3b7e17ef3027d1b2c7b7da63b0ea51cd4c171b6fb17832b3332bc1b1ab2e",
-    "bin": [
-        "aurex.exe"
-    ],
+    "url": "https://www.megadriver.info/wp-content/uploads/2010/08/aurex2-rc4_win.zip",
+    "hash": "a43d9737042232dbe5821fdc710b52fd919b132368f45d16bb8a5b5b3308ec95",
+    "extract_dir": "aurex2-rc4_win",
+    "bin": "aurex.exe",
+    "persist": "aurex.ini",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/aurex2/"
+        "url": "https://www.megadriver.info/aurex/",
+        "regex": "aurex2-(rc\\d+)_win\\.zip",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/aurex2/$version.7z"
+        "url": "https://www.megadriver.info/wp-content/uploads/2010/08/aurex2-$version_win.zip",
+        "extract_dir": "aurex2-$version_win"
     }
 }

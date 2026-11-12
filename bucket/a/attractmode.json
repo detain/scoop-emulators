@@ -1,8 +1,8 @@
 {
     "version": "2.7.0",
-    "description": "Attract-Mode is a graphical front-end for command line emulators such as MAME, MESS and Nestopia. It hides the underlying operating system and is intended to be controlled with a joystick, gamepad or spin dial, making it ideal for use in arcade cabinet setups. Attract-Mode is open source and runs on Linux, Mac OS-X and Windows.",
+    "description": "Graphical frontend for command line emulators such as MAME, designed for arcade cabinets",
     "homepage": "http://attractmode.org/",
-    "license": "Unknown",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "32bit": {
             "url": "https://github.com/mickelson/attract/releases/download/v2.7.0/attract-v2.7.0-win32.zip",
@@ -15,8 +15,16 @@
     },
     "bin": "attract.exe",
     "checkver": {
-        "url": "http://attractmode.org/download.html",
-        "regex": "Attract-Mode ([\\d\\.]+) - 64-bit Binary"
+        "github": "https://github.com/mickelson/attract"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/mickelson/attract/releases/download/v$version/attract-v$version-win32.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/mickelson/attract/releases/download/v$version/attract-v$version-win64.zip"
+            }
+        }
+    }
 }

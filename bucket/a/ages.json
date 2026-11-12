@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/ages/0.30a.7z",
     "hash": "e8ce6f32202009433c5452fda49cfd0b6f120021227d2f50c643e06f1671bb59",
-    "bin": [
-        "AGES.exe"
-    ],
+    "bin": "AGES.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ages/"
+        "url": "https://consolo.is.cc/emu/ages/",
+        "regex": "([\\d.]+[a-z]?)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/ages/$version.7z"

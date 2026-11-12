@@ -7,24 +7,17 @@
     ],
     "version": "release1",
     "description": "The Apple I emulator has been updated a little using SDL so it runs on modern hardware/Windows. vPCB for DOS is lost forever, but the project has been revamped for the Palm platform.",
-    "homepage": "http://www.rittwage.com/dp.php?pg=apple",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/apple1/release1.7z",
-    "hash": "fa79681136da6662d45d4f67c496731026afe7731c9102196d69eb1e6f7035ef",
-    "bin": [
-        "apple1.exe"
-    ],
-    "architecture": {
-        "32bit": {
-            "url": "http://www.rittwage.com/apple1/apple1.exe",
-            "hash": "sha256:INSERT_HASH_HERE",
-            "extract_dir": "bin",
-            "bin": "apple1.exe"
-        }
-    },
+    "homepage": "https://rittwage.com/",
+    "license": "Freeware",
+    "url": "https://rittwage.com/archive/apple1emu.zip",
+    "hash": "9983ef7873203ca0eaad4f1cd59eab35c7e23366b2f5c5b0e9499a634c5aa286",
+    "bin": "apple1.exe",
     "checkver": {
-        "url": "http://www.rittwage.com/dp.php?pg=apple",
-        "regex": "<h2>Download Apple 1 Emulator \\(version (\\d+\\.\\d+\\.\\d+)\\)</h2>"
+        "url": "https://rittwage.com/",
+        "regex": "archive/apple1emu\\.zip",
+        "replace": "release1"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://rittwage.com/archive/apple1emu.zip"
+    }
 }

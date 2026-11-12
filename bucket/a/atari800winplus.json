@@ -7,18 +7,25 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/atari800winplus/emulator_screen_01.jpg"
     ],
     "version": "4.0",
-    "description": "Atari800Win Plus is an emulator that is based off the Atari800 kernel and the Atari800Win sources. It features nearly 100% compatability, stereo sound, multiple video modes, support for compressed disk images, and MUCH more.",
-    "homepage": "http://atariarea.krap.pl/PLus/index_us.htm",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/atari800winplus/4.0.7z",
-    "hash": "ab09583f763dd61a4f835e86a8110b17eeffbfe9b76ab64ab53de38615662524",
-    "bin": [
-        "Atari800WinPLus/*"
+    "description": "Atari 800/XL/XE/5200 emulator based on Atari800",
+    "homepage": "https://atariarea.krap.pl/PLus/index_us.htm",
+    "license": "GPL-2.0-or-later",
+    "url": "https://atariarea.krap.pl/PLus/files/Atari800Win%20PLus%204.0.zip",
+    "hash": "ffdf9ea2cfa127df2ef9ba19c58d772f8518bd2a901739958c1b310a46dd7cc9",
+    "extract_dir": "Atari800Win",
+    "bin": "Atari800Win.exe",
+    "shortcuts": [
+        [
+            "Atari800Win.exe",
+            "Atari800Win PLus"
+        ]
     ],
     "checkver": {
-        "mode": "regex",
-        "regex": "version ([\\d\\.]+)",
-        "url": "http://atariarea.krap.pl/PLus/index_us.htm"
+        "url": "https://atariarea.krap.pl/PLus/downloads_us.htm",
+        "regex": "Atari800Win PLus ([\\d.]+)\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://atariarea.krap.pl/PLus/files/Atari800Win%20PLus%20$version.zip",
+        "extract_dir": "Atari800Win"
+    }
 }

@@ -1,15 +1,15 @@
 {
-    "version": "2577-20250101-cc17a2f",
-    "description": "ares is a multi-system emulator that began development on October 14th, 2004. It is a descendent of higan and bsnes, and focuses on accuracy and preservation.",
+    "version": "490-20260923-4cb8d92",
+    "description": "Multi-system emulator focused on accuracy and preservation (development version)",
     "homepage": "https://github.com/ares-emulator/ares",
-    "license": "https://raw.githubusercontent.com/ares-emulator/ares/master/LICENSE",
+    "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/nightly/ares-windows.zip",
-            "hash": "aff1e5341cff6a98c025727d2c93ee8f0f5759cb454c7b092059643f80f0eec6"
+            "url": "https://nightly.link/ares-emulator/ares/workflows/push/master/ares-windows-x64.zip",
+            "hash": "89b2f79837c11e914bece01f04bd4938945cfe1fe4ab533019eab6ecbbf9bd3a"
         }
     },
-    "extract_dir": "ares-nightly",
+    "pre_install": "Expand-7zipArchive \"$dir\\ares-windows-x64.tar.xz\" \"$dir\" -Removal",
     "bin": "ares.exe",
     "shortcuts": [
         [
@@ -42,7 +42,7 @@
         "Debugging"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/ares-emulator/ares/actions/workflows/build.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/ares-emulator/ares/actions/workflows/push.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
@@ -53,6 +53,10 @@
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        "url": "https://github.com/ares-emulator/ares/releases/download/nightly/ares-windows.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/ares-emulator/ares/workflows/push/master/ares-windows-x64.zip"
+            }
+        }
     }
 }

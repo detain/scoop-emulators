@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/archie/0.9.7z",
     "hash": "f7e1f4d18fa21a0d2114386617f3c20891a291b192e7c0fe376c0d94a2628d46",
-    "bin": [
-        "ARCHIE.EXE"
-    ],
+    "bin": "ARCHIE.EXE",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/archie/"
+        "url": "https://consolo.is.cc/emu/archie/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/archie/$version.7z"

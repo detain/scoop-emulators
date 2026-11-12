@@ -10,15 +10,15 @@
     "description": "ace is an emulator capable of running a selection of games from the Capcom CPS1 and CPS2, the SNK NeoGeo and the Sega System 16 and System 18. The project was discontinued as the author had a hard drive crash and lost the source code.",
     "homepage": "http://ace.emuunlim.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ace/1.9.7z",
-    "hash": "f96e9b451d6f2fb092c59845a88b5d04ae4a8e0cccaa83177e4504f77c56f7e9",
-    "bin": [
-        "ace.exe"
-    ],
+    "url": "http://ace.emuunlim.com/download/ace19.zip",
+    "hash": "1b2ea98a115e7241db88b5479d109772a5a1819f428d534f1f40e3871d338789",
+    "bin": "ace.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ace/"
+        "url": "http://ace.emuunlim.com/",
+        "regex": "download/ace(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ace/$version.7z"
+        "url": "http://ace.emuunlim.com/download/ace$cleanVersion.zip"
     }
 }

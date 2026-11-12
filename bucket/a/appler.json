@@ -11,11 +11,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/appler/release1.7z",
     "hash": "5481e7649c9b385530e96844d28f300b6b39b553e287111429952c68339655c0",
-    "bin": [
-        "APPLER.COM"
-    ],
+    "bin": "APPLER.COM",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/appler/"
+        "url": "https://consolo.is.cc/emu/appler/",
+        "regex": "(release\\d+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/appler/$version.7z"

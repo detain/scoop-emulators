@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/apollo/0.10b.7z",
     "hash": "fba3377d8a3e0c95ed5b06a4a62eed53fb9b06e413ec9b073aaeeb8e6e728262",
-    "bin": [
-        "Apollo.exe"
-    ],
+    "bin": "Apollo.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/apollo/"
+        "url": "https://consolo.is.cc/emu/apollo/",
+        "regex": "([\\d.]+[a-z]?)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/apollo/$version.7z"

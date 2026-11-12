@@ -9,20 +9,15 @@
     "description": "The Portable Coleco ADAM Emulator",
     "homepage": "http://www.komkon.org/~dekogel/adamem.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/adamem/1.0-dos.7z",
-    "hash": "e53e7be3597681c5e205548e70c789c8048649422993121136ff61497e393d9d",
-    "bin": [
-        "adamem.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/adamem/1.0-dos.7z",
-            "hash": "e53e7be3597681c5e205548e70c789c8048649422993121136ff61497e393d9d"
-        }
-    },
+    "url": "http://www.komkon.org/~dekogel/files/coleco/adamem.zip",
+    "hash": "48665123b7afad5a908c15340e392f269e967d393e92517d81553c07c9e1fccc",
+    "bin": "ADAMEM.EXE",
     "checkver": {
         "url": "http://www.komkon.org/~dekogel/adamem.html",
-        "regex": "adamem ([\\d\\.]+)"
+        "regex": "ADAMEm MS-DOS ([\\d.]+) binaries",
+        "replace": "${1}-dos"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://www.komkon.org/~dekogel/files/coleco/adamem.zip"
+    }
 }

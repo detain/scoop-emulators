@@ -11,11 +11,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/apfemuw/2.0.1v2.7z",
     "hash": "dfbd2e29a462763fa1fe2f10860a201fd823b07a3efbde2ed733c44e418a71d7",
-    "bin": [
-        "APF_EMUW.exe"
-    ],
+    "bin": "APF_EMUW.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/apfemuw/"
+        "url": "https://consolo.is.cc/emu/apfemuw/",
+        "regex": "([\\d.]+v\\d+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/apfemuw/$version.7z"

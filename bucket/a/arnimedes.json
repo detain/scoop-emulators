@@ -7,18 +7,19 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/arnimedes/emulator_screen_01.jpg"
     ],
     "version": "1.02",
-    "description": "ARNIMEDES is an Amstrad CPC emulator. NOTE: Emulator appears to only run in Fullscreen mode.",
-    "homepage": "http://arnimedes.de",
+    "description": "Amstrad CPC emulator (runs fullscreen only)",
+    "homepage": "http://arnimedes.de/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/arnimedes/1.02.7z",
-    "hash": "410d332d6e079078a7e5b922c03d1a86506f63c595f74544b342070c001b19f2",
-    "bin": [
-        "WinArnie.exe"
-    ],
+    "url": "http://arnimedes.de/arnie102.zip",
+    "hash": "12bf226d63ac8af183e7b367a85a7ab356a8c88dabcfe6fb6693ff8d0dd4425f",
+    "bin": "WinArnie.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/arnimedes/"
+        "url": "http://arnimedes.de/download.html",
+        "regex": "arnie(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/arnimedes/$version.7z"
+        "url": "http://arnimedes.de/arnie$cleanVersion.zip"
     }
 }
