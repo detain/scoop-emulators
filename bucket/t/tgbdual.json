@@ -8,20 +8,23 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2015/03/TGB-Dual-GBC-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2015/03/TGB-Dual-GBC-Emulator-Pic-02.png"
     ],
     "version": "8.3",
-    "description": "TGB Dual was one of the first GBC emulators to implement the  Game Boy link functionality. TGB Dual uses TCP networking to allow users to connect over the internet or to another instance running on the same computer.",
-    "homepage": "http://gigo.retrogames.com/",
+    "description": "Nintendo Game Boy / Game Boy Color emulator with link cable support",
+    "homepage": "https://gigo.retrogames.com/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/tgbdual/8.3.7z",
     "hash": "3e0da16e038e8a5a11a2cdf83a1c08e8fea64d4ad291918a321f49d142783733",
-    "bin": [
-        "snesgt.exe"
+    "bin": "TGB_Dual.exe",
+    "shortcuts": [
+        [
+            "TGB_Dual.exe",
+            "TGB Dual"
+        ]
     ],
     "checkver": {
-        "url": "http://gigo.retrogames.com/snesgt.html",
-        "regex": "<b>Latest Version:</b> ([\\d.]+)"
+        "url": "https://consolo.is.cc/emu/tgbdual/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "http://gigo.retrogames.com/snesgt.html",
-        "hash": "md5:cd64e43fa53684c8be3d3b9a702d747f"
+        "url": "https://consolo.is.cc/emu/tgbdual/$version.7z"
     }
 }

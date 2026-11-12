@@ -7,17 +7,33 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/tilem/emulator_screen_01.jpg"
     ],
     "version": "2.0",
-    "description": "TI Linux Emulator - TI-73, TI-82, TI-83, TI-83+, TI-83+ SE, TI-84+, and TI-84+ SE emulator",
+    "description": "Texas Instruments Z80-based graphing calculator emulator and debugger",
     "homepage": "http://lpg.ticalc.org/prj_tilem/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/tilem/2.0.7z",
-    "hash": "6c7bfb3e50e5499e8f789c8e3fd9d307662831cf0f94732e82fd4b9b4087cfdb",
+    "license": "GPL-3.0-or-later",
+    "notes": "TilEm needs a ROM image dumped from your own calculator.",
+    "url": "https://downloads.sourceforge.net/project/tilem/tilem/2.0/tilem-2.0-win32.zip",
+    "hash": "sha1:ce7e499cff1fc28e207a083f3ff1e10554136ea4",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\tilem-$version.exe\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
     "bin": [
-        "tilem"
+        [
+            "tilem2.exe",
+            "tilem"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "tilem2.exe",
+            "TilEm"
+        ]
     ],
     "checkver": {
-        "url": "http://lpg.ticalc.org/prj_tilem/download.html",
-        "regex": "tilem-(.*?)\\.tar\\.gz"
+        "url": "https://sourceforge.net/projects/tilem/rss",
+        "regex": "tilem/([\\d.]+)/tilem-[\\d.]+-win32\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/tilem/tilem/$version/tilem-$version-win32.zip"
+    }
 }
