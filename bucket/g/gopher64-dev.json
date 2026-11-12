@@ -1,5 +1,5 @@
 {
-    "version": "4591-20261112-e76d204",
+    "version": "4594-20261112-5f97c1f",
     "description": "Nintendo 64 emulator focused on accuracy and compatibility (development version)",
     "homepage": "https://github.com/gopher64/gopher64",
     "license": "GPL-3.0-only",
@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-x86_64.zip",
-            "hash": "fa027fadf4afaba3bec40d019283a818f55945d071abf55a3523ac8e0657e4fb",
+            "hash": "469e4f187de66335817b3d58c5ec456663ad4495c6d129c0d74029076e00c7c6",
             "bin": [
                 [
                     "gopher64-windows-x86_64.exe",
@@ -23,7 +23,7 @@
         },
         "arm64": {
             "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-aarch64.zip",
-            "hash": "89c3f112cd75cbd41df24b3eb986a78916a3d27ab8ce9888d51382c9c810f3a6",
+            "hash": "b2e3402be52819b363130b37026641f3750dfee1ad3343ac3ecd91ac91901e9f",
             "bin": [
                 [
                     "gopher64-windows-aarch64.exe",
