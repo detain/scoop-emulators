@@ -7,26 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ql2k/emulator_screen_01.jpg"
     ],
     "version": "1.01-win64",
-    "description": "meisei is an MSX emulator. NOTE: BIOS is NOT required but will improve emulation and allow access to extra features.",
+    "description": "Sinclair QL emulator",
     "homepage": "http://www.jadiam.org/QL/",
-    "license": "MIT",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/ql2k/1.01-win64.7z",
     "hash": "6f13ce3d763bf9cd0d2a74b37edb34015300f32c268511d4bc29dea0ee898704",
-    "bin": [
-        "ql2k.exe"
+    "bin": "QL2K-x64.exe",
+    "shortcuts": [
+        [
+            "QL2K-x64.exe",
+            "QL2K"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/ql2k/1.01-win64.7z",
-            "hash": "6f13ce3d763bf9cd0d2a74b37edb34015300f32c268511d4bc29dea0ee898704"
-        }
-    },
-    "version_scheme": "major.minor.patch",
-    "version_separator": "-",
     "checkver": {
-        "mode": "regex",
-        "url": "http://www.jadiam.org/QL/",
-        "regex": "<a href=\"ql2k.zip\">ql2k-(.*?)\\.zip"
+        "url": "https://consolo.is.cc/emu/ql2k/",
+        "regex": "([\\d.]+-win64)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/ql2k/$version.7z"
+    }
 }
