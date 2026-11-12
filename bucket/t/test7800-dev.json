@@ -1,0 +1,37 @@
+{
+    "version": "20261031",
+    "description": "Experimental Atari 7800 emulator (development version)",
+    "homepage": "https://github.com/JetSetIlly/test7800",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JetSetIlly/test7800/releases/download/nightly/test7800_windows_amd64.exe#/test7800.exe",
+            "hash": "0f5441ca6d998027e2ad41c5eca19f87c767f0277c3635feae8cfeade9a578b5"
+        }
+    },
+    "bin": [
+        [
+            "test7800.exe",
+            "test7800-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "test7800.exe",
+            "Test7800 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/JetSetIlly/test7800/releases/tags/nightly",
+        "jsonpath": "$.assets[?(@.name == 'test7800_windows_amd64.exe')].updated_at",
+        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JetSetIlly/test7800/releases/download/nightly/test7800_windows_amd64.exe#/test7800.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "version": "17",
+    "description": "IBM PC and compatibles emulator (8088 to Pentium-era machines)",
+    "homepage": "https://github.com/sarah-walker-pcem/pcem",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "PCem requires machine/video BIOS ROM images. Place them in $persist_dir\\roms (see roms\\*\\roms.txt for the expected files).",
+        "This emulator is no longer developed."
+    ],
+    "url": "https://github.com/sarah-walker-pcem/pcem/releases/download/v17/PCemV17Win.zip",
+    "hash": "3f309d6b19f9c3a1fc4c256c53589f812fc5a4c4bfb84636ad325e02149460e1",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pcem.cfg\")) {",
+        "    New-Item \"$dir\\pcem.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "PCem.exe",
+            "pcem"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PCem.exe",
+            "PCem"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "nvr",
+        "configs",
+        "screenshots",
+        "pcem.cfg"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/sarah-walker-pcem/pcem/releases/download/v$version/PCemV$versionWin.zip"
+    }
+}

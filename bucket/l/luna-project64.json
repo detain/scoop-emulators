@@ -1,0 +1,28 @@
+{
+    "version": "3.7.3",
+    "description": "Nintendo 64 emulator, a Project64 3.0.1 fork focused on romhacks with bundled plugins and no nagware",
+    "homepage": "https://github.com/Luna-Project64/Luna-Project64",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/Luna-Project64/Luna-Project64/releases/download/v3.7.3/Project64.zip",
+    "hash": "32e2a89d01f97740baea3b04cb4b16dfd069af1e082b3221302f5b4413a5b3ee",
+    "bin": [
+        [
+            "Project64.exe",
+            "luna-project64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Project64.exe",
+            "Luna's Project64"
+        ]
+    ],
+    "persist": [
+        "Save",
+        "Screenshots"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Luna-Project64/Luna-Project64/releases/download/v$version/Project64.zip"
+    }
+}

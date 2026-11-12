@@ -1,0 +1,35 @@
+{
+    "version": "2418-20261110-1cebe9a",
+    "description": "Experimental Sony PlayStation 5 emulator (development version)",
+    "homepage": "https://sharpemu.app",
+    "license": "GPL-2.0-or-later",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+    "url": "https://nightly.link/sharpemu/sharpemu/workflows/workflow/main/sharpemu-win-x64-1cebe9a.zip",
+    "hash": "a68a11f02511f23b7f4d5beb2d314b32c0ac187462a0f8ac465f5ec9eff93d9c",
+    "bin": [
+        [
+            "SharpEmu.exe",
+            "sharpemu-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SharpEmu.exe",
+            "SharpEmu (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/sharpemu/sharpemu/actions/workflows/workflow.yml/runs?branch=main&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/sharpemu/sharpemu/workflows/workflow/main/sharpemu-win-x64-$matchHash.zip"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "version": "51-20261109-071db8b",
+    "description": "Apple 1 emulator (development version)",
+    "homepage": "https://github.com/habib256/POM1",
+    "license": "GPL-3.0-only",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+    "url": "https://nightly.link/habib256/POM1/workflows/release/main/POM1-Windows-zip.zip",
+    "hash": "77082699e1983064aefa2d2ac7dd654b951953bf52257e6d1e839419c2e3b362",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\POM1-Windows-*.zip\" | ForEach-Object {",
+        "    Expand-7zipArchive $_.FullName $dir -Removal",
+        "}"
+    ],
+    "bin": [
+        [
+            "POM1.exe",
+            "pom1-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "POM1.exe",
+            "POM1 (dev)"
+        ]
+    ],
+    "persist": [
+        "sdcard",
+        "cfcard"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/habib256/POM1/actions/workflows/release.yml/runs?branch=main&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/habib256/POM1/workflows/release/main/POM1-Windows-zip.zip"
+    }
+}

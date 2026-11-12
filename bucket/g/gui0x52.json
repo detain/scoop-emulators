@@ -1,0 +1,26 @@
+{
+    "version": "2019.02.10",
+    "description": "Sega Master System emulator written in C/SFML (no sound emulation)",
+    "homepage": "https://github.com/MS-DOS1999/Master-System-Emu_Gui0x52",
+    "license": "Unknown",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Upstream released only one unnumbered build (\"Chili Hot Dog Version\"); the version is its release date."
+    ],
+    "url": "https://github.com/MS-DOS1999/Master-System-Emu_Gui0x52/releases/download/Chili_Hot_Dog/Gui0x52-Chili.Hot.Dog.Version.zip",
+    "hash": "ab4d1f79d1333a3512c8efe9ae244c7f89cbbb6d1957ece4bd0269fb445bbb29",
+    "extract_dir": "Gui0x52-Chili Hot Dog Version",
+    "bin": [
+        [
+            "Gui0x52.exe",
+            "gui0x52"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Gui0x52.exe",
+            "Gui0x52"
+        ]
+    ],
+    "persist": "Config"
+}

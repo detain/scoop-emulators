@@ -1,0 +1,31 @@
+{
+    "version": "1.0.35",
+    "description": "HP 15C scientific RPN calculator emulator for the desktop",
+    "homepage": "https://www.thgsoft.ch/HP15c_EN.html",
+    "license": "Shareware",
+    "notes": "The unregistered version is fully functional but shows an About message.",
+    "url": "https://www.thgsoft.ch/HP15c.zip",
+    "hash": "4f29458879bd082a5590a93eda2b2430fdba8e4c06eceb6c26da3d8e045b6d2b",
+    "extract_dir": "HP15c",
+    "bin": [
+        [
+            "HP15c.exe",
+            "hp15c"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HP15c.exe",
+            "HP15c"
+        ]
+    ],
+    "persist": "HP15c.ini",
+    "checkver": {
+        "url": "https://www.thgsoft.ch/HP15c_EN.html",
+        "regex": "Version\\s+([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.thgsoft.ch/HP15c.zip",
+        "extract_dir": "HP15c"
+    }
+}

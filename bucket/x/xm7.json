@@ -5,20 +5,38 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xm7/emulator_screen_01.jpg"
     ],
-    "version": "3.4L62",
-    "description": "XM7 is an emulator for the Fujitsu FM-7. NOTE: Emulator and Website are in Japanese.",
-    "homepage": "http://xm7.la.coocan.jp/xm7/xm7.html",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/xm7/3.4L62.7z",
-    "hash": "e9fd32f020849d8f930168aa809127444c173ef578f92218741ca5b7e2ae3885",
-    "bin": [
-        "xm7*.exe"
+    "version": "r50",
+    "description": "Fujitsu FM-7/FM77AV/FM77AV40EX emulator (XM7dash V3.4 build, Japanese)",
+    "homepage": "http://retropc.net/pi/xm7/index.html",
+    "license": "CC-BY-NC-SA-4.0",
+    "notes": "Place the FM77AV40EX/SX ROM files (FBASIC30.ROM, INITIATE.ROM, SUBSYS_*.ROM, ...) in $dir",
+    "url": "http://retropc.net/pi/xm7/xm7dash_r50.zip",
+    "hash": "d62b8e00175cc55e130cbe2d757256a589ac20346742c85e67e53ff755de4659",
+    "pre_install": [
+        "Expand-ZipArchive \"$dir\\xm7dash34$version.zip\" \"$dir\"",
+        "Get-ChildItem \"$dir\\*.zip\" | Remove-Item -Force",
+        "if (!(Test-Path \"$persist_dir\\XM7.ini\")) {",
+        "    New-Item \"$dir\\XM7.ini\" -Type File | Out-Null",
+        "}"
     ],
+    "bin": [
+        [
+            "XM7.exe",
+            "xm7"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "XM7.exe",
+            "XM7"
+        ]
+    ],
+    "persist": "XM7.ini",
     "checkver": {
-        "url": "http://xm7.la.coocan.jp/xm7/xm7.html",
-        "regex": "xm7-bin.zip"
+        "url": "http://retropc.net/pi/xm7/index.html",
+        "regex": "xm7dash_(r\\d+)\\.zip"
     },
     "autoupdate": {
-        "url": "http://xm7.la.coocan.jp/xm7/xm7.html"
+        "url": "http://retropc.net/pi/xm7/xm7dash_$version.zip"
     }
 }

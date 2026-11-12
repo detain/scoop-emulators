@@ -1,0 +1,32 @@
+{
+    "version": "1.01",
+    "description": "Nintendo SNES emulator based on higan, with headered and zipped ROM loading",
+    "homepage": "https://github.com/ZopharsDomain/SNES-WINDOWS-Lunar-SNES",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://raw.githubusercontent.com/ZopharsDomain/SNES-WINDOWS-Lunar-SNES/414d7666ea48a5fb9577c30957feb7baed98cd0b/LunarSNES.exe",
+    "hash": "6591ac8c289c456b4ef035d8db5016f4d33cce822bac24cec9007459adc8741c",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.bml\")) {",
+        "    New-Item \"$dir\\settings.bml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "LunarSNES.exe",
+            "lunarsnes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "LunarSNES.exe",
+            "Lunar SNES"
+        ]
+    ],
+    "persist": [
+        "Saves",
+        "States",
+        "Cheats",
+        "settings.bml"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "version": "2.4",
+    "description": "All-in-one emulator launcher that lists your games and launches them with the chosen emulator",
+    "homepage": "http://soggymustache.net/emucab.html",
+    "license": "Freeware",
+    "notes": "This launcher is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://github.com/0SoggyMustache0/0SoggyMustache0.github.io/raw/2e1996a978930c86ffd01e410bcd45b1be0a6249/jar/EmulatorCabinet.jar",
+    "hash": "fcada572f10c43f44e0a4bc8e11f9f510eedc54c9d5a4b585d348f464021ee52",
+    "bin": [
+        [
+            "EmulatorCabinet.jar",
+            "emulatorcabinet"
+        ]
+    ]
+}

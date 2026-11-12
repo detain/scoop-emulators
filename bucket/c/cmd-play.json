@@ -1,0 +1,20 @@
+{
+    "version": "2.5",
+    "description": "NEC PC-8801 N88-BASIC CMD PLAY statement emulator (FM/SSG/MIDI MML music player) for the command line",
+    "homepage": "https://github.com/katahiromz/cmd_play",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/katahiromz/cmd_play/blob/main/LICENSE.txt"
+    },
+    "url": "https://github.com/katahiromz/cmd_play/releases/download/2.5/cmd_play-2.5-x86.zip",
+    "hash": "446256cd427202a30ce4642d4c94598230e465ae7a1d71aaa70de03b19a6a4b6",
+    "extract_dir": "cmd_play-2.5-x86",
+    "bin": "cmd_play.exe",
+    "checkver": {
+        "github": "https://github.com/katahiromz/cmd_play"
+    },
+    "autoupdate": {
+        "url": "https://github.com/katahiromz/cmd_play/releases/download/$version/cmd_play-$version-x86.zip",
+        "extract_dir": "cmd_play-$version-x86"
+    }
+}

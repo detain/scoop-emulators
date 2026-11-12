@@ -1,0 +1,37 @@
+{
+    "version": "1.0.0",
+    "description": "Nintendo Game Boy Advance emulator, an mGBA fork with direct-IP online rooms and per-player controller settings",
+    "homepage": "https://github.com/GamesExObscura/mGBAX",
+    "license": "MPL-2.0",
+    "notes": "Portable mode is enabled (portable.ini ships with the app); settings are kept in $persist_dir",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GamesExObscura/mGBAX/releases/download/v1.0.0/mGBAX-v1.0.0-win64.zip",
+            "hash": "3a16bd3a97b0b02b5201624f1b0db1fd742ddc9240c7977106c590fa3f1f371d"
+        }
+    },
+    "bin": [
+        [
+            "mGBAX.exe",
+            "mgbax"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mGBAX.exe",
+            "mGBAX"
+        ]
+    ],
+    "persist": [
+        "config.ini",
+        "qt.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GamesExObscura/mGBAX/releases/download/v$version/mGBAX-v$version-win64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "9.1",
+    "description": "Sinclair ZX Spectrum emulator",
+    "homepage": "https://www.spectaculator.com/",
+    "license": "Shareware",
+    "notes": [
+        "Spectaculator is commercial software with a 30-day free trial; purchase a licence at https://www.spectaculator.com/",
+        "Requires the DirectX 9.0c End-User Runtime (d3dx9_42.dll)."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://www.spectaculator.com/download/spectaculator/9.1/Spectaculator91.msi",
+    "hash": "601e4c87f4cbf188aa5643294a91c7fbf2116cf68bf466e2d81d0f4d6404c9df",
+    "extract_dir": "Spectaculator",
+    "bin": "Spectaculator.exe",
+    "shortcuts": [
+        [
+            "SpecStub.exe",
+            "Spectaculator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.spectaculator.com/",
+        "regex": "Spectaculator ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url": "https://www.spectaculator.com/download/spectaculator/$version/Spectaculator$cleanVersion.msi"
+    }
+}

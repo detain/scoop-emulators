@@ -1,0 +1,35 @@
+{
+    "version": "2016-05-01",
+    "description": "Nintendo Entertainment System emulator, FCE Ultra with many additional mappers (FCEUmm)",
+    "homepage": "http://cah4e3.shedevr.org.ru/fceultra.php",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is no longer developed; all its mappers are now supported by FCEUX.",
+        "This is the last WIP build published by the author, who describes it as buggy and intended for testing."
+    ],
+    "url": "http://cah4e3.shedevr.org.ru/dumping/fceu.rar",
+    "hash": "e6ff663010be50be234090b8f25d0781fae173bcd554d3558a41e65c7678f47b",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\fceu.cfg\")) {",
+        "    New-Item \"$dir\\fceu.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "fceu.exe",
+            "fceumm"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "fceu.exe",
+            "FCEUmm"
+        ]
+    ],
+    "persist": [
+        "fcs",
+        "sav",
+        "snaps",
+        "fceu.cfg"
+    ]
+}

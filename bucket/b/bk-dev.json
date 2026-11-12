@@ -1,0 +1,88 @@
+{
+    "version": "4.6.2607.10184",
+    "description": "Soviet Elektronika BK-0010, BK-0010.01, BK-0011 and BK-0011M emulator (development version)",
+    "homepage": "https://gid.pdp-11.ru/",
+    "license": "Freeware",
+    "notes": "This is the 4.x beta series published at https://gid.pdp-11.ru/beta/",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gid.pdp-11.ru/f/b4.6.2607.10184/BK_v4.6_x64_beta.7z",
+            "hash": "79aea0cbfb4cea319b45874f957f919b3765b4bdd49670c320d9bdc7ba990624",
+            "extract_dir": "Release_x64",
+            "bin": [
+                [
+                    "BK_x64.exe",
+                    "bk-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "BK_x64.exe",
+                    "BK Emulator (dev)"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://gid.pdp-11.ru/f/b4.6.2607.10184/BK_v4.6_x86_beta.7z",
+            "hash": "05aba6ddb6fa76984cfc07056dc3080c02aaad7bc1ea5845bdf9fb9c4551f9c9",
+            "extract_dir": "Release",
+            "bin": [
+                [
+                    "BK.exe",
+                    "bk-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "BK.exe",
+                    "BK Emulator (dev)"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://gid.pdp-11.ru/f/b4.6.2607.10184/BK_v4.6_ARM64_beta.7z",
+            "hash": "654a7d977876710ea130c5b02f2250e877713602ccfb416368fd40fc158f5f4d",
+            "extract_dir": "Release_ARM64",
+            "bin": [
+                [
+                    "BK_ARM64.exe",
+                    "bk-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "BK_ARM64.exe",
+                    "BK Emulator (dev)"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "bk.ini",
+        "UserSaves",
+        "Screenshots"
+    ],
+    "checkver": {
+        "url": "https://gid.pdp-11.ru/beta/",
+        "regex": "/f/b([\\d.]+)/BK_v[\\d.]+_x64_beta\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gid.pdp-11.ru/f/b$version/BK_v$majorVersion.$minorVersion_x64_beta.7z",
+                "extract_dir": "Release_x64"
+            },
+            "32bit": {
+                "url": "https://gid.pdp-11.ru/f/b$version/BK_v$majorVersion.$minorVersion_x86_beta.7z",
+                "extract_dir": "Release"
+            },
+            "arm64": {
+                "url": "https://gid.pdp-11.ru/f/b$version/BK_v$majorVersion.$minorVersion_ARM64_beta.7z",
+                "extract_dir": "Release_ARM64"
+            }
+        }
+    }
+}

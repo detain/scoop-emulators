@@ -1,0 +1,53 @@
+{
+    "version": "57-20261110-dc115ac",
+    "description": "Sony PlayStation 2 emulator (development version)",
+    "homepage": "https://github.com/allkern/iris",
+    "license": "MIT",
+    "notes": [
+        "A PlayStation 2 BIOS dump is required; select it in the settings.",
+        "Development builds come from GitHub Actions artifacts of the dev branch (via nightly.link), which expire after about 90 days."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-amd64.zip",
+            "hash": "72b2950eb4de7cc5b670d8f154be655e0006545b12ce9324f6eac17cbef8b5eb"
+        },
+        "arm64": {
+            "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-arm64.zip",
+            "hash": "f93fb61efa6b811533fb6322c65415c6cbb95f9233c86a1fe531cb8d69ac50fd"
+        }
+    },
+    "bin": [
+        [
+            "iris.exe",
+            "iris-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "iris.exe",
+            "Iris (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/allkern/iris/actions/workflows/build.yml/runs?branch=dev&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-arm64.zip"
+            }
+        }
+    }
+}

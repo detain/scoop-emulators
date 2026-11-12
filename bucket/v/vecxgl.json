@@ -6,19 +6,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vecxgl/emulator_screen_01.jpg"
     ],
     "version": "1.2",
-    "description": "VecXGL is a GCE Vectrex emulator based on vecx by Valavan Manohararajah.",
-    "homepage": "http://jum.pdroms.de/emulators/emul.html",
+    "description": "GCE Vectrex emulator using OpenGL, based on vecx",
+    "homepage": "https://jum.pdroms.de/emulators/emul.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vecxgl/1.2.7z",
-    "hash": "86b84d8086d9067a479b6e5daba8fec2f5818121b080da04fea8658521d72ef4",
+    "url": "https://jum.pdroms.de/emulators/VecXGL_20070905.zip",
+    "hash": "3ffee9722d72fea7cb22299b8b555e1a735f2579cc3de51a632e86bf8eef31ad",
+    "extract_dir": "VecXGL_20070905",
     "bin": [
-        "vecxgl.exe"
+        [
+            "vecxgl.exe",
+            "vecxgl"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/vecxgl/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vecxgl/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "vecxgl.exe",
+            "VecX/GL"
+        ]
+    ]
 }

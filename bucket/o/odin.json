@@ -1,0 +1,25 @@
+{
+    "version": "0.1.1",
+    "description": "SEGA Hikaru arcade board emulator",
+    "homepage": "https://github.com/Tovarichtch/Odin",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Odin requires the MAME 'hikaru' BIOS set and the game ROM sets.",
+        "Settings, saves and states are stored in %APPDATA%\\odin."
+    ],
+    "url": "https://github.com/Tovarichtch/Odin/releases/download/v0.1.1/odin-v0.1.1-windows-x86_64.zip",
+    "hash": "9a7dc43508c1b65699b74c1798b24aa105693a8ae8725fb70f4fa221f03c7a92",
+    "extract_dir": "odin-v0.1.1-windows-x86_64",
+    "bin": "odin.exe",
+    "shortcuts": [
+        [
+            "odin.exe",
+            "Odin"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Tovarichtch/Odin/releases/download/v$version/odin-v$version-windows-x86_64.zip",
+        "extract_dir": "odin-v$version-windows-x86_64"
+    }
+}

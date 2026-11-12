@@ -1,0 +1,38 @@
+{
+    "version": "0.081",
+    "description": "Japanese emulator frontend and ROM database/auditor using OfflineList-style lists",
+    "homepage": "http://oljap.web.fc2.com/gamedb.html",
+    "license": "Freeware",
+    "notes": [
+        "This frontend is no longer developed; its interface is Japanese only.",
+        "The author only tested 32-bit Windows XP/Vista/7.",
+        "Download data.dat and the per-system list files from the homepage and place them in $dir."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2010": "extras/vcredist2010"
+    },
+    "url": "http://oljap.web.fc2.com/GameDB.zip",
+    "hash": "49ec3731888b2bcb4fb6975e93b6a47c7ebfd68de8bdfd13c4b43fd318cce06b",
+    "extract_dir": "GameDB",
+    "bin": "GameDB.exe",
+    "shortcuts": [
+        [
+            "GameDB.exe",
+            "GameDB"
+        ]
+    ],
+    "persist": [
+        "cache",
+        "image",
+        "movie",
+        "save"
+    ],
+    "checkver": {
+        "url": "http://oljap.web.fc2.com/gamedb.html",
+        "regex": "GameDB\\.zip\"[^v]*v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://oljap.web.fc2.com/GameDB.zip",
+        "extract_dir": "GameDB"
+    }
+}

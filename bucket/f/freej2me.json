@@ -1,0 +1,32 @@
+{
+    "version": "2018-09-07",
+    "description": "J2ME (Java ME) mobile phone emulator with AWT, SDL2 and libretro frontends",
+    "homepage": "https://github.com/hex007/freej2me",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Requires a Java runtime.",
+        "Run with: freej2me \"file:///C:/path/to/game.jar\" [width] [height] [scale]",
+        "For the actively developed fork, see FreeJ2ME-Plus."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/freej2me/freej2me_2018-09-07.zip",
+    "hash": "44647cd10eebc18c63722833c8a1a11e3e7cbed4060e78dc8713e4bc2242747e",
+    "extract_dir": "freej2me\\build",
+    "bin": "freej2me.jar",
+    "shortcuts": [
+        [
+            "freej2me.jar",
+            "FreeJ2ME"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/freej2me/rss?path=/",
+        "regex": "freej2me_([\\d-]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/freej2me/freej2me_$version.zip",
+        "extract_dir": "freej2me\\build"
+    }
+}

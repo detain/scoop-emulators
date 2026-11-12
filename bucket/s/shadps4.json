@@ -1,0 +1,32 @@
+{
+    "version": "0.21.0",
+    "description": "Sony PlayStation 4 emulator",
+    "homepage": "https://shadps4.net/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This is the SDL emulator core; install shadps4-qtlauncher for the graphical game launcher.",
+    "suggest": {
+        "shadPS4 QtLauncher": "shadps4-qtlauncher"
+    },
+    "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.21.0/shadps4-win64-sdl-0.21.0.zip",
+    "hash": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88",
+    "bin": [
+        [
+            "shadPS4.exe",
+            "shadps4"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "shadPS4.exe",
+            "shadPS4"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/shadps4-emu/shadPS4/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v\\.(?<version>[\\d.]+)/(?<file>shadps4-win64-sdl[^/]*\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.$version/$matchFile"
+    }
+}

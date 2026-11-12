@@ -1,0 +1,41 @@
+{
+    "version": "20260522",
+    "description": "Fujitsu FM-7 / FM77AV series emulator",
+    "homepage": "https://github.com/captainys/77AVEMU",
+    "license": "BSD-3-Clause",
+    "notes": "ROM images dumped from a real FM-7/FM77AV (XM7-compatible) are required; select the ROM directory in Mutsu_GUI.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/captainys/77AVEMU/releases/download/v20260522/windows_binary_latest.zip",
+            "hash": "1271318a46b9e604e8ef173f1f8aaabc2b2f85db4aad3f00295d0e04fc7424da"
+        }
+    },
+    "bin": [
+        [
+            "Mutsu_GUI.exe",
+            "mutsu"
+        ],
+        [
+            "Mutsu_CUI.exe",
+            "mutsu-cui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Mutsu_GUI.exe",
+            "Mutsu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/captainys/77AVEMU/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v(\\d+\\w*)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/captainys/77AVEMU/releases/download/v$version/windows_binary_latest.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "version": "1.53-R2",
+    "description": "Nintendo SNES emulator (unofficial Snes9x 1.53 build by FuSoYa with 8MB SA-1 and 64Mbit ExLoROM fixes)",
+    "homepage": "http://fusoya.eludevisibility.org/emulator/index.html",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/snes9xgit/snes9x/blob/master/LICENSE"
+    },
+    "notes": "This build is no longer developed; official Snes9x 1.54+ already includes these fixes.",
+    "url": "http://fusoya.eludevisibility.org/emulator/download/snes9x1.53-FuSoYa-8MB_R2.zip",
+    "hash": "2293d63a00e79f0d5ade1acb5f4770f00dfbcc2dd18b04c3278abc9576a599f5",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\snes9x.conf\")) {",
+        "    New-Item \"$dir\\snes9x.conf\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "snes9x.exe",
+            "snes9x-8mb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "snes9x.exe",
+            "Snes9x 8MB"
+        ]
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Movies",
+        "Saves",
+        "Screenshots",
+        "SPCs",
+        "snes9x.conf"
+    ],
+    "checkver": {
+        "url": "http://fusoya.eludevisibility.org/emulator/index.html",
+        "regex": "snes9x(?<base>[\\d.]+)-FuSoYa-8MB_R(?<rev>\\d+)\\.zip",
+        "replace": "${base}-R${rev}"
+    },
+    "autoupdate": {
+        "url": "http://fusoya.eludevisibility.org/emulator/download/snes9x$matchBase-FuSoYa-8MB_R$matchRev.zip"
+    }
+}

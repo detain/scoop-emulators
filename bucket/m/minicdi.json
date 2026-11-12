@@ -1,0 +1,44 @@
+{
+    "version": "0.1-beta",
+    "description": "Experimental Philips CD-i emulator written in C++17",
+    "homepage": "https://github.com/CatmanFan/miniCDi",
+    "license": "GPL-3.0-only",
+    "notes": "A CD-i BIOS/system ROM dump is required.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CatmanFan/miniCDi/releases/download/v0.1-beta/miniCDi_windows-x64.zip",
+            "hash": "cb3833ca15a56ce51d1b0af222a2ecbc6a0d85e6b0179a950f47db60043cfe73"
+        },
+        "32bit": {
+            "url": "https://github.com/CatmanFan/miniCDi/releases/download/v0.1-beta/miniCDi_windows-x86.zip",
+            "hash": "6fdf8b98a4a52a5239955ade0b620d046a894a8438f07ac93977374d07227504"
+        }
+    },
+    "bin": [
+        [
+            "miniCDi.exe",
+            "minicdi"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "miniCDi.exe",
+            "miniCDi"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/CatmanFan/miniCDi/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CatmanFan/miniCDi/releases/download/v$version/miniCDi_windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/CatmanFan/miniCDi/releases/download/v$version/miniCDi_windows-x86.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "version": "0.9.4",
+    "description": "Sony DualSense controller to XInput translator for PC games",
+    "homepage": "https://github.com/Denellyne/PCXSense",
+    "license": "MIT",
+    "notes": "Requires the ViGEmBus driver: https://github.com/nefarius/ViGEmBus/releases",
+    "url": "https://github.com/Denellyne/PCXSense/releases/download/Latest/PCXSense.rar",
+    "hash": "32a16bc5efa8bd46d558d198e8406a485ae01b4015c28ca1023392ef3065cdbc",
+    "bin": "PCXSense.exe",
+    "shortcuts": [
+        [
+            "PCXSense.exe",
+            "PCXSense"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Denellyne/PCXSense/releases/download/Latest/Version.txt",
+        "regex": "Beta\\.?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Denellyne/PCXSense/releases/download/Latest/PCXSense.rar"
+    }
+}

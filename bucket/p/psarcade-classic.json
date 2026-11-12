@@ -1,0 +1,44 @@
+{
+    "version": "2.8",
+    "description": "Arcade emulator based on HBMAME and Arcade64 with a curated set of hacks and homebrew",
+    "homepage": "https://github.com/Gaston900/PSArcadeClassic",
+    "license": "GPL-2.0-or-later",
+    "notes": "Place your ROM sets in $persist_dir\\roms",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Gaston900/PSArcadeClassic/releases/download/Release2.8/PSArcadeClassic+.7z",
+            "hash": "b7816ded8c0330430716e83080d0b988cce0dd707bafa18fe6e27e832104f8cc"
+        }
+    },
+    "bin": [
+        [
+            "PSArcadeClassic+.exe",
+            "psarcade-classic"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PSArcadeClassic+.exe",
+            "PSArcade Classic+"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "nvram",
+        "roms",
+        "snap",
+        "sta"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Gaston900/PSArcadeClassic/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "Release([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Gaston900/PSArcadeClassic/releases/download/Release$version/PSArcadeClassic+.7z"
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "version": "6.0.0",
+    "description": "Microsoft Xbox 360 emulator (Xenia Canary fork with online multiplayer)",
+    "homepage": "https://github.com/AdrianCassar/xenia-canary",
+    "license": "BSD-3-Clause",
+    "url": "https://github.com/AdrianCassar/xenia-canary/releases/download/v6.0.0/xenia_canary_netplay_windows.zip",
+    "hash": "17008ec82867ac5e83efae04faf4c6ead5dba256865b81fde267f80fcac00d97",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\xenia-canary-netplay.config.toml\")) {",
+        "    New-Item \"$dir\\xenia-canary-netplay.config.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "xenia_canary_netplay.exe",
+            "xenia-canary-netplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xenia_canary_netplay.exe",
+            "Xenia Canary Netplay"
+        ]
+    ],
+    "persist": [
+        "cache",
+        "content",
+        "portable.txt",
+        "xenia-canary-netplay.config.toml"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AdrianCassar/xenia-canary/releases/download/v$version/xenia_canary_netplay_windows.zip"
+    }
+}

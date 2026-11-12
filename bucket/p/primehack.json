@@ -1,0 +1,35 @@
+{
+    "version": "1.0.9",
+    "description": "Nintendo GameCube and Wii emulator (Dolphin fork with mouselook controls for Metroid Prime Trilogy)",
+    "homepage": "https://github.com/shiiion/dolphin",
+    "license": "GPL-2.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/shiiion/dolphin/releases/download/1.0.9/PrimeHack.v1.0.9.zip",
+    "hash": "530569c46b1b7ea70f317887e36256fcc9fcc3a3be0dcc72dd435809487515af",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "PrimeHack.exe",
+    "shortcuts": [
+        [
+            "PrimeHack.exe",
+            "PrimeHack"
+        ]
+    ],
+    "persist": [
+        "User",
+        "portable.txt"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/shiiion/dolphin/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<version>[\\d.]+[a-z]?)/(?<file>PrimeHack[^/]*?\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/shiiion/dolphin/releases/download/$version/$matchFile"
+    }
+}

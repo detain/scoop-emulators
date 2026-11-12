@@ -1,0 +1,24 @@
+{
+    "version": "1.0.1",
+    "description": "DEC PDP-8 emulator for teaching, with an assembler editor (Italian interface)",
+    "homepage": "https://github.com/MircoT/py-pdp8-tk",
+    "license": "MIT",
+    "url": "https://github.com/MircoT/py-pdp8-tk/releases/download/v1.0.1/pdp8.exe",
+    "hash": "6538d7375d9a4e09b220cfebfda2cdcc18a93e48fbe30ffb25e4e2f5ad4a02b7",
+    "bin": [
+        [
+            "pdp8.exe",
+            "pypdp8tk"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pdp8.exe",
+            "py-pdp8-tk"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/MircoT/py-pdp8-tk/releases/download/v$version/pdp8.exe"
+    }
+}

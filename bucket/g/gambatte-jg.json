@@ -1,0 +1,28 @@
+{
+    "version": "0.6.1",
+    "description": "Nintendo Game Boy / Game Boy Color emulator (Gambatte JG core with the QTea frontend)",
+    "homepage": "https://github.com/jgemu/jgbuilds",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/jgemu/jgbuilds/releases/download/gambatte-0.6.1/gambatte-0.6.1-windows-x86_64.zip",
+    "hash": "cd4696b11046ca31cdc8d672ad7464eb7e1a01d04a77c485ca5d9a9f6d4e772d",
+    "bin": [
+        [
+            "gambatte.exe",
+            "gambatte-jg"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gambatte.exe",
+            "Gambatte (JG)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/jgemu/jgbuilds/releases?per_page=100",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"gambatte-([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/jgemu/jgbuilds/releases/download/gambatte-$version/gambatte-$version-windows-x86_64.zip"
+    }
+}

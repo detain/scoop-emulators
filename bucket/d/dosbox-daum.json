@@ -1,0 +1,44 @@
+{
+    "version": "20150125",
+    "description": "Enhanced unofficial DOSBox SVN build with extra features and fixes (by ykhwong)",
+    "homepage": "http://ykhwong.x-y.net/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This build is no longer developed. The original download site is gone; this package comes from an Internet Archive mirror.",
+    "url": "https://archive.org/download/Dosbox-Svn-Daum/20150125.7z",
+    "hash": "d02d9bad8b06a132cab15872594aff255f036017d3577ae68aac9c6b7053b697",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "dosbox_x64.exe",
+                    "dosbox-daum"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "dosbox_x64.exe",
+                    "DOSBox SVN Daum"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "dosbox.exe",
+                    "dosbox-daum"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "dosbox.exe",
+                    "DOSBox SVN Daum"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "CAPTURE",
+        "SAVE",
+        "dosbox.conf"
+    ]
+}

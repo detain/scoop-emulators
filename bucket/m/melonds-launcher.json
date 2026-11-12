@@ -1,0 +1,29 @@
+{
+    "version": "2.1.2",
+    "description": "Nintendo DS game launcher GUI for melonDS with ROM scanning, covers and titles",
+    "homepage": "https://github.com/LeviChen1126/melonDS-launcher",
+    "license": "MIT",
+    "notes": "A DS emulator such as melonDS is required; set its executable path in the launcher settings.",
+    "suggest": {
+        "melonDS": "melonds"
+    },
+    "url": "https://github.com/LeviChen1126/melonDS-launcher/releases/download/v2.1.2/melonDS-Launcher.exe",
+    "hash": "0cd06c453397963c98304f04c619af0c2e494450531bad1c0f86824714c79c05",
+    "bin": [
+        [
+            "melonDS-Launcher.exe",
+            "melonds-launcher"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "melonDS-Launcher.exe",
+            "melonDS Launcher"
+        ]
+    ],
+    "persist": "config",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/LeviChen1126/melonDS-launcher/releases/download/v$version/melonDS-Launcher.exe"
+    }
+}

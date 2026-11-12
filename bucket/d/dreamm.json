@@ -1,0 +1,49 @@
+{
+    "version": "4.0",
+    "description": "LucasArts DOS/Windows adventure and Star Wars games emulator by Aaron Giles",
+    "homepage": "https://dreamm.aarongiles.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://dreamm.aarongiles.com/releases/dreamm-4.0-win32-x64.zip",
+            "hash": "cbb94b2474fb5bee96a58c3a86d4432e344d4c08492d15f8d3ee56ad11016a5d"
+        },
+        "arm64": {
+            "url": "https://dreamm.aarongiles.com/releases/dreamm-4.0-win32-arm64.zip",
+            "hash": "c02742c276edc890e4a2ccf752e3ad77e16b529b5d3fcce1bc1f457e30cabc6e"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
+        "    New-Item \"$dir\\config.json\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "dreamm.exe",
+    "shortcuts": [
+        [
+            "dreamm.exe",
+            "DREAMM"
+        ]
+    ],
+    "persist": [
+        "config.json",
+        "install",
+        "gamedeltas",
+        "sounddata",
+        "screenshots"
+    ],
+    "checkver": {
+        "url": "https://dreamm.aarongiles.com/",
+        "regex": "dreamm-([\\d.]+)-win32-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dreamm.aarongiles.com/releases/dreamm-$version-win32-x64.zip"
+            },
+            "arm64": {
+                "url": "https://dreamm.aarongiles.com/releases/dreamm-$version-win32-arm64.zip"
+            }
+        }
+    }
+}

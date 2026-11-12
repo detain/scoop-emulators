@@ -1,0 +1,31 @@
+{
+    "version": "2019.03.12",
+    "description": "NEC PC-8801MA emulator (nenecchi's modified build of Takeda's ePC-8801MA)",
+    "homepage": "https://nenecchi.kirara.st/",
+    "license": "Freeware",
+    "notes": "PC-8801 BIOS ROM files (PC88.ROM or N88.ROM, N80.ROM, N88_0-3.ROM, DISK.ROM, KANJI1/2.ROM) are required; place them next to pc8801ma.exe in $dir.",
+    "url": "https://nenecchi.kirara.st/php/dl.php?f=pc8801ma_190312.7z&d=12#/pc8801ma.7z",
+    "hash": "fb1ffb9cee1c87ca105e7be33b885452dfebc370635538e92b07c06676e0d976",
+    "extract_dir": "pc8801ma",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pc8801ma.ini\")) {",
+        "    New-Item \"$dir\\pc8801ma.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "pc8801ma.exe",
+    "shortcuts": [
+        [
+            "pc8801ma.exe",
+            "ePC-8801MA"
+        ]
+    ],
+    "persist": "pc8801ma.ini",
+    "checkver": {
+        "url": "https://nenecchi.kirara.st/",
+        "regex": "pc8801ma_(?<year>\\d{2})(?<month>\\d{2})(?<day>\\d{2})\\.7z&(?:amp;)?d=(?<dir>\\d+)",
+        "replace": "20${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "https://nenecchi.kirara.st/php/dl.php?f=pc8801ma_$matchYear$matchMonth$matchDay.7z&d=$matchDir#/pc8801ma.7z"
+    }
+}

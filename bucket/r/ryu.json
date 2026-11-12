@@ -1,0 +1,36 @@
+{
+    "version": "2026.1008.52",
+    "description": "Nintendo Switch emulator, a Ryubing (Ryujinx) fork with DLSS 5 upscaling, DLAA and frame generation",
+    "homepage": "https://ryu.dotslash.pro/",
+    "license": "MIT",
+    "notes": [
+        "Portable mode is enabled: data is stored in \"$persist_dir\\portable\".",
+        "DLSS features require an NVIDIA RTX 40/50 GPU; Neural Rendering also needs a global ReShade install (install-reshade.ps1)."
+    ],
+    "url": "https://dl.dotslash.pro/ryu/ryubing-dlss5-win-x64.zip",
+    "hash": "05337a0d38e3b0f34bfd5f06bd1be3b369a9258703ec48ef4b5bfc88b46f2e95",
+    "bin": [
+        [
+            "Ryujinx.exe",
+            "ryu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryu (Ryubing DLSS 5)"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": {
+        "url": "https://dl.dotslash.pro/ryu/latest.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://dl.dotslash.pro/ryu/ryubing-dlss5-win-x64.zip",
+        "hash": {
+            "url": "https://dl.dotslash.pro/ryu/latest.json",
+            "jsonpath": "$.sha256"
+        }
+    }
+}

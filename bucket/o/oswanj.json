@@ -1,0 +1,25 @@
+{
+    "version": "r99",
+    "description": "Bandai WonderSwan and WonderSwan Color emulator (OSDN Oswan project build)",
+    "homepage": "https://osdn.net/projects/oswan/",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://ftp.jaist.ac.jp/pub/sourceforge.jp/oswan/47797/OswanJ_r99.zip",
+    "hash": "ebdb451fbaa450b8c8a36d702cf4fea167e624951a06373c0154ff0d5e37287f",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\OswanJ.ini\")) {",
+        "    New-Item \"$dir\\OswanJ.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "OswanJ.exe",
+    "shortcuts": [
+        [
+            "OswanJ.exe",
+            "OswanJ"
+        ]
+    ],
+    "persist": [
+        "OswanJ.ini",
+        "eeprom.dat"
+    ]
+}

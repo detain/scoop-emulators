@@ -1,0 +1,34 @@
+{
+    "version": "183",
+    "description": "Soviet Sojuz-Neon PK-11/16 computer emulator",
+    "homepage": "https://github.com/nzeemin/neonbtl",
+    "license": "LGPL-3.0-only",
+    "url": "https://github.com/nzeemin/neonbtl/releases/download/preview-183/NEONBTL-preview-183.zip",
+    "hash": "1edeb5fe4181ef887fcf12f5d68a1d02ef21e6ba408f3634aa52fe907032cd37",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\NEONBTL.ini\")) {",
+        "    New-Item \"$dir\\NEONBTL.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "NEONBTL.exe",
+            "neonbtl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NEONBTL.exe",
+            "NeonBTL"
+        ]
+    ],
+    "persist": "NEONBTL.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/nzeemin/neonbtl/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "preview-(\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nzeemin/neonbtl/releases/download/preview-$version/NEONBTL-preview-$version.zip"
+    }
+}

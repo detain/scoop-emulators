@@ -1,0 +1,39 @@
+{
+    "version": "20261108-g6ebf2b4",
+    "description": "SEGA Hikaru arcade board emulator (development version)",
+    "homepage": "https://github.com/Tovarichtch/Odin",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Odin requires the MAME 'hikaru' BIOS set and the game ROM sets.",
+        "Settings, saves and states are stored in %APPDATA%\\odin."
+    ],
+    "url": "https://github.com/Tovarichtch/Odin/releases/download/dev/odin-windows-x86_64.zip",
+    "hash": "0687a73355a2bb2db2a7d7cd555a050c0113c9c26be264c4940d5e010e958473",
+    "extract_dir": "odin-6ebf2b40ccbca9534d1a0e58b7602db11e4485d9-windows-x86_64",
+    "bin": [
+        [
+            "odin.exe",
+            "odin-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "odin.exe",
+            "Odin (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Tovarichtch/Odin/commits/dev",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<sha>(?<commit>[0-9a-f]{7})[0-9a-f]{33})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Tovarichtch/Odin/releases/download/dev/odin-windows-x86_64.zip",
+        "extract_dir": "odin-$matchSha-windows-x86_64"
+    }
+}

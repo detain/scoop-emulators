@@ -1,0 +1,29 @@
+{
+    "version": "4.5",
+    "description": "Commodore 64 file manager that launches programs in VICE, CCS64, Hoxs64 and other emulators",
+    "homepage": "https://www.purmike.de/documents/c64archiv_en.html",
+    "license": "Freeware",
+    "url": "https://www.purmike.de/downloads/C64ArchivFiles4.5.zip",
+    "hash": "4ab93af25290385e55cc1da1b5ff1f706e7f7d01b817dc376c12c0d28c833cda",
+    "extract_dir": "C64-Archiv 4.5",
+    "bin": [
+        [
+            "C64-Archiv.exe",
+            "c64-archiv"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "C64-Archiv.exe",
+            "C64-Archiv"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.purmike.de/documents/c64archiv_download_en.html",
+        "regex": "C64ArchivFiles([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://www.purmike.de/downloads/C64ArchivFiles$version.zip",
+        "extract_dir": "C64-Archiv $version"
+    }
+}

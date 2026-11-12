@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/faux1/emulator_screen_01.jpg"
     ],
     "version": "0.95.9",
-    "description": "Vace is a Jupiter Cantab Jupiter Ace emulator.",
-    "homepage": "http://sourceforge.net/projects/faux1",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/faux1/0.95.9.7z",
-    "hash": "fd43189ec706184085590d38f0f3ef966815dc11a95057b09514f153f8da14e0",
-    "bin": [
-        "faux1.exe"
+    "description": "Apple I emulator with a terminal interface",
+    "homepage": "https://sourceforge.net/projects/faux1/",
+    "license": "GPL-2.0-only",
+    "url": "https://downloads.sourceforge.net/project/faux1/faux1-0.95.9.20120222_Win32_Install.exe#/dl.7z",
+    "hash": "sha1:ad8911143bf20a1598d7c44c580602350b1c9f05",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": "faux1.exe",
+    "shortcuts": [
+        [
+            "faux1.exe",
+            "faux1"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/faux1/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://sourceforge.net/projects/faux1/rss",
+        "regex": "faux1-([\\d.]+)\\.(?<date>\\d{8})_Win32_Install\\.exe"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/faux1/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/faux1/faux1-$version.$matchDate_Win32_Install.exe#/dl.7z"
     }
 }

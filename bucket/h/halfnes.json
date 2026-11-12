@@ -1,0 +1,36 @@
+{
+    "version": "0.62",
+    "description": "Nintendo Entertainment System emulator written in Java",
+    "homepage": "https://github.com/andrew-hoffman/halfnes",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed. Requires a Java runtime.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://github.com/andrew-hoffman/halfnes/releases/download/062/HalfNES-062.zip",
+    "hash": "7dac5016c6031ebf12f83ac0ad56c0ca2a2a73a7b27fae297b5d324541f5d2d4",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\halfNES *.exe\" | Rename-Item -NewName 'HalfNES.exe'",
+        "Get-ChildItem \"$dir\\halfNES *.jar\" | Rename-Item -NewName 'HalfNES.jar'"
+    ],
+    "bin": [
+        [
+            "HalfNES.exe",
+            "halfnes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HalfNES.exe",
+            "HalfNES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/andrew-hoffman/halfnes",
+        "regex": "^(\\d)(\\d+)$",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/andrew-hoffman/halfnes/releases/download/$cleanVersion/HalfNES-$cleanVersion.zip"
+    }
+}

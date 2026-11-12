@@ -1,0 +1,32 @@
+{
+    "version": "10.8.1-5436-af26b2d93",
+    "description": "Pinball table editor and simulator (Visual Pinball X, OpenGL build) (development version)",
+    "homepage": "https://github.com/vpinball/vpinball",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/vpinball/vpinball/blob/master/LICENSE"
+    },
+    "url": "https://github.com/vpinball/vpinball/releases/download/v10.8.1-5436-af26b2d93/VPinballX_GL-10.8.1-5436-af26b2d93-windows-x64-Release.zip",
+    "hash": "2b63ab6b3c30c4a36850b75d011a2ea4685d3342ea5f69964d0fd7ad5e99a2ef",
+    "bin": [
+        [
+            "VPinballX_GL64.exe",
+            "vpinballx-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VPinballX_GL64.exe",
+            "Visual Pinball X (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/vpinball/vpinball/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "download/v(?<tag>[\\d.]+-\\d+-[0-9a-f]+)/(?<file>[^/\"]*VPinballX_GL-[^/\"]*(?:Release-win-x64|windows-x64-Release)\\.zip)",
+        "replace": "${tag}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vpinball/vpinball/releases/download/v$version/$matchFile"
+    }
+}

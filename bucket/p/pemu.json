@@ -1,0 +1,51 @@
+{
+    "version": "7.2",
+    "description": "Portable emulator suite: pNES (Nestopia), pSNES (Snes9x), pGEN (Genesis Plus GX) and pFBNeo (FinalBurn Neo)",
+    "homepage": "https://github.com/Cpasjuste/pemu",
+    "license": "GPL-3.0-only",
+    "url": [
+        "https://github.com/Cpasjuste/pemu/releases/download/v7.2/pnes-7.2_windows.zip",
+        "https://github.com/Cpasjuste/pemu/releases/download/v7.2/psnes-7.2_windows.zip",
+        "https://github.com/Cpasjuste/pemu/releases/download/v7.2/pgen-7.2_windows.zip",
+        "https://github.com/Cpasjuste/pemu/releases/download/v7.2/pfbneo-7.2_windows.zip"
+    ],
+    "hash": [
+        "5b6702b26ba301de8e105bc7d2370f10ec961b482d7ee489d3740ba4ba8b0bb4",
+        "6de0459349a32f3cb24d8c7e57a41ae9fb5e672009e535553bc1bcc911b0e873",
+        "fb6852b37c6aa30550d46cd46c22ac2897b26478eb1be669492196307f80e3ea",
+        "acfddd209d870af78182c6d20d118f2e53549f769b1dc9afae667dfa7a63ded9"
+    ],
+    "bin": [
+        "pnes\\pnes.exe",
+        "psnes\\psnes.exe",
+        "pgen\\pgen.exe",
+        "pfbneo\\pfbneo.exe"
+    ],
+    "shortcuts": [
+        [
+            "pnes\\pnes.exe",
+            "pNES"
+        ],
+        [
+            "psnes\\psnes.exe",
+            "pSNES"
+        ],
+        [
+            "pgen\\pgen.exe",
+            "pGEN"
+        ],
+        [
+            "pfbneo\\pfbneo.exe",
+            "pFBNeo"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://github.com/Cpasjuste/pemu/releases/download/v$version/pnes-$version_windows.zip",
+            "https://github.com/Cpasjuste/pemu/releases/download/v$version/psnes-$version_windows.zip",
+            "https://github.com/Cpasjuste/pemu/releases/download/v$version/pgen-$version_windows.zip",
+            "https://github.com/Cpasjuste/pemu/releases/download/v$version/pfbneo-$version_windows.zip"
+        ]
+    }
+}

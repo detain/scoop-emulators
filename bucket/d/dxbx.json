@@ -1,0 +1,31 @@
+{
+    "version": "0.5",
+    "description": "Microsoft Xbox emulator written in Delphi (ported from Cxbx)",
+    "homepage": "https://sourceforge.net/projects/dxbx/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://downloads.sourceforge.net/project/dxbx/dxbx/0.5%20Release/DXBX%200.5.rar",
+    "hash": "sha1:d058237d588d56d636a1fe6c26c3d9af25ba64ce",
+    "extract_dir": "DXBX",
+    "bin": [
+        "Dxbx.exe",
+        "XBEExplorer.exe"
+    ],
+    "shortcuts": [
+        [
+            "Dxbx.exe",
+            "Dxbx"
+        ],
+        [
+            "XBEExplorer.exe",
+            "XBE Explorer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/dxbx/rss?path=/dxbx",
+        "regex": "/dxbx/([\\d.]+) Release/"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/dxbx/dxbx/$version%20Release/DXBX%20$version.rar",
+        "extract_dir": "DXBX"
+    }
+}

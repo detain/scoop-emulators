@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0-b898",
+    "description": "Sony PlayStation 5 emulator (experimental)",
+    "homepage": "https://github.com/zeraps5/ZeraPS5-Releases",
+    "license": "GPL-2.0-only",
+    "notes": "System modules dumped from your own console go in $persist_dir\\system\\modules; games go in $persist_dir\\games.",
+    "url": "https://github.com/zeraps5/ZeraPS5-Releases/releases/download/v0.1.0-b898/ZeraPS5-v0.1.0-b898-win64.zip",
+    "hash": "f3cc2cb0e6bbd111d4a0e41dbb16453c49ea3be6017e25dd7cb7947fff6ac057",
+    "extract_dir": "ZeraPS5-v0.1.0-b898-win64",
+    "bin": "ZeraPS5.exe",
+    "shortcuts": [
+        [
+            "ZeraPS5.exe",
+            "ZeraPS5"
+        ]
+    ],
+    "persist": [
+        "games",
+        "system\\modules",
+        "user"
+    ],
+    "checkver": {
+        "github": "https://github.com/zeraps5/ZeraPS5-Releases",
+        "regex": "v([\\d.]+-b\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/zeraps5/ZeraPS5-Releases/releases/download/v$version/ZeraPS5-v$version-win64.zip",
+        "extract_dir": "ZeraPS5-v$version-win64"
+    }
+}

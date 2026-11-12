@@ -1,0 +1,77 @@
+{
+    "version": "3.7.0-477-6589fc5",
+    "description": "Solid state pinball machine emulator (development version)",
+    "homepage": "https://github.com/vpinball/pinmame",
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/vpinball/pinmame/blob/master/LICENSE"
+    },
+    "notes": [
+        "Tracks the newest GitHub release including pre-releases.",
+        "Includes the PinMAME32 GUI and the PinMAME command-line emulator (VPinMAME for Visual Pinball is not included)."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/vpinball/pinmame/releases/download/v3.7.0-477-6589fc5/PinMAME32-3.7.0-477-6589fc5-win-x64.zip",
+                "https://github.com/vpinball/pinmame/releases/download/v3.7.0-477-6589fc5/PinMAME-3.7.0-477-6589fc5-win-x64.zip"
+            ],
+            "hash": [
+                "22faa178682ac670292e14e2c353b43615e994308d4b0170db2a984e3bffae23",
+                "f05eb4a588f88f1e52032af71e582c30435a9abbfb5a37374bba6a45f902c0ef"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/vpinball/pinmame/releases/download/v3.7.0-477-6589fc5/PinMAME32-3.7.0-477-6589fc5-win-x86.zip",
+                "https://github.com/vpinball/pinmame/releases/download/v3.7.0-477-6589fc5/PinMAME-3.7.0-477-6589fc5-win-x86.zip"
+            ],
+            "hash": [
+                "1281d1dc50fbfc12ced3ab9c9bc64cac5616a50ce7b9428a5b66593179a24da1",
+                "369a6c3a19474aca501557540ae0b2a14860fcd20d8520405b7e9b79cf42927f"
+            ]
+        }
+    },
+    "bin": [
+        [
+            "PinMAME32.exe",
+            "pinmame32-dev"
+        ],
+        [
+            "PinMAME.exe",
+            "pinmame-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PinMAME32.exe",
+            "PinMAME (dev)"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "nvram",
+        "roms"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/vpinball/pinmame/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+-\\d+-[0-9a-f]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME32-$version-win-x64.zip",
+                    "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME-$version-win-x64.zip"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME32-$version-win-x86.zip",
+                    "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME-$version-win-x86.zip"
+                ]
+            }
+        }
+    }
+}

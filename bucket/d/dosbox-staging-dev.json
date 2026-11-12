@@ -1,0 +1,44 @@
+{
+    "version": "0.84.0-alpha-5854b",
+    "description": "Modernized DOSBox fork: MS-DOS / x86 PC emulator (development version)",
+    "homepage": "https://github.com/dosbox-staging/dosbox-staging",
+    "license": "GPL-2.0-or-later",
+    "notes": "For config file examples, see: https://github.com/dosbox-staging/dosbox-staging/wiki/Config-file-examples",
+    "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/dev-latest/dosbox-staging-windows-x64-0.84.0-alpha-5854b.zip",
+    "hash": "179f87894206d1224f2b5b04ba6d46be12e996142450cc9d5f1b8bcc97f66468",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\dosbox-staging.conf\")) {",
+        "    New-Item \"$dir\\dosbox-staging.conf\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "dosbox.exe",
+            "dosbox-staging-dev"
+        ],
+        [
+            "dosbox_with_debugger.exe",
+            "dosbox-staging-debugger-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "dosbox.exe",
+            "DOSBox Staging (dev)"
+        ]
+    ],
+    "persist": [
+        "dosbox-staging.conf",
+        "glshaders",
+        "mt32-roms",
+        "soundfonts"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/dosbox-staging/dosbox-staging/releases/tags/dev-latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/dev-latest/dosbox-staging-windows-x64-(?<version>[\\w.-]+?)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/dev-latest/dosbox-staging-windows-x64-$version.zip"
+    }
+}

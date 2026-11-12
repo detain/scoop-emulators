@@ -1,0 +1,28 @@
+{
+    "version": "0.1.0-rc.1",
+    "description": "Nintendo NES emulator with observation-driven visual remastering",
+    "homepage": "https://github.com/FranTriems/VKRT-NES-Remaster",
+    "license": "AAL",
+    "url": "https://github.com/FranTriems/VKRT-NES-Remaster/releases/download/v0.1.0-rc.1/VKRT-NES-v0.1.0-windows-x64-R12_1-AUDITED-CANDIDATE.zip",
+    "hash": "309265e74e4b722274fd8617e52d6ead0f9ae96682cfec3fee0660ceea214d61",
+    "bin": [
+        [
+            "VKRT NES Remaster.exe",
+            "vkrt-nes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VKRT NES Remaster.exe",
+            "VKRT NES Remaster"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/FranTriems/VKRT-NES-Remaster/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "download/v(?<version>[^/]+)/(?<file>[^/]+windows-x64[^/]*\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FranTriems/VKRT-NES-Remaster/releases/download/v$version/$matchFile"
+    }
+}

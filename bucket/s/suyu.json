@@ -1,0 +1,38 @@
+{
+    "version": "14.1.0",
+    "description": "Nintendo Switch emulator and AArch64 native recompiler (continuation of suyu)",
+    "homepage": "https://suyu-emu.github.io/website/",
+    "license": "GPL-3.0-or-later",
+    "notes": "Switch keys (prod.keys) and firmware are required. Place them in $persist_dir\\user\\keys and install firmware from the app.",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suyu-emu/suyu-main/releases/download/v14.1.0/suyu-windows-x86_64.zip",
+            "hash": "81348d5fa24a3ea833ec15d744dbfa33914f3f646c889f3759ad1042a88498af"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\vc_redist.x64.exe\" -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        "suyu.exe",
+        "suyu-cmd.exe"
+    ],
+    "shortcuts": [
+        [
+            "suyu.exe",
+            "suyu"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/suyu-emu/suyu-main"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/suyu-emu/suyu-main/releases/download/v$version/suyu-windows-x86_64.zip"
+            }
+        }
+    }
+}

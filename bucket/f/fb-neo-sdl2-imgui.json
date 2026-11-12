@@ -1,0 +1,31 @@
+{
+    "version": "20261029-3",
+    "description": "Arcade emulator (FinalBurn Neo fork with an SDL2 + Dear ImGui frontend)",
+    "homepage": "https://github.com/zxmarcos/FBNeo",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt"
+    },
+    "url": "https://github.com/zxmarcos/FBNeo/releases/download/sdl2-imgui-20261029-3/fbneo-sdl2-imgui-windows-x86_64.zip",
+    "hash": "0a993ce5d9110697607c5bbba40800feaaf81d52b44c2949dd33fbf22b22cf05",
+    "bin": [
+        [
+            "fbneo.exe",
+            "fbneo-sdl2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "fbneo.exe",
+            "FB Neo SDL2"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/zxmarcos/FBNeo/releases",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"sdl2-imgui-([\\d]+(?:-\\d+)?)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/zxmarcos/FBNeo/releases/download/sdl2-imgui-$version/fbneo-sdl2-imgui-windows-x86_64.zip"
+    }
+}

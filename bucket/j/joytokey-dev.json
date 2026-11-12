@@ -1,0 +1,39 @@
+{
+    "version": "2026.10.12",
+    "description": "Joystick-to-keyboard and mouse input mapper (development version)",
+    "homepage": "https://joytokey.net/ja/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://joytokey.net/en/eula"
+    },
+    "notes": [
+        "Beta build from https://joytokey.net/en/download_beta (Japanese UI build, like the stable manifest).",
+        "The version is the upload date of the beta archive; when no beta is active it can be identical to the stable release."
+    ],
+    "url": "https://joytokey.net/download/JoyToKey_beta.zip",
+    "hash": "710799a808e3dabc8178a7b1382d6ef762c1b2d8d37e6fc20c6a11a70db97bfe",
+    "bin": [
+        [
+            "JoyToKey.exe",
+            "joytokey-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "JoyToKey.exe",
+            "JoyToKey (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://joytokey.net/ja/download_beta",
+        "script": [
+            "$r = Invoke-WebRequest -Method Head -UseBasicParsing -UserAgent 'Mozilla/5.0' 'https://joytokey.net/download/JoyToKey_beta.zip'",
+            "$lm = [string]($r.Headers['Last-Modified'] | Select-Object -First 1)",
+            "([datetime]::Parse($lm, [Globalization.CultureInfo]::InvariantCulture)).ToUniversalTime().ToString('yyyy.MM.dd')"
+        ],
+        "regex": "^(\\d{4}\\.\\d{2}\\.\\d{2})"
+    },
+    "autoupdate": {
+        "url": "https://joytokey.net/download/JoyToKey_beta.zip"
+    }
+}

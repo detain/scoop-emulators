@@ -1,0 +1,28 @@
+{
+    "version": "1.7.3b0",
+    "description": "Configuration utility for FreeJoy STM32-based DIY game controllers (HOTAS, pedals, wheels)",
+    "homepage": "https://github.com/FreeJoy-Team/FreeJoyConfiguratorQt",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/FreeJoy-Team/FreeJoyConfiguratorQt/releases/download/1.7.3b0/FreeJoyQtPortable-v1.7.3b0-Windows.zip",
+    "hash": "c25ce600032387ed0c35edc303b8e6163176b16368044f0647d35491d92f0a3a",
+    "bin": [
+        [
+            "FreeJoyQt.exe",
+            "freejoy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "FreeJoyQt.exe",
+            "FreeJoy Configurator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/FreeJoy-Team/FreeJoyConfiguratorQt/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/FreeJoyQtPortable-v(?<version>[\\w.]+)-Windows\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FreeJoy-Team/FreeJoyConfiguratorQt/releases/download/$matchTag/FreeJoyQtPortable-v$version-Windows.zip"
+    }
+}

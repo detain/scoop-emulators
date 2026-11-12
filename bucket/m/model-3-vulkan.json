@@ -1,0 +1,49 @@
+{
+    "version": "0.9.9.6h",
+    "description": "Sega Model 3 arcade emulator, a Vulkan-focused fork of Supermodel",
+    "homepage": "https://github.com/Igloo-Garage/Model-3-Vulkan",
+    "license": "GPL-3.0-or-later",
+    "notes": "Place ROM sets (.zip) in $persist_dir\\roms",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Igloo-Garage/Model-3-Vulkan/releases/download/v0.9.9.6h/Model3-Vulkan.v0.9.9.6h.for.Windows.zip",
+            "hash": "ea6257fb5c7e4a01b8563955c0d5cf84c6fb58450e33919c57309f7630928ce4"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Data\\Config\\Model3-Vulkan.ini\")) {",
+        "    New-Item \"$dir\\Data\\Config\\Model3-Vulkan.ini\" -Type File -Force | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Model3-Vulkan.exe",
+            "model3-vulkan"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Model3-Vulkan.exe",
+            "Model 3-Vulkan"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "Data\\Saves",
+        "Data\\NVRAM",
+        "Data\\Screenshots",
+        "Data\\Config\\Model3-Vulkan.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Igloo-Garage/Model-3-Vulkan/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/v([\\w.]+)/Model3-Vulkan\\.v[\\w.]+\\.for\\.Windows\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Igloo-Garage/Model-3-Vulkan/releases/download/v$version/Model3-Vulkan.v$version.for.Windows.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "1.0.1",
+    "description": "Nintendo Game Boy (DMG) emulator written in C++",
+    "homepage": "https://github.com/ShannonHG/Modest-GB",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ShannonHG/Modest-GB/releases/download/v1.0.1/Modest-GB-1.0.1-Win64.zip",
+            "hash": "a7a4e598413552788ee7bdd66d0e3581796de11aaf42bed8e9ceca30f0f877f2",
+            "extract_dir": "Modest-GB-1.0.1-Win64"
+        }
+    },
+    "bin": [
+        [
+            "Modest-GB.exe",
+            "modest-gb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Modest-GB.exe",
+            "Modest GB"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ShannonHG/Modest-GB/releases/download/v$version/Modest-GB-$version-Win64.zip",
+                "extract_dir": "Modest-GB-$version-Win64"
+            }
+        }
+    }
+}

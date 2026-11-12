@@ -1,0 +1,42 @@
+{
+    "version": "1.1.1",
+    "description": "NEC PC-FX emulator",
+    "homepage": "http://www.magicengine.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "http://www.magicengine.com/uk_order_main.php?page=menu"
+    },
+    "notes": [
+        "This is the time-limited demo version; a registration key is needed to unlock the full version.",
+        "A PC-FX BIOS image is required; set its path in the emulator settings.",
+        "This emulator is no longer developed."
+    ],
+    "url": "http://www.magicengine.com/files/mefx111-demo.zip",
+    "hash": "37659da444afd22255e8a8e7f91f71bccd7efc380155a02d2762317f1a38362a",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pcfx.ini\")) {",
+        "    New-Item \"$dir\\pcfx.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "pcfx.exe",
+            "magicengine-fx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pcfx.exe",
+            "MagicEngine-FX"
+        ]
+    ],
+    "persist": "pcfx.ini",
+    "checkver": {
+        "url": "http://www.magicengine.com/uk_download_main.html",
+        "regex": "files/mefx(\\d)(\\d)(\\d)-demo\\.zip",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "http://www.magicengine.com/files/mefx$cleanVersion-demo.zip"
+    }
+}

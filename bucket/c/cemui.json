@@ -1,0 +1,33 @@
+{
+    "version": "2.3.3",
+    "description": "Launcher and game library frontend for the Cemu Wii U emulator",
+    "homepage": "https://github.com/jonbarrow/CemUI",
+    "license": "GPL-3.0-only",
+    "notes": "This frontend is no longer developed. Cemu must be installed separately.",
+    "url": "https://github.com/jonbarrow/CemUI/releases/download/v2.3.3/CemUI.Setup.2.3.3.exe#/dl.7z",
+    "hash": "3cfe43ae60735c6865815710cad39b5ff8101af7a974071a758a62b445d95f10",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+        ]
+    },
+    "bin": [
+        [
+            "CemUI.exe",
+            "cemui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CemUI.exe",
+            "CemUI"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/jonbarrow/CemUI"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jonbarrow/CemUI/releases/download/v$version/CemUI.Setup.$version.exe#/dl.7z"
+    }
+}

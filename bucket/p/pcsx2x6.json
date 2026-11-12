@@ -1,0 +1,56 @@
+{
+    "version": "0.2.22",
+    "description": "Sony PlayStation 2 emulator fork for Namco System 246/256 arcade boards",
+    "homepage": "https://ps2homebrew-arcade.github.io/pcsx2x6/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "PCSX2x6 requires a Namco System 246/256 BIOS dump.",
+        "Place the BIOS files in $persist_dir\\bios"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/PS2Homebrew-arcade/pcsx2x6/releases/download/v0.2.22/pcsx2x6-v0.2.22-windows-x64-Qt.7z",
+    "hash": "d14798a4766d0c3be78c705bcbd47b98341a987954af066d99f52344e38c539f",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "pcsx2-qt.exe",
+            "pcsx2x6"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pcsx2-qt.exe",
+            "PCSX2x6"
+        ]
+    ],
+    "persist": [
+        "bios",
+        "cheats",
+        "covers",
+        "gamesettings",
+        "inis",
+        "inputprofiles",
+        "logs",
+        "memcards",
+        "patches",
+        "snaps",
+        "sstates",
+        "textures",
+        "videos",
+        "portable.txt"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/PS2Homebrew-arcade/pcsx2x6/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/PS2Homebrew-arcade/pcsx2x6/releases/download/v$version/pcsx2x6-v$version-windows-x64-Qt.7z"
+    }
+}

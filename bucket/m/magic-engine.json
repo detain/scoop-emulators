@@ -1,0 +1,42 @@
+{
+    "version": "1.1.3",
+    "description": "NEC PC Engine / TurboGrafx-16, CD-ROM² and SuperGrafx emulator",
+    "homepage": "http://www.magicengine.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "http://www.magicengine.com/uk_order_main.php?page=menu"
+    },
+    "notes": [
+        "This is the time-limited demo version; a registration key is needed to unlock the full version.",
+        "CD-ROM² games require a system card image; set its path in the emulator settings.",
+        "This emulator is no longer developed."
+    ],
+    "url": "http://www.magicengine.com/files/me113-demo.zip",
+    "hash": "1dd3324e27642953d79f08a6e53d547a6fa2e6de1486d807c402f12a48318814",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pce.ini\")) {",
+        "    New-Item \"$dir\\pce.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "pce.exe",
+            "magicengine"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pce.exe",
+            "MagicEngine"
+        ]
+    ],
+    "persist": "pce.ini",
+    "checkver": {
+        "url": "http://www.magicengine.com/uk_download_main.html",
+        "regex": "files/me(\\d)(\\d)(\\d)-demo\\.zip",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "http://www.magicengine.com/files/me$cleanVersion-demo.zip"
+    }
+}

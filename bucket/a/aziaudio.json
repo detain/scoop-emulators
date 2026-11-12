@@ -1,0 +1,21 @@
+{
+    "version": "0.70-wip10",
+    "description": "Nintendo 64 HLE audio plugin for Project64 and other Zilmar-spec emulators",
+    "homepage": "https://github.com/Azimer/AziAudio",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This is an audio plugin, not a standalone emulator.",
+        "Copy the DLL from $dir into your emulator's plugin directory (e.g. Project64's Plugin\\Audio folder)."
+    ],
+    "url": "https://github.com/Azimer/AziAudio/files/1591596/AziAudio.v0.70.WIP10.zip",
+    "hash": "e8e1b5a2268b4fa893364e7ffc477dd154dfc1d2616478f7d5c69f6aac878570",
+    "checkver": {
+        "github": "https://api.github.com/repos/Azimer/AziAudio/releases/latest",
+        "jsonpath": "$.body",
+        "regex": "files/(?<id>\\d+)/AziAudio\\.v(?<ver>[\\d.]+)\\.WIP(?<wip>\\d+)\\.zip",
+        "replace": "${ver}-wip${wip}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Azimer/AziAudio/files/$matchId/AziAudio.v$matchVer.WIP$matchWip.zip"
+    }
+}

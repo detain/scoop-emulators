@@ -1,0 +1,32 @@
+{
+    "version": "2.1.10.26",
+    "description": "ColecoVision and Coleco ADAM emulator and development toolkit",
+    "homepage": "https://github.com/dvdh1961/ADAMP",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/dvdh1961/ADAMP/blob/main/LICENSE.txt"
+    },
+    "notes": "ColecoVision/ADAM BIOS files are not included; select them in Settings (e.g. from $persist_dir\\media\\roms).",
+    "url": "https://github.com/dvdh1961/ADAMP/releases/download/2.1.10.26/WINDOWS_ADAMP_2.1.10.26.zip",
+    "hash": "9e80fc7201383046e9413e376aa039e36d8df371d58910433ec0edf2f4fa264e",
+    "bin": [
+        [
+            "ADAMP_EMU.exe",
+            "adamp"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ADAMP_EMU.exe",
+            "ADAM+"
+        ]
+    ],
+    "persist": [
+        "media",
+        "settings.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/dvdh1961/ADAMP/releases/download/$version/WINDOWS_ADAMP_$version.zip"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": "1.2.0",
+    "description": "Elliott 803B computer (1960s) simulation written in Java",
+    "homepage": "https://elliott803.sourceforge.net/",
+    "license": "BSD-3-Clause",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/elliott803/elliott803/v1.20/elliott803-1.2.0.zip",
+    "hash": "sha1:d5f9a01904c2ec3b79b1b501629c8d3d2b5e629f",
+    "pre_install": "Rename-Item \"$dir\\elliott803-$version.jar\" 'elliott803.jar'",
+    "bin": [
+        [
+            "elliott803.jar",
+            "elliott803"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/elliott803/rss?path=/elliott803",
+        "regex": "elliott803/(?<dir>v[\\d.]+)/elliott803-(?<version>[\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/elliott803/elliott803/$matchDir/elliott803-$version.zip"
+    }
+}

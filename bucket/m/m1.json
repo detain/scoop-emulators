@@ -1,0 +1,20 @@
+{
+    "version": "0.7.8a9",
+    "description": "Arcade music and sound emulator (command-line)",
+    "homepage": "https://web.archive.org/web/2013/http://rbelmont.mameworld.info/?page_id=223",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed; this is the last Windows build.",
+        "Place ROMs in $persist_dir\\roms or add paths to $persist_dir\\m1.ini."
+    ],
+    "url": "https://web.archive.org/web/20130522204430id_/http://rbelmont.mameworld.info/m1078a9-w32.zip",
+    "hash": "0e66ddddce74cc5a3e06ef186196c3b7c1808fc0c0b0c1709f43e38b121aee8f",
+    "extract_dir": "m1078a9",
+    "bin": "m1.exe",
+    "persist": [
+        "roms",
+        "waves",
+        "lists",
+        "m1.ini"
+    ]
+}

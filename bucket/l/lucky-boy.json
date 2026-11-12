@@ -1,0 +1,19 @@
+{
+    "version": "0.1.1",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in Go, with an integrated graphical debugger",
+    "homepage": "https://github.com/danielecanzoneri/lucky-boy",
+    "license": "MIT",
+    "url": "https://github.com/danielecanzoneri/lucky-boy/releases/download/v0.1.1/luckyboy-windows-amd64.exe#/luckyboy.exe",
+    "hash": "278237e5f09ecab8ed623f084de680cef736ecf05428b31aaf7c5f1bfa2ecf8a",
+    "bin": "luckyboy.exe",
+    "shortcuts": [
+        [
+            "luckyboy.exe",
+            "Lucky Boy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/danielecanzoneri/lucky-boy/releases/download/v$version/luckyboy-windows-amd64.exe#/luckyboy.exe"
+    }
+}

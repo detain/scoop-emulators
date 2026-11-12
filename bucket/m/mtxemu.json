@@ -6,17 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mtxemu/emulator_screen_01.jpg"
     ],
     "version": "r1",
-    "description": "Mt. Xemu is a Memotech MTX emulator.",
+    "description": "Memotech MTX emulator",
     "homepage": "https://consolo.is.cc/emulator/mtxemu",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/mtxemu/r1.7z",
     "hash": "05fa8fd7452115093bea6dc7353aedee85fb2e6bf615d806b712fccc7e6f8ee8",
-    "bin": [
-        "MtXemu.exe"
+    "bin": "MtXemu.exe",
+    "shortcuts": [
+        [
+            "MtXemu.exe",
+            "Mt. Xemu"
+        ]
     ],
     "checkver": {
         "url": "https://consolo.is.cc/emu/mtxemu/",
-        "regex": "([\\w]+)\\.7z"
+        "regex": "(r\\d+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/mtxemu/$version.7z"

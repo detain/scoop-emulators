@@ -1,0 +1,33 @@
+{
+    "version": "0.4.3",
+    "description": "Cycle-accurate Nintendo Entertainment System emulator and NSF player written in Java",
+    "homepage": "https://github.com/QuantumSoundings/BassNES",
+    "license": "AGPL-3.0-only",
+    "notes": "This emulator is no longer developed. Requires a Java runtime.",
+    "suggest": {
+        "Java": "java/openjdk"
+    },
+    "url": "https://github.com/QuantumSoundings/BassNES/releases/download/0.4.3/BassNES.0.4.3.zip",
+    "hash": "8bc9089eac030dc2ca294613518f7727e303e8c018a12381108fa83b6dd98b33",
+    "pre_install": "Rename-Item \"$dir\\BassNES.$version.jar\" 'BassNES.jar'",
+    "bin": [
+        [
+            "BassNES.jar",
+            "bassnes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "BassNES.jar",
+            "BassNES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/QuantumSoundings/BassNES/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/QuantumSoundings/BassNES/releases/download/$version/BassNES.$version.zip"
+    }
+}

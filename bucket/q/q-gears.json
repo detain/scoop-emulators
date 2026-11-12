@@ -1,0 +1,23 @@
+{
+    "version": "0.21",
+    "description": "Open source clone of the Final Fantasy VII game engine",
+    "homepage": "https://sourceforge.net/projects/q-gears/",
+    "license": "GPL-2.0-only",
+    "notes": "This project is no longer developed.",
+    "url": "https://downloads.sourceforge.net/project/q-gears/q-gears/q-gears_v0.21.zip",
+    "hash": "sha1:bc8b95961fe84cc9eca665163d050a0c07441d4a",
+    "bin": "q-gears.exe",
+    "shortcuts": [
+        [
+            "q-gears.exe",
+            "Q-Gears"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/q-gears/rss?path=/q-gears",
+        "regex": "q-gears_v([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/q-gears/q-gears/q-gears_v$version.zip"
+    }
+}

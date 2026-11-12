@@ -1,0 +1,37 @@
+{
+    "version": "49",
+    "description": "Commander X16 computer emulator",
+    "homepage": "https://github.com/X16Community/x16-emulator",
+    "license": "BSD-2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/X16Community/x16-emulator/releases/download/r49/x16emu_win64-r49.zip",
+            "hash": "051047e59d86149e23471dce93f9f5511ef1e70897ac3a61b5b5a9c2cd397a1e"
+        },
+        "32bit": {
+            "url": "https://github.com/X16Community/x16-emulator/releases/download/r49/x16emu_win32-r49.zip",
+            "hash": "cd732975311f3c6195ecae25bb797b9440e8add745a1a18ce06fb664a1b310a0"
+        }
+    },
+    "bin": "x16emu.exe",
+    "shortcuts": [
+        [
+            "x16emu.exe",
+            "Commander X16 Emulator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/X16Community/x16-emulator",
+        "regex": "r(\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/X16Community/x16-emulator/releases/download/r$version/x16emu_win64-r$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/X16Community/x16-emulator/releases/download/r$version/x16emu_win32-r$version.zip"
+            }
+        }
+    }
+}

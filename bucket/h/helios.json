@@ -1,0 +1,33 @@
+{
+    "version": "26.1023",
+    "description": "Sega Mega Drive/Genesis, 32X, Master System, Game Gear, SG-1000, ColecoVision, MSX and NES emulator written in Java",
+    "homepage": "https://github.com/fedex81/helios",
+    "license": "GPL-3.0-or-later",
+    "notes": "Requires Java 21 or newer.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://github.com/fedex81/helios/releases/download/26.1023/helios-26.1023.zip",
+    "hash": "e3e117693945e5d7f50f92f3fbb7b69fc5b1d5156224d5f5e16bfdccd79ad40e",
+    "pre_install": [
+        "$cmd = (Get-Content \"$dir\\launcher.bat\" | Where-Object { $_ -match '^java ' }) -replace '\"%1\"', '\"%ROM%\"'",
+        "Set-Content \"$dir\\helios.bat\" -Value @('@echo off', 'setlocal', 'set \"ROM=\"', 'if not \"%~1\"==\"\" set \"ROM=%~f1\"', 'cd /d \"%~dp0\"', $cmd) -Encoding Ascii"
+    ],
+    "bin": [
+        [
+            "helios.bat",
+            "helios"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "helios.bat",
+            "Helios"
+        ]
+    ],
+    "persist": "helios.properties",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/fedex81/helios/releases/download/$version/helios-$version.zip"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "version": "0.155",
+    "description": "Arcade emulator, unofficial MAMEUI build with hiscore.dat support",
+    "homepage": "http://mameuihi.alfmans-community.de/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0155/docs/license.txt"
+    },
+    "notes": [
+        "This emulator is no longer developed.",
+        "Hiscore, nag screen and loading message patches can be toggled in $persist_dir\\INI\\mame.ini (see MameUIHiScore_ExtraOptions.txt)."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "http://mameuihi.alfmans-community.de/files/binary/64bit/MameUIHI64_v0.155.zip",
+            "hash": "54f2ce2859dfd99d6801306256f50c923c7747652bc013a10ae5a74c88dc78c1",
+            "extract_dir": "MameUIHI64_v0.155",
+            "bin": [
+                [
+                    "mameuihiscore64.exe",
+                    "mameuihiscore"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mameuihiscore64.exe",
+                    "MameUIHiScore"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "http://mameuihi.alfmans-community.de/files/binary/32bit/MameUIHI32_v0.155.zip",
+            "hash": "8e3c745a612b69593905ebbc1ddea87175d364163596ce928247333a0c549823",
+            "extract_dir": "MameUIHI32_v0.155",
+            "bin": [
+                [
+                    "mameuihiscore32.exe",
+                    "mameuihiscore"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mameuihiscore32.exe",
+                    "MameUIHiScore"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "ROMs",
+        "Samples",
+        "CFG",
+        "INI",
+        "NVRAM",
+        "STA",
+        "Snap",
+        "INP",
+        "DIFF",
+        "Memcard",
+        "hi"
+    ],
+    "checkver": {
+        "url": "http://mameuihi.alfmans-community.de/Download.html",
+        "regex": "MameUIHI64_v([\\d.u]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://mameuihi.alfmans-community.de/files/binary/64bit/MameUIHI64_v$version.zip",
+                "extract_dir": "MameUIHI64_v$version"
+            },
+            "32bit": {
+                "url": "http://mameuihi.alfmans-community.de/files/binary/32bit/MameUIHI32_v$version.zip",
+                "extract_dir": "MameUIHI32_v$version"
+            }
+        }
+    }
+}

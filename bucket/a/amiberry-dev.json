@@ -1,0 +1,70 @@
+{
+    "version": "5349-20261109-e07bdb3",
+    "description": "Commodore Amiga emulator based on WinUAE (development version)",
+    "homepage": "https://amiberry.com/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Place your Kickstart ROMs in $persist_dir\\ROMs",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which upstream keeps for only 7 days after the last successful build."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-x64.zip",
+            "hash": "3e06105905b0d0f63cd7aca7d8f24d06f29a750fe66d51dcda743cdbabf33354"
+        },
+        "arm64": {
+            "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-arm64.zip",
+            "hash": "7bb908fb725c23c305fe7352585416d145a04d29d85edf7325a08fcfbc702d33"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem \"$dir\\amiberry-*.exe\" | Remove-Item",
+        "$zip = Get-ChildItem \"$dir\\amiberry-*-portable.zip\" | Select-Object -First 1",
+        "Expand-7zipArchive $zip.FullName \"$dir\" -ExtractDir $zip.BaseName -Removal"
+    ],
+    "bin": [
+        [
+            "Amiberry.exe",
+            "amiberry-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Amiberry.exe",
+            "Amiberry (dev)"
+        ]
+    ],
+    "persist": [
+        "Settings",
+        "Configurations",
+        "ROMs",
+        "SaveStates",
+        "Screenshots",
+        "NVRAM",
+        "Floppies",
+        "HardDrives",
+        "CDROMs",
+        "LHA"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/BlitterStudio/amiberry/actions/workflows/c-cpp.yml/runs?branch=master&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-arm64.zip"
+            }
+        }
+    }
+}

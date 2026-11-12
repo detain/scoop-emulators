@@ -1,0 +1,34 @@
+{
+    "version": "2023.03.15",
+    "description": "Nintendo/Sega/Namco Triforce arcade emulator (crediar's Dolphin fork)",
+    "homepage": "https://crediar.dev/crediar/dolphin",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is the last archived build of crediar's Triforce branch (backup copy hosted on archive.org).",
+        "Triforce games need their own boot/firmware files, which are not included."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://archive.org/download/dolphin_tri_x64/dolphin_tri_x64_15_03_2023.rar",
+    "hash": "7ab9466157e7261846667e7d7ad6597953bb7f3ed7370d817844a683e2a8abea",
+    "extract_dir": "x64",
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Dolphin.exe",
+            "dolphin-triforce"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Dolphin.exe",
+            "Dolphin Triforce"
+        ]
+    ],
+    "persist": "User"
+}

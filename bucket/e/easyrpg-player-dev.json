@@ -1,0 +1,52 @@
+{
+    "version": "20261108-g7db2bb5",
+    "description": "RPG Maker 2000/2003 game interpreter (development version)",
+    "homepage": "https://easyrpg.org/player/",
+    "license": "GPL-3.0-or-later",
+    "notes": "Continuous builds from the EasyRPG Jenkins CI (https://ci.easyrpg.org).",
+    "architecture": {
+        "64bit": {
+            "url": "https://ci.easyrpg.org/job/player-win64/1996/artifact/bin/easyrpg_windows_x64.zip",
+            "hash": "56a92ed2b6dfb91a0f86b56e4f754fbf3b9a57e09da48e25577ef5f9b929cc26"
+        },
+        "32bit": {
+            "url": "https://ci.easyrpg.org/job/player-win32/2051/artifact/bin/easyrpg_windows.zip",
+            "hash": "5f589a0f0972e3b1900a5653442f472887c355e038c25ebe1db79f1cd414f1a1"
+        }
+    },
+    "bin": [
+        [
+            "Player.exe",
+            "easyrpg-player-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Player.exe",
+            "EasyRPG Player (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://ci.easyrpg.org/api/json?tree=jobs%5Bname,lastSuccessfulBuild%5Bnumber,timestamp,actions%5BlastBuiltRevision%5BSHA1%5D%5D%5D%5D",
+        "script": [
+            "$jobs = ($page | ConvertFrom-Json).jobs",
+            "$b64 = ($jobs | Where-Object { $_.name -eq 'player-win64' }).lastSuccessfulBuild",
+            "$b32 = ($jobs | Where-Object { $_.name -eq 'player-win32' }).lastSuccessfulBuild",
+            "$sha = ($b64.actions | Where-Object { $_.lastBuiltRevision }).lastBuiltRevision.SHA1",
+            "$date = [DateTimeOffset]::FromUnixTimeMilliseconds($b64.timestamp).UtcDateTime.ToString('yyyyMMdd')",
+            "Write-Output \"$date $sha $($b64.number) $($b32.number)\""
+        ],
+        "regex": "^(?<date>\\d{8}) (?<sha>[0-9a-f]{7})[0-9a-f]* (?<b64>\\d+) (?<b32>\\d+)$",
+        "replace": "${date}-g${sha}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ci.easyrpg.org/job/player-win64/$matchB64/artifact/bin/easyrpg_windows_x64.zip"
+            },
+            "32bit": {
+                "url": "https://ci.easyrpg.org/job/player-win32/$matchB32/artifact/bin/easyrpg_windows.zip"
+            }
+        }
+    }
+}

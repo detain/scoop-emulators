@@ -1,0 +1,22 @@
+{
+    "version": "1.18b-1.4",
+    "description": "Sony PlayStation P.E.Op.S. Soft GPU plugin with the xBRZ upscaling filter for PSEmu Pro compatible emulators",
+    "homepage": "https://sourceforge.net/projects/xbrz/files/ePSXe/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This is a 32-bit GPU plugin DLL, not a standalone emulator.",
+        "Copy the files from $dir\\plugins into your emulator's plugins folder (e.g. ePSXe), configure \"P.E.Op.S. Soft Driver\" and select xBRZ for stretching.",
+        "ePSXe 2.0 and later include xBRZ in its built-in GPU core.",
+        "This plugin is no longer developed."
+    ],
+    "url": "https://downloads.sourceforge.net/project/xbrz/ePSXe/P.E.Op.S._Soft_GPU_1.18b%2BxBRZ_1.4_Win32.zip",
+    "hash": "e8ea75cd38d5162acf9756457e3a38bf5424ab785cd23eac2be868093b4afaac",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/xbrz/rss?path=/ePSXe",
+        "regex": "P\\.E\\.Op\\.S\\._Soft_GPU_(?<gpu>[\\d.]+[a-z]?)%2BxBRZ_(?<xbrz>[\\d.]+)_Win32\\.zip",
+        "replace": "${gpu}-${xbrz}"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/xbrz/ePSXe/P.E.Op.S._Soft_GPU_$matchGpu%2BxBRZ_$matchXbrz_Win32.zip"
+    }
+}

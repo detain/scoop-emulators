@@ -1,0 +1,28 @@
+{
+    "version": "1.3.0",
+    "description": "Atari 800 XL emulator",
+    "homepage": "https://github.com/AnimaInCorpore/A8E",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "A8E loads ATARIXL.ROM and ATARIBAS.ROM from the current working directory (not included).",
+        "The Start Menu shortcut starts in $dir; when using the shim, run it from a folder containing the ROM files."
+    ],
+    "url": "https://github.com/AnimaInCorpore/A8E/releases/download/v1.3.0/A8E-v1.3.0-windows-msvc.exe#/A8E.exe",
+    "hash": "2651e5a46765782db031e222d6252cb507c6d4506545cc8114e00bb451d5e233",
+    "bin": [
+        [
+            "A8E.exe",
+            "a8e"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "A8E.exe",
+            "A8E"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AnimaInCorpore/A8E/releases/download/v$version/A8E-v$version-windows-msvc.exe#/A8E.exe"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "version": "2026.10.12",
+    "description": "Nintendo GameCube emulator written in Rust (nightly builds)",
+    "homepage": "https://github.com/vxpm/lazuli",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/vxpm/lazuli/releases/download/nightly-261012/lazuli-windows-261012.exe#/lazuli.exe",
+    "hash": "604599ee2dbf220cd607c58baa73a6d621ddc8f97a1806a3559a6d22d74e1a3c",
+    "bin": "lazuli.exe",
+    "shortcuts": [
+        [
+            "lazuli.exe",
+            "Lazuli"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/vxpm/lazuli",
+        "regex": "nightly-(?<yy>\\d{2})(?<mm>\\d{2})(?<dd>\\d{2})",
+        "replace": "20${yy}.${mm}.${dd}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vxpm/lazuli/releases/download/nightly-$matchYy$matchMm$matchDd/lazuli-windows-$matchYy$matchMm$matchDd.exe#/lazuli.exe"
+    }
+}

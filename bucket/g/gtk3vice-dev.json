@@ -1,0 +1,95 @@
+{
+    "version": "3.10-r46397",
+    "description": "Commodore 8-bit computer emulator suite (C64, C128, VIC-20, PET, Plus/4, CBM-II), GTK3 SVN snapshot (development version)",
+    "homepage": "https://github.com/VICE-Team/svn-mirror",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/VICE-Team/svn-mirror/releases/download/r46397/GTK3VICE-3.10-win64-r46397.7z",
+    "hash": "70c106ef43e24c633a5279396a2cd03be03ad31a4bcfe1a45a6eabadcb2e3bd6",
+    "extract_dir": "GTK3VICE-3.10-win64-r46397",
+    "bin": [
+        [
+            "bin\\x64sc.exe",
+            "x64sc-dev"
+        ],
+        [
+            "bin\\x128.exe",
+            "x128-dev"
+        ],
+        [
+            "bin\\x64dtv.exe",
+            "x64dtv-dev"
+        ],
+        [
+            "bin\\xscpu64.exe",
+            "xscpu64-dev"
+        ],
+        [
+            "bin\\xvic.exe",
+            "xvic-dev"
+        ],
+        [
+            "bin\\xpet.exe",
+            "xpet-dev"
+        ],
+        [
+            "bin\\xplus4.exe",
+            "xplus4-dev"
+        ],
+        [
+            "bin\\xcbm2.exe",
+            "xcbm2-dev"
+        ],
+        [
+            "bin\\xcbm5x0.exe",
+            "xcbm5x0-dev"
+        ],
+        [
+            "bin\\vsid.exe",
+            "vsid-dev"
+        ],
+        [
+            "bin\\c1541.exe",
+            "c1541-dev"
+        ],
+        [
+            "bin\\cartconv.exe",
+            "cartconv-dev"
+        ],
+        [
+            "bin\\petcat.exe",
+            "petcat-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bin\\x64sc.exe",
+            "VICE C64 (dev)"
+        ],
+        [
+            "bin\\x128.exe",
+            "VICE C128 (dev)"
+        ],
+        [
+            "bin\\xvic.exe",
+            "VICE VIC-20 (dev)"
+        ],
+        [
+            "bin\\xplus4.exe",
+            "VICE Plus4 (dev)"
+        ],
+        [
+            "bin\\xpet.exe",
+            "VICE PET (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/VICE-Team/svn-mirror/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/r(?<rev>\\d+)/GTK3VICE-(?<ver>[\\d.]+)-win64-r\\d+\\.7z",
+        "replace": "${ver}-r${rev}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/VICE-Team/svn-mirror/releases/download/r$matchRev/GTK3VICE-$matchVer-win64-r$matchRev.7z",
+        "extract_dir": "GTK3VICE-$matchVer-win64-r$matchRev"
+    }
+}

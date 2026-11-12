@@ -1,0 +1,26 @@
+{
+    "version": "2.1.4",
+    "description": "Open-source 2D Action-RPG game engine and launcher for Solarus quests (Zelda-like fan games)",
+    "homepage": "https://www.solarus-games.org/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://gitlab.com/api/v4/projects/6933824/packages/generic/solarus/2.1.4/solarus-launcher-v2.1.4-windows-x64.zip",
+    "hash": "11387b0e7d769c618fea5de09db8f502d6f421bc20ccdf578e78c9892c027a81",
+    "bin": [
+        "solarus-launcher.exe",
+        "solarus-run.exe"
+    ],
+    "shortcuts": [
+        [
+            "solarus-launcher.exe",
+            "Solarus Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "https://gitlab.com/api/v4/projects/6933824/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://gitlab.com/api/v4/projects/6933824/packages/generic/solarus/$version/solarus-launcher-v$version-windows-x64.zip"
+    }
+}

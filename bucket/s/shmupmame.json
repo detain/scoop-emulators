@@ -1,0 +1,35 @@
+{
+    "version": "5.4",
+    "description": "Arcade emulator, a MAME fork with reduced input lag and fixes for shoot 'em ups",
+    "homepage": "https://shmupmame.wordpress.com/",
+    "license": "GPL-2.0-or-later",
+    "url": "https://storage.googleapis.com/stormoid.xyz/shmupmame/shmupmame_5.4_win64.7z",
+    "hash": "708fb62fc949936218e49194e134de626ba5265f7d84ed50ed243b6c5b808625",
+    "pre_install": "Rename-Item \"$dir\\shmupmame_$version.exe\" 'shmupmame.exe'",
+    "bin": "shmupmame.exe",
+    "shortcuts": [
+        [
+            "shmupmame.exe",
+            "Shmupmame"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "ini",
+        "nvram",
+        "roms",
+        "ui"
+    ],
+    "checkver": {
+        "url": "https://storage.googleapis.com/stormoid.xyz?prefix=shmupmame/",
+        "script": [
+            "$xml = [xml]$page",
+            "$latest = $xml.ListBucketResult.Contents | Where-Object { $_.Key -match '_win64\\.7z$' } | Sort-Object { [datetime]$_.LastModified } | Select-Object -Last 1",
+            "Write-Output $latest.Key"
+        ],
+        "regex": "shmupmame_([\\d.]+)_win64\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://storage.googleapis.com/stormoid.xyz/shmupmame/shmupmame_$version_win64.7z"
+    }
+}

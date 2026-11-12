@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "description": "Atari Lynx emulator (Holani) with a minimal command-line frontend",
+    "homepage": "https://github.com/LLeny/holani-min",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LLeny/holani-min/releases/download/1.0.0/holani-min.exe",
+            "hash": "337767bd33fa64302348e68bca90dd565b98a7c083fb45f467a6f7eb1cdd84a7"
+        }
+    },
+    "bin": "holani-min.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LLeny/holani-min/releases/download/$version/holani-min.exe"
+            }
+        }
+    }
+}

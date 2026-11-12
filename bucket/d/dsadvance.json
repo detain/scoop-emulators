@@ -1,0 +1,41 @@
+{
+    "version": "2.4",
+    "description": "Xbox gamepad emulation for DualSense, DualShock 4, Nintendo Pro controller and Joy-Cons with gyro aiming",
+    "homepage": "https://github.com/r57zone/DSAdvance",
+    "license": {
+        "identifier": "Public Domain",
+        "url": "https://github.com/r57zone/DSAdvance/blob/master/LICENSE"
+    },
+    "notes": [
+        "Requires the ViGEmBus driver: https://github.com/nefarius/ViGEmBus/releases",
+        "HidHide is recommended to hide the physical controller from games."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/r57zone/DSAdvance/releases/download/2.4/DSAdvance.2.4.zip",
+    "hash": "6c515d1ca146bfd4cc62cf36c2f373f8449e5e64ab11ebb02646e2b36e7fdf5a",
+    "bin": [
+        "DSAdvance.exe",
+        "XInputTest.exe"
+    ],
+    "shortcuts": [
+        [
+            "DSAdvance.exe",
+            "DSAdvance"
+        ],
+        [
+            "Launcher.exe",
+            "DSAdvance Launcher"
+        ]
+    ],
+    "persist": [
+        "Config.ini",
+        "KMProfiles",
+        "XboxProfiles"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/r57zone/DSAdvance/releases/download/$version/DSAdvance.$version.zip"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "version": "0.160",
+    "description": "Multi-system emulator based on MESS/MESSUI with WolfMAME patches for Home Action Replay recordings",
+    "homepage": "http://wolfmess.homeactionreplay.org/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed. The download is an Internet Archive (Wayback Machine) copy of the original release.",
+        "Place system ROMs/BIOS sets in $persist_dir\\roms"
+    ],
+    "url": "https://web.archive.org/web/20150922020914id_/http://wolfmess.homeactionreplay.org/wolfmess160.exe#/dl.7z",
+    "hash": "8c610fe0112b543880a0a8330a1d7d0879ffd98ee4fe940906028101d6b89f00",
+    "bin": [
+        [
+            "mess.exe",
+            "wolfmess"
+        ],
+        [
+            "messui.exe",
+            "wolfmessui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "messui.exe",
+            "WolfMESS"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "ini",
+        "inp",
+        "nvram",
+        "roms",
+        "snap",
+        "sta"
+    ]
+}

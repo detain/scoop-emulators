@@ -1,0 +1,20 @@
+{
+    "version": "0.5.0",
+    "description": "Nintendo Entertainment System emulator that renders games in 3D",
+    "homepage": "https://github.com/nixxou/zaxnes",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/nixxou/zaxnes/releases/download/v0.5.0/Zaxnes-0.5.0-win-x64.zip",
+    "hash": "3afee23e53ebe209e3565f8d804673dc7a75bb96ebbc05eca2bdc6fa236e8cd7",
+    "bin": "zaxnes.exe",
+    "shortcuts": [
+        [
+            "zaxnes.exe",
+            "Zaxnes"
+        ]
+    ],
+    "persist": "userdata",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/nixxou/zaxnes/releases/download/v$version/Zaxnes-$version-win-x64.zip"
+    }
+}

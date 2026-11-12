@@ -1,0 +1,46 @@
+{
+    "version": "0.3.3",
+    "description": "Sony PlayStation 2 memory card manager (.ps2, .mc2, .mcd, .vm2 and raw VMC files)",
+    "homepage": "https://github.com/PCSX2/myMCpp",
+    "license": "GPL-3.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/PCSX2/myMCpp/releases/download/v0.3.3/myMCpp-v0.3.3-windows-x64-clang.zip",
+            "hash": "8cf8ea62f0efdae5a41fc72002e36fff51cb7ac64d6016affdcbc6c1d7f93dd9"
+        },
+        "arm64": {
+            "url": "https://github.com/PCSX2/myMCpp/releases/download/v0.3.3/myMCpp-v0.3.3-windows-arm64-clang.zip",
+            "hash": "798a17e1f8fde513d0e0b17b7a0ce81632f14c1271cca9ce40ad59c0cc7cea89"
+        }
+    },
+    "bin": [
+        [
+            "myMCpp.exe",
+            "mymcpp"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "myMCpp.exe",
+            "myMCpp"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/PCSX2/myMCpp/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PCSX2/myMCpp/releases/download/v$version/myMCpp-v$version-windows-x64-clang.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/PCSX2/myMCpp/releases/download/v$version/myMCpp-v$version-windows-arm64-clang.zip"
+            }
+        }
+    }
+}

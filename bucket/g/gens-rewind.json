@@ -1,0 +1,38 @@
+{
+    "version": "1.0",
+    "description": "Sega Genesis / Mega Drive / Sega CD / 32X / Master System / Game Gear emulator based on Gens+ with real-time rewind",
+    "homepage": "https://www.zophar.net/genesis/gens-rewind.html",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is no longer developed.",
+        "The rewind button is mapped to V by default (Options > Configure Keys)."
+    ],
+    "url": "https://www.zophar.net/fileuploads/3/21381smqcr/gensplusrewind-1.0-win32-mk2k.zip",
+    "hash": "57a188810842f48a00c10b7d0f62522d38b3d587388448d90a618994054b9a8e",
+    "extract_dir": "gensplusrewind-1.0-win32-mk2k\\GensPlusREWiND",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\gens.ini\")) {",
+        "    New-Item \"$dir\\gens.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "gensrw.exe",
+            "gens-rewind"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gensrw.exe",
+            "Gens+ REWiND!"
+        ]
+    ],
+    "persist": [
+        "Bios",
+        "Cheats",
+        "Config",
+        "Save",
+        "Shots",
+        "gens.ini"
+    ]
+}

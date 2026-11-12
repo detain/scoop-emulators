@@ -8,30 +8,23 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/Satourne-SEGA-Saturn-Emulator-Pic-01.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/Satourne-SEGA-Saturn-Emulator-Pic-02.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/Satourne-SEGA-Saturn-Emulator-Pic-03.jpg"
     ],
     "version": "2.0b3",
-    "description": "Satourne is a now-defunct SEGA Saturn emulator. It was the first SEGA Saturn emulator that was able to emulate commercial SEGA Saturn games successfully.",
-    "homepage": "http://www.satourne.consollection.com/",
+    "description": "Sega Saturn and ST-V emulator",
+    "homepage": "https://web.archive.org/web/2012/http://satourne.consollection.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
-    "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f",
+    "notes": "Sega Saturn / ST-V BIOS files are not included.",
+    "url": "https://web.archive.org/web/20121123234150id_/http://satourne.consollection.com/download_v5/satourne_beta_3_update.zip",
+    "hash": "6b3a27aa509d11f1d2f2d1ad5d08f8a4b679bfef00be6ba6328b410d86fb7fca",
+    "extract_dir": "satourne release",
     "bin": [
-        "Satourne.exe"
+        [
+            "satourne_3_win32.exe",
+            "satourne"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
-            "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/satourne/2.0b3.7z",
-            "hash": "a34e08012d4aa5982d1d5a35725432e2b2b77a4f43abcd53c4fda5c1edb2e73f"
-        }
-    },
-    "checkver": {
-        "url": "http://www.satourne.consollection.com/download/satourne.txt",
-        "regex": "Current version : (.*)"
-    },
-    "autoupdate": {
-        "url": "http://www.satourne.consollection.com/download/"
-    },
-    "extract_dir": "."
+    "shortcuts": [
+        [
+            "satourne_3_win32.exe",
+            "Satourne"
+        ]
+    ]
 }

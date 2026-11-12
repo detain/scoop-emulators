@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "description": "Sony PlayStation 4 and PlayStation 5 emulator (early stage)",
+    "homepage": "https://github.com/InoriRus/Kyty",
+    "license": "MIT",
+    "url": "https://github.com/InoriRus/Kyty/releases/download/v0.2.0/Kyty-v0.2.0.zip",
+    "hash": "2e331d91fd914035ff4b0ec5201975947f6a139f7261b2f0099b606b8b1d1ce4",
+    "bin": [
+        [
+            "launcher.exe",
+            "kyty"
+        ],
+        "fc_script.exe"
+    ],
+    "shortcuts": [
+        [
+            "launcher.exe",
+            "Kyty"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/InoriRus/Kyty/releases/download/v$version/Kyty-v$version.zip"
+    }
+}

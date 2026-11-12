@@ -6,27 +6,31 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpce/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpce/emulator_screen_01.jpg"
     ],
-    "version": "1.90",
-    "description": "CPCE is an Amstrad CPC emulator.",
-    "homepage": "http://cpce.emuunlim.com/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/cpce/1.90.7z",
-    "hash": "e8263f75d8dc738416bf87744c3b5e66c5e29ba4bd7851ee49a879be4e304b3f",
+    "version": "1.94",
+    "description": "Amstrad CPC emulator",
+    "homepage": "http://cngsoft.no-ip.org/cpce/index.htm",
+    "license": "Freeware",
+    "url": "http://cngsoft.no-ip.org/cpce/cpce194.zip",
+    "hash": "645d7590765d304c335cf02ba01fb2dca32cb46dfd6c417db9c2feff0371cebf",
     "bin": [
-        "CPCE95.exe"
+        [
+            "CPCE95.EXE",
+            "cpce"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/cpce/1.90.7z",
-            "hash": "e8263f75d8dc738416bf87744c3b5e66c5e29ba4bd7851ee49a879be4e304b3f"
-        }
-    },
+    "shortcuts": [
+        [
+            "CPCE95.EXE",
+            "CPCE"
+        ]
+    ],
+    "persist": "CPCE.INI",
     "checkver": {
-        "url": "http://cpce.emuunlim.com/downloads/cpce/cpce_version.txt",
-        "regex": "CPCE v(\\d+\\.\\d+\\.\\d+)"
+        "url": "http://cngsoft.no-ip.org/cpce/index.htm",
+        "regex": "cpce(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "http://cpce.emuunlim.com/downloads/cpce/cpce_w64.zip",
-        "extract_dir": "cpce"
+        "url": "http://cngsoft.no-ip.org/cpce/cpce$cleanVersion.zip"
     }
 }

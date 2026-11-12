@@ -6,19 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nesticle/emulator_screen_01.jpg"
     ],
     "version": "0.42",
-    "description": "NESticle is a Nintendo Entertainment System emulator.",
-    "homepage": "http://bloodlust.zophar.net/NESticle/nes.html",
+    "description": "Nintendo Entertainment System emulator",
+    "homepage": "https://web.archive.org/web/20110425222637/http://bloodlust.zophar.net/NESticle/nes.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nesticle/0.42.7z",
-    "hash": "a3d77211665b550cbd7ac075262134b32e62b82206c6eae42d5651c18d0b41f4",
+    "url": "https://web.archive.org/web/20110430172639id_/http://www.zophar.net/NESticle/nestc042.zip",
+    "hash": "2090cb2ceead66e068b752ce8562a75728ffe44a7a9d87443c6e2274805e9be2",
     "bin": [
-        "NESTCL95.EXE"
+        [
+            "NESTCL95.EXE",
+            "nesticle"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/nesticle/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nesticle/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "NESTCL95.EXE",
+            "NESticle"
+        ]
+    ]
 }

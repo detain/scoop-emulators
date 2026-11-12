@@ -1,0 +1,27 @@
+{
+    "version": "r101",
+    "description": "SuperMegaChip (CHIP-8 extension) emulator",
+    "homepage": "https://github.com/KrossX/SMCX",
+    "license": "MIT",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires the DirectX End-User Runtime (d3dx11_43.dll)."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2010": "extras/vcredist2010"
+    },
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/magical-tools/SMCX%20r101.zip",
+    "hash": "25c8dd9c6d1ac55b78d1d3385756bca78ac4c34f13be49704584a98cf507f090",
+    "bin": [
+        [
+            "SMCX.exe",
+            "smcx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SMCX.exe",
+            "SuperMegaChip-X"
+        ]
+    ]
+}

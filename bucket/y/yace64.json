@@ -1,0 +1,35 @@
+{
+    "version": "2.4.0.60",
+    "description": "Commodore 64 emulator with 3D, VR and stereoscopic views",
+    "homepage": "https://www.yace64.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.yace64.com/Download.html"
+    },
+    "notes": [
+        "ROM files are not included; download them from within the application.",
+        "YACE64 stores its configuration (YACE.ini) in Documents\\YACE."
+    ],
+    "url": "https://www.yace64.com/Download/App/64/YACE64Windows2-4-0-60.zip",
+    "hash": "f152e32e0a04b08283246c75474f88ec6276f91e1e7894dcd0abb8dc38b26f7a",
+    "bin": [
+        [
+            "YACE64Windows.exe",
+            "yace64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "YACE64Windows.exe",
+            "YACE64"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.yace64.com/Download.html",
+        "regex": "YACE64Windows(\\d+)-(\\d+)-(\\d+)-(\\d+)\\.zip",
+        "replace": "${1}.${2}.${3}.${4}"
+    },
+    "autoupdate": {
+        "url": "https://www.yace64.com/Download/App/64/YACE64Windows$dashVersion.zip"
+    }
+}

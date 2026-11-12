@@ -1,0 +1,22 @@
+{
+    "version": "1.02",
+    "description": "Little Arcade System Emulator Releases, a multi-system arcade emulator for Space Invaders-era hardware",
+    "homepage": "https://sourceforge.net/projects/laser/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Command line usage: laser <gamename> [-joy]",
+        "Place unzipped ROM sets in subfolders of $persist_dir\\roms"
+    ],
+    "url": "https://downloads.sourceforge.net/project/laser/Laser/Laser%201.02/laser1.02_win32.zip",
+    "hash": "sha1:8a67b2938db9d13ed255996016dfb5fbdd8719c8",
+    "bin": "laser.exe",
+    "persist": "roms",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/laser/rss",
+        "regex": "Laser/Laser%20([\\d.]+)/laser[\\d.]+_win32\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/laser/Laser/Laser%20$version/laser$version_win32.zip"
+    }
+}

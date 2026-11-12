@@ -1,0 +1,25 @@
+{
+    "version": "1.2.0",
+    "description": "Apple II, II+, IIe, IIc and IIc+ emulator",
+    "homepage": "https://github.com/habib256/pom2",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/habib256/pom2/releases/download/v1.2.0/POM2-Windows-v1.2.0.zip",
+    "hash": "8783a1cc3344d81da0aec24cb2ec90acf41cef2016bc4f9332a318383a47ae01",
+    "bin": [
+        "POM2.exe",
+        "pom2_headless.exe"
+    ],
+    "shortcuts": [
+        [
+            "POM2.exe",
+            "POM2"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/habib256/pom2/releases/download/v$version/POM2-Windows-v$version.zip",
+        "hash": {
+            "url": "https://github.com/habib256/pom2/releases/download/v$version/SHA256SUMS.txt"
+        }
+    }
+}

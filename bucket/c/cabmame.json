@@ -1,0 +1,52 @@
+{
+    "version": "0.146",
+    "description": "Arcade emulator based on MAME with hacks for arcade cabinet use (sound sync, clean stretch, resolution switching)",
+    "homepage": "http://community.arcadeinfo.de/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed. Downloads are served from the Internet Archive.",
+        "Place your ROM sets in $persist_dir\\roms"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://web.archive.org/web/20210601221314id_/http://files.arianchen.de/cabmame/0146_cabmame64.zip",
+            "hash": "23847b6e2cdc9ede012ece22de408b909129115760325e40c54108b2d8c4d077",
+            "bin": [
+                [
+                    "cabmame64.exe",
+                    "cabmame"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "cabmame64.exe",
+                    "CabMAME"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://web.archive.org/web/20210601221316id_/http://files.arianchen.de/cabmame/0146_cabmame32.zip",
+            "hash": "15e836966d96831e7c76327775be8fb8c76cc19b01c716aa7ae40358fc9f32bc",
+            "bin": "cabmame.exe",
+            "shortcuts": [
+                [
+                    "cabmame.exe",
+                    "CabMAME"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\mame.ini\")) {",
+        "    New-Item \"$dir\\mame.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "mame.ini"
+    ]
+}

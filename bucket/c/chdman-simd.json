@@ -1,0 +1,18 @@
+{
+    "version": "0.286",
+    "description": "MAME chdman (CHD disk image tool) built with SIMD and pipeline optimizations (SHA-NI, AVX2, zlib-ng)",
+    "homepage": "https://github.com/grouik1er-coder/chdman-simd",
+    "license": "BSD-2-Clause",
+    "url": "https://github.com/grouik1er-coder/chdman-simd/releases/download/0.286/chdman0286.x64-gcc.zip",
+    "hash": "e04a2b63391e8f60f6e67846521f7ea02590dd7293828900ca96b35ae396ab39",
+    "bin": [
+        [
+            "chdman.exe",
+            "chdman-simd"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/grouik1er-coder/chdman-simd/releases/download/$version/chdman$cleanVersion.x64-gcc.zip"
+    }
+}

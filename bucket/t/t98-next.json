@@ -1,0 +1,43 @@
+{
+    "version": "20100525",
+    "description": "NEC PC-9801/PC-9821 emulator",
+    "homepage": "http://akiyuki.boy.jp/t98next/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "An emulated BIOS is built in. Optionally place real BIOS.ROM and SOUND.ROM dumps in $persist_dir\\ROM"
+    ],
+    "url": "http://akiyuki.boy.jp/t98next/Next20100525.zip",
+    "hash": "9407cbda768ff485967b791c5980b7441c77fee9006f506fa7cc0cba0966704d",
+    "extract_dir": "Next20100525",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\MAIN.INI\")) {",
+        "    New-Item \"$dir\\MAIN.INI\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Next.EXE",
+            "t98next"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Next.EXE",
+            "T98-Next"
+        ]
+    ],
+    "persist": [
+        "ROM",
+        "Save",
+        "MAIN.INI"
+    ],
+    "checkver": {
+        "url": "http://akiyuki.boy.jp/t98next/",
+        "regex": "Next(\\d{8}[a-z]?)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://akiyuki.boy.jp/t98next/Next$version.zip",
+        "extract_dir": "Next$version"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "2.0.1a",
+    "description": "Graphical and themeable emulator front-end designed for controller navigation",
+    "homepage": "https://github.com/Aloshi/EmulationStation",
+    "license": "MIT",
+    "notes": "This is the original EmulationStation, which is no longer developed. The official site is offline; the download is served from the Internet Archive. For a maintained fork see ES-DE (es-de).",
+    "suggest": {
+        "Microsoft Visual C++ Redistributable 2013": "extras/vcredist2013"
+    },
+    "url": "https://web.archive.org/web/20150316132248id_/http://emulationstation.org/downloads/releases/2.0.1a/emulationstation_2.0.1a_win32.zip",
+    "hash": "e157612be58fa74e04c79af99d6928f0a39bbd3d0003aae64590e8efb0c66e9d",
+    "pre_install": "Set-Content -Path \"$dir\\launch_portable.bat\" -Value '@set HOME=%~dp0', '@\"%~dp0emulationstation.exe\" %*' -Encoding Ascii",
+    "bin": [
+        [
+            "launch_portable.bat",
+            "emulationstation"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "launch_portable.bat",
+            "EmulationStation",
+            "",
+            "icon.ico"
+        ]
+    ],
+    "persist": ".emulationstation"
+}

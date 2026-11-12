@@ -3,24 +3,41 @@
         "name:neutrinoSX2",
         "author:Muad and nSX2 Team",
         "cmd:%BIN% %ROM%",
-        "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/neutrinosx2/emulator_logo.png",
-        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/neutrinosx2/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/NeutrinoSX2-PS2-Emulator-Pic-01.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/NeutrinoSX2-PS2-Emulator-Pic-02.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/NeutrinoSX2-PS2-Emulator-Pic-03.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/NeutrinoSX2-PS2-Emulator-Pic-04.jpg"
     ],
-    "version": "0.08.1",
-    "description": "NeutrinoSX2 was one of the earliest open-source attempts to emulate the PlayStation 2 system. While unable to emulate commercial games, it helped create an understanding of how the PS2 could be emulated.",
-    "homepage": "http://nsx2.emulation64.com/about.html",
+    "version": "0.08",
+    "description": "Early open-source Sony PlayStation 2 emulator",
+    "homepage": "http://nsx2.emulation64.com/",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/neutrinosx2/0.08.1.7z",
-    "hash": "ff6d81d82514f3ed9ee55b5635a16fc6a0897a13cf6229844dff2a6b4ea368b5",
+    "notes": "Place the PS2 BIOS files in $persist_dir\\Bios",
+    "url": "http://nsx2.emulation64.com/files/downloads/nsx2-0.08-win32.zip",
+    "hash": "421e29fd0d710d3fa99d966b59229210233b8a7995e489b4411315b443ab2b3e",
+    "extract_dir": "nSX2-0.08.00-win32",
     "bin": [
-        "nsx2.exe"
+        [
+            "nSX2.exe",
+            "neutrinosx2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nSX2.exe",
+            "NeutrinoSX2"
+        ]
+    ],
+    "persist": [
+        "Bios",
+        "mc0",
+        "mc1",
+        "nSX2.cfg"
     ],
     "checkver": {
         "url": "http://nsx2.emulation64.com/",
-        "regex": "NeutrinoSX2 (\\d+\\.\\d+\\.\\d+)"
+        "regex": "files/downloads/nsx2-([\\d.]+)-win32\\.zip",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "http://nsx2.emulation64.com/download/NeutrinoSX2%20v0.08.1.zip"
+        "url": "http://nsx2.emulation64.com/files/downloads/nsx2-$version-win32.zip",
+        "extract_dir": "nSX2-$version.00-win32"
     }
 }

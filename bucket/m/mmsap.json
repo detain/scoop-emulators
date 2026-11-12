@@ -1,0 +1,33 @@
+{
+    "version": "3.0.4",
+    "description": "Atari XL/XE SAP music player with a GTK GUI, based on the ASAP library",
+    "homepage": "https://github.com/baktragh/mmSAP",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/baktragh/mmSAP/releases/download/3.0.4/mmsap-3.0.4_win64.zip",
+            "hash": "16cdf9a71feee1b9c96b85a6bd222b5f12b5136d44502ed1d030c2ac7460ac79",
+            "extract_dir": "mmsap-3.0.4_win64"
+        }
+    },
+    "bin": "bin\\mmsap.exe",
+    "shortcuts": [
+        [
+            "bin\\mmsap.exe",
+            "mmSAP"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/baktragh/mmSAP/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/([\\d.]+)/mmsap-[\\d.]+_win64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/baktragh/mmSAP/releases/download/$version/mmsap-$version_win64.zip",
+                "extract_dir": "mmsap-$version_win64"
+            }
+        }
+    }
+}

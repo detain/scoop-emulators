@@ -1,0 +1,19 @@
+{
+    "version": "1.6.12",
+    "description": "Sega Mega Drive / Genesis and Mega CD emulator",
+    "homepage": "https://github.com/Clownacy/clownmdemu-frontend",
+    "license": "AGPL-3.0-or-later",
+    "url": "https://github.com/Clownacy/clownmdemu-frontend/releases/download/v1.6.12/clownmdemu-v1.6.12-i686.exe#/clownmdemu.exe",
+    "hash": "ef7b3ac6c1e98be48073024deced138890f2cedb56a52f1b65e31c648518f22c",
+    "bin": "clownmdemu.exe",
+    "shortcuts": [
+        [
+            "clownmdemu.exe",
+            "ClownMDEmu"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Clownacy/clownmdemu-frontend/releases/download/v$version/clownmdemu-v$version-i686.exe#/clownmdemu.exe"
+    }
+}

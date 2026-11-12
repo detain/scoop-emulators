@@ -1,0 +1,32 @@
+{
+    "version": "0.144-test0",
+    "description": "Multi-system emulator (MESS 0.144) with re-recording features for tool-assisted speedruns",
+    "homepage": "https://github.com/TASEmulators/mame-rr",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://github.com/TASEmulators/mame-rr/blob/master/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mame-rr/mess-rr-0144-test0.7z",
+    "hash": "164010cfc6a94ed89027c3ca87bf0a9acb24fc18054a4154bc62a94b8cb7852b",
+    "bin": [
+        [
+            "mess-rr.exe",
+            "mess-rr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mess-rr.exe",
+            "MESS Rerecording"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "inp",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ]
+}

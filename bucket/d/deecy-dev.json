@@ -1,0 +1,35 @@
+{
+    "version": "816-20261028-c2b84cc",
+    "description": "Sega Dreamcast emulator written in Zig (development version)",
+    "homepage": "https://github.com/Senryoku/Deecy",
+    "license": "MIT",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+    "url": "https://nightly.link/Senryoku/Deecy/workflows/publish/main/Deecy-x86_64-windows.zip",
+    "hash": "7160a84090285b87f7ce43faeb699617ba653f30051557aa60767ea62d3706e3",
+    "bin": [
+        [
+            "Deecy.exe",
+            "deecy-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Deecy.exe",
+            "Deecy (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Senryoku/Deecy/actions/workflows/publish.yml/runs?branch=main&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/Senryoku/Deecy/workflows/publish/main/Deecy-x86_64-windows.zip"
+    }
+}

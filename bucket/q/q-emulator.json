@@ -1,0 +1,30 @@
+{
+    "version": "4.2",
+    "description": "Sinclair QL emulator",
+    "homepage": "https://www.terdina.net/ql/q-emulator.html",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://www.terdina.net/ql/winql.html"
+    },
+    "url": "https://www.terdina.net/ql/win/qemulator.msi",
+    "hash": "79274cdc7bac48cff1f03921e6dcc993fa5007f41f0937be81007bdf03b8d35c",
+    "bin": [
+        [
+            "QemuLator.exe",
+            "qemulator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "QemuLator.exe",
+            "Q-emuLator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.terdina.net/ql/winql.html",
+        "regex": "Download Q-emuLator ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url": "https://www.terdina.net/ql/win/qemulator.msi"
+    }
+}

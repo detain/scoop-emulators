@@ -1,0 +1,34 @@
+{
+    "version": "0.8.4",
+    "description": "Self-hosted game library manager and launcher focused on emulation (desktop client)",
+    "homepage": "https://github.com/JMBeresford/retrom",
+    "license": "GPL-3.0-only",
+    "notes": "Requires the Microsoft Edge WebView2 runtime (preinstalled on Windows 11).",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JMBeresford/retrom/releases/download/v0.8.4/Retrom_0.8.4_x64-setup.exe#/dl.7z",
+            "hash": "f4e5c6c48273918b51e234c0a10490769ae019dfad68a84969492e0b373b3d1b"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        [
+            "Retrom.exe",
+            "retrom"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Retrom.exe",
+            "Retrom"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JMBeresford/retrom/releases/download/v$version/Retrom_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

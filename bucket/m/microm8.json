@@ -1,0 +1,38 @@
+{
+    "version": "2026.10.31",
+    "description": "Apple II, IIe and IIGS emulator with 3D voxel rendering, Logo and BASIC tools",
+    "homepage": "https://paleotronic.com/software/microm8/",
+    "license": "MIT",
+    "notes": [
+        "The download URL never changes; the version is the upload date of the Windows build.",
+        "microM8 includes its own auto-updater; prefer 'scoop update microm8' to keep the Scoop install consistent."
+    ],
+    "url": "https://paleotronic.com/microM8/microM8-qt-windows-amd64.zip",
+    "hash": "52f0ac05518ea17bc39e308b8b1893a672f3d1cda99edab85f98ce3b7e2265f0",
+    "extract_dir": "microM8",
+    "bin": [
+        [
+            "microM8.exe",
+            "microm8"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "microM8.exe",
+            "microM8"
+        ]
+    ],
+    "checkver": {
+        "url": "https://paleotronic.com/robots.txt",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "script": [
+            "$r = Invoke-WebRequest -Method Head -UseBasicParsing -UserAgent 'Mozilla/5.0' 'https://paleotronic.com/microM8/microM8-qt-windows-amd64.zip'",
+            "$lm = [string]($r.Headers['Last-Modified'] | Select-Object -First 1)",
+            "([datetime]::Parse($lm, [Globalization.CultureInfo]::InvariantCulture)).ToUniversalTime().ToString('yyyy.MM.dd')"
+        ],
+        "regex": "^(\\d{4}\\.\\d{2}\\.\\d{2})"
+    },
+    "autoupdate": {
+        "url": "https://paleotronic.com/microM8/microM8-qt-windows-amd64.zip"
+    }
+}

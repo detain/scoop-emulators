@@ -1,0 +1,49 @@
+{
+    "version": "0.0.2",
+    "description": "Nintendo 64 input plugin for Mupen64Plus and Project64 that talks to a real N64 controller over an Arduino",
+    "homepage": "https://github.com/bkacjios/n64-input-plugin-serial",
+    "license": "Unknown",
+    "notes": [
+        "This is an input plugin, not a standalone emulator. It needs an Arduino running the n64io sketch (https://github.com/stump/n64io).",
+        "Copy project64-input-serial-*.dll to your Project64 Plugin folder, or mupen64plus-input-serial-*.dll to your Mupen64Plus folder."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/0.0.2/mupen64plus-input-serial-x64.dll",
+                "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/0.0.2/project64-input-serial-x64.dll"
+            ],
+            "hash": [
+                "c032fe5787f772c8bfb9ceb256ee768f11452ab23291b3cebe1977c1b77e5a25",
+                "cec7e90ff38a4d1fd02ecd166ef1fec2f6d68f5cbd5e483f586e5186921fb200"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/0.0.2/mupen64plus-input-serial-Win32.dll",
+                "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/0.0.2/project64-input-serial-Win32.dll"
+            ],
+            "hash": [
+                "f0e765ebaea4933df1ea0780b277899c48c749f5dfa5c2f54095633314d1e368",
+                "623e8d54be3525b8da61e2cdac604e0ba0b4adbf9b78c0b785622d4512f9aaa3"
+            ]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/$version/mupen64plus-input-serial-x64.dll",
+                    "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/$version/project64-input-serial-x64.dll"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/$version/mupen64plus-input-serial-Win32.dll",
+                    "https://github.com/bkacjios/n64-input-plugin-serial/releases/download/$version/project64-input-serial-Win32.dll"
+                ]
+            }
+        }
+    }
+}

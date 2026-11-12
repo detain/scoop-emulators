@@ -1,0 +1,35 @@
+{
+    "version": "0.10.31",
+    "description": "Graphical frontend for displaying, selecting and launching games and emulators",
+    "homepage": "http://retrofe.nl/",
+    "license": "GPL-3.0-or-later",
+    "url": "http://retrofe.nl/Download/Release/RetroFE_full_0.10.31.zip",
+    "hash": "f9fcfba5640eb181f6abb086f7d2110dd6984c49bd48a07697ae585ef26f3aeb",
+    "extract_dir": "RetroFE",
+    "bin": [
+        [
+            "core\\retrofe.exe",
+            "retrofe"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "core\\retrofe.exe",
+            "RetroFE"
+        ]
+    ],
+    "persist": [
+        "collections",
+        "launchers.windows",
+        "controls.conf",
+        "settings.conf"
+    ],
+    "checkver": {
+        "url": "http://retrofe.nl/download/",
+        "regex": "RetroFE_full_([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://retrofe.nl/Download/Release/RetroFE_full_$version.zip",
+        "extract_dir": "RetroFE"
+    }
+}

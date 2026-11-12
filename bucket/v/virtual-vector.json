@@ -1,0 +1,29 @@
+{
+    "version": "7.03",
+    "description": "Vector-06C computer emulator",
+    "homepage": "https://caglrc.cc/virtualvector/",
+    "license": "Freeware",
+    "url": "https://caglrc.cc/virtualvector/VV_703.7z",
+    "hash": "28e94345ca10194ea0263a87ab7eae6113b2a8522d9ceccabebe0000c4d8077c",
+    "extract_dir": "VV_703",
+    "bin": "VVector.exe",
+    "shortcuts": [
+        [
+            "VVector.exe",
+            "Virtual Vector"
+        ]
+    ],
+    "persist": [
+        "CAPTURE",
+        "SCRSHOTS",
+        "STA"
+    ],
+    "checkver": {
+        "url": "https://caglrc.cc/virtualvector/",
+        "regex": "href=\"VV_\\d+\\.7z\">\\D+([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://caglrc.cc/virtualvector/VV_$cleanVersion.7z",
+        "extract_dir": "VV_$cleanVersion"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "1.0.0",
+    "description": "ColecoVision and Coleco ADAM emulator with debugging tools for developers",
+    "homepage": "https://github.com/alekmaul/emultwo",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/alekmaul/emultwo/releases/download/V1.0.0/emultwo_win32_1_0_0.zip",
+    "hash": "64bc6e0bcebce7449ef29dffb7d78d688ab634bf081c09e4278d353cb88316e9",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\emultwo.ini\")) {",
+        "    New-Item \"$dir\\emultwo.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "emultwo.exe",
+    "shortcuts": [
+        [
+            "emultwo.exe",
+            "EmulTwo"
+        ]
+    ],
+    "persist": "emultwo.ini",
+    "checkver": {
+        "github": "https://github.com/alekmaul/emultwo",
+        "regex": "V([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/alekmaul/emultwo/releases/download/V$version/emultwo_win32_$underscoreVersion.zip"
+    }
+}

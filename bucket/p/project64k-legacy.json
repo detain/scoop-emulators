@@ -1,0 +1,32 @@
+{
+    "version": "2.6.0",
+    "description": "Nintendo 64 emulator (Project64 1.4 core with Kaillera netplay, preconfigured for Smash Remix)",
+    "homepage": "https://github.com/smash64-dev/project64k-legacy",
+    "license": "Freeware",
+    "url": "https://github.com/smash64-dev/project64k-legacy/releases/download/v2.6.0/project64k-legacy.zip",
+    "hash": "2e486b49c9cd3329736a0e794d936e048c4ebec305d23d5644c4a7d2e27222a5",
+    "bin": [
+        "Project64KSE.exe",
+        "Project64KillerOP.exe"
+    ],
+    "shortcuts": [
+        [
+            "Project64KSE.exe",
+            "Project64K Legacy"
+        ],
+        [
+            "Project64KillerOP.exe",
+            "Project64K Legacy (KillerOP)"
+        ]
+    ],
+    "persist": [
+        "Save",
+        "GBxSaves",
+        "MemPaks",
+        "Screenshots"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/smash64-dev/project64k-legacy/releases/download/v$version/project64k-legacy.zip"
+    }
+}

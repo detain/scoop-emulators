@@ -1,0 +1,21 @@
+{
+    "version": "1.0",
+    "description": "Simple portable emulator launcher written in Python",
+    "homepage": "https://github.com/giacomopoggi/Pyava",
+    "license": "MIT",
+    "notes": "This launcher is no longer developed.",
+    "url": "https://github.com/giacomopoggi/Pyava/releases/download/1.0/pyava-1.0-win-x86.zip",
+    "hash": "ddb0b761242702692454be034b24e67d1ff71864b342c04ba0cb0d07d3a2ada6",
+    "bin": "pyava.exe",
+    "shortcuts": [
+        [
+            "pyava.exe",
+            "Pyava"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/giacomopoggi/Pyava/releases/download/$version/pyava-$version-win-x86.zip"
+    }
+}

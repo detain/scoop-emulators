@@ -1,0 +1,23 @@
+{
+    "version": "1.17",
+    "description": "Qt launcher frontend for the Mupen64Plus Nintendo 64 emulator",
+    "homepage": "https://github.com/dh4/mupen64plus-qt",
+    "license": "BSD-3-Clause",
+    "notes": "Mupen64Plus itself is required; set its paths under Settings > Configure > Paths.",
+    "suggest": {
+        "Mupen64Plus": "mupen64plus"
+    },
+    "url": "https://github.com/dh4/mupen64plus-qt/releases/download/1.17/mupen64plus-qt_win_1.17.zip",
+    "hash": "d5bf2cba63b9386128ca91b123e47ef60f689c1dc16619d850b8a3a3a62ef416",
+    "bin": "mupen64plus-qt.exe",
+    "shortcuts": [
+        [
+            "mupen64plus-qt.exe",
+            "Mupen64Plus-Qt"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/dh4/mupen64plus-qt/releases/download/$version/mupen64plus-qt_win_$version.zip"
+    }
+}

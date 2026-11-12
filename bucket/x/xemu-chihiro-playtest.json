@@ -1,0 +1,35 @@
+{
+    "version": "2",
+    "description": "Sega Chihiro arcade emulator (xemu fork, playtest build)",
+    "homepage": "https://github.com/Tovarichtch/xemu",
+    "license": "GPL-2.0-only",
+    "notes": "Chihiro firmware, media board and game dumps are required; set their paths in the xemu settings.",
+    "url": "https://github.com/Tovarichtch/xemu/releases/download/Playtest-v2/xemu-0.8.134-406-g0d44d803b2-windows-x86_64.zip",
+    "hash": "2e12e7d4b7bfb2137b64398fbacc07b4b84cad131e6e1ed6f128622013996905",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\xemu.toml\")) {",
+        "    New-Item \"$dir\\xemu.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "xemu.exe",
+            "xemu-chihiro"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xemu.exe",
+            "xemu Chihiro Playtest"
+        ]
+    ],
+    "persist": "xemu.toml",
+    "checkver": {
+        "github": "https://api.github.com/repos/Tovarichtch/xemu/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "Playtest-v(?<version>\\d+)/(?<file>xemu-[^/]+-windows-x86_64)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Tovarichtch/xemu/releases/download/Playtest-v$version/$matchFile.zip"
+    }
+}

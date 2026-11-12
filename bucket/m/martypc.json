@@ -1,0 +1,36 @@
+{
+    "version": "0.4.1",
+    "description": "Cycle-accurate IBM PC/XT, PCjr and Tandy 1000 emulator written in Rust",
+    "homepage": "https://github.com/dbalsom/martypc",
+    "license": "MIT",
+    "notes": "GLaBIOS is bundled; original IBM ROMs can be placed in $dir\\media\\roms.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dbalsom/martypc/releases/download/0.4.1/MartyPC_win64_0_4_1_20250911.zip",
+            "hash": "e3ccd42ed065530e151b44cef5ca4aed6b272823c13d9ec33c60a8844ad2db09"
+        }
+    },
+    "bin": [
+        "martypc.exe",
+        "martypc_launcher.exe"
+    ],
+    "shortcuts": [
+        [
+            "martypc_launcher.exe",
+            "MartyPC"
+        ]
+    ],
+    "persist": "martypc.toml",
+    "checkver": {
+        "github": "https://api.github.com/repos/dbalsom/martypc/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<version>[\\d.]+)/(?<file>MartyPC_win64_[\\d_]+\\.zip)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dbalsom/martypc/releases/download/$version/$matchFile"
+            }
+        }
+    }
+}

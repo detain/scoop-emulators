@@ -1,0 +1,38 @@
+{
+    "version": "368-20261013-4c00b68",
+    "description": "Multi-system emulator for Sega SG-1000, SC-3000, SF-7000, Mark III, Master System, Game Gear, ColecoVision and Othello Multivision (development version)",
+    "homepage": "https://www.smspower.org/meka",
+    "license": {
+        "identifier": "BSD-like",
+        "url": "https://github.com/ocornut/meka/blob/master/meka/sources.txt"
+    },
+    "notes": "Builds are AppVeyor CI artifacts of the master branch.",
+    "url": "https://ci.appveyor.com/api/buildjobs/4n2cuypubgy7oqr7/artifacts/meka/Dist/mekaw.zip",
+    "hash": "10a2a7ecd77aae10a3d94a45bdcbbb9ab5d50b4b77b866d7303063333ed556c8",
+    "bin": [
+        [
+            "mekaw.exe",
+            "meka-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mekaw.exe",
+            "MEKA (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://ci.appveyor.com/api/projects/ocornut/meka",
+        "script": [
+            "$j = $page | ConvertFrom-Json",
+            "$b = $j.build",
+            "$d = ([datetime]$b.committed).ToUniversalTime().ToString('yyyyMMdd')",
+            "Write-Output \"$($b.status) $($b.jobs[0].jobId) $($b.buildNumber) $d $($b.commitId)\""
+        ],
+        "regex": "^success (?<job>\\w+) (?<build>\\d+) (?<date>\\d{8}) (?<commit>[0-9a-f]{7})",
+        "replace": "${build}-${date}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://ci.appveyor.com/api/buildjobs/$matchJob/artifacts/meka/Dist/mekaw.zip"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.71-4",
+    "description": "Java port of GameBase, a retro-gaming emulator frontend and game database manager",
+    "homepage": "https://sourceforge.net/projects/jgamebase/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://downloads.sourceforge.net/project/jgamebase/jGameBase/V0.71-4/jgamebase0.71-4.zip",
+    "hash": "sha1:07f71bb98bb9a766e621cc4d07bac25685fe486f",
+    "extract_dir": "jgamebase0.71-4",
+    "bin": "jgamebase.jar",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/jgamebase/rss?path=/jGameBase",
+        "regex": "jgamebase([\\d.]+-\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/jgamebase/jGameBase/V$version/jgamebase$version.zip",
+        "extract_dir": "jgamebase$version"
+    }
+}

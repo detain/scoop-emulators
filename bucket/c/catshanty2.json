@@ -1,0 +1,41 @@
+{
+    "version": "1.10405",
+    "description": "Japanese multi-system emulator front-end with a SQLite game library",
+    "homepage": "https://www.catshanty.com/",
+    "license": "Freeware",
+    "notes": [
+        "CatShanty2 is in maintenance-only mode and is no longer actively developed.",
+        "The game library database (CatShanty.db) is stored in $dir; back it up before updating."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2012": "extras/vcredist2012"
+    },
+    "url": "https://www.catshanty.com/pack/bin/CatShanty2_1_10405_3390400.zip",
+    "hash": "bfd7590ac17f32e0b83f181843286c23086834803c1b79e8470a4704bdd664a8",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\CatShanty2.ini\")) {",
+        "    New-Item \"$dir\\CatShanty2.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "CatShanty2.exe",
+            "catshanty2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CatShanty2.exe",
+            "CatShanty2"
+        ]
+    ],
+    "persist": "CatShanty2.ini",
+    "checkver": {
+        "url": "https://www.catshanty.com/dl/",
+        "regex": "/pack/bin/(?<file>CatShanty2_(?<major>\\d+)_(?<minor>\\d+)(?:_\\d+)?\\.zip)",
+        "replace": "${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://www.catshanty.com/pack/bin/$matchFile"
+    }
+}

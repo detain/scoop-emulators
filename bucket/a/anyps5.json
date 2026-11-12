@@ -1,0 +1,39 @@
+{
+    "version": "0.1.5",
+    "description": "Sony PlayStation 5 executable relinker with native system PRX libraries for running titles on Windows (no emulation)",
+    "homepage": "https://github.com/boykopovar/AnyPS5",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "Command-line tool: run 'anyps5 --windows <input.elf> <output.exe>'. See https://github.com/boykopovar/AnyPS5/blob/main/docs/user/USAGE.md",
+        "The Windows system PRX libraries are in $dir\\libs"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/boykopovar/AnyPS5/releases/download/v0.1.5/relinker-v0.1.5.exe#/relinker.exe",
+                "https://github.com/boykopovar/AnyPS5/releases/download/v0.1.5/prx-windows-v0.1.5.zip"
+            ],
+            "hash": [
+                "541fa50fb7255be93111b72ebe5c320f3ccb936905f8f522914f233177ca17e7",
+                "d026931807f977d9ce21d07bcecd8dd229e652ec849414ac69cefcab4cc96a57"
+            ]
+        }
+    },
+    "bin": [
+        [
+            "relinker.exe",
+            "anyps5"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/boykopovar/AnyPS5/releases/download/v$version/relinker-v$version.exe#/relinker.exe",
+                    "https://github.com/boykopovar/AnyPS5/releases/download/v$version/prx-windows-v$version.zip"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "2.5.2.3",
+    "description": "Multiple Emulator And Game Runner Environment, a front end for Windows-based emulators",
+    "homepage": "https://sites.google.com/site/meagrefrontend/home",
+    "license": "Freeware",
+    "notes": "This front end is no longer developed. The package is retrieved from an Internet Archive snapshot of the original download.",
+    "url": "https://web.archive.org/web/20201024111159id_/https://sites.google.com/site/meagrefrontend/download/Meagre.zip?attredirects=0&d=1#/dl.zip",
+    "hash": "4244c2fc246f0c64232edb82230f1eebb0771114ab42af18dc12cc8d0b592c9a",
+    "extract_dir": "Meagre",
+    "bin": [
+        [
+            "MEAGRE.exe",
+            "meagre"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MEAGRE.exe",
+            "MEAGRE"
+        ]
+    ],
+    "persist": [
+        "Conf",
+        "Games",
+        "Programs",
+        "MEAGRE.ini"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "version": "2022.01.13-beta",
+    "description": "Arcade-style frontend for MAME and other command-line emulators, where the menu itself is a fighting game",
+    "homepage": "https://sites.google.com/site/bigbluefrontend/",
+    "license": "Freeware",
+    "notes": [
+        "This frontend is no longer developed.",
+        "Configure emulators and controls with BigBlueConfig.exe."
+    ],
+    "url": "https://archive.org/download/big-blue-frontend-beta-01132022/BigBlueFrontendBeta-01132022.zip",
+    "hash": "5ee9f5acda835cf765bbcc7540a5c0966cd010714e0dda553a2708e0fb9d5934",
+    "bin": [
+        [
+            "BigBlue.exe",
+            "bigblue"
+        ],
+        [
+            "BigBlueConfig.exe",
+            "bigblue-config"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "BigBlue.exe",
+            "Big Blue"
+        ],
+        [
+            "BigBlueConfig.exe",
+            "Big Blue Config"
+        ]
+    ],
+    "persist": [
+        "config.xml",
+        "emulators.xml",
+        "lists.xml",
+        "programs.xml",
+        "snap"
+    ]
+}

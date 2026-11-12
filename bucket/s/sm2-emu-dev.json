@@ -1,0 +1,48 @@
+{
+    "version": "254-20261108-8bb80c1",
+    "description": "Sega Model 2 arcade emulator (development version)",
+    "homepage": "https://github.com/dmanlfc/sm2-emu",
+    "license": "GPL-3.0-or-later",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://nightly.link/dmanlfc/sm2-emu/workflows/build/main/sm2-emu-windows-x86_64-zip.zip",
+    "hash": "979dc59a08b53ed5fcc44a6c0372d730deb082330ac852affe9fd3f2d7c3c1f3",
+    "pre_install": [
+        "$zip = Get-ChildItem \"$dir\\sm2-emu-*-windows-x86_64.zip\" | Select-Object -First 1",
+        "Expand-7zipArchive $zip.FullName \"$dir\" -ExtractDir $zip.BaseName -Removal",
+        "if (!(Test-Path \"$persist_dir\\sm2-emu.ini\")) {",
+        "    New-Item \"$dir\\sm2-emu.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "sm2-emu.exe",
+            "sm2-emu-dev",
+            "--config \"$dir\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "sm2-emu.exe",
+            "SM2-EMU (dev)",
+            "--config \"$dir\""
+        ]
+    ],
+    "persist": "sm2-emu.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/dmanlfc/sm2-emu/actions/workflows/build.yml/runs?branch=main&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/dmanlfc/sm2-emu/workflows/build/main/sm2-emu-windows-x86_64-zip.zip"
+    }
+}

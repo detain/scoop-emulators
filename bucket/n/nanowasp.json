@@ -7,19 +7,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nanowasp/emulator_screen_01.jpg"
     ],
     "version": "2.0b",
-    "description": "An emulator for the Microbee, a microcomputer popular in Australia in the early '80s.",
-    "homepage": "http://www.stairwaytohell.com/atom/wouterras/",
+    "description": "Microbee emulator",
+    "homepage": "https://sourceforge.net/projects/nanowasp/",
     "license": "GPL-3.0-or-later",
-    "url": "https://consolo.is.cc/emu/nanowasp/2.0b.7z",
-    "hash": "b6990ae8f1466fdcd6417082478ae98ee3bd01c1bbc2ebbc5e83d989a8e831d3",
-    "bin": [
-        "nanowasp.exe"
+    "notes": "Place the Microbee ROM as 'rom1.bin' and a boot disk as 'boot.dsk' in $persist_dir\\Data",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2005": "extras/vcredist2005"
+    },
+    "url": "https://downloads.sourceforge.net/project/nanowasp/nanowasp/2.0b/nanowasp-2.0b.exe#/dl.7z",
+    "hash": "sha1:9f7cbedd4d1790807eb508f480255ae544d4d5e7",
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall*\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": "nanowasp.exe",
+    "shortcuts": [
+        [
+            "nanowasp.exe",
+            "NanoWasp"
+        ]
     ],
+    "persist": "Data",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nanowasp/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://sourceforge.net/projects/nanowasp/rss?path=/nanowasp",
+        "regex": "nanowasp/([\\d.]+[a-z]?)/nanowasp-[\\d.]+[a-z]?\\.exe"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nanowasp/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/nanowasp/nanowasp/$version/nanowasp-$version.exe#/dl.7z"
     }
 }

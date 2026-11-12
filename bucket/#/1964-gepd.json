@@ -1,0 +1,35 @@
+{
+    "version": "2023.07.03",
+    "description": "Nintendo 64 emulator (1964 fork) tuned for GoldenEye 007 and Perfect Dark with mouse injection",
+    "homepage": "https://github.com/Graslu/1964GEPD",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is primarily made for GoldenEye 007, Perfect Dark and their ROM hacks; other games have poor support.",
+        "Emulator settings are stored in $dir\\1964.cfg and are not kept across updates."
+    ],
+    "url": "https://github.com/Graslu/1964GEPD/releases/download/latest/1964_GEPD_Edition.zip",
+    "hash": "21582111b61bec11e54f7202b402e0a5aba7147df54401328305db6b2f5cb7e6",
+    "extract_dir": "1964",
+    "bin": [
+        [
+            "1964.exe",
+            "1964-gepd"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "1964.exe",
+            "1964 GEPD Edition"
+        ]
+    ],
+    "persist": "save",
+    "checkver": {
+        "github": "https://api.github.com/repos/Graslu/1964GEPD/releases/tags/latest",
+        "jsonpath": "$.name",
+        "regex": "\\((\\d{4})/(\\d{2})/(\\d{2})\\)",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Graslu/1964GEPD/releases/download/latest/1964_GEPD_Edition.zip"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "description": "Atari Lynx emulator (Holani) with a GTK4 frontend",
+    "homepage": "https://github.com/LLeny/holani-gtk",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LLeny/holani-gtk/releases/download/1.0.0/holani_gtk-x86_64-windows.zip",
+            "hash": "4c33e672cdd659828f514a824b92463962367680bae19619a64cc77c88252e75"
+        }
+    },
+    "bin": "holani-gtk.exe",
+    "shortcuts": [
+        [
+            "holani-gtk.exe",
+            "Holani"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LLeny/holani-gtk/releases/download/$version/holani_gtk-x86_64-windows.zip"
+            }
+        }
+    }
+}

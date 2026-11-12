@@ -1,0 +1,26 @@
+{
+    "version": "1.78",
+    "description": "Sony PlayStation OpenGL GPU (video) plugin for PSEmu Pro compatible emulators (P.E.Op.S. OpenGL GPU)",
+    "homepage": "https://sourceforge.net/projects/peops/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is a 32-bit GPU plugin DLL, not a standalone emulator.",
+        "Copy gpuPeopsOpenGL.dll from $dir into your emulator's plugins folder (ePSXe, PCSX, etc.) and select it as the video plugin.",
+        "This plugin is no longer developed."
+    ],
+    "url": "https://downloads.sourceforge.net/project/peops/peopsopenglgpu/P.E.Op.S.%20OpenGL%20GPU%201.78/PeopsOpenGLGpu178.zip",
+    "hash": "sha1:a708e8efca929ffc837a4b3c2b03f4ca1c0a6756",
+    "extract_dir": "gpuPeopsOpenGL\\bin\\bin_windows",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\gpupeopsopengl*.zip\" | ForEach-Object {",
+        "    Expand-ZipArchive $_.FullName \"$dir\" -Removal",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/peops/rss?path=/peopsopenglgpu",
+        "regex": "OpenGL%20GPU%20([\\d.]+)/PeopsOpenGLGpu\\d+\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/peops/peopsopenglgpu/P.E.Op.S.%20OpenGL%20GPU%20$version/PeopsOpenGLGpu$cleanVersion.zip"
+    }
+}

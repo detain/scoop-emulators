@@ -1,0 +1,24 @@
+{
+    "version": "0.2",
+    "description": "Nintendo Game Boy Advance emulator",
+    "homepage": "https://web.archive.org/web/2020/http://tommowalker.co.uk/gba.html",
+    "license": "Unknown",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a GBA BIOS dump named bios.rom in $dir"
+    ],
+    "url": "https://web.archive.org/web/20161026154936id_/http://www.tommowalker.co.uk/reasonableGBAv02.zip",
+    "hash": "2d93a25d15504b26ef9c13d816ed2154676453696ce2cb81f3d2ba6bf0bf91ef",
+    "bin": [
+        [
+            "gba.exe",
+            "reasonablegba"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gba.exe",
+            "ReasonableGBA"
+        ]
+    ]
+}

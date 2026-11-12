@@ -6,20 +6,22 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/activegs/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/activegs/emulator_screen_01.jpg"
     ],
-    "version": "3.7.109",
-    "description": "ActiveGS is an Apple IIGS emulator for Windows, MacOS X, and Linux.",
+    "version": "3.7.1019",
+    "description": "Apple IIGS emulator based on KEGS",
     "homepage": "http://activegs.freetoolsassociation.com/",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/activegs/3.7.109.7z",
-    "hash": "4551bbcf23e06a84c3a4b5128e3140ad2e48afae13f1cb2eaac20453b6033ade",
+    "url": "http://activegs.freetoolsassociation.com/ActiveGS.zip",
+    "hash": "af871c3e2b32c71eb7e2a8f7c0e69472a9844c05bdea3d73d2d6c2416ac5ae61",
     "bin": [
-        "activegs.exe"
+        [
+            "ActiveGS.exe",
+            "activegs"
+        ]
     ],
-    "checkver": {
-        "url": "http://activegs.freetoolsassociation.com/download.html",
-        "regex": "ActiveGS(.*?)\\.zip"
-    },
-    "autoupdate": {
-        "url": "http://activegs.freetoolsassociation.com/download.html"
-    }
+    "shortcuts": [
+        [
+            "ActiveGS.exe",
+            "ActiveGS"
+        ]
+    ]
 }

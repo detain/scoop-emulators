@@ -1,0 +1,31 @@
+{
+    "version": "9.4.7",
+    "description": "Atari 8-bit tape creation tool: converts files to standard and turbo tape records, WAVE files and tape images",
+    "homepage": "https://turgen.sourceforge.io/",
+    "license": "GPL-2.0-only",
+    "notes": "TURGEN requires a Java runtime (JRE 8 or newer).",
+    "suggest": {
+        "Java": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/turgen/turgen/turgen_9.4.7/turgen-9.4.7-bin.tar.bz2",
+    "hash": "e3ef4ef3bba3ba9fc77763703539d27be18726da86d6643c0512bb7c02ac0c41",
+    "extract_dir": "turgen-9.4.7-bin",
+    "bin": [
+        "turgen.exe",
+        "gencas.exe"
+    ],
+    "shortcuts": [
+        [
+            "turgen.exe",
+            "TURGEN"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/turgen/rss?path=/turgen",
+        "regex": "turgen_([\\d.]+)/turgen-[\\d.]+-bin\\.tar\\.bz2"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/turgen/turgen/turgen_$version/turgen-$version-bin.tar.bz2",
+        "extract_dir": "turgen-$version-bin"
+    }
+}

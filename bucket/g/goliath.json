@@ -1,0 +1,42 @@
+{
+    "version": "0.41.1",
+    "description": "Neo Geo MVS/AES and Neo Geo CD frontend for JGRF and the Geolith core (preview)",
+    "homepage": "https://github.com/epsx/Goliath",
+    "license": "GPL-3.0-only",
+    "notes": "Goliath is only a frontend: emulation is provided by the Jolly Good Reference Frontend (JGRF) with the Geolith core, which must be installed separately.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/epsx/Goliath/releases/download/v0.41.1-preview/Goliath-0.41.1-preview-Windows-x86_64.zip",
+            "hash": "30f3949a639b652cbb58b7fff4ef5fad5e979c9a0179249480ae685c5860a8fe",
+            "extract_dir": "Goliath-0.41.1-preview-Windows-x86_64"
+        }
+    },
+    "bin": [
+        [
+            "goliath-qt.exe",
+            "goliath"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "goliath-qt.exe",
+            "Goliath"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/epsx/Goliath/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)-preview"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/epsx/Goliath/releases/download/v$version-preview/Goliath-$version-preview-Windows-x86_64.zip",
+                "extract_dir": "Goliath-$version-preview-Windows-x86_64"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/epsx/Goliath/releases/download/v$version-preview/SHA256SUMS"
+        }
+    }
+}

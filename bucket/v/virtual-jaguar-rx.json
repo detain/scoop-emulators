@@ -1,0 +1,36 @@
+{
+    "version": "2.1.3-R5b",
+    "description": "Atari Jaguar emulator with integrated debugger (Virtual Jaguar fork)",
+    "homepage": "https://github.com/djipi/Virtual-Jaguar-Rx",
+    "license": "GPL-3.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/djipi/Virtual-Jaguar-Rx/releases/download/v2.1.3-R5b/virtualjaguar-wDebugger_x64_R5b_pre-Release.zip",
+    "hash": "96c3999328ab0ec6b5456bfb51e0832d664f951aef280f35199008221271bb2e",
+    "bin": [
+        [
+            "virtualjaguar.exe",
+            "virtualjaguar-rx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "virtualjaguar.exe",
+            "Virtual Jaguar Rx"
+        ]
+    ],
+    "persist": [
+        "eeproms",
+        "savestates",
+        "screenshots"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/djipi/Virtual-Jaguar-Rx/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "download/v(?<version>[^/]+)/(?<file>virtualjaguar[^/]*\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/djipi/Virtual-Jaguar-Rx/releases/download/v$version/$matchFile"
+    }
+}

@@ -12,9 +12,7 @@
     "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/potemkin/alpha01.7z",
     "hash": "ba6720de4c6f610887e9ea9b681b711b4073dfa65b5d416f54d8d87147c8ec66",
-    "bin": [
-        "DaShRelease.exe"
-    ],
+    "bin": "DaShRelease.exe",
     "checkver": {
         "url": "https://consolo.is.cc/emu/potemkin/",
         "regex": "(alpha\\d+)\\.7z"

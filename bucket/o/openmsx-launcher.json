@@ -1,0 +1,35 @@
+{
+    "version": "1.14",
+    "description": "Front-end for the openMSX MSX emulator",
+    "homepage": "http://msxlaunchers.info/",
+    "license": "Freeware",
+    "notes": [
+        "This front-end is no longer developed.",
+        "Requires a Java Runtime Environment. Point it at your openMSX installation in its settings."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre",
+        "openMSX": "openmsx"
+    },
+    "url": "http://msxlaunchers.info/files/win/1.14/openMSX%20Launcher%20v1.14.zip",
+    "hash": "bfc615d75bb7c56388630d5232d0504b3279e240665c22f2a1d1c07cff8fa27b",
+    "bin": [
+        [
+            "openMSX Launcher.exe",
+            "openmsx-launcher"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "openMSX Launcher.exe",
+            "openMSX Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "http://msxlaunchers.info/download.html",
+        "regex": "files/win/([\\d.]+)/openMSX"
+    },
+    "autoupdate": {
+        "url": "http://msxlaunchers.info/files/win/$version/openMSX%20Launcher%20v$version.zip"
+    }
+}

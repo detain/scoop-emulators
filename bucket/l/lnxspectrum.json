@@ -1,0 +1,30 @@
+{
+    "version": "2.1.1",
+    "description": "Sinclair ZX Spectrum 48/128 and Didaktik Gama emulator with Z80 debugger, assembler and MB03+ Ultimate emulation",
+    "homepage": "https://www.ilnx.cz/lnxsp/",
+    "license": "Freeware",
+    "notes": "Requires the .NET 8 Desktop Runtime.",
+    "url": "https://ilnx.cz/lnxspectrum/portable/LnxSpectrum64.7z",
+    "hash": "4d4f98e0494477b35ba461bbf7beeacce46cab154fc1d779400d1a76adb112c6",
+    "extract_dir": "LnxSpectrum64",
+    "bin": [
+        [
+            "LnxSpectrum.exe",
+            "lnxspectrum"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "LnxSpectrum.exe",
+            "LnxSpectrum"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.ilnx.cz/lnxspectrum-historie-verzi/",
+        "regex": "itemprop=\"text\">[\\s\\S]*?<strong>([\\d.]+) \\("
+    },
+    "autoupdate": {
+        "url": "https://ilnx.cz/lnxspectrum/portable/LnxSpectrum64.7z",
+        "extract_dir": "LnxSpectrum64"
+    }
+}

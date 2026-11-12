@@ -1,0 +1,71 @@
+{
+    "version": "4585-20261111-f6b9fcd",
+    "description": "Nintendo 64 emulator focused on accuracy and compatibility (development version)",
+    "homepage": "https://github.com/gopher64/gopher64",
+    "license": "GPL-3.0-only",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-x86_64.zip",
+            "hash": "3525ca689fd04167cdbd3308a4af1a86dfa29349d047885530ae6f345ab1907b",
+            "bin": [
+                [
+                    "gopher64-windows-x86_64.exe",
+                    "gopher64-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "gopher64-windows-x86_64.exe",
+                    "Gopher64 (dev)"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-aarch64.zip",
+            "hash": "298c56bf06906d588bf11cd571f2598fa0992e085362473c0ceb7bbe2a6d9db4",
+            "bin": [
+                [
+                    "gopher64-windows-aarch64.exe",
+                    "gopher64-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "gopher64-windows-aarch64.exe",
+                    "Gopher64 (dev)"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "portable.txt",
+        "portable_data"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/gopher64/gopher64/actions/workflows/build.yml/runs?branch=main&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/gopher64/gopher64/workflows/build/main/gopher64-windows-aarch64.zip"
+            }
+        }
+    }
+}

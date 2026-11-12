@@ -1,0 +1,29 @@
+{
+    "version": "0.3.1",
+    "description": "3D adventure game engine interpreter for Grim Fandango, Escape from Monkey Island and Myst III",
+    "homepage": "https://www.residualvm.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": "ResidualVM is no longer developed; it has been merged into ScummVM (scoop install scummvm).",
+    "url": "https://web.archive.org/web/20190926002856id_/https://www.residualvm.org/downloads/release/0.3.1/residualvm-0.3.1-win32.zip",
+    "hash": "68c7aeeb9ecd74296e365e7ebd4d7d73e7cbc9f59b49aac13f59f2935d6eefe4",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\residualvm.ini\")) {",
+        "    New-Item \"$dir\\residualvm.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "residualvm.exe",
+            "residualvm",
+            "--config=\"$dir\\residualvm.ini\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "residualvm.exe",
+            "ResidualVM",
+            "--config=\"$dir\\residualvm.ini\""
+        ]
+    ],
+    "persist": "residualvm.ini"
+}

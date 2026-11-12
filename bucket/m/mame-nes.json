@@ -1,0 +1,28 @@
+{
+    "version": "2.0",
+    "description": "Nintendo Entertainment System / Famicom emulator, a MAME NES driver build with cycle-accurate CPU, APU and PPU rework",
+    "homepage": "https://github.com/theklap/mame_nes",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/theklap/mame_nes/releases/download/MameNES2.0/nes.exe",
+    "hash": "bacf1c31e2202c3d42e801c17685e30aad867ece037dc60d5647e32a25a2bc02",
+    "bin": [
+        [
+            "nes.exe",
+            "mame-nes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nes.exe",
+            "MAME-NES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/theklap/mame_nes/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "MameNES([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/theklap/mame_nes/releases/download/MameNES$version/nes.exe"
+    }
+}

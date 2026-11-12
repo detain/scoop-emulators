@@ -1,0 +1,24 @@
+{
+    "version": "0.0.10",
+    "description": "Apricot F1, Xi and Portable emulator",
+    "homepage": "https://www.seasip.info/Unix/QDAE/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://www.seasip.info/Unix/QDAE/qdaesetup.exe#/dl.7z",
+    "hash": "a0d5c8af88dd318b1a786ca46490b40af0ee547c84437339f79e0df68944c25d",
+    "pre_install": "Remove-Item \"$dir\\uninstall.exe\", \"$dir\\qdae-*.tar.gz\" -Force -ErrorAction SilentlyContinue",
+    "bin": "qdae.exe",
+    "shortcuts": [
+        [
+            "qdae.exe",
+            "QDAE"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.seasip.info/Unix/QDAE/",
+        "regex": "qdae-([\\d.]+)\\.tar\\.gz"
+    },
+    "autoupdate": {
+        "url": "https://www.seasip.info/Unix/QDAE/qdaesetup.exe#/dl.7z"
+    }
+}

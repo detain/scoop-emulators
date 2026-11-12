@@ -1,0 +1,29 @@
+{
+    "version": "0.1-r18",
+    "description": "Sony PlayStation 2 emulator, a modified build of PCSX2 0.9.7",
+    "homepage": "https://code.google.com/archive/p/valdanx/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "This emulator is no longer developed. For current PS2 emulation use pcsx2.",
+        "A PlayStation 2 BIOS dump is required.",
+        "The DirectX End-User Runtime (June 2010) may be needed for the GSdx plugin."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2008": "extras/vcredist2008"
+    },
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/valdanx/PCSX2-ValDanX%200.1%20r18.zip",
+    "hash": "9b99804848417c18240a496cacab3c5d40838d69f3acc2ce1f144d40cbd3c15f",
+    "extract_dir": "PCSX2-ValDanX 0.1 r18",
+    "bin": [
+        [
+            "PCSX2-ValDanX.exe",
+            "valdanx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PCSX2-ValDanX.exe",
+            "ValDanX"
+        ]
+    ]
+}

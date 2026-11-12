@@ -1,0 +1,35 @@
+{
+    "version": "1.5.1.0",
+    "description": "One-click game mod downloader for Nintendo Switch emulators (formerly YuzuModDownloader)",
+    "homepage": "https://github.com/amakvana/SwitchEmuModDownloader",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        ".NET 8 Desktop Runtime": "versions/windowsdesktop-runtime-8.0"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/amakvana/SwitchEmuModDownloader/releases/download/v1.5.1.0/SwitchEmuModDownloader-1.5.1.0-Windows-x64.zip",
+            "hash": "f911f61db890b963c1eb7f4483c4785220bc42dcb0503ec1c196e3468244eed5"
+        }
+    },
+    "bin": [
+        [
+            "SwitchEmuModDownloader.exe",
+            "switch-emu-mod-downloader"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SwitchEmuModDownloader.exe",
+            "Switch Emu Mod Downloader"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/amakvana/SwitchEmuModDownloader/releases/download/v$version/SwitchEmuModDownloader-$version-Windows-x64.zip"
+            }
+        }
+    }
+}

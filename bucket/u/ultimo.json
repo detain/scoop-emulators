@@ -6,20 +6,47 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/ultimo/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ultimo/emulator_screen_01.jpg"
     ],
-    "version": "1.5.2",
-    "description": "Ultimo is a Microkey Primo emulator. NOTE: Emulator is in Hungarian.",
-    "homepage": "http://gaia.atilia.eu/content/view/3/4/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/ultimo/1.5.2.7z",
-    "hash": "d3e27a2f3604f342271d79f7fba0a89016c70d821ddd7851cf8b524c588f000a",
-    "bin": [
-        "Ultimo.exe"
-    ],
+    "version": "1.6.0",
+    "description": "Microkey Primo emulator (Hungarian interface)",
+    "homepage": "http://gaia.atilia.eu/",
+    "license": "Freeware",
+    "url": "http://gaia.atilia.eu/download/Ultimo1.6.0.zip",
+    "hash": "387af4f85f326dc94218903efefae6fef91b5aca0bec13d47318534e3fcd5d8a",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "Ultimox64.exe",
+                    "ultimo"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Ultimox64.exe",
+                    "Ultimo"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "Ultimo.exe",
+                    "ultimo"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Ultimo.exe",
+                    "Ultimo"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ultimo/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://gaia.atilia.eu/downloads.html",
+        "regex": "download/Ultimo([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ultimo/$version.7z"
+        "url": "http://gaia.atilia.eu/download/Ultimo$version.zip"
     }
 }

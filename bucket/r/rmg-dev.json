@@ -1,0 +1,38 @@
+{
+    "version": "0.9.1",
+    "description": "Nintendo 64 emulator (Rosalie's Mupen GUI) (development version)",
+    "homepage": "https://github.com/Rosalie241/RMG",
+    "license": "GPL-3.0-only",
+    "notes": "Development builds come from GitHub Actions artifacts of the master branch (via nightly.link), which expire about 90 days after the build.",
+    "url": "https://nightly.link/Rosalie241/RMG/actions/artifacts/13295355350.zip",
+    "hash": "f29adab930cc5efe40aad7b7ec5e415a6e4bbb8e9cd7d9b51b8a904bc70c6fb9",
+    "bin": [
+        [
+            "RMG.exe",
+            "rmg-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RMG.exe",
+            "RMG (dev)"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Save",
+        "Screenshots"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Rosalie241/RMG/actions/artifacts?per_page=100",
+        "script": [
+            "$art = (ConvertFrom-Json $page).artifacts | Where-Object { $_.name -like 'RMG-Portable-Windows64-v*' -and $_.workflow_run.head_branch -eq 'master' -and $_.workflow_run.head_repository_id -eq $_.workflow_run.repository_id -and !$_.expired } | Select-Object -First 1",
+            "Write-Output \"$($art.id) $($art.name)\""
+        ],
+        "regex": "^(?<id>\\d+) RMG-Portable-Windows64-v(?<ver>\\S+)$",
+        "replace": "${ver}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/Rosalie241/RMG/actions/artifacts/$matchId.zip"
+    }
+}

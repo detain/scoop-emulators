@@ -6,18 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/supermodel/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/supermodel/emulator_screen_01.jpg"
     ],
-    "version": "0.3a-git-487d642",
-    "description": "Supermodel is a Sega Model 3 emulator. There are a few games that are playable, but most have some sort of graphics issues.",
-    "homepage": "http://supermodel3.com",
+    "version": "0.4-20261108-git-efbdc86",
+    "description": "Sega Model 3 arcade emulator",
+    "homepage": "https://github.com/trzy/Supermodel",
     "license": "GPL-3.0-or-later",
-    "url": "https://supermodel3.com/Files/Git_Snapshots/Supermodel_0.3a-git-487d642_Win64.zip",
-    "hash": "368a028caf48085ff84901d517441c8b61493c0cab404fb21f47b81886706679",
-    "bin": "Supermodel.exe",
+    "url": "https://github.com/trzy/Supermodel/releases/download/v0.4-20261108-git-efbdc86/supermodel-0.4-20261108-git-efbdc86-windows.zip",
+    "hash": "ab8229ee8b2be9f78397939270c213b888014ae32dd7cca61a6c8f54a13cef28",
+    "extract_dir": "supermodel-0.4-20261108-git-efbdc86",
+    "bin": "supermodel.exe",
+    "shortcuts": [
+        [
+            "supermodel.exe",
+            "Supermodel"
+        ]
+    ],
+    "persist": [
+        "NVRAM",
+        "Saves"
+    ],
     "checkver": {
-        "url": "https://supermodel3.com/Download.html",
-        "regex": ">Supermodel_([^<]+)_Win64.zip<"
+        "github": "https://github.com/trzy/Supermodel",
+        "regex": "v([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://supermodel3.com/Files/Git_Snapshots/Supermodel_$version_Win64.zip"
+        "url": "https://github.com/trzy/Supermodel/releases/download/v$version/supermodel-$version-windows.zip",
+        "extract_dir": "supermodel-$version"
     }
 }

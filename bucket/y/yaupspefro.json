@@ -1,0 +1,25 @@
+{
+    "version": "2010.03.28",
+    "description": ".NET frontend for the YAUPSPE Sony PlayStation Portable emulator",
+    "homepage": "https://code.google.com/archive/p/yaupspe",
+    "license": "GPL-2.0-only",
+    "notes": "This frontend is no longer developed. The emulator path in yfro.ini is set to the yaupspe package on first install.",
+    "depends": "yaupspe",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/yaupspe/YaupspeFro.zip",
+    "hash": "fd1e9737d111919025ff90ea666a19a71bed3170e9fb8a1668b80ee7a067a617",
+    "extract_dir": "YaupspeFro",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\yfro.ini\")) {",
+        "    $emu = \"$(Split-Path (Split-Path $dir -Parent) -Parent)\\yaupspe\\current\\yaupspe.exe\"",
+        "    (Get-Content \"$dir\\yfro.ini\") -replace '^EMU=.*', \"EMU=$emu\" | Set-Content \"$dir\\yfro.ini\" -Encoding Ascii",
+        "}"
+    ],
+    "bin": "YaupspeFro.exe",
+    "shortcuts": [
+        [
+            "YaupspeFro.exe",
+            "YaupspeFro"
+        ]
+    ],
+    "persist": "yfro.ini"
+}

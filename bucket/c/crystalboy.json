@@ -1,0 +1,19 @@
+{
+    "version": "1.4",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in C#",
+    "homepage": "https://code.google.com/archive/p/crystalboy/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires the .NET Framework 2.0/3.5 (enable it under Windows Features). The SlimDX/Direct2D renderer additionally needs the SlimDX March 2011 runtime."
+    ],
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/crystalboy/CrystalBoy-1.4-Windows.7z",
+    "hash": "5ac190d4b1a207b87c1a17325aec465748fea4ab500d4999ae822117ba5c4b1a",
+    "bin": "CrystalBoy.exe",
+    "shortcuts": [
+        [
+            "CrystalBoy.exe",
+            "CrystalBoy"
+        ]
+    ]
+}

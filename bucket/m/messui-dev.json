@@ -1,0 +1,39 @@
+{
+    "version": "190-20261111-465311f",
+    "description": "Multi-system computer and console emulator (MAME/MESS) with the MESSUI Windows interface (development version)",
+    "homepage": "http://messui.1emulation.com/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "Development builds come from GitHub Actions artifacts of Robbbert/messui (via nightly.link), which expire about 9 days after the build.",
+        "The artifact contains only messui.exe (no plugins, language, hash or artwork files)."
+    ],
+    "url": "https://nightly.link/Robbbert/messui/actions/runs/42956423025/messui-windows-gcc-465311f27bd3d06eb4ae428c9cec15f9859b1c8e.zip",
+    "hash": "560af01050e3f382feeaadbe25540616c94adab37009fc958820b1061da5cdd4",
+    "bin": [
+        [
+            "messui.exe",
+            "messui-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "messui.exe",
+            "MESSUI (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Robbbert/messui/actions/workflows/ci-messui.yml/runs?branch=master&event=push&status=success&per_page=1",
+        "script": [
+            "$run = json_path $page $.workflow_runs[0].run_number",
+            "$id = json_path $page $.workflow_runs[0].id",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "Write-Output \"$run $id $date $sha\""
+        ],
+        "regex": "^(?<run>\\d+) (?<id>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<short>[0-9a-f]{7})(?<rest>[0-9a-f]+)$",
+        "replace": "${run}-${year}${month}${day}-${short}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/Robbbert/messui/actions/runs/$matchId/messui-windows-gcc-$matchShort$matchRest.zip"
+    }
+}

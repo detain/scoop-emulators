@@ -1,0 +1,35 @@
+{
+    "version": "2.1.20",
+    "description": "ZX Spectrum, Amstrad CPC, MSX-1, ColecoVision, SG-1000 and Sega Master System emulator",
+    "homepage": "https://www.retrovirtualmachine.org/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://static.retrovm.org/release/2.1.20/RetroVirtualMachine.2.1.20.Windows.x64.zip",
+            "hash": "3766694cf5f292953bf5c3f36efb7a896125890c9bfa5179e5f46625b69aa3c9"
+        }
+    },
+    "bin": [
+        [
+            "RetroVirtualMachine.exe",
+            "retrovm"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RetroVirtualMachine.exe",
+            "Retro Virtual Machine"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.retrovirtualmachine.org/download/",
+        "regex": "release/([\\d.]+)/RetroVirtualMachine\\.[\\d.]+\\.Windows\\.x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://static.retrovm.org/release/$version/RetroVirtualMachine.$version.Windows.x64.zip"
+            }
+        }
+    }
+}

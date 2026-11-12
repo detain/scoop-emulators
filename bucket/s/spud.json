@@ -5,20 +5,24 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/spud/emulator_screen_01.jpg"
     ],
-    "version": "0.240",
-    "description": "Spud is a ZX Spectrum 48k/128k Emulator written in C++, it emulates 16K/48K/128K/+2/+2A/+3 machines.",
-    "homepage": "https://worldofspectrum.org/forums/index.php?p=discussion/43829/redirect/p1",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/spud/0.240.7z",
-    "hash": "6a603a315603a8aeeaebbeb80a74d42e9440faddbaed707cb1f230a9c93a8443",
-    "bin": [
-        "Spud.exe"
+    "version": "0.307",
+    "description": "Sinclair ZX Spectrum 16K/48K/128K/+2/+2A/+3 emulator",
+    "homepage": "https://aquarius.je/emulators/",
+    "license": "Freeware",
+    "url": "https://aquarius.je/wp-content/uploads/Spud.zip",
+    "hash": "e4f2e8bdf162674190d09305972dfc0729bfc7058cb5bb31a8df95c9c7b493a0",
+    "bin": "Spud.exe",
+    "shortcuts": [
+        [
+            "Spud.exe",
+            "Spud"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/spud/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://aquarius.je/emulators/",
+        "regex": "Spud v([\\d.]+[a-z]?)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/spud/$version.7z"
+        "url": "https://aquarius.je/wp-content/uploads/Spud.zip"
     }
 }

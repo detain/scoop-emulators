@@ -1,0 +1,36 @@
+{
+    "version": "2026-10-29",
+    "description": "Nintendo Switch emulator (Eden fork with experimental Switch 2 support)",
+    "homepage": "https://git.eden-emu.dev/Takoroka/eden-nx2",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Eden requires prod.keys and Switch firmware dumped from your own console.",
+        "Portable mode is enabled; user data is stored in $persist_dir\\user"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://git.eden-emu.dev/Takoroka/eden-nx2/releases/download/nx2-2026-10-29/Eden-Windows-nx2-2026-10-29-amd64-msvc-standard.zip",
+    "hash": "be64e20df9464b633d83e1dcb1a55bfb05682adc8121ac6fd50c6747eb2f9e58",
+    "bin": [
+        [
+            "eden.exe",
+            "eden-nx2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "eden.exe",
+            "Eden NX2"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://git.eden-emu.dev/api/v1/repos/Takoroka/eden-nx2/releases?limit=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "nx2-([\\d-]+)"
+    },
+    "autoupdate": {
+        "url": "https://git.eden-emu.dev/Takoroka/eden-nx2/releases/download/nx2-$version/Eden-Windows-nx2-$version-amd64-msvc-standard.zip"
+    }
+}

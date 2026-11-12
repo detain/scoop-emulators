@@ -1,0 +1,49 @@
+{
+    "version": "667-20261111-1400ff6",
+    "description": "Microsoft Xbox 360 emulator (Xenia Canary fork with online multiplayer) (development version)",
+    "homepage": "https://github.com/AdrianCassar/xenia-canary",
+    "license": "BSD-3-Clause",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after ~90 days without new commits.",
+    "url": "https://nightly.link/AdrianCassar/xenia-canary/workflows/Orchestrator/netplay_canary_experimental/xenia_canary_netplay_windows.zip",
+    "hash": "f3f383284e56af11e172521e36389633dcad0f4a780208bed03917ff7426af4a",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\xenia-canary-netplay.config.toml\")) {",
+        "    New-Item \"$dir\\xenia-canary-netplay.config.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "xenia_canary_netplay.exe",
+            "xenia-canary-netplay-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xenia_canary_netplay.exe",
+            "Xenia Canary Netplay (dev)"
+        ]
+    ],
+    "persist": [
+        "cache",
+        "content",
+        "portable.txt",
+        "xenia-canary-netplay.config.toml"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/AdrianCassar/xenia-canary/actions/workflows/Orchestrator.yml/runs?branch=netplay_canary_experimental&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/AdrianCassar/xenia-canary/workflows/Orchestrator/netplay_canary_experimental/xenia_canary_netplay_windows.zip"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "version": "0.4.0a2",
+    "description": "Graphical front-end for the QEMU emulator, written in Java",
+    "homepage": "https://sourceforge.net/projects/javaqemu/",
+    "license": "GPL-2.0-only",
+    "notes": "Requires a Java runtime and QEMU.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre",
+        "QEMU": "qemu"
+    },
+    "url": "https://downloads.sourceforge.net/project/javaqemu/Binaries/JavaQemu_Bin_v0.4.0a2.jar#/JavaQemu.jar",
+    "hash": "sha1:ab485f741e0aaa8a0d7cc36fec589491753d9e3f",
+    "bin": [
+        [
+            "JavaQemu.jar",
+            "javaqemu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "JavaQemu.jar",
+            "JavaQemu"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/javaqemu/rss?path=/Binaries",
+        "regex": "JavaQemu_Bin_v([\\w.]+)\\.jar"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/javaqemu/Binaries/JavaQemu_Bin_v$version.jar#/JavaQemu.jar"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "0.7.3",
+    "description": "Sega Genesis / Mega Drive / Sega CD / 32X emulator based on Gens with development and debugging features",
+    "homepage": "https://gendev.spritesmind.net/page-gensK.html",
+    "license": "GPL-2.0-only",
+    "url": "https://gendev.spritesmind.net/files/gensKMod_073.zip",
+    "hash": "f561094606616c5c4a98f20979239ea0dba6e4e107fc6a80ef0398e29917a3eb",
+    "bin": [
+        [
+            "gens.exe",
+            "gens-kmod"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gens.exe",
+            "Gens KMod"
+        ]
+    ],
+    "checkver": {
+        "url": "https://gendev.spritesmind.net/page-gensK.html",
+        "regex": "files/gensKMod_(?<major>\\d)(?<minor>\\d)(?<patch>\\d)\\.zip",
+        "replace": "${major}.${minor}.${patch}"
+    },
+    "autoupdate": {
+        "url": "https://gendev.spritesmind.net/files/gensKMod_$cleanVersion.zip"
+    }
+}

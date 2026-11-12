@@ -1,0 +1,35 @@
+{
+    "version": "0.9.8",
+    "description": "Sinclair ZX Spectrum emulator",
+    "homepage": "https://github.com/zoran-vucenovic/swan",
+    "license": "Apache-2.0",
+    "notes": "For sound, place a PortAudio DLL of matching bitness (e.g. from https://github.com/spatialaudio/portaudio-binaries) in $dir",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zoran-vucenovic/swan/releases/download/v0.9.8/swan_0.9.8_windows_x86_64.zip",
+            "hash": "39462a675b1b70357fed26408465a90a7e1f0b90ccdaf2481a5c526e0b91969e"
+        },
+        "32bit": {
+            "url": "https://github.com/zoran-vucenovic/swan/releases/download/v0.9.8/swan_0.9.8_windows_i386.zip",
+            "hash": "80f4381dc1de6478eed65596dd4ef7fb8c85cd81b3f7b97b733954cf7b7db575"
+        }
+    },
+    "bin": "swan.exe",
+    "shortcuts": [
+        [
+            "swan.exe",
+            "Swan"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zoran-vucenovic/swan/releases/download/v$version/swan_$version_windows_x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/zoran-vucenovic/swan/releases/download/v$version/swan_$version_windows_i386.zip"
+            }
+        }
+    }
+}

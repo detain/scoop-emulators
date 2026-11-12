@@ -1,0 +1,47 @@
+{
+    "version": "261031-260101",
+    "description": "Sharp X68000 emulator (enhanced fork of XM6 2.06)",
+    "homepage": "https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k.html",
+    "license": "Freeware",
+    "url": [
+        "https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k.7z",
+        "https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k%20DLL%20Package.7z"
+    ],
+    "hash": [
+        "3ee1261233ba79a5fcec9c0259b4204ebb0f8f6c0cd43131c7d73e8c18ad1bd1",
+        "53a1e53eb5ef94ef8ae544bafb9912cf7cf223382888c5a454e8a1a4c69a0d65"
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\XM6.ini\")) {",
+        "    New-Item \"$dir\\XM6.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "XM6.exe",
+            "xm6pro"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "XM6.exe",
+            "XM6 Pro-68k"
+        ]
+    ],
+    "persist": "XM6.ini",
+    "checkver": {
+        "url": "https://mijet.eludevisibility.org/XM6%20Pro-68k/Version.txt",
+        "script": [
+            "$dll = (New-Object Net.WebClient).DownloadString('https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k%20DLL%20Package.7z.ver')",
+            "Write-Output \"$($page.Trim()) $($dll.Trim())\""
+        ],
+        "regex": "(?<main>\\d+) (?<dll>\\d+)",
+        "replace": "${main}-${dll}"
+    },
+    "autoupdate": {
+        "url": [
+            "https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k.7z",
+            "https://mijet.eludevisibility.org/XM6%20Pro-68k/XM6%20Pro-68k%20DLL%20Package.7z"
+        ]
+    }
+}

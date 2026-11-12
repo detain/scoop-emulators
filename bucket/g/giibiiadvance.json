@@ -1,0 +1,38 @@
+{
+    "version": "0.3.0",
+    "description": "Nintendo Game Boy / Game Boy Color / Game Boy Advance emulator with GB Camera support",
+    "homepage": "https://github.com/AntonioND/giibiiadvance",
+    "license": "GPL-2.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AntonioND/giibiiadvance/releases/download/v0.3.0/giibiiadvance_v0.3.0.zip",
+            "hash": "50971a7760bfa7918b9a9bb24eaa783e387344299ec0d0d2a06d7ba1a55e2334",
+            "extract_dir": "giibiiadvance_v0.3.0"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\GiiBiiAdvance.ini\")) {",
+        "    New-Item \"$dir\\GiiBiiAdvance.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "giibiiadvance.exe",
+    "shortcuts": [
+        [
+            "giibiiadvance.exe",
+            "GiiBiiAdvance"
+        ]
+    ],
+    "persist": "GiiBiiAdvance.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AntonioND/giibiiadvance/releases/download/v$version/giibiiadvance_v$version.zip",
+                "extract_dir": "giibiiadvance_v$version"
+            }
+        }
+    }
+}

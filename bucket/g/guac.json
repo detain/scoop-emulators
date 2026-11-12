@@ -1,0 +1,29 @@
+{
+    "version": "0.0.4",
+    "description": "Nintendo Game Boy, Game Boy Color, Game Boy Advance and Nintendo DS emulator written in Go",
+    "homepage": "https://guacemulator.com/",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/aabalke/guac/releases/download/v0.0.4/guac-004-windows-amd64.exe#/guac.exe",
+            "hash": "51585b3547dd38352a48b1931988030b3c26ed5c52f3b9f778226e8dcb80edfb"
+        }
+    },
+    "bin": "guac.exe",
+    "shortcuts": [
+        [
+            "guac.exe",
+            "Guac"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/aabalke/guac"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/aabalke/guac/releases/download/v$version/guac-$cleanVersion-windows-amd64.exe#/guac.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "version": "0.15.0",
+    "description": "Texas Instruments TI-99/4A home computer emulator",
+    "homepage": "https://www.mrousseau.org/programs/ti99sim/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "The TI-99/4A console ROM and GROMs are not included. Convert your own dumps into a cartridge with 'ti99sim-convert' (see $dir\\doc\\README.html).",
+        "Cartridges and disks are searched in the current directory and in the directory set by the HOME environment variable."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": [
+        "https://www.mrousseau.org/programs/ti99sim/archives/ti99sim-0.15.0.win32.tar.xz",
+        "https://www.libsdl.org/release/SDL-1.2.15-win32.zip"
+    ],
+    "hash": [
+        "0193e95391b432f4c6d7c658e7a7244922d3825a1e2e5d3a0130856405e3205c",
+        "a28bbe38714ef7817b1c1e8082a48f391f15e4043402444b783952fca939edc1"
+    ],
+    "extract_dir": "ti99sim-0.15.0",
+    "extract_to": [
+        "",
+        "bin"
+    ],
+    "bin": [
+        [
+            "bin\\ti99sim-sdl.exe",
+            "ti99sim"
+        ],
+        "bin\\ti99sim-console.exe",
+        [
+            "bin\\convert.exe",
+            "ti99sim-convert"
+        ],
+        [
+            "bin\\disk.exe",
+            "ti99sim-disk"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bin\\ti99sim-sdl.exe",
+            "TI-99 Sim"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.mrousseau.org/programs/ti99sim/archives/",
+        "regex": "ti99sim-([\\d.]+)\\.win32\\.tar\\.xz"
+    },
+    "autoupdate": {
+        "url": [
+            "https://www.mrousseau.org/programs/ti99sim/archives/ti99sim-$version.win32.tar.xz",
+            "https://www.libsdl.org/release/SDL-1.2.15-win32.zip"
+        ],
+        "extract_dir": "ti99sim-$version"
+    }
+}

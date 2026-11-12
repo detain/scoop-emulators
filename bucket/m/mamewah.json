@@ -1,0 +1,30 @@
+{
+    "version": "1.69",
+    "description": "Multi-emulator frontend designed for arcade cabinets and arcade controls",
+    "homepage": "https://mamewah.mameworld.info/",
+    "license": "Freeware",
+    "notes": "This frontend is no longer developed.",
+    "url": "https://web.archive.org/web/20130201210739id_/http://mamewah.mameworld.info/downloads/mamewah_v169.zip",
+    "hash": "6f7f0c6654d22a469ea3f007c323eec50b9cce3eb5a1e18cdd10b6ffd33c7928",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\mamewah.ini\")) {",
+        "    New-Item \"$dir\\mamewah.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "mamewah.exe",
+    "shortcuts": [
+        [
+            "mamewah.exe",
+            "MAMEWAH"
+        ],
+        [
+            "mamewah layout designer.exe",
+            "MAMEWAH Layout Designer"
+        ]
+    ],
+    "persist": [
+        "config",
+        "files",
+        "mamewah.ini"
+    ]
+}

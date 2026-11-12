@@ -1,0 +1,20 @@
+{
+    "version": "1.99",
+    "description": "MAME frontend for arcade cabinets that displays snapshots, cabinets and marquees",
+    "homepage": "http://rittwage.com/dp.php?pg=ultramame",
+    "license": "Freeware",
+    "notes": [
+        "This frontend is no longer developed; this is the last build archived from the original site.",
+        "Set the MAME executable and media paths in $persist_dir\\ultramame.ini."
+    ],
+    "url": "https://web.archive.org/web/20130811023010id_/http://rittwage.com/files/ultra19.zip",
+    "hash": "6830750a5a54b177af191f4bc240159ab8926d785e5b7342487e569240a112d0",
+    "bin": "ultramame.exe",
+    "shortcuts": [
+        [
+            "ultramame.exe",
+            "UltraMAME"
+        ]
+    ],
+    "persist": "ultramame.ini"
+}

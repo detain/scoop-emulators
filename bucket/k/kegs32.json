@@ -6,19 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kegs32/emulator_screen_01.jpg"
     ],
     "version": "0.91",
-    "description": "KEGS32 is Apple ][ GS emulator based on the Kent Dickey's KEGS for UNIX.",
-    "homepage": "http://www.emaculation.com/kegs32.htm",
+    "description": "Apple IIgs emulator, a Windows port of Kent Dickey's KEGS",
+    "homepage": "https://www.emaculation.com/kegs32.htm",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/kegs32/0.91.7z",
-    "hash": "1db0d508ca8faeb0105fc6b7581116c9fddb4c53dcb9b3e8371dda0eb7eaf949",
-    "bin": [
-        "kegs32.exe"
+    "notes": [
+        "The original emaculation.com download is behind a bot challenge; this package is that official file archived by the Wayback Machine.",
+        "Requires an Apple IIgs ROM file named ROM, ROM.01 or ROM.03 next to kegs32.exe, or select a ROM from the configuration panel (F4); the selection is saved in the persisted config.kegs."
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/kegs32/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/kegs32/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20211219212931id_/https://www.emaculation.com/kegs32/kegs32091.zip",
+    "hash": "cb9d1bbb01d97a36e2603b17404ab0fd1b2f24d93fde63251f5357db8fc33f01",
+    "bin": "kegs32.exe",
+    "shortcuts": [
+        [
+            "kegs32.exe",
+            "KEGS32"
+        ]
+    ],
+    "persist": "config.kegs"
 }

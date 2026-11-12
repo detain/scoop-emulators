@@ -1,0 +1,32 @@
+{
+    "version": "0.13.9.16",
+    "description": "IBM PC/XT (8086) emulator written in C",
+    "homepage": "https://sourceforge.net/projects/fake86/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Fake86 is started from the command line, e.g. 'fake86 -fd0 floppy.img' or 'fake86 -hd0 disk.img' (run 'fake86 -h' for options)."
+    ],
+    "architecture": {
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/fake86/fake86-0.13.9.16-win32.zip",
+            "hash": "sha1:d774651a16a75b183f4c507e11928d4baac84c8a"
+        }
+    },
+    "bin": [
+        "fake86.exe",
+        "fake86-net.exe",
+        "imagegen.exe"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/fake86/rss",
+        "regex": "fake86-([\\d.]+)-win32\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/fake86/fake86-$version-win32.zip"
+            }
+        }
+    }
+}

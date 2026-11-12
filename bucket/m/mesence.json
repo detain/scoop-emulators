@@ -1,0 +1,32 @@
+{
+    "version": "2.2.1",
+    "description": "Multi-system emulator (NES, SNES, GB/GBC/GBA, PC Engine, SMS/GG, WonderSwan), community fork of Mesen2",
+    "homepage": "https://github.com/nesdev-org/MesenCE",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nesdev-org/MesenCE/releases/download/2.2.1/Mesen_2.2.1_Windows.zip",
+            "hash": "c19e10b3b3865eb0e86e4d01bf09a5027a4452081c04b5bd5b6cbbf76e346fd6"
+        }
+    },
+    "bin": [
+        [
+            "Mesen.exe",
+            "mesence"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Mesen.exe",
+            "MesenCE"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nesdev-org/MesenCE/releases/download/$version/Mesen_$version_Windows.zip"
+            }
+        }
+    }
+}

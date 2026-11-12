@@ -1,0 +1,30 @@
+{
+    "version": "5.8",
+    "description": "Sony PlayStation 5 emulator based on KytyPS5, focused on iGPU optimization",
+    "homepage": "https://coder787-source.github.io/KytyPlus/",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/Coder787-source/KytyPlus/releases/download/v5.8/KytyPlus-v5.8-Windows-x64.zip",
+    "hash": "6615de4566585d6801a6a33387ca6fd8fae89da80b75704922f1735aa217c00d",
+    "bin": [
+        [
+            "kyty_launcher.exe",
+            "kytyplus"
+        ],
+        [
+            "kyty_emulator.exe",
+            "kytyplus-emulator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "kyty_launcher.exe",
+            "KytyPlus"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Coder787-source/KytyPlus"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Coder787-source/KytyPlus/releases/download/v$version/KytyPlus-v$version-Windows-x64.zip"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "version": "20261108-b3cb82e",
+    "description": "Nintendo Switch / Switch 2 emulator with Vulkan GPU and selectable Dynarmic/Rustarmic JITs (nightly build)",
+    "homepage": "https://nexium-emu.org/",
+    "license": "MIT",
+    "notes": "NeXium ships no firmware or keys. Provide your own dumps from hardware you own.",
+    "url": "https://github.com/nexium-emu/nexium-nightly/releases/download/nightly/nexium-2-windows-x86_64.zip",
+    "hash": "4e997a73e28b37ab5ddaa1e450534350c5f920bc3589951c44de958ab2b14df2",
+    "bin": "nexium.exe",
+    "shortcuts": [
+        [
+            "nexium.exe",
+            "NeXium"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/nexium-emu/nexium-nightly/releases/tags/nightly",
+        "jsonpath": "$.name",
+        "regex": "nightly (?<year>\\d{4})\\.(?<month>\\d{2})\\.(?<day>\\d{2}) \\((?<commit>[0-9a-f]{7})\\)",
+        "replace": "${year}${month}${day}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nexium-emu/nexium-nightly/releases/download/nightly/nexium-2-windows-x86_64.zip"
+    }
+}

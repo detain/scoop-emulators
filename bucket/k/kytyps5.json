@@ -1,0 +1,31 @@
+{
+    "version": "2026-11-11-bc934ef",
+    "description": "Sony PlayStation 5 emulator (translation layer) based on Kyty",
+    "homepage": "https://github.com/KytyPS5/KytyPS5",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/KytyPS5/KytyPS5/releases/download/KytyPS5-2026-11-11-bc934ef/KytyPS5-2026-11-11-bc934ef-Windows-x64.zip",
+    "hash": "86b052ae61029b07f80cc942e2df347f95a3aa00d39cf410d08277bec97542cc",
+    "bin": [
+        [
+            "kyty_launcher.exe",
+            "kytyps5"
+        ],
+        [
+            "kyty_emulator.exe",
+            "kytyps5-emulator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "kyty_launcher.exe",
+            "KytyPS5"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/KytyPS5/KytyPS5",
+        "regex": "KytyPS5-([\\d]{4}-[\\d]{2}-[\\d]{2}-[0-9a-f]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/KytyPS5/KytyPS5/releases/download/KytyPS5-$version/KytyPS5-$version-Windows-x64.zip"
+    }
+}

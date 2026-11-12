@@ -1,0 +1,59 @@
+{
+    "version": "3.2.0",
+    "description": "Sega Mega Drive / Genesis, Master System, Game Gear, SG-1000, Mega CD, Pico and 32X emulator for Windows, based on Genesis Plus GX",
+    "homepage": "https://github.com/hazem-abdelghani/Genesis-Plus-EX",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/blob/master/LICENSE.txt"
+    },
+    "notes": "Mega CD games require the Mega CD BIOS for the game's region; place BIOS files in $persist_dir\\BIOS",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/releases/download/v3.2.0/Genesis-Plus-EX-v3.2.0-x64.zip",
+            "hash": "afa9f80ef2f751d4253ddf45d7de8efee1ce8427be2c009337b8ab683a51c8f6"
+        },
+        "32bit": {
+            "url": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/releases/download/v3.2.0/Genesis-Plus-EX-v3.2.0-x86.zip",
+            "hash": "a9db96313ae2d75b543bb86462444f6c8814aac7a1355e909616ddc0ec1059e6"
+        }
+    },
+    "extract_dir": "Genesis Plus EX",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\genesis-plus-ex.ini\")) {",
+        "    New-Item \"$dir\\genesis-plus-ex.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Genesis Plus EX.exe",
+            "genesis-plus-ex"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Genesis Plus EX.exe",
+            "Genesis Plus EX"
+        ]
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Profiles",
+        "Saves",
+        "Screenshots",
+        "States",
+        "genesis-plus-ex.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/releases/download/v$version/Genesis-Plus-EX-v$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/hazem-abdelghani/Genesis-Plus-EX/releases/download/v$version/Genesis-Plus-EX-v$version-x86.zip"
+            }
+        },
+        "extract_dir": "Genesis Plus EX"
+    }
+}

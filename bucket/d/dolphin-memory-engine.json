@@ -1,0 +1,35 @@
+{
+    "version": "2026.06.25",
+    "description": "RAM search and editing tool for games running in the Dolphin GameCube/Wii emulator",
+    "homepage": "https://github.com/aldelaro5/dolphin-memory-engine",
+    "license": "MIT",
+    "url": "https://github.com/aldelaro5/dolphin-memory-engine/releases/download/2026.06.25/dolphin-memory-engine-2026.06.25-windows-amd64.zip",
+    "hash": "c06badca95b61a263de251d2e288c4ad6fcfaa6bfddc4eabf0335021ecdd5fd4",
+    "pre_install": [
+        "'portable.txt', 'settings.ini' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "DolphinMemoryEngine.exe",
+            "dolphin-memory-engine"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "DolphinMemoryEngine.exe",
+            "Dolphin Memory Engine"
+        ]
+    ],
+    "persist": [
+        "portable.txt",
+        "settings.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/aldelaro5/dolphin-memory-engine/releases/download/$version/dolphin-memory-engine-$version-windows-amd64.zip"
+    }
+}

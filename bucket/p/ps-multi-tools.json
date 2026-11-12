@@ -1,0 +1,28 @@
+{
+    "version": "16.2",
+    "description": "Backup manager and utilities for PS1, PS2, PS3, PS4, PS5, PSP and PS Vita (homebrew, firmwares, payloads)",
+    "homepage": "http://psmulti.tools",
+    "license": "AGPL-3.0-only",
+    "suggest": {
+        ".NET 9 Desktop Runtime": "versions/windowsdesktop-runtime-9.0"
+    },
+    "url": "https://github.com/SvenGDK/PS-Multi-Tools/releases/download/v16.2/PS.Multi.Tools.v16.2.Windows.x64.NET9.7z",
+    "hash": "dce2e6f6c82a2c9d90596bb6686453c84fdb99de9ae9137f2645ea9ac8e5d203",
+    "extract_dir": "PS Multi Tools v16.2",
+    "bin": "PSMultiTools.exe",
+    "shortcuts": [
+        [
+            "PSMultiTools.exe",
+            "PS Multi Tools"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/SvenGDK/PS-Multi-Tools/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>PS\\.Multi\\.Tools\\.v[\\d.]+\\.Windows\\.x64[^/]*\\.7z)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/SvenGDK/PS-Multi-Tools/releases/download/v$version/$matchFile",
+        "extract_dir": "PS Multi Tools v$version"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "version": "1.4.4",
+    "description": "Graphical frontend and game manager for DOSBox (successor of D-Fend)",
+    "homepage": "https://dfendreloaded.sourceforge.io/",
+    "license": "GPL-3.0-only",
+    "notes": "This frontend is no longer developed. It runs in portable mode (data is stored in $persist_dir).",
+    "url": "https://downloads.sourceforge.net/project/dfendreloaded/D-Fend%20Reloaded/D-Fend%20Reloaded%201.4.4/D-Fend-Reloaded-1.4.4-Portable.paf.exe#/dl.7z",
+    "hash": "sha1:a6a205684dd828a98f5668357629e1f50af8e1d6",
+    "extract_dir": "App\\D-Fend Reloaded",
+    "bin": [
+        [
+            "DFend.exe",
+            "dfend"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "DFend.exe",
+            "D-Fend Reloaded"
+        ]
+    ],
+    "persist": [
+        "Settings",
+        "Confs",
+        "Capture",
+        "VirtualHD"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/dfendreloaded/rss",
+        "regex": "D-Fend-Reloaded-([\\d.]+)-Portable\\.paf\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/dfendreloaded/D-Fend%20Reloaded/D-Fend%20Reloaded%20$version/D-Fend-Reloaded-$version-Portable.paf.exe#/dl.7z"
+    }
+}

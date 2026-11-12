@@ -1,0 +1,39 @@
+{
+    "version": "373-20261003-2fae859",
+    "description": "Multi-system emulator (GBA, GB/GBC, NES, PC Engine, Sega 8-bit, ColecoVision, ZX Spectrum and more) (development version)",
+    "homepage": "https://yughias.github.io/Obentou/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "ColecoVision emulation requires a BIOS file.",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build."
+    ],
+    "url": "https://nightly.link/yughias/Obentou/workflows/build.yaml/main/obentou-windows.zip",
+    "hash": "e8b58602d5fbe6599ce92f3f96ec3ff4753f4c2f6564211e7b1ece6bd6d03c21",
+    "bin": [
+        [
+            "obentou.exe",
+            "obentou-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "obentou.exe",
+            "Obentou (dev)"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/yughias/Obentou/actions/workflows/build.yaml/runs?branch=main&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/yughias/Obentou/workflows/build.yaml/main/obentou-windows.zip"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "version": "0.5",
+    "description": "Nintendo GameCube and Wii emulator with VR support (Dolphin VR Redux fork)",
+    "homepage": "https://github.com/iChris4/dolphinXR",
+    "license": "GPL-2.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/iChris4/dolphinXR/releases/download/v0.5/DolphinVR-Redux-v0.5-Windows.zip",
+    "hash": "6fcec865c5d0db138c95cdbea84bedf78ba3f6d37a12783cf430962083547975",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Dolphin.exe",
+            "dolphinxr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Dolphin.exe",
+            "DolphinXR"
+        ]
+    ],
+    "persist": [
+        "User",
+        "portable.txt"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/iChris4/dolphinXR/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>[^/]+Windows[^/]*\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/iChris4/dolphinXR/releases/download/v$version/$matchFile"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "version": "2.1",
+    "description": "XInput controller input plugin for PSX emulators, PCSX2, nullDC, Chankast and Project64-style N64 emulators",
+    "homepage": "https://github.com/KrossX/Pokopom",
+    "license": "MIT",
+    "notes": [
+        "This is a 32-bit input plugin DLL, not a standalone emulator.",
+        "Copy padPokopom.dll from $dir to your emulator's plugins folder.",
+        "This plugin is no longer developed."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/KrossX/Pokopom/releases/download/v2.1/Pokopom.v2.1-22.zip",
+    "hash": "816bfe03789a3283d57a1975915970d4cffd99afbcc9cf324dfe53db15494733",
+    "checkver": {
+        "github": "https://api.github.com/repos/KrossX/Pokopom/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "v(?<version>[\\d.]+)/Pokopom\\.v[\\d.]+-(?<build>\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/KrossX/Pokopom/releases/download/v$version/Pokopom.v$version-$matchBuild.zip"
+    }
+}

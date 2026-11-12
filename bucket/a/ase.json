@@ -1,0 +1,33 @@
+{
+    "version": "1.15",
+    "description": "Atari ST/STE/Mega ST emulator written in C#",
+    "homepage": "https://github.com/thebitculture/ase",
+    "license": "GPL-3.0-only",
+    "notes": "EmuTOS is bundled. For best compatibility use a TOS image dumped from your own machine (1.00-1.04 for ST/Mega ST, 1.06-2.06 for STE).",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/thebitculture/ase/releases/download/v1.15/ASE-1.15-windows-x64.zip",
+            "hash": "dfa221d7fc197de2a9ba362de789cc45278edf61dca3423d9e8a5e08d251378a"
+        }
+    },
+    "bin": [
+        [
+            "ASE.exe",
+            "ase"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ASE.exe",
+            "ASE"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/thebitculture/ase/releases/download/v$version/ASE-$version-windows-x64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "version": "0.1b",
+    "description": "CHIP-8 and SCHIP interpreter written in C using SDL",
+    "homepage": "https://sourceforge.net/projects/chip8sdl/",
+    "license": "MIT",
+    "notes": "This emulator is no longer developed. It is a command-line program: chip8sdl [--scale=<int>] [--freq=<int>] <file>",
+    "url": "https://downloads.sourceforge.net/project/chip8sdl/0.1b/chip8sdl-0.1b_win32.zip",
+    "hash": "sha1:1f85d65a22a200e503fca451c307884c21b50621",
+    "extract_dir": "chip8sdl-0.1b_win32",
+    "bin": "chip8sdl.exe",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/chip8sdl/rss",
+        "regex": "/([\\d.]+[a-z]?)/chip8sdl-[\\d.]+[a-z]?_win32\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/chip8sdl/$version/chip8sdl-$version_win32.zip",
+        "extract_dir": "chip8sdl-$version_win32"
+    }
+}

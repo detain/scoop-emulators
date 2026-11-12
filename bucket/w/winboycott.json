@@ -6,19 +6,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/winboycott/emulator_screen_01.jpg"
     ],
     "version": "0.63b",
-    "description": "WinBoycott has a high compatibility rate and reasonable speed. This emulator is however lacking a full-screen mode and any type of hardware acceleration. Classic GameBoy, Super GameBoy and GameBoy Color are all supported by this emulator. This is a port of the DOS-based GameBoy emulator Boycott.",
+    "description": "Nintendo Game Boy, Super Game Boy and Game Boy Color emulator (Windows port of Boycott)",
     "homepage": "http://boycott.emuunlim.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/winboycott/0.63b.7z",
-    "hash": "7816f37a005f5061478f5e3801ebd4bf76efd74bb6eeee690e734fb581647fdd",
-    "bin": [
-        "WinBoycott.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/winboycott/",
-        "regex": "([\\d.]+[a-z]*)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/winboycott/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20010603041646id_/http://boycott.emuunlim.com:80/files/winboycott-063b.zip",
+    "hash": "f30e26433718eb9604463620813ee4e5a8ffdc41114f9923fc0faceb11de8ded",
+    "bin": "WinBoycott.exe",
+    "shortcuts": [
+        [
+            "WinBoycott.exe",
+            "WinBoycott"
+        ]
+    ]
 }

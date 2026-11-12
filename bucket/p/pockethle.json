@@ -1,0 +1,26 @@
+{
+    "version": "0.3.2",
+    "description": "Windows Mobile / Pocket PC high-level emulator for ARM Windows CE games",
+    "homepage": "https://github.com/j92580498-max/PocketHLE",
+    "license": "Apache-2.0|MIT",
+    "url": "https://github.com/j92580498-max/PocketHLE/releases/download/0.3.2/PocketHLE-windows-x86_64.zip",
+    "hash": "83af955e3ccebcdf0c5a63bdc3a76b624c2eba36be4d8ad0c8f0827ab06a6ea4",
+    "bin": [
+        "pockethle-gui.exe",
+        "pockethle.exe"
+    ],
+    "shortcuts": [
+        [
+            "pockethle-gui.exe",
+            "PocketHLE"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/j92580498-max/PocketHLE/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>v?(?<version>[\\d.]+))/PocketHLE-windows-x86_64\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/j92580498-max/PocketHLE/releases/download/$matchTag/PocketHLE-windows-x86_64.zip"
+    }
+}

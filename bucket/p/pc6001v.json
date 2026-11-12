@@ -6,20 +6,41 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc6001v/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc6001v/emulator_screen_01.jpg"
     ],
-    "version": "1.25-win64",
-    "description": "PC6001V is an NEC PC-6000 series emulator. NOTE: Website is in Japanese.",
-    "homepage": "http://papicom.net",
-    "license": "GNU GPLv2.1",
-    "url": "https://consolo.is.cc/emu/pc6001v/1.25-win64.7z",
-    "hash": "43d0053795a76df7a4150789b67f271441e6996722ca5471aa32f963c8846d38",
-    "bin": [
-        "pc6001v.exe"
+    "version": "2.1.4",
+    "description": "NEC PC-6001, PC-6001mkII and PC-6601 (SR) emulator",
+    "homepage": "http://papicom.net/p6v/",
+    "license": "LGPL-2.1-only",
+    "notes": "Place the PC-6001 series ROM files in $persist_dir\\rom",
+    "url": "http://papicom.net/p6v/arc/p6v214_64.zip",
+    "hash": "a7e49f7b4f7ecfafbde257a3f2f1675b6773b4048a4b54a199d3cf58379e5a24",
+    "extract_dir": "PC6001V",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pc6001v.ini\")) {",
+        "    New-Item \"$dir\\pc6001v.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "pc6001v.exe",
+    "shortcuts": [
+        [
+            "pc6001v.exe",
+            "PC6001V"
+        ]
+    ],
+    "persist": [
+        "rom",
+        "tape",
+        "disk",
+        "extrom",
+        "img",
+        "wave",
+        "doko",
+        "pc6001v.ini"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pc6001v/",
-        "regex": "([\\d.]+-win64)\\.7z"
+        "url": "http://papicom.net/p6v/download.html",
+        "regex": "<TD>([\\d.]+)</TD>\\s*<TD><A HREF=\"arc/p6v\\d+_64\\.zip\""
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pc6001v/$version.7z"
+        "url": "http://papicom.net/p6v/arc/p6v$cleanVersion_64.zip"
     }
 }

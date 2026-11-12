@@ -1,0 +1,31 @@
+{
+    "version": "4.0.571",
+    "description": "Soviet 8-bit home computer emulator (Radio-86RK, Apogey, Orion-128, Specialist, Vector-06C, Korvet and more)",
+    "homepage": "https://emu80.org/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://emu80.org/v4beta/Emu80qt_40571.zip",
+    "hash": "4aa4e6a7e597e9f958a47c4241fa885ef247c2b12f0d786c1fedd90c7f7dcc7d",
+    "extract_dir": "Emu80qt_40571",
+    "bin": [
+        [
+            "Emu80qt.exe",
+            "emu80"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Emu80qt.exe",
+            "Emu80"
+        ]
+    ],
+    "persist": "_settings",
+    "checkver": {
+        "url": "https://emu80.org/distr/",
+        "regex": "Emu80qt_(\\d)(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "https://emu80.org/v4beta/Emu80qt_$cleanVersion.zip",
+        "extract_dir": "Emu80qt_$cleanVersion"
+    }
+}

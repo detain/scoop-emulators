@@ -1,0 +1,41 @@
+{
+    "version": "20250621",
+    "description": "Sinclair ZX Spectrum and Amstrad CPC emulator",
+    "homepage": "https://github.com/MartianGirl/SpecIde",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MartianGirl/SpecIde/releases/download/20250621/SpecIde64.zip",
+            "hash": "945da5f0b1819bd61a369f1aa92ef825120e83a374b47af356c2f1e30ba627fa",
+            "extract_dir": "SpecIde64"
+        },
+        "32bit": {
+            "url": "https://github.com/MartianGirl/SpecIde/releases/download/20250621/SpecIde32.zip",
+            "hash": "f1ed0bea24ffd34a20fee02a3ee8afa7a83ba6be378b038fa18cf92b529fbf0c",
+            "extract_dir": "SpecIde32"
+        }
+    },
+    "bin": "SpecIde.exe",
+    "shortcuts": [
+        [
+            "SpecIde.exe",
+            "SpecIde"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MartianGirl/SpecIde/releases/download/$version/SpecIde64.zip",
+                "extract_dir": "SpecIde64"
+            },
+            "32bit": {
+                "url": "https://github.com/MartianGirl/SpecIde/releases/download/$version/SpecIde32.zip",
+                "extract_dir": "SpecIde32"
+            }
+        }
+    }
+}

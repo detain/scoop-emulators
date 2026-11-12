@@ -7,20 +7,25 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/whinecube/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2015/03/WhineCube-Nintendo-GameCube-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2015/03/WhineCube-Nintendo-GameCube-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2015/03/WhineCube-Nintendo-GameCube-Emulator-Pic-03.png"
     ],
-    "version": "Release7",
-    "description": "WhineCube was part of a string of GameCube emulators for Windows written in C++. Though in comparison to its competitors, the emulator was never able to run any commercial games. However it could still run some.",
+    "version": "r7",
+    "description": "Nintendo GameCube emulator (early experimental)",
     "homepage": "http://whinecube.emulation64.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/whinecube/Release7.7z",
-    "hash": "d6bc4b82053ce05edd2c252d7d31896e034598411a8729f6d57a2354a3ae49ca",
-    "bin": [
-        "WhineCube.vcproj"
+    "notes": "Requires the DirectX 9.0c runtime (d3dx9_25.dll), e.g. from http://whinecube.emulation64.com/bin/d3dx9_25.zip placed in $dir.",
+    "url": "http://whinecube.emulation64.com/bin/whinecube_r7.zip",
+    "hash": "64b230f0da3990791d01b44f98ddbe9a809dd381a83d34bd9505daf3d00011b8",
+    "bin": "WhineCube.exe",
+    "shortcuts": [
+        [
+            "WhineCube.exe",
+            "WhineCube"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/whinecube/",
-        "regex": "(Release\\d+)\\.7z"
+        "url": "http://whinecube.emulation64.com/downloads.html",
+        "regex": "bin/whinecube_(r\\d+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/whinecube/$version.7z"
+        "url": "http://whinecube.emulation64.com/bin/whinecube_$version.zip"
     }
 }

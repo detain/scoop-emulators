@@ -1,0 +1,20 @@
+{
+    "version": "1.6.0",
+    "description": "Converts Xbox 360 and original Xbox ISO images into Xbox 360 Games on Demand packages",
+    "homepage": "https://github.com/r4dius/Iso2God",
+    "license": "Freeware",
+    "notes": "This is r4dius' maintained fork of the original Iso2God by Chilano.",
+    "url": "https://github.com/r4dius/Iso2God/releases/download/1.6.0/iso2god-v1.6.0.zip",
+    "hash": "7288a31b884332d6436c9fb00e4573b58ea53062b21cbd3b828d8af651d759ac",
+    "bin": "Iso2God.exe",
+    "shortcuts": [
+        [
+            "Iso2God.exe",
+            "Iso2God"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/r4dius/Iso2God/releases/download/$version/iso2god-v$version.zip"
+    }
+}

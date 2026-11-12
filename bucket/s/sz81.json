@@ -1,0 +1,20 @@
+{
+    "version": "2.3.10",
+    "description": "Sinclair ZX80/ZX81 emulator",
+    "homepage": "https://sourceforge.net/projects/sz81/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed. This is the prebuilt Windows build of the sz81 2.3.x continuation (rullf2.xs4all.nl/sz81), archived on the Wayback Machine.",
+    "url": "https://web.archive.org/web/20190910203030id_/http://rullf2.xs4all.nl/sz81/sz81-win32.zip",
+    "hash": "e17b2ccf1188686061e5566494399a4e9a3b282903bffcafabd1e25c2f4487b5",
+    "bin": "sz81.exe",
+    "shortcuts": [
+        [
+            "sz81.exe",
+            "sz81"
+        ]
+    ],
+    "persist": [
+        "local",
+        "ZXpand_SD_Card"
+    ]
+}

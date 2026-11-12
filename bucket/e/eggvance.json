@@ -1,0 +1,19 @@
+{
+    "version": "1.2",
+    "description": "Nintendo Game Boy Advance emulator",
+    "homepage": "https://github.com/jsmolka/eggvance",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/jsmolka/eggvance/releases/download/1.2/eggvance-windows.zip",
+    "hash": "f6d9364b3db5f34363bf8d58c793ae8cd1d970665b64897a4fcd521751a4548c",
+    "bin": "eggvance.exe",
+    "shortcuts": [
+        [
+            "eggvance.exe",
+            "eggvance"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jsmolka/eggvance/releases/download/$version/eggvance-windows.zip"
+    }
+}

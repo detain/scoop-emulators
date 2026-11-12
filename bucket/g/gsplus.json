@@ -1,0 +1,30 @@
+{
+    "version": "1.38.0",
+    "description": "Apple IIgs emulator based on KEGS",
+    "homepage": "https://apple2.gs/plus/",
+    "license": "GPL-3.0-only",
+    "notes": "An Apple IIgs ROM file is required: name it ROM, ROM.01 or ROM.03 and place it in your home directory or next to config.kegs, or select it with F4.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/digarok/gsplus/releases/download/v1.38.0/GSplus-1.38.0-win64.zip",
+            "hash": "d88391e395f322734e04e950d8a9bcce1b9e831d1c54f238efff340f2a31e9bb"
+        }
+    },
+    "bin": "gsplus.exe",
+    "shortcuts": [
+        [
+            "gsplus.exe",
+            "GSplus"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/digarok/gsplus"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/digarok/gsplus/releases/download/v$version/GSplus-$version-win64.zip"
+            }
+        }
+    }
+}

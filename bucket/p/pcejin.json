@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pcejin/emulator_screen_01.jpg"
     ],
     "version": "svn209",
-    "description": "PCEjin is an NEC TurboGrafx-16 Entertainment SuperSystem and PC Engine emulator.",
-    "homepage": "http://tasvideos.org/EmulatorResources/Pcejin.html",
+    "description": "NEC PC Engine / TurboGrafx-16 emulator with TAS tools (rerecording, Lua scripting)",
+    "homepage": "https://tasvideos.org/EmulatorResources/Pcejin",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/pcejin/svn209.7z",
-    "hash": "d50ef4033e78054102ff69d5005090f07e26f52488000ad6b81bd4c638af27d2",
-    "bin": [
-        "pcejin.exe"
+    "url": "https://files.tasvideos.org/emulatordownloads/pcejin/PCEjin-SVN209.zip",
+    "hash": "6cd6db49768447de40f0272d44dfdc49e10799fa9170598a3d12ef92c154b5d2",
+    "bin": "pcejin.exe",
+    "shortcuts": [
+        [
+            "pcejin.exe",
+            "PCEjin"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pcejin/",
-        "regex": "(svn\\d+)\\.7z"
+        "url": "https://tasvideos.org/EmulatorResources/Pcejin",
+        "regex": "(?s)^.*emulatordownloads/pcejin/PCEjin-SVN(\\d+)\\.zip.*?Deprecated Dowloads",
+        "replace": "svn${1}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pcejin/$version.7z"
+        "url": "https://files.tasvideos.org/emulatordownloads/pcejin/PCEjin-SVN$match1.zip"
     }
 }

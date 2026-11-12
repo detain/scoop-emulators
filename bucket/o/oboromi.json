@@ -1,0 +1,25 @@
+{
+    "version": "0.0.1-dynarmic",
+    "description": "Nintendo Switch 2 emulator written in Rust (early work in progress, not yet playable)",
+    "homepage": "https://github.com/0xNikilite/oboromi",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/0xNikilite/oboromi/releases/download/v0.0.1-dynarmic/oboromi-v0.0.1-dynarmic-windows-x64.zip",
+    "hash": "d9cab3c760449323777182de81188c51ae018ea2498c07c8cd6fce78f21b0b9f",
+    "extract_dir": "oboromi-v0.0.1-dynarmic-windows",
+    "bin": "oboromi.exe",
+    "shortcuts": [
+        [
+            "oboromi.exe",
+            "oboromi"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/0xNikilite/oboromi/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/0xNikilite/oboromi/releases/download/v$version/oboromi-v$version-windows-x64.zip",
+        "extract_dir": "oboromi-v$version-windows"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "version": "1.0",
+    "description": "Be Inc. BeBox (dual PowerPC 603) emulator that runs BeOS R4.5.2",
+    "homepage": "https://bebox-emu.fr/en/index.html",
+    "license": "Freeware",
+    "notes": [
+        "A BeOS R4.5.2 PowerPC CD image (.iso/.cue) is required and not provided.",
+        "A ROM dump of a real BeBox is optional.",
+        "Machines (bebox.cfg, disk images, shared directory) are kept in Documents\\BeBox."
+    ],
+    "url": "https://bebox-emu.fr/download/BeBox-1.0-windows-setup.exe#/dl.7z",
+    "hash": "db692131ff5d67fb0a7649734a77c7be52f53b52ea7f22ea2f2fd193c093ff94",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        [
+            "bebox.exe",
+            "bebox"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bebox.exe",
+            "BeBox"
+        ]
+    ],
+    "checkver": {
+        "url": "https://bebox-emu.fr/en/download.html",
+        "regex": "BeBox-([\\d.]+)-windows-setup\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://bebox-emu.fr/download/BeBox-$version-windows-setup.exe#/dl.7z"
+    }
+}

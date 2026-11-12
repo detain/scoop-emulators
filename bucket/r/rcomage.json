@@ -1,0 +1,23 @@
+{
+    "version": "1.1.1",
+    "description": "Sony PSP/PS3 RCO resource file dumper and compiler",
+    "homepage": "https://endlessparadigm.com/forum/showthread.php?tid=19501",
+    "license": "Freeware",
+    "notes": "This tool is no longer developed.",
+    "url": "https://endlessparadigm.com/forum/attachment.php?aid=3957#/dl.7z",
+    "hash": "0fe9e291c377ac13853ac08f6fd3948c3843282c75226a42ed27ec8e1455bccf",
+    "bin": "Rcomage\\rcomage.exe",
+    "shortcuts": [
+        [
+            "rcomagegui.exe",
+            "Rcomage"
+        ]
+    ],
+    "checkver": {
+        "url": "https://endlessparadigm.com/forum/showthread.php?tid=19501",
+        "regex": "attachment\\.php\\?aid=(?<aid>\\d+)\" target=\"_blank\">rcomage-v(?<version>[\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://endlessparadigm.com/forum/attachment.php?aid=$matchAid#/dl.7z"
+    }
+}

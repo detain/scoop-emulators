@@ -1,0 +1,27 @@
+{
+    "version": "4.4.3",
+    "description": "Cycle-based Commodore 64 SID music player for real SID hardware and network SID devices",
+    "homepage": "https://www.acid64.com/",
+    "license": "Freeware",
+    "notes": "Playing without a hardware SID requires a network SID device such as SID-Device or JSidDevice.",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://www.acid64.com/releases/acid64_player_pro_v443.zip",
+    "hash": "8730c33720c2192af5d5a7226bbc722e91c04f4ef0cb7898e9207646e1da3ae4",
+    "pre_install": "Get-ChildItem \"$dir\\ACID 64 Player Pro*.exe\" | Rename-Item -NewName 'acid64.exe'",
+    "bin": "acid64.exe",
+    "shortcuts": [
+        [
+            "acid64.exe",
+            "ACID 64 Player Pro"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.acid64.com/version",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://www.acid64.com/releases/acid64_player_pro_v$cleanVersion.zip"
+    }
+}

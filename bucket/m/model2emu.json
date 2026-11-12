@@ -7,19 +7,35 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/m2emulator/emulator_screen_01.jpg"
     ],
     "version": "1.1a",
-    "description": "Model 2 Emulator is a SEGA Model 2, 2A, 2B and 2C emulator. NOTE: To bypass the 'Network Board Not Present' message you need to set the 'Link ID' to 'Single'. To do this, enter Test Mode ('F2'), then select 'Game System' ('z' moves down, 'c' moves up, '1' selects) and select 'Single' in 'Link ID'. Finally, exit out of Test Mode and everything should work.",
+    "description": "Sega Model 2, 2A, 2B and 2C arcade emulator",
     "homepage": "https://web.archive.org/web/20220424033100/http://nebula.emulatronia.com/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/model2emu/1.1a.7z",
-    "hash": "338c579a2ce9a9661cc6036999a76b19241140dadce42599a8c9e5fbe990fac3",
+    "license": "Freeware",
+    "notes": "To bypass the 'Network Board Not Present' message, enter Test Mode (F2), open 'Game System' and set 'Link ID' to 'Single'.",
+    "url": "https://web.archive.org/web/20220413142016id_/http://nebula.emulatronia.com/files/m2emulator.zip",
+    "hash": "5ffebe72d2885bde3fbfab816947475a9a2ce2795284b9d1e90344209bd4c65f",
     "bin": [
-        "EMULATOR.EXE"
+        [
+            "EMULATOR.EXE",
+            "model2emu"
+        ],
+        [
+            "emulator_multicpu.exe",
+            "model2emu-multicpu"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/model2emu/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/model2emu/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "EMULATOR.EXE",
+            "Model 2 Emulator"
+        ],
+        [
+            "emulator_multicpu.exe",
+            "Model 2 Emulator (multi-CPU)"
+        ]
+    ],
+    "persist": [
+        "EMULATOR.INI",
+        "CFG",
+        "NVDATA"
+    ]
 }

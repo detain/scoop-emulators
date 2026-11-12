@@ -1,0 +1,49 @@
+{
+    "version": "4347-g39b2d2d",
+    "description": "Controller mapping utility that exposes any input device as virtual Xbox 360, DualShock 4, DirectInput or MIDI controllers (development version)",
+    "homepage": "https://padforge.org/",
+    "license": "CC-BY-NC-SA-4.0",
+    "notes": [
+        "PadForge always runs elevated and installs its HIDMaestro virtual controller driver on first use.",
+        "Disable PadForge's built-in auto-updater and update with Scoop instead.",
+        "Tracks the rolling latest-v5-dev pre-release (version = build number + commit)."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hifihedgehog/PadForge/releases/download/latest-v5-dev/PadForge.zip",
+            "hash": "0e5d7d4a24c6ada1d3d4efb2151e112e3e7e5efda0828c1cdeaa534d81ef220a"
+        },
+        "arm64": {
+            "url": "https://github.com/hifihedgehog/PadForge/releases/download/latest-v5-dev/PadForge-arm64.zip",
+            "hash": "c40fc54be28ef4da8ae53d65ad79e095ae1eea97391cc9de9dab60352463011b"
+        }
+    },
+    "bin": [
+        [
+            "PadForge.exe",
+            "padforge-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PadForge.exe",
+            "PadForge (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/hifihedgehog/PadForge/releases/tags/latest-v5-dev",
+        "jsonpath": "$.name",
+        "regex": "r(?<build>\\d+)@(?<commit>[0-9a-f]{7})",
+        "replace": "${build}-g${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hifihedgehog/PadForge/releases/download/latest-v5-dev/PadForge.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/hifihedgehog/PadForge/releases/download/latest-v5-dev/PadForge-arm64.zip"
+            }
+        }
+    }
+}

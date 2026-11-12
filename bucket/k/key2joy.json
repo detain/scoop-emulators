@@ -1,0 +1,26 @@
+{
+    "version": "0.8.0",
+    "description": "Simulate a gamepad/joystick with keyboard, mouse or scripted (JavaScript/Lua) triggers",
+    "homepage": "https://github.com/Key2Joy/Key2Joy",
+    "license": "MIT",
+    "url": "https://github.com/Key2Joy/Key2Joy/releases/download/0.8.0/Key2Joy-0.8.0.zip",
+    "hash": "98ee10105d4a4c1491332b62ffd60632b8646e075badd7a439efdd749b9f6db8",
+    "extract_dir": "bin\\Key2Joy.Gui\\Release",
+    "bin": [
+        "Key2Joy.exe",
+        [
+            "Key2Joy.Cmd.exe",
+            "key2joy-cmd"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Key2Joy.exe",
+            "Key2Joy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Key2Joy/Key2Joy/releases/download/$version/Key2Joy-$version.zip"
+    }
+}

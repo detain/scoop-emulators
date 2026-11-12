@@ -1,0 +1,98 @@
+{
+    "version": "991-20261111-215d6ba",
+    "description": "Commodore Amiga emulator (development version)",
+    "homepage": "https://www.winuae.net",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+        "Runs in portable ini mode (winuae.ini). Place Kickstart ROMs in $persist_dir\\ROMs"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20x64.zip",
+            "hash": "22a002487116b06af6d0ae3434275efc4d28d094b581cc08e8c578f795e7292e",
+            "bin": [
+                [
+                    "winuae64.exe",
+                    "winuae-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "winuae64.exe",
+                    "WinUAE (dev)"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%2032-bit.zip",
+            "hash": "99677514f0e5710fcafe940ca320e25659d4be4f9722c57c008e510f90fa2905",
+            "bin": [
+                [
+                    "winuae.exe",
+                    "winuae-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "winuae.exe",
+                    "WinUAE (dev)"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20ARM64.zip",
+            "hash": "0a1459707694da245e4eb60489f1e5516f2258195b5a142cb323656bae468570",
+            "bin": [
+                [
+                    "winuaearm64.exe",
+                    "winuae-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "winuaearm64.exe",
+                    "WinUAE (dev)"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\winuae.ini\")) {",
+        "    New-Item \"$dir\\winuae.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "Configurations",
+        "ROMs",
+        "NVRAMs",
+        "Savestates",
+        "SaveImages",
+        "Screenshots",
+        "winuae.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/tonioni/WinUAE/actions/workflows/build-winuae-binary.yml/runs?branch=master&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20x64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%2032-bit.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20ARM64.zip"
+            }
+        }
+    }
+}

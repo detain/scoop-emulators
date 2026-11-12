@@ -7,19 +7,42 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/snes9xsx2/emulator_screen_01.jpg"
     ],
     "version": "0.2",
-    "description": "snes9x-sx2 is a Nintendo SNES and Super Famicom emulator based on snes9x",
-    "homepage": "https://consolo.is.cc/emulator/snes9xsx2",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/snes9xsx2/0.2.7z",
-    "hash": "2ef77dc1a5b541e5292180d7416c7f0d22bce5a6b79a8aa0d761b694ae934d2f",
-    "bin": [
-        "snes9x.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/snes9xsx2/",
-        "regex": "([\\d.]+)\\.7z"
+    "description": "Nintendo SNES / Super Famicom emulator, Snes9x fork with Satellaview (BS-X) support",
+    "homepage": "https://web.archive.org/web/2013/http://bsxproj.superfamicom.org/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/snes9xgit/snes9x/blob/master/LICENSE"
     },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/snes9xsx2/$version.7z"
+    "url": "https://web.archive.org/web/20130129130853id_/http://bsxproj.superfamicom.org/download/snes9x-sx2_0.2-binary.zip",
+    "hash": "d8a1cea8fad302fa6294c55deb66a3adcf962cac1079e1e2dfc69ca1acd912ce",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "snes9x-x64.exe",
+                    "snes9xsx2"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "snes9x-x64.exe",
+                    "Snes9x-SX2"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "snes9x.exe",
+                    "snes9xsx2"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "snes9x.exe",
+                    "Snes9x-SX2"
+                ]
+            ]
+        }
     }
 }

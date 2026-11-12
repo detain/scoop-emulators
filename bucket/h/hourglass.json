@@ -1,0 +1,19 @@
+{
+    "version": "90",
+    "description": "Tool-assisted speedrun (TAS) framework for Windows games",
+    "homepage": "https://github.com/TASEmulators/hourglass-win32",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/TASEmulators/hourglass-win32/releases/download/r90/hourglass-r90.zip",
+    "hash": "851781ed2cbe58aa6e2d7dfe9770e1cea61a22d21f0cbbf37b42e1ee254c529c",
+    "bin": "hourglass.exe",
+    "shortcuts": [
+        [
+            "hourglass.exe",
+            "Hourglass"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/TASEmulators/hourglass-win32/releases/download/r$version/hourglass-r$version.zip"
+    }
+}

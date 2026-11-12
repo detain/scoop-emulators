@@ -1,0 +1,30 @@
+{
+    "version": "0.1.1-rc8",
+    "description": "Nintendo Switch emulator written in Rust",
+    "homepage": "https://github.com/vricosti/ruzu-emu",
+    "license": "GPL-3.0-or-later",
+    "notes": "Portable mode is enabled. Place prod.keys/title.keys in \"$persist_dir\\user\\keys\" and install firmware from the app.",
+    "url": "https://github.com/vricosti/ruzu-emu/releases/download/v0.1.1-rc8/Ruzu-Windows-v0.1.1-rc8-x64-msvc.zip",
+    "hash": "a8d8152b38ef10752b3106d79e407945dc4473eab594c24770d11fe5fb860b21",
+    "extract_dir": "Ruzu-Windows-v0.1.1-rc8-x64-msvc",
+    "bin": [
+        "ruzu.exe",
+        "ruzu-cmd.exe"
+    ],
+    "shortcuts": [
+        [
+            "ruzu.exe",
+            "Ruzu"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/vricosti/ruzu-emu/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vricosti/ruzu-emu/releases/download/v$version/Ruzu-Windows-v$version-x64-msvc.zip",
+        "extract_dir": "Ruzu-Windows-v$version-x64-msvc"
+    }
+}

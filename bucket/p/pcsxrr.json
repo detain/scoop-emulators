@@ -6,20 +6,50 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pcsxrr/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pcsxrr/emulator_screen_01.jpg"
     ],
-    "version": "0.1.2",
-    "description": "PCSX-RR is a Sony Playstation 1 emulator based on Pcsx. A BIOS is NOT required but may make some games run better! Also, this emulator requires Plugins.",
-    "homepage": "http://code.google.com/p/pcsxrr/",
+    "version": "0.1.3f",
+    "description": "Sony PlayStation emulator with TAS tools (rerecording, Lua scripting), based on PCSX",
+    "homepage": "https://tasvideos.org/EmulatorResources/PCSX",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/pcsxrr/0.1.2.7z",
-    "hash": "85abdc9c647fd92234451b4a3b73181d6c4c4fb82638f5d7be3ad8e49c5afe39",
+    "notes": [
+        "Place the PlayStation BIOS (scph1001.bin) in $persist_dir\\bios",
+        "The v0.1.3f update (pcsx.exe + spuTAS-f.dll) is applied on top of the full v0.1.3a package."
+    ],
+    "url": [
+        "https://files.tasvideos.org/emulatordownloads/pcsxrr/pcsx-rr-v013a.7z",
+        "https://files.tasvideos.org/emulatordownloads/pcsxrr/pcsx-rr-v013f.7z"
+    ],
+    "hash": [
+        "bbe8fb688ebe907f3837aeaa71312827e6f0eb2fab2b4ebf00c72ab9dd14cefd",
+        "c54f6fafc7c8ed15881d28fd3f2564edf85c4107728fad3be68b31d8f0a106d1"
+    ],
     "bin": [
-        "pcsx.exe"
+        [
+            "pcsx.exe",
+            "pcsxrr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pcsx.exe",
+            "PCSX-RR"
+        ]
+    ],
+    "persist": [
+        "bios",
+        "memcards",
+        "sstates",
+        "snap",
+        "movies"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pcsxrr/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://tasvideos.org/EmulatorResources/PCSX",
+        "regex": "pcsxrr/pcsx-rr-v0(?<min>\\d)(?<patch>\\d)(?<rev>[a-z]?)\\.7z",
+        "replace": "0.${min}.${patch}${rev}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pcsxrr/$version.7z"
+        "url": [
+            "https://files.tasvideos.org/emulatordownloads/pcsxrr/pcsx-rr-v013a.7z",
+            "https://files.tasvideos.org/emulatordownloads/pcsxrr/pcsx-rr-v0$matchMin$matchPatch$matchRev.7z"
+        ]
     }
 }

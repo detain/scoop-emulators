@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "description": "Nintendo Game Boy (DMG) emulator written in C++ using Win32 and SDL2",
+    "homepage": "https://github.com/marethyu/noufu",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed. An optional boot ROM can be set in $persist_dir\\config.ini (BootROMPath, UseBootROM).",
+    "url": "https://github.com/marethyu/noufu/releases/download/v1.0/win-sdl2.7z",
+    "hash": "57835613295f2e7cbafbcbfea681fed094675e3ae9a1e415caf153e445897e2f",
+    "extract_dir": "sdl",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
+        "    $cfg = @('BootROMPath=', 'CPULogging=0', 'Color0=E0.F8.D0', 'Color1=88.C0.70', 'Color2=34.68.56', 'Color3=08.18.20', 'InterruptLogging=0', 'MMULogging=0', 'PreviewBackground=0', 'ScreenScaleFactor=3', 'UseBootROM=0')",
+        "    Set-Content \"$dir\\config.ini\" $cfg -Encoding Ascii",
+        "}"
+    ],
+    "bin": "noufu.exe",
+    "shortcuts": [
+        [
+            "noufu.exe",
+            "Noufu"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/marethyu/noufu/releases/download/v$version/win-sdl2.7z"
+    }
+}

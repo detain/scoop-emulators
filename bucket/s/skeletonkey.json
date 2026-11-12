@@ -1,0 +1,26 @@
+{
+    "version": "0.99.81.08",
+    "description": "Unified interface for ROMs, emulators and frontends",
+    "homepage": "https://romjacket.github.io/skeletonkey/index.html",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "skeletonKey stores its settings and downloaded data in its own directory ($dir); they are not kept across reinstalls."
+    ],
+    "url": "https://github.com/romjacket/skeletonKey/releases/download/portable/skeletonKey.zip",
+    "hash": "62b389ba9a13cde035854a3826f87d1ef48b35eed797f53d2a241c7ec18bb2b2",
+    "bin": "skeletonkey.exe",
+    "shortcuts": [
+        [
+            "skeletonkey.exe",
+            "skeletonKey"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/romjacket/skeletonKey/master/ReadMe.md",
+        "regex": "skeletonKey ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/romjacket/skeletonKey/releases/download/portable/skeletonKey.zip"
+    }
+}

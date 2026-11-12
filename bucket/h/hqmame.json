@@ -1,0 +1,37 @@
+{
+    "version": "2.31",
+    "description": "Arcade emulator: MAME build with xBRZ and HQx scaling filters",
+    "homepage": "https://sourceforge.net/projects/xbrz/files/HqMAME/",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed. HqMAME 2.31 is based on MAME 0.170.",
+    "url": "https://downloads.sourceforge.net/project/xbrz/HqMAME/HqMAME_2.31_mame0170_Win32.zip",
+    "hash": "sha1:463082074a76af07638650d9f422b8be4ce9b0d0",
+    "bin": [
+        [
+            "HqMame.exe",
+            "hqmame"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HqMame.exe",
+            "HqMAME"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "inp",
+        "diff"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/xbrz/rss?path=/HqMAME",
+        "regex": "HqMAME_(?<version>[\\d.]+)_mame(?<mame>\\d+)_Win32\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/xbrz/HqMAME/HqMAME_$version_mame$matchMame_Win32.zip"
+    }
+}

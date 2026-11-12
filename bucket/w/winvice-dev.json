@@ -1,0 +1,95 @@
+{
+    "version": "3.10-r46397",
+    "description": "Commodore 8-bit emulator collection (C64, C64DTV, C128, VIC-20, PET, Plus/4, CBM-II), SDL2 SVN snapshot (development version)",
+    "homepage": "https://vice-emu.sourceforge.io/",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/VICE-Team/svn-mirror/releases/download/r46397/SDL2VICE-3.10-win64-r46397.7z",
+    "hash": "66e2fdb19501a17a23d710f7ab62c2fe93e658917270a94935c3547b6aebe5ec",
+    "extract_dir": "SDL2VICE-3.10-win64-r46397",
+    "bin": [
+        [
+            "x64sc.exe",
+            "x64sc-sdl-dev"
+        ],
+        [
+            "x128.exe",
+            "x128-sdl-dev"
+        ],
+        [
+            "x64dtv.exe",
+            "x64dtv-sdl-dev"
+        ],
+        [
+            "xscpu64.exe",
+            "xscpu64-sdl-dev"
+        ],
+        [
+            "xvic.exe",
+            "xvic-sdl-dev"
+        ],
+        [
+            "xpet.exe",
+            "xpet-sdl-dev"
+        ],
+        [
+            "xplus4.exe",
+            "xplus4-sdl-dev"
+        ],
+        [
+            "xcbm2.exe",
+            "xcbm2-sdl-dev"
+        ],
+        [
+            "xcbm5x0.exe",
+            "xcbm5x0-sdl-dev"
+        ],
+        [
+            "vsid.exe",
+            "vsid-sdl-dev"
+        ],
+        [
+            "c1541.exe",
+            "c1541-sdl-dev"
+        ],
+        [
+            "cartconv.exe",
+            "cartconv-sdl-dev"
+        ],
+        [
+            "petcat.exe",
+            "petcat-sdl-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "x64sc.exe",
+            "VICE C64 (SDL2) (dev)"
+        ],
+        [
+            "x128.exe",
+            "VICE C128 (SDL2) (dev)"
+        ],
+        [
+            "xvic.exe",
+            "VICE VIC-20 (SDL2) (dev)"
+        ],
+        [
+            "xplus4.exe",
+            "VICE Plus4 (SDL2) (dev)"
+        ],
+        [
+            "xpet.exe",
+            "VICE PET (SDL2) (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/VICE-Team/svn-mirror/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/r(?<rev>\\d+)/SDL2VICE-(?<ver>[\\d.]+)-win64-r\\d+\\.7z",
+        "replace": "${ver}-r${rev}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/VICE-Team/svn-mirror/releases/download/r$matchRev/SDL2VICE-$matchVer-win64-r$matchRev.7z",
+        "extract_dir": "SDL2VICE-$matchVer-win64-r$matchRev"
+    }
+}

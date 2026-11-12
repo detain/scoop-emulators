@@ -1,0 +1,22 @@
+{
+    "version": "3.2.35",
+    "description": "Launcher and game database frontend for the FS-UAE Commodore Amiga emulator",
+    "homepage": "https://github.com/FrodeSolheim/fs-uae-launcher",
+    "license": "GPL-2.0-or-later",
+    "notes": "FS-UAE Launcher is a frontend; the FS-UAE emulator itself must be installed separately.",
+    "url": "https://github.com/FrodeSolheim/fs-uae-launcher/releases/download/v3.2.35/FS-UAE-Launcher_3.2.35_Windows_x86-64.zip",
+    "hash": "662e0178d0a3cab31eb2a06db66a1ff1f0176a3f6b3c5c224e71c477d609dfa4",
+    "extract_dir": "FS-UAE-Launcher",
+    "bin": "Windows\\x86-64\\fs-uae-launcher.exe",
+    "shortcuts": [
+        [
+            "Windows\\x86-64\\fs-uae-launcher.exe",
+            "FS-UAE Launcher"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/FrodeSolheim/fs-uae-launcher/releases/download/v$version/FS-UAE-Launcher_$version_Windows_x86-64.zip",
+        "extract_dir": "FS-UAE-Launcher"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "1.21-alpha-13",
+    "description": "Japanese-language launcher front end for the Mednafen multi-system emulator",
+    "homepage": "http://mednafenlauncher.web.fc2.com/",
+    "license": "Freeware",
+    "notes": [
+        "This launcher is no longer developed. Its interface is in Japanese.",
+        "Mednafen is required and not included. Install it with: scoop install mednafen"
+    ],
+    "suggest": {
+        "Mednafen": "mednafen"
+    },
+    "url": "http://mednafenlauncher.web.fc2.com/MednafenLauncher-1.21-alpha-13.zip",
+    "hash": "f6306b4addcbfb65649093772535759a4b59780a40b76addd56588fcde768bba",
+    "bin": [
+        [
+            "ml.exe",
+            "mednafen-launcher"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ml.exe",
+            "Mednafen Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "http://mednafenlauncher.web.fc2.com/page02.htm",
+        "regex": "MednafenLauncher-(1\\.[\\d.]+-alpha-\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://mednafenlauncher.web.fc2.com/MednafenLauncher-$version.zip"
+    }
+}

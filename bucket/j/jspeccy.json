@@ -1,0 +1,17 @@
+{
+    "version": "1.0.2",
+    "description": "Sinclair ZX Spectrum 16K/48K/128K/+2/+2A emulator written in Java",
+    "homepage": "https://github.com/jsanchezv/JSpeccy",
+    "license": "GPL-2.0-only",
+    "notes": "Requires Java 21 or newer. Settings are stored in JSpeccy.xml in your user profile.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://github.com/jsanchezv/JSpeccy/releases/download/v1.0.2/jspeccy.jar",
+    "hash": "953499953a133ab3f9827fb8af938dc26e0c6e107d94f8ea1f181111181627df",
+    "bin": "jspeccy.jar",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jsanchezv/JSpeccy/releases/download/v$version/jspeccy.jar"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "version": "0.9",
+    "description": "Discrete Integrated Circuit Emulator for CPU-less arcade games like Pong and Breakout",
+    "homepage": "https://sourceforge.net/projects/dice/",
+    "license": "GPL-3.0-or-later",
+    "notes": "Place ROM files in $persist_dir\\roms",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/dice/DICE/DICE%200.9/dice.0.9.win.x64.zip",
+            "hash": "sha1:d8a7f319073204c02a241591b54844b3b205d227"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/dice/DICE/DICE%200.9/dice.0.9.win.x86.zip",
+            "hash": "sha1:eeab55de793c3831d99985e0141ddd218b81269d"
+        }
+    },
+    "bin": "dice.exe",
+    "shortcuts": [
+        [
+            "dice.exe",
+            "DICE"
+        ]
+    ],
+    "persist": "roms",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/dice/rss?path=/DICE",
+        "regex": "dice\\.([\\d.]+)\\.win\\.x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/dice/DICE/DICE%20$version/dice.$version.win.x64.zip"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/dice/DICE/DICE%20$version/dice.$version.win.x86.zip"
+            }
+        }
+    }
+}

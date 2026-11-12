@@ -1,0 +1,34 @@
+{
+    "version": "2.04b",
+    "description": "Accuracy-focused Amstrad CPC emulator",
+    "homepage": "https://www.amspirit.fr/",
+    "license": "CC-BY-NC-ND-4.0",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/AMSpiriT-Emulator/amspirit-releases/releases/download/2.04/CPC_AMSpiriT_v2.04b_Win_x64.zip",
+    "hash": "2adfb308456632794acc898d54b6b6900c6d106c156d4de95c6a6274aaba17f4",
+    "extract_dir": "CPC_AMSpiriT_v2.04b_Win_x64",
+    "pre_install": "Get-ChildItem \"$dir\\Amspirit v*.exe\" | Rename-Item -NewName 'AMSpiriT.exe'",
+    "bin": [
+        [
+            "AMSpiriT.exe",
+            "amspirit"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "AMSpiriT.exe",
+            "AMSpiriT"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/AMSpiriT-Emulator/amspirit-releases/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/(?<tag>[\\d.]+)/CPC_AMSpiriT_v(?<version>[\\d.]+[a-z]?)_Win_x64\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AMSpiriT-Emulator/amspirit-releases/releases/download/$matchTag/CPC_AMSpiriT_v$version_Win_x64.zip",
+        "extract_dir": "CPC_AMSpiriT_v$version_Win_x64"
+    }
+}

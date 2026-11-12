@@ -6,20 +6,48 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/ep128emu/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ep128emu/emulator_screen_01.jpg"
     ],
-    "version": "2.0.10-x64",
-    "description": "ep128emu is a portable emulator of the Enterprise 64/128, ZX Spectrum 48/128, and Amstrad CPC 464/664/6128 computers",
-    "homepage": "https://sourceforge.net/projects/ep128emu/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/ep128emu/2.0.10-x64.7z",
-    "hash": "a142cf1a641bc89862f86b28b11adf22b5250998bd80a9501bcdf4d0ad3a952a",
-    "bin": [
-        "ep128emu.exe"
-    ],
-    "checkver": {
-        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu",
-        "regex": "ep128emu-(\\d+\\.\\d+\\.\\d+)-win64\\.zip"
+    "version": "2.0.11.2",
+    "description": "Enterprise 64/128, Videoton TVC, ZX Spectrum 48/128 and Amstrad CPC 464/664/6128 emulator",
+    "homepage": "https://github.com/istvan-v/ep128emu",
+    "license": "GPL-2.0-or-later",
+    "notes": "Run 'makecfg' once to create the configuration files and download the ROM package.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/istvan-v/ep128emu/releases/download/2.0.11.2/ep128emu-2.0.11.2-x64.exe#/dl.7z",
+            "hash": "eeabf2e27b71a83aed7361508e2d7729830320f17ca5dc2ca25585c398dbe072"
+        },
+        "32bit": {
+            "url": "https://github.com/istvan-v/ep128emu/releases/download/2.0.11.2/ep128emu-2.0.11.2-x86.exe#/dl.7z",
+            "hash": "3acae767b93549f87178d714756525ba39e41c9157e02455c132d61e88fd6b6e"
+        }
     },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        "ep128emu.exe",
+        "makecfg.exe",
+        "tapeedit.exe",
+        "epcompress.exe",
+        "epimgconv.exe"
+    ],
+    "shortcuts": [
+        [
+            "ep128emu.exe",
+            "ep128emu"
+        ],
+        [
+            "makecfg.exe",
+            "ep128emu Configuration Installer"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/ep128emu/rss?path=/ep128emu"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/istvan-v/ep128emu/releases/download/$version/ep128emu-$version-x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/istvan-v/ep128emu/releases/download/$version/ep128emu-$version-x86.exe#/dl.7z"
+            }
+        }
     }
 }

@@ -7,25 +7,31 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/neocdsdl/emulator_screen_01.jpg"
     ],
     "version": "0.3.1",
-    "description": "NeoCD/SDL is a port of the NeoCD emulator to the multi-platform SDL library.",
-    "homepage": "http://pacifi3d.retrogames.com/neocdsdl/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/neocdsdl/0.3.1.7z",
-    "hash": "63aac0bcbe4a4b177e246deace0278166df2a15546af5d14499dce0d2bc056f9",
+    "description": "SNK Neo Geo CD emulator (SDL port of NeoCD)",
+    "homepage": "https://pacifi3d.retrogames.com/neocdsdl/",
+    "license": "Freeware",
+    "notes": "Place the Neo Geo CD BIOS as 'neocd.bin' in $dir",
+    "url": "https://pacifi3d.retrogames.com/neocdsdl/neocd031win32.zip",
+    "hash": "52dc65a1c58ebb22f75fd6b1cb8c851d3ea5ba35c7ec6e3c82e424196627718c",
+    "extract_dir": "neocd031",
     "bin": [
-        "neocdsdl.exe"
+        [
+            "neocd.exe",
+            "neocdsdl"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/neocdsdl/0.3.1.7z",
-            "hash": "63aac0bcbe4a4b177e246deace0278166df2a15546af5d14499dce0d2bc056f9"
-        }
+    "shortcuts": [
+        [
+            "neocd.exe",
+            "NeoCD/SDL"
+        ]
+    ],
+    "checkver": {
+        "url": "https://pacifi3d.retrogames.com/neocdsdl/",
+        "regex": "NeoCD/SDL ([\\d.]+) for Windows"
     },
     "autoupdate": {
-        "url": "http://pacifi3d.retrogames.com/neocdsdl/"
-    },
-    "checkver": {
-        "url": "http://pacifi3d.retrogames.com/neocdsdl/",
-        "regex": "href=\"neocdsdl-(.*?)\\.zip\""
+        "url": "https://pacifi3d.retrogames.com/neocdsdl/neocd$cleanVersionwin32.zip",
+        "extract_dir": "neocd$cleanVersion"
     }
 }

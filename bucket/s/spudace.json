@@ -6,20 +6,24 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/spudace/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/spudace/emulator_screen_01.jpg"
     ],
-    "version": "0.323",
-    "description": "SpudACE is a Jupiter Cantab Jupiter Ace emulator.",
-    "homepage": "http://www.jupiter-ace.co.uk/emulators_win.html",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/spudace/0.323.7z",
-    "hash": "4df727be0a3a42f82abc80e04173641aebc12f9ed6357be4288a4fe3b354827b",
-    "bin": [
-        "SpudACE.exe"
+    "version": "1.06a",
+    "description": "Jupiter Cantab Jupiter Ace emulator",
+    "homepage": "https://aquarius.je/emulators/",
+    "license": "Freeware",
+    "url": "https://aquarius.je/wp-content/uploads/SpudACE.zip",
+    "hash": "29bdc38aae16b259da5b3ab8bfcd046e028fafb31cbf383a8a68daed8f06b200",
+    "bin": "SpudACE.exe",
+    "shortcuts": [
+        [
+            "SpudACE.exe",
+            "SpudACE"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/spudace/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://aquarius.je/emulators/",
+        "regex": "SpudACE v([\\d.]+[a-z]?)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/spudace/$version.7z"
+        "url": "https://aquarius.je/wp-content/uploads/SpudACE.zip"
     }
 }

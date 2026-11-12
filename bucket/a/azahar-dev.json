@@ -1,0 +1,50 @@
+{
+    "version": "2127.0-rc2",
+    "description": "Nintendo 3DS emulator based on Citra (development version)",
+    "homepage": "https://azahar-emu.org/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Portable mode is enabled: user data is kept in $persist_dir\\user",
+        "Tracks the newest GitHub release including alpha/RC pre-releases."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/azahar-emu/azahar/releases/download/2127.0-rc2/azahar-windows-msvc-2127.0-rc2.zip",
+            "hash": "89017ba81779458f2e438190eba0f75ab2ffd5df0399ab07922cd632a6cc525e",
+            "extract_dir": "azahar-windows-msvc-2127.0-rc2"
+        }
+    },
+    "bin": [
+        [
+            "azahar.exe",
+            "azahar-dev"
+        ],
+        [
+            "azahar-room.exe",
+            "azahar-room-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "azahar.exe",
+            "Azahar (dev)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/azahar-emu/azahar/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/azahar-emu/azahar/releases/download/$version/azahar-windows-msvc-$version.zip",
+                "extract_dir": "azahar-windows-msvc-$version"
+            }
+        }
+    }
+}

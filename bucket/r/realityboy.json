@@ -7,19 +7,33 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/realityboy/emulator_screen_01.jpg"
     ],
     "version": "0.84.0",
-    "description": "Reality Boy is a Nintendo Virtual Boy emulator.",
-    "homepage": "http://goliathindustries.com/vb",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/realityboy/0.84.0.7z",
-    "hash": "7e667147d6c6094f7bf31fc934d873dabce91a892d42ffd7e72db82f37cd8243",
+    "description": "Nintendo Virtual Boy emulator",
+    "homepage": "http://goliathindustries.com/vb/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "http://goliathindustries.com/vb/"
+    },
+    "url": "http://goliathindustries.com/vb/download/emu/rboy_084_win.zip",
+    "hash": "f47fc9d5f9f98fcd10c8168d333f00ea9370e11e6bf7b44d35411668a4b62ac1",
     "bin": [
-        "RealityBoy.exe"
+        [
+            "reality_boy.exe",
+            "realityboy"
+        ]
     ],
+    "shortcuts": [
+        [
+            "rboy_front.exe",
+            "Reality Boy"
+        ]
+    ],
+    "persist": "reality_boy.ini",
     "checkver": {
-        "url": "http://goliathindustries.com/vb/",
-        "regex": "Download Reality Boy v(\\d+\\.\\d+\\.\\d+)"
+        "url": "http://goliathindustries.com/vb/VBDown.html",
+        "regex": "rboy_(?<maj>\\d)(?<min>\\d+)_win\\.zip",
+        "replace": "${maj}.${min}.0"
     },
     "autoupdate": {
-        "url": "http://goliathindustries.com/vb/"
+        "url": "http://goliathindustries.com/vb/download/emu/rboy_$matchMaj$matchMin_win.zip"
     }
 }

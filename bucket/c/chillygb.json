@@ -1,0 +1,21 @@
+{
+    "version": "0.3.2",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in C",
+    "homepage": "https://chillygb.arci.me/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/ChillyGB/ChillyGB/releases/download/v0.3.2/ChillyGB-v0.3.2-win-x64.zip",
+    "hash": "701f5cbeb49a7c16a273ff6278ef9faa734d2609f313b0e56456f5de4845d982",
+    "bin": "ChillyGB.exe",
+    "shortcuts": [
+        [
+            "ChillyGB.exe",
+            "ChillyGB"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ChillyGB/ChillyGB"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ChillyGB/ChillyGB/releases/download/v$version/ChillyGB-v$version-win-x64.zip"
+    }
+}

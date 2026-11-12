@@ -1,0 +1,56 @@
+{
+    "version": "2346-20261013-ca1de89",
+    "description": "High-level emulator for early iPhone OS apps and games, written in Rust (development version)",
+    "homepage": "https://touchhle.org/",
+    "license": "MPL-2.0",
+    "notes": [
+        "Put your .ipa files and .app bundles in $persist_dir\\touchHLE_apps",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after ~90 days without new commits."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/touchHLE/touchHLE/workflows/touchHLE_release/trunk/touchHLE_Windows_x86_64.zip",
+            "hash": "6a98c99fa8eb58c70071a1835a6eb44c9963e4d36224e7b010e820a6b0e195e8"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\touchHLE_options.txt\")) {",
+        "    New-Item \"$dir\\touchHLE_options.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "touchHLE.exe",
+            "touchhle-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "touchHLE.exe",
+            "touchHLE (dev)"
+        ]
+    ],
+    "persist": [
+        "touchHLE_apps",
+        "touchHLE_sandbox",
+        "touchHLE_options.txt"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/touchHLE/touchHLE/actions/workflows/touchHLE_release.yml/runs?branch=trunk&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/touchHLE/touchHLE/workflows/touchHLE_release/trunk/touchHLE_Windows_x86_64.zip"
+            }
+        }
+    }
+}

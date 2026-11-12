@@ -7,19 +7,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/qlayw/emulator_screen_01.jpg"
     ],
     "version": "0.90",
-    "description": "QLAY is a Sinclair QL emulator.",
-    "homepage": "http://www.inter.nl.net/hcc/A.Jaw.Venema",
+    "description": "Sinclair QL emulator (Windows 95 version of QLAY)",
+    "homepage": "https://web.archive.org/web/2000/http://web.inter.nl.net/hcc/A.Jaw.Venema/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/qlayw/0.90.7z",
-    "hash": "bdf4ced45ea715c2f97eb903042de6b6f25b82d177d2c648db72c522393be12b",
-    "bin": [
-        "qlayw.exe"
+    "url": "https://web.archive.org/web/20000818061001id_/http://web.inter.nl.net:80/hcc/A.Jaw.Venema/qlayw090.zip",
+    "hash": "bc66cdcd7ebcee1b79bdd61ea7b7f878d449dcb67022eb8663aaeb6a7bc06a4e",
+    "bin": "qlayw.exe",
+    "shortcuts": [
+        [
+            "qlayw.exe",
+            "QLAY"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/qlayw/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/qlayw/$version.7z"
-    }
+    "persist": "qlay.rc"
 }

@@ -1,0 +1,31 @@
+{
+    "version": "2.4",
+    "description": "Frontend for MAME and console emulators (SNES, Mega Drive, Game Boy, ColecoVision)",
+    "homepage": "https://sourceforge.net/projects/darkfrontend/",
+    "license": "Unknown",
+    "notes": "This frontend is no longer developed.",
+    "url": "https://downloads.sourceforge.net/project/darkfrontend/V2.4_win32_executable/DarkFrontEnd_V2_4_win_7_8_10.zip",
+    "hash": "sha1:c7966c414a87c26526e8232fe4cb40d1ecf30526",
+    "extract_dir": "DarkFrontEnd_V2_4_win_7_8_10",
+    "bin": [
+        [
+            "DarkFrontEnd.exe",
+            "darkfrontend"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "DarkFrontEnd.exe",
+            "DarkFrontEnd"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/darkfrontend/rss",
+        "regex": "DarkFrontEnd_V(?<major>\\d+)_(?<minor>\\d+)_win_7_8_10\\.zip",
+        "replace": "${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/darkfrontend/V$version_win32_executable/DarkFrontEnd_V$underscoreVersion_win_7_8_10.zip",
+        "extract_dir": "DarkFrontEnd_V$underscoreVersion_win_7_8_10"
+    }
+}

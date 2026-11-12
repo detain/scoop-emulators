@@ -1,0 +1,41 @@
+{
+    "version": "1.0.1",
+    "description": "Customizable retro gaming library frontend built on the Godot engine",
+    "homepage": "https://retrohub-org.github.io/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/retrohub-org/retrohub/releases/download/v1.0.1/RetroHub-v1.0.1-Windows-64.zip",
+            "hash": "a036b9c3b280a0b7d3895d9ecf3dd872efd44a7ee7714856db04c517c914c0cd"
+        },
+        "32bit": {
+            "url": "https://github.com/retrohub-org/retrohub/releases/download/v1.0.1/RetroHub-v1.0.1-Windows-32.zip",
+            "hash": "596a4da99d0d7197f4a6803672536c2f88159f1a7bfc4ead03900216b7f298fc"
+        }
+    },
+    "bin": [
+        [
+            "RetroHub.exe",
+            "retrohub"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RetroHub.exe",
+            "RetroHub"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/retrohub-org/retrohub"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/retrohub-org/retrohub/releases/download/v$version/RetroHub-v$version-Windows-64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/retrohub-org/retrohub/releases/download/v$version/RetroHub-v$version-Windows-32.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "version": "0.96",
+    "description": "Sinclair ZX Spectrum emulator based on the ZXMAK2 engine",
+    "homepage": "https://github.com/kozynax/kozynax",
+    "license": "GPL-2.0-or-later",
+    "url": [
+        "https://github.com/kozynax/kozynax/releases/download/v0.96/Kozynax-0.96-win-x86-winforms.zip",
+        "https://github.com/kozynax/kozynax/releases/download/v0.96/Kozynax-0.96-win-x64-sdl.zip"
+    ],
+    "hash": [
+        "b1bbba61bce894e2a343d11620e5f7661c416e937c61a933c5e89d412416f81b",
+        "2fda52600e7152df66481ae04eb0211aeace995170ec2a98ab8bd889349c1981"
+    ],
+    "bin": [
+        "Kozynax.exe",
+        [
+            "Kozynax.Sdl.exe",
+            "kozynax-sdl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Kozynax.exe",
+            "Kozynax"
+        ],
+        [
+            "Kozynax.Sdl.exe",
+            "Kozynax (SDL)"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://github.com/kozynax/kozynax/releases/download/v$version/Kozynax-$version-win-x86-winforms.zip",
+            "https://github.com/kozynax/kozynax/releases/download/v$version/Kozynax-$version-win-x64-sdl.zip"
+        ]
+    }
+}

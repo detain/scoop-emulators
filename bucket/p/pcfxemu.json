@@ -1,0 +1,56 @@
+{
+    "version": "2.0",
+    "description": "NEC PC-FX and PC-FXGA emulator (Mednafen fork)",
+    "homepage": "https://github.com/gameblabla/pcfxemu",
+    "license": "GPL-2.0-or-later",
+    "notes": "PCFXemu requires a PC-FX BIOS dump (not included).",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gameblabla/pcfxemu/releases/download/2.0/PCFXemu-v2-Win64.zip",
+            "hash": "7b01ecaf25f604b524baee117754f860981c37ee7e07fe615db946a0681563e8",
+            "bin": [
+                [
+                    "pcfx.exe",
+                    "pcfxemu"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "pcfx.exe",
+                    "PCFXemu"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/gameblabla/pcfxemu/releases/download/2.0/PCFXemu-v2-WinXP.zip",
+            "hash": "bd1f20235a0626d44ea04fa1bd7a8e7c83a60206795f4126d149444e7c459a79",
+            "bin": [
+                [
+                    "pcfx-winxp.exe",
+                    "pcfxemu"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "pcfx-winxp.exe",
+                    "PCFXemu"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/gameblabla/pcfxemu/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<version>[\\d.]+)/PCFXemu-v(?<file>[\\d.]+)-Win64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gameblabla/pcfxemu/releases/download/$version/PCFXemu-v$matchFile-Win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/gameblabla/pcfxemu/releases/download/$version/PCFXemu-v$matchFile-WinXP.zip"
+            }
+        }
+    }
+}

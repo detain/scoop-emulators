@@ -1,0 +1,34 @@
+{
+    "version": "2025.1",
+    "description": "Soviet Elektronika BK-0010/BK-0011 computer emulator",
+    "homepage": "https://github.com/nzeemin/bkbtl",
+    "license": "LGPL-3.0-only",
+    "url": "https://github.com/nzeemin/bkbtl/releases/download/release-2025.1/bkbtl-406.zip",
+    "hash": "3d895e86414789f6b8afe6dc11fc3a0ce7dcd32ff0da0af6e96ee8c9e6d183ae",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\BKBTL.ini\")) {",
+        "    New-Item \"$dir\\BKBTL.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "BKBTL.exe",
+            "bkbtl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "BKBTL.exe",
+            "BKBTL"
+        ]
+    ],
+    "persist": "BKBTL.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/nzeemin/bkbtl/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/release-(?<version>[\\d.]+)/bkbtl-(?<build>\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nzeemin/bkbtl/releases/download/release-$version/bkbtl-$matchBuild.zip"
+    }
+}

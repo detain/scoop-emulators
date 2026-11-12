@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0-beta.12",
+    "description": "Nintendo Virtual Boy emulator that plays games in color, with optional PC VR stereoscopic 3D",
+    "homepage": "https://github.com/yuk27/VBoyColor",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yuk27/VBoyColor/releases/download/v1.0.0-beta.12/VBoyColor-v1.0.0-beta.12-windows-x64.zip",
+            "hash": "c4084e7a7f391496700ea6bf6e1fe288d5db1587d6351dfbee1bff5b9122a65f",
+            "extract_dir": "VBoyColor-v1.0.0-beta.12-windows-x64"
+        }
+    },
+    "bin": [
+        [
+            "VBoyColor.exe",
+            "vboycolor"
+        ],
+        [
+            "VBoyColorVR.exe",
+            "vboycolor-vr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VBoyColor.exe",
+            "VBoy Color"
+        ],
+        [
+            "VBoyColorVR.exe",
+            "VBoy Color VR"
+        ]
+    ],
+    "persist": "roms",
+    "checkver": {
+        "github": "https://api.github.com/repos/yuk27/VBoyColor/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yuk27/VBoyColor/releases/download/v$version/VBoyColor-v$version-windows-x64.zip",
+                "extract_dir": "VBoyColor-v$version-windows-x64"
+            }
+        }
+    }
+}

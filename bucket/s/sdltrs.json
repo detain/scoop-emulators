@@ -5,18 +5,58 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sdltrs/emulator_screen_01.jpg"
     ],
-    "version": "1.1.0",
-    "description": "TRS-80 Model I/III/4/4P emulator for Windows and Linux",
-    "homepage": "http://sdltrs.sourceforge.net/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/sdltrs/files/Release-1.1.0/sdltrs_win32_1_1_0.zip/download",
-    "hash": "d779e956080af99041b1cdedb3e169fc4df9551e63d52957cc110a0ef09014ed",
-    "bin": "sdltrs",
+    "version": "1.2.35",
+    "description": "Tandy TRS-80 Model I/III/4/4P emulator",
+    "homepage": "https://gitlab.com/jengun/sdltrs",
+    "license": "BSD-2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://gitlab.com/jengun/sdltrs/-/raw/1.2.35/bin/sdl2trs64.exe#/sdltrs.exe",
+                "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10-win32-x64.zip"
+            ],
+            "hash": [
+                "e38cd061b37040bf9aa785e385f6447e1530776c741a3681a35ea69f39137fee",
+                "6cf9706eefd0a4a06dc764007934d428afaf029fabdd408a9e646048c91e18fb"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://gitlab.com/jengun/sdltrs/-/raw/1.2.35/bin/sdl2trs.exe#/sdltrs.exe",
+                "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10-win32-x86.zip"
+            ],
+            "hash": [
+                "3e012a4bf6ff39305df5997e3284f7de5c31d73d915de5321b570e2287fa389d",
+                "d72b0728a315ab25ad43123b89baa2ab6fd7c335a43f737213685d29fd2aa4fe"
+            ]
+        }
+    },
+    "bin": "sdltrs.exe",
+    "shortcuts": [
+        [
+            "sdltrs.exe",
+            "SDLTRS"
+        ]
+    ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/sdltrs/files/",
-        "regex": "Release-([0-9\\.]+)"
+        "url": "https://gitlab.com/api/v4/projects/12284576/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/sdltrs/files/Release-$version/sdltrs_win32_$underscoreVersion.zip/download"
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://gitlab.com/jengun/sdltrs/-/raw/$version/bin/sdl2trs64.exe#/sdltrs.exe",
+                    "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10-win32-x64.zip"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://gitlab.com/jengun/sdltrs/-/raw/$version/bin/sdl2trs.exe#/sdltrs.exe",
+                    "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10-win32-x86.zip"
+                ]
+            }
+        }
     }
 }

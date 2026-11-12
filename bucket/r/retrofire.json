@@ -1,0 +1,39 @@
+{
+    "version": "275",
+    "description": "Fast MAME front-end and launcher (Japanese)",
+    "homepage": "https://e2j.net/",
+    "license": "GPL-2.0-only",
+    "notes": "Settings are kept in $dir\\retrofire.ini and copied to $persist_dir on update/uninstall.",
+    "url": "https://e2j.net/files/retrofire_.zip",
+    "hash": "f15b4fc18ab21b414547018733a127ddd6367e46f020af10178803e68748bcd9",
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\retrofire.ini\") {",
+        "    Copy-Item \"$persist_dir\\retrofire.ini\" \"$dir\\retrofire.ini\" -Force",
+        "}"
+    ],
+    "bin": [
+        [
+            "Retrofire.exe",
+            "retrofire"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Retrofire.exe",
+            "Retrofire"
+        ]
+    ],
+    "pre_uninstall": [
+        "if (Test-Path \"$dir\\retrofire.ini\") {",
+        "    New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
+        "    Copy-Item \"$dir\\retrofire.ini\" \"$persist_dir\\retrofire.ini\" -Force",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://e2j.net/downloads/",
+        "regex": "Retrofire \\(Build (\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://e2j.net/files/retrofire_.zip"
+    }
+}

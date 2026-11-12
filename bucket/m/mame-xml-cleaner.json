@@ -1,0 +1,42 @@
+{
+    "version": "2027.2.00",
+    "description": "Tool to filter and clean MAME and FBNeo XML DAT files for ClrMamePro",
+    "homepage": "https://www.systempixel.fr/mame-xml-cleaner/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.systempixel.fr/mame-xml-cleaner/"
+    },
+    "suggest": {
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
+    },
+    "url": "https://www.systempixel.fr/download/mxc2027_200.exe#/dl.7z",
+    "hash": "0407df5da2632e4622dbe0a5525ed2cd6159bfad1883e01f95c32e8d54b6ce95",
+    "bin": [
+        [
+            "mxc.exe",
+            "mame-xml-cleaner"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mxc.exe",
+            "Mame XML Cleaner"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "script": [
+            "$req = [System.Net.WebRequest]::Create('https://www.systempixel.fr/download/mxc-last.php')",
+            "$req.AllowAutoRedirect = $false",
+            "$req.UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'",
+            "$resp = $req.GetResponse()",
+            "Write-Output $resp.Headers['Location']",
+            "$resp.Close()"
+        ],
+        "regex": "mxc(?<year>\\d{4})_(?<major>\\d)(?<minor>\\d+)\\.exe",
+        "replace": "${year}.${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://www.systempixel.fr/download/mxc$matchYear_$matchMajor$matchMinor.exe#/dl.7z"
+    }
+}

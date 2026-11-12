@@ -1,0 +1,40 @@
+{
+    "version": "20261106-g98d187f",
+    "description": "Glide64 video plugin for the Mupen64Plus Nintendo 64 emulator (development version)",
+    "homepage": "https://github.com/mupen64plus/mupen64plus-video-glide64",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is a video plugin, not a standalone emulator.",
+        "Copy the DLL files and Glide64.ini from $dir into your Mupen64Plus folder, or pass --gfx mupen64plus-video-glide64 to mupen64plus-ui-console."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-video-glide64/releases/download/nightly-build/mupen64plus-video-glide64-msys2-mingw64-x64-g98d187f.zip",
+            "hash": "ff6a7252ed8d8191d69da39e1f1e1a5e38b73462580a7d182928fd08f53e282a"
+        },
+        "32bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-video-glide64/releases/download/nightly-build/mupen64plus-video-glide64-msys2-mingw32-x86-g98d187f.zip",
+            "hash": "109cda53432e90c374814abe4429807221d2bcbb537e0e2e44550c76d4f5392a"
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/mupen64plus/mupen64plus-video-glide64/releases/tags/nightly-build",
+        "script": [
+            "$r = $page | ConvertFrom-Json",
+            "$a = $r.assets | Where-Object { $_.name -match '-msys2-mingw64-x64-g[0-9a-f]+\\.zip$' } | Select-Object -First 1",
+            "Write-Output \"$(([datetime]$a.updated_at).ToUniversalTime().ToString('yyyyMMdd')) $($a.name)\""
+        ],
+        "regex": "^(?<date>\\d{8}) .+-(?<commit>g[0-9a-f]+)\\.zip$",
+        "replace": "${date}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-video-glide64/releases/download/nightly-build/mupen64plus-video-glide64-msys2-mingw64-x64-$matchCommit.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-video-glide64/releases/download/nightly-build/mupen64plus-video-glide64-msys2-mingw32-x86-$matchCommit.zip"
+            }
+        }
+    }
+}

@@ -7,17 +7,25 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/zboy/emulator_screen_01.jpg"
     ],
     "version": "0.71",
-    "description": "ZBoy is a Game Boy emulator for Windows and Linux.",
-    "homepage": "http://zboy.sourceforge.net/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/zboy/files/zBoy%20v0.71/zboy-0.71-dos.zip/download",
-    "hash": "cb295a52cbc630d3238e4fc9d74dee866ddb170c5700d5b27a9a7d315f3cf8cf",
+    "description": "Nintendo Game Boy emulator",
+    "homepage": "https://zboy.sourceforge.net/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://downloads.sourceforge.net/project/zboy/zBoy%20v0.71/zboy-0.71-win.zip",
+    "hash": "92524a4f2b0dc5c3989c712b9263854595790c34defc5475e87e152f6c81b5b7",
+    "extract_dir": "zboy-0.71-win",
     "bin": "zboy.exe",
+    "shortcuts": [
+        [
+            "zboy.exe",
+            "zBoy"
+        ]
+    ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/zboy/files/",
-        "regex": ">zBoy v([0-9\\.]+)"
+        "url": "https://sourceforge.net/projects/zboy/rss?path=/",
+        "regex": "zBoy v([\\d.]+)/zboy-[\\d.]+-win\\.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/zboy/files/zBoy%20v$version/zboy-$version-dos.zip/download"
+        "url": "https://downloads.sourceforge.net/project/zboy/zBoy%20v$version/zboy-$version-win.zip",
+        "extract_dir": "zboy-$version-win"
     }
 }

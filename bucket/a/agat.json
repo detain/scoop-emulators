@@ -7,23 +7,42 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/agat/emulator_screen_01.jpg"
     ],
     "version": "1.30.2",
-    "description": "Agat Emulator is an Apple II and Agat 7/9 (Soviet clones) emulator. Its GUI uses the Russian language.",
+    "description": "Apple II and Agat-7/9 (Soviet clone) emulator",
     "homepage": "https://sourceforge.net/projects/agatemulator/",
     "license": "GPL-3.0-only",
-    "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/1.30.2/agatemulator-1.30.2.exe/download",
-    "hash": "93cd45ddeeef8c7088fbbc14e183a1a299b69821861f99ddbb2e7465c57e9495",
-    "bin": "AGAT.exe",
-    "architecture": {
-        "64bit": {
-            "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/1.30.2/agatemulator-1.30.2.exe/download",
-            "hash": "93cd45ddeeef8c7088fbbc14e183a1a299b69821861f99ddbb2e7465c57e9495"
-        }
-    },
+    "url": "https://downloads.sourceforge.net/project/agatemulator/agatemulator/1.30.2/agatemulator-1.30.2.exe",
+    "hash": "sha1:bd60debbd535d2ebf9f8661cb8d835207d56ea0d",
+    "innosetup": true,
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\emulator.ini\")) {",
+        "    Set-Content \"$dir\\emulator.ini\" \"[Environment]`r`nLang=english`r`nFlags=526\" -Encoding Ascii",
+        "}"
+    ],
+    "bin": [
+        [
+            "emulator.exe",
+            "agat"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "emulator.exe",
+            "Agat Emulator"
+        ],
+        [
+            "langsel.exe",
+            "Agat Emulator Language Selection"
+        ]
+    ],
+    "persist": [
+        "emulator.ini",
+        "saves"
+    ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/",
-        "regex": ">(\\d[\\.\\d]*)<"
+        "sourceforge": "agatemulator/agatemulator",
+        "regex": "agatemulator-([\\d.]+)\\.exe"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/agatemulator/files/agatemulator/$version/agatemulator-$version.exe/download"
+        "url": "https://downloads.sourceforge.net/project/agatemulator/agatemulator/$version/agatemulator-$version.exe"
     }
 }

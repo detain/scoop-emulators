@@ -1,0 +1,27 @@
+{
+    "version": "1.3.1",
+    "description": "Nintendo Entertainment System and Famicom Disk System emulator",
+    "homepage": "https://github.com/FIX94/fixNES",
+    "license": "MIT",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Drag and drop a ROM onto fixNES or pass it on the command line; keyboard controls only.",
+        "For FDS titles, place the FDS BIOS named disksys.rom in the same folder as the .fds files."
+    ],
+    "url": "https://github.com/FIX94/fixNES/releases/download/alpha-v1.3.1/fixNES-Alpha-v1.3.1.zip",
+    "hash": "83b1a8f68bcaa09b1e3efd0037b1d1dc00b5f8221243c6d68cb6f5e454edcd8d",
+    "bin": "fixNES.exe",
+    "shortcuts": [
+        [
+            "fixNES.exe",
+            "fixNES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/FIX94/fixNES",
+        "regex": "alpha-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FIX94/fixNES/releases/download/alpha-v$version/fixNES-Alpha-v$version.zip"
+    }
+}

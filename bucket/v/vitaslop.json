@@ -1,0 +1,39 @@
+{
+    "version": "0.3.0",
+    "description": "Sony PlayStation Vita emulator (desktop app, also runs in a browser)",
+    "homepage": "https://cretz.github.io/vitaslop/",
+    "license": "MIT",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cretz/vitaslop/releases/download/v0.3.0/vitaslop-v0.3.0-x86_64-pc-windows-msvc.zip",
+            "hash": "e5559216d05da538541c1ef23204fcd89c0fb646013e0f8cc5597bf17878ccfc"
+        },
+        "arm64": {
+            "url": "https://github.com/cretz/vitaslop/releases/download/v0.3.0/vitaslop-v0.3.0-aarch64-pc-windows-msvc.zip",
+            "hash": "a4303c6172e77b03af4ed1af0315de058a14050973463568921140775ae004e0"
+        }
+    },
+    "bin": "vitaslop.exe",
+    "shortcuts": [
+        [
+            "vitaslop.exe",
+            "vitaslop"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/cretz/vitaslop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cretz/vitaslop/releases/download/v$version/vitaslop-v$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/cretz/vitaslop/releases/download/v$version/vitaslop-v$version-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

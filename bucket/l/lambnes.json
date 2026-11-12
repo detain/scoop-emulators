@@ -1,0 +1,36 @@
+{
+    "version": "0.0.9",
+    "description": "Nintendo Entertainment System emulator written in Java",
+    "homepage": "https://code.google.com/archive/p/lambnes/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a Java runtime. Sound is not implemented."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/lambnes/lambnes-0.0.9.zip",
+    "hash": "1814eaecff0d3b6750dcf4a5718efcbfb6382d515a2f51a7148fc9c14375bf95",
+    "extract_dir": "lambnes",
+    "bin": [
+        [
+            "lambnes.jar",
+            "lambnes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "lambnes.jar",
+            "LambNES"
+        ]
+    ],
+    "persist": "save",
+    "checkver": {
+        "url": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/lambnes/downloads-page-1.json",
+        "regex": "lambnes-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/lambnes/lambnes-$version.zip"
+    }
+}

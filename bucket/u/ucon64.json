@@ -1,0 +1,35 @@
+{
+    "version": "2.2.2",
+    "description": "Video game backup and ROM tool supporting many cartridge-based consoles and backup units (command line)",
+    "homepage": "https://ucon64.sourceforge.io/",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.2/ucon64-2.2.2-usb-win64-mingw-w64-bin.zip",
+            "hash": "ba6bd511192abb6c493222725c93035e5def3ef0d3a0386607016aec3a8dffaf",
+            "extract_dir": "ucon64-2.2.2-usb-win64-mingw-w64-bin"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-2.2.2/ucon64-2.2.2-win32-vc-bin.zip",
+            "hash": "4a4f3e6f46bb61a10db9e1764aa499de23879195aec626aaaed8379aeae3d6f8",
+            "extract_dir": "ucon64-2.2.2-win32-vc-bin"
+        }
+    },
+    "bin": "ucon64.exe",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/ucon64/rss?path=/ucon64",
+        "regex": "ucon64-([\\d.]+)/ucon64-[\\d.]+-usb-win64-mingw-w64-bin\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-$version/ucon64-$version-usb-win64-mingw-w64-bin.zip",
+                "extract_dir": "ucon64-$version-usb-win64-mingw-w64-bin"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/ucon64/ucon64/ucon64-$version/ucon64-$version-win32-vc-bin.zip",
+                "extract_dir": "ucon64-$version-win32-vc-bin"
+            }
+        }
+    }
+}

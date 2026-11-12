@@ -1,0 +1,31 @@
+{
+    "version": "20261019",
+    "description": "Commodore 64 disassembler and emulator (JC64Dis), native build (development version)",
+    "homepage": "https://github.com/ice00/jc64",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/ice00/jc64/releases/download/latest/jc64-native-windows.zip",
+    "hash": "9b219683f34aea952dded52401fb0846fade4429ecb0d9dbba788dc5debdb40d",
+    "extract_dir": "jc64-native-windows",
+    "bin": [
+        [
+            "bin\\jc64.exe",
+            "jc64dis-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bin\\jc64.exe",
+            "JC64Dis (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/ice00/jc64/releases/tags/latest",
+        "jsonpath": "$.assets[?(@.name == 'jc64-native-windows.zip')].updated_at",
+        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ice00/jc64/releases/download/latest/jc64-native-windows.zip",
+        "extract_dir": "jc64-native-windows"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "2017.03.15",
+    "description": "General-purpose (non-gaming) DOS emulator for running DOS applications on Windows, based on vDos and DOSBox",
+    "homepage": "http://www.vdosplus.org/",
+    "license": "GPL-2.0-only",
+    "notes": "vDosPlus is no longer developed; its author recommends DOSBox-X (TrueType font output) as the successor.",
+    "url": "https://downloads.sourceforge.net/project/vdosplus/vDosPlus-201511.zip",
+    "hash": "sha1:4616799afa987cf5cf0eb79890f28c2ee3deeca5",
+    "bin": "vDosPlus.exe",
+    "shortcuts": [
+        [
+            "vDosPlus.exe",
+            "vDosPlus"
+        ]
+    ],
+    "persist": [
+        "autoexec.txt",
+        "config.txt"
+    ],
+    "checkver": {
+        "url": "http://individual.utoronto.ca/wengier/vDosPlus/",
+        "regex": "2015\\.11\\.01 branch \\(build ([\\d.]+)\\)"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/vdosplus/vDosPlus-201511.zip"
+    }
+}

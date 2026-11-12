@@ -1,0 +1,42 @@
+{
+    "version": "1.0.2",
+    "description": "Kaillera netplay server for emulators (Kotlin rewrite of EmuLinkerSF)",
+    "homepage": "https://github.com/hopskipnfall/EmuLinker-K",
+    "license": "GPL-2.0-only",
+    "notes": "Requires Java 17 or newer. Edit $persist_dir\\conf\\emulinker.cfg to configure the server (default UDP port 27888).",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://github.com/hopskipnfall/EmuLinker-K/releases/download/1.0/emulinker-k-1.0.2.zip",
+    "hash": "70af54800eac0ea05c8ea1a7e9d0e998a891705006d40a22d61fd5ad6910342f",
+    "extract_dir": "EmuLinker-K",
+    "bin": [
+        [
+            "start-server.bat",
+            "emulinker-k"
+        ],
+        [
+            "stop-server.bat",
+            "emulinker-k-stop"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "start-server.bat",
+            "EmuLinker-K Server"
+        ]
+    ],
+    "persist": [
+        "conf\\emulinker.cfg",
+        "conf\\access.cfg"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/hopskipnfall/EmuLinker-K/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "(?i)download/(?<path>[^/]+/emulinker-k-(?<version>[\\d.]+)\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/hopskipnfall/EmuLinker-K/releases/download/$matchPath",
+        "extract_dir": "EmuLinker-K"
+    }
+}

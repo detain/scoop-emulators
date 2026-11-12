@@ -1,0 +1,43 @@
+{
+    "version": "0.36.13",
+    "description": "Arcade emulator: a Java port of MAME 0.36 with the FlexFrontend launcher",
+    "homepage": "https://github.com/georgemoralis/arcadeflex",
+    "license": {
+        "identifier": "Other",
+        "url": "https://github.com/georgemoralis/arcadeflex/blob/master/license.md"
+    },
+    "notes": "Includes a bundled Java runtime. Place your ROMs in $persist_dir\\roms",
+    "url": "https://github.com/georgemoralis/arcadeflex/releases/download/0.36.13/0.36.13.zip",
+    "hash": "43876bda6c1be1e9e0f25922a76fed6b7252ea833d6de7472fe0419397403662",
+    "bin": [
+        [
+            "Arcadeflex.exe",
+            "arcadeflex"
+        ],
+        [
+            "FlexFrontend.exe",
+            "flexfrontend"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "FlexFrontend.exe",
+            "ArcadeFlex"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "hi",
+        "inp",
+        "memcard",
+        "nvram",
+        "roms",
+        "snap"
+    ],
+    "checkver": {
+        "github": "https://github.com/georgemoralis/arcadeflex"
+    },
+    "autoupdate": {
+        "url": "https://github.com/georgemoralis/arcadeflex/releases/download/$version/$version.zip"
+    }
+}

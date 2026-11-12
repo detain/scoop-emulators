@@ -1,0 +1,27 @@
+{
+    "version": "2.9.3.8",
+    "description": "Plugin-based ZX Spectrum and clones emulator / virtual machine written in C#",
+    "homepage": "https://github.com/zxmak/ZXMAK2",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Requires .NET Framework 4 and the DirectX 9 runtime.",
+        "This emulator is no longer actively developed."
+    ],
+    "url": "https://github.com/zxmak/ZXMAK2/releases/download/v2.9.3.8/ZXMAK2-BIN-2938.zip",
+    "hash": "4a53cb5bf44191a169a6bb657477673650ad664b6c2667fe9a712e81f8ae3b19",
+    "bin": "ZXMAK2.exe",
+    "shortcuts": [
+        [
+            "ZXMAK2.exe",
+            "ZXMAK2"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/zxmak/ZXMAK2/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/zxmak/ZXMAK2/releases/download/v$version/ZXMAK2-BIN-$cleanVersion.zip"
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "version": "0.145",
+    "description": "Combined MAME and MESS build supporting arcade machines, consoles and computers in one binary",
+    "homepage": "http://mamedev.emulab.it/haze/",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0145/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "architecture": {
+        "64bit": {
+            "url": "http://mamedev.emulab.it/haze/files2012/ultimate130212/um130212_64-bit_ALL.rar",
+            "hash": "b040b3827278bb9b8cceb6332ceade2873721a41955949d01561f34cb72fe26c",
+            "bin": [
+                [
+                    "uni64.exe",
+                    "ultimate-mame"
+                ],
+                [
+                    "mess64.exe",
+                    "ultimate-mess"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "uni64.exe",
+                    "Ultimate MAME"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "http://mamedev.emulab.it/haze/files2012/ultimate130212/um130212_32-bit_ALL.rar",
+            "hash": "aae52286bfa1890c126d605116896c3ce53c5598f715d1c332bae37aaf026f0d",
+            "bin": [
+                [
+                    "uni.exe",
+                    "ultimate-mame"
+                ],
+                [
+                    "mess.exe",
+                    "ultimate-mess"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "uni.exe",
+                    "Ultimate MAME"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ]
+}

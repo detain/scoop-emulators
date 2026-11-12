@@ -1,0 +1,25 @@
+{
+    "version": "0.35",
+    "description": "DOS game collection manager that identifies, renames and sorts zipped PC games against a .dat file",
+    "homepage": "https://web.archive.org/web/20160215195052/http://nugnugnug.com/",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed; the original site (nugnugnug.com) is gone, so this is a Wayback Machine copy of build 035.",
+        "Load a DOS collection .dat file from Settings+Tools before scanning."
+    ],
+    "url": "https://web.archive.org/web/20151201065741id_/http://nugnugnug.com/DOSCenter35.zip",
+    "hash": "3b2b149a6df8b1adf2d4524fd8b6204fa2ba8cacded5ec0dc9bbc484384f6ffe",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\DCignore.ini\")) {",
+        "    Copy-Item \"$dir\\orgDCignore.ini\" \"$dir\\DCignore.ini\"",
+        "}"
+    ],
+    "bin": "DOSCenter.exe",
+    "shortcuts": [
+        [
+            "DOSCenter.exe",
+            "DOSCenter"
+        ]
+    ],
+    "persist": "DCignore.ini"
+}

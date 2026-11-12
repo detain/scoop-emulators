@@ -8,19 +8,17 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-01.gif,https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-02.gif,https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-03.gif,https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-04.gif,https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-05.gif,https://cdn.emulationking.com/wp-content/uploads/2016/09/PC-Atari-Emulator-Atari-2600-Emulator-Pic-06.gif"
     ],
     "version": "2.5-dos",
-    "description": "PC Atari Emulator was one of the very first Atari 2600 emulators. It is a highly optimized emulator with a very easy to use interface.",
+    "description": "Atari 2600 emulator for MS-DOS (PC Atari Emulator)",
     "homepage": "http://pcae.vg-network.com/",
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/pcae/2.5-dos.7z",
     "hash": "68e1ca7b7d0a34b361360e0300237b1ff3975c7ed7a3a165064ee147d5570198",
-    "bin": [
-        "pcae.exe"
-    ],
+    "bin": "pcae.exe",
     "checkver": {
-        "url": "http://pcae.vg-network.com/download.html",
-        "regex": "pcae-(\\d+\\.\\d+\\.\\d+)\\.zip"
+        "url": "https://consolo.is.cc/emu/pcae/",
+        "regex": "([\\d.]+-dos)\\.7z"
     },
     "autoupdate": {
-        "url": "http://pcae.vg-network.com/download.html"
+        "url": "https://consolo.is.cc/emu/pcae/$version.7z"
     }
 }

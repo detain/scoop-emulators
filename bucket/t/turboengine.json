@@ -7,19 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/turboengine/emulator_screen_01.jpg"
     ],
     "version": "0.32",
-    "description": "Turbo Engine 16 is an NEC TurboGrafx-16 Entertainment SuperSystem, PC Engine, SuperGrafx, PC Engine 2, CDROM and Super CDROM emulator.",
+    "description": "NEC PC Engine / TurboGrafx-16, SuperGrafx and CD-ROM² emulator",
     "homepage": "http://aamirm.hacking-cult.org/www/turbo.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/turboengine/0.32.7z",
-    "hash": "9b06f00176444fcd69bd527e2516211db6f9675851fa696a98a0bf0bdb56a890",
+    "notes": "The official site is offline; this package is the original TurboEngine032.zip from the Wayback Machine.",
+    "url": "https://web.archive.org/web/20250425085116id_/http://aamirm.hacking-cult.org/turbo/TurboEngine032.zip",
+    "hash": "93f050944bfb07f5327c911f30af436663297a1d400929b4c554c020b7ca32e0",
     "bin": [
-        "TurboEngine.exe"
+        [
+            "TurboEngine.exe",
+            "turboengine"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/turboengine/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/turboengine/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "TurboEngine.exe",
+            "Turbo Engine 16"
+        ]
+    ]
 }

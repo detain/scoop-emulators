@@ -1,0 +1,76 @@
+{
+    "version": "20261109-g8637e85",
+    "description": "Super Nintendo (SNES) emulator, an unofficial Snes9x fork with extra features (development version)",
+    "homepage": "https://github.com/shanytc/snes9x",
+    "license": {
+        "identifier": "Snes9x",
+        "url": "https://github.com/shanytc/snes9x/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32-x64.zip",
+            "hash": "a8b988fe81daece8ca968ab049b7906b36a4a9c09e4cd70ab76ac2928cd2226e",
+            "bin": [
+                [
+                    "super-snes9x-x64.exe",
+                    "supersnes9x-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "super-snes9x-x64.exe",
+                    "SuperSnes9x (dev)"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32.zip",
+            "hash": "95c003adcaaff5222b7db6210dba766f2a916f09728c298ba036ea6807a2337d",
+            "bin": [
+                [
+                    "super-snes9x.exe",
+                    "supersnes9x-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "super-snes9x.exe",
+                    "SuperSnes9x (dev)"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\super-snes9x.conf\")) {",
+        "    New-Item \"$dir\\super-snes9x.conf\" -Type File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Movies",
+        "Patches",
+        "Roms",
+        "SatData",
+        "Saves",
+        "Screenshots",
+        "SPCs",
+        "super-snes9x.conf"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/shanytc/snes9x/releases/tags/nightly",
+        "script": "Write-Output $page",
+        "regex": "\"target_commitish\":\\s*\"(?<commit>[0-9a-f]{7})[\\s\\S]*?\"published_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32.zip"
+            }
+        }
+    }
+}

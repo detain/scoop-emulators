@@ -1,0 +1,23 @@
+{
+    "version": "1.3.1-beta",
+    "description": "Emulator frontend that browses your game library and launches each game in the right emulator",
+    "homepage": "https://github.com/Tw1tchy0/EmuHub",
+    "license": "MIT",
+    "url": "https://github.com/Tw1tchy0/EmuHub/releases/download/v1.3.1-beta/EmuHub.exe",
+    "hash": "b00261ff83c231057a705db1f5498fadff99ef3299b31a9d753c72f432a8b9b4",
+    "bin": "EmuHub.exe",
+    "shortcuts": [
+        [
+            "EmuHub.exe",
+            "EmuHub"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Tw1tchy0/EmuHub/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Tw1tchy0/EmuHub/releases/download/v$version/EmuHub.exe"
+    }
+}

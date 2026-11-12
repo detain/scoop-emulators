@@ -1,0 +1,13 @@
+{
+    "version": "0.2.3",
+    "description": "Command-line mod downloader for Nintendo Switch emulators (Yuzu forks)",
+    "homepage": "https://github.com/exefer/ns-emu-mod-downloader",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/exefer/ns-emu-mod-downloader/releases/download/v0.2.3/ns-emu-mod-downloader.exe",
+    "hash": "6a5a1acbec8bea8d42b32472a8232cb5f973f7e421c20d740ce9918032b88f3a",
+    "bin": "ns-emu-mod-downloader.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/exefer/ns-emu-mod-downloader/releases/download/v$version/ns-emu-mod-downloader.exe"
+    }
+}

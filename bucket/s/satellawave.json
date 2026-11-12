@@ -1,0 +1,25 @@
+{
+    "version": "0.5.1",
+    "description": "Nintendo Satellaview broadcast data file maker for SNES emulators",
+    "homepage": "https://github.com/LuigiBlood/sat_wave",
+    "license": "MIT",
+    "notes": "This tool is no longer developed.",
+    "url": "https://github.com/LuigiBlood/sat_wave/releases/download/v0.5.1/SatellaWave-v0.5.1-binary.zip",
+    "hash": "5a9740c7a99965f7966ea2d1d8e93eac515db2468e7ac80f606e3b30d1556148",
+    "bin": [
+        [
+            "SatellaWave.exe",
+            "satellawave"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SatellaWave.exe",
+            "SatellaWave"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/LuigiBlood/sat_wave/releases/download/v$version/SatellaWave-v$version-binary.zip"
+    }
+}

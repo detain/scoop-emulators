@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "description": "Nintendo NES / Famicom emulator (Nestopia JG core with the QTea frontend)",
+    "homepage": "https://github.com/jgemu/jgbuilds",
+    "license": "GPL-2.0-or-later",
+    "notes": "Famicom Disk System emulation requires the FDS BIOS (disksys.rom).",
+    "url": "https://github.com/jgemu/jgbuilds/releases/download/nestopia-2.0.0/nestopia-2.0.0-windows-x86_64.zip",
+    "hash": "7e3dbdffaf966628948df68898f4f5cfe1d7564f187913396da6613edfedb396",
+    "bin": [
+        [
+            "nestopia.exe",
+            "nestopia-jg"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nestopia.exe",
+            "Nestopia (JG)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/jgemu/jgbuilds/releases?per_page=100",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"nestopia-([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/jgemu/jgbuilds/releases/download/nestopia-$version/nestopia-$version-windows-x86_64.zip"
+    }
+}

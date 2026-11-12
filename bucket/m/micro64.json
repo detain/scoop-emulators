@@ -6,20 +6,43 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/micro64/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/micro64/emulator_screen_01.jpg"
     ],
-    "version": "1.00.2013.05.11-win64",
-    "description": "Micro64 aims to be the most accurate Commodore 64 emulator.",
-    "homepage": "http://micro64.de/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/micro64/1.00.2013.05.11-win64.7z",
-    "hash": "e54f74b4b48ce0dd5644abff433739e82ce1994c86006c112893ef2a71275ef4",
-    "bin": [
-        "micro64.exe"
+    "version": "1.00.2018.03.16",
+    "description": "Commodore 64 emulator aiming for cycle accuracy",
+    "homepage": "https://blog.rosseaux.net/page/986c1ab5667d2dfa6ef552e6dd42fe27/micro64",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.micro64.de/download/micro64.zip",
+            "hash": "35e887a87e740021d8c3c8b58e74180151af109e8e7f5b5449385951d0420177",
+            "extract_dir": "release\\x86_64-win64"
+        },
+        "32bit": {
+            "url": "https://www.micro64.de/download/micro64.zip",
+            "hash": "35e887a87e740021d8c3c8b58e74180151af109e8e7f5b5449385951d0420177",
+            "extract_dir": "release\\x86_32-win32"
+        }
+    },
+    "bin": "micro64.exe",
+    "shortcuts": [
+        [
+            "micro64.exe",
+            "Micro64"
+        ]
     ],
     "checkver": {
-        "url": "http://www.micro64.de/downloads/micro64_version.txt",
-        "regex": "version=([\\d\\.]+)"
+        "url": "https://www.micro64.de/changelog/micro64.txt",
+        "regex": "Version:\\s*([\\d.]+)\\s+Build"
     },
     "autoupdate": {
-        "url": "http://www.micro64.de/downloads/micro64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.micro64.de/download/micro64.zip",
+                "extract_dir": "release\\x86_64-win64"
+            },
+            "32bit": {
+                "url": "https://www.micro64.de/download/micro64.zip",
+                "extract_dir": "release\\x86_32-win32"
+            }
+        }
     }
 }

@@ -1,0 +1,22 @@
+{
+    "version": "1040",
+    "description": "Video game music toolkit for ripping, examining and converting VGM formats (PSF, 2SF, SSF, xSF, XMA, etc.)",
+    "homepage": "https://sourceforge.net/projects/vgmtoolbox/",
+    "license": "MIT",
+    "url": "https://downloads.sourceforge.net/project/vgmtoolbox/vgmtoolbox/VGMToolbox%20r1040/vgmtoolbox_bin_r1040.7z",
+    "hash": "sha1:9e15bc8f121c70da0e62e4e1c6f66b279977e3d7",
+    "bin": "VGMToolbox.exe",
+    "shortcuts": [
+        [
+            "VGMToolbox.exe",
+            "VGMToolbox"
+        ]
+    ],
+    "checkver": {
+        "sourceforge": "vgmtoolbox/vgmtoolbox",
+        "regex": "vgmtoolbox_bin_r(\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/vgmtoolbox/vgmtoolbox/VGMToolbox%20r$version/vgmtoolbox_bin_r$version.7z"
+    }
+}

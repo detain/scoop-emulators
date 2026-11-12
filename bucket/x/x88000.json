@@ -6,20 +6,39 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/x88000/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/x88000/emulator_screen_01.jpg"
     ],
-    "version": "1.4.0",
-    "description": "X88000 is an NEC PC-8801 emulator.",
-    "homepage": "http://www.geocities.com/Area51/Dungeon/6809/x88000.html",
+    "version": "1.5.3",
+    "description": "NEC PC-8801 series emulator",
+    "homepage": "https://quagma.sakura.ne.jp/manuke/x88000.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/x88000/1.4.0.7z",
-    "hash": "372aea7fe1c21fedbe1e202efbd7569da93943771e6b9513506f36573ab174c6",
-    "bin": [
-        "x88x3.exe"
+    "notes": "Requires PC-8801 ROM images (e.g. PC88.ROM + PC88.FNT, or the M88-style N88.ROM/N80.ROM/DISK.ROM set) placed next to X88000.exe in $dir.",
+    "url": "https://quagma.sakura.ne.jp/manuke/x88_1_5_3.zip",
+    "hash": "6db8a7433d8b92cff66b890190de80f6becc3fba66e67ae8fc41e3514337bf47",
+    "extract_dir": "x88_1_5_3",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\X88000.ini\")) {",
+        "    New-Item \"$dir\\X88000.ini\" -Type File | Out-Null",
+        "}"
     ],
+    "bin": [
+        [
+            "X88000.exe",
+            "x88000"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "X88000.exe",
+            "X88000"
+        ]
+    ],
+    "persist": "X88000.ini",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/x88000/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://quagma.sakura.ne.jp/manuke/x88000.html",
+        "regex": "x88_(?<a>\\d+)_(?<b>\\d+)_(?<c>\\d+)\\.zip",
+        "replace": "${a}.${b}.${c}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/x88000/$version.7z"
+        "url": "https://quagma.sakura.ne.jp/manuke/x88_$underscoreVersion.zip",
+        "extract_dir": "x88_$underscoreVersion"
     }
 }

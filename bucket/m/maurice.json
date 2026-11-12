@@ -1,0 +1,27 @@
+{
+    "version": "1.3.0",
+    "description": "Thomson MO5 emulator written in Rust",
+    "homepage": "https://github.com/kpouer/Maurice",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kpouer/Maurice/releases/download/v1.3.0/maurice-x86_64-pc-windows-msvc.zip",
+            "hash": "97516a02ba4f72425b76e04920bcd45e95fd64182209644048ca520f1cfe1e9b"
+        }
+    },
+    "bin": "maurice.exe",
+    "shortcuts": [
+        [
+            "maurice.exe",
+            "Maurice"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kpouer/Maurice/releases/download/v$version/maurice-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "version": "1.7.5",
+    "description": "Open-source engine for Heroes of Might and Magic III",
+    "homepage": "https://vcmi.eu/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "VCMI requires the original Heroes of Might and Magic III data files.",
+        "Run the VCMI Launcher and import them from a GOG offline installer or an existing installation.",
+        "User data (game data, mods, saves, settings) is stored in $persist_dir\\data."
+    ],
+    "url": "https://github.com/vcmi/vcmi/releases/download/1.7.5/VCMI-Windows.zip",
+    "hash": "0a530799085c1a135f9686d49d859beab8741869dcd9fe0877ef428ca0830d88",
+    "pre_install": [
+        "$dirsJson = @{ userDataPath = \"$dir\\data\" } | ConvertTo-Json",
+        "[IO.File]::WriteAllText(\"$dir\\config\\dirs.json\", $dirsJson)"
+    ],
+    "bin": [
+        [
+            "VCMI_launcher.exe",
+            "vcmi"
+        ],
+        [
+            "VCMI_client.exe",
+            "vcmi-client"
+        ],
+        [
+            "VCMI_mapeditor.exe",
+            "vcmi-mapeditor"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VCMI_launcher.exe",
+            "VCMI"
+        ],
+        [
+            "VCMI_mapeditor.exe",
+            "VCMI Map Editor"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/vcmi/vcmi"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vcmi/vcmi/releases/download/$version/VCMI-Windows.zip"
+    }
+}

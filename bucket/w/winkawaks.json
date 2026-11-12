@@ -7,19 +7,33 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/winkawaks/emulator_screen_01.jpg"
     ],
     "version": "1.65",
-    "description": "WinKawaks is a windows version of Kawaks, an emulator for the Capcom CPS1 and CPS2 and SNK NeoGeo.",
-    "homepage": "http://www.winkawaks.org/",
+    "description": "Capcom CPS1/CPS2 and SNK Neo Geo arcade emulator",
+    "homepage": "https://www.kawaks.org/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/winkawaks/1.65.7z",
-    "hash": "1c33ba2b95153a9cc60f295ea34f8263a17f9512d47020fcd6c59aabd1c52a8b",
-    "bin": [
-        "WinKawaks.exe"
+    "notes": "Place ROM sets in $persist_dir\\roms",
+    "url": "https://www.kawaks.org/kawaks/WinKawaks.zip",
+    "hash": "5d567f0df4e5e36358d22a0eeac98925cf5e49a27ff8c0f61c1d76c924e13d19",
+    "extract_dir": "WinKawaks",
+    "bin": "WinKawaks.exe",
+    "shortcuts": [
+        [
+            "WinKawaks.exe",
+            "WinKawaks"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "capture",
+        "cheats",
+        "eeprom",
+        "ini"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/winkawaks/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://www.kawaks.org/downloads.htm",
+        "regex": "latest stable version is <span class=\"bold\">WinKawaks ([\\d.]+)<"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/winkawaks/$version.7z"
+        "url": "https://www.kawaks.org/kawaks/WinKawaks.zip",
+        "extract_dir": "WinKawaks"
     }
 }

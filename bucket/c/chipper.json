@@ -1,0 +1,23 @@
+{
+    "version": "1.0",
+    "description": "CHIP-8 emulator written in Rust",
+    "homepage": "https://github.com/ArjunNair/chipper",
+    "license": "MIT",
+    "url": "https://github.com/ArjunNair/chipper/releases/download/v1.0/chipper_win_v1.zip",
+    "hash": "21d2f4b6d7fdf6411bfbfe1f16f045b9aee21362988145df7762dac404aca316",
+    "bin": "chipper.exe",
+    "shortcuts": [
+        [
+            "chipper.exe",
+            "Chipper"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/ArjunNair/chipper/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>chipper_win[^/\"]*\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ArjunNair/chipper/releases/download/v$version/$matchFile"
+    }
+}

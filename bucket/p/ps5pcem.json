@@ -1,0 +1,40 @@
+{
+    "version": "0.3.6",
+    "description": "Experimental Sony PlayStation 5 emulator",
+    "homepage": "https://ps5pcem.com",
+    "license": "GPL-3.0-or-later",
+    "notes": "Requires a Vulkan 1.2-capable GPU driver and your own decrypted PS5 games. Firmware and system files are not included.",
+    "url": "https://github.com/iStark/PS5PCEM/releases/download/v0.3.6/PS5PCEM-0.3.6-windows-x64-portable.zip",
+    "hash": "194989ac77a3b76c60477b4c102784e9b840a31567b1591c96d3b4ccf0603ac6",
+    "extract_dir": "PS5PCEM-0.3.6-windows-x64-portable",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\ps5pcem.ini\")) {",
+        "    New-Item \"$dir\\ps5pcem.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        "ps5pcem.exe",
+        "pkgextractor.exe"
+    ],
+    "shortcuts": [
+        [
+            "ps5pcem.exe",
+            "PS5PCEM"
+        ]
+    ],
+    "persist": [
+        "savedata",
+        "logs",
+        "ps5pcem.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/iStark/PS5PCEM"
+    },
+    "autoupdate": {
+        "url": "https://github.com/iStark/PS5PCEM/releases/download/v$version/PS5PCEM-$version-windows-x64-portable.zip",
+        "hash": {
+            "url": "https://github.com/iStark/PS5PCEM/releases/download/v$version/SHA256SUMS.txt"
+        },
+        "extract_dir": "PS5PCEM-$version-windows-x64-portable"
+    }
+}

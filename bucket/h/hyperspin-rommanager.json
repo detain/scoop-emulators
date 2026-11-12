@@ -1,0 +1,22 @@
+{
+    "version": "1.2",
+    "description": "Tool that makes renamed copies of ROM files to match HyperSpin database naming",
+    "homepage": "https://mk2k.net/",
+    "license": "Freeware",
+    "notes": "This tool is no longer developed. Requires .NET Framework 4.0 or later.",
+    "url": "https://mk2k.net/releases/pc/apps/hyperspin_rommanager_1.2-mk2k.zip",
+    "hash": "82f5217c5b662f31a12546ceb1afc18557e7592b0b8b8f31571b74c97d2b7ee0",
+    "extract_dir": "HyperSpin_RomManager_1.2-MK2k\\HyperSpin_RomManager",
+    "bin": [
+        [
+            "HyperSpin_RomManager.exe",
+            "hyperspin-rommanager"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HyperSpin_RomManager.exe",
+            "HyperSpin RomManager"
+        ]
+    ]
+}

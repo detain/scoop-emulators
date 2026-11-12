@@ -1,0 +1,48 @@
+{
+    "version": "681-20261102-8307e6a",
+    "description": "Sega Mega Drive/Genesis, 32X, Master System, Game Gear, SG-1000, ColecoVision, MSX and NES emulator written in Java (development version)",
+    "homepage": "https://github.com/fedex81/helios",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Requires Java 21 or newer.",
+        "Development builds are GitHub Actions artifacts, which expire after 90 days."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://nightly.link/fedex81/helios/actions/runs/41426685115/helios-SNAPSHOT-8307e6abf4e35a364f5df67991beb455a219e5f5-681.zip",
+    "hash": "64025734342948155e82ae27a419f8208354e1b9f9ce0c6c7ead54fddc4b328a",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\helios-*.zip\" | ForEach-Object { Expand-ZipArchive $_.FullName \"$dir\" -Removal }",
+        "$cmd = (Get-Content \"$dir\\launcher.bat\" | Where-Object { $_ -match '^java ' }) -replace '\"%1\"', '\"%ROM%\"'",
+        "Set-Content \"$dir\\helios.bat\" -Value @('@echo off', 'setlocal', 'set \"ROM=\"', 'if not \"%~1\"==\"\" set \"ROM=%~f1\"', 'cd /d \"%~dp0\"', $cmd) -Encoding Ascii"
+    ],
+    "bin": [
+        [
+            "helios.bat",
+            "helios-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "helios.bat",
+            "Helios (dev)"
+        ]
+    ],
+    "persist": "helios.properties",
+    "checkver": {
+        "github": "https://api.github.com/repos/fedex81/helios/actions/workflows/gradle.yml/runs?branch=master&status=success&per_page=1",
+        "script": [
+            "$run = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$id = json_path $page $.workflow_runs[0].id",
+            "Write-Output \"$run $date $sha $id\""
+        ],
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<sha>(?<short>[0-9a-f]{7})[0-9a-f]+) (?<id>\\d+)$",
+        "replace": "${run}-${year}${month}${day}-${short}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/fedex81/helios/actions/runs/$matchId/helios-SNAPSHOT-$matchSha-$matchRun.zip"
+    }
+}

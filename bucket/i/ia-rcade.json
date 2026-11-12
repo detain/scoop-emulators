@@ -1,0 +1,21 @@
+{
+    "version": "1.2",
+    "description": "MAME command line wrapper that downloads missing ROMs and CHDs from the Internet Archive",
+    "homepage": "https://github.com/TiBeN/ia-rcade",
+    "license": "Apache-2.0",
+    "notes": [
+        "Formerly known as IaMame. This tool is no longer developed.",
+        "Requires a Java runtime and MAME. Put mame.exe on PATH or set MAME_EXEC to its full path."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre",
+        "MAME": "mame"
+    },
+    "url": "https://github.com/TiBeN/ia-rcade/releases/download/1.2/ia-rcade.exe",
+    "hash": "e6d6ee9453d55c100854b950427612f48a058ab9279505e1148c08ac14b48a61",
+    "bin": "ia-rcade.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/TiBeN/ia-rcade/releases/download/$version/ia-rcade.exe"
+    }
+}

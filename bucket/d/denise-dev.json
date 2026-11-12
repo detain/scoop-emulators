@@ -1,0 +1,52 @@
+{
+    "version": "20261029-e3dc759",
+    "description": "Commodore 64 and Amiga emulator (development version)",
+    "homepage": "https://sourceforge.net/projects/deniseemu/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/deniseemu/nightlies/denise_win64_build_e3dc759.zip",
+            "hash": "sha1:c6aadb0d61ae020651e2b52ed2e6143dfe4a1c4e",
+            "extract_dir": "denise_win64_build_e3dc759"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/deniseemu/nightlies/denise_win32_build_e3dc759.zip",
+            "hash": "sha1:2e6345e93861ddcaa8bfdad86c2b3d51a668de58",
+            "extract_dir": "denise_win32_build_e3dc759"
+        }
+    },
+    "bin": [
+        [
+            "denise.exe",
+            "denise-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "denise.exe",
+            "Denise (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/deniseemu/rss?path=/nightlies",
+        "script": [
+            "if ($page -match '(?s)/nightlies/denise_win64_build_(?<sha>[0-9a-f]+)\\.zip.*?<pubDate>(?<date>[^<]+)</pubDate>') {",
+            "    $d = [datetime]::Parse(($Matches['date'] -replace ' UT$', ' GMT'), [Globalization.CultureInfo]::InvariantCulture)",
+            "    Write-Output \"$($d.ToUniversalTime().ToString('yyyyMMdd'))-$($Matches['sha'])\"",
+            "}"
+        ],
+        "regex": "^(?<version>(?<date>\\d{8})-(?<sha>[0-9a-f]+))$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/deniseemu/nightlies/denise_win64_build_$matchSha.zip",
+                "extract_dir": "denise_win64_build_$matchSha"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/deniseemu/nightlies/denise_win32_build_$matchSha.zip",
+                "extract_dir": "denise_win32_build_$matchSha"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "1.12.1",
+    "description": "Sony PlayStation 3 online server (rooms, matchmaking, scoreboards, cloud saves) for RPCS3",
+    "homepage": "https://github.com/RipleyTom/rpcn",
+    "license": "AGPL-3.0-only",
+    "notes": [
+        "RPCN reads rpcn.cfg and its database (db\\rpcn.db) from the current working directory.",
+        "Start it from the Start Menu shortcut, or run it from \"$dir\"."
+    ],
+    "url": "https://github.com/RipleyTom/rpcn/releases/download/1.12.1/rpcn-win.zip",
+    "hash": "fd2fb79056ce228b4f26cf6597e7f8d8bfec044565e6ffe1e87f324de9219b2e",
+    "bin": "rpcn.exe",
+    "shortcuts": [
+        [
+            "rpcn.exe",
+            "RPCN Server"
+        ]
+    ],
+    "persist": [
+        "db",
+        "rpcn.cfg",
+        "scoreboards.cfg",
+        "server_redirs.cfg",
+        "servers.cfg"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/RipleyTom/rpcn/releases/download/$version/rpcn-win.zip"
+    }
+}

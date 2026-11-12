@@ -1,0 +1,32 @@
+{
+    "version": "1.0.0",
+    "description": "Sony ZN-1/ZN-2 arcade emulator (ZiNc 1.1 bundled with a native Windows launcher)",
+    "homepage": "https://github.com/hazem-abdelghani/ZiNc-EX",
+    "license": "GPL-3.0-only",
+    "notes": "Place your ROMs in $persist_dir\\roms or set the ROMs folder on the General tab.",
+    "url": "https://github.com/hazem-abdelghani/ZiNc-EX/releases/download/v1.0.0/ZiNc-EX-v1.0.0.zip",
+    "hash": "68097b4aa9d0789b4a3c202de6b7e699c91a34936a8f01c1bcc0a9735d195fec",
+    "extract_dir": "ZiNc EX",
+    "bin": [
+        [
+            "ZiNc-EX.exe",
+            "zinc-ex"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ZiNc-EX.exe",
+            "ZiNc EX"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "game-settings",
+        "profiles",
+        "roms"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/hazem-abdelghani/ZiNc-EX/releases/download/v$version/ZiNc-EX-v$version.zip"
+    }
+}

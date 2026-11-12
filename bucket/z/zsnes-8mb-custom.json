@@ -1,0 +1,27 @@
+{
+    "version": "2",
+    "description": "Unofficial ZSNES 1.51 build adding 8MB ExHiROM/ExLoROM/SA-1/SDD-1 ROM support (by FuSoYa)",
+    "homepage": "http://fusoya.eludevisibility.org/emulator/zsnes8.html",
+    "license": "GPL-2.0-only",
+    "url": "http://fusoya.eludevisibility.org/emulator/download/zsnesw151-FuSoYa-8MB_R2.zip",
+    "hash": "48dfabe1b212f4660ee1f45e662147ad6de0f5537285d7536c9f04bc2df4fb2c",
+    "bin": [
+        [
+            "zsnesw.exe",
+            "zsnes-8mb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "zsnesw.exe",
+            "ZSNES 8MB"
+        ]
+    ],
+    "checkver": {
+        "url": "http://fusoya.eludevisibility.org/emulator/zsnes8.html",
+        "regex": "zsnesw151-FuSoYa-8MB_R(\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://fusoya.eludevisibility.org/emulator/download/zsnesw151-FuSoYa-8MB_R$version.zip"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "version": "2.1.0",
+    "description": "Game loader front-end for the Cemu Wii U emulator (NW.js app)",
+    "homepage": "https://github.com/uparlange/cemu-loader",
+    "license": "Unknown",
+    "notes": "This front-end is no longer developed.",
+    "suggest": {
+        "Cemu": "cemu"
+    },
+    "url": "https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-2.1.0.exe#/dl.7z",
+    "hash": "ee9bba886094a4d575eef238d0b3690905eb51722804275bb2485b5b52f969e1",
+    "bin": [
+        [
+            "nw.exe",
+            "cemu-loader"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nw.exe",
+            "Cemu Loader"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/uparlange/cemu-loader/contents/release",
+        "jsonpath": "$[*].name",
+        "regex": "cemu-loader-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://github.com/uparlange/cemu-loader/raw/master/release/cemu-loader-$version.exe#/dl.7z"
+    }
+}

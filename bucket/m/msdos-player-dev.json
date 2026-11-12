@@ -1,0 +1,49 @@
+{
+    "version": "193-20261021-fd5f541",
+    "description": "MS-DOS emulator for running 16-bit DOS command-line programs on 64-bit Windows (development version)",
+    "homepage": "http://takeda-toshiya.my.coocan.jp/msdos/index.html",
+    "license": "Unknown",
+    "notes": [
+        "Development builds come from GitHub Actions artifacts of cracyc/msdos-player (branch vt, via nightly.link), which expire about 90 days after the build.",
+        "msdos-dev runs the i486 build; msdos-i386-dev, msdos-i286-dev, msdos-v30-dev and msdos-i86-dev run the other CPU builds."
+    ],
+    "url": "https://nightly.link/cracyc/msdos-player/actions/runs/39525524604/mingw.zip",
+    "hash": "68b5292b918255be2cecd3c75b5c515d0ea3e6532afa2d564413f0b00f3013d8",
+    "bin": [
+        [
+            "msdos_i486.exe",
+            "msdos-dev"
+        ],
+        [
+            "msdos_i386.exe",
+            "msdos-i386-dev"
+        ],
+        [
+            "msdos_i286.exe",
+            "msdos-i286-dev"
+        ],
+        [
+            "msdos_V30.exe",
+            "msdos-v30-dev"
+        ],
+        [
+            "msdos_i86.exe",
+            "msdos-i86-dev"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/cracyc/msdos-player/actions/workflows/ccpp.yml/runs?branch=vt&event=push&status=success&per_page=1",
+        "script": [
+            "$run = json_path $page $.workflow_runs[0].run_number",
+            "$id = json_path $page $.workflow_runs[0].id",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "Write-Output \"$run $id $date $sha\""
+        ],
+        "regex": "^(?<run>\\d+) (?<id>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<short>[0-9a-f]{7})(?<rest>[0-9a-f]+)$",
+        "replace": "${run}-${year}${month}${day}-${short}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/cracyc/msdos-player/actions/runs/$matchId/mingw.zip"
+    }
+}

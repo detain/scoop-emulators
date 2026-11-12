@@ -1,0 +1,17 @@
+{
+    "version": "2.30",
+    "description": "Tweaker for Pete's OpenGL2 PSX GPU plugin adding a GTE accuracy hack (PGXP) and an xBRZ texture filter",
+    "homepage": "https://github.com/Nucleoprotein/PeteOpenGL2Tweak",
+    "license": "Unknown",
+    "notes": [
+        "This is a 32-bit GPU plugin wrapper DLL, not a standalone emulator.",
+        "Copy gpuPeteOpenGL2Tweak.dll from $dir into your emulator's plugins folder next to Pete's gpuPeteOpenGL2.dll, then select it as the GPU plugin.",
+        "This plugin is no longer developed."
+    ],
+    "url": "https://github.com/Nucleoprotein/PeteOpenGL2Tweak/releases/download/2.30/gpuPeteOpenGL2Tweak.7z",
+    "hash": "ca96cbf2a6194df4b19b9c86265227480a9d054df6dc3c88f4d545a53e00b156",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Nucleoprotein/PeteOpenGL2Tweak/releases/download/$version/gpuPeteOpenGL2Tweak.7z"
+    }
+}

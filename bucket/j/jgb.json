@@ -1,0 +1,31 @@
+{
+    "version": "0.10.7",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in Rust",
+    "homepage": "https://github.com/jsgroth/jgb",
+    "license": "MIT",
+    "url": "https://github.com/jsgroth/jgb/releases/download/v0.10.7/jgb-0.10.7-windows-x86_64.zip",
+    "hash": "7c64bf194400b3b3053b91d4106a76f8d208e691b934230635c43ea34690a2ea",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\jgb-config.toml\")) {",
+        "    New-Item \"$dir\\jgb-config.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "jgb-gui.exe",
+            "jgb"
+        ],
+        "jgb-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "jgb-gui.exe",
+            "jgb"
+        ]
+    ],
+    "persist": "jgb-config.toml",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jsgroth/jgb/releases/download/v$version/jgb-$version-windows-x86_64.zip"
+    }
+}

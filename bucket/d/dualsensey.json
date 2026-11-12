@@ -1,0 +1,23 @@
+{
+    "version": "59",
+    "description": "Sony DualSense (PS5) controller tool: LED, adaptive triggers, haptics and Xbox 360/DualShock 4 emulation",
+    "homepage": "https://github.com/WujekFoliarz/DualSenseY-v2",
+    "license": "MIT",
+    "notes": [
+        "Xbox 360/DualShock 4 controller emulation requires the ViGEmBus driver.",
+        "Settings are stored in Documents\\DSY."
+    ],
+    "url": "https://github.com/WujekFoliarz/DualSenseY-v2/releases/download/59/x64-release.zip",
+    "hash": "96fc1467659f5bc0b0c0bbc56b3ec61c3ca3da4f4eebf59e9009c573c469c8c9",
+    "bin": "DualSenseY.exe",
+    "shortcuts": [
+        [
+            "DualSenseY.exe",
+            "DualSenseY"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/WujekFoliarz/DualSenseY-v2/releases/download/$version/x64-release.zip"
+    }
+}

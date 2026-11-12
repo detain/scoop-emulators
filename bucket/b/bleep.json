@@ -1,0 +1,24 @@
+{
+    "version": "1.09",
+    "description": "NES (NSF) and Game Boy (GBS) music player, with a Winamp input plugin",
+    "homepage": "https://web.archive.org/web/2013/http://www.neillcorlett.com/bleep/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "This player is no longer developed.",
+        "Bleep.exe is a text-mode (console) player. To use the Winamp plugin, copy $dir\\in_bleep.dll into Winamp's Plugins folder."
+    ],
+    "url": "https://web.archive.org/web/20130616060457id_/http://www.neillcorlett.com/downloads/Bleep-1.09.zip",
+    "hash": "ae0ea8bc28e90cb9b5f40fbb1ec769373d192908c1e76ffd5fde815ec101e34a",
+    "bin": [
+        [
+            "Bleep.exe",
+            "bleep"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Bleep.exe",
+            "Bleep!"
+        ]
+    ]
+}

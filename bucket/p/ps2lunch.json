@@ -1,0 +1,31 @@
+{
+    "version": "1.3c",
+    "description": "Game launcher and profile manager for the PCSX2 Sony PlayStation 2 emulator",
+    "homepage": "https://web.archive.org/web/20141023153305/http://www.geocities.jp/can_you_digit_sukka/PS2Lunch_English.html",
+    "license": "Freeware",
+    "notes": [
+        "This launcher is no longer developed.",
+        "Requires .NET Framework 4.0 or later."
+    ],
+    "url": "https://web.archive.org/web/20181105180004id_/http://www.geocities.jp/can_you_digit_sukka/PS2Lunch_1_3ce.zip",
+    "hash": "f34a222a90775ef63b01010c025fe04d0cd8b509b3c9dce0db9b9183b9e24e71",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\setting.ini\")) {",
+        "    New-Item \"$dir\\setting.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "PS2Lunch.exe",
+    "shortcuts": [
+        [
+            "PS2Lunch.exe",
+            "PS2Lunch"
+        ]
+    ],
+    "persist": [
+        "Setting",
+        "memcards",
+        "savefiles",
+        "ImageCatalogue",
+        "setting.ini"
+    ]
+}

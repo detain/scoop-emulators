@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "description": "Use a pair of Nintendo Switch Joy-Cons as a virtual Xbox 360 controller",
+    "homepage": "https://github.com/sam0x17/XJoy",
+    "license": "MIT",
+    "notes": [
+        "This project is no longer developed.",
+        "XJoy requires the ViGEm Bus Driver: https://github.com/ViGEm/ViGEmBus/releases",
+        "Pair both Joy-Cons with Windows over Bluetooth before running XJoy."
+    ],
+    "url": "https://github.com/sam0x17/XJoy/releases/download/v0.2.0/XJoy.v0.2.0.zip",
+    "hash": "f5659f67f889759c1737c6b6125575f327390ae5707a387da01359d8086f9c35",
+    "extract_dir": "XJoy v0.2.0",
+    "bin": [
+        [
+            "XJoy.exe",
+            "xjoy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "XJoy.exe",
+            "XJoy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/sam0x17/XJoy/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sam0x17/XJoy/releases/download/v$version/XJoy.v$version.zip",
+        "extract_dir": "XJoy v$version"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "version": "2-hf2",
+    "description": "Nintendo SNES emulator, a bsnes build with GekkoNet rollback netplay",
+    "homepage": "https://github.com/HeatXD/bsnes-netplay",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/HeatXD/bsnes-netplay/releases/download/net-release-v2-hf2/bsnes-windows.zip",
+    "hash": "ffd75ae23808574c614eaa109c53d42d427483d3e8e4111b954276c0d0871eff",
+    "extract_dir": "bsnes-nightly",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.bml\")) {",
+        "    New-Item \"$dir\\settings.bml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "bsnes.exe",
+            "bsnes-netplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bsnes.exe",
+            "bsnes-netplay"
+        ]
+    ],
+    "persist": [
+        "Firmware",
+        "settings.bml"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/HeatXD/bsnes-netplay/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "net-release-v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/HeatXD/bsnes-netplay/releases/download/net-release-v$version/bsnes-windows.zip",
+        "extract_dir": "bsnes-nightly"
+    }
+}

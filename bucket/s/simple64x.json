@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "description": "Nintendo 64 emulator, a Windows fork of simple64 with a game library, per-game settings and live Pak swapping",
+    "homepage": "https://github.com/GamesExObscura/simple64X",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/GamesExObscura/simple64X/releases/download/v1.0.0/simple64X-v1.0.0-win64.zip",
+    "hash": "c688b1a653f64d533907a22e840a69e72a4d3799bfdd32a7dc5e2cc5ad3974a9",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\simple64-gui.ini\")) {",
+        "    New-Item \"$dir\\simple64-gui.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "simple64X.exe",
+            "simple64x"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "simple64X.exe",
+            "simple64X"
+        ]
+    ],
+    "persist": "simple64-gui.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/GamesExObscura/simple64X/releases/download/v$version/simple64X-v$version-win64.zip"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "version": "0.152-0.015",
+    "description": "Custom UME (MAME + MESS) build aimed at CRT monitors and custom refresh rates (Switchres)",
+    "homepage": "https://code.google.com/archive/p/groovyarcade",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://web.archive.org/web/2013/http://mamedev.org/legal.html"
+    },
+    "notes": [
+        "GroovyUME is no longer developed as a separate build; see the groovymame manifest for the current GroovyMAME.",
+        "This is the last Windows GroovyUME release published on the GroovyArcade Google Code project."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/groovyarcade/groovyume64_0152.015.7z",
+            "hash": "97f79572ea1cd672b6dd4aa8c8eeb180073047b99d51f6552404629f64b3cacc",
+            "bin": [
+                [
+                    "ume64.exe",
+                    "groovyume"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "ume64.exe",
+                    "GroovyUME"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/groovyarcade/groovyume32_0152.015.7z",
+            "hash": "0fb9ebaa936eb8bb8bc53a796a3a1f8362eebb3fe74baf20cab67db8152d8a20",
+            "bin": [
+                [
+                    "ume.exe",
+                    "groovyume"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "ume.exe",
+                    "GroovyUME"
+                ]
+            ]
+        }
+    }
+}

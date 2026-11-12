@@ -1,0 +1,24 @@
+{
+    "version": "1.82",
+    "description": "Chip16 virtual machine emulator",
+    "homepage": "https://github.com/refractionpcsx2/refchip16",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/refractionpcsx2/refchip16/releases/download/1.82/refchip16-1.82.7z",
+    "hash": "74305f76b16b68909d4ee3c75885bad6f25702d264d649dd7758c5f331dd7767",
+    "bin": [
+        [
+            "RefChip16.exe",
+            "refchip16"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RefChip16.exe",
+            "RefChip16"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/refractionpcsx2/refchip16/releases/download/$version/refchip16-$version.7z"
+    }
+}

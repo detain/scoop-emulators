@@ -7,19 +7,36 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc6001vw/emulator_screen_01.jpg"
     ],
     "version": "310f",
-    "description": "PC6001VW is an NEC PC-6000 series emulator based on PC6001V by Yumitaro. NOTE: Emulator appears to be in both English and Japanese. Website is in Japanese.",
-    "homepage": "http://bernie.hp.infoseek.co.jp/",
-    "license": "GNU GPLv2.1",
-    "url": "https://consolo.is.cc/emu/pc6001vw/310f.7z",
-    "hash": "3d7494428cc7a2644458dc016902ea00c62aa0857f338d2ac375c77b50ad67eb",
+    "description": "NEC PC-6001, PC-6601 and SR series emulator (Windows port of PC6001V)",
+    "homepage": "http://p6ers.net/bernie/develop/pc6001vw3.html",
+    "license": "Freeware",
+    "notes": "Place the PC-6001 series ROM files in $persist_dir\\rom",
+    "url": "http://p6ers.net/bernie/develop/pc6001vw3/pc6001vw310f.zip",
+    "hash": "aefef13bd82264f710e7c1b9201b0340e194519d4bbc6a9a4c883173caecc0c8",
+    "extract_dir": "PC6001VW",
     "bin": [
-        "p6vwemu3.exe"
+        [
+            "PC6001VW3.exe",
+            "pc6001vw"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PC6001VW3.exe",
+            "PC6001VW"
+        ]
+    ],
+    "persist": [
+        "rom",
+        "tape",
+        "disk",
+        "save"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pc6001vw/",
-        "regex": "([\\da-f]+)\\.7z"
+        "url": "http://p6ers.net/bernie/develop/pc6001vw3.html",
+        "regex": "pc6001vw3/pc6001vw([\\da-z]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pc6001vw/$version.7z"
+        "url": "http://p6ers.net/bernie/develop/pc6001vw3/pc6001vw$version.zip"
     }
 }

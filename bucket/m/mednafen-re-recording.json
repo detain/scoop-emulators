@@ -1,0 +1,24 @@
+{
+    "version": "1.1",
+    "description": "Mednafen build with tool-assisted speedrun (re-recording) features for Neo Geo Pocket, WonderSwan and Lynx",
+    "homepage": "https://code.google.com/archive/p/mednafen-rr/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed. The package is retrieved from the Google Code archive.",
+        "Mednafen-Front.exe is a simple .NET launcher; mednafen.exe is available as the 'mednafen-rr' command."
+    ],
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mednafen-rr/mednafen-rr-1.1-win32.zip",
+    "hash": "a49fe2666648d340e61d63ea43f9a8c0c56a430daadbc0577cc28fa92bd5ccb2",
+    "bin": [
+        [
+            "mednafen.exe",
+            "mednafen-rr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Mednafen-Front.exe",
+            "Mednafen-RR"
+        ]
+    ]
+}

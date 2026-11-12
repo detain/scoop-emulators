@@ -1,0 +1,34 @@
+{
+    "version": "0.6.4",
+    "description": "Atari Lynx emulator",
+    "homepage": "https://github.com/laoo/Felix",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/laoo/Felix/releases/download/v0.6.4/Felix.exe",
+            "hash": "f507ab2b2a4d203018e82275f38bef9626cb080ae71b01d96e33e6953158d801"
+        },
+        "32bit": {
+            "url": "https://github.com/laoo/Felix/releases/download/v0.6.4/Felix32.exe#/Felix.exe",
+            "hash": "afccd22d92e324df4016367d155adcc127ea88f612dafe4fd2ce99e75d6ec8fe"
+        }
+    },
+    "bin": "Felix.exe",
+    "shortcuts": [
+        [
+            "Felix.exe",
+            "Felix"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/laoo/Felix/releases/download/v$version/Felix.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/laoo/Felix/releases/download/v$version/Felix32.exe#/Felix.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "0.7.0",
+    "description": "Modular x86 PC emulator written in Java, designed for digital preservation",
+    "homepage": "https://dioscuri.sourceforge.net/",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/dioscuri/dioscuri/0.7.0/Dioscuri-0.7.0.zip",
+    "hash": "sha1:16285a0bfb9919321f950dff1383b844cd873e80",
+    "pre_install": "Rename-Item \"$dir\\Dioscuri-$version.jar\" 'Dioscuri.jar'",
+    "bin": [
+        [
+            "Dioscuri.jar",
+            "dioscuri"
+        ]
+    ],
+    "persist": [
+        "config",
+        "images"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/dioscuri/rss?path=/dioscuri",
+        "regex": "Dioscuri-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/dioscuri/dioscuri/$version/Dioscuri-$version.zip"
+    }
+}

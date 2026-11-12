@@ -1,0 +1,27 @@
+{
+    "version": "0.7.1",
+    "description": "x86 PC and MS-DOS emulator written in C#",
+    "homepage": "https://github.com/gregdivis/Aeon",
+    "license": "Apache-2.0",
+    "notes": "Requires the .NET 6 Desktop Runtime.",
+    "suggest": {
+        ".NET 6 Desktop Runtime": "versions/windowsdesktop-runtime-6.0"
+    },
+    "url": "https://github.com/gregdivis/Aeon/releases/download/v0.7.1/Aeon.0.7.1.zip",
+    "hash": "637953265f1f7760a44394a8ea36b499afb1192790b99ef7617faa64971b0547",
+    "bin": "Aeon.exe",
+    "shortcuts": [
+        [
+            "Aeon.exe",
+            "Aeon"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/gregdivis/Aeon/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/gregdivis/Aeon/releases/download/v$version/Aeon.$version.zip"
+    }
+}

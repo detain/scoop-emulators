@@ -1,0 +1,54 @@
+{
+    "version": "1.3.353",
+    "description": "Nintendo Switch emulator (Ryubing community continuation of Ryujinx) (development version)",
+    "homepage": "https://ryujinx.app/",
+    "license": "MIT",
+    "notes": [
+        "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
+        "This is the Ryubing Canary channel (https://git.ryujinx.app/Ryubing/Canary)."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://git.ryujinx.app/Ryubing/Canary/releases/download/1.3.353/ryujinx-canary-1.3.353-win_x64.zip",
+            "hash": "0fa00ab56c784279547dab66baae680ad799c16677aa6989c617344da789f9c3"
+        },
+        "arm64": {
+            "url": "https://git.ryujinx.app/Ryubing/Canary/releases/download/1.3.353/ryujinx-canary-1.3.353-win_arm64.zip",
+            "hash": "f65a48a18378e1873794c1836064e94ec431557026a92cb45971fc2c35bbacd2"
+        }
+    },
+    "extract_dir": "publish",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable\")) {",
+        "   New-Item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Ryujinx.exe",
+            "ryujinx-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx (dev)"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": {
+        "url": "https://git.ryujinx.app/api/v1/repos/Ryubing/Canary/releases?limit=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://git.ryujinx.app/Ryubing/Canary/releases/download/$version/ryujinx-canary-$version-win_x64.zip"
+            },
+            "arm64": {
+                "url": "https://git.ryujinx.app/Ryubing/Canary/releases/download/$version/ryujinx-canary-$version-win_arm64.zip"
+            }
+        }
+    }
+}

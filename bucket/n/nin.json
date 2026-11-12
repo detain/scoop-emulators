@@ -1,0 +1,43 @@
+{
+    "version": "0.8.0",
+    "description": "Nintendo Entertainment System emulator",
+    "homepage": "https://github.com/Nax/nin",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nax/nin/releases/download/v0.8.0/Nin-0.8.0-win64.zip",
+            "hash": "9643da70b0b27e1b80b66e2de3318b8aa8fa82c3bb549829e3c2d7ae6d1ffc82",
+            "extract_dir": "Nin-0.8.0-win64"
+        },
+        "32bit": {
+            "url": "https://github.com/Nax/nin/releases/download/v0.8.0/Nin-0.8.0-win32.zip",
+            "hash": "a996ca46c3d2a530938da9be0d2afd96cad4fc3b6bbd3f12271b6c7c421d5277",
+            "extract_dir": "Nin-0.8.0-win32"
+        }
+    },
+    "bin": "nin.exe",
+    "shortcuts": [
+        [
+            "nin.exe",
+            "Nin"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Nax/nin/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Nax/nin/releases/download/v$version/Nin-$version-win64.zip",
+                "extract_dir": "Nin-$version-win64"
+            },
+            "32bit": {
+                "url": "https://github.com/Nax/nin/releases/download/v$version/Nin-$version-win32.zip",
+                "extract_dir": "Nin-$version-win32"
+            }
+        }
+    }
+}

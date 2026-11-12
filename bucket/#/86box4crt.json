@@ -1,0 +1,54 @@
+{
+    "version": "4.21-A01",
+    "description": "IBM PC compatible emulator, an 86Box fork for 15 kHz CRT monitors with Switchres integration",
+    "homepage": "https://github.com/psakhis/86Box4crt",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "Requires the 86Box ROM set. Place the ROM files in $persist_dir\\roms",
+        "Configure machines with the bundled regular 86Box (86box4crt-gui), then run them with 86Box4crt."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/psakhis/86Box4crt/releases/download/4.21-A01/86box4crt_win64.7z",
+            "hash": "68511f7e799d1f336d03952cdb6035bbde8e09617c08f112ffbc78fcbd4e29d4"
+        }
+    },
+    "extract_dir": "86box4crt",
+    "bin": [
+        [
+            "86Box4crt.exe",
+            "86box4crt"
+        ],
+        [
+            "86Box.exe",
+            "86box4crt-gui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "86Box4crt.exe",
+            "86Box4crt"
+        ],
+        [
+            "86Box.exe",
+            "86Box4crt (configuration)"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "86box.cfg",
+        "switchres.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/psakhis/86Box4crt/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<version>[\\d.]+-A\\d+)/(?<file>[^/]+[Ww]in[^/]*\\.7z)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/psakhis/86Box4crt/releases/download/$version/$matchFile"
+            }
+        }
+    }
+}

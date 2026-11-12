@@ -1,0 +1,36 @@
+{
+    "version": "0.7.0",
+    "description": "Sony PlayStation 5 binary analysis toolkit, virtual loader and host-side emulator",
+    "homepage": "https://github.com/claimore22/ps5rs",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/claimore22/ps5rs/releases/download/v0.7.0/ps5rs-v0.7.0-windows-x86_64.exe#/ps5rs.exe",
+                "https://github.com/claimore22/ps5rs/releases/download/v0.7.0/import-game-v0.7.0-windows-x86_64.exe#/import-game.exe"
+            ],
+            "hash": [
+                "476ca1f6df5ee6788fa5dd6d4ce2941c931021cabb74c9dcec8883b163c6e421",
+                "7cb308e94e8d1263fe816e6c605f6aac634c23dec26dd0fdc6f4b28345f52bc0"
+            ]
+        }
+    },
+    "bin": [
+        "ps5rs.exe",
+        [
+            "import-game.exe",
+            "ps5rs-import-game"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/claimore22/ps5rs/releases/download/v$version/ps5rs-v$version-windows-x86_64.exe#/ps5rs.exe",
+                    "https://github.com/claimore22/ps5rs/releases/download/v$version/import-game-v$version-windows-x86_64.exe#/import-game.exe"
+                ]
+            }
+        }
+    }
+}

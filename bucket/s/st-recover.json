@@ -1,0 +1,29 @@
+{
+    "version": "1.0",
+    "description": "Atari ST floppy disk reader that creates .ST disk images on Windows PCs",
+    "homepage": "https://github.com/ChrisBertrandDotNet/ST-Recover",
+    "license": "MS-RL",
+    "notes": "ST Recover is no longer developed. A physical PC floppy drive is required.",
+    "url": "https://github.com/ChrisBertrandDotNet/ST-Recover/releases/download/Windows/ST_Recover_1.0_90EB9F5DB9540A0A25D0442E25F100DCC6B2A8FB3D889594BC38195AE2502AF2.zip",
+    "hash": "90eb9f5db9540a0a25d0442e25f100dcc6b2a8fb3d889594bc38195ae2502af2",
+    "bin": [
+        [
+            "ST_Recover.exe",
+            "st-recover"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ST_Recover.exe",
+            "ST Recover"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/ChrisBertrandDotNet/ST-Recover/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/ST_Recover_(?<version>[\\d.]+)_(?<sha>[0-9A-Fa-f]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ChrisBertrandDotNet/ST-Recover/releases/download/$matchTag/ST_Recover_$matchVersion_$matchSha.zip"
+    }
+}

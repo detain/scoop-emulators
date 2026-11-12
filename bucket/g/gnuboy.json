@@ -1,0 +1,26 @@
+{
+    "version": "1.0.4",
+    "description": "Nintendo Game Boy and Game Boy Color emulator",
+    "homepage": "https://github.com/rofl0r/gnuboy",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/rofl0r/gnuboy/releases/download/v1.0.4/gnuboy-1.0.4-win32.zip",
+    "hash": "4e586e6e45b1ba9c5cbb97ff2f31853dc14e3e302cc5e49ea218d3bd8a0a02b9",
+    "extract_dir": "gnuboy-1.0.4-win32",
+    "bin": [
+        [
+            "sdl2gnuboy.exe",
+            "gnuboy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "sdl2gnuboy.exe",
+            "gnuboy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/rofl0r/gnuboy/releases/download/v$version/gnuboy-$version-win32.zip",
+        "extract_dir": "gnuboy-$version-win32"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "version": "1.0.0g",
+    "description": "Nintendo Game Boy emulator written in C#",
+    "homepage": "https://github.com/BotRandomness/CODE-DMG",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/BotRandomness/CODE-DMG/releases/download/v1.0.0g/CODE-DMG-v1.0.0g-win-x64.zip",
+            "hash": "a9818543e1d3ab11d21a763cfba11da486e1982ec545601850a279d9b41f0f07",
+            "extract_dir": "CODE-DMG-v1.0.0g-win-x64"
+        },
+        "32bit": {
+            "url": "https://github.com/BotRandomness/CODE-DMG/releases/download/v1.0.0g/CODE-DMG-v1.0.0g-win-x86.zip",
+            "hash": "1349d3b63c8a5eb59821587ba26aad6452a53d1cdac4720e8f528e187cd6b49a",
+            "extract_dir": "CODE-DMG-v1.0.0g-win-x86"
+        }
+    },
+    "bin": [
+        [
+            "CODE-DMG.exe",
+            "code-dmg"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CODE-DMG.exe",
+            "CODE-DMG"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/BotRandomness/CODE-DMG/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/BotRandomness/CODE-DMG/releases/download/v$version/CODE-DMG-v$version-win-x64.zip",
+                "extract_dir": "CODE-DMG-v$version-win-x64"
+            },
+            "32bit": {
+                "url": "https://github.com/BotRandomness/CODE-DMG/releases/download/v$version/CODE-DMG-v$version-win-x86.zip",
+                "extract_dir": "CODE-DMG-v$version-win-x86"
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "version": "1.2.0",
+    "description": "Sega Saturn emulator",
+    "homepage": "https://github.com/user-none/erings",
+    "license": "GPL-3.0-only",
+    "notes": "A built-in HLE BIOS is used by default; a real Saturn BIOS (USA or Japan) is optional.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/user-none/erings/releases/download/v1.2.0/erings-1.2.0-windows-amd64.zip",
+            "hash": "c9fef2496e60563ed956f6b2f16d21d14722687ee88d817e28cf655e746ccde8"
+        },
+        "arm64": {
+            "url": "https://github.com/user-none/erings/releases/download/v1.2.0/erings-1.2.0-windows-arm64.zip",
+            "hash": "3dc76db1d8806bc2692b26ce10560d002611a419a5f0d6e14b464b6019895466"
+        }
+    },
+    "bin": "erings.exe",
+    "shortcuts": [
+        [
+            "erings.exe",
+            "erings"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/user-none/erings/releases/download/v$version/erings-$version-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/user-none/erings/releases/download/v$version/erings-$version-windows-arm64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "version": "0.160-20261007",
+    "description": "Arcade emulator, revived NEHT custom build of MAME 0.160 for ROM hacks unsupported by newer MAME",
+    "homepage": "https://github.com/Ryukoken/Mame-Neht",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0160/docs/license.txt"
+    },
+    "url": "https://github.com/Ryukoken/Mame-Neht/releases/download/0.160_07-10-2026/Mame.Neht.0.160.7z",
+    "hash": "026f611386e44f3ae48f66721d5d96f9ce173366e3ac61425e64521a2b418e40",
+    "bin": [
+        [
+            "mame64.exe",
+            "mame-neht"
+        ],
+        [
+            "mameui64.exe",
+            "mameui-neht"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mameui64.exe",
+            "MAME NEHT"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "ini",
+        "mame.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Ryukoken/Mame-Neht/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>(?<base>[\\d.]+)_(?<d>\\d{2})-(?<m>\\d{2})-(?<y>\\d{4}))/(?<file>Mame\\.Neht[^/]*\\.(?:7z|zip))",
+        "replace": "${base}-${y}${m}${d}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Ryukoken/Mame-Neht/releases/download/$matchTag/$matchFile"
+    }
+}

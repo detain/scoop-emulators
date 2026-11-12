@@ -1,0 +1,31 @@
+{
+    "version": "0.6.0",
+    "description": "IPS (International Patching System) patch analysis and testing tool",
+    "homepage": "https://github.com/vector-man/IPS-Peek",
+    "license": "Freeware",
+    "notes": "Requires Microsoft .NET Framework 4.0 or later.",
+    "url": "https://github.com/vector-man/IPS-Peek/releases/download/pre-release/ips-peek-0.6.0.zip",
+    "hash": "d162432c2d219da9ca2df2305743af5736f1e0595849af8fb36e64eb94d6af97",
+    "extract_dir": "ips-peek-0.6.0",
+    "bin": [
+        [
+            "IPS Peek.exe",
+            "ips-peek"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "IPS Peek.exe",
+            "IPS Peek"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/vector-man/IPS-Peek/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/ips-peek-(?<version>[\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vector-man/IPS-Peek/releases/download/$matchTag/ips-peek-$version.zip",
+        "extract_dir": "ips-peek-$version"
+    }
+}

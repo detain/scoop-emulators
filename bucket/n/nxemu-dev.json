@@ -1,0 +1,30 @@
+{
+    "version": "0.8.0-1014-24ab1c21",
+    "description": "Nintendo Switch emulator (experimental) (development version)",
+    "homepage": "https://www.nxemu.com/",
+    "license": "GPL-3.0-only",
+    "notes": "NxEmu requires Nintendo Switch keys and firmware dumped from your own console.",
+    "url": "https://www.nxemu.com/download/nxemu-dev-0-8-0-1014-24ab1c21-zip#/dl.zip",
+    "hash": "408e96ba58a838b42b1ea15e24c45cc48ef6b5e04808f92102045d7faf102789",
+    "bin": [
+        [
+            "nxemu.exe",
+            "nxemu-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nxemu.exe",
+            "NxEmu (dev)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://www.nxemu.com/downloads.html",
+        "regex": "download/nxemu-dev-(?<major>\\d+)-(?<minor>\\d+)-(?<patch>\\d+)-(?<build>\\d+)-(?<commit>[0-9a-f]+)-zip",
+        "replace": "${major}.${minor}.${patch}-${build}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://www.nxemu.com/download/nxemu-dev-$matchMajor-$matchMinor-$matchPatch-$matchBuild-$matchCommit-zip#/dl.zip"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "svn246",
+    "description": "Nintendo Game Boy Advance emulator with a Qt front-end, based on VBA-M (VisualBoyAdvance 2)",
+    "homepage": "https://code.google.com/archive/p/gbxemu/",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": [
+        "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gbxemu/vba2_svn246.7z",
+        "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gbxemu/qt_runtime_461.7z"
+    ],
+    "hash": [
+        "bcf1c993a5aeb832151012113a29195a2f27cf1b1c5c3e1bf2209e2d3fe6aa11",
+        "f3a0a23e77eed050db15d63fdac5d8251d2cf81d9a431bd6277d2178694ce231"
+    ],
+    "bin": [
+        [
+            "vba2.exe",
+            "visualboyadvance2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "vba2.exe",
+            "VisualBoyAdvance 2"
+        ]
+    ]
+}

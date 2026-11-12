@@ -1,0 +1,26 @@
+{
+    "version": "1.0.118",
+    "description": "Per-game configuration manager for the Cemu Wii U emulator",
+    "homepage": "https://github.com/SteveLeafo/Budford",
+    "license": "MPL-2.0",
+    "notes": "This tool is no longer developed.",
+    "suggest": {
+        "Cemu": "cemu"
+    },
+    "url": "https://github.com/SteveLeafo/Budford/raw/master/Install/Budford%20-%20V1.0.118.zip",
+    "hash": "a05202430a9d6605be6305acb66bb5a578737344426fe351d3d8640f677a508a",
+    "bin": "Budford.exe",
+    "shortcuts": [
+        [
+            "Budford.exe",
+            "Budford"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/SteveLeafo/Budford/master/Install/changelog.md",
+        "regex": "## V([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/SteveLeafo/Budford/raw/master/Install/Budford%20-%20V$version.zip"
+    }
+}

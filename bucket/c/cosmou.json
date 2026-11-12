@@ -1,0 +1,23 @@
+{
+    "version": "0.13.3",
+    "description": "Nintendo Wii U frontend for Cemu with automatic setup and a Wii U-style home menu",
+    "homepage": "https://github.com/Eryski/CosmoU",
+    "license": "MIT",
+    "url": "https://github.com/Eryski/CosmoU/releases/download/v0.13.3/CosmoU-Windows-Portable-0.13.3.exe#/dl.7z",
+    "hash": "9ab50ad0676fffe98df76f6599f718767c44ce31e00107911e651b8b447b1172",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force"
+    ],
+    "bin": "CosmoU.exe",
+    "shortcuts": [
+        [
+            "CosmoU.exe",
+            "CosmoU"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Eryski/CosmoU/releases/download/v$version/CosmoU-Windows-Portable-$version.exe#/dl.7z"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "0.3.0-alpha",
+    "description": "Nintendo Entertainment System emulator that renders games in 3D with voxel sprites",
+    "homepage": "https://github.com/and0p/N3S",
+    "license": "Unknown",
+    "notes": "This emulator is no longer developed (alpha). It needs the Visual C++ 2015+ x86 runtime.",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/and0p/N3S/releases/download/v0.3.0-alpha/N3S_v0.3.0-alpha.zip",
+    "hash": "04e7d3bd76bc0dae4efed0f318e5d9258605f14cb69957a1b708b86fa24059a7",
+    "bin": "N3S.exe",
+    "shortcuts": [
+        [
+            "N3S.exe",
+            "N3S"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/and0p/N3S/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/and0p/N3S/releases/download/v$version/N3S_v$version.zip"
+    }
+}

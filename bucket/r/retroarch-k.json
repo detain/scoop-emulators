@@ -1,0 +1,70 @@
+{
+    "version": "1.16.0.K3",
+    "description": "Unofficial RetroArch build with Kaillera netplay support",
+    "homepage": "https://kaillerareborn.github.io/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Some cores require BIOS/firmware files placed in $persist_dir\\system.",
+        "See https://docs.libretro.com/library/bios/ for more information."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/radargt/0/releases/download/ra/RetroArch-1.16.0.K3-Windows-x64.7z",
+            "hash": "f0f8277b384a41761e78f909bbae7bad2fe29c07352179da5eaf1c222bdaa36e",
+            "extract_dir": "RetroArch-1.16.0.K3"
+        },
+        "32bit": {
+            "url": "https://github.com/radargt/0/releases/download/ra/RetroArch-1.16.0.K3-Windows-x86.7z",
+            "hash": "bdb284e0d640c55e5ebbd01e1ad4197c4d5c01a45e632614108ec201c15933b7",
+            "extract_dir": "RetroArch-1.16.0.K3"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\retroarch.cfg\")) {",
+        "    New-Item \"$dir\\retroarch.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "retroarch.exe",
+            "retroarch-k"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "retroarch.exe",
+            "RetroArch-K"
+        ]
+    ],
+    "persist": [
+        "cheats",
+        "config",
+        "cores",
+        "overlays",
+        "playlists",
+        "recordings",
+        "saves",
+        "screenshots",
+        "states",
+        "system",
+        "thumbnails",
+        "retroarch.cfg"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/radargt/0/releases/tags/ra",
+        "jsonpath": "$.assets[*].name",
+        "regex": "RetroArch-([\\w.]+)-Windows-x64\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/radargt/0/releases/download/ra/RetroArch-$version-Windows-x64.7z",
+                "extract_dir": "RetroArch-$version"
+            },
+            "32bit": {
+                "url": "https://github.com/radargt/0/releases/download/ra/RetroArch-$version-Windows-x86.7z",
+                "extract_dir": "RetroArch-$version"
+            }
+        }
+    }
+}

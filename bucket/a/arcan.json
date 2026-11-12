@@ -1,0 +1,33 @@
+{
+    "version": "0.3.0",
+    "description": "Scriptable frontend for launching games and emulators (libretro cores), with the Gridle theme",
+    "homepage": "https://sourceforge.net/projects/arcanfe/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This is the last Windows release of Arcan; later versions are Linux/BSD only.",
+        "Audio requires the OpenAL runtime (run $dir\\oalinst.exe once if it is not installed).",
+        "Start a theme with: arcan <theme> (e.g. arcan gridle)."
+    ],
+    "url": "https://downloads.sourceforge.net/project/arcanfe/0.3.0/Arcan-0.3.0-win32.exe#/dl.7z",
+    "hash": "baf4d3df616ff97535fa8551d871db4b1649bbcb9879be6b8368c80b91a853da",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        "arcan.exe",
+        "arcan_romman.exe"
+    ],
+    "shortcuts": [
+        [
+            "arcan.exe",
+            "Arcan (Gridle)",
+            "gridle"
+        ]
+    ],
+    "persist": "resources",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/arcanfe/rss?limit=100",
+        "regex": "Arcan-([\\d.]+)-win32\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/arcanfe/$version/Arcan-$version-win32.exe#/dl.7z"
+    }
+}

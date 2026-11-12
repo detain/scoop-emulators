@@ -1,0 +1,39 @@
+{
+    "version": "0.1.0-alpha.9",
+    "description": "Sega Genesis/Mega Drive, Sega CD, Master System, Game Gear and SG-1000 emulator",
+    "homepage": "https://pixel-clover.github.io/sandopolis/",
+    "license": "MIT",
+    "notes": "Sega CD requires BIOS files (e.g. bios_CD_U.bin) in a \"bios\" folder beside sandopolis.cfg.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pixel-clover/sandopolis/releases/download/v0.1.0-alpha.9/sandopolis-windows-x86_64.zip",
+            "hash": "83315db3bf031949475637cda93dabb1de6c398def622f59db089d2f646891e3"
+        },
+        "arm64": {
+            "url": "https://github.com/pixel-clover/sandopolis/releases/download/v0.1.0-alpha.9/sandopolis-windows-aarch64.zip",
+            "hash": "fde5b501b23af3d05a3f7eba58bbe2350f67b5b1f3c8099771582f040f6bb72c"
+        }
+    },
+    "bin": "sandopolis.exe",
+    "shortcuts": [
+        [
+            "sandopolis.exe",
+            "Sandopolis"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/pixel-clover/sandopolis/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pixel-clover/sandopolis/releases/download/v$version/sandopolis-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/pixel-clover/sandopolis/releases/download/v$version/sandopolis-windows-aarch64.zip"
+            }
+        }
+    }
+}

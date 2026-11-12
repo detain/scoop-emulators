@@ -1,0 +1,25 @@
+{
+    "version": "3.64-1.5",
+    "description": "Sega Genesis / Mega Drive emulator Kega Fusion 3.64 bundled with the xBRZ render plugin",
+    "homepage": "https://sourceforge.net/projects/xbrz/files/Kega%20Fusion/",
+    "license": "Freeware",
+    "notes": [
+        "This bundle is no longer updated.",
+        "Select the xBRZ scaler in Video -> Render Plugin and enable Video -> Filtered."
+    ],
+    "url": "https://downloads.sourceforge.net/project/xbrz/Kega%20Fusion/Kega-Fusion364%2BxBRZ.zip",
+    "hash": "5d31f01624f0b825a000f45b494c3050d29b092f318245d4fd1b0462d75d8321",
+    "bin": [
+        [
+            "Fusion.exe",
+            "fusion-xbrz"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Fusion.exe",
+            "Kega Fusion (xBRZ)"
+        ]
+    ],
+    "persist": "Fusion.ini"
+}

@@ -7,19 +7,30 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vace/emulator_screen_01.jpg"
     ],
     "version": "1.0",
-    "description": "Vace is a Jupiter Cantab Jupiter Ace emulator.",
+    "description": "Jupiter Cantab Jupiter Ace emulator",
     "homepage": "https://www.jupiter-ace.co.uk/emulators_win.html",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/vace/1.0.7z",
-    "hash": "f94c7298bed97b2930eb9ae1a30105dc3fca71c9faa1c22699e9be894171ce01",
+    "notes": "The author's site is offline; the download is hosted by the Jupiter Ace Archive (jupiter-ace.co.uk).",
+    "url": "https://www.jupiter-ace.co.uk/graphics/vace/vace10.zip",
+    "hash": "12b1df6d781f98d9e55a0db54dea8f15e140214d75f52a83b4d72305ab7b9845",
     "bin": [
-        "Vace.exe"
+        [
+            "Vace.exe",
+            "vace"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Vace.exe",
+            "Vace"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/vace/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://www.jupiter-ace.co.uk/emulators_win.html",
+        "regex": "graphics/vace/vace(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vace/$version.7z"
+        "url": "https://www.jupiter-ace.co.uk/graphics/vace/vace$cleanVersion.zip"
     }
 }

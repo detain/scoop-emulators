@@ -1,0 +1,32 @@
+{
+    "version": "1.0.4",
+    "description": "HP 42S RPN calculator emulator for the desktop",
+    "homepage": "https://www.thgsoft.ch/HP42s_EN.html",
+    "license": "Shareware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "The unregistered version is fully functional but shows an About message."
+    ],
+    "url": "https://www.thgsoft.ch/HP42s.zip",
+    "hash": "1b94c6630ebafb88c8c96ebf70112cd38044fcd87720c713cb09d2718559020b",
+    "bin": [
+        [
+            "HP42s.exe",
+            "hp42s"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HP42s.exe",
+            "HP42s"
+        ]
+    ],
+    "persist": "HP42s.ini",
+    "checkver": {
+        "url": "https://www.thgsoft.ch/HP42s_EN.html",
+        "regex": "Version\\s+([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.thgsoft.ch/HP42s.zip"
+    }
+}

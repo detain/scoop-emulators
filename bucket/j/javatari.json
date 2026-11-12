@@ -1,0 +1,27 @@
+{
+    "version": "4.1",
+    "description": "Atari 2600 emulator written in Java, with multiplayer support (original Java version)",
+    "homepage": "https://github.com/ppeccin/javatari",
+    "license": "AGPL-3.0-only",
+    "notes": [
+        "This Java version is no longer developed; its successor is the browser-based Javatari.js (https://javatari.org).",
+        "Requires a Java runtime."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://web.archive.org/web/20141013141403id_/http://javatari.org/files/javatari41.jar#/javatari.jar",
+    "hash": "ae2511a1406160297b77e55a013872b1e3215dab8c9a5095e4f8482d18157165",
+    "bin": [
+        [
+            "javatari.jar",
+            "javatari"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "javatari.jar",
+            "Javatari"
+        ]
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "version": "116",
+    "description": "Sinclair ZX Spectrum emulator",
+    "homepage": "https://spectral.zxe.io",
+    "license": "Unlicense OR 0BSD OR MIT-0",
+    "url": "https://github.com/r-lyeh/Spectral/releases/download/116/Spectral-116.exe#/Spectral.exe",
+    "hash": "73be5b522f96a3d14ea798f043a6ba91ba8e21534737e63f99d6a5b5770a1a56",
+    "bin": "Spectral.exe",
+    "shortcuts": [
+        [
+            "Spectral.exe",
+            "Spectral"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/r-lyeh/Spectral/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<version>\\d+)/(?<file>Spectral-[\\w]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://github.com/r-lyeh/Spectral/releases/download/$version/$matchFile.exe#/Spectral.exe"
+    }
+}

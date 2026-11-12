@@ -1,0 +1,30 @@
+{
+    "version": "2.0.RC1",
+    "description": "Sony PlayStation memory card editor supporting many card and save formats",
+    "homepage": "https://github.com/ShendoXT/memcardrex",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        ".NET 8 Desktop Runtime": "versions/windowsdesktop-runtime-8.0"
+    },
+    "url": "https://github.com/ShendoXT/memcardrex/releases/download/9909f69/MemcardRex.2.0.RC1.zip",
+    "hash": "01058e6471df1ff81a5837cca6d49af3ab00345034d760f5192a4a5874ac3a34",
+    "extract_dir": "MemcardRex 2.0 RC1",
+    "bin": "MemcardRex.exe",
+    "shortcuts": [
+        [
+            "MemcardRex.exe",
+            "MemcardRex"
+        ]
+    ],
+    "persist": "Backup",
+    "checkver": {
+        "github": "https://api.github.com/repos/ShendoXT/memcardrex/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[0-9a-f]+)/MemcardRex\\.(?<ver>[\\d.]+)\\.(?<pre>RC\\d+)\\.zip",
+        "replace": "${ver}.${pre}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ShendoXT/memcardrex/releases/download/$matchTag/MemcardRex.$version.zip",
+        "extract_dir": "MemcardRex $matchVer $matchPre"
+    }
+}

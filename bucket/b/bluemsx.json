@@ -7,29 +7,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/bluemsx/emulator_screen_01.jpg"
     ],
     "version": "2.8.2",
-    "description": "blueMSX is an MSX, MSX2, MSX2+ and MSXturboR emulator. Almost all MSX machines like the ColecoVision console, the Sega SG-1000 console, the Sega SC-3000 and SF-7000 computers and the Spectravideo SVI318/328 computers are also supported.",
+    "description": "MSX, MSX2, MSX2+ and MSX turboR emulator; also ColecoVision, Sega SG-1000/SC-3000/SF-7000 and Spectravideo SVI",
     "homepage": "http://www.bluemsx.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/bluemsx/2.8.2.7z",
-    "hash": "ec01b65d455d902ffb0a9e82906ecc35dfefcd5d169f07026d0f4bb76c349af1",
+    "url": "https://vik.cc/bluemsx/rel_download/blueMSXv282full.zip",
+    "hash": "5b68e1bc41590302c762093243e66602da2b2f6951a595a06b9b436b0e458bc6",
     "bin": [
-        "bluemsx.exe"
+        [
+            "blueMSX.exe",
+            "bluemsx"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/bluemsx/2.8.2.7z",
-            "hash": "ec01b65d455d902ffb0a9e82906ecc35dfefcd5d169f07026d0f4bb76c349af1"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/bluemsx/2.8.2.7z",
-            "hash": "ec01b65d455d902ffb0a9e82906ecc35dfefcd5d169f07026d0f4bb76c349af1"
-        }
-    },
+    "shortcuts": [
+        [
+            "blueMSX.exe",
+            "blueMSX"
+        ]
+    ],
     "checkver": {
-        "url": "http://www.bluemsx.com",
-        "regex": "Download BlueMSX (\\d+\\.\\d+(?:\\.\\d+)?)"
+        "url": "https://vik.cc/bluemsx/download.html",
+        "regex": "var version = \\\"blueMSXv(\\d)(\\d)(\\d)\\\"",
+        "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {
-        "url": "http://www.bluemsx.com/"
+        "url": "https://vik.cc/bluemsx/rel_download/blueMSXv$cleanVersionfull.zip"
     }
 }

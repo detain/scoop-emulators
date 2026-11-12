@@ -1,0 +1,45 @@
+{
+    "version": "0.96.7",
+    "description": "Sinclair ZX Spectrum emulator based on the ZXMAK2 engine (development version)",
+    "homepage": "https://github.com/kozynax/kozynax",
+    "license": "GPL-2.0-or-later",
+    "url": [
+        "https://github.com/kozynax/kozynax/releases/download/v0.96.7/Kozynax-0.96.7-win-x86-winforms.zip",
+        "https://github.com/kozynax/kozynax/releases/download/v0.96.7/Kozynax-0.96.7-win-x64-sdl.zip"
+    ],
+    "hash": [
+        "8dd8bd26cc2021eefd2169de7fbe4f63359cc5fecbe265c700d3a505e3c41a30",
+        "61f01f7a5ba4a10b9616052c3a0757a6f78ece55d2d88b897d9cdbd8e75c1675"
+    ],
+    "bin": [
+        [
+            "Kozynax.exe",
+            "kozynax-dev"
+        ],
+        [
+            "Kozynax.Sdl.exe",
+            "kozynax-sdl-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Kozynax.exe",
+            "Kozynax (dev)"
+        ],
+        [
+            "Kozynax.Sdl.exe",
+            "Kozynax (SDL) (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/kozynax/kozynax/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/kozynax/kozynax/releases/download/v$version/Kozynax-$version-win-x86-winforms.zip",
+            "https://github.com/kozynax/kozynax/releases/download/v$version/Kozynax-$version-win-x64-sdl.zip"
+        ]
+    }
+}

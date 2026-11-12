@@ -1,0 +1,29 @@
+{
+    "version": "0.9",
+    "description": "Nintendo 3DS emulator",
+    "homepage": "https://panda3ds.com/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/wheremyfoodat/Panda3DS/releases/download/v0.9/Windows-Qt.zip",
+    "hash": "5f77fa970712aa122dc18ceeb4f9bf784cc5cedce34b08d50be081f8bddab51c",
+    "bin": [
+        [
+            "Alber.exe",
+            "panda3ds"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Alber.exe",
+            "Panda3DS"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/wheremyfoodat/Panda3DS"
+    },
+    "autoupdate": {
+        "url": "https://github.com/wheremyfoodat/Panda3DS/releases/download/v$version/Windows-Qt.zip"
+    }
+}

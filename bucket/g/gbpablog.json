@@ -1,0 +1,17 @@
+{
+    "version": "0.9",
+    "description": "Nintendo Game Boy emulator written in C++ with wxWidgets and SDL",
+    "homepage": "https://code.google.com/archive/p/gbpablog",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gbpablog/gbpablog_0.9_win32.exe#/dl.7z",
+    "hash": "6df7ff6de0fdadce034ef44e4473558fc234666af56a63fec2a1b9bf22f8d084",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": "gbpablog.exe",
+    "shortcuts": [
+        [
+            "gbpablog.exe",
+            "gbpablog"
+        ]
+    ]
+}

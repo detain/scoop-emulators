@@ -1,0 +1,32 @@
+{
+    "version": "1.8.7-20220907",
+    "description": "Thomson TO8 microcomputer emulator",
+    "homepage": "https://sourceforge.net/projects/teoemulator/",
+    "license": "GPL-2.0-only",
+    "url": "https://downloads.sourceforge.net/project/teoemulator/windows/BETA_1.8.7/TEO_WIN_187_BETA3_20220907.zip",
+    "hash": "9932a1507a7bc3439598099c1a1dd24456f1855720dc376be460c2c947c01786",
+    "bin": [
+        [
+            "teo_win32_allegro.exe",
+            "teo"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "teo_win32_allegro.exe",
+            "Teo"
+        ]
+    ],
+    "persist": [
+        "teo.ini",
+        "autosave.ini"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/teoemulator/rss?path=/windows",
+        "regex": "/windows/BETA_(?<ver>[\\d.]+)/(?<file>TEO_WIN_\\w+?_(?<date>\\d{8})\\.zip)",
+        "replace": "${ver}-${date}"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/teoemulator/windows/BETA_$matchVer/$matchFile"
+    }
+}

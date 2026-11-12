@@ -1,0 +1,44 @@
+{
+    "version": "073.27",
+    "description": "Nintendo SNES / Super Famicom debugging emulator based on bsnes-plus with 6xBRZ filter",
+    "homepage": "https://github.com/Michael-Prince-Sharpe/bsnes-plus",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/Michael-Prince-Sharpe/bsnes-plus/releases/download/v073%2B27/bsnes-plus-073.3-6xBRZ-x64.zip",
+    "hash": "16b129538b4ccd0471331e4fcc4398b5b9f81ecd3f1aebde5fcbdb94f0933818",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\bsnes-qt.cfg\")) {",
+        "    New-Item \"$dir\\bsnes-qt.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "bsnes.exe",
+            "bsnes-plus-6xbrz"
+        ],
+        [
+            "bsnes-accuracy.exe",
+            "bsnes-plus-6xbrz-accuracy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bsnes.exe",
+            "bsnes-plus 6xBRZ"
+        ],
+        [
+            "bsnes-accuracy.exe",
+            "bsnes-plus 6xBRZ (Accuracy)"
+        ]
+    ],
+    "persist": "bsnes-qt.cfg",
+    "checkver": {
+        "github": "https://api.github.com/repos/Michael-Prince-Sharpe/bsnes-plus/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "v(?<major>\\d+)%2B(?<build>\\d+)/bsnes-plus-(?<base>[\\d.]+)-6xBRZ-x64\\.zip",
+        "replace": "${major}.${build}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Michael-Prince-Sharpe/bsnes-plus/releases/download/v$matchMajor%2B$matchBuild/bsnes-plus-$matchBase-6xBRZ-x64.zip"
+    }
+}

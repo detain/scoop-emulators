@@ -1,0 +1,27 @@
+{
+    "version": "63.0",
+    "description": "Collection of handheld LCD game simulators (Game & Watch, Tiger, VTech and more) by MADrigal",
+    "homepage": "https://www.madrigaldesign.it/sim/",
+    "license": "CC-BY-NC-ND-4.0",
+    "url": "https://www.madrigaldesign.it/sim/files/madrigalcd.zip",
+    "hash": "bea08486abc653c3296dfed5c5bf6d159de1f77e5d6f79b1208f00757a3afb47",
+    "bin": [
+        [
+            "Madrigalcd.exe",
+            "madrigalcd"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Madrigalcd.exe",
+            "MADrigal CD Collection"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.madrigaldesign.it/sim/download.php",
+        "regex": "MADrigalCD Collection</a></span>\\s*<span class=\"sp2\">Version: <b>([\\d.]+)</b>"
+    },
+    "autoupdate": {
+        "url": "https://www.madrigaldesign.it/sim/files/madrigalcd.zip"
+    }
+}

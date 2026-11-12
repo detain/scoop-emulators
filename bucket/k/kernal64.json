@@ -1,0 +1,56 @@
+{
+    "version": "1.9.0",
+    "description": "Commodore 64, 128, VIC-20 and CBM-II emulator written in Scala",
+    "homepage": "https://github.com/abbruzze/kernal64",
+    "license": "MIT",
+    "notes": "Requires a Java runtime (11 or newer) on the PATH.",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://github.com/abbruzze/kernal64/releases/download/v1.9.0/kernal64-dist.zip",
+    "hash": "36d79591028a04362ff436cf7eee067922f7e480816db4cf2dee3efea9503896",
+    "pre_install": "Expand-7zipArchive \"$dir\\kernal64_install.zip\" \"$dir\" -ExtractDir 'kernal64' -Removal",
+    "bin": [
+        [
+            "k64.bat",
+            "kernal64"
+        ],
+        [
+            "k128.bat",
+            "kernal64-c128"
+        ],
+        [
+            "k20.bat",
+            "kernal64-vic20"
+        ],
+        [
+            "kcbm2.bat",
+            "kernal64-cbm2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "k64.bat",
+            "Kernal64 (C64)"
+        ],
+        [
+            "k128.bat",
+            "Kernal64 (C128)"
+        ],
+        [
+            "k20.bat",
+            "Kernal64 (VIC-20)"
+        ],
+        [
+            "kcbm2.bat",
+            "Kernal64 (CBM-II)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/abbruzze/kernal64",
+        "regex": "^(?<tag>v\\.?(?<version>[\\w.]+))$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/abbruzze/kernal64/releases/download/$matchTag/kernal64-dist.zip"
+    }
+}

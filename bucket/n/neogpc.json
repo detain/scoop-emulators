@@ -1,0 +1,20 @@
+{
+    "version": "1.1",
+    "description": "SNK Neo Geo Pocket Color emulator with a TLCS-900H debugger",
+    "homepage": "https://code.google.com/archive/p/neogpc",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed (early test build).",
+        "Requires the DirectX 9.0c runtime (d3dx9)."
+    ],
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/neogpc/NeoGPC_1.1.zip",
+    "hash": "5523eec2c300bff9d4ec801a058b36bb6786961cb1fba123c2d8ab4fd55fd9bd",
+    "bin": "NeoGPC.exe",
+    "shortcuts": [
+        [
+            "NeoGPC.exe",
+            "NeoGPC"
+        ]
+    ],
+    "persist": "Battery"
+}

@@ -1,0 +1,41 @@
+{
+    "version": "5.0",
+    "description": "Cross-platform utility for managing, inspecting, modifying and launching retro game ROMs",
+    "homepage": "https://svengdk.github.io/RetroMultiTools",
+    "license": "BSD-2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SvenGDK/RetroMultiTools/releases/download/v5.0/win-x64.zip",
+            "hash": "092c6d3a025c54589f51a06e553f7697d785a2d5ef2a069659355b9f8e708aa3"
+        },
+        "arm64": {
+            "url": "https://github.com/SvenGDK/RetroMultiTools/releases/download/v5.0/win-arm64.zip",
+            "hash": "04dfc168c439a9133fe39d94672592a5589efdcb6b21943d592e8b4e2faa5db8"
+        }
+    },
+    "bin": [
+        [
+            "RetroMultiTools.exe",
+            "retromultitools"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RetroMultiTools.exe",
+            "Retro Multi Tools"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/SvenGDK/RetroMultiTools"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SvenGDK/RetroMultiTools/releases/download/v$version/win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/SvenGDK/RetroMultiTools/releases/download/v$version/win-arm64.zip"
+            }
+        }
+    }
+}

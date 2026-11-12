@@ -1,0 +1,37 @@
+{
+    "version": "0.9.16",
+    "description": "Nintendo 64 emulator (Rosalie's Mupen GUI fork with Kaillera netplay)",
+    "homepage": "https://github.com/Jay-Day/RMG-K",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jay-Day/RMG-K/releases/download/v0.9.16/RMG-K-Portable-Windows64-v0.9.16.zip",
+            "hash": "a5ff098308c290dc01a10b393a9f89fa84d1e2065de691e9d24b00d1fc7e88bf"
+        }
+    },
+    "bin": [
+        [
+            "RMG-K.exe",
+            "rmg-k"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RMG-K.exe",
+            "RMG-K"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Save",
+        "Screenshots"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jay-Day/RMG-K/releases/download/v$version/RMG-K-Portable-Windows64-v$version.zip"
+            }
+        }
+    }
+}

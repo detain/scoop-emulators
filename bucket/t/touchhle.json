@@ -1,0 +1,37 @@
+{
+    "version": "0.3.0",
+    "description": "High-level emulator for early iPhone OS apps and games, written in Rust",
+    "homepage": "https://touchhle.org/",
+    "license": "MPL-2.0",
+    "notes": "Put your .ipa files and .app bundles in $persist_dir\\touchHLE_apps",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/touchHLE/touchHLE/releases/download/v0.3.0/touchHLE_v0.3.0_Windows_x86_x64.zip",
+            "hash": "a8663197dcd13d8fa4dcac3ff7d105b8cf54f0161e38d5d64b2b8ebd0df5a3d7"
+        }
+    },
+    "bin": "touchHLE.exe",
+    "shortcuts": [
+        [
+            "touchHLE.exe",
+            "touchHLE"
+        ]
+    ],
+    "persist": [
+        "touchHLE_apps",
+        "touchHLE_sandbox",
+        "touchHLE_options.txt"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/touchHLE/touchHLE/releases/latest",
+        "script": "Write-Output $page",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>touchHLE_v[\\d.]+_Windows_x86_[\\w]+\\.zip)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/touchHLE/touchHLE/releases/download/v$version/$matchFile"
+            }
+        }
+    }
+}

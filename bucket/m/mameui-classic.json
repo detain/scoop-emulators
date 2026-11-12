@@ -1,0 +1,35 @@
+{
+    "version": "0.289.5",
+    "description": "Arcade emulator, MAME with the integrated MAMEUI Windows GUI front-end (Robbbert build)",
+    "homepage": "http://messui.1emulation.com/",
+    "license": "GPL-2.0-or-later",
+    "url": "http://messui.1emulation.com/mameui2895.7z",
+    "hash": "7a1920f31fd288cd4001d1f7ef1ee1eb95eb7e367500c754bfaf8f3cf79f5fcb",
+    "bin": [
+        [
+            "mameui.exe",
+            "mameui-classic"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mameui.exe",
+            "MAMEUI"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "ini"
+    ],
+    "checkver": {
+        "url": "http://messui.1emulation.com/",
+        "regex": "href=\"(?<file>mameui\\d+\\.7z)\"><img[^>]*>&nbsp;&nbsp;MAMEUI64 (?<version>[\\d.]+) "
+    },
+    "autoupdate": {
+        "url": "http://messui.1emulation.com/$matchFile"
+    }
+}

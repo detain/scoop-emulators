@@ -1,0 +1,27 @@
+{
+    "version": "1.23",
+    "description": "ROM manager and multi-emulator frontend for more than 200 console, handheld and computer platforms",
+    "homepage": "https://github.com/PhoenixInteractiveNL/emuControlCenter",
+    "license": "GPL-3.0-only",
+    "notes": "This frontend is no longer developed.",
+    "url": "https://github.com/PhoenixInteractiveNL/emuControlCenter/archive/refs/tags/1.23.zip",
+    "hash": "884d1483d38b9898b57834f136dbe17a186d7fa97bedfdd303b927ee3ae1734f",
+    "extract_dir": "emuControlCenter-1.23",
+    "bin": "ecc.exe",
+    "shortcuts": [
+        [
+            "ecc.exe",
+            "emuControlCenter"
+        ]
+    ],
+    "persist": [
+        "ecc-user",
+        "ecc-user-configs",
+        "ecc-system\\database"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/PhoenixInteractiveNL/emuControlCenter/archive/refs/tags/$version.zip",
+        "extract_dir": "emuControlCenter-$version"
+    }
+}

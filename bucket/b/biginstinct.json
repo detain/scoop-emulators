@@ -1,0 +1,38 @@
+{
+    "version": "1.01",
+    "description": "Killer Instinct arcade emulator with netplay, based on BigPEmu",
+    "homepage": "https://www.richwhitehouse.com/ki/",
+    "license": "Freeware",
+    "notes": "Killer Instinct ROM and disk images are required and not provided.",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.richwhitehouse.com/ki/builds/BigInstinct_v101.zip",
+            "hash": "3b159cb0ab2492f245a19997187af2fa01aa362ffdc909cd3de2109143957bac"
+        },
+        "arm64": {
+            "url": "https://www.richwhitehouse.com/ki/builds/BigInstinct_WinARM64_v101.zip",
+            "hash": "7162f6c905a074bef9ee6ba248aa8d36df6e3b7278a91f8f504c870336d556fd"
+        }
+    },
+    "bin": "BigInstinct.exe",
+    "shortcuts": [
+        [
+            "BigInstinct.exe",
+            "BigInstinct"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.richwhitehouse.com/ki/index.php?content=download",
+        "regex": "Current Version: <strong>([\\d.]+)</strong>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.richwhitehouse.com/ki/builds/BigInstinct_v$cleanVersion.zip"
+            },
+            "arm64": {
+                "url": "https://www.richwhitehouse.com/ki/builds/BigInstinct_WinARM64_v$cleanVersion.zip"
+            }
+        }
+    }
+}

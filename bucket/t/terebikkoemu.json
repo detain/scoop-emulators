@@ -1,0 +1,38 @@
+{
+    "version": "1.1a",
+    "description": "Bandai Terebikko / Mattel See 'N Say Video Phone player and emulator",
+    "homepage": "https://github.com/gameblabla/TerebikkoEmu",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gameblabla/TerebikkoEmu/releases/download/1.1a/terebikko-win64.exe#/terebikko.exe",
+            "hash": "2ea556c4912395c4d9cfe061621c3f7501af52a2d3d8c8bd2c46f05892cfa949"
+        },
+        "32bit": {
+            "url": "https://github.com/gameblabla/TerebikkoEmu/releases/download/1.1a/terebikko-win32.exe#/terebikko.exe",
+            "hash": "e8b9ab9542069021685f81ddb7ed837e4b10beaf40400c8c740498978aa0e749"
+        }
+    },
+    "bin": "terebikko.exe",
+    "shortcuts": [
+        [
+            "terebikko.exe",
+            "TerebikkoEmu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/gameblabla/TerebikkoEmu/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?([\\d.]+[a-z]?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gameblabla/TerebikkoEmu/releases/download/$version/terebikko-win64.exe#/terebikko.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/gameblabla/TerebikkoEmu/releases/download/$version/terebikko-win32.exe#/terebikko.exe"
+            }
+        }
+    }
+}

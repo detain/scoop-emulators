@@ -1,0 +1,36 @@
+{
+    "version": "2026.11.0",
+    "description": "Free and open source karaoke singing game inspired by Sony SingStar",
+    "homepage": "https://usdx.eu",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/UltraStar-Deluxe/USDX/releases/download/v2026.11.0/UltraStarDeluxe-windows-portable-2026.11.0.zip",
+    "hash": "66684a4c9930c8c20b0971a50356ebb858397fbbb9a7db0126362e2d435f446f",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
+        "    New-Item \"$dir\\config.ini\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\Ultrastar.db\")) {",
+        "    New-Item \"$dir\\Ultrastar.db\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "ultrastardx.exe",
+    "shortcuts": [
+        [
+            "ultrastardx.exe",
+            "UltraStar Deluxe"
+        ]
+    ],
+    "persist": [
+        "songs",
+        "playlists",
+        "screenshots",
+        "config.ini",
+        "Ultrastar.db"
+    ],
+    "checkver": {
+        "github": "https://github.com/UltraStar-Deluxe/USDX"
+    },
+    "autoupdate": {
+        "url": "https://github.com/UltraStar-Deluxe/USDX/releases/download/v$version/UltraStarDeluxe-windows-portable-$version.zip"
+    }
+}

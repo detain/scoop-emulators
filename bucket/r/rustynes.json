@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "description": "Nintendo Entertainment System emulator written in Rust",
+    "homepage": "https://github.com/siliconandsolder/rusty-nes",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/siliconandsolder/rusty-nes/releases/download/v0.2.0/rustynes-windows.7z",
+    "hash": "d3279e85dba050a8ededf2d1566fd8c43bc2086aabd87f19ec6f400d147140c1",
+    "bin": "rustynes.exe",
+    "shortcuts": [
+        [
+            "rustynes.exe",
+            "RustyNES"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/siliconandsolder/rusty-nes/releases/download/v$version/rustynes-windows.7z"
+    }
+}

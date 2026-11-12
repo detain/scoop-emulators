@@ -1,0 +1,24 @@
+{
+    "version": "0.36",
+    "description": "Nintendo Game Boy emulator written in Java",
+    "homepage": "https://code.google.com/archive/p/gameguha/",
+    "license": "BSD-3-Clause",
+    "notes": "This emulator is no longer developed. Requires a Java runtime.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gameguha/GameGuha-0.36.jar#/GameGuha.jar",
+    "hash": "d44e5091bf6ebfb5e7e99c3eada69ecd8bf01a04d2b69ef925ad5b3e93cd7b20",
+    "bin": [
+        [
+            "GameGuha.jar",
+            "gameguha"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "GameGuha.jar",
+            "GameGuha"
+        ]
+    ]
+}

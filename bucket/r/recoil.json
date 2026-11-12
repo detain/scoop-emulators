@@ -1,0 +1,40 @@
+{
+    "version": "7.0.0",
+    "description": "Viewer of pictures in native formats of classic computers (Amiga, Atari, C64, CPC, MSX, ZX Spectrum and more)",
+    "homepage": "https://recoil.sourceforge.net/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/recoil/recoil/7.0.0/recoil-7.0.0-win64.zip",
+            "hash": "sha1:5fe5924baac9ee127b4e4089607b49a801120134"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/recoil/recoil/7.0.0/recoil-7.0.0-win32.zip",
+            "hash": "sha1:41bb7a2e94aaeb3eab11073ef568f50600cbab76"
+        }
+    },
+    "bin": [
+        "recoilwin.exe",
+        "recoil2png.exe"
+    ],
+    "shortcuts": [
+        [
+            "recoilwin.exe",
+            "RECOIL"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/recoil/rss?path=/recoil",
+        "regex": "recoil/([\\d.]+)/recoil-[\\d.]+-win64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/recoil/recoil/$version/recoil-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/recoil/recoil/$version/recoil-$version-win32.zip"
+            }
+        }
+    }
+}

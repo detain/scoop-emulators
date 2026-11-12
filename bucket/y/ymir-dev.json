@@ -1,0 +1,63 @@
+{
+    "version": "0.4.2-20261108-ff935379",
+    "description": "Sega Saturn emulator (development version)",
+    "homepage": "https://github.com/ymir-emu/Ymir",
+    "license": "GPL-3.0-only",
+    "notes": "Ymir requires a Saturn IPL (BIOS) ROM. Place it in $persist_dir\\roms\\ipl",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-x86_64-AVX2-v0.4.2-dev_ff935379.zip",
+            "hash": "448f12a7cf4d24933d459915e1e16a8918285c0fcab715d78bebdb2ca561d648"
+        },
+        "arm64": {
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-ARM64-v0.4.2-dev_ff935379.zip",
+            "hash": "6491d148194f52884a36cd1fb4fbec50a0d531d907eb31e6b00cbcecfe3d76fa"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Ymir.toml\")) {",
+        "    New-Item \"$dir\\Ymir.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "ymir-sdl3.exe",
+            "ymir-dev",
+            "-p \"$dir\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ymir-sdl3.exe",
+            "Ymir (dev)",
+            "-p \"$dir\""
+        ]
+    ],
+    "persist": [
+        "Ymir.toml",
+        "roms",
+        "backup",
+        "state",
+        "savestates",
+        "screenshots"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/ymir-emu/Ymir/releases/tags/latest-nightly",
+        "script": "Write-Output $page",
+        "regex": "\"published_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[\\s\\S]*?ymir-windows-x86_64-AVX2-v(?<ver>[\\d.]+)-dev_(?<commit>[0-9a-f]+)\\.zip",
+        "replace": "${ver}-${year}${month}${day}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-x86_64-AVX2-v$matchVer-dev_$matchCommit.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-ARM64-v$matchVer-dev_$matchCommit.zip"
+            }
+        }
+    }
+}

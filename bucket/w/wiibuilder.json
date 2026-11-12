@@ -1,0 +1,37 @@
+{
+    "version": "1.10.0",
+    "description": "Nintendo Wii homebrew development tool (wiiload, raw2c and more)",
+    "homepage": "https://wiibrew.org/wiki/WiiBuilder",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.optimatek.com/app/wiibuilder_win64.zip",
+            "hash": "0ea4ff23a8501974d6dcc5373e7c23fc0b5004e31521eb409dda0dc717270f21"
+        },
+        "32bit": {
+            "url": "https://www.optimatek.com/app/wiibuilder_win32.zip",
+            "hash": "31cf08a82d78656c17964be75230031496f0bda83abb15979078bc707514d266"
+        }
+    },
+    "bin": "WiiBuilder.exe",
+    "shortcuts": [
+        [
+            "WiiBuilder.exe",
+            "WiiBuilder"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.optimatek.com/tag/wiibuilder/",
+        "regex": "WiiBuilder ([\\d.]+)\" rel=\"bookmark\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.optimatek.com/app/wiibuilder_win64.zip"
+            },
+            "32bit": {
+                "url": "https://www.optimatek.com/app/wiibuilder_win32.zip"
+            }
+        }
+    }
+}

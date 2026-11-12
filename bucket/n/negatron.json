@@ -1,0 +1,37 @@
+{
+    "version": "1.0.2",
+    "description": "Front-end for MAME focused on managing arcade machines, consoles and computers",
+    "homepage": "https://www.babelsoft.net/products/negatron.htm",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Negatron requires a Java runtime (Java 24 or newer recommended) and MAME or NegaMAME.",
+        "VLC (same bitness as Java) is optional for video previews."
+    ],
+    "suggest": {
+        "JDK": "java/openjdk",
+        "NegaMAME": "negamame"
+    },
+    "url": "https://github.com/xinyingho/Negatron/releases/download/negatron1.0.2/Negatron-1.0.2.zip",
+    "hash": "1da4897b203bcb08acd2046b8fac1c988753a0d65777da0ae1236757b5e136d1",
+    "extract_dir": "Negatron-1.0.2",
+    "bin": [
+        [
+            "Negatron.cmd",
+            "negatron"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Negatron.cmd",
+            "Negatron"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/xinyingho/Negatron",
+        "regex": "negatron([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xinyingho/Negatron/releases/download/negatron$version/Negatron-$version.zip",
+        "extract_dir": "Negatron-$version"
+    }
+}

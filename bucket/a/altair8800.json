@@ -1,0 +1,34 @@
+{
+    "version": "1.4",
+    "description": "MITS Altair 8800 emulator that runs in the terminal",
+    "homepage": "https://github.com/tommojphillips/Altair8800",
+    "license": "Unknown",
+    "notes": "ROMs (e.g. 88dskrom.bin) and disk images are not included; see https://github.com/tommojphillips/Altair8800/tree/master/roms",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tommojphillips/Altair8800/releases/download/v1.4/altair_x64.zip",
+            "hash": "618e9be59804402aa44429d952a80e8696f6ae0bb6adc961301b0eb24c4a0d9e"
+        },
+        "32bit": {
+            "url": "https://github.com/tommojphillips/Altair8800/releases/download/v1.4/altair_x86.zip",
+            "hash": "e824ff50a7ff6271ea796d7611111be5f15ec2e0aea2ec9f7f6dc82104bfa62a"
+        }
+    },
+    "bin": [
+        [
+            "altair.exe",
+            "altair8800"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tommojphillips/Altair8800/releases/download/v$version/altair_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/tommojphillips/Altair8800/releases/download/v$version/altair_x86.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "0.2.4",
+    "description": "Experimental Sony PlayStation 5 compatibility layer (runs PS5 game binaries natively)",
+    "homepage": "https://github.com/mattias800/prosper",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/mattias800/prosper#license"
+    },
+    "notes": [
+        "Requires a Vulkan 1.1-capable GPU driver and your own decrypted PS5 game dump (<TITLE_ID>-app0 directory).",
+        "Usage: prosper 'D:\\PS5\\PPSA24651-app0'"
+    ],
+    "url": "https://github.com/mattias800/prosper/releases/download/v0.2.4/prosper-windows-x64.zip",
+    "hash": "5c49f20ebbf5c3eb631b4e311a425533f3248440219a8eabd3e860ddaa51876e",
+    "bin": [
+        [
+            "start-prosper.ps1",
+            "prosper"
+        ],
+        "prosper-app.exe"
+    ],
+    "persist": "savedata",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/mattias800/prosper/releases/download/v$version/prosper-windows-x64.zip",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

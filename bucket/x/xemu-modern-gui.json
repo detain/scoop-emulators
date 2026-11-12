@@ -1,0 +1,35 @@
+{
+    "version": "2.6",
+    "description": "Microsoft Xbox emulator (unofficial xemu fork with a console-style dashboard)",
+    "homepage": "https://github.com/Prodigy488/xemu-modern-gui",
+    "license": "GPL-2.0-only",
+    "notes": "An MCPX boot ROM, flash BIOS and hard disk image are required; set their paths in the xemu settings.",
+    "url": "https://github.com/Prodigy488/xemu-modern-gui/releases/download/v2.6/xemu-0.8.139-custom-windows-x86_64.zip",
+    "hash": "7e7936674b93b203c2a890312118b7a849043f6dd78366533132070fc5825112",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\xemu.toml\")) {",
+        "    New-Item \"$dir\\xemu.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "xemu.exe",
+            "xemu-modern-gui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xemu.exe",
+            "xemu Modern GUI"
+        ]
+    ],
+    "persist": "xemu.toml",
+    "checkver": {
+        "github": "https://api.github.com/repos/Prodigy488/xemu-modern-gui/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>xemu-[^/]+-windows-x86_64)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Prodigy488/xemu-modern-gui/releases/download/v$version/$matchFile.zip"
+    }
+}

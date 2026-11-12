@@ -1,0 +1,32 @@
+{
+    "version": "0.2.3",
+    "description": "Commodore 64 emulator that streams games from the ABANDONiA library (NW.js app)",
+    "homepage": "https://sourceforge.net/projects/c64lover/",
+    "license": "CC-BY-NC-2.0",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Games are streamed over the internet; an internet connection is required."
+    ],
+    "url": "https://downloads.sourceforge.net/project/c64lover/ABANDONiA_C64Lover_v0.2.3_setup.exe",
+    "hash": "b08c00a24146bca9a69be4169890c7d3017a3eca83892c67b49948317ae60810",
+    "innosetup": true,
+    "bin": [
+        [
+            "C64LOVER.exe",
+            "c64-lover"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "C64LOVER.exe",
+            "C64 Lover"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/c64lover/rss?path=/",
+        "regex": "ABANDONiA_C64Lover_v([\\d.]+)_setup\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/c64lover/ABANDONiA_C64Lover_v$version_setup.exe"
+    }
+}

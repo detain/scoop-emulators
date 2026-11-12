@@ -1,0 +1,39 @@
+{
+    "version": "20250420-cc0c583c",
+    "description": "PC emulator suite (IBM PC, Macintosh, Atari ST, ZX Spectrum, VIC-20, RC759, CP/M-80) (development snapshot)",
+    "homepage": "http://www.hampa.ch/pce/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "Example configuration files are in $dir\\etc\\pce; start an emulator with e.g. 'pce-ibmpc -c <config>'.",
+        "System ROMs are distributed separately as pce-<version>-rom.zip at http://www.hampa.ch/pub/pce/pre/"
+    ],
+    "url": "http://www.hampa.ch/pub/pce/pre/pce-20250420-cc0c583c/pce-20250420-cc0c583c-win32.zip",
+    "hash": "d39154445d86c469accb5dfe8d06986a2bd4bf96017d0679d93b3f3121361ef1",
+    "bin": [
+        "bin\\pce-atarist.exe",
+        "bin\\pce-cpm80.exe",
+        "bin\\pce-ibmpc.exe",
+        "bin\\pce-macplus.exe",
+        "bin\\pce-rc759.exe",
+        "bin\\pce-sim405.exe",
+        "bin\\pce-simarm.exe",
+        "bin\\pce-sims32.exe",
+        "bin\\pce-spectrum.exe",
+        "bin\\pce-vic20.exe",
+        "bin\\pce-dos.exe",
+        "bin\\pce-img.exe",
+        "bin\\pfi.exe",
+        "bin\\pri.exe",
+        "bin\\psi.exe",
+        "bin\\pti.exe",
+        "bin\\aym.exe"
+    ],
+    "checkver": {
+        "url": "http://www.hampa.ch/pub/pce/pre/",
+        "regex": "pce-(\\d{8}-[0-9a-f]+)/",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "http://www.hampa.ch/pub/pce/pre/pce-$version/pce-$version-win32.zip"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "version": "0.7",
+    "description": "Commodore 64 emulator by JPL with 1541, REU, DigiMAX and SFX Sound Expander support",
+    "homepage": "https://csdb.dk/scener/?id=39420",
+    "license": "Freeware",
+    "url": "https://csdb.dk/getinternalfile.php/280709/JPL64_release.zip",
+    "hash": "2c8a7b2f20742b6553b5b1e560629d0f1a28bb9d48213d8de30208cb9749bf48",
+    "pre_install": [
+        "$sub = @(Get-ChildItem $dir -Directory)",
+        "if (($sub.Count -eq 1) -and !(Get-ChildItem $dir -Filter '*.exe')) {",
+        "    Get-ChildItem $sub[0].FullName -Force | Move-Item -Destination $dir",
+        "    Remove-Item $sub[0].FullName -Recurse -Force",
+        "}",
+        "Get-ChildItem $dir -Filter 'JPL64*.exe' | Select-Object -First 1 | Rename-Item -NewName 'JPL64.exe'"
+    ],
+    "bin": "JPL64.exe",
+    "shortcuts": [
+        [
+            "JPL64.exe",
+            "JPL64"
+        ]
+    ],
+    "checkver": {
+        "url": "https://csdb.dk/scener/?id=39420",
+        "script": [
+            "$m = [regex]::Match($page, '(?i)release/\\?id=(\\d+)\">JPL64 V([\\d.]+)')",
+            "$rel = (Invoke-WebRequest -UseBasicParsing \"https://csdb.dk/release/?id=$($m.Groups[1].Value)\").Content",
+            "$dl = [regex]::Match($rel, 'getinternalfile\\.php/(\\d+/[^\"<\\s]+\\.zip)').Groups[1].Value",
+            "Write-Output \"$($m.Groups[2].Value) $dl\""
+        ],
+        "regex": "^(?<version>[\\d.]+) (?<dl>\\d+/\\S+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://csdb.dk/getinternalfile.php/$matchDl"
+    }
+}

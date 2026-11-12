@@ -1,0 +1,24 @@
+{
+    "version": "0.0.32",
+    "description": "Gamepad mapper for DualShock 4, DualSense, Switch Pro, JoyCon and Steam Controller (experimental)",
+    "homepage": "https://github.com/Ryochan7/DS4MapperTest",
+    "license": "GPL-3.0-only",
+    "notes": "Requires the .NET 10 Desktop Runtime. Virtual controller output uses VIIPER.",
+    "suggest": {
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
+    },
+    "url": "https://github.com/Ryochan7/DS4MapperTest/releases/download/v0.0.32/DS4Test_VIIPER_0.0.32.7z",
+    "hash": "0fc48b2d065ec84605774daaac259ce44f8158cfeb117fb0d7bf5c32ba9685b2",
+    "extract_dir": "DS4Test_VIIPER\\DS4Test",
+    "bin": "DS4MapperTest.exe",
+    "shortcuts": [
+        [
+            "DS4MapperTest.exe",
+            "DS4MapperTest"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Ryochan7/DS4MapperTest/releases/download/v$version/DS4Test_VIIPER_$version.7z"
+    }
+}

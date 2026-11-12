@@ -1,0 +1,28 @@
+{
+    "version": "0.12.0-A",
+    "description": "Sony PlayStation 4 emulator, a shadPS4 fork that restores PKG support",
+    "homepage": "https://github.com/AzaharPlus/shadPS4Plus",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/AzaharPlus/shadPS4Plus/releases/download/SHAD_PS4_PLUS_0_12_0_A/ShadPs4Plus-0.12.0-A-windows.zip",
+    "hash": "bf20a188a650b9bfb139e1e08b9c0d60406610e757eadda861e439815d5bf1a5",
+    "bin": [
+        [
+            "ShadPs4Plus.exe",
+            "shadps4plus"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ShadPs4Plus.exe",
+            "ShadPs4Plus"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/AzaharPlus/shadPS4Plus/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<tag>SHAD_PS4_PLUS_[^/]+)/ShadPs4Plus-(?<version>[\\w.-]+?)-windows\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AzaharPlus/shadPS4Plus/releases/download/$matchTag/ShadPs4Plus-$version-windows.zip"
+    }
+}

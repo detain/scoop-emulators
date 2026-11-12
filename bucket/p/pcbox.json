@@ -1,0 +1,24 @@
+{
+    "version": "6.0",
+    "description": "Low-level x86 PC emulator based on 86Box",
+    "homepage": "https://github.com/PCBox/PCBox",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "PCBox requires its ROM set from https://github.com/PCBox/roms",
+        "Place the ROM files in $persist_dir\\roms"
+    ],
+    "url": "https://github.com/PCBox/PCBox/releases/download/v6.0/PCBox-6.0.zip",
+    "hash": "81807a9613324da819c8a22c8f3fb2364239a633c3d017d2d7bc7b850c9bf696",
+    "bin": "PCBox.exe",
+    "shortcuts": [
+        [
+            "PCBox.exe",
+            "PCBox"
+        ]
+    ],
+    "persist": "roms",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/PCBox/PCBox/releases/download/v$version/PCBox-$version.zip"
+    }
+}

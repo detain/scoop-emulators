@@ -1,0 +1,28 @@
+{
+    "version": "2014-03-29",
+    "description": "Casio FX-702P programmable pocket calculator emulator",
+    "homepage": "https://sourceforge.net/projects/fx702p/",
+    "license": "BSD-2-Clause",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a Java runtime (5 or later)."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/fx702p/Fx702p_Windows_noJre.zip",
+    "hash": "94ecc96cbb66695d1484bc1edd166f0785ece021932b4e7081351062773a765a",
+    "extract_dir": "Fx702p",
+    "bin": [
+        [
+            "Fx702p.exe",
+            "fx702p"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Fx702p.exe",
+            "Fx-702P"
+        ]
+    ]
+}

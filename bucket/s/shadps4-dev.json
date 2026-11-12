@@ -1,0 +1,35 @@
+{
+    "version": "2026-11-10-4788f0b",
+    "description": "Sony PlayStation 4 emulator (development version)",
+    "homepage": "https://shadps4.net/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is the SDL emulator core; install shadps4-qtlauncher for the graphical game launcher.",
+        "Tracks the rolling pre-release builds of the main branch."
+    ],
+    "suggest": {
+        "shadPS4 QtLauncher": "shadps4-qtlauncher"
+    },
+    "url": "https://github.com/shadps4-emu/shadPS4/releases/download/Pre-release-shadPS4-2026-11-10-4788f0b108a6faaae5105f8ac88ef8e1935e2b22/shadps4-win64-sdl-2026-11-10-4788f0b.zip",
+    "hash": "b5fa7dfa597c405156af65b2dcb217333ab6b4bd4ad5c908691993caa81c1fbd",
+    "bin": [
+        [
+            "shadPS4.exe",
+            "shadps4-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "shadPS4.exe",
+            "shadPS4 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/shadps4-emu/shadPS4/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<tag>Pre-release-shadPS4-[^/]+)/shadps4-win64-sdl-(?<version>\\d{4}-\\d{2}-\\d{2}-[0-9a-f]{7})\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchTag/shadps4-win64-sdl-$version.zip"
+    }
+}

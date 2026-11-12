@@ -7,19 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/swfopener/emulator_screen_01.jpg"
     ],
     "version": "1.3",
-    "description": "SWF Opener requires macromedia flash player (flash.ocx)",
-    "homepage": "http://www.browsertools.net/SWF-Opener",
+    "description": "Standalone Adobe Flash (SWF) file player",
+    "homepage": "https://web.archive.org/web/2020/http://www.browsertools.net/SWF-Opener/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/swfopener/1.3.7z",
-    "hash": "75f59fb38049dcc20a7991f93cca3f4750ba12387635f242739f8401f7d2fa5f",
+    "notes": "Requires the Adobe/Macromedia Flash Player ActiveX control (flash.ocx).",
+    "url": "https://web.archive.org/web/20240813034143id_/http://www.browsertools.net/downloads/SWFOpenerSetup.exe",
+    "hash": "5b322c1ef63806911895e9d37d2d076033c3831b87d02652a5592858f817db8e",
+    "innosetup": true,
     "bin": [
-        "SWFOpener.exe"
+        [
+            "SWFOpener.exe",
+            "swfopener"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/swfopener/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/swfopener/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "SWFOpener.exe",
+            "SWF Opener"
+        ]
+    ]
 }

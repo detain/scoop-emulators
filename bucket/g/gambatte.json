@@ -1,0 +1,28 @@
+{
+    "version": "571",
+    "description": "Nintendo Game Boy and Game Boy Color emulator focused on accuracy (Qt frontend)",
+    "homepage": "https://sourceforge.net/projects/gambatte/",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed; later versions live on as forks (e.g. Gambatte-Speedrun, the libretro core).",
+    "url": "https://downloads.sourceforge.net/project/gambatte/gambatte/r571/gambatte_qt_win32-r571.exe#/gambatte_qt.exe",
+    "hash": "79d860747dc1cb44f8b169f6b557d11be6377f43e2c1d9d48b5bbd56a522f05d",
+    "bin": [
+        [
+            "gambatte_qt.exe",
+            "gambatte"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gambatte_qt.exe",
+            "Gambatte"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/gambatte/rss?path=/gambatte",
+        "regex": "gambatte_qt_win32-r(\\d+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/gambatte/gambatte/r$version/gambatte_qt_win32-r$version.exe#/gambatte_qt.exe"
+    }
+}

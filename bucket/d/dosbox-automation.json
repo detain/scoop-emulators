@@ -1,0 +1,30 @@
+{
+    "version": "0.85.1",
+    "description": "MS-DOS emulator (DOSBox Staging fork) with an automation API for launchers, debugging and CI",
+    "homepage": "https://github.com/dosbox-automation/dosbox-automation",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/dosbox-automation/dosbox-automation/releases/download/v0.85.1/dosbox-automation-0.85.1-7567ec4-windows-x64.zip",
+    "hash": "6835621f4731235651a886ef67c4fc40693454a6386f0e5ab5c0570965a186ee",
+    "extract_dir": "dosbox-automation-0.85.1",
+    "bin": [
+        [
+            "dosbox.exe",
+            "dosbox-automation"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "dosbox.exe",
+            "dosbox-automation"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/dosbox-automation/dosbox-automation/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[^/]+)/(?<file>dosbox-automation-[^/]+-windows-x64\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dosbox-automation/dosbox-automation/releases/download/v$version/$matchFile",
+        "extract_dir": "dosbox-automation-$version"
+    }
+}

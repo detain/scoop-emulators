@@ -1,0 +1,21 @@
+{
+    "version": "2.0.5",
+    "description": "Atari 8-bit computer emulator: a desktop frontend for Atari800 with FujiNet and FastBasic support",
+    "homepage": "https://8bitrelics.com/fujisan/",
+    "license": "MIT",
+    "url": "https://github.com/pedgarcia/fujisan/releases/download/v2.0.5/Fujisan-2.0.5-windows.zip",
+    "hash": "8af99425bf7fe1afffcfe871ab61bb7083e358f4680fff75880c50644efc7f8b",
+    "bin": "Fujisan.exe",
+    "shortcuts": [
+        [
+            "Fujisan.exe",
+            "Fujisan"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/pedgarcia/fujisan"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pedgarcia/fujisan/releases/download/v$version/Fujisan-$version-windows.zip"
+    }
+}

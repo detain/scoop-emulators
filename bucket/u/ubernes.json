@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ubernes/emulator_screen_01.jpg"
     ],
     "version": "2011",
-    "description": "UberNES is a Nintendo Entertainment System emulator.",
-    "homepage": "http://www.ubernes.com/",
+    "description": "Nintendo Entertainment System emulator with online leaderboards",
+    "homepage": "https://www.ubernes.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ubernes/2011.7z",
-    "hash": "39c9c2fbc649673f17b3de756641eeb54249e913d369514469af8520373ba7b7",
+    "url": "http://www.ubernes.com/data/files/ubernes2011.zip",
+    "hash": "880211d35b34d55e4698169de7340018870eca662fdf18c9259b3ad69002cb14",
     "bin": [
-        "UberNES.exe"
+        [
+            "UberNES.exe",
+            "ubernes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "UberNES.exe",
+            "UberNES"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ubernes/",
-        "regex": "(\\d+)\\.7z"
+        "url": "https://www.ubernes.com/download.html",
+        "regex": "files/ubernes(\\d+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ubernes/$version.7z"
+        "url": "http://www.ubernes.com/data/files/ubernes$version.zip"
     }
 }

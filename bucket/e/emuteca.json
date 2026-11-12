@@ -1,0 +1,33 @@
+{
+    "version": "0.8.0.155",
+    "description": "Emulator front-end for any system, like QuickPlay",
+    "homepage": "https://chixpy.github.io/Emuteca/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/Chixpy/Emuteca/releases/download/v0.8.0.155/Emuteca.v0.8.0.155.7z",
+    "hash": "c83d94db9bcce1259714c8e2e4eee2c25370c7f82459e933734872a3c0be64bf",
+    "extract_dir": "Emuteca v0.8.0.155",
+    "bin": [
+        [
+            "EmutecaGUI\\EmutecaGUI.exe",
+            "emuteca"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "EmutecaGUI\\EmutecaGUI.exe",
+            "Emuteca"
+        ]
+    ],
+    "persist": [
+        "Data",
+        "SHA1Cache",
+        "Systems"
+    ],
+    "checkver": {
+        "github": "https://github.com/Chixpy/Emuteca"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Chixpy/Emuteca/releases/download/v$version/Emuteca.v$version.7z",
+        "extract_dir": "Emuteca v$version"
+    }
+}

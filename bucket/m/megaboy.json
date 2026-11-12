@@ -1,0 +1,29 @@
+{
+    "version": "1.1.0",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in C++",
+    "homepage": "https://github.com/MeGaL0DoN/MegaBoy",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MeGaL0DoN/MegaBoy/releases/download/v1.1.0/MegaBoy-Windows.zip",
+            "hash": "6e3afc39c22585c9bc9d444bd160d993f8f892780a5b6b9c329c46c4e309107d",
+            "extract_dir": "MegaBoy"
+        }
+    },
+    "bin": "MegaBoy.exe",
+    "shortcuts": [
+        [
+            "MegaBoy.exe",
+            "MegaBoy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MeGaL0DoN/MegaBoy/releases/download/v$version/MegaBoy-Windows.zip",
+                "extract_dir": "MegaBoy"
+            }
+        }
+    }
+}

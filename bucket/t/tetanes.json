@@ -1,0 +1,49 @@
+{
+    "version": "0.17.0",
+    "description": "Nintendo Entertainment System (NES) emulator written in Rust using wgpu",
+    "homepage": "https://github.com/lukexor/tetanes",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v0.17.0/tetanes-0.17.0-x86_64-pc-windows-msvc.zip",
+            "hash": "51047746f572b9580e2b994ef71ac1c45ac2f34c544428616e1e5179fd3ab4a8"
+        },
+        "arm64": {
+            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v0.17.0/tetanes-0.17.0-aarch64-pc-windows-msvc.zip",
+            "hash": "08616eef4bcaf32949c75a2986a2405742c98ffa6f38edf9b30b1c91620a2fd9"
+        }
+    },
+    "installer": {
+        "script": [
+            "$msi = Get-ChildItem \"$dir\\tetanes-*.msi\" | Select-Object -First 1",
+            "Expand-7zipArchive $msi.FullName \"$dir\" -Removal"
+        ]
+    },
+    "bin": [
+        [
+            "TetaNES.exe",
+            "tetanes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TetaNES.exe",
+            "TetaNES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/lukexor/tetanes/releases",
+        "script": "Write-Output $page",
+        "regex": "download/tetanes-v([\\d.]+)/tetanes-[\\d.]+-x86_64-pc-windows-msvc\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v$version/tetanes-$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v$version/tetanes-$version-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

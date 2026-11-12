@@ -1,0 +1,35 @@
+{
+    "version": "0.13.9",
+    "description": "Super Nintendo (SNES) emulator frontend recreating the PS2 SNES Station experience, using the Snes9x libretro core",
+    "homepage": "https://github.com/JPCKk/SNES-Station-PC",
+    "license": "MIT",
+    "url": "https://github.com/JPCKk/SNES-Station-PC/releases/download/v0.13.9-beta/SNES-Station-PC-v0.13.9-Beta-Windows-x64.zip",
+    "hash": "a52738714d93d4e46a832c74b04ccab565b8cbbc7ab4c062e776d0763e1a5df9",
+    "extract_dir": "SNES-Station-PC-v0.13.9-Beta-Windows-x64",
+    "pre_install": "Get-ChildItem \"$dir\\SNES-Station-PC-*.exe\" | Rename-Item -NewName 'SNES-Station-PC.exe'",
+    "bin": [
+        [
+            "SNES-Station-PC.exe",
+            "snes-station-pc"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SNES-Station-PC.exe",
+            "SNES Station PC"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "saves"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/JPCKk/SNES-Station-PC/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/(?<name>SNES-Station-PC-v(?<version>[\\d.]+)[^/]*)-Windows-x64\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/JPCKk/SNES-Station-PC/releases/download/$matchTag/$matchName-Windows-x64.zip",
+        "extract_dir": "$matchName-Windows-x64"
+    }
+}

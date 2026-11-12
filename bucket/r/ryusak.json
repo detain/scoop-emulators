@@ -1,0 +1,25 @@
+{
+    "version": "1.6.2",
+    "description": "Tool to download and share shaders, saves and mods for the Ryujinx Nintendo Switch emulator",
+    "homepage": "https://github.com/Ecks1337/RyuSAK",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Ecks1337/RyuSAK/releases/download/v1.6.2/RyuSAK-win32-x64-1.6.2.zip",
+    "hash": "25288b17fb16f9424003d33247651da2cc6d4a8ca8fcc0c4b52b5addf7e8760e",
+    "bin": [
+        [
+            "RyuSAK.exe",
+            "ryusak"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RyuSAK.exe",
+            "RyuSAK"
+        ]
+    ],
+    "persist": "electron_cache",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Ecks1337/RyuSAK/releases/download/v$version/RyuSAK-win32-x64-$version.zip"
+    }
+}

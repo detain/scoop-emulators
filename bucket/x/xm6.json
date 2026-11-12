@@ -6,20 +6,41 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/xm6/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xm6/emulator_screen_01.jpg"
     ],
-    "version": "2.06-win64",
-    "description": "XM 6 Type G is a Sharp X68000 emulator based on XM 6 by PI.. NOTE: 2.05 version of this emulator is in Japanese.",
-    "homepage": "http://www.ipc-tokai.or.jp/~ytanaka/",
+    "version": "3.38",
+    "description": "Sharp X68000 / X68030 emulator (XM6 TypeG)",
+    "homepage": "http://retropc.net/pi/xm6/index.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/xm6/2.06-win64.7z",
-    "hash": "435f6f5249305e04dbebe58e2f6c398495d7fc6d71e6827618d507a5f628d5c8",
+    "notes": "Requires X68000 BIOS ROM images (e.g. IPLROM.DAT and CGROM.DAT, or IPLROM30.DAT/ROM30.DAT for X68030) placed in $dir.",
+    "architecture": {
+        "64bit": {
+            "url": "http://retropc.net/pi/xm6/xm6_typeg_338_20260223.zip",
+            "hash": "71c2b3429163128ff341a949891098ebd28ddb84b4066f229e1ceb67043d0de9",
+            "extract_dir": "xm6_typeg_338_20260223"
+        }
+    },
     "bin": [
-        "xm6g.exe"
+        [
+            "xm6g.exe",
+            "xm6"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "xm6g.exe",
+            "XM6 TypeG"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/xm6/",
-        "regex": "([\\d.]+-[a-z]+\\d*)\\.7z"
+        "url": "http://retropc.net/pi/xm6/index.html",
+        "regex": "xm6_typeg_(?<maj>\\d)(?<min>\\d+)_(?<date>\\d{8})\\.zip",
+        "replace": "${maj}.${min}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/xm6/$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "http://retropc.net/pi/xm6/xm6_typeg_$matchMaj$matchMin_$matchDate.zip",
+                "extract_dir": "xm6_typeg_$matchMaj$matchMin_$matchDate"
+            }
+        }
     }
 }

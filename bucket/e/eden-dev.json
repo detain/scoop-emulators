@@ -1,0 +1,61 @@
+{
+    "version": "20261111-98485e5f90",
+    "description": "Nintendo Switch emulator (Yuzu fork) (development version)",
+    "homepage": "https://eden-emu.dev/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Eden requires prod.keys and Switch firmware dumped from your own console.",
+        "Portable mode is enabled; user data is stored in $persist_dir\\user",
+        "Nightly builds from https://git.eden-emu.dev/eden-ci/nightly/releases"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.eden-emu.dev/v1794441224.98485e5f90/Eden-Windows-98485e5f90-amd64-msvc-standard.zip",
+            "hash": "6ed8d530c37e2ae8c5a7e966d309419092d6a8f49c35d40ff58fe27d6ff3ad73"
+        },
+        "arm64": {
+            "url": "https://nightly.eden-emu.dev/v1794441224.98485e5f90/Eden-Windows-98485e5f90-arm64-clang-standard.zip",
+            "hash": "55144807035080cd0ddad0a74fea853ace3397b156003ce967897065573f5110"
+        }
+    },
+    "bin": [
+        [
+            "eden.exe",
+            "eden-dev"
+        ],
+        [
+            "eden-cli.exe",
+            "eden-cli-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "eden.exe",
+            "Eden (dev)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://git.eden-emu.dev/api/v1/repos/eden-ci/nightly/releases/latest",
+        "script": [
+            "$tag = json_path $page $.tag_name",
+            "$date = [DateTimeOffset]::FromUnixTimeSeconds([long]($tag -replace '^v(\\d+)\\..*$', '$1')).UtcDateTime.ToString('yyyyMMdd')",
+            "Write-Output \"$tag $date\""
+        ],
+        "regex": "^v(?<ts>\\d+)\\.(?<commit>[0-9a-f]+) (?<date>\\d{8})$",
+        "replace": "${date}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.eden-emu.dev/v$matchTs.$matchCommit/Eden-Windows-$matchCommit-amd64-msvc-standard.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.eden-emu.dev/v$matchTs.$matchCommit/Eden-Windows-$matchCommit-arm64-clang-standard.zip"
+            }
+        }
+    }
+}

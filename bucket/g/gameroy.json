@@ -1,0 +1,20 @@
+{
+    "version": "0.3.1",
+    "description": "Nintendo Game Boy emulator and debugger written in Rust",
+    "homepage": "https://github.com/Rodrigodd/gameroy",
+    "license": "MIT|Apache-2.0",
+    "url": "https://github.com/Rodrigodd/gameroy/releases/download/v0.3.1/gameroy-x86_64-pc-windows-msvc.zip",
+    "hash": "0ac32036ea7843d67e204ca8992f799a9ab94731b303c06cea1fb8f709178154",
+    "bin": "gameroy.exe",
+    "shortcuts": [
+        [
+            "gameroy.exe",
+            "GameRoy"
+        ]
+    ],
+    "persist": "gameroy.toml",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Rodrigodd/gameroy/releases/download/v$version/gameroy-x86_64-pc-windows-msvc.zip"
+    }
+}

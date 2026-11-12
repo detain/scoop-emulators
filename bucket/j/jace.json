@@ -1,0 +1,24 @@
+{
+    "version": "3.0",
+    "description": "Apple IIe emulator (Java Apple Computer Emulator), native Windows build",
+    "homepage": "https://github.com/badvision/jace",
+    "license": "Apache-2.0",
+    "url": "https://github.com/badvision/jace/releases/download/3.0/Jace_3.0_Windows_Intel64.zip",
+    "hash": "32037e36c76d39f983f4a211d85f5f0a6e5ceb062be1c51158be2e0d987c404e",
+    "bin": [
+        [
+            "Jace.exe",
+            "jace"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Jace.exe",
+            "JACE"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/badvision/jace/releases/download/$version/Jace_$version_Windows_Intel64.zip"
+    }
+}

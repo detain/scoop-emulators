@@ -1,0 +1,25 @@
+{
+    "version": "20261108",
+    "description": "Wenquxing NC1020/NC2000/NC2600 (6502-based handheld computer) emulator",
+    "homepage": "https://github.com/wangyu-/NC2000",
+    "license": "GPL-3.0-only",
+    "notes": "Requires firmware dumped from a real device. Place the ROM folders (nc2000, nc2600, nc1020, ...) in $persist_dir\\roms",
+    "url": "https://github.com/wangyu-/NC2000/releases/download/20261108/nc2000_1020emu_20261108.zip",
+    "hash": "635314b4acdb1dfb8c142b3d580cdbae2a69ed35f5bdedd49db37cc7dec5a938",
+    "bin": "nc2000.exe",
+    "shortcuts": [
+        [
+            "nc2000.exe",
+            "NC2000"
+        ]
+    ],
+    "persist": "roms",
+    "checkver": {
+        "github": "https://api.github.com/repos/wangyu-/NC2000/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "(\\d{8})"
+    },
+    "autoupdate": {
+        "url": "https://github.com/wangyu-/NC2000/releases/download/$version/nc2000_1020emu_$version.zip"
+    }
+}

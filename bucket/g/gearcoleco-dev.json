@@ -1,0 +1,55 @@
+{
+    "version": "1.7.6-11-g2805e70",
+    "description": "ColecoVision emulator and debugger (development version)",
+    "homepage": "https://github.com/drhelius/Gearcoleco",
+    "license": "GPL-3.0-or-later",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.7.6-11-g2805e70-desktop-windows-x64.zip",
+            "hash": "1999871a3c5ef8a9f85b8b791471ba141fd0fd8fcd713049aa6c28418992187e"
+        },
+        "arm64": {
+            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.7.6-11-g2805e70-desktop-windows-arm64.zip",
+            "hash": "564d945709aef9f39fba41c3f04aca61ac7baf8a67e6bd888dc39857f87bfa15"
+        }
+    },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "Gearcoleco.exe",
+            "gearcoleco-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Gearcoleco.exe",
+            "Gearcoleco (dev)"
+        ]
+    ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": {
+        "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main",
+        "regex": "Gearcoleco-([\\d.]+(?:-\\d+-g[0-9a-f]+)?)-desktop-windows-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-$version-desktop-windows-arm64.zip"
+            }
+        }
+    }
+}

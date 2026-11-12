@@ -1,0 +1,43 @@
+{
+    "version": "3.2.3",
+    "description": "Graphical emulator frontend for arcade cabinets, a community fork of Attract-Mode",
+    "homepage": "https://github.com/oomek/attractplus",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/oomek/attractplus/releases/download/3.2.3/attractplus_3.2.3_Windows.7z",
+            "hash": "8ddc2aaef8f327eb7ed1d7ba19f36d283131a553670f2069e22fbe7e733a4f53"
+        }
+    },
+    "bin": [
+        [
+            "attractplus.exe",
+            "attractplus",
+            "--config \"$dir\""
+        ],
+        [
+            "attractplus-console.exe",
+            "attractplus-console",
+            "--config \"$dir\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "attractplus.exe",
+            "Attract-Mode Plus"
+        ]
+    ],
+    "persist": [
+        "config",
+        "emulators",
+        "romlists"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/oomek/attractplus/releases/download/$version/attractplus_$version_Windows.7z"
+            }
+        }
+    }
+}

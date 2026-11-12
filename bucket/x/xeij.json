@@ -1,0 +1,28 @@
+{
+    "version": "0.26.11.08",
+    "description": "Sharp X68000 emulator written in Java",
+    "homepage": "https://stdkmd.net/xeij/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://stdkmd.net/xeij/license.htm"
+    },
+    "notes": "Requires a recent Java runtime (OpenJDK). Settings are stored in $env:APPDATA\\XEiJ\\XEiJ.ini",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://stdkmd.net/xeij/XEiJ_0261108.zip",
+    "hash": "911e2df7435294c2b395605316c790e9cc14db23fafeb369e58e424c4e2cd9ed",
+    "bin": [
+        [
+            "XEiJ.jar",
+            "xeij"
+        ]
+    ],
+    "checkver": {
+        "url": "https://stdkmd.net/xeij/",
+        "regex": "Version : <a href=\"#changes_\\d+\">([\\d.]+)</a>"
+    },
+    "autoupdate": {
+        "url": "https://stdkmd.net/xeij/XEiJ_$cleanVersion.zip"
+    }
+}

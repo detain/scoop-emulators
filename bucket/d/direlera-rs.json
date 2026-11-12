@@ -1,0 +1,15 @@
+{
+    "version": "0.5.1",
+    "description": "Kaillera netplay server for emulators, written in Rust",
+    "homepage": "https://github.com/caromdreamer/direlera-rs",
+    "license": "MIT",
+    "url": "https://github.com/caromdreamer/direlera-rs/releases/download/v0.5.1/direlera-rs_v0.5.1_x86_64-pc-windows-msvc.zip",
+    "hash": "71ca5c10dbffc6f97907d77a8d87dc05e9e4d49decfad07b3af8e8cb64c49451",
+    "extract_dir": "direlera-rs",
+    "bin": "direlera-rs.exe",
+    "persist": "config.toml",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/caromdreamer/direlera-rs/releases/download/v$version/direlera-rs_v$version_x86_64-pc-windows-msvc.zip"
+    }
+}

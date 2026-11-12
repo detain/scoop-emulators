@@ -1,0 +1,24 @@
+{
+    "version": "4.1.0",
+    "description": "ROM and disc image conversion suite (CHD, CSO, RVZ, ECM, xdelta) with GUI and CLI",
+    "homepage": "https://github.com/M5Devs/OpenROM",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/M5Devs/OpenROM/releases/download/v4.1.0/OpenROM-v4.1.0_Windows_Portable.zip",
+    "hash": "387f986690bf72d46256a1d3f15e5477f0730e7894e7af3d6621dc9a19d3b92b",
+    "bin": [
+        [
+            "openrom-core.exe",
+            "openrom"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gui.exe",
+            "OpenROM"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/M5Devs/OpenROM/releases/download/v$version/OpenROM-v$version_Windows_Portable.zip"
+    }
+}

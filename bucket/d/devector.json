@@ -1,0 +1,23 @@
+{
+    "version": "9.6.0",
+    "description": "Vector-06C (Soviet home computer) emulator with debugger",
+    "homepage": "https://github.com/parallelno/Devector",
+    "license": "MIT",
+    "url": "https://github.com/parallelno/Devector/releases/download/v9.6.0/devector-windows-x64.zip",
+    "hash": "dffa1f396bf23ebcee07251d3a93231e1e54879dd472d91f0cb0d4bfdc452656",
+    "bin": "devector.exe",
+    "shortcuts": [
+        [
+            "devector.exe",
+            "Devector"
+        ]
+    ],
+    "persist": [
+        "settings.json",
+        "imgui.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/parallelno/Devector/releases/download/v$version/devector-windows-x64.zip"
+    }
+}

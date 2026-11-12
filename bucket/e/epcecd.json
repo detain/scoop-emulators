@@ -1,0 +1,36 @@
+{
+    "version": "0.0.5",
+    "description": "NEC PC Engine/TurboGrafx-16 and PC Engine CD-ROM emulator",
+    "homepage": "https://github.com/unknowall/emuPCE",
+    "license": "MIT",
+    "notes": "CD-ROM games need a System Card BIOS. Place it in $persist_dir\\BIOS and select it in the settings.",
+    "suggest": {
+        ".NET Desktop Runtime 8": "versions/windowsdesktop-runtime-8.0"
+    },
+    "url": "https://github.com/unknowall/emuPCE/releases/download/%23PCE-0.0.5/ePceCD.0.0.5.zip",
+    "hash": "71987f3e15bcc9115dd6bd2aacfe9d8d3b0e466932c1f9183cdbb8f0ee6ef846",
+    "extract_dir": "ePceCD 0.0.5",
+    "bin": "ePceCD.exe",
+    "shortcuts": [
+        [
+            "ePceCD.exe",
+            "ePceCD"
+        ]
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Save",
+        "SaveState",
+        "ePceCD.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/unknowall/emuPCE/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "#PCE-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/unknowall/emuPCE/releases/download/%23PCE-$version/ePceCD.$version.zip",
+        "extract_dir": "ePceCD $version"
+    }
+}

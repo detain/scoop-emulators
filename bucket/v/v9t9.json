@@ -1,0 +1,40 @@
+{
+    "version": "2017-03-05",
+    "description": "Texas Instruments TI-99/4A emulator written in Java",
+    "homepage": "https://github.com/eswartz/emul",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/eswartz/emul/blob/master/LICENSE"
+    },
+    "notes": [
+        "This emulator is no longer developed.",
+        "TI-99/4A ROMs are not included; V9t9 asks for their location on first start."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://s3.amazonaws.com/V9t9/data/v9t9-170305.zip",
+    "hash": "cf1dfbd15a265b4653ef4818212c7f0f356f6d1530ef12e0b1ffbc0dafb9c338",
+    "extract_dir": "v9t9",
+    "bin": [
+        [
+            "v9t9j.jar",
+            "v9t9"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "v9t9j.jar",
+            "V9t9"
+        ]
+    ],
+    "checkver": {
+        "url": "https://s3.amazonaws.com/V9t9/?prefix=data/v9t9-",
+        "regex": "data/v9t9-(?<yy>\\d{2})(?<mm>\\d{2})(?<dd>\\d{2})\\.zip",
+        "replace": "20${yy}-${mm}-${dd}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://s3.amazonaws.com/V9t9/data/v9t9-$matchYy$matchMm$matchDd.zip"
+    }
+}

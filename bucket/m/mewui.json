@@ -1,0 +1,67 @@
+{
+    "version": "1.70.1",
+    "description": "Multi-system arcade, console and computer emulator: MAME/MESS build with an extended internal UI (MEWUI)",
+    "homepage": "https://dankan1890.github.io/mewui/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/dankan1890/mewui/blob/v1.70.1/docs/mamelicense.txt"
+    },
+    "notes": [
+        "MEWUI is no longer developed; its UI was merged into MAME 0.171.",
+        "Place ROM sets in $persist_dir\\roms"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dankan1890/mewui/releases/download/v1.70.1/Mewui64-1.70.1.zip",
+            "hash": "b252d32c00cdae777e4333f0c7e52b88b3c967d6015a8ba2b2afa8e1205318fd",
+            "bin": [
+                [
+                    "mewui64.exe",
+                    "mewui"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mewui64.exe",
+                    "MEWUI"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/dankan1890/mewui/releases/download/v1.70.1/Mewui32-1.70.1.zip",
+            "hash": "4796fe5b220aa6cec81df8ca0b794af3a047abbfa4526b754666daafc0188d91",
+            "bin": [
+                [
+                    "mewui32.exe",
+                    "mewui"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mewui32.exe",
+                    "MEWUI"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ],
+    "checkver": {
+        "github": "https://github.com/dankan1890/mewui"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dankan1890/mewui/releases/download/v$version/Mewui64-$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/dankan1890/mewui/releases/download/v$version/Mewui32-$version.zip"
+            }
+        }
+    }
+}

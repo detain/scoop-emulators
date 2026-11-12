@@ -1,0 +1,36 @@
+{
+    "version": "1.4.0",
+    "description": "Nintendo NES, NEC PC Engine and Sega Mega Drive emulator built with Flutter",
+    "homepage": "https://reki2000.github.io/fnesemu/",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/reki2000/fnesemu/releases/download/v1.4.0/fnesemu-1.4.0-windows-x64.zip",
+            "hash": "cef4cc567403a584eafa9d31fbf6831201f0d4672bb80eab9b8372dedd5542d5"
+        },
+        "arm64": {
+            "url": "https://github.com/reki2000/fnesemu/releases/download/v1.4.0/fnesemu-1.4.0-windows-arm64.zip",
+            "hash": "2d53c16793b0ef9a912d65e6f5e974025fdf63451b5ef33f9f16d9a78416c8a4"
+        }
+    },
+    "bin": "fnesemu.exe",
+    "shortcuts": [
+        [
+            "fnesemu.exe",
+            "fnesemu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/reki2000/fnesemu"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/reki2000/fnesemu/releases/download/v$version/fnesemu-$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/reki2000/fnesemu/releases/download/v$version/fnesemu-$version-windows-arm64.zip"
+            }
+        }
+    }
+}

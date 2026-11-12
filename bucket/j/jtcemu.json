@@ -1,0 +1,19 @@
+{
+    "version": "2.2.3",
+    "description": "Emulator for the East German JU+TE Computer and Tiny-Computer, written in Java",
+    "homepage": "http://www.jens-mueller.org/jtcemu/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "http://www.jens-mueller.org/jtcemu/download/jtcemu-2.2.3.jar#/jtcemu.jar",
+    "hash": "f39255fcaf55c76dc3bd9ee2255937e5b7a38f2a077a6f46209552b2da924ba3",
+    "bin": "jtcemu.jar",
+    "checkver": {
+        "url": "http://www.jens-mueller.org/jtcemu/download.html",
+        "regex": "jtcemu-([\\d.]+)\\.jar"
+    },
+    "autoupdate": {
+        "url": "http://www.jens-mueller.org/jtcemu/download/jtcemu-$version.jar#/jtcemu.jar"
+    }
+}

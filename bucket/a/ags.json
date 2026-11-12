@@ -1,0 +1,32 @@
+{
+    "version": "3.6.2.22",
+    "description": "Adventure Game Studio: engine and editor for creating and playing point-and-click adventure games",
+    "homepage": "https://www.adventuregamestudio.co.uk/site/ags/",
+    "license": "Artistic-2.0",
+    "url": "https://github.com/adventuregamestudio/ags/releases/download/v3.6.2.22/AGS-3.6.2.22-P12.zip",
+    "hash": "22360062922fb0a343cfcde00566f20685b7e8aeb0e08ceb0f9f55b04fcc6341",
+    "bin": [
+        [
+            "acwin.exe",
+            "ags"
+        ],
+        [
+            "AGSEditor.exe",
+            "ags-editor"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "AGSEditor.exe",
+            "Adventure Game Studio"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/adventuregamestudio/ags/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/AGS-[\\d.]+-(?<suffix>[A-Za-z]+\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/adventuregamestudio/ags/releases/download/v$version/AGS-$version-$matchSuffix.zip"
+    }
+}

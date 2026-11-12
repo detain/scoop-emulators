@@ -1,0 +1,47 @@
+{
+    "version": "20261106-g2f5454a",
+    "description": "Nintendo 64 emulator (Rosalie's Mupen GUI fork with Kaillera netplay) (development version)",
+    "homepage": "https://github.com/Jay-Day/RMG-K",
+    "license": "GPL-3.0-only",
+    "notes": "Tracks the rolling 'test-latest' build of master, which connects to the test lobby server.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jay-Day/RMG-K/releases/download/test-latest/RMG-K-Test-Windows64.zip",
+            "hash": "8b92e777337a8f7933b8db4d942ee56c978941155373f9f00a3aeb80c708087d"
+        }
+    },
+    "bin": [
+        [
+            "RMG-K.exe",
+            "rmg-k-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RMG-K.exe",
+            "RMG-K (dev)"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Save",
+        "Screenshots"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Jay-Day/RMG-K/commits/test-latest",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jay-Day/RMG-K/releases/download/test-latest/RMG-K-Test-Windows64.zip"
+            }
+        }
+    }
+}

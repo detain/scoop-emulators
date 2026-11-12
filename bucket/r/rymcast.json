@@ -1,0 +1,37 @@
+{
+    "version": "1.0.6",
+    "description": "Sega Genesis / Mega Drive VGM music player with accurate YM2612 FM emulation",
+    "homepage": "https://www.inphonik.com/products/rymcast-genesis-vgm-player/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.inphonik.com/files/rymcast/rymcast-1.0.6-win-x64.zip",
+            "hash": "44ed9566d55a8088119b74b8f9d8b019fc7fd51ea51bca2db992ef0786e2b52f"
+        },
+        "32bit": {
+            "url": "https://www.inphonik.com/files/rymcast/rymcast-1.0.6-win-x86.zip",
+            "hash": "5121830a6d183ae5f944394dea081a13829dd1f931dfbb3156a9ad607491195b"
+        }
+    },
+    "bin": "RYMCast.exe",
+    "shortcuts": [
+        [
+            "RYMCast.exe",
+            "RYMCast"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.inphonik.com/products/rymcast-genesis-vgm-player/",
+        "regex": "rymcast-([\\d.]+)-win-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.inphonik.com/files/rymcast/rymcast-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.inphonik.com/files/rymcast/rymcast-$version-win-x86.zip"
+            }
+        }
+    }
+}

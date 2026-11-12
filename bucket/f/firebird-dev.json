@@ -1,0 +1,55 @@
+{
+    "version": "162-20261101-f75e590",
+    "description": "Texas Instruments TI-Nspire calculator emulator (development version)",
+    "homepage": "https://github.com/nspire-emus/firebird",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Firebird requires TI-Nspire boot1 and flash (OS) images, which are not included.",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/nspire-emus/firebird/workflows/windows/master/firebird-emu-win64.zip",
+            "hash": "092cc7cbddeb8fc392c1b80cab824a4e2ad364f4c797d28686cc92c00d93cbc3"
+        },
+        "32bit": {
+            "url": "https://nightly.link/nspire-emus/firebird/workflows/windows/master/firebird-emu-win32.zip",
+            "hash": "ac615741d7a5abdd412c3eb1e6a00975a06a974aa713eed4ad56f32a38dc4a89"
+        }
+    },
+    "extract_dir": "firebird-emu",
+    "bin": [
+        [
+            "firebird-emu.exe",
+            "firebird-emu-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "firebird-emu.exe",
+            "Firebird Emu (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/nspire-emus/firebird/actions/workflows/windows.yml/runs?branch=master&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/nspire-emus/firebird/workflows/windows/master/firebird-emu-win64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/nspire-emus/firebird/workflows/windows/master/firebird-emu-win32.zip"
+            }
+        },
+        "extract_dir": "firebird-emu"
+    }
+}

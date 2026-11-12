@@ -1,0 +1,26 @@
+{
+    "version": "0.6.7",
+    "description": "VM Labs NUON emulator",
+    "homepage": "https://github.com/andkrau/NuanceResurrection",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/andkrau/NuanceResurrection/blob/master/License.txt"
+    },
+    "url": "https://github.com/andkrau/NuanceResurrection/releases/download/0.6.7/Nuance_067.zip",
+    "hash": "55f05d442198cac544caf999757a4c261727262b369fdbd20661def68aca991c",
+    "bin": "Nuance.exe",
+    "shortcuts": [
+        [
+            "Nuance.exe",
+            "Nuance"
+        ]
+    ],
+    "persist": [
+        "nuance.cfg",
+        "FlashEEPROM.bin"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/andkrau/NuanceResurrection/releases/download/$version/Nuance_$cleanVersion.zip"
+    }
+}

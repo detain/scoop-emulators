@@ -7,19 +7,20 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xgs32/emulator_screen_01.jpg"
     ],
     "version": "1.6.4",
-    "description": "XGS/32 is an Apple IIgs emulator for Windows",
+    "description": "Apple IIgs emulator",
     "homepage": "http://xgs32.emucamp.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/xgs32/1.6.4.7z",
-    "hash": "56df8a3c723a25e2ec90728a59fc06f14a8da006089f0f204c1b122c29b82f6f",
-    "bin": [
-        "XGS32.EXE"
+    "notes": [
+        "Requires an Apple IIgs ROM image (ROM 01 or ROM 03) placed in $dir.",
+        "XGS/32 is a Visual Basic 6 program; if it complains about missing controls, register COMCTL32.OCX, COMDLG32.OCX and SSA3D30.OCX from $dir with regsvr32 (as administrator)."
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/xgs32/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/xgs32/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20070704213723id_/http://xgs32.emucamp.com/files/v1.6beta/xgs32setup.EXE#/dl.7z",
+    "hash": "677c19714874d93db08c9e906c7d7dab1536c4bf05a9284b212682ec2769c6fe",
+    "bin": "XGS32.EXE",
+    "shortcuts": [
+        [
+            "XGS32.EXE",
+            "XGS-32"
+        ]
+    ]
 }

@@ -1,0 +1,39 @@
+{
+    "version": "4.0.0-beta.2",
+    "description": "ROM collection manager for MAME and Logiqx DAT files, written in Java (development version)",
+    "homepage": "https://github.com/optyfr/JRomManager",
+    "license": "GPL-2.0-only",
+    "notes": "Requires a Java 25 (or later) runtime on the PATH.",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://github.com/optyfr/JRomManager/releases/download/4.0.0-beta.2/JRomManager-4.0.0-beta.2-win-x64.zip",
+    "hash": "3ea5593663cd6199bf90f56382b0b566a6a60d3edf424d10401f725666d22884",
+    "extract_dir": "JRomManager-4.0.0-beta.2-win-x64",
+    "pre_install": [
+        "$bat = \"$dir\\JRomManager.bat\"",
+        "$content = (Get-Content $bat -Raw) -replace '(?i)^@echo off', \"@echo off`r`ncd /d `\"%~dp0`\"\"",
+        "Set-Content $bat $content -Encoding Ascii -NoNewline"
+    ],
+    "bin": [
+        [
+            "JRomManager.bat",
+            "jrommanager-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "JRomManager.bat",
+            "JRomManager (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/optyfr/JRomManager/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([\\d.]+(?:-[\\w.]+)?)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/optyfr/JRomManager/releases/download/$version/JRomManager-$version-win-x64.zip",
+        "extract_dir": "JRomManager-$version-win-x64"
+    }
+}

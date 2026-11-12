@@ -1,0 +1,19 @@
+{
+    "version": "r38",
+    "description": "Experimental Sony PlayStation Portable emulator based on Potemkin",
+    "homepage": "https://code.google.com/archive/p/yaupspe",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Only some PSPSDK samples and homebrew run; commercial games are not supported."
+    ],
+    "url": [
+        "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/yaupspe/yaupspe.exe",
+        "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/yaupspe/SDL.dll"
+    ],
+    "hash": [
+        "b4441cfbe765f2b513867ac96eb6ec636f14aa1c1e6a4ba9948e6c45f424c0a1",
+        "bafc1b4216d1ac1cf6168f5c26aa94314f7b03afca1462b3df611c016077ee94"
+    ],
+    "bin": "yaupspe.exe"
+}

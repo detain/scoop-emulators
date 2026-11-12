@@ -1,0 +1,27 @@
+{
+    "version": "0.8.2",
+    "description": "Nintendo Game Boy and Game Boy Color emulator",
+    "homepage": "https://github.com/FIX94/fixGB",
+    "license": "MIT",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Drag and drop a ROM onto fixGB or pass it on the command line; keyboard controls only.",
+        "Optional: place the GBC BIOS named gbc_bios.bin in the same folder as the ROM."
+    ],
+    "url": "https://github.com/FIX94/fixGB/releases/download/alpha-v0.8.2/fixGB-Alpha-v0.8.2.zip",
+    "hash": "ddc5fa55a0221650120135110982a487125efb0d9568e613a8711b7a1dcee1d8",
+    "bin": "fixGB.exe",
+    "shortcuts": [
+        [
+            "fixGB.exe",
+            "fixGB"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/FIX94/fixGB",
+        "regex": "alpha-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FIX94/fixGB/releases/download/alpha-v$version/fixGB-Alpha-v$version.zip"
+    }
+}

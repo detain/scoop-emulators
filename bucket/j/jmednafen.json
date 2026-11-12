@@ -1,0 +1,26 @@
+{
+    "version": "0.2.2",
+    "description": "Java graphical frontend for the Mednafen multi-system emulator",
+    "homepage": "https://sourceforge.net/projects/jmednafen/",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This frontend is no longer developed.",
+        "Set the path to mednafen.exe in the JMednafen settings."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre",
+        "Mednafen": "mednafen"
+    },
+    "url": "https://downloads.sourceforge.net/project/jmednafen/0.2.2/JMednafen-0.2.2.exe#/dl.rar",
+    "hash": "sha1:302ff6719261159b2586300de908d762c6f6cbed",
+    "extract_dir": "JMednafen-0.2.2\\src",
+    "bin": "JMednafen.jar",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/jmednafen/rss",
+        "regex": "JMednafen-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/jmednafen/$version/JMednafen-$version.exe#/dl.rar",
+        "extract_dir": "JMednafen-$version\\src"
+    }
+}

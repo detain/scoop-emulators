@@ -1,0 +1,26 @@
+{
+    "version": "0.1.10",
+    "description": "Konami Viper and IGS arcade emulator",
+    "homepage": "https://github.com/tsukina123/kitsune-releases",
+    "license": "Freeware",
+    "url": "https://github.com/tsukina123/kitsune-releases/releases/download/v0.1.10/Kitsune-win-x64-stable-Portable.zip",
+    "hash": "3e4c4675404a1602450cf690564486f1562081bffa9555bb262fe33a18d62649",
+    "bin": [
+        [
+            "Kitsune Emulator.exe",
+            "kitsune"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Kitsune Emulator.exe",
+            "Kitsune"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/tsukina123/kitsune-releases"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tsukina123/kitsune-releases/releases/download/v$version/Kitsune-win-x64-stable-Portable.zip"
+    }
+}

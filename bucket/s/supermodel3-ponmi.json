@@ -1,0 +1,37 @@
+{
+    "version": "20260730",
+    "description": "Sega Model 3 arcade emulator, a Supermodel fork with GUI and gameplay enhancements",
+    "homepage": "https://github.com/BackPonBeauty/Supermodel3-PonMi",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/BackPonBeauty/Supermodel3-PonMi/releases/download/20260730/PonMi-20260730.zip",
+    "hash": "49acec167a61d050ece961b7f8a7325c784c056320fad053705e8862627d01b4",
+    "extract_dir": "PonMi-20260730",
+    "bin": [
+        [
+            "supermodel.exe",
+            "supermodel3-ponmi"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "supermodel.exe",
+            "Supermodel3 PonMi"
+        ]
+    ],
+    "persist": [
+        "Config\\Supermodel.ini",
+        "imgui.ini",
+        "ponmi.ini",
+        "NVRAM",
+        "Replays",
+        "Saves"
+    ],
+    "checkver": {
+        "github": "https://github.com/BackPonBeauty/Supermodel3-PonMi",
+        "regex": "(\\d{8})$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/BackPonBeauty/Supermodel3-PonMi/releases/download/$version/PonMi-$version.zip",
+        "extract_dir": "PonMi-$version"
+    }
+}

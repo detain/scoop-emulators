@@ -1,0 +1,44 @@
+{
+    "version": "1.2.4",
+    "description": "Commodore Plus/4 (TED) music player for TMF and PSID files, based on a stripped-down Plus/4 emulator",
+    "homepage": "https://github.com/calmopyrin/tedplay",
+    "license": "Freeware",
+    "url": "https://github.com/calmopyrin/tedplay/releases/download/1.2.4/TedPlayWTL_1.2.4.zip",
+    "hash": "64cd12a51cf5bdc511d8a536ad7d10734a87c4d03c09cc913da51ef2f88fc0d0",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "TedPlayWTLx64.exe",
+                    "tedplay"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "TedPlayWTLx64.exe",
+                    "TedPlay"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "TedPlayWTL.exe",
+                    "tedplay"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "TedPlayWTL.exe",
+                    "TedPlay"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/calmopyrin/tedplay"
+    },
+    "autoupdate": {
+        "url": "https://github.com/calmopyrin/tedplay/releases/download/$version/TedPlayWTL_$version.zip"
+    }
+}

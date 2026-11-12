@@ -1,0 +1,35 @@
+{
+    "version": "20261030-g4217bdd",
+    "description": "Nintendo Entertainment System emulator written in Dart and Flutter (development version)",
+    "homepage": "https://nesd.jpj.dev",
+    "license": "MIT",
+    "url": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd.nightly.windows-x64.zip",
+    "hash": "90ff6541a8485eb9aae68833fb8b7858755acb98a6e7478babac5beec69f11f1",
+    "extract_dir": "artifacts\\nesd.nightly.windows-x64",
+    "bin": [
+        [
+            "nesd.exe",
+            "nesd-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nesd.exe",
+            "NESd (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/jpjonte/NESd/commits/nightly",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jpjonte/NESd/releases/download/nightly/nesd.nightly.windows-x64.zip",
+        "extract_dir": "artifacts\\nesd.nightly.windows-x64"
+    }
+}

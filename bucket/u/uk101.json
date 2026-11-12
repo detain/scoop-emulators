@@ -1,0 +1,29 @@
+{
+    "version": "1.4.0",
+    "description": "Compukit UK101 (1979 6502 hobby computer) simulation written in Java",
+    "homepage": "https://uk101.sourceforge.net/",
+    "license": "BSD-3-Clause",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/uk101/uk101/v1.40/uk101-1.4.0.zip",
+    "hash": "sha1:08f9da0cd0f97e902d317800d0e3f91353ccc626",
+    "pre_install": "Rename-Item \"$dir\\uk101-$version.jar\" 'uk101.jar'",
+    "bin": "uk101.jar",
+    "shortcuts": [
+        [
+            "uk101.jar",
+            "Compukit UK101",
+            "",
+            "icons\\uk101.ico"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/uk101/rss",
+        "regex": "uk101/(?<dir>v[\\d.]+)/uk101-(?<version>[\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/uk101/uk101/$matchDir/uk101-$version.zip"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "version": "0.5.1",
+    "description": "Nintendo 3DS emulator written in C",
+    "homepage": "https://github.com/burhanr13/Tanuki3DS",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/burhanr13/Tanuki3DS/releases/download/v0.5.1/Tanuki3DS-windows.zip",
+            "hash": "e56f7b85cd8d4b69f92da72f73358aeb86a21e7a5e58230ad6845d18376157b5"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\ctremu.ini\")) {",
+        "    New-Item \"$dir\\ctremu.ini\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "ctremu.exe",
+            "tanuki3ds"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ctremu.exe",
+            "Tanuki3DS"
+        ]
+    ],
+    "persist": [
+        "3ds",
+        "ctremu.ini",
+        "portable.txt"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/burhanr13/Tanuki3DS/releases/download/v$version/Tanuki3DS-windows.zip"
+            }
+        }
+    }
+}

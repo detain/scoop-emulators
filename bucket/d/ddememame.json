@@ -1,0 +1,37 @@
+{
+    "version": "0.37b16.99.9",
+    "description": "Arcade emulator, an unofficial Japanese MAME32 0.37b16 build with Kaillera netplay",
+    "homepage": "https://web.archive.org/web/20140209203032/http://www.geocities.jp/ddememame/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0160/docs/license.txt"
+    },
+    "notes": [
+        "This emulator is no longer developed. The download is an Internet Archive snapshot of the original site.",
+        "Kaillera netplay requires kailleraclient.dll placed in $dir."
+    ],
+    "url": "https://web.archive.org/web/20131014012126id_/http://www.geocities.jp/ddememame/ddememame_new.zip",
+    "hash": "32dc0fd1932ff3210dbc3bd6f8452eda0e72a83a38d05bf1d6a88113fdc81c33",
+    "bin": [
+        [
+            "DDEmeMame32jk.exe",
+            "ddememame"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "DDEmeMame32jk.exe",
+            "DDEmeMame"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "hi",
+        "ini",
+        "nvram",
+        "roms",
+        "samples",
+        "snap",
+        "sta"
+    ]
+}

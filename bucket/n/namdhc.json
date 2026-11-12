@@ -1,0 +1,34 @@
+{
+    "version": "2.0",
+    "description": "Windows frontend for MAME's CHDMAN to convert disc images to and from CHD",
+    "homepage": "https://github.com/umageddon/namDHC",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/umageddon/namDHC/releases/download/v2.0/namDHC_v200.zip",
+    "hash": "438d911e82c950b12ac86ddddf04011f2d8008e580fc4c89da8e604f19f87e55",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\namDHC.ini\")) {",
+        "    New-Item \"$dir\\namDHC.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "namDHC.exe",
+            "namdhc"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "namDHC.exe",
+            "namDHC"
+        ]
+    ],
+    "persist": "namDHC.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/umageddon/namDHC/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>namDHC_v[\\d.]+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/umageddon/namDHC/releases/download/v$version/$matchFile"
+    }
+}

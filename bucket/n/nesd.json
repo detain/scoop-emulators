@@ -1,0 +1,23 @@
+{
+    "version": "0.21.3",
+    "description": "Nintendo Entertainment System emulator written in Dart and Flutter",
+    "homepage": "https://nesd.jpj.dev",
+    "license": "MIT",
+    "url": "https://github.com/jpjonte/NESd/releases/download/0.21.3/nesd.0.21.3.windows-x64.zip",
+    "hash": "032b4be4f5756a4064fb6006c0eb7024e6b48194ecfe1b31a7a2eec68cdfa6d4",
+    "extract_dir": "artifacts\\nesd.0.21.3.windows-x64",
+    "bin": "nesd.exe",
+    "shortcuts": [
+        [
+            "nesd.exe",
+            "NESd"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/jpjonte/NESd"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jpjonte/NESd/releases/download/$version/nesd.$version.windows-x64.zip",
+        "extract_dir": "artifacts\\nesd.$version.windows-x64"
+    }
+}

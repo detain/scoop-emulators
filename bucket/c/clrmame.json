@@ -1,0 +1,29 @@
+{
+    "version": "0.7.3",
+    "description": "MAME ROM set scanner and rebuilder (successor to clrmamepro)",
+    "homepage": "https://mamedev.emulab.it/clrmamepro/",
+    "license": "Freeware",
+    "notes": "clrmame stores settings.xml next to its executable; back it up before updating.",
+    "url": "https://mamedev.emulab.it/clrmamepro/binaries/clrmame_v073.zip",
+    "hash": "0ddc7e14f6efe884371d9b6e36863fa608437d1dd4a3aaafeba853aa73bb748d",
+    "bin": [
+        "clrmame.exe",
+        [
+            "clrmameUI.exe",
+            "clrmameui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "clrmameUI.exe",
+            "clrmame"
+        ]
+    ],
+    "checkver": {
+        "url": "https://mamedev.emulab.it/clrmamepro/",
+        "regex": "binaries/clrmame_v\\d+\\.zip\">clrmame ([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://mamedev.emulab.it/clrmamepro/binaries/clrmame_v$cleanVersion.zip"
+    }
+}

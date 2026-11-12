@@ -1,0 +1,37 @@
+{
+    "version": "4476-v25",
+    "description": "MS-DOS, Windows 95 and 98 emulator (DOSBox SVN fork with optional enhancements)",
+    "homepage": "https://github.com/MartyShepard/DOSBox-Optionals",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/MartyShepard/DOSBox-Optionals/releases/download/4476/DOSBox.SVN.r4476.Optionals.v25.Build.on.Oct.10.2025.085550.7z",
+    "hash": "0a4f0a41b01eb60957528b147fe6f0363ccabc1a981f543b9aa62eea14b28243",
+    "pre_install": [
+        "$sub = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -like 'DOSBox SVN*' } | Select-Object -First 1",
+        "if ($sub) {",
+        "    Get-ChildItem -LiteralPath $sub.FullName -Force | Move-Item -Destination \"$dir\" -Force",
+        "    Remove-Item -LiteralPath $sub.FullName -Recurse -Force",
+        "}"
+    ],
+    "bin": [
+        [
+            "Dosbox\\dosbox.exe",
+            "dosbox-optionals"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Dosbox\\dosbox.exe",
+            "DOSBox Optionals"
+        ]
+    ],
+    "persist": "Dosbox\\DATA",
+    "checkver": {
+        "github": "https://api.github.com/repos/MartyShepard/DOSBox-Optionals/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/(?<file>DOSBox\\.SVN\\.r(?<rev>\\d+)\\.Optionals\\.v(?<opt>\\d+)\\.[^/]+\\.7z)",
+        "replace": "${rev}-v${opt}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/MartyShepard/DOSBox-Optionals/releases/download/$matchTag/$matchFile"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "version": "0.9.2",
+    "description": "Sony PlayStation 2 DEV9 (network adapter and HDD) plugin for legacy PCSX2, written in C#",
+    "homepage": "https://github.com/TheLastRar/CLR-DEV9",
+    "license": "Unknown",
+    "notes": [
+        "This is a DEV9 plugin for PCSX2 1.6 and older, not a standalone emulator. PCSX2 1.7+ has built-in DEV9 support.",
+        "Copy CLR_DEV9.dll from $dir to your PCSX2 plugins folder."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TheLastRar/CLR-DEV9/releases/download/V0.9.2/CLR_DEV9.X64.7z",
+            "hash": "a9f4215a39fb8fe8d1b874265532da13bc1371ca85c577d82de6e63b578dca51"
+        },
+        "32bit": {
+            "url": "https://github.com/TheLastRar/CLR-DEV9/releases/download/V0.9.2/CLR_DEV9.X86.7z",
+            "hash": "3c219b07596f32298dcaf4e3347dad4dd9f291254f41f0ebf0e41e98b7f455cb"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/TheLastRar/CLR-DEV9"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TheLastRar/CLR-DEV9/releases/download/V$version/CLR_DEV9.X64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/TheLastRar/CLR-DEV9/releases/download/V$version/CLR_DEV9.X86.7z"
+            }
+        }
+    }
+}

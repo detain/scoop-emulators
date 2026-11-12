@@ -1,0 +1,48 @@
+{
+    "version": "1.1.1",
+    "description": "Nintendo Game Boy Advance emulator",
+    "homepage": "https://github.com/hades-emu/Hades",
+    "license": "GPL-2.0-only",
+    "notes": "A Nintendo GBA BIOS dump is required; select it with File -> Open BIOS.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hades-emu/Hades/releases/download/v1.1.1/hades-1.1.1-win-x64.zip",
+            "hash": "7f7af330e93c13b45cbddfde6a1061a20500f87b67692a10c7968c336ed4a2f5"
+        },
+        "arm64": {
+            "url": "https://github.com/hades-emu/Hades/releases/download/v1.1.1/hades-1.1.1-win-arm64.zip",
+            "hash": "9ab5b003464fa81bd3ab159b6b69db14644dab1171ab2cbce37bc27cb23f945d"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
+        "    Set-Content \"$dir\\config.json\" '{}' -Encoding Ascii -NoNewline",
+        "}"
+    ],
+    "bin": [
+        [
+            "Hades.exe",
+            "hades",
+            "--config \"$dir\\config.json\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Hades.exe",
+            "Hades",
+            "--config \"$dir\\config.json\""
+        ]
+    ],
+    "persist": "config.json",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hades-emu/Hades/releases/download/v$version/hades-$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/hades-emu/Hades/releases/download/v$version/hades-$version-win-arm64.zip"
+            }
+        }
+    }
+}

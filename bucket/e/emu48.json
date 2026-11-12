@@ -1,0 +1,31 @@
+{
+    "version": "1.68",
+    "description": "HP-38G/39G/40G/48SX/48GX/49G calculator emulator",
+    "homepage": "https://hp.giesselink.com/emu48.htm",
+    "license": "GPL-2.0-only",
+    "notes": "ROM images are not included. Dump them from your own calculator and place them in $dir",
+    "url": "https://hp.giesselink.com/Emu48/Emu48v168Setup.zip",
+    "hash": "8c0534ade012178d94d15f6af87d9a66977e0f80c260164896662f0434982dbb",
+    "installer": {
+        "script": [
+            "$setup = Get-ChildItem \"$dir\\Emu48v*Setup.exe\" | Select-Object -First 1",
+            "Expand-7zipArchive $setup.FullName \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": "Emu48.exe",
+    "shortcuts": [
+        [
+            "Emu48.exe",
+            "Emu48"
+        ]
+    ],
+    "checkver": {
+        "url": "https://hp.giesselink.com/emu48.htm",
+        "regex": "Emu48/Emu48v(\\d)(\\d+)Setup\\.zip",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "url": "https://hp.giesselink.com/Emu48/Emu48v$cleanVersionSetup.zip"
+    }
+}

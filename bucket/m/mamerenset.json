@@ -1,0 +1,51 @@
+{
+    "version": "2.00",
+    "description": "Renames MAME/MESS artwork and asset sets to match the current MAME naming using renameSET.ini",
+    "homepage": "https://www.progettosnaps.net/tools/",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "Place the latest renameSET.ini (from progettosnaps.net) in $dir or select it when prompted."
+    ],
+    "url": "https://www.progettosnaps.net/tools/packs/pS_MAMErenSET.rar",
+    "hash": "9cc2da5a368e9343e722adfb2fc446af4d3d2ba5740472fb41085f086a57aaa0",
+    "pre_install": [
+        "$ini = \"[General]`r`n`r`n[Flat Folders]`r`n`r`n[Archive Folders]`r`n`r`n[Special Folders]`r`n`r`n\"",
+        "foreach ($f in @('MAMErenSET.ini', 'MESSrenSET.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        Set-Content \"$dir\\$f\" $ini -NoNewline -Encoding ASCII",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "MAMErenSET.exe",
+            "mamerenset"
+        ],
+        [
+            "MESSrenSET.exe",
+            "messrenset"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MAMErenSET.exe",
+            "MAMErenSET"
+        ],
+        [
+            "MESSrenSET.exe",
+            "MESSrenSET"
+        ]
+    ],
+    "persist": [
+        "MAMErenSET.ini",
+        "MESSrenSET.ini"
+    ],
+    "checkver": {
+        "url": "https://www.progettosnaps.net/tools/",
+        "regex": "MAMErenSET v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.progettosnaps.net/tools/packs/pS_MAMErenSET.rar"
+    }
+}

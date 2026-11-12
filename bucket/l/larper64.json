@@ -1,0 +1,20 @@
+{
+    "version": "0.2",
+    "description": "Nintendo 64 emulator (low-level emulation)",
+    "homepage": "https://web.archive.org/web/2021/https://thirdworld.dev/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed; this is the last archived Windows build.",
+        "Requires the N64 PIF ROM: place pifdata.bin in $persist_dir\\roms or the emulator will crash."
+    ],
+    "url": "https://web.archive.org/web/20191225160706id_/https://thirdworld.dev/files/Larper64-02.7z",
+    "hash": "1f21244018daa01d99a6ddd6a97ef5d37c792c9d01acb24ddcc0e3eaccd0e5c8",
+    "bin": "Larper64.exe",
+    "shortcuts": [
+        [
+            "Larper64.exe",
+            "Larper64"
+        ]
+    ],
+    "persist": "roms"
+}

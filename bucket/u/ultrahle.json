@@ -6,20 +6,27 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/ultrahle/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ultrahle/emulator_screen_01.jpg"
     ],
-    "version": "1.1.0",
-    "description": "UltraHLE is an emulator allowing games for the Nintendo 64 game console to be run on a computer. It was hailed as a massive step forward in emulation technology upon its release in 1999. Emulating the N64 (which at the time was only 3 years old), it was the first of the N64 emulators to run commercial titles at a playable frame rate on the hardware of the time. Also notable for its time, UltraHLE was capable of playing commercial games while the console was still commercially viable. Concerned about potential piracy, Nintendo threatened the authors and the site hosting UltraHLE, EmuUnlim, with legal action. Despite this, UltraHLE had grown beyond either its authors\\' or Nintendo\\'s control. Subsequently Epsilon and RealityMan abandoned their pseudonyms and went into hiding.",
+    "version": "1.0.0",
+    "description": "Nintendo 64 emulator, the first to run commercial games at full speed (1999)",
     "homepage": "http://www.emuunlim.com/UltraHLE/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ultrahle/1.1.0.7z",
-    "hash": "674a5bdddc5766585777cdf81533de39af749bc4701464e6d90a2a36a1ab472a",
-    "bin": [
-        "UltraHLE.exe"
+    "notes": [
+        "The official site is offline; this package is the original ultrahle.zip from the Wayback Machine.",
+        "UltraHLE requires a Glide wrapper (glide2x.dll) to run on modern systems."
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/ultrahle/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ultrahle/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20060313064147id_/http://www.emuunlim.com:80/UltraHLE/old/download/ultrahle.zip",
+    "hash": "f0061af9833e3032c4eddd7c3eb1700c711f83775503e366b5511e0a19ad15f9",
+    "bin": [
+        [
+            "ULTRA.EXE",
+            "ultrahle"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ULTRA.EXE",
+            "UltraHLE"
+        ]
+    ],
+    "persist": "ULTRA.INI"
 }

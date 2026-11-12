@@ -1,0 +1,37 @@
+{
+    "version": "11.21",
+    "description": "DirectX 1-11 to OpenGL wrapper for Windows based on Wine's WineD3D",
+    "homepage": "https://fdossena.com/?p=wined3d/index.frag",
+    "license": "LGPL-2.1-or-later",
+    "notes": [
+        "The DLLs are installed to $dir\\x86 (for 32-bit games) and $dir\\x64 (for 64-bit games).",
+        "Copy the needed DLLs plus wined3d.dll next to the game's executable (see WINED3D README.txt).",
+        "Never copy them into System32, SysWOW64 or any folder in PATH."
+    ],
+    "url": [
+        "https://downloads.fdossena.com/Projects/WineD3D/Builds/WineD3DForWindows_11.21.zip",
+        "https://downloads.fdossena.com/Projects/WineD3D/Builds/WineD3DForWindows_11.21-x86_64.zip"
+    ],
+    "hash": [
+        "ce100b1d457a7f013c91850094c00182a78a6a59f8abc2707959a739484e4bf5",
+        "7fd1b9bc65deb8a1ea63afe7a2bbd6b696ccc0858da3b0b3aae4826013031a57"
+    ],
+    "extract_dir": [
+        "wined3d",
+        "wined3d"
+    ],
+    "extract_to": [
+        "x86",
+        "x64"
+    ],
+    "checkver": {
+        "url": "https://fdossena.com/wined3d/index.frag",
+        "regex": "Latest version is ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": [
+            "https://downloads.fdossena.com/Projects/WineD3D/Builds/WineD3DForWindows_$version.zip",
+            "https://downloads.fdossena.com/Projects/WineD3D/Builds/WineD3DForWindows_$version-x86_64.zip"
+        ]
+    }
+}

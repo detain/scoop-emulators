@@ -1,0 +1,24 @@
+{
+    "version": "beta",
+    "description": "Sony PlayStation 3 firmware (PUP) file viewer and extractor",
+    "homepage": "https://www.ifcaro.net/pupview/",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "Requires the .NET Framework 3.5 (includes 2.0) Windows feature."
+    ],
+    "url": "https://archivos.ifcaro.net/ps3zone/PUPView_BETA.zip",
+    "hash": "22a455e91a8142d474067977f18a484a5e99aaaf34d3185e2739ce852c448d01",
+    "bin": [
+        [
+            "PUPView.exe",
+            "pupview"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PUPView.exe",
+            "PUPView"
+        ]
+    ]
+}

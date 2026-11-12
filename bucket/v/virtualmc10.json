@@ -7,19 +7,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtualmc10/emulator_screen_01.jpg"
     ],
     "version": "0.73c",
-    "description": "Virtual MC-10, an emulator for the Radio Shack TRS-80 Microcolor Computer MC-10 and Ordinateur Alice.",
+    "description": "Tandy TRS-80 MC-10 and Matra Alice emulator",
     "homepage": "http://www.geocities.ws/emucompboy/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/virtualmc10/0.73c.7z",
-    "hash": "b6c400cb76331253f83f81af65baede3a3fc5e9b42ea178f548714f5fdd8dcc5",
-    "bin": [
-        "VMC10.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/virtualmc10/",
-        "regex": "([\\d.]+[a-z]*)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/virtualmc10/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20091027140135id_/http://www.geocities.com/emucompboy/VMC10_073C.zip",
+    "hash": "5021c8c51dbd9291976e05adb837569fca2ba6ab8815c7e46170efe7fb3fc06f",
+    "bin": "VMC10.exe",
+    "shortcuts": [
+        [
+            "VMC10.exe",
+            "Virtual MC-10"
+        ]
+    ]
 }

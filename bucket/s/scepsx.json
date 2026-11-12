@@ -1,0 +1,41 @@
+{
+    "version": "0.2.1.1",
+    "description": "Sony PlayStation emulator written in C#, partially based on ProjectPSX",
+    "homepage": "https://github.com/unknowall/ScePSX",
+    "license": "MIT",
+    "notes": "Place the PlayStation BIOS files (e.g. SCPH1001.BIN) in \"$persist_dir\\BIOS\".",
+    "suggest": {
+        ".NET Desktop Runtime 8.0": "versions/windowsdesktop-runtime-8.0"
+    },
+    "url": "https://github.com/unknowall/ScePSX/releases/download/%23PS1-0.2.1.1/ScePSX-Windows-0.2.1.1.zip",
+    "hash": "b11bf83e0dbdc2733f305a5d6043b77d0be86bd601f1f6b68d44aaffc46d3b75",
+    "extract_dir": "ScePSX-0.2.1.1",
+    "bin": [
+        [
+            "ScePSX.Win.exe",
+            "scepsx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ScePSX.Win.exe",
+            "ScePSX"
+        ]
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Save",
+        "SaveState",
+        "ScePSX.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/unknowall/ScePSX/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "#PS1-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/unknowall/ScePSX/releases/download/%23PS1-$version/ScePSX-Windows-$version.zip",
+        "extract_dir": "ScePSX-$version"
+    }
+}

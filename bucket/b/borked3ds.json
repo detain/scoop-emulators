@@ -1,0 +1,40 @@
+{
+    "version": "2025.03.11",
+    "description": "Nintendo 3DS emulator derived from Citra",
+    "homepage": "https://borked3ds.github.io",
+    "license": "GPL-2.0-or-later",
+    "notes": "Portable mode is enabled: user data is kept in $persist_dir\\user",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Borked3DS/Borked3DS/releases/download/v2025.03.11/borked3ds-v2025.03.11-windows-msvc.zip",
+            "hash": "c2a37322a8384cc198b329eca0b39e525db1ab8513fdc66d0399cdd9b4395e34",
+            "extract_dir": "borked3ds-v2025.03.11-windows-msvc"
+        }
+    },
+    "bin": [
+        "borked3ds.exe",
+        "borked3ds-cli.exe",
+        "borked3ds-room.exe"
+    ],
+    "shortcuts": [
+        [
+            "borked3ds.exe",
+            "Borked3DS"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/Borked3DS/Borked3DS"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Borked3DS/Borked3DS/releases/download/v$version/borked3ds-v$version-windows-msvc.zip",
+                "extract_dir": "borked3ds-v$version-windows-msvc"
+            }
+        }
+    }
+}

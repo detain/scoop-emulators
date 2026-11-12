@@ -1,0 +1,28 @@
+{
+    "version": "0.2",
+    "description": "Experimental VTech V.Smile emulator",
+    "homepage": "https://github.com/sp1187/veesem",
+    "license": "ISC",
+    "notes": "Usage: veesem [-sysrom SYSROM] CARTROM. Without a system ROM a dummy ROM (no boot animation) is used.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sp1187/veesem/releases/download/v0.2/veesem-0.2-windows.zip",
+            "hash": "f0ec12e69a7ff32ad90d23d82d2a893c8884dbe50529242a331f92af95f2d6e3"
+        }
+    },
+    "bin": "veesem.exe",
+    "shortcuts": [
+        [
+            "veesem.exe",
+            "veesem"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sp1187/veesem/releases/download/v$version/veesem-$version-windows.zip"
+            }
+        }
+    }
+}

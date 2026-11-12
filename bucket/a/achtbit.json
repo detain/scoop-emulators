@@ -1,0 +1,31 @@
+{
+    "version": "1.8",
+    "description": "Emulator of a fictional 8-bit computer with a built-in assembler",
+    "homepage": "https://sourceforge.net/projects/achtbit/",
+    "license": "GPL-3.0-only",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/achtbit/achtBit_release_1.8.zip",
+    "hash": "sha1:f02d38d75dedfe3afc8a9a7604f6d164d2e949f3",
+    "bin": [
+        [
+            "achtBit.jar",
+            "achtbit"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "achtBit.bat",
+            "achtBit"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/achtbit/rss",
+        "regex": "achtBit_release_([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/achtbit/achtBit_release_$version.zip"
+    }
+}

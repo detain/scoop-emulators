@@ -1,0 +1,30 @@
+{
+    "version": "0.10.5-alpha",
+    "description": "Simple and portable Sony PlayStation emulator written in C",
+    "homepage": "https://github.com/allkern/psxe",
+    "license": "MIT",
+    "notes": [
+        "PSXE requires a PlayStation BIOS image.",
+        "Usage: psxe -b <bios.bin> <game.cue>"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/allkern/psxe/releases/download/0.10.5-alpha/psxe-win64-latest.zip",
+            "hash": "6ff292057ea9ef57564264f0bd8cc6020178ca800ecb5625356fe1f87d92cb5f",
+            "extract_dir": "bin"
+        }
+    },
+    "bin": "psxe.exe",
+    "checkver": {
+        "github": "https://github.com/allkern/psxe",
+        "regex": "([\\d.]+(?:-[a-z]+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/allkern/psxe/releases/download/$version/psxe-win64-latest.zip",
+                "extract_dir": "bin"
+            }
+        }
+    }
+}

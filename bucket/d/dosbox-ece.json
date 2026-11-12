@@ -1,0 +1,21 @@
+{
+    "version": "r4353",
+    "description": "DOSBox SVN build with extra patches (3dfx Voodoo, MT-32, FluidSynth, Nuked OPL3, pixel-perfect scaling)",
+    "homepage": "https://web.archive.org/web/2020/http://dosboxece.yesterplay.net/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This build is no longer developed; it is downloaded from the Internet Archive.",
+    "url": "https://web.archive.org/web/20200614070844id_/http://dosboxece.yesterplay.net/download/DOSBox%20ECE%20r4353.7z",
+    "hash": "7e644b1b71f263062cd478341f49ee4b239fa62abad5543977c340605d1a75ae",
+    "bin": [
+        [
+            "DOSBox.exe",
+            "dosbox-ece"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "DOSBox.exe",
+            "DOSBox ECE"
+        ]
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "version": "1.28",
+    "description": "Tandy TRS-80 Model I/III/4 emulator",
+    "homepage": "https://www.trs-80.com/sub-emulators-manual-mkr-trs32.htm",
+    "license": "Shareware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "TRS-80 ROM images are not included and must be obtained separately."
+    ],
+    "url": "https://web.archive.org/web/20140216081726id_/http://www.trs-80emulators.com/trs32-setup-1.28.exe#/dl.7z",
+    "hash": "532d5e0ee8b2e5b02f19542570c3ee8a9405cde995ea280a47173e3a6877cf6c",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": "trs32.exe",
+    "shortcuts": [
+        [
+            "trs32.exe",
+            "TRS32"
+        ]
+    ]
+}

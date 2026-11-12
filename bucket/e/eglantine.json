@@ -1,0 +1,34 @@
+{
+    "version": "0.1.0-rc3",
+    "description": "Nintendo Switch and Switch 2 emulator (Eden/Yuzu fork)",
+    "homepage": "https://github.com/Eglantine-Community/Eglantine",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Eglantine requires prod.keys and firmware dumped from your own console.",
+        "Portable mode is enabled; user data is stored in $persist_dir\\user"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/v0.1.0-rc3/eglantine-windows-x86_64.zip",
+    "hash": "b464901d3f0cdaf1dcee0a11bd9e147a6f0c4d875b783034daf70442ef9dc76b",
+    "bin": [
+        "eglantine.exe",
+        "eden-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "eglantine.exe",
+            "Eglantine"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/Eglantine-Community/Eglantine/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/v$version/eglantine-windows-x86_64.zip"
+    }
+}

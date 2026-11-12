@@ -1,0 +1,57 @@
+{
+    "version": "2.00-beta5",
+    "description": "Frontend for MAME and other emulators, designed for arcade cabinets (development version)",
+    "homepage": "https://malafe.net/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://malafe.net/download.html"
+    },
+    "notes": "MaLa 2.0 is in beta. It updates config files from MaLa 1.x to newer formats, so don't share a folder or config with the stable mala package.",
+    "url": "https://github.com/DrLoader/MaLa-Releases/releases/download/v2.00-beta5/MaLa_2.00_Beta5_b920.zip",
+    "hash": "bbc424b2c4cb447f9accdfb8845f0ad4cbccb389083de16a17d5893727b92745",
+    "extract_dir": "MaLa_2.00_Beta5_b920",
+    "pre_install": [
+        "Get-ChildItem $dir -Directory | Where-Object { $_.Name -match '^MaLa\\d' } | Select-Object -First 1 | ForEach-Object {",
+        "    Get-ChildItem $_.FullName | Move-Item -Destination $dir -Force",
+        "    Remove-Item $_.FullName -Recurse -Force",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\mala.ini\")) {",
+        "    New-Item \"$dir\\mala.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "MaLa.exe",
+            "mala-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MaLa.exe",
+            "MaLa (dev)"
+        ],
+        [
+            "MalaGamelist.exe",
+            "MaLa Game List Editor (dev)"
+        ],
+        [
+            "MalaLayout.exe",
+            "MaLa Layout Editor (dev)"
+        ],
+        [
+            "MaLaControlGui.exe",
+            "MaLa Control (dev)"
+        ]
+    ],
+    "persist": "mala.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/DrLoader/MaLa-Releases/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/v(?<tag>[\\d.]+-(?:beta|rc)\\d+)/MaLa_(?<maj>\\d+)\\.(?<min>\\d+)_(?<pre>[A-Za-z]+\\d+)_b(?<build>\\d+)\\.zip",
+        "replace": "${tag}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/DrLoader/MaLa-Releases/releases/download/v$matchTag/MaLa_$matchMaj.$matchMin_$matchPre_b$matchBuild.zip",
+        "extract_dir": "MaLa_$matchMaj.$matchMin_$matchPre_b$matchBuild"
+    }
+}

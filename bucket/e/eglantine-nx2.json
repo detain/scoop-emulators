@@ -1,0 +1,37 @@
+{
+    "version": "20261108-efb9fb18",
+    "description": "Nintendo Switch and Switch 2 emulator (Eglantine nx2-experimental branch builds)",
+    "homepage": "https://github.com/Eglantine-Community/Eglantine",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Eglantine requires prod.keys and firmware dumped from your own console.",
+        "Portable mode is enabled; user data is stored in $persist_dir\\user"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/branch-nx2-experimental-efb9fb18/eglantine-windows-x86_64.zip",
+    "hash": "4152c0c0536b4331b9f1b79dc98065d3dd137af01859ec3e7f411cc6475d3ee7",
+    "bin": [
+        [
+            "eglantine.exe",
+            "eglantine-nx2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "eglantine.exe",
+            "Eglantine (nx2)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/Eglantine-Community/Eglantine/releases?per_page=50",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"branch-nx2-experimental-(?<sha>[0-9a-f]+)\"[^{}]*?\"published_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}-${sha}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/branch-nx2-experimental-$matchSha/eglantine-windows-x86_64.zip"
+    }
+}

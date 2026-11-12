@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "description": "Cycle-accurate Nintendo Game Boy (DMG-01) emulator written in C++17 with an interactive debugger",
+    "homepage": "https://github.com/Pratyush-gg/Simple-Boy",
+    "license": "MIT",
+    "url": "https://github.com/Pratyush-gg/Simple-Boy/releases/download/v1.0.0/Simple-Boy-v1.0.0-Windows.zip",
+    "hash": "8ab85215627ef25f74555da5a9552c6e191613bb95c214eebdb62715a891094d",
+    "bin": [
+        [
+            "Simple-Boy.exe",
+            "simple-boy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Simple-Boy.exe",
+            "Simple-Boy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Pratyush-gg/Simple-Boy/releases/download/v$version/Simple-Boy-v$version-Windows.zip"
+    }
+}

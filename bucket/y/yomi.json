@@ -1,0 +1,22 @@
+{
+    "version": "0.52",
+    "description": "Command-line ROM and file renamer that identifies files by their header",
+    "homepage": "https://sourceforge.net/projects/yomi/",
+    "license": "GPL-2.0-only",
+    "notes": "This tool is no longer developed.",
+    "url": "https://downloads.sourceforge.net/project/yomi/yomi/yomi%20V0.52/yomi_v0-52.zip",
+    "hash": "sha1:3541d9b4afa9ab56af7cc032cc2c1247c942dd5f",
+    "bin": [
+        [
+            "Yomi.exe",
+            "yomi"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/yomi/rss?path=/",
+        "regex": "yomi%20V([\\d.]+)/yomi_v"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/yomi/yomi/yomi%20V$version/yomi_v$dashVersion.zip"
+    }
+}

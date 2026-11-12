@@ -1,0 +1,19 @@
+{
+    "version": "0.11",
+    "description": "Lightweight command-line NES Sound Format (NSF) player",
+    "homepage": "https://forums.nesdev.org/viewtopic.php?t=13316",
+    "license": "Freeware",
+    "notes": [
+        "This NSF player is no longer developed.",
+        "Usage: repeat <file.nsf> (run 'repeat -help' for options, including WAV rendering)."
+    ],
+    "url": [
+        "https://web.archive.org/web/20211205163525id_/https://forums.nesdev.org/download/file.php?id=9668#/repeat-0.11.zip",
+        "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10-win32-x86.zip"
+    ],
+    "hash": [
+        "ee8235631608d8d92ae06c5ff10892f489f54c359bb232baf43b0f426ec11d05",
+        "d72b0728a315ab25ad43123b89baa2ab6fd7c335a43f737213685d29fd2aa4fe"
+    ],
+    "bin": "repeat.exe"
+}

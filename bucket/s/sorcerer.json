@@ -7,19 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sorcerer/emulator_screen_01.jpg"
     ],
     "version": "0.01",
-    "description": "Windows Sorcerer, an emulator for the Exidy Sorcerer.",
+    "description": "Exidy Sorcerer emulator",
     "homepage": "http://www.geocities.ws/emucompboy/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/sorcerer/0.01.7z",
-    "hash": "c7f831c9ab0b18f5c0d58a152f666fb6fcaf8f4e3448bd3711077f5c1e220729",
+    "url": "https://web.archive.org/web/20091027114602id_/http://www.geocities.com/emucompboy/WSor_001.zip",
+    "hash": "b3171b5cf2020884c66cf5f3dee6481d230737492d914cc3797e6733e2b6c693",
+    "extract_dir": "WSorcerer",
     "bin": [
-        "WSorcer.exe"
+        [
+            "WSorcer.exe",
+            "sorcerer"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/sorcerer/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/sorcerer/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "WSorcer.exe",
+            "Windows Sorcerer"
+        ]
+    ]
 }

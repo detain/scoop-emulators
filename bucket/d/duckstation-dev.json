@@ -1,0 +1,92 @@
+{
+    "version": "20261111-gc222a3d",
+    "description": "Sony PlayStation emulator (development version)",
+    "homepage": "https://github.com/stenzek/duckstation/",
+    "license": "CC-BY-NC-ND-4.0",
+    "notes": [
+        "ATTENTION: Duckstation requires a PSX BIOS to function.",
+        "Place the BIOS file in $persist_dir\\bios",
+        "Learn more at: https://www.duckstation.org/wiki/BIOS",
+        "Tracks the rolling 'preview' builds."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip",
+            "hash": "0c5425b03fd1fc49eddb0dcbda00502ea2145c51f7b67ba0a19ca00bb2e4dba4",
+            "bin": [
+                [
+                    "duckstation-qt-x64-ReleaseLTCG.exe",
+                    "duckstation-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "duckstation-qt-x64-ReleaseLTCG.exe",
+                    "DuckStation (dev)"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip",
+            "hash": "844c86410cffb3d53270d1f490feb5da43f579f27d9b575879696b872aeac659",
+            "bin": [
+                [
+                    "duckstation-qt-ARM64-ReleaseLTCG.exe",
+                    "duckstation-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "duckstation-qt-ARM64-ReleaseLTCG.exe",
+                    "DuckStation (dev)"
+                ]
+            ]
+        }
+    },
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$persist_dir\")) {",
+            "   '[Main]', 'SettingsVersion = 3', '[AutoUpdater]', 'CheckAtStartup = false' | Set-Content \"$dir\\settings.ini\"",
+            "   New-Item \"$dir\\portable.txt\" -ItemType File | Out-Null",
+            "}"
+        ]
+    },
+    "persist": [
+        "bios",
+        "cache",
+        "cheats",
+        "covers",
+        "database\\chtdb.txt",
+        "database\\gamecontrollerdb.txt",
+        "database\\gamesettings.ini",
+        "dump",
+        "inputprofiles",
+        "memcards",
+        "savestates",
+        "screenshots",
+        "shaders",
+        "textures",
+        "portable.txt",
+        "settings.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/stenzek/duckstation/commits/preview",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip"
+            }
+        }
+    }
+}

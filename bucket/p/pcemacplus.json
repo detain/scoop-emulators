@@ -6,19 +6,45 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pcemacplus/emulator_screen_01.jpg"
     ],
     "version": "0.2.2",
-    "description": "PCE-MacPlus is an Apple Macintosh Plus emulator.",
-    "homepage": "http://hampa.ch/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/pcemacplus/0.2.2.7z",
-    "hash": "bd5106e72e732db9167c7f83ff48cde1bdefe12a93cc0c11b192138f8acc62f8",
+    "description": "Apple Macintosh Plus, Classic and SE emulator (PCE/macplus)",
+    "homepage": "http://www.hampa.ch/pce/pce-macplus.html",
+    "license": "GPL-2.0-only",
+    "notes": "Development snapshots of the whole PCE suite are available as the 'pce' manifest.",
+    "url": "http://www.hampa.ch/pub/pce/pce-0.2.2-macplus.zip",
+    "hash": "7c285710d11a83d7e3616fc8e79c5f167d6907dc347f0245b7373cbf52b1942d",
     "bin": [
-        "pce-mac-classic.bat"
+        [
+            "bin\\pce-macplus.exe",
+            "pcemacplus"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pce-mac-plus.bat",
+            "PCE-MacPlus (Mac Plus)"
+        ],
+        [
+            "pce-mac-classic.bat",
+            "PCE-MacPlus (Mac Classic)"
+        ],
+        [
+            "pce-mac-se.bat",
+            "PCE-MacPlus (Mac SE)"
+        ]
+    ],
+    "persist": [
+        "disk1.img",
+        "hd1.img",
+        "hd2.img",
+        "pram-mac-classic.dat",
+        "pram-mac-plus.dat",
+        "pram-mac-se.dat"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pcemacplus/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://www.hampa.ch/pce/download.html",
+        "regex": "pce-([\\d.]+)-macplus\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pcemacplus/$version.7z"
+        "url": "http://www.hampa.ch/pub/pce/pce-$version-macplus.zip"
     }
 }

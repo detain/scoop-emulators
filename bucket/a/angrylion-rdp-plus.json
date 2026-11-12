@@ -1,0 +1,57 @@
+{
+    "version": "1.6-32-g9c8b9ed",
+    "description": "Nintendo 64 low-level RDP graphics plugin for Project64 and Mupen64Plus (fork of angrylion's RDP)",
+    "homepage": "https://github.com/ata4/angrylion-rdp-plus",
+    "license": {
+        "identifier": "Other",
+        "url": "https://github.com/ata4/angrylion-rdp-plus/blob/master/MAME%20License.txt"
+    },
+    "notes": [
+        "This is a graphics plugin, not a standalone emulator.",
+        "Copy angrylion-plus.dll to Project64's Plugin\\GFX folder, or mupen64plus-video-angrylion-plus.dll to your Mupen64Plus plugin folder.",
+        "Files are in $dir"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/project64-angrylion-plus-win64-v1.6-32-g9c8b9ed.zip",
+                "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/mupen64plus-video-angrylion-plus-win64-v1.6-32-g9c8b9ed.zip"
+            ],
+            "hash": [
+                "6828a391761872fd46fbebc85b46bf5dbf082d3179f686153cc59ad3413b05ca",
+                "916d7206467ecddab05599c949ba6d4cc672610feb1874185cbc1a0f320e6c3c"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/project64-angrylion-plus-win32-v1.6-32-g9c8b9ed.zip",
+                "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/mupen64plus-video-angrylion-plus-win32-v1.6-32-g9c8b9ed.zip"
+            ],
+            "hash": [
+                "5124082dc0cd007c1b401d654cc78ac2aaab385129f0111678e91d262b14e892",
+                "7b8447d0f0103ade0e39f1a75bbb2c5887ea903fabf13f6728ff8a6b2180d795"
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/ata4/angrylion-rdp-plus/releases/tags/nightly-build",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "project64-angrylion-plus-win64-v(?<version>[\\d.]+-\\d+-g[0-9a-f]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/project64-angrylion-plus-win64-v$version.zip",
+                    "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/mupen64plus-video-angrylion-plus-win64-v$version.zip"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/project64-angrylion-plus-win32-v$version.zip",
+                    "https://github.com/ata4/angrylion-rdp-plus/releases/download/nightly-build/mupen64plus-video-angrylion-plus-win32-v$version.zip"
+                ]
+            }
+        }
+    }
+}

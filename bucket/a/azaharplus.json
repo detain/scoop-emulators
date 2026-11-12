@@ -1,0 +1,47 @@
+{
+    "version": "2126.2-A",
+    "description": "Nintendo 3DS emulator, a fork of Azahar that restores .3ds file support and system file downloads",
+    "homepage": "https://github.com/AzaharPlus/AzaharPlus",
+    "license": "GPL-3.0-or-later",
+    "notes": "Portable mode is enabled: user data is kept in $persist_dir\\user",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AzaharPlus/AzaharPlus/releases/download/AZAHAR_PLUS_2126_2_A/azaharplus-2126.2-A-windows.zip",
+            "hash": "238cab88602c457fc1f820a19e7e2deeb589f0fb1eb285531031e543dea41d3d",
+            "extract_dir": "azaharplus-2126.2-A-windows"
+        }
+    },
+    "bin": [
+        [
+            "azahar.exe",
+            "azaharplus"
+        ],
+        [
+            "azahar-room.exe",
+            "azaharplus-room"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "azahar.exe",
+            "AzaharPlus"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/AzaharPlus/AzaharPlus/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>AZAHAR_PLUS_[\\w]+)/azaharplus-(?<version>[\\d.]+-[A-Z])-windows\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AzaharPlus/AzaharPlus/releases/download/$matchTag/azaharplus-$version-windows.zip",
+                "extract_dir": "azaharplus-$version-windows"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.3.0",
+    "description": "Nintendo 64 emulator, a Qt frontend for Mupen64Plus",
+    "homepage": "https://github.com/mupen64plus/mupen64plus-ui-python",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/mupen64plus/mupen64plus-ui-python/releases/download/0.3.0/m64py-0.3.0-x86_64-portable.zip",
+    "hash": "e9553867b2fef291fa57b7c20be28175efd715d84e86e9a341506b9becb75cfc",
+    "extract_dir": "m64py-0.3.0",
+    "bin": "m64py.exe",
+    "shortcuts": [
+        [
+            "m64py.exe",
+            "M64Py"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/mupen64plus/mupen64plus-ui-python/releases/download/$version/m64py-$version-x86_64-portable.zip",
+        "extract_dir": "m64py-$version"
+    }
+}

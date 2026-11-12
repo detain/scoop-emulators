@@ -1,0 +1,31 @@
+{
+    "version": "1.40",
+    "description": "HP-18C and HP-28C/28S calculator emulator",
+    "homepage": "https://hp.giesselink.com/emu28.htm",
+    "license": "GPL-2.0-only",
+    "notes": "ROM images are not included. Dump them from your own calculator and place them in $dir",
+    "url": "https://hp.giesselink.com/Emu28/Emu28v140Setup.zip",
+    "hash": "3e6d6d1434402da104b4b761bed4b75f6961bbb18b344d6c99d3630ee2d81171",
+    "installer": {
+        "script": [
+            "$setup = Get-ChildItem \"$dir\\Emu28v*Setup.exe\" | Select-Object -First 1",
+            "Expand-7zipArchive $setup.FullName \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": "EMU28.exe",
+    "shortcuts": [
+        [
+            "EMU28.exe",
+            "Emu28"
+        ]
+    ],
+    "checkver": {
+        "url": "https://hp.giesselink.com/emu28.htm",
+        "regex": "Emu28/Emu28v(\\d)(\\d+)Setup\\.zip",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "url": "https://hp.giesselink.com/Emu28/Emu28v$cleanVersionSetup.zip"
+    }
+}

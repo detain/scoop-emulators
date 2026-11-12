@@ -1,0 +1,48 @@
+{
+    "version": "258-20261029-cf5ff16",
+    "description": "Amstrad CPC emulator (development version)",
+    "homepage": "https://github.com/Tom1975/SugarboxV2",
+    "license": "MIT",
+    "notes": "Development builds are GitHub Actions artifacts served via nightly.link; artifacts expire after 90 days.",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/Tom1975/SugarboxV2/workflows/windows/develop/SugarboxV2.zip",
+            "hash": "10fe69bf7eb8ad211e55d62e1f7194012bc51819c114a633ffeb62f4ad08e4a0"
+        }
+    },
+    "pre_install": [
+        "$archive = Get-ChildItem \"$dir\\Sugarbox-*-win64.7z\" | Select-Object -First 1",
+        "Expand-7zipArchive $archive.FullName \"$dir\" -ExtractDir $archive.BaseName -Removal"
+    ],
+    "bin": [
+        [
+            "Sugarbox.exe",
+            "sugarbox-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Sugarbox.exe",
+            "Sugarbox (dev)"
+        ]
+    ],
+    "persist": "Sugarbox.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/Tom1975/SugarboxV2/actions/workflows/windows.yml/runs?branch=develop&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<sha>[0-9a-f]{7})",
+        "replace": "${run}-${year}${month}${day}-${sha}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/Tom1975/SugarboxV2/workflows/windows/develop/SugarboxV2.zip"
+            }
+        }
+    }
+}

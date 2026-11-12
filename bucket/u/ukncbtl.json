@@ -1,0 +1,34 @@
+{
+    "version": "2026.1",
+    "description": "Soviet Elektronika MS-0511 (UKNC) computer emulator",
+    "homepage": "https://github.com/nzeemin/ukncbtl",
+    "license": "LGPL-3.0-or-later",
+    "url": "https://github.com/nzeemin/ukncbtl/releases/download/release-2026.1/ukncbtl-2026.1.zip",
+    "hash": "a4b2052c759fb5d21e84b70ee5eb9beeff0a790adb74b018d545a76ae4a9fd21",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\UKNCBTL.ini\")) {",
+        "    New-Item \"$dir\\UKNCBTL.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "UKNCBTL.exe",
+            "ukncbtl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "UKNCBTL.exe",
+            "UKNCBTL"
+        ]
+    ],
+    "persist": "UKNCBTL.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/nzeemin/ukncbtl/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/release-(?<version>[\\d.]+)/(?<file>[^/\"\\s]+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nzeemin/ukncbtl/releases/download/release-$version/$matchFile"
+    }
+}

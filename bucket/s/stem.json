@@ -6,14 +6,12 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/stem/emulator_screen_01.jpg"
     ],
     "version": "2000-09-17",
-    "description": "RCA Studio 2 emulator written in C and assembler.",
-    "homepage": "http://www.robsons.org.uk/archive/www.classicgaming.com/studio2/index.htm",
+    "description": "RCA Studio II emulator",
+    "homepage": "https://web.archive.org/web/2013/http://www.robsons.org.uk/archive/www.classicgaming.com/studio2/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/stem/2000-09-17.7z",
     "hash": "80b15c500c7c3f86580bc111b751ff2283a1f7080f4b01a2cbb86ea5740a4941",
-    "bin": [
-        "WINSTEM.EXE"
-    ],
+    "bin": "WINSTEM.EXE",
     "checkver": {
         "url": "https://consolo.is.cc/emu/stem/",
         "regex": "([\\d.-]+)\\.7z"

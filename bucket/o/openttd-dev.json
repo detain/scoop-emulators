@@ -1,0 +1,102 @@
+{
+    "version": "20261110-gbeaf1f9976",
+    "description": "Simulation game based upon Transport Tycoon Deluxe (development version)",
+    "homepage": "https://www.openttd.org/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261110-master-gbeaf1f9976/openttd-20261110-master-gbeaf1f9976-windows-win64.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+            ],
+            "hash": [
+                "1b0ea18f963a0b512d6589c0bcaee09fdfeb556d73945adef33ac0e730774617",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
+                "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
+                "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
+            ],
+            "extract_dir": "openttd-20261110-master-gbeaf1f9976-windows-win64"
+        },
+        "32bit": {
+            "url": [
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261110-master-gbeaf1f9976/openttd-20261110-master-gbeaf1f9976-windows-win32.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+            ],
+            "hash": [
+                "7be8475b368abf3147ceb3404ee0bb02f36a5cb005aae1ca59fbfd9a78798765",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
+                "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
+                "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
+            ],
+            "extract_dir": "openttd-20261110-master-gbeaf1f9976-windows-win32"
+        },
+        "arm64": {
+            "url": [
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261110-master-gbeaf1f9976/openttd-20261110-master-gbeaf1f9976-windows-arm64.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+            ],
+            "hash": [
+                "aa3c859c16a0bd9e20cc8095ec05b4e6c3445bbaea19a1ac43061c6f09d168d9",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
+                "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
+                "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
+            ],
+            "extract_dir": "openttd-20261110-master-gbeaf1f9976-windows-arm64"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\\*.tar\" | Move-Item -Destination \"$dir\\baseset\" -Force",
+    "bin": [
+        [
+            "openttd.exe",
+            "openttd-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "openttd.exe",
+            "OpenTTD (dev)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://cdn.openttd.org/openttd-nightlies/latest.yaml",
+        "regex": "version: (?<date>(?<year>\\d{4})\\d{4})-master-(?<commit>g[0-9a-f]+)",
+        "replace": "${date}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-nightlies/$matchYear/$matchDate-master-$matchCommit/openttd-$matchDate-master-$matchCommit-windows-win64.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$matchDate-master-$matchCommit-windows-win64"
+            },
+            "32bit": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-nightlies/$matchYear/$matchDate-master-$matchCommit/openttd-$matchDate-master-$matchCommit-windows-win32.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$matchDate-master-$matchCommit-windows-win32"
+            },
+            "arm64": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-nightlies/$matchYear/$matchDate-master-$matchCommit/openttd-$matchDate-master-$matchCommit-windows-arm64.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$matchDate-master-$matchCommit-windows-arm64"
+            }
+        }
+    }
+}

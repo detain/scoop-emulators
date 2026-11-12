@@ -1,0 +1,47 @@
+{
+    "version": "0.143",
+    "description": "Arcade emulator based on MAMEUI with hacks for arcade cabinet use (sound sync, clean stretch, resolution switching)",
+    "homepage": "http://community.arcadeinfo.de/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed. Downloads are served from the Internet Archive.",
+        "Place your ROM sets in $persist_dir\\roms"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://web.archive.org/web/20240311122850id_/http://files.arianchen.de/cabmame/0143_cabmameui64.zip",
+            "hash": "2d80daf5a2ccedd6ccdc0ab5da6489f83e594e08ba49c2073ad58d67eeb855f4",
+            "bin": [
+                [
+                    "cabmameui64.exe",
+                    "cabmameui"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "cabmameui64.exe",
+                    "CabMAMEUI"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://web.archive.org/web/20240311122850id_/http://files.arianchen.de/cabmame/0143_cabmameui32.zip",
+            "hash": "682fcc065e6e753c40a2ec462ea23fbbef54b23f338df1ddbf11517b7fbb66a9",
+            "bin": "cabmameui.exe",
+            "shortcuts": [
+                [
+                    "cabmameui.exe",
+                    "CabMAMEUI"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "ini"
+    ]
+}

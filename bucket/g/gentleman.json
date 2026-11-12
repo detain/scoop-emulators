@@ -1,0 +1,24 @@
+{
+    "version": "1.6.4",
+    "description": "MiSTer-inspired, folder-based emulator frontend",
+    "homepage": "https://github.com/Anime0t4ku/Gentleman",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Anime0t4ku/Gentleman/releases/download/v1.6.4/Gentleman-Windows-x86_64.zip",
+    "hash": "5b7bddc2c5551f9d8747a06b2574f4292435512016182c730f036456e23540d4",
+    "bin": "Gentleman.exe",
+    "shortcuts": [
+        [
+            "Gentleman.exe",
+            "Gentleman"
+        ]
+    ],
+    "persist": [
+        "config",
+        "menu",
+        "themes"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Anime0t4ku/Gentleman/releases/download/v$version/Gentleman-Windows-x86_64.zip"
+    }
+}

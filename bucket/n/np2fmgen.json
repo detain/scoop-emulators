@@ -1,0 +1,49 @@
+{
+    "version": "2026.08.02",
+    "description": "NEC PC-9801 emulator (Neko Project II fmgen build)",
+    "homepage": "https://nenecchi.kirara.st/",
+    "license": "Freeware",
+    "notes": "A real BIOS.ROM is optional (a built-in BIOS is used when it is missing); place BIOS/font files next to np2.exe in $dir.",
+    "url": "https://nenecchi.kirara.st/php/dl.php?f=np2fmgen_260802.7z&d=12#/np2fmgen.7z",
+    "hash": "1a73cab481c74487d4aa6b5b83d4c6c0cee902121b9dfbaa1f93f345a9ac6150",
+    "extract_dir": "np2fmgen",
+    "pre_install": [
+        "'np2.ini', 'np21.ini' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "np2.exe",
+            "np2fmgen"
+        ],
+        [
+            "np21.exe",
+            "np21fmgen"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "np2.exe",
+            "Neko Project II fmgen"
+        ],
+        [
+            "np21.exe",
+            "Neko Project 21 fmgen"
+        ]
+    ],
+    "persist": [
+        "np2.ini",
+        "np21.ini"
+    ],
+    "checkver": {
+        "url": "https://nenecchi.kirara.st/",
+        "regex": "np2fmgen_(?<year>\\d{2})(?<month>\\d{2})(?<day>\\d{2})\\.7z&(?:amp;)?d=(?<dir>\\d+)",
+        "replace": "20${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "https://nenecchi.kirara.st/php/dl.php?f=np2fmgen_$matchYear$matchMonth$matchDay.7z&d=$matchDir#/np2fmgen.7z"
+    }
+}

@@ -6,14 +6,12 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/free64/emulator_screen_01.jpg"
     ],
     "version": "0.01",
-    "description": "Free 64 emulates the Commodore 64.",
+    "description": "Commodore 64 emulator for DOS",
     "homepage": "http://home.gvi.net/~martin/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/free64/0.01.7z",
     "hash": "3d09404982f19922292540a00f669e8a0788951a6ef5c83293e1ad7469649a93",
-    "bin": [
-        "FREE64.EXE"
-    ],
+    "bin": "FREE64.EXE",
     "checkver": {
         "url": "https://consolo.is.cc/emu/free64/",
         "regex": "([\\d.]+)\\.7z"

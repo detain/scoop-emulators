@@ -1,0 +1,26 @@
+{
+    "version": "36",
+    "description": "Sinclair ZX Spectrum 48K emulator written in C with SDL2",
+    "homepage": "http://sebastianmihai.com/zxian-zx-spectrum-emulator.html",
+    "license": "Freeware",
+    "url": "http://sebastianmihai.com/downloads/zxian/v36/zxian_v36.zip",
+    "hash": "70a61fdd24f145165af9a84ff674730c58ac4f0dfa70b92c8b2e6bd49ad154b8",
+    "bin": [
+        "zxian.exe",
+        "zxianui.exe"
+    ],
+    "shortcuts": [
+        [
+            "zxianui.exe",
+            "zxian"
+        ]
+    ],
+    "persist": "zxianui.cfg",
+    "checkver": {
+        "url": "http://sebastianmihai.com/zxian-zx-spectrum-emulator.html",
+        "regex": "downloads/zxian/v(\\d+)/zxian_v\\d+\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://sebastianmihai.com/downloads/zxian/v$version/zxian_v$version.zip"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "version": "0.164r5260",
+    "description": "Arcade emulator based on MAME Plus! with an extended frontend",
+    "homepage": "https://www.emulab.it/p_emulators.php",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://www.emulab.it/p_emulators.php"
+    },
+    "notes": "This emulator is no longer developed.",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.emulab.it/emulators/plusxt/MAME%20Plus!%20XT_x64%20v0.164r5260%20-%20Setup.exe#/dl.7z",
+            "hash": "d6c9ac13c3dfdfd675c477c6d492d37d9eab88a0364fa14d7cd9e75daead43ca",
+            "bin": [
+                [
+                    "mamepui_xt64.exe",
+                    "mame-plus-xt"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mamepui_xt64.exe",
+                    "MAME Plus! XT"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://www.emulab.it/emulators/plusxt/MAME%20Plus!%20XT_x86%20v0.164r5260%20-%20Setup.exe#/dl.7z",
+            "hash": "e179d566663a638003007d1898c15c46cd0b2652001c89eb91b1064e5e2ddcb1",
+            "bin": [
+                [
+                    "mamepui_xt32.exe",
+                    "mame-plus-xt"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "mamepui_xt32.exe",
+                    "MAME Plus! XT"
+                ]
+            ]
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ],
+    "checkver": {
+        "url": "https://www.emulab.it/p_emulators.php",
+        "regex": "XT_x64 v([\\d.]+r\\d+) - Setup\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.emulab.it/emulators/plusxt/MAME%20Plus!%20XT_x64%20v$version%20-%20Setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://www.emulab.it/emulators/plusxt/MAME%20Plus!%20XT_x86%20v$version%20-%20Setup.exe#/dl.7z"
+            }
+        }
+    }
+}

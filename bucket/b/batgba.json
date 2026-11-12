@@ -1,0 +1,23 @@
+{
+    "version": "2.25b",
+    "description": "Nintendo Game Boy Advance emulator with debugging features (discontinued)",
+    "homepage": "https://batgba.zophar.net/",
+    "license": "Freeware",
+    "notes": "Some games require a Game Boy Advance BIOS image (not provided).",
+    "url": "https://batgba.zophar.net/files/batgba225b.zip",
+    "hash": "a31ab5822e5b8998f582fc822f0f04fb981c26e2f8792cffa1eec6eebfe1330a",
+    "bin": "batgba.exe",
+    "shortcuts": [
+        [
+            "batgba.exe",
+            "BatGBA"
+        ]
+    ],
+    "checkver": {
+        "url": "https://batgba.zophar.net/downloads2.htm",
+        "regex": "version ([\\d.]+b)<"
+    },
+    "autoupdate": {
+        "url": "https://batgba.zophar.net/files/batgba$cleanVersion.zip"
+    }
+}

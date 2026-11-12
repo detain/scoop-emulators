@@ -1,0 +1,44 @@
+{
+    "version": "073u8",
+    "description": "Nintendo SNES / Super Famicom emulator based on bsnes-classic with 6xBRZ filter (debugger included)",
+    "homepage": "https://github.com/Michael-Prince-Sharpe/bsnes-classic",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/Michael-Prince-Sharpe/bsnes-classic/releases/download/073u8/bsnes-classic-6xBRZ.073u8-x64.zip",
+    "hash": "2d02a0981d2ec2502a32e2e482d89b277aa97006738950ae968baf87ed0fd029",
+    "extract_dir": "bsnes-classic-6xBRZ.073u8-x64",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\bsnes-qt.cfg\")) {",
+        "    New-Item \"$dir\\bsnes-qt.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "bsnes.exe",
+            "bsnes-classic-6xbrz"
+        ],
+        [
+            "bsnes-accuracy.exe",
+            "bsnes-classic-6xbrz-accuracy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bsnes.exe",
+            "bsnes-classic 6xBRZ"
+        ],
+        [
+            "bsnes-accuracy.exe",
+            "bsnes-classic 6xBRZ (Accuracy)"
+        ]
+    ],
+    "persist": "bsnes-qt.cfg",
+    "checkver": {
+        "github": "https://github.com/Michael-Prince-Sharpe/bsnes-classic",
+        "regex": "(\\d+u\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Michael-Prince-Sharpe/bsnes-classic/releases/download/$version/bsnes-classic-6xBRZ.$version-x64.zip",
+        "extract_dir": "bsnes-classic-6xBRZ.$version-x64"
+    }
+}

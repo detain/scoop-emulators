@@ -1,0 +1,20 @@
+{
+    "version": "1.24",
+    "description": "Sony PocketStation emulator",
+    "homepage": "https://github.com/mentalfoundry/Pokket",
+    "license": "GPL-3.0-only",
+    "notes": "A PocketStation BIOS dump is required.",
+    "url": "https://github.com/mentalfoundry/Pokket/releases/download/v1.24/pokket-desktop-windows-v1.24.zip",
+    "hash": "f8694164c04c57165b5379cbe05a02e5f301b114e82a6aeede2db4532b2720b4",
+    "bin": "pokket.exe",
+    "shortcuts": [
+        [
+            "pokket.exe",
+            "Pokket"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/mentalfoundry/Pokket/releases/download/v$version/pokket-desktop-windows-v$version.zip"
+    }
+}

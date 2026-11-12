@@ -1,0 +1,27 @@
+{
+    "version": "0.4.20",
+    "description": "Cycle-stepped Amstrad CPC 464/664/6128 emulator",
+    "homepage": "https://github.com/salvogendut/1984",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/salvogendut/1984/releases/download/v0.4.20/1984-v0.4.20-windows-x86_64.zip",
+            "hash": "65593d00f62ff6c6e70a77a9497545398d4651868b0c5a142c4d28b3def9114b"
+        }
+    },
+    "bin": "1984.exe",
+    "shortcuts": [
+        [
+            "1984.exe",
+            "1984"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/salvogendut/1984/releases/download/v$version/1984-v$version-windows-x86_64.zip"
+            }
+        }
+    }
+}

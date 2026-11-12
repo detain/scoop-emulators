@@ -1,0 +1,55 @@
+{
+    "version": "1.10.0",
+    "description": "Sony PlayStation 2 emulator fork for PS2-based arcade hardware (Konami Python, Namco System 246/256)",
+    "homepage": "https://github.com/DiscoStarslayer/pcsx2-reliquary",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "PCSX2 Reliquary requires a PS2 or arcade board BIOS dump.",
+        "Place the BIOS files in $persist_dir\\bios"
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/DiscoStarslayer/pcsx2-reliquary/releases/download/v1.10.0-reliquary/pcsx2-v1.10.0-reliquary-windows-x64-Qt.7z",
+    "hash": "76067417653c05a12f00c26b14ac8933a7e2cbeffdf055354bbf4f31ba615ea6",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "pcsx2-qt.exe",
+            "pcsx2-reliquary"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pcsx2-qt.exe",
+            "PCSX2 Reliquary"
+        ]
+    ],
+    "persist": [
+        "bios",
+        "cheats",
+        "covers",
+        "gamesettings",
+        "inis",
+        "inputprofiles",
+        "logs",
+        "memcards",
+        "patches",
+        "snaps",
+        "sstates",
+        "textures",
+        "videos",
+        "portable.txt"
+    ],
+    "checkver": {
+        "github": "https://github.com/DiscoStarslayer/pcsx2-reliquary",
+        "regex": "v([\\d.]+)-reliquary"
+    },
+    "autoupdate": {
+        "url": "https://github.com/DiscoStarslayer/pcsx2-reliquary/releases/download/v$version-reliquary/pcsx2-v$version-reliquary-windows-x64-Qt.7z"
+    }
+}

@@ -6,20 +6,60 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nekoprojectii/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nekoprojectii/emulator_screen_01.jpg"
     ],
-    "version": "0.86-win64",
-    "description": "Neko Project II is an NEC PC-9801 series emulator.",
-    "homepage": "http://www.yui.ne.jp/np2/",
+    "version": "0.86",
+    "description": "NEC PC-9801 series emulator",
+    "homepage": "https://www.yui.ne.jp/np2/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nekoprojectii/0.86-win64.7z",
-    "hash": "76056ba519391878836fa98b71f7f5115be357890335d5de841780e1d43e9ed2",
-    "bin": [
-        "np2.exe"
-    ],
+    "notes": "Optional BIOS/font files (bios.rom, font.bmp, ...) go next to the executable in $dir",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.yui.ne.jp/np2/bin/np2_win64_086.zip",
+            "hash": "5df11288bef46358122448b769d6cf44ab567f96c7c888cf8a4ddcf89fe1cd05",
+            "extract_dir": "np2x64",
+            "bin": [
+                [
+                    "np2.exe",
+                    "np2"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "np2.exe",
+                    "Neko Project II"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://www.yui.ne.jp/np2/bin/np2_winnt_086.zip",
+            "hash": "c9fbe62f849b7f37b15839be40923fe20373a939df9c93405b4dfd78be03ce4a",
+            "extract_dir": "np2nt",
+            "bin": [
+                [
+                    "np2nt.exe",
+                    "np2"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "np2nt.exe",
+                    "Neko Project II"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nekoprojectii/",
-        "regex": "([\\d.]+-win64)\\.7z"
+        "url": "https://www.yui.ne.jp/np2/",
+        "regex": "bin/np2_win64_(?<maj>\\d)(?<min>\\d+)\\.zip",
+        "replace": "${maj}.${min}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nekoprojectii/$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.yui.ne.jp/np2/bin/np2_win64_$matchMaj$matchMin.zip"
+            },
+            "32bit": {
+                "url": "https://www.yui.ne.jp/np2/bin/np2_winnt_$matchMaj$matchMin.zip"
+            }
+        }
     }
 }

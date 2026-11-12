@@ -1,0 +1,35 @@
+{
+    "version": "5.0.12",
+    "description": "Dance and rhythm game simulator",
+    "homepage": "https://www.stepmania.com/",
+    "license": "MIT",
+    "notes": "StepMania is no longer actively developed.",
+    "url": "https://github.com/stepmania/stepmania/releases/download/v5.0.12/StepMania-5.0.12-win32.exe#/dl.7z",
+    "hash": "b3a6c5f70cc35fa5a756e489b545d495309b2abdc5efaa7a78abbacdc2aa8f2c",
+    "pre_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "if (!(Test-Path \"$persist_dir\\Portable.ini\")) {",
+        "    New-Item \"$dir\\Portable.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "Program\\StepMania.exe",
+    "shortcuts": [
+        [
+            "Program\\StepMania.exe",
+            "StepMania"
+        ]
+    ],
+    "persist": [
+        "Save",
+        "Songs",
+        "Courses",
+        "Screenshots",
+        "Portable.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/stepmania/stepmania"
+    },
+    "autoupdate": {
+        "url": "https://github.com/stepmania/stepmania/releases/download/v$version/StepMania-$version-win32.exe#/dl.7z"
+    }
+}

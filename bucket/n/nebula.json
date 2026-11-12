@@ -7,19 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nebula/emulator_screen_01.jpg"
     ],
     "version": "2.25b",
-    "description": "Nebula is a Capcom CPS1 and CPS2 and SNK NeoGeo emulator.",
-    "homepage": "http://nebula.emulatronia.com",
+    "description": "Capcom CPS1/CPS2 and SNK Neo Geo arcade emulator",
+    "homepage": "https://web.archive.org/web/20220424033100/http://nebula.emulatronia.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nebula/2.25b.7z",
-    "hash": "375c7ded1a2ee60ec33e770e3b81f14b9b7e4ef472f247fedd17c09da17548be",
-    "bin": [
-        "nebula.exe"
+    "url": "https://web.archive.org/web/20190322204928id_/http://nebula.emulatronia.com/files/nebula225b.zip",
+    "hash": "3a748306704cc3827962cecb08af8cc4fa71789a9a0582da2e6d6018b9bfbc33",
+    "bin": "nebula.exe",
+    "shortcuts": [
+        [
+            "nebula.exe",
+            "Nebula"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/nebula/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nebula/$version.7z"
-    }
+    "persist": [
+        "nebula.ini",
+        "Config",
+        "EEPROM",
+        "Hiscores",
+        "Roms"
+    ]
 }

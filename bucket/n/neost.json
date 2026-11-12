@@ -1,0 +1,24 @@
+{
+    "version": "0.6.4",
+    "description": "Atari ST/STE emulator based on the Moira 68000 core (ships with EmuTOS)",
+    "homepage": "https://github.com/habib256/neost",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/habib256/neost/releases/download/0.6.4/NeoST-0.6.4-windows-x86_64.zip",
+    "hash": "2b04ba1e6151285df513ba8b6afe6d5bbccf2e9565a39679edf36bef0a0eb3e7",
+    "extract_dir": "NeoST-0.6.4-windows-x86_64",
+    "bin": "neost.exe",
+    "shortcuts": [
+        [
+            "neost.exe",
+            "NeoST"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/habib256/neost/releases/download/$version/NeoST-$version-windows-x86_64.zip",
+        "hash": {
+            "url": "https://github.com/habib256/neost/releases/download/$version/SHA256SUMS.txt"
+        },
+        "extract_dir": "NeoST-$version-windows-x86_64"
+    }
+}

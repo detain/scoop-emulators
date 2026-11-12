@@ -1,0 +1,27 @@
+{
+    "version": "0.3.0",
+    "description": "Nintendo Game Boy / Game Boy Color / Game Boy Advance emulator based on VisualBoyAdvance",
+    "homepage": "https://code.google.com/archive/p/vbaplus/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vbaplus/VBA%20Plus%200.3.0.7z",
+    "hash": "7d4a55311d87d3a63ace62c74bab899c3f9c7b92433056f14c0c161c708702b4",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\vba.ini\")) {",
+        "    New-Item \"$dir\\vba.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "VisualBoyAdvance.exe",
+            "vba-plus"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VisualBoyAdvance.exe",
+            "VBA Plus"
+        ]
+    ],
+    "persist": "vba.ini"
+}

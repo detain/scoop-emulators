@@ -6,18 +6,32 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/unz/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/unz/emulator_screen_01.jpg"
     ],
-    "version": "1.0.5",
-    "description": "Twombit is a portable emulator for the 2-bit Ferranti ULA video chip used in the Sinclair ZX80 and ZX81.",
-    "homepage": "https://sourceforge.net/projects/twombit/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/twombit/files/v%201.0.5/twombit_win.zip/download",
-    "hash": "2ce22ec2b4982b6f4ade03605fd67112376d41951e508c2610f26fb96836a2ca",
-    "bin": "twombit.exe",
+    "version": "0.5.30",
+    "description": "Fujitsu FM Towns emulator",
+    "homepage": "https://townsemu.world.coocan.jp/",
+    "license": "Freeware",
+    "notes": "UNZ requires FM Towns ROM images (or the compatible ROMs from the homepage) placed next to Unz.exe.",
+    "url": "https://townsemu.world.coocan.jp/unz0530.zip",
+    "hash": "4a44bccef78e20fecdb8e252786948cdac4a5c2dea16b6d064efa91c9da26c40",
+    "bin": [
+        [
+            "Unz.exe",
+            "unz"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Unz.exe",
+            "UNZ"
+        ]
+    ],
+    "persist": "cmos.dat",
     "checkver": {
-        "url": "https://sourceforge.net/projects/twombit/files/",
-        "regex": "v (\\d[\\d\\.]*)"
+        "url": "https://townsemu.world.coocan.jp/download.html",
+        "regex": "HREF=\"unz(\\d)(\\d)(\\d{2}[a-z]?)\\.zip\"",
+        "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/twombit/files/v%20$version/twombit_win.zip/download"
+        "url": "https://townsemu.world.coocan.jp/unz$cleanVersion.zip"
     }
 }

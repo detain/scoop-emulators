@@ -1,0 +1,47 @@
+{
+    "version": "1.2.38",
+    "description": "Atari Lynx emulator, debugger and embedded MCP server",
+    "homepage": "https://github.com/drhelius/Gearlynx",
+    "license": "GPL-3.0-only",
+    "notes": "Gearlynx requires an Atari Lynx BIOS (lynxboot.img); load it from the Emulator menu.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/drhelius/Gearlynx/releases/download/1.2.38/Gearlynx-1.2.38-desktop-windows-x64.zip",
+            "hash": "c33b15353655784d801c09048d1582d6456b5275f5934550691dc44efb32e12f"
+        },
+        "arm64": {
+            "url": "https://github.com/drhelius/Gearlynx/releases/download/1.2.38/Gearlynx-1.2.38-desktop-windows-arm64.zip",
+            "hash": "1fb411895cc28f4a182d8296ea7749e32ba4fee130313f83ff2dd198e310dded"
+        }
+    },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": "Gearlynx.exe",
+    "shortcuts": [
+        [
+            "Gearlynx.exe",
+            "Gearlynx"
+        ]
+    ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drhelius/Gearlynx/releases/download/$version/Gearlynx-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/drhelius/Gearlynx/releases/download/$version/Gearlynx-$version-desktop-windows-arm64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "version": "0.20.1",
+    "description": "Commodore 64 SID music player with a modern GUI, based on libsidplayfp",
+    "homepage": "https://github.com/bytespiller/sidplaywx",
+    "license": "GPL-3.0-or-later",
+    "notes": "Settings (settings.xml) are saved to the working directory; launch via the Start Menu shortcut so they are kept in the persisted app folder.",
+    "url": "https://github.com/bytespiller/sidplaywx/releases/download/v0.20.1/sidplaywx-v0.20.1-win64.7z",
+    "hash": "ce233809fd1a129e1e5f3178bc31e8793e7e585022f6eb5383ee1bd36d384a04",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.xml\")) {",
+        "    New-Item \"$dir\\settings.xml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "sidplaywx.exe",
+    "shortcuts": [
+        [
+            "sidplaywx.exe",
+            "sidplaywx"
+        ]
+    ],
+    "persist": [
+        "settings.xml",
+        "default.m3u8"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/bytespiller/sidplaywx/releases/download/v$version/sidplaywx-v$version-win64.7z"
+    }
+}

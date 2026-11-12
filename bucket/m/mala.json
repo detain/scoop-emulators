@@ -1,0 +1,52 @@
+{
+    "version": "1.91",
+    "description": "Frontend for MAME and other emulators, designed for arcade cabinets",
+    "homepage": "https://malafe.net/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://malafe.net/download.html"
+    },
+    "notes": "MaLa 1.9x is the final 1.x line (aimed at Windows XP and older); see mala-dev for the MaLa 2.0 beta for Windows 10/11.",
+    "url": "https://github.com/DrLoader/MaLa-Releases/releases/download/v1.91/MaLa_1.91_b68.zip",
+    "hash": "0e7728da176ad453743d24d86cf3f3ef0d8bec8e2e8d99581619c1bbe2254b5f",
+    "extract_dir": "MaLa_1.91_b68",
+    "pre_install": [
+        "Get-ChildItem $dir -Directory | Where-Object { $_.Name -match '^MaLa\\d' } | Select-Object -First 1 | ForEach-Object {",
+        "    Get-ChildItem $_.FullName | Move-Item -Destination $dir -Force",
+        "    Remove-Item $_.FullName -Recurse -Force",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\mala.ini\")) {",
+        "    New-Item \"$dir\\mala.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "MaLa.exe",
+            "mala"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MaLa.exe",
+            "MaLa"
+        ],
+        [
+            "MalaGamelist.exe",
+            "MaLa Game List Editor"
+        ],
+        [
+            "MalaLayout.exe",
+            "MaLa Layout Editor"
+        ]
+    ],
+    "persist": "mala.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/DrLoader/MaLa-Releases/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/MaLa_[\\d.]+_b(?<build>\\d+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/DrLoader/MaLa-Releases/releases/download/v$version/MaLa_$version_b$matchBuild.zip",
+        "extract_dir": "MaLa_$version_b$matchBuild"
+    }
+}

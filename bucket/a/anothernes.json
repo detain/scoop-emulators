@@ -1,0 +1,24 @@
+{
+    "version": "0.3",
+    "description": "Nintendo Entertainment System emulator and debugger",
+    "homepage": "https://github.com/JaCzekanski/AnotherNES",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/JaCzekanski/AnotherNES/releases/download/V0.3/AnotherNES.zip",
+    "hash": "a0c0a2cb6c0067e432b7784233ab65ea820f66920eb5331da26d1adcdae106cb",
+    "extract_dir": "AnotherNES",
+    "bin": "AnotherNES.exe",
+    "shortcuts": [
+        [
+            "AnotherNES.exe",
+            "AnotherNES"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/JaCzekanski/AnotherNES"
+    },
+    "autoupdate": {
+        "url": "https://github.com/JaCzekanski/AnotherNES/releases/download/V$version/AnotherNES.zip",
+        "extract_dir": "AnotherNES"
+    }
+}

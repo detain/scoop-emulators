@@ -1,0 +1,53 @@
+{
+    "version": "8.5.0",
+    "description": "Commodore Amiga emulator based on WinUAE",
+    "homepage": "https://amiberry.com/",
+    "license": "GPL-3.0-only",
+    "notes": "Place your Kickstart ROMs in $persist_dir\\ROMs",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/BlitterStudio/amiberry/releases/download/v8.5.0/amiberry-v8.5.0-windows-x64-portable.zip",
+            "hash": "1e2af484a03827114f720eb72607d779d7fc5c0be8210ec90ab85446c841b6bf",
+            "extract_dir": "amiberry-v8.5.0-windows-x64-portable"
+        },
+        "arm64": {
+            "url": "https://github.com/BlitterStudio/amiberry/releases/download/v8.5.0/amiberry-v8.5.0-windows-arm64-portable.zip",
+            "hash": "bdc739992543e352f686e06dd402d8642174b82e362084d3c04afa2276cd2432",
+            "extract_dir": "amiberry-v8.5.0-windows-arm64-portable"
+        }
+    },
+    "bin": "Amiberry.exe",
+    "shortcuts": [
+        [
+            "Amiberry.exe",
+            "Amiberry"
+        ]
+    ],
+    "persist": [
+        "Settings",
+        "Configurations",
+        "ROMs",
+        "SaveStates",
+        "Screenshots",
+        "NVRAM",
+        "Floppies",
+        "HardDrives",
+        "CDROMs",
+        "LHA"
+    ],
+    "checkver": {
+        "github": "https://github.com/BlitterStudio/amiberry"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/BlitterStudio/amiberry/releases/download/v$version/amiberry-v$version-windows-x64-portable.zip",
+                "extract_dir": "amiberry-v$version-windows-x64-portable"
+            },
+            "arm64": {
+                "url": "https://github.com/BlitterStudio/amiberry/releases/download/v$version/amiberry-v$version-windows-arm64-portable.zip",
+                "extract_dir": "amiberry-v$version-windows-arm64-portable"
+            }
+        }
+    }
+}

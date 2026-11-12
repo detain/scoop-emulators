@@ -1,0 +1,52 @@
+{
+    "version": "4.14",
+    "description": "Commodore 64 emulator specialised in SID music playback, with HVSC/CGSC and GameBase64 support",
+    "homepage": "https://sourceforge.net/projects/jsidplay2/",
+    "license": "LGPL-2.0-only",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://downloads.sourceforge.net/project/jsidplay2/jsidplay2/4.14/jsidplay2-4.14-win.zip",
+    "hash": "sha1:d9ece18cebbb5d953779b9edb533110876f51153",
+    "extract_dir": "jsidplay2-4.14-win",
+    "bin": [
+        [
+            "jsidplay2-4.14.exe",
+            "jsidplay2"
+        ],
+        [
+            "jsidplay2-console-4.14.exe",
+            "jsidplay2-console"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "jsidplay2-4.14.exe",
+            "JSIDPlay2"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/jsidplay2/rss?path=/jsidplay2",
+        "regex": "jsidplay2-([\\d.]+)-win\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/jsidplay2/jsidplay2/$version/jsidplay2-$version-win.zip",
+        "extract_dir": "jsidplay2-$version-win",
+        "bin": [
+            [
+                "jsidplay2-$version.exe",
+                "jsidplay2"
+            ],
+            [
+                "jsidplay2-console-$version.exe",
+                "jsidplay2-console"
+            ]
+        ],
+        "shortcuts": [
+            [
+                "jsidplay2-$version.exe",
+                "JSIDPlay2"
+            ]
+        ]
+    }
+}

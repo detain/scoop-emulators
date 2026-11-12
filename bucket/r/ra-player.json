@@ -1,0 +1,28 @@
+{
+    "version": "0.5.6.0",
+    "description": "Frontend for RetroArch and libretro (RAEM, formerly RA-Player)",
+    "homepage": "https://github.com/phexe/RAEM",
+    "license": "Unknown",
+    "notes": [
+        "This frontend is no longer developed.",
+        "Requires RetroArch (e.g. scoop install retroarch)."
+    ],
+    "url": "https://github.com/phexe/RAEM/releases/download/v0.5.6.0/RAEM_v0.5.6.0.zip",
+    "hash": "5b9ee809dae210b007441029f43e4c28f8672b5a66e7e0cd436816fc095fce61",
+    "bin": [
+        [
+            "RAEM.exe",
+            "raem"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RAEM.exe",
+            "RAEM"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/phexe/RAEM/releases/download/v$version/RAEM_v$version.zip"
+    }
+}

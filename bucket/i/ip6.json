@@ -27,8 +27,7 @@
     "checkver": {
         "url": "http://p6ers.net/mm/pc-6001/",
         "regex": "ip6win(?<file>(?<major>\\d)(?<minor>\\d+)rel(?<rel>\\d+))\\.lzh",
-        "replace": "${major}.${minor}release${rel}",
-        "reverse": true
+        "replace": "${major}.${minor}release${rel}"
     },
     "autoupdate": {
         "url": "http://p6ers.net/mm/pc-6001/ip6win$matchFile.lzh"

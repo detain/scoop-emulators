@@ -1,0 +1,27 @@
+{
+    "version": "2.21.4.9340",
+    "description": "Super Nintendo (SNES) SPC music player based on SNESAPU.DLL",
+    "homepage": "https://dgrfactory.jp/spcplay/",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/dgrfactory/spcplay/releases/download/2.21.4.9340/spcplay-2.21.4.9340.zip",
+    "hash": "7a4753e43a0e5078d54e4e942fcc1947c777c96ea8060534d41e0a1114811450",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\spcplay.ini\")) {",
+        "    New-Item \"$dir\\spcplay.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "spcplay.exe",
+    "shortcuts": [
+        [
+            "spcplay.exe",
+            "SNES SPC700 Player"
+        ]
+    ],
+    "persist": "spcplay.ini",
+    "checkver": {
+        "github": "https://github.com/dgrfactory/spcplay"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dgrfactory/spcplay/releases/download/$version/spcplay-$version.zip"
+    }
+}

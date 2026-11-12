@@ -1,0 +1,27 @@
+{
+    "version": "2.6.0",
+    "description": "Apple II+ and Apple //e emulator written in Go",
+    "homepage": "https://github.com/ivanizag/izapple2",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ivanizag/izapple2/releases/download/v2.6.0/izapple2-windows-amd64.zip",
+            "hash": "764edda389a4c57532822ee0353a4bededc8f0dda0fc2e70a2cd6dbe82f083e9"
+        }
+    },
+    "bin": "izapple2.exe",
+    "shortcuts": [
+        [
+            "izapple2.exe",
+            "izapple2"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ivanizag/izapple2/releases/download/v$version/izapple2-windows-amd64.zip"
+            }
+        }
+    }
+}

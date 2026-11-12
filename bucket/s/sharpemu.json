@@ -1,0 +1,28 @@
+{
+    "version": "0.0.7-pulse",
+    "description": "Experimental Sony PlayStation 5 emulator",
+    "homepage": "https://sharpemu.app",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/sharpemu/sharpemu/releases/download/v0.0.7-pulse/sharpemu-0.0.7-pulse-win-x64.zip",
+    "hash": "3ab0ac49f2401dc8aa73ec671e6c83fb7785f7aacbaedc194de15c2bc4d0733c",
+    "bin": [
+        [
+            "SharpEmu.exe",
+            "sharpemu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SharpEmu.exe",
+            "SharpEmu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/sharpemu/sharpemu/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sharpemu/sharpemu/releases/download/v$version/sharpemu-$version-win-x64.zip"
+    }
+}

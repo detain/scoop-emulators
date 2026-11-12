@@ -1,0 +1,25 @@
+{
+    "version": "0.6.7",
+    "description": "Cheat device (memory editor/trainer) for PC games and emulators such as PCSX2",
+    "homepage": "https://sourceforge.net/projects/envasion/",
+    "license": "Freeware",
+    "notes": "This tool is no longer developed.",
+    "url": "https://downloads.sourceforge.net/project/envasion/Envasion0.6.7.zip",
+    "hash": "sha1:0c52377c52c7ecae7cd7c6d380394d06a88ee55f",
+    "extract_dir": "Envasion0.6.7",
+    "bin": "Envasion.exe",
+    "shortcuts": [
+        [
+            "Envasion.exe",
+            "Envasion"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/envasion/rss",
+        "regex": "Envasion([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/envasion/Envasion$version.zip",
+        "extract_dir": "Envasion$version"
+    }
+}

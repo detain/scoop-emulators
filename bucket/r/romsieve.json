@@ -1,0 +1,30 @@
+{
+    "version": "1.2.1",
+    "description": "ROM collection organizer that audits against DAT files, applies 1G1R and rebuilds a clean folder tree",
+    "homepage": "https://github.com/madvintager/RomSieve",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/madvintager/RomSieve/releases/download/v1.2.1/RomSieve-1.2.1-win-x64.zip",
+    "hash": "a4c2108ce92b997dd876a841f3b87ae58c7aadb665466433451cb0a22bebcfb6",
+    "extract_dir": "RomSieve-1.2.1-win-x64",
+    "bin": [
+        [
+            "RomSieve.exe",
+            "romsieve"
+        ],
+        "romsieve-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "RomSieve.exe",
+            "RomSieve"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/madvintager/RomSieve/releases/download/v$version/RomSieve-$version-win-x64.zip",
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "extract_dir": "RomSieve-$version-win-x64"
+    }
+}

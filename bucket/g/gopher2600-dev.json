@@ -1,0 +1,29 @@
+{
+    "version": "20261109",
+    "description": "Atari 2600 emulator (development version)",
+    "homepage": "https://github.com/JetSetIlly/Gopher2600",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/JetSetIlly/Gopher2600/releases/download/nightly/gopher2600_windows_amd64.exe",
+    "hash": "2182c77c0f58988c19a732765cad4efbd5c3ffb49c6af5aac68fba485faf3385",
+    "bin": [
+        [
+            "gopher2600_windows_amd64.exe",
+            "gopher2600-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gopher2600_windows_amd64.exe",
+            "Gopher2600 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/JetSetIlly/Gopher2600/releases/tags/nightly",
+        "jsonpath": "$.assets[?(@.name == 'gopher2600_windows_amd64.exe')].updated_at",
+        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/JetSetIlly/Gopher2600/releases/download/nightly/gopher2600_windows_amd64.exe"
+    }
+}

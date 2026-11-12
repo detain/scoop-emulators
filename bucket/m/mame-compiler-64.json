@@ -1,0 +1,25 @@
+{
+    "version": "2.0.197",
+    "description": "Frontend for compiling MAME from source and applying diff patches",
+    "homepage": "https://web.archive.org/web/2020/http://headsoft.com.au/index.php?category=mame&page=mc64",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed; this is the last archived build.",
+        "Requires the .NET Framework 3.5 (includes 2.0)."
+    ],
+    "url": "https://web.archive.org/web/20200305053625id_/http://headsoft.com.au/download/mame/MC64Setup.exe",
+    "hash": "a891a40d6259add579777862b92625b084519cb21e45e4d8895fe46a25049f71",
+    "innosetup": true,
+    "bin": [
+        [
+            "MAMECompiler64.exe",
+            "mamecompiler64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MAMECompiler64.exe",
+            "MAME Compiler 64"
+        ]
+    ]
+}

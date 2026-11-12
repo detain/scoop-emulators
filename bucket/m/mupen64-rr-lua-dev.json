@@ -1,0 +1,53 @@
+{
+    "version": "89-20261111-e2b1a2a",
+    "description": "Nintendo 64 emulator for TASing with re-recording and Lua scripting (Mupen64-RR) (development version)",
+    "homepage": "https://mupen64.com/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "Video, audio, input and RSP plugins are not included; get them from the repack at https://mupen64.com/",
+        "Development builds come from the daily nightly GitHub Actions workflow (via nightly.link); upstream keeps these artifacts for only 14 days."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x64.zip",
+            "hash": "c9b7792bcdd2b9056ccfffe5d9875508d3b7ec50964c5c0db6c4b0a2063bcdb7"
+        },
+        "32bit": {
+            "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x86.zip",
+            "hash": "e4f47b95a2f4b0964faa31c0e6e52cb788f09000b1d166f64b877a197a89f53f"
+        }
+    },
+    "bin": [
+        [
+            "mupen64.exe",
+            "mupen64-rr-lua-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mupen64.exe",
+            "Mupen64-RR Lua (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/mupen64/mupen64-rr-lua/actions/workflows/build-nightly.yml/runs?branch=main&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x86.zip"
+            }
+        }
+    }
+}

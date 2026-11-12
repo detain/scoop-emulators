@@ -6,20 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/twombit/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/twombit/emulator_screen_01.jpg"
     ],
-    "version": "1.0.3",
-    "description": "TwoMBit is an Sega Master System, Game Gear and SG-1000 emulator.",
-    "homepage": "http://sourceforge.net/projects/twombit/",
+    "version": "1.0.5",
+    "description": "Sega Master System, Game Gear and SG-1000 emulator",
+    "homepage": "https://sourceforge.net/projects/twombit/",
     "license": "GPL-3.0-or-later",
-    "url": "https://consolo.is.cc/emu/twombit/1.0.3.7z",
-    "hash": "fcfb5f6e5ce7c9053c50006710f0152db012d25be38326966bd3f8b2903a7e6c",
+    "url": "https://downloads.sourceforge.net/project/twombit/v%201.0.5/twombit_win.zip",
+    "hash": "2ce22ec2b4982b6f4ade03605fd67112376d41951e508c2610f26fb96836a2ca",
     "bin": [
-        "TwoMBit.exe"
+        [
+            "TwoMbit.exe",
+            "twombit"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TwoMbit.exe",
+            "TwoMBit"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/twombit/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://sourceforge.net/projects/twombit/rss?path=/",
+        "regex": "files/v%20([\\d.]+)/twombit_win\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/twombit/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/twombit/v%20$version/twombit_win.zip"
     }
 }

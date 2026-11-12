@@ -1,0 +1,27 @@
+{
+    "version": "1.5.0",
+    "description": "MAME frontend with a MAMEUI-like interface (M+GUI), for MAME, MAME Plus! and MESS",
+    "homepage": "https://sourceforge.net/projects/mameplus/",
+    "license": "WTFPL",
+    "notes": [
+        "This frontend is no longer developed.",
+        "Set the path to your MAME executable in Options."
+    ],
+    "url": "https://web.archive.org/web/20101205104050id_/http://mameicons.free.fr/mame32p/download/mamepgui-1.5.0.win-20100305.zip",
+    "hash": "3b8774df113b4faea6c1fa4a05906ab5639f0c2c5776702b51a5e80d0d975e8c",
+    "bin": [
+        [
+            "mamepgui.exe",
+            "mamepgui",
+            "-configpath \"$dir\\.mamepgui\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mamepgui.exe",
+            "M+GUI",
+            "-configpath \"$dir\\.mamepgui\""
+        ]
+    ],
+    "persist": ".mamepgui"
+}

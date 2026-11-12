@@ -1,0 +1,40 @@
+{
+    "version": "0.220",
+    "description": "Lightweight frontend for the MAME arcade emulator",
+    "homepage": "https://www.systempixel.fr/mame-custom-front-end/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.systempixel.fr/mame-custom-front-end/"
+    },
+    "notes": "This frontend is no longer developed.",
+    "url": "https://www.systempixel.fr/download/mcfe0220_20171203.exe#/dl.7z",
+    "hash": "e86361ad49741f76e91cbe1a8162e0e3003d34a0ddbbbb4dec3d3d6547756274",
+    "bin": [
+        [
+            "mcfe.exe",
+            "mame-custom-front-end"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mcfe.exe",
+            "Mame Custom Front End"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "script": [
+            "$req = [System.Net.WebRequest]::Create('https://www.systempixel.fr/download/mcfe-last.php')",
+            "$req.AllowAutoRedirect = $false",
+            "$req.UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'",
+            "$resp = $req.GetResponse()",
+            "Write-Output $resp.Headers['Location']",
+            "$resp.Close()"
+        ],
+        "regex": "mcfe(?<major>\\d)(?<minor>\\d{3})_(?<date>\\d{8})\\.exe",
+        "replace": "${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://www.systempixel.fr/download/mcfe$matchMajor$matchMinor_$matchDate.exe#/dl.7z"
+    }
+}

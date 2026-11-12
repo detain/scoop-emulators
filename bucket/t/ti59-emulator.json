@@ -1,0 +1,27 @@
+{
+    "version": "1.0.1110.1",
+    "description": "Texas Instruments TI-59 programmable calculator emulator",
+    "homepage": "http://www.zanchetta.net/default.aspx?Categorie=CALCULATRICES&Page=TI59Emulator",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed.",
+    "url": "http://alain.zanchetta.free.fr/softs/TI59_Emulator.1.0.1110.1.msi",
+    "hash": "3fb4702863de942f72df04f3ff7c21a82c3436d88a138e69786366ecee8a744d",
+    "pre_install": [
+        "if (Test-Path \"$dir\\Win\\System\") {",
+        "    Copy-Item \"$dir\\Win\\System\\*.dll\" \"$dir\" -Force",
+        "    Remove-Item \"$dir\\Win\" -Recurse -Force",
+        "}"
+    ],
+    "bin": [
+        [
+            "TI59.Win32.exe",
+            "ti59"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TI59.Win32.exe",
+            "TI59 Emulator"
+        ]
+    ]
+}

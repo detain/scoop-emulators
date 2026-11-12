@@ -1,0 +1,35 @@
+{
+    "version": "1.23",
+    "description": "Nintendo Wii U Virtual Console batch injector for NES, SNES, N64, GBA and NDS games",
+    "homepage": "https://github.com/CatmanFan/Injectiine",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "Place ROMs and images in $persist_dir\\Files; injected games are written to $persist_dir\\Output.",
+        "Requires Java (and Python 3 for GBA injection)."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre",
+        "Python": "main/python"
+    },
+    "url": "https://github.com/CatmanFan/Injectiine/releases/download/v1.23/Injectiine.v1.23.rar",
+    "hash": "b8b8d4e2a992e5848f0b15740e2985539e4445d5b1902850aac49adfbbb37166",
+    "extract_dir": "Injectiine v1.23",
+    "pre_install": "Set-Content \"$dir\\injectiine.cmd\" -Value \"@echo off`r`ncd /d `\"%~dp0Tools`\"`r`ncall Loader.bat\" -Encoding Ascii",
+    "bin": "injectiine.cmd",
+    "shortcuts": [
+        [
+            "injectiine.cmd",
+            "Injectiine"
+        ]
+    ],
+    "persist": [
+        "Files",
+        "Output"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/CatmanFan/Injectiine/releases/download/v$version/Injectiine.v$version.rar",
+        "extract_dir": "Injectiine v$version"
+    }
+}

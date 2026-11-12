@@ -1,0 +1,28 @@
+{
+    "version": "0.1.1",
+    "description": "Qt graphical frontend for the Mupen64Plus Nintendo 64 emulator",
+    "homepage": "https://cutemupen.sourceforge.io/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This frontend is no longer developed.",
+        "Mupen64Plus must be installed separately; set its paths on first run."
+    ],
+    "url": "https://downloads.sourceforge.net/project/cutemupen/0.1.1/cutemupen-win32-0.1.1.zip",
+    "hash": "sha1:39376f17af3db6d76104aa2fe9b9700bca6f7b0a",
+    "extract_dir": "cutemupen-win32-0.1.1",
+    "bin": "cutemupen.exe",
+    "shortcuts": [
+        [
+            "cutemupen.exe",
+            "CuteMupen"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/cutemupen/rss",
+        "regex": "/([\\d.]+)/cutemupen-win32-"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/cutemupen/$version/cutemupen-win32-$version.zip",
+        "extract_dir": "cutemupen-win32-$version"
+    }
+}

@@ -6,20 +6,26 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/snesgt/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/snesgt/emulator_screen_01.jpg"
     ],
-    "version": "0230b7e",
-    "description": "SNESGT is a Nintendo SNES and Super Famicom emulator.",
+    "version": "0.218",
+    "description": "Nintendo SNES / Super Famicom emulator",
     "homepage": "http://gigo.retrogames.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/snesgt/0230b7e.7z",
-    "hash": "5e85b3dd23bf6256eef624d2d2c85dbd110694e357a5bebcdbe6f0258850d8ad",
-    "bin": [
-        "snesgt.exe"
+    "url": "http://gigo.retrogames.com/snesgt/bin/snesgt0218e.zip",
+    "hash": "a87df773e029d10b1889de004a6cda390e37cc522cb5fc12f4e1b82ad9675623",
+    "bin": "snesgt.exe",
+    "shortcuts": [
+        [
+            "snesgt.exe",
+            "SNESGT"
+        ]
     ],
+    "persist": "save",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/snesgt/",
-        "regex": "([\\da-f]+)\\.7z"
+        "url": "http://gigo.retrogames.com/download.html",
+        "regex": "snesgt(?<major>\\d)(?<minor>\\d{3})e\\.zip",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/snesgt/$version.7z"
+        "url": "http://gigo.retrogames.com/snesgt/bin/snesgt$matchMajor$matchMinore.zip"
     }
 }

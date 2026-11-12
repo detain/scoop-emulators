@@ -1,0 +1,24 @@
+{
+    "version": "0.95",
+    "description": "IBM PC/XT compatible computer emulator with built-in BIOS",
+    "homepage": "http://soviet-pc.narod.ru/",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed. Type HELP in the emulator command line for the list of commands and keys.",
+    "url": "https://soviet-pc.narod.ru/PCXT/SPCXT_v095.zip",
+    "hash": "f00ad4c9fc8751fac4584cf3fdce9a66e395f91a95d1aa39de4e60e57b8b328d",
+    "bin": "SPCXT.exe",
+    "shortcuts": [
+        [
+            "SPCXT.exe",
+            "SPCXT"
+        ]
+    ],
+    "checkver": {
+        "url": "https://soviet-pc.narod.ru/sandbox_ru.html",
+        "regex": "SPCXT_v(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "url": "https://soviet-pc.narod.ru/PCXT/SPCXT_v$cleanVersion.zip"
+    }
+}

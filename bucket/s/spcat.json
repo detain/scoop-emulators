@@ -1,0 +1,17 @@
+{
+    "version": "0.98.2",
+    "description": "IBM PC/AT compatible computer emulator (386 to 686 class x86 machines, 8-133 MHz)",
+    "homepage": "http://soviet-pc.narod.ru/",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed. The original download site is gone; this package comes from an Internet Archive snapshot.",
+    "url": "https://web.archive.org/web/20181224140336id_/http://spc-emu.uphero.com/X64/SPCAT_v982.zip",
+    "hash": "7581cb507eb39648f7e91af72e307dd85ad3083087ec427dd3e785a0b2c825d9",
+    "bin": "SPCAT.exe",
+    "shortcuts": [
+        [
+            "SPCAT.exe",
+            "SPC-AT"
+        ]
+    ],
+    "persist": "configs"
+}

@@ -1,0 +1,21 @@
+{
+    "version": "4",
+    "description": "Multi-system emulator (SNES, NES, Mega Drive, PC Engine, Game Boy/GBA, MSX, WonderSwan, Neo Geo Pocket and more) by byuu",
+    "homepage": "https://archive.org/details/byuu_v4",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed; it was merged back into higan (see also ares).",
+        "Some systems (Famicom Disk System, Mega CD, GBA, Neo Geo Pocket) need BIOS files; set their paths in Settings > Firmware."
+    ],
+    "url": "https://archive.org/download/byuu_v4/byuu_v4-windows.zip",
+    "hash": "debb1a01c36592f0188e2c1a6b7aa4bf375877469e62c8c9a96c304056aba04f",
+    "extract_dir": "byuu_v4-windows",
+    "bin": "byuu.exe",
+    "shortcuts": [
+        [
+            "byuu.exe",
+            "byuu"
+        ]
+    ],
+    "persist": "settings.bml"
+}

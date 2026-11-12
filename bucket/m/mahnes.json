@@ -5,20 +5,27 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mahnes/emulator_screen_01.jpg"
     ],
-    "version": "0.3.004",
-    "description": "MahNES is a Nintendo Entertainment System emulator.",
+    "version": "20151027",
+    "description": "Nintendo Entertainment System emulator with 6502 sub-instruction timing",
     "homepage": "https://github.com/hlorenzi/mahnes",
-    "license": "BSD",
-    "url": "https://consolo.is.cc/emu/mahnes/0.3.004.7z",
-    "hash": "8fceb6e3b34af31d3a9185e9778448328667ede83896b64bd76b7a42123006a3",
-    "bin": [
-        "MahNES.exe"
+    "license": "Freeware",
+    "notes": "MahNES has no versioned releases; this package is the Windows binary committed to the official repository (version = commit date).",
+    "url": "https://raw.githubusercontent.com/hlorenzi/mahnes/fe77adce502c85c0716673194741d935a66673f7/bin/win32_release/mahnes.exe",
+    "hash": "8c781af60e614167255920475f7b59b175ba7fa385f50845d503f337128dc6bd",
+    "bin": "mahnes.exe",
+    "shortcuts": [
+        [
+            "mahnes.exe",
+            "MahNES"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/mahnes/",
-        "regex": "([\\d.]+)\\.7z"
+        "github": "https://api.github.com/repos/hlorenzi/mahnes/commits?path=bin/win32_release/mahnes.exe&per_page=1",
+        "script": "Write-Output $page",
+        "regex": "\"sha\":\\s*\"(?<sha>[0-9a-f]{40})\"[\\s\\S]*?\"committer\":\\s*\\{[^}]*?\"date\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/mahnes/$version.7z"
+        "url": "https://raw.githubusercontent.com/hlorenzi/mahnes/$matchSha/bin/win32_release/mahnes.exe"
     }
 }

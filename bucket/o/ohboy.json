@@ -1,0 +1,30 @@
+{
+    "version": "251402-1",
+    "description": "Nintendo Game Boy and Game Boy Color emulator with a C++ core and Rust GUI",
+    "homepage": "https://github.com/letiendat198/OhBoy",
+    "license": "MIT",
+    "url": "https://github.com/letiendat198/OhBoy/releases/download/%23251402-1/OhBoy_Win64.zip",
+    "hash": "7663efabc16d2a068d4f9af1a3f808b6d8e6535f456144349cf266addbd5dfde",
+    "extract_dir": "OhBoy",
+    "bin": [
+        [
+            "OhBoyGUI.exe",
+            "ohboy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "OhBoyGUI.exe",
+            "OhBoy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/letiendat198/OhBoy/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "#([\\d-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/letiendat198/OhBoy/releases/download/%23$version/OhBoy_Win64.zip",
+        "extract_dir": "OhBoy"
+    }
+}

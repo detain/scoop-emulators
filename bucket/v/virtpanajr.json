@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtpanajr/emulator_screen_01.jpg"
     ],
     "version": "0.12",
-    "description": "Virtual Panasonic JR-200U is an emulator for the Panasonic JR-200U.",
+    "description": "Panasonic JR-200U emulator",
     "homepage": "http://www.geocities.ws/emucompboy/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/virtpanajr/0.12.7z",
-    "hash": "53452bed5819edde756aebdb7eba2aa953dd6e807b4db8e28c9d959665460111",
+    "notes": "GeoCities is gone; this is the original panjr012.zip from the Wayback Machine (geocities.ws mirrors block non-browser downloads).",
+    "url": "https://web.archive.org/web/20091027140103id_/http://www.geocities.com/emucompboy/panjr012.zip",
+    "hash": "e85fe68f90c1c877f07e6b1a1c5f8d6e1c757ffb9857a98168ff7c939d63649e",
+    "extract_dir": "VPanaJR",
     "bin": [
-        "vpanajr.exe"
+        [
+            "vpanajr.exe",
+            "vpanajr"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/virtpanajr/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/virtpanajr/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "vpanajr.exe",
+            "Virtual Panasonic JR-200U"
+        ]
+    ],
+    "persist": "vpanajr.ini"
 }

@@ -1,0 +1,36 @@
+{
+    "version": "3.2.2",
+    "description": "Commodore 64 SID music player (console) based on libsidplayfp, with the STIL viewer",
+    "homepage": "https://github.com/libsidplayfp/sidplayfp",
+    "license": "GPL-2.0-or-later",
+    "notes": "Optional C64 KERNAL/BASIC/CHARGEN ROM paths can be set in %APPDATA%\\sidplayfp\\sidplayfp.ini (see sidplayfp.ini.txt).",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/libsidplayfp/sidplayfp/releases/download/v3.2.2/sidplayfp-3.2.2-mingw64.zip",
+            "hash": "13ebaa16a9068cb6d1d613e1f75e094cd499f63d0e5cec2d472b3cc09c1704d5"
+        },
+        "32bit": {
+            "url": "https://github.com/libsidplayfp/sidplayfp/releases/download/v3.2.2/sidplayfp-3.2.2-mingw32.zip",
+            "hash": "1d09221e4b88e322af2dc20cdfed81b689e85a22532e7e11fb25506217ff5f8f"
+        }
+    },
+    "bin": [
+        "sidplayfp.exe",
+        "stilview.exe"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/libsidplayfp/sidplayfp/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/sidplayfp-[\\d.]+-mingw64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/libsidplayfp/sidplayfp/releases/download/v$version/sidplayfp-$version-mingw64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/libsidplayfp/sidplayfp/releases/download/v$version/sidplayfp-$version-mingw32.zip"
+            }
+        }
+    }
+}

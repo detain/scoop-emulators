@@ -1,0 +1,32 @@
+{
+    "version": "1.14.4",
+    "description": "Front-end for the blueMSX, openMSX and fMSX MSX emulators",
+    "homepage": "http://msxlaunchers.info/",
+    "license": "Freeware",
+    "notes": "This front-end is no longer developed. Point it at your blueMSX installation in its settings.",
+    "suggest": {
+        "blueMSX": "bluemsx"
+    },
+    "url": "http://msxlaunchers.info/files/bluemsx_launcher_v1-14-4.zip",
+    "hash": "3704af37c35c70d4a825ab370128e38b6ecac5808aec47c4578fbf298ff66fb2",
+    "bin": [
+        [
+            "blueMSX Launcher.exe",
+            "bluemsx-launcher"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "blueMSX Launcher.exe",
+            "blueMSX Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "http://msxlaunchers.info/download.html",
+        "regex": "bluemsx_launcher_v(\\d+)-(\\d+)-(\\d+)\\.zip",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "http://msxlaunchers.info/files/bluemsx_launcher_v$dashVersion.zip"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": "0.0.7",
+    "description": "Arcade emulator, a re-recording (TAS) build of FinalBurn Alpha with Lua scripting",
+    "homepage": "https://code.google.com/archive/p/fbarr/",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed. Its features live on in FinalBurn Neo.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fbarr/fba-rr-v007.7z",
+    "hash": "f88a262cc1d9c49bf68fc95de2b79d4e3c5ba440522d503fa2c11d1603c3a982",
+    "bin": [
+        [
+            "fba.exe",
+            "fba-rr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "fba.exe",
+            "FinalBurn Alpha Rerecording"
+        ]
+    ],
+    "persist": [
+        "config",
+        "roms",
+        "savestates"
+    ]
+}

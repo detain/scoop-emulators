@@ -1,0 +1,35 @@
+{
+    "version": "20261106-7dc47bab8",
+    "description": "Nintendo Switch emulator (Citron/yuzu continuation, nightly builds)",
+    "homepage": "https://citron-neo.github.io/",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Portable mode is enabled: user data is stored in $persist_dir\\user",
+        "Place prod.keys and title.keys in $persist_dir\\user\\keys and install firmware from the app."
+    ],
+    "url": "https://github.com/citron-neo/CI/releases/download/nightly-windows/Citron-windows-nightly-7dc47bab8-x64-clangtron.zip",
+    "hash": "eaf8ca764debde19e548a2b7fcc28b61119e9a6e3ff6ee6fb1ceee799176b6bd",
+    "bin": [
+        [
+            "citron.exe",
+            "citron-neo"
+        ],
+        "citron-cmd.exe"
+    ],
+    "shortcuts": [
+        [
+            "citron.exe",
+            "Citron Neo"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/citron-neo/CI/releases/tags/nightly-windows",
+        "script": "Write-Output $page",
+        "regex": "\"published_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^\"]*\"[\\s\\S]*?Citron-windows-nightly-(?<commit>[0-9a-f]+)-x64-clangtron\\.zip",
+        "replace": "${year}${month}${day}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/citron-neo/CI/releases/download/nightly-windows/Citron-windows-nightly-$matchCommit-x64-clangtron.zip"
+    }
+}

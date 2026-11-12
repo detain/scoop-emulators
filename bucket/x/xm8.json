@@ -5,20 +5,45 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xm8/emulator_screen_01.jpg"
     ],
-    "version": "1.61-win64",
-    "description": "XM8 is an NEC PC-8801 emulator. NOTE: Website is in Japanese.",
-    "homepage": "http://retropc.net/pi/",
+    "version": "1.70",
+    "description": "NEC PC-8801 emulator (Japanese)",
+    "homepage": "http://retropc.net/pi/xm8/index.html",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/xm8/1.61-win64.7z",
-    "hash": "7ccb0f9aa2def2680fa68c4c52d6b53ac520a8bfa59f2bd27081e2b97e2438f9",
-    "bin": [
-        "xm8.exe"
+    "notes": "Place the PC-8801 ROM files (N88.ROM, DISK.ROM, KANJI1.ROM, ...) in $dir",
+    "architecture": {
+        "64bit": {
+            "url": "http://retropc.net/pi/xm8/xm8_170.zip",
+            "hash": "0cc4f230d7bccc67fe0eb8b377dd185acc3a243269cf3be0462d35c2e0388185",
+            "extract_dir": "Windows_x64"
+        },
+        "32bit": {
+            "url": "http://retropc.net/pi/xm8/xm8_170.zip",
+            "hash": "0cc4f230d7bccc67fe0eb8b377dd185acc3a243269cf3be0462d35c2e0388185",
+            "extract_dir": "Windows_x86"
+        }
+    },
+    "bin": "XM8.exe",
+    "shortcuts": [
+        [
+            "XM8.exe",
+            "XM8"
+        ]
     ],
     "checkver": {
-        "url": "http://retropc.net/pi/",
-        "regex": "xm8-win-x64-(\\d+\\.\\d+\\.\\d+).zip"
+        "url": "http://retropc.net/pi/xm8/index.html",
+        "regex": "xm8_(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "http://retropc.net/pi/"
+        "architecture": {
+            "64bit": {
+                "url": "http://retropc.net/pi/xm8/xm8_$cleanVersion.zip",
+                "extract_dir": "Windows_x64"
+            },
+            "32bit": {
+                "url": "http://retropc.net/pi/xm8/xm8_$cleanVersion.zip",
+                "extract_dir": "Windows_x86"
+            }
+        }
     }
 }

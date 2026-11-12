@@ -1,0 +1,36 @@
+{
+    "version": "2021.10.15",
+    "description": "Nintendo 64 emulator with built-in netplay, based on Project64",
+    "homepage": "https://github.com/Project64Netplay/Project64-Netplay-2x",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/Project64Netplay/Project64-Netplay-2x/releases/download/10/15/21/PJ64Netplay-10-15-21.zip",
+    "hash": "f5142727fbb3747350d3b36d0b855c90f33c17283f837e6a8aa7ca4906e66a1d",
+    "extract_dir": "Compiled-main",
+    "bin": [
+        [
+            "Project64 Netplay.exe",
+            "project64-netplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Project64 Netplay.exe",
+            "Project64 Netplay"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Save"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Project64Netplay/Project64-Netplay-2x/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "releases/download/(?<tag>(?<m>\\d+)[/.](?<d>\\d+)[/.](?<y>\\d+))/(?<file>PJ64[^/\"]+\\.(?:zip|7z))",
+        "replace": "20${y}.${m}.${d}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Project64Netplay/Project64-Netplay-2x/releases/download/$matchTag/$matchFile",
+        "extract_dir": "Compiled-main"
+    }
+}

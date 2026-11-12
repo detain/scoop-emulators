@@ -1,0 +1,23 @@
+{
+    "version": "0.2.2",
+    "description": "Multi-system emulator (GBA, GB/GBC, NES, PC Engine, Sega 8-bit, ColecoVision, ZX Spectrum and more)",
+    "homepage": "https://yughias.github.io/Obentou/",
+    "license": "GPL-2.0-only",
+    "notes": "ColecoVision emulation requires a BIOS file.",
+    "url": "https://github.com/yughias/Obentou/releases/download/v0.2.2/obentou-windows.zip",
+    "hash": "170ca8c6994e2b9c6169855e6450c5e03ba5cd6588b5ac101248430d3d4e2f6a",
+    "bin": "obentou.exe",
+    "shortcuts": [
+        [
+            "obentou.exe",
+            "Obentou"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": {
+        "github": "https://github.com/yughias/Obentou"
+    },
+    "autoupdate": {
+        "url": "https://github.com/yughias/Obentou/releases/download/v$version/obentou-windows.zip"
+    }
+}

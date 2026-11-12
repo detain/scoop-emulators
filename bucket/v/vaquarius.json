@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vaquarius/emulator_screen_01.jpg"
     ],
     "version": "0.72a",
-    "description": "Virtual Aquarius is an emulator for the Radofin Electronics Aquarius Home Computer System.",
+    "description": "Mattel Aquarius home computer emulator",
     "homepage": "http://www.geocities.ws/emucompboy/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vaquarius/0.72a.7z",
-    "hash": "e2b91154d2da59fdd646dd7568cc81cbabdb51cbc455f1003a879d9021f5b374",
+    "notes": "GeoCities is gone; this is the original Vaq72a.zip from the Wayback Machine (geocities.ws mirrors block non-browser downloads).",
+    "url": "https://web.archive.org/web/20091027140118id_/http://www.geocities.com/emucompboy/Vaq72a.zip",
+    "hash": "c7f99ec22c58646077d78ef155173bfeea59effa064edec20e68581a8e9f37b0",
+    "extract_dir": "VirtualAquarius",
     "bin": [
-        "aquarius.exe"
+        [
+            "aquarius.exe",
+            "vaquarius"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/vaquarius/",
-        "regex": "([\\d.]+[a-z]*)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vaquarius/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "aquarius.exe",
+            "Virtual Aquarius"
+        ]
+    ],
+    "persist": "aquarius.ini"
 }

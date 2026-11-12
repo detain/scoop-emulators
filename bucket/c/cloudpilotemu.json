@@ -1,0 +1,49 @@
+{
+    "version": "2.3.0",
+    "description": "Palm OS emulator (Dragonball devices and OS5 via uARM), native command-line build of CloudpilotEmu",
+    "homepage": "https://cloudpilot-emu.github.io",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Requires a Palm OS ROM image. The native build is CLI-controlled (cloudpilot-emu for OS4 and earlier, cp-uarm for OS5).",
+        "The full GUI version runs in the browser: https://cloudpilot-emu.github.io/app"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cloudpilot-emu/cloudpilot-emu/releases/download/2.3.0/cloudpilot-win-native-2.3.0.zip",
+            "hash": "d2337368c4dfaf79e732858108169c8a55294b677826cfc4ff880ea5e07e8da4",
+            "extract_dir": "x64"
+        },
+        "32bit": {
+            "url": "https://github.com/cloudpilot-emu/cloudpilot-emu/releases/download/2.3.0/cloudpilot-win-native-2.3.0.zip",
+            "hash": "d2337368c4dfaf79e732858108169c8a55294b677826cfc4ff880ea5e07e8da4",
+            "extract_dir": "x86"
+        }
+    },
+    "bin": [
+        "cloudpilot-emu.exe",
+        "cp-uarm.exe",
+        [
+            "fstools.exe",
+            "cloudpilot-fstools"
+        ],
+        [
+            "vfs.exe",
+            "cloudpilot-vfs"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/cloudpilot-emu/cloudpilot-emu"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cloudpilot-emu/cloudpilot-emu/releases/download/$version/cloudpilot-win-native-$version.zip",
+                "extract_dir": "x64"
+            },
+            "32bit": {
+                "url": "https://github.com/cloudpilot-emu/cloudpilot-emu/releases/download/$version/cloudpilot-win-native-$version.zip",
+                "extract_dir": "x86"
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "version": "1.1",
+    "description": "Native GUI front end for the microM8 Apple II emulator (bundles the classic microM8 build)",
+    "homepage": "https://github.com/paleotronic/microm8-gui",
+    "license": "GPL-2.0-only",
+    "notes": "This front end is no longer developed. The current microM8 release has its own GUI (scoop install microm8).",
+    "url": "https://github.com/paleotronic/microm8-gui/releases/download/v1.1/microm8-gui-windows.zip",
+    "hash": "8b092cd89932099e8e42b7ad5675f6350e70a41dab1bac48a8be480c3f18f354",
+    "bin": "microm8-gui.exe",
+    "shortcuts": [
+        [
+            "microm8-gui.exe",
+            "microM8 GUI"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/paleotronic/microm8-gui/releases/download/v$version/microm8-gui-windows.zip"
+    }
+}

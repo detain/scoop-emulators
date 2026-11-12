@@ -1,0 +1,27 @@
+{
+    "version": "1.1.0",
+    "description": "Nintendo Wii U emulator (Cemu fork with game fixes, native Wii U Menu support and AzaharX 3DS link)",
+    "homepage": "https://github.com/GamesExObscura/CemuX",
+    "license": "MPL-2.0",
+    "notes": "Portable mode is enabled: user data (mlc01, settings, keys) is stored in $persist_dir\\portable",
+    "url": "https://github.com/GamesExObscura/CemuX/releases/download/v1.1.0/CemuX-v1.1.0-win64.zip",
+    "hash": "f34991eb3406567400474421ef48fba932b0b965c9d6a7b6e41c211f66a68ae7",
+    "extract_dir": "CemuX",
+    "bin": [
+        [
+            "CemuX.exe",
+            "cemux"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CemuX.exe",
+            "CemuX"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/GamesExObscura/CemuX/releases/download/v$version/CemuX-v$version-win64.zip"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "1.37",
+    "description": "Sega multi-system emulator (SG-1000, Master System, Game Gear, Genesis, Sega CD, 32X, Saturn) built on RetroArch",
+    "homepage": "https://sourceforge.net/projects/kigen-multisega-emulator/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Sega CD and Saturn games need their BIOS files; use the BIOS menu in Kigen to install them."
+    ],
+    "url": "https://downloads.sourceforge.net/project/kigen-multisega-emulator/kigen_multisega_1.37.7z",
+    "hash": "sha1:4d4c1ee8ed17a880478a29d11c802ee13e0d909f",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\setup.exe\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\src\", \"$dir\\wine-*.sh\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
+    "bin": "Kigen.exe",
+    "shortcuts": [
+        [
+            "Kigen.exe",
+            "Kigen MultiSEGA"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/kigen-multisega-emulator/rss",
+        "regex": "kigen_multisega_([\\d.]+[a-z]?)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/kigen-multisega-emulator/kigen_multisega_$version.7z"
+    }
+}

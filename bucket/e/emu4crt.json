@@ -1,0 +1,59 @@
+{
+    "version": "1.26.1-A13",
+    "description": "Mednafen mod for CRT screens with pixel-perfect native resolution switching",
+    "homepage": "https://github.com/emu4crt/files",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "emu4crt requires custom CRT resolutions to be configured (see the homepage).",
+        "PlayStation, PC Engine CD and PC-FX emulation require BIOS files; place them in $persist_dir\\firmware."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/emu4crt/files/raw/master/mednafen-1.26.1-emu4crt-A13-win64.zip",
+            "hash": "2e9eb6879713ebb38b6af33b56ead834a46039b76e4c0f96a1ffe19186f16310"
+        },
+        "32bit": {
+            "url": "https://github.com/emu4crt/files/raw/master/mednafen-1.26.1-emu4crt-A13-win32.zip",
+            "hash": "edab16f7014a48a64e9c3737ef87c32234fcdba5f1eb8f5dc0c675ad16343b82"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\mednafen.cfg\")) {",
+        "    New-Item \"$dir\\mednafen.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "emu4crt.exe",
+    "shortcuts": [
+        [
+            "emu4crt.exe",
+            "emu4crt"
+        ]
+    ],
+    "persist": [
+        "cheats",
+        "firmware",
+        "mcm",
+        "mcs",
+        "palettes",
+        "pgconfig",
+        "sav",
+        "snaps",
+        "mednafen.cfg"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/emu4crt/files/contents",
+        "jsonpath": "$[*].name",
+        "regex": "mednafen-(?<mver>[\\d.]+)-emu4crt-(?<rel>A\\d+)-win64\\.zip",
+        "replace": "${mver}-${rel}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/emu4crt/files/raw/master/mednafen-$matchMver-emu4crt-$matchRel-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/emu4crt/files/raw/master/mednafen-$matchMver-emu4crt-$matchRel-win32.zip"
+            }
+        }
+    }
+}

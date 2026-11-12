@@ -7,19 +7,31 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/z80stealth/emulator_screen_01.jpg"
     ],
     "version": "1.23",
-    "description": "Z80Stealth is a Sinclair ZX Spectrum and Russian Clones emulator. NOTE: The Author's Website is a mixture of Russian and English.",
-    "homepage": "http://z80.emu-russia.net",
+    "description": "Sinclair ZX Spectrum and Russian clones (Pentagon, Scorpion, Profi) emulator",
+    "homepage": "https://z80.emu-russia.net/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/z80stealth/1.23.7z",
-    "hash": "670e4f3b23e35214682ac9f314266730eb212d30a9bc12d2ab9b009f1bfd989e",
+    "url": "https://z80.emu-russia.net/z80s_1.23.zip",
+    "hash": "ec161cfeefac9cbc618094a5f36de3f7b5608d350c8f2cccb2b9b7eb395a6668",
+    "extract_dir": "Z80S",
     "bin": [
-        "z80s.exe"
+        [
+            "z80s.exe",
+            "z80stealth"
+        ]
     ],
+    "shortcuts": [
+        [
+            "z80s.exe",
+            "Z80Stealth"
+        ]
+    ],
+    "persist": "z80s.ini",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/z80stealth/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://z80.emu-russia.net/",
+        "regex": "z80s_([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/z80stealth/$version.7z"
+        "url": "https://z80.emu-russia.net/z80s_$version.zip",
+        "extract_dir": "Z80S"
     }
 }

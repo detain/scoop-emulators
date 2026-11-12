@@ -1,0 +1,35 @@
+{
+    "version": "0.4.1",
+    "description": "SSD Company XaviX, XaviX 2000 and XaviX 2 TV game emulator",
+    "homepage": "https://github.com/BillyJr0127/XaviXEmu",
+    "license": "BSD-3-Clause",
+    "url": "https://github.com/BillyJr0127/XaviXEmu/releases/download/v0.4.1/XaviXEmu-0.4.1-win64.zip",
+    "hash": "bf2ed9348554db317d81d5eea03b72c8ec5a425e6a62fe35219e33c552eaab04",
+    "extract_dir": "XaviXEmu-0.4.1-win64",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\XaviXEmu.ini\")) {",
+        "    New-Item \"$dir\\XaviXEmu.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "XaviXEmu.exe",
+    "shortcuts": [
+        [
+            "XaviXEmu.exe",
+            "XaviXEmu"
+        ]
+    ],
+    "persist": [
+        "save",
+        "snap",
+        "XaviXEmu.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/BillyJr0127/XaviXEmu/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>XaviXEmu-v?[\\d.]+-win64)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/BillyJr0127/XaviXEmu/releases/download/v$version/$matchFile.zip",
+        "extract_dir": "$matchFile"
+    }
+}

@@ -6,20 +6,40 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/medusa/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/medusa/emulator_screen_01.jpg"
     ],
-    "version": "alpha2-win64",
-    "description": "medusa is an emulator for running Nintendo DS, Game Boy Advance and Game Boy games. It aims to be faster and more accurate than many existing Nintendo DS and Game Boy Advance emulators, as well as adding features that other emulators lack. It also supports Game Boy and Game Boy Color games.",
-    "homepage": "http://mgba.io",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/medusa/alpha2-win64.7z",
-    "hash": "059b38c48ac8bbb2f810f8c80bfed5903197375caffa27f7926f11950cf39ed3",
-    "bin": [
-        "medusa.exe"
+    "version": "a2",
+    "description": "Nintendo DS, Game Boy Advance and Game Boy emulator, an experimental fork of mGBA",
+    "homepage": "https://mgba.io/tag/medusa/",
+    "license": "MPL-2.0",
+    "url": "https://github.com/mgba-emu/mgba/releases/download/medusa-a2/medusa-a2-win64.7z",
+    "hash": "8afb9f8a7c9f6e0bfb65f350a13880c38526cdbb53e74660efda0e49d8035a5c",
+    "extract_dir": "medusa-medusa-2017-04-26-win64",
+    "pre_install": [
+        "'portable.ini', 'config.ini', 'qt.ini' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": "medusa.exe",
+    "shortcuts": [
+        [
+            "medusa.exe",
+            "medusa"
+        ]
+    ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "qt.ini"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/medusa/",
-        "regex": "([\\w-]+)\\.7z"
+        "github": "https://api.github.com/repos/mgba-emu/mgba/releases?per_page=100",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"medusa-(?<version>a\\d+)\"[\\s\\S]*?\"published_at\":\\s*\"(?<date>\\d{4}-\\d{2}-\\d{2})",
+        "replace": "${version}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/medusa/$version.7z"
+        "url": "https://github.com/mgba-emu/mgba/releases/download/medusa-$version/medusa-$version-win64.7z",
+        "extract_dir": "medusa-medusa-$matchDate-win64"
     }
 }

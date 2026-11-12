@@ -1,0 +1,23 @@
+{
+    "version": "1.5",
+    "description": "PEL Varazdin Orao 8-bit computer emulator",
+    "homepage": "https://www.deltasoft.com.hr/projects/oraoemu.php",
+    "license": "Freeware",
+    "url": "https://www.deltasoft.com.hr/projects/downloads/oraoemu15.zip",
+    "hash": "b2424b9be107dc6603e8cbdfe2dd49a86b47326c41c3f9a51e34c9449f8a6c4b",
+    "bin": "oraoemu.exe",
+    "shortcuts": [
+        [
+            "oraoemu.exe",
+            "Orao Emulator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.deltasoft.com.hr/projects/oraoemu.php",
+        "regex": "downloads/oraoemu(?<major>\\d)(?<minor>\\d+)\\.zip",
+        "replace": "${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://www.deltasoft.com.hr/projects/downloads/oraoemu$matchMajor$matchMinor.zip"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "version": "0.160X-20180114",
+    "description": "Japanese MAME derivative with a Windows UI (ThunderMAME32UI+) based on MAME 0.160",
+    "homepage": "http://www.geocities.co.jp/SiliconValley-Sunnyvale/8595/",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0160/docs/license.txt"
+    },
+    "notes": [
+        "This emulator is no longer developed; this is the last build archived from the original GeoCities site.",
+        "Per the readme, the lang folder and ctrlr\\standard.cfg from MAME Plus! are required."
+    ],
+    "url": "https://web.archive.org/web/20180419173212id_/http://www.geocities.co.jp/SiliconValley-Sunnyvale/8595/tmpui.7z",
+    "hash": "7634d4906a1c3819d4c7fe0b6b28e56b5d70d166a916077102ef14ecaaf87d7b",
+    "bin": [
+        [
+            "ThunderMAME32UI+.exe",
+            "thundermame32ui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ThunderMAME32UI+.exe",
+            "ThunderMAME32UI+"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "ini",
+        "nvram",
+        "sta",
+        "snap"
+    ]
+}

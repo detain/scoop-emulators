@@ -1,0 +1,21 @@
+{
+    "version": "1.1.3",
+    "description": "Sega Genesis / Mega Drive, Sega CD, 32X and Game Gear emulator",
+    "homepage": "https://github.com/GamesExObscura/GenX",
+    "license": "GPL-3.0-only",
+    "notes": "Sega CD games require a Sega CD BIOS for the disc's region; set its folder in Configure -> BIOS.",
+    "url": "https://github.com/GamesExObscura/GenX/releases/download/v1.1.3/GenX-v1.1.3-win64.zip",
+    "hash": "e5c080ef7be899188e703fabbd14e43f12986a6ab6fd89bbb0ccae962f5fcf24",
+    "bin": "genx.exe",
+    "shortcuts": [
+        [
+            "genx.exe",
+            "GenX"
+        ]
+    ],
+    "persist": "User",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/GamesExObscura/GenX/releases/download/v$version/GenX-v$version-win64.zip"
+    }
+}

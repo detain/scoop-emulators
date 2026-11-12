@@ -1,0 +1,50 @@
+{
+    "version": "269-20261019-98cc2dc",
+    "description": "Portable and free Atari 8-bit emulator (development version)",
+    "homepage": "https://atari800.github.io",
+    "license": "GPL-2.0-only",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build.",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/atari800/atari800/workflows/build/master/atari800-windows-msys2.zip",
+            "hash": "eb2689316c865cc8744428a60b6a45411e9e881eb6fb21005e5ebb42b2f51674"
+        },
+        "32bit": {
+            "url": "https://nightly.link/atari800/atari800/workflows/build/master/atari800-windows-msys2-32.zip",
+            "hash": "317f55a25ba90577e97fe1efd3febb1a5f838b59b3741861584d9a3dbb633119"
+        }
+    },
+    "bin": [
+        [
+            "atari800.exe",
+            "atari800-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "atari800.exe",
+            "Atari 800 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/atari800/atari800/actions/workflows/build.yml/runs?branch=master&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/atari800/atari800/workflows/build/master/atari800-windows-msys2.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/atari800/atari800/workflows/build/master/atari800-windows-msys2-32.zip"
+            }
+        }
+    }
+}

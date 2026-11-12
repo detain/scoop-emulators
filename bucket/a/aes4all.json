@@ -6,26 +6,35 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/aes4all/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/aes4all/emulator_screen_01.jpg"
     ],
-    "version": "beta4",
-    "description": "AES4ALL is a SNK Neo Geo AES and MVS emulator. NOTE: To use AES4ALL (NEO4ALL/AES), you need to convert typical ZIP-compressed NEOGEO roms. The 'convertneo' command-line tool allows this conversion of supported games. First, put all files of NEOGEO bios (uncompress neogeo.zip of MAME) and 'aes-bios.bin' file of NEOGEO home to bios directory. Then, go to Windows CMD and execute 'convertneo.exe' with filename of ZIP as parameter, for example: C:\\temp\\convertneo> convertneo.exe migame.zip - If all are ok you will have a 'migame.aes' file for playing with AES4ALL.",
+    "version": "beta4-fix",
+    "description": "SNK Neo Geo AES/MVS emulator",
     "homepage": "http://chui.dcemu.co.uk/index.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/aes4all/beta4.7z",
-    "hash": "3e0e4a7f74a36592cf89b13e63a7a0355b6c3e1f48dd486583583df034dca537",
-    "bin": [
-        "aes4all.exe"
+    "notes": [
+        "ROMs must be converted first: put the Neo Geo BIOS files (neogeo.zip contents and aes-bios.bin) in $dir\\convertneo\\bios,",
+        "then run 'convertneo <game>.zip' to produce <game>.aes."
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/aes4all/beta4.7z",
-            "hash": "3e0e4a7f74a36592cf89b13e63a7a0355b6c3e1f48dd486583583df034dca537"
-        }
-    },
-    "checkver": {
-        "url": "http://chui.dcemu.co.uk/files/",
-        "regex": "<a href=\"aes4all.zip\">AES4ALL - (\\d+\\.\\d+\\.\\d+)<\\/a>"
-    },
-    "autoupdate": {
-        "url": "http://chui.dcemu.co.uk/files/aes4all.zip"
-    }
+    "url": "https://web.archive.org/web/20160409053510id_/http://chui.dcemu.co.uk/releases/aes4all-beta4.rar",
+    "hash": "d3202714fd2ef87b27f4ccada871418a1b24fc3e857dfa3b2dea42a920ea4368",
+    "extract_dir": "aes4all-beta4-fix\\windows",
+    "bin": [
+        [
+            "emulator\\aes4all.exe",
+            "aes4all"
+        ],
+        [
+            "convertneo\\convertneo.exe",
+            "convertneo"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "emulator\\aes4all.exe",
+            "AES4ALL"
+        ]
+    ],
+    "persist": [
+        "emulator\\roms",
+        "convertneo\\bios"
+    ]
 }

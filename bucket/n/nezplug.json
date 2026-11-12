@@ -1,0 +1,25 @@
+{
+    "version": "0.9.4.8-3-21.00",
+    "description": "NES, MSX, Game Boy and PC Engine music player plugin (NSF, KSS, GBS, HES, AY) for Winamp and KbMedia Player",
+    "homepage": "https://web.archive.org/web/2011/http://offgao.no-ip.org/program/nezplug++.html",
+    "license": "Freeware",
+    "notes": [
+        "This plugin is no longer developed.",
+        "To use the Winamp plugin, copy $dir\\in_nez.dll into Winamp's Plugins folder (kb_nez.kpi is the KbMedia Player plugin).",
+        "nezplay.exe is a small standalone sample player: drag and drop a music file onto its window."
+    ],
+    "url": "https://web.archive.org/web/20110508155205id_/http://offgao.no-ip.org/program/nezplug++.zip",
+    "hash": "be5f4a1d6ca96aa48609ad0a78435eaba1edb654c6a8233fe7ae60d3f7d4888f",
+    "bin": [
+        [
+            "nezplay.exe",
+            "nezplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nezplay.exe",
+            "NEZplay"
+        ]
+    ]
+}

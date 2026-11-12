@@ -1,0 +1,36 @@
+{
+    "version": "2.0.7",
+    "description": "Sinclair ZX Spectrum emulator",
+    "homepage": "http://www.inkland.org.uk/inkspector/index.htm",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.inkland.org.uk/inkspector/inkspec_2.0.7.zip",
+            "hash": "e8268d7ec2a1efe1345262f11c6bcd03158933b749dd0c8ad493d472fc7a3e76"
+        }
+    },
+    "bin": [
+        [
+            "InkSpector64.exe",
+            "inkspector"
+        ],
+        "incli.exe"
+    ],
+    "shortcuts": [
+        [
+            "InkSpector64.exe",
+            "InkSpector"
+        ]
+    ],
+    "checkver": {
+        "url": "http://www.inkland.org.uk/inkspector/index.htm",
+        "regex": "inkspec_([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://www.inkland.org.uk/inkspector/inkspec_$version.zip"
+            }
+        }
+    }
+}

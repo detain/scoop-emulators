@@ -1,0 +1,20 @@
+{
+    "version": "0.0.8",
+    "description": "NEC PC Engine / TurboGrafx-16 emulator focused on accuracy and documentation",
+    "homepage": "https://web.archive.org/web/2018/http://www.webalice.it/cicciopetito/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Command-line only: run 'picchioengine <rom image file>'. Settings are in $persist_dir\\PicchioEngine.cfg."
+    ],
+    "url": "https://web.archive.org/web/20181005102911id_/http://www.webalice.it/cicciopetito/archivio/PicchioEngine_v0.0.8.zip",
+    "hash": "7e3590f658fe75f1057a3be7e77ae6ad18818f90ae8a6e6af5caa7374f449c61",
+    "extract_dir": "PicchioEngine_v0.0.8",
+    "bin": [
+        [
+            "PicchioEngine.exe",
+            "picchioengine"
+        ]
+    ],
+    "persist": "PicchioEngine.cfg"
+}

@@ -1,0 +1,27 @@
+{
+    "version": "1.5",
+    "description": "8051 / AMT630A microcontroller emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/x51.htm",
+    "license": "Freeware",
+    "url": "https://problemkaputt.de/no%24x51.zip",
+    "hash": "909f7866351b5420bf31df445098e0ffd338274c0a00f7ebc96a4e71974f6c01",
+    "bin": [
+        [
+            "NO$X51.EXE",
+            "nox51"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$X51.EXE",
+            "no$x51"
+        ]
+    ],
+    "checkver": {
+        "url": "https://problemkaputt.de/x51.htm",
+        "regex": "Windows version, v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://problemkaputt.de/no%24x51.zip"
+    }
+}

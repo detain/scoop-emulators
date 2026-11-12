@@ -1,0 +1,31 @@
+{
+    "version": "1.01",
+    "description": "Graphical frontend for MAME's CHDMan tool (info, verify and update CHD files in batch)",
+    "homepage": "https://www.progettosnaps.net/tools/",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "Copy chdman.exe (from MAME) into $dir before use."
+    ],
+    "url": "https://www.progettosnaps.net/tools/packs/pS_CHDManFE.rar",
+    "hash": "e05e89b03097c18b0728c3df735cfe90648a922b15bccf28b4ec0ea1ecefe419",
+    "bin": [
+        [
+            "CHDMan_FE.exe",
+            "chdman-fe"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CHDMan_FE.exe",
+            "CHDMan FE"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.progettosnaps.net/tools/",
+        "regex": "CHDman FE v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.progettosnaps.net/tools/packs/pS_CHDManFE.rar"
+    }
+}

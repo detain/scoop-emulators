@@ -1,0 +1,29 @@
+{
+    "version": "1.0.2",
+    "description": "Konix Multisystem and Flare One emulator",
+    "homepage": "https://github.com/Konix-Multisystem/Slipstream",
+    "license": "MIT",
+    "notes": "Audio requires the OpenAL runtime (OpenAL32.dll), e.g. from OpenAL Soft or the Creative OpenAL installer.",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/Konix-Multisystem/Slipstream/releases/download/V1.0.2/SlipstreamV1.02.zip",
+    "hash": "cfe20321bcb750b6e8332c9e969c716f944484d96d289eed131c5504711947cd",
+    "extract_dir": "SlipstreamV1.02",
+    "bin": "slipstream.exe",
+    "shortcuts": [
+        [
+            "slipstream.exe",
+            "Slipstream"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Konix-Multisystem/Slipstream/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/V(?<version>[\\d.]+)/SlipstreamV(?<file>[\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Konix-Multisystem/Slipstream/releases/download/V$version/SlipstreamV$matchFile.zip",
+        "extract_dir": "SlipstreamV$matchFile"
+    }
+}

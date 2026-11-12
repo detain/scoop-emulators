@@ -7,14 +7,12 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/t2k/emulator_screen_01.jpg"
     ],
     "version": "0.06b",
-    "description": "Jaguar Tempest 2000 Emulator is an Atari Jaguar emulator that has been specifically coded to run 'Tempest 2000' though it does run a few other Jaguar games.",
+    "description": "Atari Jaguar emulator made to run Tempest 2000",
     "homepage": "http://www.yakyak.org/viewtopic.php?f=5&t=41691",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/t2k/0.06b.7z",
     "hash": "f84953629a059014edcd034a694b93dc1e6a743c5164a039746234c97cebc293",
-    "bin": [
-        "t2k.exe"
-    ],
+    "bin": "t2k.exe",
     "checkver": {
         "url": "https://consolo.is.cc/emu/t2k/",
         "regex": "([\\d.]+[a-z]*)\\.7z"

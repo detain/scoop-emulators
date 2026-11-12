@@ -1,0 +1,44 @@
+{
+    "version": "0.5.1",
+    "description": "Nintendo DS/DSi emulator, a melonDS fork with built-in RetroAchievements support",
+    "homepage": "https://github.com/ppkkkkk/melonRA",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Portable mode is enabled: settings and data are kept in $persist_dir\\portable",
+        "BIOS/firmware dumps are optional; place them in $persist_dir\\portable if needed."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ppkkkkk/melonRA/releases/download/v0.5.1/melonRA-0.5.1-windows-x86_64.zip",
+            "hash": "9f8170699b80af35554af3b14613c5a88532ad8326caa8d310deeb5e26753634"
+        },
+        "arm64": {
+            "url": "https://github.com/ppkkkkk/melonRA/releases/download/v0.5.1/melonRA-0.5.1-windows-arm64.zip",
+            "hash": "db0997e12704a850a87411ca9a35607f99b12a4d7ea5a6740a7df8cfc9eebaab"
+        }
+    },
+    "bin": [
+        [
+            "melonRA.exe",
+            "melonra"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "melonRA.exe",
+            "melonRA"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ppkkkkk/melonRA/releases/download/v$version/melonRA-$version-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ppkkkkk/melonRA/releases/download/v$version/melonRA-$version-windows-arm64.zip"
+            }
+        }
+    }
+}

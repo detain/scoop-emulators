@@ -1,0 +1,26 @@
+{
+    "version": "0.9.6",
+    "description": "Philips P2000T home computer emulator",
+    "homepage": "https://github.com/p2000t/M2000",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/p2000t/M2000/releases/download/0.9.6/M2000-v0.9.6-windows.zip",
+    "hash": "8f467c437f868d42d89dfb0675f9805d6d6677893a32c313b9b9a2996d3c77a5",
+    "installer": {
+        "script": "Expand-MsiArchive \"$dir\\M2000-installer.msi\" \"$dir\" -ExtractDir 'M2000' -Removal"
+    },
+    "bin": "M2000.exe",
+    "shortcuts": [
+        [
+            "M2000.exe",
+            "M2000"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/p2000t/M2000/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/p2000t/M2000/releases/download/$version/M2000-v$version-windows.zip"
+    }
+}

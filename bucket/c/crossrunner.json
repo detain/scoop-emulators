@@ -1,0 +1,23 @@
+{
+    "version": "1.2",
+    "description": "Apple IIGS cycle-accurate emulator and cross development environment",
+    "homepage": "https://www.crossrunner.gs/",
+    "license": "Freeware",
+    "url": "https://crossrunner.file.core.windows.net/crossrunner/Crossrunner_v1.2_x64.msi?sp=r&st=2026-08-28T11:18:10Z&se=2036-12-30T18:33:00Z&spr=https&sv=2026-02-06&sig=cKCkQtIVXHnoDUKSv1XLsZFghik9T8xN%2FG%2Fwa%2Fry1OU%3D&sr=f#/crossrunner.msi",
+    "hash": "0395104dc377a96da87b8b83ce1b3b18a031a8886da43f66dd02a5d08f20848c",
+    "extract_dir": "PFiles64\\Crossrunner",
+    "bin": "Crossrunner.exe",
+    "shortcuts": [
+        [
+            "Crossrunner.exe",
+            "Crossrunner"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.crossrunner.gs/",
+        "regex": "Crossrunner_v(?<version>[\\d.]+)_x64\\.msi\\?sp=r&amp;st=(?<st>[^&]+)&amp;se=(?<se>[^&]+)&amp;spr=https&amp;sv=(?<sv>[^&]+)&amp;sig=(?<sig>[^&]+)&amp;sr=f"
+    },
+    "autoupdate": {
+        "url": "https://crossrunner.file.core.windows.net/crossrunner/Crossrunner_v$version_x64.msi?sp=r&st=$matchSt&se=$matchSe&spr=https&sv=$matchSv&sig=$matchSig&sr=f#/crossrunner.msi"
+    }
+}

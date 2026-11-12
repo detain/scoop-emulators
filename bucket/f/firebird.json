@@ -1,0 +1,37 @@
+{
+    "version": "1.6",
+    "description": "Texas Instruments TI-Nspire calculator emulator",
+    "homepage": "https://github.com/nspire-emus/firebird",
+    "license": "GPL-3.0-only",
+    "notes": "Firebird requires TI-Nspire boot1 and flash (OS) images, which are not included.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nspire-emus/firebird/releases/download/v1.6/firebird-emu-win64.zip",
+            "hash": "9f48755f407c0bdf615282bdbcc92467a2a9d4449cccd1f4ebd1342f3b78bf44"
+        },
+        "32bit": {
+            "url": "https://github.com/nspire-emus/firebird/releases/download/v1.6/firebird-emu-win32.zip",
+            "hash": "276cb7104274706ab8a850198f9c8a7428ca2861cf31b2f0413b5fcd8586d6f4"
+        }
+    },
+    "extract_dir": "firebird-emu",
+    "bin": "firebird-emu.exe",
+    "shortcuts": [
+        [
+            "firebird-emu.exe",
+            "Firebird Emu"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nspire-emus/firebird/releases/download/v$version/firebird-emu-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/nspire-emus/firebird/releases/download/v$version/firebird-emu-win32.zip"
+            }
+        },
+        "extract_dir": "firebird-emu"
+    }
+}

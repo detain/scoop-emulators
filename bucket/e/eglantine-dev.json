@@ -1,0 +1,41 @@
+{
+    "version": "20261109",
+    "description": "Nintendo Switch and Switch 2 emulator (Eden/Yuzu fork) (development version)",
+    "homepage": "https://github.com/Eglantine-Community/Eglantine",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Eglantine requires prod.keys and firmware dumped from your own console.",
+        "Portable mode is enabled; user data is stored in $persist_dir\\user",
+        "Tracks the daily-YYYYMMDD pre-release builds."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/daily-20261109/eglantine-windows-x86_64.zip",
+    "hash": "e81d0fed344cd42112138c8660a00b86f42b0a5b7a1764fd02fc3b8cdb601b85",
+    "bin": [
+        [
+            "eglantine.exe",
+            "eglantine-dev"
+        ],
+        [
+            "eden-cli.exe",
+            "eglantine-cli-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "eglantine.exe",
+            "Eglantine (dev)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/Eglantine-Community/Eglantine/releases?per_page=30",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"daily-(\\d{8})\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/Eglantine-Community/Eglantine/releases/download/daily-$version/eglantine-windows-x86_64.zip"
+    }
+}

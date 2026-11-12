@@ -1,0 +1,37 @@
+{
+    "version": "1.17.1",
+    "description": "Cross-platform port of the AMSpiriT Amstrad CPC emulator (Qt frontend)",
+    "homepage": "https://www.amspirit.fr/",
+    "license": "CC-BY-NC-ND-4.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AMSpiriT-Emulator/amspirit-releases/releases/download/Lite-1.17.1/Amspirit-Lite-Qt-1.17.1-win64.zip",
+            "hash": "c7c32f1861b330f533f804c607bbb959fc2b51348fc6a56caf2f7ae10289214b"
+        }
+    },
+    "extract_dir": "amspirit-lite-qt",
+    "bin": [
+        [
+            "amspirit-lite-qt.exe",
+            "amspirit-lite"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "amspirit-lite-qt.exe",
+            "AMSpiriT Lite"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/AMSpiriT-Emulator/amspirit-releases/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/Lite-(?<version>[\\d.]+)/Amspirit-Lite-Qt-[\\d.]+-win64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AMSpiriT-Emulator/amspirit-releases/releases/download/Lite-$version/Amspirit-Lite-Qt-$version-win64.zip"
+            }
+        }
+    }
+}

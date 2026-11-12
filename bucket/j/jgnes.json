@@ -1,0 +1,31 @@
+{
+    "version": "0.6.2",
+    "description": "Nintendo Entertainment System (NES) emulator written in Rust",
+    "homepage": "https://github.com/jsgroth/jgnes",
+    "license": "MIT",
+    "url": "https://github.com/jsgroth/jgnes/releases/download/v0.6.2/jgnes-0.6.2-windows-x86_64.zip",
+    "hash": "e8bf36551d7ccda235a0971bafae653e0e5cddbac264a498c4fc5e8478ccfd0a",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\jgnes-config.toml\")) {",
+        "    New-Item \"$dir\\jgnes-config.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "jgnes-gui.exe",
+            "jgnes"
+        ],
+        "jgnes-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "jgnes-gui.exe",
+            "jgnes"
+        ]
+    ],
+    "persist": "jgnes-config.toml",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jsgroth/jgnes/releases/download/v$version/jgnes-$version-windows-x86_64.zip"
+    }
+}

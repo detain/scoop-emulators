@@ -1,0 +1,25 @@
+{
+    "version": "1.2.14",
+    "description": "Nintendo Game Boy emulator written in Java (Swing desktop version of JMEBoy)",
+    "homepage": "https://sourceforge.net/projects/javagb/",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/javagb/jswingBoy/JSwingBoy%201.2.14/JSwingBoy-1.2.14.jar#/JSwingBoy.jar",
+    "hash": "sha1:c27f4a0b0e6da9502a94bc0c3bef3f7745dfe066",
+    "bin": [
+        [
+            "JSwingBoy.jar",
+            "jswingboy"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/javagb/rss?path=/jswingBoy",
+        "regex": "JSwingBoy-([\\d.]+)\\.jar"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/javagb/jswingBoy/JSwingBoy%20$version/JSwingBoy-$version.jar#/JSwingBoy.jar"
+    }
+}

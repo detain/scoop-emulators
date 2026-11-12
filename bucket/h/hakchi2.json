@@ -1,0 +1,33 @@
+{
+    "version": "2.32",
+    "description": "Tool for adding games to the NES Classic Mini, SNES Classic Mini and Famicom Mini consoles",
+    "homepage": "https://github.com/ClusterM/hakchi2",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This project is archived and no longer developed.",
+        "Installing the USB drivers from the driver folder requires administrator rights."
+    ],
+    "url": "https://github.com/ClusterM/hakchi2/releases/download/v2.32/hakchi2.zip",
+    "hash": "d40d23079f21c95bcd2ceccaa300dfab3174f0717a8b3b403771b43331c9f35a",
+    "extract_dir": "hakchi2",
+    "bin": "hakchi.exe",
+    "shortcuts": [
+        [
+            "hakchi.exe",
+            "hakchi2"
+        ]
+    ],
+    "persist": [
+        "config",
+        "games",
+        "games_snes",
+        "art",
+        "folder_images",
+        "patches",
+        "user_mods"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ClusterM/hakchi2/releases/download/v$version/hakchi2.zip"
+    }
+}

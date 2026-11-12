@@ -1,0 +1,27 @@
+{
+    "version": "2018-09-07",
+    "description": "Amstrad CPC Plus / GX4000 emulator written in Java, based on JEMU",
+    "homepage": "https://sourceforge.net/projects/javagx4000/",
+    "license": "Unknown",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a Java runtime."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/javagx4000/JavaGX4000.jar",
+    "hash": "e6c341af66d08f7cc424d28287f7c6fefac78e4fffabc6fc05eada1aac52cd76",
+    "bin": [
+        [
+            "JavaGX4000.jar",
+            "javagx4000"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "JavaGX4000.jar",
+            "JavaGX4000"
+        ]
+    ]
+}

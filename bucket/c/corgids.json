@@ -1,0 +1,30 @@
+{
+    "version": "0.1",
+    "description": "Nintendo DS emulator written in C++ with Qt",
+    "homepage": "https://github.com/PSI-Rockin/CorgiDS",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires Nintendo DS BIOS and firmware dumps (bios7.bin, bios9.bin, firmware.bin); set their paths in the emulator settings."
+    ],
+    "url": "https://github.com/PSI-Rockin/CorgiDS/releases/download/v0.1/corgids-v0.1-win32.zip",
+    "hash": "ca9e548c93f7baa50630cdd899c0450ee7c6b46b5a2d5cb1c80f16e97a157c3a",
+    "extract_dir": "corgids-v0.1-win32",
+    "bin": [
+        [
+            "CorgiDS.exe",
+            "corgids"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CorgiDS.exe",
+            "CorgiDS"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/PSI-Rockin/CorgiDS/releases/download/v$version/corgids-v$version-win32.zip",
+        "extract_dir": "corgids-v$version-win32"
+    }
+}

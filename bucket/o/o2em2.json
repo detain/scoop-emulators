@@ -1,0 +1,27 @@
+{
+    "version": "1.5",
+    "description": "Magnavox Odyssey 2 / Philips Videopac and Videopac+ emulator (fork of O2EM)",
+    "homepage": "https://sourceforge.net/projects/o2em2/",
+    "license": "ClArtistic AND GPL-3.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Place the BIOS files (o2rom.bin, g7400.bin, c52.bin, jopac.bin) in $persist_dir\\bios",
+        "Usage: o2em2 <rom file> [options]"
+    ],
+    "url": "https://downloads.sourceforge.net/project/o2em2/o2em2-w32-1.5.zip",
+    "hash": "52f9fb9eb7c161cd7edd6ba9446d4a11873077938c2a23773157e46e10eea5a8",
+    "extract_dir": "o2em2-1.5",
+    "bin": "o2em2.exe",
+    "persist": [
+        "bios",
+        "voice"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/o2em2/rss",
+        "regex": "o2em2-w32-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/o2em2/o2em2-w32-$version.zip",
+        "extract_dir": "o2em2-$version"
+    }
+}

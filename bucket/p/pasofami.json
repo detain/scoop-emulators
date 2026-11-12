@@ -6,20 +6,26 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pasofami/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pasofami/emulator_screen_01.jpg"
     ],
-    "version": "2.32",
-    "description": "Pasofami is a Nintendo Entertainment / Nintendo Famicom emulator and debugger for Windows. Originally making it's debut in 1995 Pasofami was one of the first Famicom emulators to come out of Japan and over time has developed a rich feature set.",
-    "homepage": "http://hp.vector.co.jp/authors/VA005758/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/pasofami/2.32.7z",
-    "hash": "683c19cd927a4221f9e032cd78aea1e8a87a0ec14c7f0e64425cd471357b105c",
-    "bin": [
-        "pasofami.exe"
+    "version": "2.39",
+    "description": "Nintendo Famicom / NES emulator and debugger with copier hardware support (Japanese)",
+    "homepage": "https://pasofami.game.coocan.jp/",
+    "license": "Shareware",
+    "notes": "Unregistered copies run without sound; see regist.txt for registration.",
+    "url": "https://pasofami.game.coocan.jp/pasov239.zip",
+    "hash": "bb074675751b42eed7257d3fcad855fd5ea8db079df1827be9f34db9bd23568b",
+    "bin": "pasofami.exe",
+    "shortcuts": [
+        [
+            "pasofami.exe",
+            "Pasofami"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pasofami/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://pasofami.game.coocan.jp/download.htm",
+        "regex": "pasov(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pasofami/$version.7z"
+        "url": "https://pasofami.game.coocan.jp/pasov$cleanVersion.zip"
     }
 }

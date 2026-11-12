@@ -1,0 +1,22 @@
+{
+    "version": "0.9.1",
+    "description": "Nintendo Entertainment System emulator written in C++11",
+    "homepage": "https://github.com/daniel5151/ANESE",
+    "license": "MIT",
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/daniel5151/ANESE/releases/download/0.9.1/ANESE_0.9.1_win.zip",
+    "hash": "6a8b7ec1e7b4743c427ddc6deef9279c30bcf5213871b0a980f6cdab0f228bc6",
+    "bin": "anese.exe",
+    "shortcuts": [
+        [
+            "anese.exe",
+            "ANESE"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/daniel5151/ANESE"
+    },
+    "autoupdate": {
+        "url": "https://github.com/daniel5151/ANESE/releases/download/$version/ANESE_$version_win.zip"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "version": "1.4.3",
+    "description": "SNK Neo Geo CD emulator, a standalone spin-off of RAINE",
+    "homepage": "https://raine.1emulation.com/download/neoraine.html",
+    "license": "Artistic-2.0",
+    "notes": [
+        "This emulator is no longer developed: NeoRaine has been merged into RAINE (see the raine manifest).",
+        "A Neo Geo CD BIOS is required; select it from the NeoRaine GUI."
+    ],
+    "url": "https://raine.1emulation.com/archive/neoraine-1.4.3.zip",
+    "hash": "54019200f28d2eba868bf2f823199574cc000ec10059a3c43f0e738ec501cc73",
+    "extract_dir": "neoraine",
+    "bin": [
+        [
+            "neoraine32.exe",
+            "neoraine"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "neoraine32.exe",
+            "NeoRaine"
+        ]
+    ],
+    "persist": [
+        "artwork",
+        "config",
+        "debug",
+        "demos",
+        "roms",
+        "savedata",
+        "savegame",
+        "screens"
+    ],
+    "checkver": {
+        "url": "https://raine.1emulation.com/download/neoraine.html",
+        "regex": "neoraine-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://raine.1emulation.com/archive/neoraine-$version.zip"
+    }
+}

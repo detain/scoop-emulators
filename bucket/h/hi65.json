@@ -1,0 +1,33 @@
+{
+    "version": "9.1",
+    "description": "Commodore 65 high-level emulator (BASIC 10 interpreter) with an edit and launch frontend",
+    "homepage": "https://devilmaster.altervista.org/hi65.html",
+    "license": "GPL-3.0-only",
+    "url": "https://devilmaster.altervista.org/hi65-v9-1.zip",
+    "hash": "0ce3d6b5d7c22f3abd62a0b25050c8acf164d4362fb887f63cd7222c89f202c2",
+    "bin": [
+        "hi65.exe",
+        "hi65cfg.exe"
+    ],
+    "shortcuts": [
+        [
+            "hi65.exe",
+            "Hi65"
+        ],
+        [
+            "Tool.exe",
+            "Hi65 Edit and Launch Tool"
+        ]
+    ],
+    "persist": [
+        "hi65.cfg",
+        "paths.ini"
+    ],
+    "checkver": {
+        "url": "https://devilmaster.altervista.org/hi65.html",
+        "regex": "Download Hi65 v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://devilmaster.altervista.org/hi65-v$dashVersion.zip"
+    }
+}

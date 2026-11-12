@@ -1,0 +1,39 @@
+{
+    "version": "20260523-g7d5aa1e",
+    "description": "Nintendo SNES (Super Nintendo Entertainment System) emulator (development version)",
+    "homepage": "https://github.com/bsnes-emu/bsnes",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/bsnes-emu/bsnes/releases/download/nightly/bsnes-windows.zip",
+    "hash": "0199a669e9955d15058e25b85ce17449ac63fa141b9adcf17b1c4c607d645140",
+    "extract_dir": "bsnes-nightly",
+    "bin": [
+        [
+            "bsnes.exe",
+            "bsnes-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bsnes.exe",
+            "bsnes (dev)"
+        ]
+    ],
+    "persist": [
+        "Firmware",
+        "settings.bml"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/bsnes-emu/bsnes/commits/nightly",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/bsnes-emu/bsnes/releases/download/nightly/bsnes-windows.zip",
+        "extract_dir": "bsnes-nightly"
+    }
+}

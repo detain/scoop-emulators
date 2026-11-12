@@ -7,19 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nlmsx/emulator_screen_01.jpg"
     ],
     "version": "0.48",
-    "description": "NLMSX is an emulator for the MSX, MSX2, MSX2+ and MSX Turbo-R computers.",
-    "homepage": "http://nlmsx.generation-msx.nl/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/nlmsx/0.48.7z",
-    "hash": "03c83e345a580ce054bdc5a03b76501a6be22c7a9c6b5cb57b8d899c70655eb6",
-    "bin": [
-        "nlmsx.exe"
+    "description": "MSX, MSX2, MSX2+ and MSX turbo R emulator",
+    "homepage": "https://web.archive.org/web/2014/http://nlmsx.generation-msx.nl/",
+    "license": "Freeware",
+    "url": "https://web.archive.org/web/20140324225707id_/http://nlmsx.generation-msx.nl/downloads/NLMSX_v0.48.zip",
+    "hash": "b6defad20561346ab53bbfd86d300ce20acfebfc21dc229a6a8821b42e0e09ea",
+    "bin": "nlmsx.exe",
+    "shortcuts": [
+        [
+            "nlmsx.exe",
+            "NLMSX"
+        ]
     ],
-    "checkver": {
-        "url": "http://nlmsx.generation-msx.nl/",
-        "regex": "NLMSX (\\d+\\.\\d+)"
-    },
-    "autoupdate": {
-        "url": "http://www.msxarchive.nl/pub/msx/emulator/nlmsx/nlmsx051bin.zip"
-    }
+    "persist": [
+        "config",
+        "roms",
+        "screenshots",
+        "sram"
+    ]
 }

@@ -1,0 +1,30 @@
+{
+    "version": "0.4.1.4",
+    "description": "Mouse and keyboard to virtual joystick mapper for the Cemu Nintendo Wii U emulator",
+    "homepage": "https://github.com/CemuUser8/mouse2joystick_custom_CEMU",
+    "license": "Unknown",
+    "notes": [
+        "This tool is no longer developed.",
+        "Requires vJoy (https://sourceforge.net/projects/vjoystick/) or ScpVBus (vXBox, offered on first run) to be installed.",
+        "Copy the controller profiles from $dir\\controllerProfiles into Cemu's controllerProfiles folder."
+    ],
+    "url": "https://github.com/CemuUser8/mouse2joystick_custom_CEMU/releases/download/0.4.1.4/mouse2joystick_custom_CEMU.zip",
+    "hash": "4fee2caf5b10d86876d3ea92acc5ecbbda99b866332a0ad0652339897de8d8bc",
+    "bin": [
+        [
+            "mouse2joystick_Custom_CEMU.exe",
+            "mouse2joystick"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mouse2joystick_Custom_CEMU.exe",
+            "Mouse2Joystick Custom CEMU"
+        ]
+    ],
+    "persist": "SavedKeyLists.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/CemuUser8/mouse2joystick_custom_CEMU/releases/download/$version/mouse2joystick_custom_CEMU.zip"
+    }
+}

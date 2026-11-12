@@ -1,0 +1,25 @@
+{
+    "version": "1.2",
+    "description": "Joystick to keyboard mapper with configurations switchable from the command line",
+    "homepage": "https://mk2k.net/",
+    "license": "Freeware",
+    "notes": [
+        "This tool is no longer developed.",
+        "Requires .NET Framework 3.5 and the Managed DirectX runtime (run dxwebsetup.exe from the app directory)."
+    ],
+    "url": "https://mk2k.net/releases/pc/apps/j2k_a_joystick_to_keyboard_mapper_1.2_win32-mk2k.zip",
+    "hash": "d999fd23a1fd9d66258709114bf1fc4cb30fc3e9a580b4ceab7da8f6ba35e227",
+    "extract_dir": "J2K_A_Joystick_to_Keyboard_mapper_1.2_win32-MK2k",
+    "bin": [
+        [
+            "J2K\\J2K.exe",
+            "j2k"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "J2K\\J2K.exe",
+            "J2K"
+        ]
+    ]
+}

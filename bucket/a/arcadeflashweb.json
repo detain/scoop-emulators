@@ -1,0 +1,29 @@
+{
+    "version": "1.0.2",
+    "description": "Adobe Flash (SWF) game player for arcade frontends, no Flash Player install needed",
+    "homepage": "https://github.com/aureyoboss/ArcadeFlashWeb",
+    "license": "Freeware",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/aureyoboss/ArcadeFlashWeb/releases/download/v1.0.2/ArcadeFlashWeb_v1.0.2.zip",
+    "hash": "779b8cac66e2f2049b095b2f8accf83695137595cfb36383bea5b7e9e2d0e883",
+    "extract_dir": "ArcadeFlashWeb",
+    "bin": [
+        [
+            "ArcadeFlashWeb.exe",
+            "arcadeflashweb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ArcadeFlashWeb.exe",
+            "ArcadeFlashWeb"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/aureyoboss/ArcadeFlashWeb/releases/download/v$version/ArcadeFlashWeb_v$version.zip",
+        "extract_dir": "ArcadeFlashWeb"
+    }
+}

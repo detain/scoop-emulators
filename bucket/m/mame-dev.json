@@ -1,0 +1,68 @@
+{
+    "version": "41747-20261111-c66ba4e",
+    "description": "Arcade machine emulator (development version)",
+    "homepage": "https://www.mamedev.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "Development builds come from the MAME GitHub Actions CI (via nightly.link) and contain only mame.exe, chdman.exe and unidasm.exe.",
+        "Support files shipped with releases (plugins, hash, bgfx, artwork, language) are not included.",
+        "CI artifacts expire about 90 days after they are built."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/mamedev/mame/actions/runs/43099550303/mame-windows-gcc-x64-c66ba4e9ae7cfb041721ebbe1125989e35d31d31.zip",
+            "hash": "21b1b2a48351c4fd7560919164126e4e359b17e6fdae9121be36b2d3d81fc68d"
+        },
+        "arm64": {
+            "url": "https://nightly.link/mamedev/mame/actions/runs/43099550303/mame-windows-clang-arm64-c66ba4e9ae7cfb041721ebbe1125989e35d31d31.zip",
+            "hash": "91f695cd911fe3280813678cb8a3c55da5c500f69095682f3b45c04dd5e17bbe"
+        }
+    },
+    "bin": [
+        [
+            "mame.exe",
+            "mame-dev"
+        ],
+        [
+            "chdman.exe",
+            "chdman-dev"
+        ],
+        [
+            "unidasm.exe",
+            "unidasm-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mame.exe",
+            "MAME (dev)"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/mamedev/mame/actions/workflows/ci-windows.yml/runs?branch=master&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runNumber = json_path $page $.workflow_runs[0].run_number",
+            "$runId = json_path $page $.workflow_runs[0].id",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runNumber $date $sha $runId\""
+        ],
+        "regex": "^(?<num>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33}) (?<id>\\d+)$",
+        "replace": "${num}-${year}${month}${day}-${short}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/mamedev/mame/actions/runs/$matchId/mame-windows-gcc-x64-$matchSha.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/mamedev/mame/actions/runs/$matchId/mame-windows-clang-arm64-$matchSha.zip"
+            }
+        }
+    }
+}

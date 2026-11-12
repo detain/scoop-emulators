@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "description": "Nintendo Entertainment System emulator written in Go",
+    "homepage": "https://github.com/gabe565/gones",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gabe565/gones/releases/download/v0.2.0/gones_windows_amd64.zip",
+            "hash": "489d8b88c1044883918a0f8bdd345135ff2ed3fd2c2780304195b5d239390130",
+            "bin": [
+                [
+                    "GoNES-amd64.exe",
+                    "gones"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "GoNES-amd64.exe",
+                    "GoNES"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/gabe565/gones/releases/download/v0.2.0/gones_windows_arm64.zip",
+            "hash": "ba09d0fb549927a7fb484fa4f2b548f15bca59e48e42348533f5197bef1359e9",
+            "bin": [
+                [
+                    "GoNES-arm64.exe",
+                    "gones"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "GoNES-arm64.exe",
+                    "GoNES"
+                ]
+            ]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gabe565/gones/releases/download/v$version/gones_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/gabe565/gones/releases/download/v$version/gones_windows_arm64.zip"
+            }
+        }
+    }
+}

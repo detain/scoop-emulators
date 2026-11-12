@@ -1,0 +1,23 @@
+{
+    "version": "1.1",
+    "description": "Cycle-accurate Nintendo Entertainment System emulator written in Rust",
+    "homepage": "https://comba92.github.io/nen-emulator/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Comba92/nen-emulator/releases/download/v1.1/nenemu_eframe.exe#/nenemu.exe",
+    "hash": "b730aac4408bcf138669c2f030c99642c123a27bad7f225915937d5f9a4373fb",
+    "bin": "nenemu.exe",
+    "shortcuts": [
+        [
+            "nenemu.exe",
+            "Nen Emulator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Comba92/nen-emulator/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/(?<file>nenemu[^\"/]*\\.exe)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Comba92/nen-emulator/releases/download/v$version/$matchFile#/nenemu.exe"
+    }
+}

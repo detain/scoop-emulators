@@ -1,0 +1,19 @@
+{
+    "version": "1.29",
+    "description": "Infocom Z-machine interpreter for interactive fiction (Windows Frotz)",
+    "homepage": "https://github.com/DavidKinder/Windows-Frotz",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/DavidKinder/Windows-Frotz/releases/download/1.29/WindowsFrotz.zip",
+    "hash": "34e60b46ac0290103b2bc6a859f18af187187c57f3bc681c4282a40849a5c901",
+    "bin": "Frotz.exe",
+    "shortcuts": [
+        [
+            "Frotz.exe",
+            "Windows Frotz"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/DavidKinder/Windows-Frotz/releases/download/$version/WindowsFrotz.zip"
+    }
+}

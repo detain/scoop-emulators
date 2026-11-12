@@ -1,0 +1,53 @@
+{
+    "version": "0.6",
+    "description": "Nintendo Game Boy, Game Boy Color and Game Boy Advance emulator for speedrunners",
+    "homepage": "https://github.com/CasualPokePlayer/GSE",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v0.6/GSE-win-x64.zip",
+            "hash": "44e027ae8d61f7280d3bea22e4dcc02c0fc26749948416987824c2522a61fd00"
+        },
+        "32bit": {
+            "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v0.6/GSE-win-x86.zip",
+            "hash": "1cca20fd5032659f1b59c646363c4f6913e93e811be4921cc37dca3f1d91d2d2"
+        },
+        "arm64": {
+            "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v0.6/GSE-win-arm64.zip",
+            "hash": "f140418957b3fb89a7c354dba203af0f71422a7e8411ea1bdb03a529c00f5e2c"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\gse_config.json\")) {",
+        "    New-Item \"$dir\\gse_config.json\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "GSE.exe",
+    "shortcuts": [
+        [
+            "GSE.exe",
+            "GSE"
+        ]
+    ],
+    "persist": [
+        "gse_config.json",
+        "portable.txt"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v$version/GSE-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v$version/GSE-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/CasualPokePlayer/GSE/releases/download/v$version/GSE-win-arm64.zip"
+            }
+        }
+    }
+}

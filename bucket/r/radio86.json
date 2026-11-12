@@ -6,19 +6,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/radio86/emulator_screen_01.jpg"
     ],
     "version": "0.0.1",
-    "description": "RADIO-86 is a Radio 86RK emulator. This emulator comes with several games.",
-    "homepage": "http://www.itwas.ru/radio/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/radio86/0.0.1.7z",
-    "hash": "ca62fa637780d041e1713cdd238a096d64788dde093357e3c73cb9ff55a6006c",
-    "bin": [
-        "radio86.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/radio86/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/radio86/$version.7z"
-    }
+    "description": "Radio-86RK computer emulator",
+    "homepage": "https://code.google.com/archive/p/radio86/",
+    "license": "GPL-2.0-only",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/radio86/radio86-0.0.1.zip",
+    "hash": "38ceca129158adcd38996473afd305a912f5c232c0f3a5dfa8c68b5a45428f3d",
+    "bin": "radio86.exe",
+    "shortcuts": [
+        [
+            "radio86.exe",
+            "Radio-86RK"
+        ]
+    ]
 }

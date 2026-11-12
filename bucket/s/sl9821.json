@@ -1,0 +1,47 @@
+{
+    "version": "0.4.0.3",
+    "description": "NEC PC-9821 emulator",
+    "homepage": "https://www.satotomi.com/sl9821/",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires ROM images dumped from a real PC-9821 (BIOS.ROM, BANK.ROM, SNDBIOS.ROM, etc.).",
+        "Place the ROM files in $persist_dir\\ROM"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.satotomi.com/sl9821/download/SL9821_x64_210502.zip",
+            "hash": "f43bdcfff261a3ddd2f80c9a75c81f95eac3b3b9cf6496477098960eb020b5f3",
+            "extract_dir": "SL9821_x64"
+        },
+        "32bit": {
+            "url": "https://www.satotomi.com/sl9821/download/SL9821_x86_210502.zip",
+            "hash": "7205fac3ac99170858f36f5fabfe546a15dddfe56d584c17dfbd58efd48e2f3f",
+            "extract_dir": "SL9821_x86"
+        }
+    },
+    "bin": "SL9821.exe",
+    "shortcuts": [
+        [
+            "SL9821.exe",
+            "SL9821"
+        ]
+    ],
+    "persist": "ROM",
+    "checkver": {
+        "url": "https://www.satotomi.com/sl9821/sl9821_dl.html",
+        "regex": "<td>([\\d.]+)<br>[\\d/]+</td>\\s*<td[^>]*><a href=\"download/SL9821_x64_(?<date>\\d+)\\.zip\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.satotomi.com/sl9821/download/SL9821_x64_$matchDate.zip",
+                "extract_dir": "SL9821_x64"
+            },
+            "32bit": {
+                "url": "https://www.satotomi.com/sl9821/download/SL9821_x86_$matchDate.zip",
+                "extract_dir": "SL9821_x86"
+            }
+        }
+    }
+}

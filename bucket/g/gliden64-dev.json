@@ -1,0 +1,70 @@
+{
+    "version": "20261011-a04081a",
+    "description": "Graphics plugin for Nintendo 64 emulators (development version)",
+    "homepage": "https://github.com/gonetz/GLideN64",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This is a graphics plugin for N64 emulators (Mupen64Plus, Project64, etc.).",
+        "Each build variant is in its own folder under $dir; copy the GLideN64 DLL (and .ini files) of the variant matching your emulator into its plugin directory."
+    ],
+    "url": [
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Mupen64Plus-CLI-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Mupen64Plus-CLI-x86.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Mupen64Plus-Qt-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-PJ64Legacy-Qt-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-PJ64Legacy-Qt-x86.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-PJ64Legacy-WTL-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-PJ64Legacy-WTL-x86.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Project64-Qt-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Project64-Qt-x86.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Project64-WTL-x64.zip",
+        "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-a04081a-Windows-Project64-WTL-x86.zip"
+    ],
+    "hash": [
+        "05649d5e6b6fd61ad44c0428dcf10a3b682a5f5bdff102a7ec4200521e611318",
+        "afb488cf3d26118f60d63e9627e226aecebcb60b86d29698eeb6425c459b8430",
+        "97b36396af9fbbbe009dbced898f5589dd747cd18ca62eb9feed3874c8fc1716",
+        "7fe81b90d41e8a25afd9907039ee77715a8b94c1b3c30cbd1fa96a76021d6409",
+        "ca8d75868196413d81c4bb45e3c88b55342be4d134062fa1aa0794c4b7d456a4",
+        "c3f4a9a6d6844061dd60950ca9eebf08e4c2a7db0c5e054e9e1a9a008c39d1f9",
+        "575baf9c2080cb0b72592949482e2ac5bf79325c8f0f8891fe8b4e9ab3088ea0",
+        "47deaa1959d2d34a895617db21190ec1a667b21ba91b5721e6e79debb9a9db86",
+        "807b74889a419f0bae0406f8f02ced5bdf4103efc092a3cd8002ace88004a9e9",
+        "33621ca723b984f089c88ee27316d2f03df950416d712b0d6ac548ba997bd5e4",
+        "e1fd5a6b3b42c50471193e8a0386d26e5330e00e34e2845a7fdeed9c55caf0eb"
+    ],
+    "extract_to": [
+        "Mupen64Plus-CLI-x64",
+        "Mupen64Plus-CLI-x86",
+        "Mupen64Plus-Qt-x64",
+        "PJ64Legacy-Qt-x64",
+        "PJ64Legacy-Qt-x86",
+        "PJ64Legacy-WTL-x64",
+        "PJ64Legacy-WTL-x86",
+        "Project64-Qt-x64",
+        "Project64-Qt-x86",
+        "Project64-WTL-x64",
+        "Project64-WTL-x86"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/gonetz/GLideN64/releases/tags/github-actions",
+        "script": "Write-Output $page",
+        "regex": "\"created_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[\\s\\S]*?GLideN64-(?<commit>[0-9a-f]+)-Windows-",
+        "replace": "${year}${month}${day}-${commit}"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Mupen64Plus-CLI-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Mupen64Plus-CLI-x86.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Mupen64Plus-Qt-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-PJ64Legacy-Qt-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-PJ64Legacy-Qt-x86.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-PJ64Legacy-WTL-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-PJ64Legacy-WTL-x86.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Project64-Qt-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Project64-Qt-x86.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Project64-WTL-x64.zip",
+            "https://github.com/gonetz/GLideN64/releases/download/github-actions/GLideN64-$matchCommit-Windows-Project64-WTL-x86.zip"
+        ]
+    }
+}

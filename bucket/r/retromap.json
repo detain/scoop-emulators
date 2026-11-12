@@ -1,0 +1,25 @@
+{
+    "version": "3",
+    "description": "Controller-friendly emulation front-end made in MonoGame",
+    "homepage": "https://github.com/Alaxend0l/RetroMap",
+    "license": "GPL-3.0-only",
+    "notes": "This front-end is no longer developed.",
+    "url": "https://github.com/Alaxend0l/RetroMap/releases/download/v3/RetroMapV3.zip",
+    "hash": "35d624b2b4f6770ef3a830a3e0749e80adf9bbed75a7487539f806de259c0ca6",
+    "bin": [
+        [
+            "RetroMap.exe",
+            "retromap"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RetroMap.exe",
+            "RetroMap"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Alaxend0l/RetroMap/releases/download/v$version/RetroMapV$version.zip"
+    }
+}

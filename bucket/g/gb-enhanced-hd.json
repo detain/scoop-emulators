@@ -1,0 +1,24 @@
+{
+    "version": "240308",
+    "description": "Nintendo Game Boy / Game Boy Color emulator with HD pack support (GB Enhanced+ fork)",
+    "homepage": "https://github.com/mkwong98/gbe-plus",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/mkwong98/gbe-plus/releases/download/h.240308/gbe-hd.zip",
+    "hash": "e3d45a4521e2850b29dc7190735b180ea8ce4b5af2f9be2d32ce0567f3cb4912",
+    "bin": "gbe-hd.exe",
+    "shortcuts": [
+        [
+            "gbe-hd.exe",
+            "GB Enhanced+ HD"
+        ]
+    ],
+    "persist": "gbe.ini",
+    "checkver": {
+        "github": "https://api.github.com/repos/mkwong98/gbe-plus/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "h\\.(\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mkwong98/gbe-plus/releases/download/h.$version/gbe-hd.zip"
+    }
+}

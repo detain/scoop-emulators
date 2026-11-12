@@ -1,0 +1,44 @@
+{
+    "version": "2016.01.11-1.4",
+    "description": "Nintendo SNES emulator (Snes9x git build bundled with the xBRZ upscaling filter)",
+    "homepage": "https://sourceforge.net/projects/xbrz/files/Snes9x/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/snes9xgit/snes9x/blob/master/LICENSE"
+    },
+    "notes": [
+        "This build is no longer updated.",
+        "Select xBRZ in Video -> Display Configuration -> Output Image Processing."
+    ],
+    "url": "https://downloads.sourceforge.net/project/xbrz/Snes9x/Snes9x_2016-01-11%2BxBRZ_1.4_Win32.zip",
+    "hash": "sha1:0abd9c9ea37182cfe0d39d2bfbde5f6e0112874c",
+    "bin": [
+        [
+            "Snes9X.exe",
+            "snes9x-xbrz"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Snes9X.exe",
+            "Snes9x (xBRZ)"
+        ]
+    ],
+    "persist": [
+        "BIOS",
+        "Cheats",
+        "Movies",
+        "Saves",
+        "Screenshots",
+        "SPCs",
+        "snes9x.conf"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/xbrz/rss?path=/Snes9x",
+        "regex": "Snes9x_(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\+xBRZ_(?<xbrz>[\\d.]+)_Win32\\.zip",
+        "replace": "${year}.${month}.${day}-${xbrz}"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/xbrz/Snes9x/Snes9x_$matchYear-$matchMonth-$matchDay%2BxBRZ_$matchXbrz_Win32.zip"
+    }
+}

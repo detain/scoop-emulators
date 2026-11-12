@@ -8,19 +8,30 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2014/05/vbjin-Virtual-Boy-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/vbjin-Virtual-Boy-Emulator-Pic-02.jpg"
     ],
     "version": "svn61",
-    "description": "vbjin is one of the only emulators that offer support for the Virtual Boy. vbjin successfully manages to emulate the minuscule library that is available for the Virtual Boy and is the only real option if you want to check out the system.",
+    "description": "Nintendo Virtual Boy emulator based on Mednafen",
     "homepage": "https://code.google.com/archive/p/vbjin/",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/vbjin/svn61.7z",
-    "hash": "7acdf4729e762058b5986e145c2fa67b0ddf6bc627a2dc2625b833906ee48c30",
+    "notes": "Google Code is archived; this is the original VBjin-svn61.zip from the Google Code Archive.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vbjin/VBjin-svn61.zip",
+    "hash": "d5151c7da7ddafa44f4b00008ba2fe1e9bf68f9736cae54a59c55177491f124d",
     "bin": [
-        "vbjin.exe"
+        [
+            "vbjin.exe",
+            "vbjin"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "vbjin.exe",
+            "VBjin"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/vbjin/",
-        "regex": "(svn\\d+)\\.7z"
+        "url": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/vbjin/downloads-page-1.json",
+        "jsonpath": "$.downloads[0].filename",
+        "regex": "VBjin-(svn\\d+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vbjin/$version.7z"
+        "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vbjin/VBjin-$version.zip"
     }
 }

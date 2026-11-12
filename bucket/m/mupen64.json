@@ -1,0 +1,31 @@
+{
+    "version": "0.5.1",
+    "description": "Nintendo 64 emulator (the original Mupen64 by Hacktarux)",
+    "homepage": "http://mupen64.emulation64.com/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is no longer developed. Its successor is Mupen64Plus (scoop install mupen64plus).",
+        "Delete glide3x.dll from $dir if you have a real 3dfx Voodoo card."
+    ],
+    "url": "http://mupen64.emulation64.com/files/0.5/mupen64%200.5.1.exe#/dl.7z",
+    "hash": "e0f9e7673b06de2c9354d3e4aa27d1182b8b32482f5ad1fe3e6b1c7d43af3b2e",
+    "bin": "mupen64.exe",
+    "shortcuts": [
+        [
+            "mupen64.exe",
+            "Mupen64"
+        ]
+    ],
+    "persist": [
+        "save",
+        "Mempaks",
+        "ScreenShots"
+    ],
+    "checkver": {
+        "url": "http://mupen64.emulation64.com/down.htm",
+        "regex": "files/(?<dir>[\\d.]+)/mupen64 (?<version>[\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "http://mupen64.emulation64.com/files/$matchDir/mupen64%20$version.exe#/dl.7z"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": "3.1",
+    "description": "Nintendo Game Boy (DMG-01) emulator",
+    "homepage": "https://github.com/emu-russia/dmgemu",
+    "license": "Unknown",
+    "url": "https://github.com/emu-russia/dmgemu/releases/download/dmgemu-31/dmgemu310.zip",
+    "hash": "2d812c371ad688841c19e9aa877eb463c74ea828d01afb085b2d30858301a2a9",
+    "extract_dir": "dmgemu310",
+    "bin": "dmgemu.exe",
+    "shortcuts": [
+        [
+            "dmgemu.exe",
+            "DMGEMU"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/emu-russia/dmgemu/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/dmgemu-(?<tag>(?<major>\\d)(?<minor>\\d+))/(?<dir>dmgemu\\d+)\\.zip",
+        "replace": "${major}.${minor}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/emu-russia/dmgemu/releases/download/dmgemu-$matchTag/$matchDir.zip",
+        "extract_dir": "$matchDir"
+    }
+}

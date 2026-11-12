@@ -1,0 +1,48 @@
+{
+    "version": "1.3.0",
+    "description": "Nintendo 3DS emulator, a Citra fork focused on performance tweaks and experimental features",
+    "homepage": "https://github.com/ptyfyre/mandarine-neo",
+    "license": "GPL-2.0-or-later",
+    "notes": "Portable mode is enabled: user data is kept in $persist_dir\\user",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ptyfyre/mandarine-neo/releases/download/r1.3.0/mandarine-windows-msvc-20260415-3f023d0.zip",
+            "hash": "ed3b565cc935d369130de39f6309df1d455dd3016b818856add599bc4c1881f5",
+            "extract_dir": "mandarine-windows-msvc-20260415-3f023d0"
+        }
+    },
+    "bin": [
+        [
+            "mandarine-qt.exe",
+            "mandarine"
+        ],
+        [
+            "mandarine.exe",
+            "mandarine-cli"
+        ],
+        "mandarine-room.exe"
+    ],
+    "shortcuts": [
+        [
+            "mandarine-qt.exe",
+            "Mandarine"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://api.github.com/repos/ptyfyre/mandarine-neo/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/r(?<version>[\\d.]+)/mandarine-windows-msvc-(?<build>\\d+-[0-9a-f]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ptyfyre/mandarine-neo/releases/download/r$version/mandarine-windows-msvc-$matchBuild.zip",
+                "extract_dir": "mandarine-windows-msvc-$matchBuild"
+            }
+        }
+    }
+}

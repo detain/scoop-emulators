@@ -1,0 +1,45 @@
+{
+    "version": "5112",
+    "description": "Chiptune player for ZX Spectrum (AY/YM) and many other retro sound chip formats",
+    "homepage": "https://zxtune.bitbucket.io/",
+    "license": "LGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/vitamin-caig/zxtune/releases/download/r5112/zxtune_r5112_mingw_x86_64.zip",
+            "hash": "aedd0a2bb388fe1c5791b64b26d04ca2b113160529d0fa49730ade6acb5e1e28"
+        },
+        "arm64": {
+            "url": "https://github.com/vitamin-caig/zxtune/releases/download/r5112/zxtune_r5112_mingw_arm64.zip",
+            "hash": "df9db34350ca5c3614f2079718c0dbf308a2262403bce8b4e384d5b8cbbd95c2"
+        }
+    },
+    "bin": [
+        [
+            "zxtune-qt.exe",
+            "zxtune"
+        ],
+        "zxtune123.exe",
+        "xtractor.exe"
+    ],
+    "shortcuts": [
+        [
+            "zxtune-qt.exe",
+            "ZXTune"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/vitamin-caig/zxtune/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/r(\\d+)/zxtune_r\\d+_mingw_x86_64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/vitamin-caig/zxtune/releases/download/r$version/zxtune_r$version_mingw_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/vitamin-caig/zxtune/releases/download/r$version/zxtune_r$version_mingw_arm64.zip"
+            }
+        }
+    }
+}

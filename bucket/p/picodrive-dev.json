@@ -1,0 +1,43 @@
+{
+    "version": "870-20261111-4ac057e",
+    "description": "Sega Mega Drive/Genesis, Mega CD, 32X and Master System emulator (development version)",
+    "homepage": "https://github.com/irixxxx/picodrive",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/irixxxx/picodrive/blob/master/COPYING"
+    },
+    "notes": "Development builds come from GitHub Actions artifacts via nightly.link; artifacts expire after ~90 days.",
+    "url": "https://nightly.link/irixxxx/picodrive/workflows/ci/master/Win32.zip",
+    "hash": "bd085ba0be9fe94b4f7887a796f9678c4b316e1d92440562a8e9101136817071",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\PicoDrive-win32-*.zip\" | ForEach-Object {",
+        "    Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal",
+        "}"
+    ],
+    "bin": [
+        [
+            "PicoDrive.exe",
+            "picodrive-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PicoDrive.exe",
+            "PicoDrive (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/irixxxx/picodrive/actions/workflows/ci.yml/runs?branch=master&status=success&per_page=1",
+        "script": [
+            "$sha = json_path $page '$.workflow_runs[0].head_sha'",
+            "$run = json_path $page '$.workflow_runs[0].run_number'",
+            "$date = json_path $page '$.workflow_runs[0].created_at'",
+            "Write-Output \"$run $date $sha\""
+        ],
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${run}-${year}${month}${day}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/irixxxx/picodrive/workflows/ci/master/Win32.zip"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "version": "1.28",
+    "description": "Multi-system emulator for Chip-8, Super Chip-8, Mega Chip-8, Game Boy and Game Boy Color",
+    "homepage": "http://doallator.free.fr/",
+    "license": "CECILL-B",
+    "url": "http://doallator.free.fr/files/Doallator_1.28.zip",
+    "hash": "a3f06438dc754f62435a363a66fe4cdd54f61d5d9bae8e28311b51cc71a30d73",
+    "extract_dir": "Doallator",
+    "bin": "Doallator.exe",
+    "shortcuts": [
+        [
+            "Doallator.exe",
+            "Doallator"
+        ]
+    ],
+    "persist": [
+        "cfgs",
+        "roms",
+        "emulators\\saves",
+        "emulators\\screenShots"
+    ],
+    "checkver": {
+        "url": "http://doallator.free.fr/telechargement.php",
+        "regex": "<cite>Doallator</cite> ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://doallator.free.fr/files/Doallator_$version.zip"
+    }
+}

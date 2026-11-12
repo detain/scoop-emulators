@@ -1,0 +1,21 @@
+{
+    "version": "0.6",
+    "description": "Cycle-accurate Nintendo Entertainment System emulator",
+    "homepage": "https://github.com/holodnak/nesemu2",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed. The download is served from an Internet Archive snapshot of the former official site.",
+    "url": "https://web.archive.org/web/20180817034140id_/http://www.nesemu2.com/downloads/nesemu2-0.6-win32.zip",
+    "hash": "14373c2a98577e57d2cba8e353b2a519cdf63287d937fc57bb32da2485e25aa1",
+    "bin": "nesemu2.exe",
+    "shortcuts": [
+        [
+            "nesemu2.exe",
+            "nesemu2"
+        ]
+    ],
+    "persist": [
+        "data\\cheat",
+        "data\\save",
+        "data\\state"
+    ]
+}

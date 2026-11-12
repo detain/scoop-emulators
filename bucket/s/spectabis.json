@@ -1,0 +1,39 @@
+{
+    "version": "1.2.0",
+    "description": "Frontend for the PCSX2 Sony PlayStation 2 emulator with per-game configuration and boxart scraping",
+    "homepage": "https://github.com/valters-tomsons/Spectabis",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "This frontend is no longer developed and targets legacy PCSX2 1.x (wxWidgets/plugin) builds.",
+        "Point Spectabis to your PCSX2 executable on first launch."
+    ],
+    "url": "https://github.com/valters-tomsons/Spectabis/releases/download/1.2/Spectabis-1.2.0.7z",
+    "hash": "550dd832e0f6c702a95ff77dd2586a7d8c17b87a39b3429c9433aabbfd5b0ac7",
+    "extract_dir": "Spectabis-1.2.0",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\spectabis.json\")) {",
+        "    Set-Content \"$dir\\spectabis.json\" '{\"showTitle\":true,\"doubleClick\":true,\"emuDir\":null,\"nightMode\":false,\"autoBoxart\":true,\"swatch\":\"bluegrey\",\"gameDirectory\":null,\"searchbar\":true,\"tooltips\":false,\"aprilfooled\":false,\"checkupdates\":true,\"titleAsFile\":false,\"globalController\":false,\"playtime\":false,\"APIKey_GiantBomb\":\"\",\"APIKey_MobyGames\":\"\",\"APIKey_IGDB\":\"\",\"APIKey_TheGamesDb\":\"\",\"APIAutoSequence\":\"0,1,2,3,4\",\"APIUserSequence\":\"\",\"BoxWidth\":150,\"BoxHeight\":200}' -Encoding Ascii",
+        "}"
+    ],
+    "bin": "Spectabis.exe",
+    "shortcuts": [
+        [
+            "Spectabis.exe",
+            "Spectabis"
+        ]
+    ],
+    "persist": [
+        "resources",
+        "advanced.ini",
+        "spectabis.json"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/valters-tomsons/Spectabis/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/Spectabis-(?<version>[\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://github.com/valters-tomsons/Spectabis/releases/download/$matchTag/Spectabis-$version.7z",
+        "extract_dir": "Spectabis-$version"
+    }
+}

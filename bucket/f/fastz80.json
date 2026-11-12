@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/fastz80/emulator_screen_01.jpg"
     ],
     "version": "1.02",
-    "description": "FastZ80 is a Tandy/Radio Shack TRS-80, HT-1080Z, EACA VideoGenie-1, PMC-80, Dick Smith System-80 and TRZ-80 emulator.",
-    "homepage": "http://ht.homeserver.hu/html/emulatorfastz80.html",
+    "description": "TRS-80, HT-1080Z, Video Genie, PMC-80, System-80 and TRZ-80 emulator",
+    "homepage": "https://ht.homeserver.hu/html/emulatorfastz80.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/fastz80/1.02.7z",
-    "hash": "8275f0252a802afa353b4c6ccc471b60c590724cd41694f857589a99150115bc",
-    "bin": [
-        "FastZ80.exe"
+    "url": "https://ht.homeserver.hu/bin/emu/fastz80_v102.zip",
+    "hash": "2b69153734db4af560a70bb1ef425c57dd6ebd627cacfa005626b12f3b7959ee",
+    "bin": "FastZ80.exe",
+    "shortcuts": [
+        [
+            "FastZ80.exe",
+            "FastZ80"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/fastz80/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://ht.homeserver.hu/html/emulatorfastz80.html",
+        "regex": "fastz80_v(\\d)(\\d+)\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/fastz80/$version.7z"
+        "url": "https://ht.homeserver.hu/bin/emu/fastz80_v$cleanVersion.zip"
     }
 }

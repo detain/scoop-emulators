@@ -1,0 +1,28 @@
+{
+    "version": "0.34-alpha",
+    "description": "Sony PlayStation 5 emulator (early-stage, research)",
+    "homepage": "https://github.com/craze1pirate/craziiEmu",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/craze1pirate/craziiEmu/releases/download/v0.34-alpha/craziiemu-0.34-alpha-win-x64.zip",
+    "hash": "f7efb40d4f1f0b54b15960ac7730c6dc538d16f093ed2a165261e7eac386541d",
+    "bin": [
+        [
+            "CraziiEmu.exe",
+            "craziiemu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "CraziiEmu.exe",
+            "CraziiEmu"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/craze1pirate/craziiEmu/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/craze1pirate/craziiEmu/releases/download/v$version/craziiemu-$version-win-x64.zip"
+    }
+}

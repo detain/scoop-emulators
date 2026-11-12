@@ -1,0 +1,24 @@
+{
+    "version": "2.1.0",
+    "description": "Graphical frontend for configuring and launching DOS applications in DOSBox",
+    "homepage": "https://github.com/jrathlev/DosPanel",
+    "license": "MIT",
+    "url": "https://github.com/jrathlev/DosPanel/releases/download/dp_2_1_0/dospanel-2.zip",
+    "hash": "6022c8d237a0c19d25573ea80adb1097c84039be40d1508f1563c2352b8061a5",
+    "bin": "DosPanel.exe",
+    "shortcuts": [
+        [
+            "DosPanel.exe",
+            "DosPanel"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/jrathlev/DosPanel/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/dp_(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)/(?<file>dospanel[-\\d]*\\.zip)",
+        "replace": "${major}.${minor}.${patch}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jrathlev/DosPanel/releases/download/dp_$underscoreVersion/$matchFile"
+    }
+}

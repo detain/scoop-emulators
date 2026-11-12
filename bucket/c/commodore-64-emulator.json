@@ -1,0 +1,35 @@
+{
+    "version": "0.8.8.5-alpha",
+    "description": "Commodore 64 emulator focused on accuracy and debuggability",
+    "homepage": "https://github.com/cbroschard/Commodore-64-Emulator",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/cbroschard/Commodore-64-Emulator/blob/main/License.txt"
+    },
+    "url": "https://github.com/cbroschard/Commodore-64-Emulator/releases/download/v0.8.8.5-alpha/v0.8.8.5-alpha.zip",
+    "hash": "b0cc8dd131e3aaf12decedaa06b2569e8e5824052296ced9b356cd9facc1c287",
+    "bin": [
+        [
+            "Commodore.exe",
+            "commodore-64-emulator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Commodore.exe",
+            "Commodore 64 Emulator"
+        ]
+    ],
+    "persist": [
+        "commodore.cfg",
+        "imgui.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/cbroschard/Commodore-64-Emulator/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/cbroschard/Commodore-64-Emulator/releases/download/v$version/v$version.zip"
+    }
+}

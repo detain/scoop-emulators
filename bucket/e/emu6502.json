@@ -1,0 +1,19 @@
+{
+    "version": "0.9.8",
+    "description": "Apple II/IIe emulator written in Rust",
+    "homepage": "https://github.com/univta0001/emu6502",
+    "license": "MIT",
+    "url": "https://github.com/univta0001/emu6502/releases/download/0.9.8/emu6502-v0.9.8-x86_64-pc-windows-msvc.zip",
+    "hash": "4ef2b6585a99be962de4bf4004311146e74df92a4f46c531c61f71818058a09b",
+    "bin": "emu6502.exe",
+    "shortcuts": [
+        [
+            "emu6502.exe",
+            "emu6502"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/univta0001/emu6502/releases/download/$version/emu6502-v$version-x86_64-pc-windows-msvc.zip"
+    }
+}

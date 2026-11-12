@@ -1,0 +1,35 @@
+{
+    "version": "2149-20261024-f4d3238",
+    "description": "Nintendo Game Boy, Game Boy Color, Game Boy Advance and DS emulator (development version)",
+    "homepage": "https://skyemu.app/",
+    "license": "MIT",
+    "notes": "Development builds come from GitHub Actions artifacts of the dev branch (via nightly.link), which expire about 90 days after the last successful build.",
+    "url": "https://nightly.link/skylersaleh/SkyEmu/workflows/deploy_win/dev/WindowsRelease.zip",
+    "hash": "8783e37465b1657ccbdebb4ba4378aad51d90486267616e99015912aeb26df77",
+    "bin": [
+        [
+            "SkyEmu.exe",
+            "skyemu-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SkyEmu.exe",
+            "SkyEmu (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/skylersaleh/SkyEmu/actions/workflows/deploy_win.yml/runs?branch=dev&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/skylersaleh/SkyEmu/workflows/deploy_win/dev/WindowsRelease.zip"
+    }
+}

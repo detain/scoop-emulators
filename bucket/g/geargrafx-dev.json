@@ -1,0 +1,58 @@
+{
+    "version": "1.8.7-3-gc669129",
+    "description": "NEC PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator and debugger (development version)",
+    "homepage": "https://github.com/drhelius/Geargrafx",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
+        "CD-ROM2 games require a System Card BIOS; load it from the Emulator menu."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-3-gc669129-desktop-windows-x64.zip",
+            "hash": "e36f26b85acb2f3fc07b6e20f80e9be4b2ffb7d6e3ae47c788ff7ddc31623a2f"
+        },
+        "arm64": {
+            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-3-gc669129-desktop-windows-arm64.zip",
+            "hash": "bf53eb4eb3f446be98e66097358edcc1e8b1eae67c827aef574b55166470e674"
+        }
+    },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "Geargrafx.exe",
+            "geargrafx-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Geargrafx.exe",
+            "Geargrafx (dev)"
+        ]
+    ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": {
+        "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main",
+        "regex": "Geargrafx-([\\d.]+(?:-\\d+-g[0-9a-f]+)?)-desktop-windows-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-$version-desktop-windows-arm64.zip"
+            }
+        }
+    }
+}

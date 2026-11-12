@@ -6,19 +6,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtualapf/emulator_screen_01.jpg"
     ],
     "version": "0.1",
-    "description": "Virtual APF, an emulator for the APF Imagination Machine",
+    "description": "APF Imagination Machine emulator",
     "homepage": "http://www.geocities.ws/emucompboy/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/virtualapf/0.1.7z",
-    "hash": "931f5189e45e563da5eea28aad5a4cd208be1871720b62eabadbbc8e9a5a688e",
+    "notes": "GeoCities is gone; this is the original vapf01.zip from the Wayback Machine (geocities.ws mirrors block non-browser downloads).",
+    "url": "https://web.archive.org/web/20091027140133id_/http://www.geocities.com/emucompboy/vapf01.zip",
+    "hash": "323c498b3fc2c0014f4513ebdf667fe80bc938a6af1e779964930956fc7d8f5c",
+    "extract_dir": "VirtualAPF",
     "bin": [
-        "vapf.exe"
+        [
+            "vapf.exe",
+            "vapf"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/virtualapf/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/virtualapf/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "vapf.exe",
+            "Virtual APF"
+        ]
+    ],
+    "persist": "vapf.ini"
 }

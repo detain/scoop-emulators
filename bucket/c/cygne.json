@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cygne/emulator_screen_01.jpg"
     ],
     "version": "2.1a",
-    "description": "Cygne is a Bandai Wonderswan and Wonderswan Color emulator.",
-    "homepage": "http://cygne.emuunlim.com",
+    "description": "Bandai WonderSwan and WonderSwan Color emulator",
+    "homepage": "https://cygne.emuunlim.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/cygne/2.1a.7z",
-    "hash": "5cfb443ebef650793b0405f81f7723bf8048dc4ff1a02f90aa8237962167021f",
-    "bin": [
-        "cygne.exe"
+    "url": "https://cygne.emuunlim.com/files/cygne21a-win.zip",
+    "hash": "e48e2b9c8b42f3384aa170f6ecf440d4d48cbd074063f2111a03f97eeb92c577",
+    "bin": "cygne.exe",
+    "shortcuts": [
+        [
+            "cygne.exe",
+            "Cygne"
+        ]
     ],
     "checkver": {
-        "url": "http://cygne.emuunlim.com/release.htm",
-        "regex": "href=\"cygne(\\d+).zip\">"
+        "url": "https://cygne.emuunlim.com/",
+        "regex": "cygne(\\d)(\\d+)([a-z]?)-win\\.zip",
+        "replace": "${1}.${2}${3}"
     },
     "autoupdate": {
-        "url": "http://cygne.emuunlim.com/release.htm"
+        "url": "https://cygne.emuunlim.com/files/cygne$cleanVersion-win.zip"
     }
 }

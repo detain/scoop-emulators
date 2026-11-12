@@ -1,0 +1,37 @@
+{
+    "version": "0.9.59",
+    "description": "Sega Model 2 arcade emulator",
+    "homepage": "https://github.com/dmanlfc/sm2-emu",
+    "license": "GPL-3.0-or-later",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/dmanlfc/sm2-emu/releases/download/v0.9.59/sm2-emu-v0.9.59-windows-x86_64.zip",
+    "hash": "f29ecc8c435686af5fbf5a596e77af2f1ce4f9a0139347cb0afc32123f5f39b2",
+    "extract_dir": "sm2-emu-v0.9.59-windows-x86_64",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\sm2-emu.ini\")) {",
+        "    New-Item \"$dir\\sm2-emu.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "sm2-emu.exe",
+            "sm2-emu",
+            "--config \"$dir\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "sm2-emu.exe",
+            "SM2-EMU",
+            "--config \"$dir\""
+        ]
+    ],
+    "persist": "sm2-emu.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/dmanlfc/sm2-emu/releases/download/v$version/sm2-emu-v$version-windows-x86_64.zip",
+        "extract_dir": "sm2-emu-v$version-windows-x86_64"
+    }
+}

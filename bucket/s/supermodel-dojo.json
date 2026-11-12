@@ -1,0 +1,39 @@
+{
+    "version": "0.3a-20261029-git-9bdf7f2",
+    "description": "Sega Model 3 arcade emulator, a Supermodel fork focused on netplay, replays and training modes",
+    "homepage": "https://github.com/blueminder/supermodel-dojo",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/blueminder/supermodel-dojo/releases/download/v0.3a-20261029-git-9bdf7f2/supermodel-dojo-0.3a-20261029-git-9bdf7f2-windows.zip",
+    "hash": "12b3c36aa440d0a3c20b829881b125595064517df09b9eb11c5819d1f71d4173",
+    "extract_dir": "supermodel-0.3a-20261029-git-9bdf7f2",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Config\\Supermodel.ini\")) {",
+        "    New-Item \"$dir\\Config\\Supermodel.ini\" -Type File -Force | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "supermodel.exe",
+            "supermodel-dojo"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "supermodel.exe",
+            "Supermodel Dojo"
+        ]
+    ],
+    "persist": [
+        "Config\\Supermodel.ini",
+        "NVRAM",
+        "Saves"
+    ],
+    "checkver": {
+        "github": "https://github.com/blueminder/supermodel-dojo",
+        "regex": "^v(\\d[\\w.-]+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/blueminder/supermodel-dojo/releases/download/v$version/supermodel-dojo-$version-windows.zip",
+        "extract_dir": "supermodel-$version"
+    }
+}

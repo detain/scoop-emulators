@@ -1,0 +1,26 @@
+{
+    "version": "R9O",
+    "description": "HP-41C/CV/CX calculator emulator",
+    "homepage": "https://hp.giesselink.com/v41.htm",
+    "license": "GPL-2.0-only",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2005": "extras/vcredist2005"
+    },
+    "url": "https://hp.giesselink.com/V41/V41R9O.zip",
+    "hash": "feb53137e8ea75fbba171136b7b10496c2a1adde1b104026cdecee1bbc6a2c3a",
+    "pre_install": "Get-ChildItem \"$dir\\V41R*.exe\" | Rename-Item -NewName 'V41.exe'",
+    "bin": "V41.exe",
+    "shortcuts": [
+        [
+            "V41.exe",
+            "V41"
+        ]
+    ],
+    "checkver": {
+        "url": "https://hp.giesselink.com/v41.htm",
+        "regex": "V41/V41(R[0-9A-Z]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://hp.giesselink.com/V41/V41$version.zip"
+    }
+}

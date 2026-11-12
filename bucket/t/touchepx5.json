@@ -1,0 +1,37 @@
+{
+    "version": "0.0.2-beta.6",
+    "description": "Experimental Sony PlayStation 5 emulator written in C#",
+    "homepage": "https://github.com/Techx3/TouchePX5",
+    "license": "GPL-2.0-or-later",
+    "notes": "A Vulkan-capable GPU and current graphics driver are required.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Techx3/TouchePX5/releases/download/v0.0.2-beta.6/touchepx5-0.0.2-beta.6-win-x64.zip",
+            "hash": "4130f53345d7d2c00ea19044a7ebeb61da962ba305587e15965b320c83b9c264"
+        }
+    },
+    "bin": [
+        [
+            "TouchePx5.exe",
+            "touchepx5"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TouchePx5.exe",
+            "Touche PX5"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Techx3/TouchePX5/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Techx3/TouchePX5/releases/download/v$version/touchepx5-$version-win-x64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "version": "114-20261109-705bbe7",
+    "description": "Sega Saturn emulator (development version)",
+    "homepage": "https://github.com/user-none/erings",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "A built-in HLE BIOS is used by default; a real Saturn BIOS (USA or Japan) is optional.",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-705bbe7-windows-amd64.zip",
+            "hash": "98bb54ca4cde63fa54d5f73d6033902b703bb907b43adf9020c6a140ff52aff2"
+        },
+        "arm64": {
+            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-705bbe7-windows-arm64.zip",
+            "hash": "2828e9ac4cb9f4f18d0f21cf9b0a123fc9b00943f444cca769cab14b5ea6d084"
+        }
+    },
+    "bin": [
+        [
+            "erings.exe",
+            "erings-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "erings.exe",
+            "erings (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/user-none/erings/actions/workflows/build.yml/runs?branch=main&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-$matchHash-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-$matchHash-windows-arm64.zip"
+            }
+        }
+    }
+}

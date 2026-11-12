@@ -1,0 +1,43 @@
+{
+    "version": "0.99",
+    "description": "DOSBox Game Launcher (DBGL), a Java frontend for DOSBox based on D-Fend",
+    "homepage": "https://dbgl.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": "Requires Java Runtime Environment 17 or newer (64-bit).",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://dbgl.org/download/dbgl099.zip",
+    "hash": "6f07502545cd0480e1b139647e3d483a17407d45b163089b9a48a6df3f11fb63",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.conf\")) {",
+        "    New-Item \"$dir\\settings.conf\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "launch.exe",
+            "dbgl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "launch.exe",
+            "DBGL"
+        ]
+    ],
+    "persist": [
+        "captures",
+        "db",
+        "export",
+        "profiles",
+        "settings.conf"
+    ],
+    "checkver": {
+        "url": "https://dbgl.org/",
+        "regex": "DBGL ([\\d.]+) - The latest stable release"
+    },
+    "autoupdate": {
+        "url": "https://dbgl.org/download/dbgl$cleanVersion.zip"
+    }
+}

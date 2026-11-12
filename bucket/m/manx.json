@@ -1,0 +1,37 @@
+{
+    "version": "0.1.0-beta",
+    "description": "Multi-board arcade emulator (Namco System 22/246, Sega Model 1/2, System 16B and more), formerly WhittyArcade",
+    "homepage": "https://github.com/CrownParkComputing/MANX",
+    "license": "GPL-3.0-only",
+    "notes": "ROM sets and BIOS files are not included.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CrownParkComputing/MANX/releases/download/v0.1.0-beta/MANX-windows-x86_64.zip",
+            "hash": "ca5ffa39033fbc76ce5e3ddc5b09938575f302a86a3758a7c5448f9e17b63df8"
+        }
+    },
+    "bin": [
+        [
+            "MANX.exe",
+            "manx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MANX.exe",
+            "MANX"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/CrownParkComputing/MANX/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CrownParkComputing/MANX/releases/download/v$version/MANX-windows-x86_64.zip"
+            }
+        }
+    }
+}

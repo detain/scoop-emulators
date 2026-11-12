@@ -1,0 +1,20 @@
+{
+    "version": "0.0.104",
+    "description": "Nintendo Game Boy sound player for GBS, GBR, GB and VGM files (command line)",
+    "homepage": "https://mmitch.github.io/gbsplay/",
+    "license": "GPL-1.0-or-later",
+    "url": "https://github.com/mmitch/gbsplay/releases/download/0.0.104/gbsplay-0.0.104_Windows.zip",
+    "hash": "e6240bae5ce059f3b1862ce289cf71b31468402e0c5dac6f33c78b31aace8d38",
+    "extract_dir": "gbsplay-0.0.104",
+    "bin": [
+        "gbsplay.exe",
+        "gbsinfo.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/mmitch/gbsplay"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mmitch/gbsplay/releases/download/$version/gbsplay-$version_Windows.zip",
+        "extract_dir": "gbsplay-$version"
+    }
+}

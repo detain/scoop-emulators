@@ -1,0 +1,25 @@
+{
+    "version": "1.0",
+    "description": "Luxor/BRG ABC80 computer emulator",
+    "homepage": "http://gaia.atilia.eu/",
+    "license": "Freeware",
+    "url": "http://gaia.atilia.eu/download/WinLux80_1.0.zip",
+    "hash": "e0d972030551bf60339e07711d9d5c89b0f632a99a92557a0ee388daf938c303",
+    "bin": [
+        "WinLux80.exe",
+        "wav2atp.exe"
+    ],
+    "shortcuts": [
+        [
+            "WinLux80.exe",
+            "WinLux80"
+        ]
+    ],
+    "checkver": {
+        "url": "http://gaia.atilia.eu/downloads.html",
+        "regex": "download/WinLux80_([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://gaia.atilia.eu/download/WinLux80_$version.zip"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "0.98.28",
+    "description": "Nintendo NES/Famicom emulator with rerecording (TAS) support, predecessor of FCEUX",
+    "homepage": "https://code.google.com/archive/p/fceu/",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed. Consider fceux instead.",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fceu/fceu-rerecording-0.98.28.zip",
+    "hash": "479e5a3bdc9625f6db71526969de3b7585c98e944679fe126ceed78f873fa945",
+    "pre_install": "Remove-Item \"$dir\\fceu_linux\" -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        [
+            "fceu.exe",
+            "fceu-rr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "fceu.exe",
+            "FCEU Rerecording"
+        ]
+    ]
+}

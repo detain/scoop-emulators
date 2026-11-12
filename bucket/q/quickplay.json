@@ -1,0 +1,30 @@
+{
+    "version": "4.7.6",
+    "description": "Universal emulator frontend supporting many emulators and systems",
+    "homepage": "https://sourceforge.net/projects/quickplay/",
+    "license": "BSD-3-Clause",
+    "url": "https://downloads.sourceforge.net/project/quickplay/quickplay/QuickPlay%204.7.6/QP-v4.7.6.zip",
+    "hash": "eb180752adb1b11b662fa595bbfd69dda6dc3be871308203dadec794b4507ab1",
+    "extract_dir": "qp",
+    "bin": [
+        [
+            "QP.exe",
+            "quickplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "QP.exe",
+            "QuickPlay"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/quickplay/rss?path=/quickplay",
+        "regex": "QP-v([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/quickplay/quickplay/QuickPlay%20$version/QP-v$version.zip",
+        "extract_dir": "qp"
+    }
+}

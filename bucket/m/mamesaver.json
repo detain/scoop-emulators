@@ -1,0 +1,24 @@
+{
+    "version": "3.0",
+    "description": "Windows screen saver that runs MAME with a random game at set intervals",
+    "homepage": "https://github.com/mika76/mamesaver",
+    "license": "MIT",
+    "notes": [
+        "This tool is no longer developed. Requires MAME and .NET Framework 4.6.",
+        "To use it as your screen saver, right-click $dir\\Mamesaver.scr and choose Install (or copy it to C:\\Windows\\System32).",
+        "Use the 'Mamesaver Settings' shortcut to set the MAME path and rebuild the game list."
+    ],
+    "url": "https://github.com/mika76/mamesaver/releases/download/3.0/Mamesaver.scr",
+    "hash": "de7fcc2d2033e588030fa5b536269952a7293753f36791d4791d18b1252fa3f4",
+    "shortcuts": [
+        [
+            "Mamesaver.scr",
+            "Mamesaver Settings",
+            "/c"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/mika76/mamesaver/releases/download/$version/Mamesaver.scr"
+    }
+}

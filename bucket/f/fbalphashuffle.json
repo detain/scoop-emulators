@@ -7,13 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/fbalphashuffle/emulator_screen_01.jpg"
     ],
     "version": "2.4.0-win64",
-    "description": "FB Alpha Shuffle is an unofficial version based on FBA with many features.",
+    "description": "Arcade emulator based on FB Alpha with extra features",
     "homepage": "http://code.google.com/p/fbashuffle/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/fbalphashuffle/2.4.0-win64.7z",
     "hash": "68c815e04d65632ce15354418d995dcd33ca93bd5af1c9e9f7ba1d143241ffc8",
     "bin": [
-        "Fbas-x64.exe"
+        [
+            "Fbas-x64.exe",
+            "fbalphashuffle"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Fbas-x64.exe",
+            "FB Alpha Shuffle"
+        ]
     ],
     "checkver": {
         "url": "https://consolo.is.cc/emu/fbalphashuffle/",

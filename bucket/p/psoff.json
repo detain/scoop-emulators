@@ -1,0 +1,38 @@
+{
+    "version": "2025.11.10",
+    "description": "Sony PlayStation 4 emulator (closed-source compatibility layer)",
+    "homepage": "https://github.com/psOff-emulation-project/compatibility",
+    "license": "Freeware",
+    "notes": "Requires a GPU with Vulkan 1.3 support.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/psOff-emulation-project/compatibility/releases/download/2025Nov10/psOff_build.zip",
+            "hash": "b2c1b7cb88694feb93e421ee23fe8863080c64dc99d271582f2b4ab30c85a8f2"
+        }
+    },
+    "bin": [
+        [
+            "psOff.exe",
+            "psoff"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "psOff.exe",
+            "psOff"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/psOff-emulation-project/compatibility/releases/latest",
+        "script": "$page",
+        "regex": "\"tag_name\":\\s*\"(?<tag>[^\"]+)\"[\\s\\S]*?\"published_at\":\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/psOff-emulation-project/compatibility/releases/download/$matchTag/psOff_build.zip"
+            }
+        }
+    }
+}

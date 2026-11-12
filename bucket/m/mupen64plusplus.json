@@ -7,25 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plusplus/emulator_screen_01.jpg"
     ],
     "version": "0.1.3.12",
-    "description": "Mupen64++ (aka Mupen64k) is the emulator for online play woring with the most games. The emulator has support for peer-to-peer online play with Kaillera. Mupen64++ always uses the game save data from the host, and synchronizes it with everyone else playing.",
-    "homepage": "http://minivmac.sourceforge.net/",
+    "description": "Nintendo 64 emulator focused on Kaillera netplay (aka Mupen64k)",
+    "homepage": "https://mupen64k.blogspot.com/",
     "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/mupen64plusplus/0.1.3.12.7z",
     "hash": "b926f5bf46647b4add6deaf55ce0c3194b1dcbb5025f955defc4df5405961cea",
-    "bin": [
-        "minivmac"
+    "bin": "mupen64pp.exe",
+    "shortcuts": [
+        [
+            "mupen64pp.exe",
+            "Mupen64++"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/mupen64plusplus/0.1.3.12.7z",
-            "hash": "b926f5bf46647b4add6deaf55ce0c3194b1dcbb5025f955defc4df5405961cea"
-        }
-    },
     "checkver": {
-        "url": "https://sourceforge.net/projects/minivmac/rss?path=/minivmac",
-        "regex": "minivmac-(\\d+\\.\\d+\\.\\d+)-src\\.tar\\.gz"
+        "url": "https://consolo.is.cc/emu/mupen64plusplus/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/minivmac/rss?path=/minivmac"
+        "url": "https://consolo.is.cc/emu/mupen64plusplus/$version.7z"
     }
 }

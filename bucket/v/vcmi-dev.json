@@ -1,0 +1,88 @@
+{
+    "version": "20261111-g5d048de",
+    "description": "Open-source engine for Heroes of Might and Magic III (development version)",
+    "homepage": "https://vcmi.eu/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "VCMI requires the original Heroes of Might and Magic III data files.",
+        "Run the VCMI Launcher and import them from a GOG offline installer or an existing installation.",
+        "User data (game data, mods, saves, settings) is stored in $persist_dir\\data."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x64/VCMI-branch-develop-5d048de.zip",
+            "hash": "772cc8d6e9b29547a93abd689f4fa5ef74b51b316b31b71ce894e8a97f03b018"
+        },
+        "32bit": {
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x86/VCMI-branch-develop-5d048de.zip",
+            "hash": "5f40ab696f8ce67d001e8188becf98fad4d439a9580d41034fcd6cebf519ecf6"
+        },
+        "arm64": {
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-arm64/VCMI-branch-develop-5d048de.zip",
+            "hash": "6ba8ef03905960aad22649773b0ce15f39ee00a1c62d45be80a66ced6fce76f3"
+        }
+    },
+    "pre_install": [
+        "$dirsJson = @{ userDataPath = \"$dir\\data\" } | ConvertTo-Json",
+        "[IO.File]::WriteAllText(\"$dir\\config\\dirs.json\", $dirsJson)"
+    ],
+    "bin": [
+        [
+            "VCMI_launcher.exe",
+            "vcmi-dev"
+        ],
+        [
+            "VCMI_client.exe",
+            "vcmi-client-dev"
+        ],
+        [
+            "VCMI_mapeditor.exe",
+            "vcmi-mapeditor-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VCMI_launcher.exe",
+            "VCMI (dev)"
+        ],
+        [
+            "VCMI_mapeditor.exe",
+            "VCMI Map Editor (dev)"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://builds.vcmi.download/branch/develop/metadata/",
+        "script": [
+            "$m = [regex]::Match($page, 'VCMI-branch-develop-([0-9a-f]{7})\\.json</a></td><td class=\"size\">\\s*\\d+</td><td class=\"date\">(\\d{4}-\\w{3}-\\d{2})')",
+            "$date = [datetime]::ParseExact($m.Groups[2].Value, 'yyyy-MMM-dd', [cultureinfo]::InvariantCulture).ToString('yyyyMMdd')",
+            "Write-Output \"$date-g$($m.Groups[1].Value)\""
+        ],
+        "regex": "(\\d{8}-g(?<commit>[0-9a-f]{7}))"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.vcmi.eu/branch/develop/windows-zip-x64/VCMI-branch-develop-$matchCommit.zip",
+                "hash": {
+                    "url": "https://builds.vcmi.download/branch/develop/metadata/VCMI-branch-develop-$matchCommit.json",
+                    "jsonpath": "$.builds['windows-x64'].package.sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://download.vcmi.eu/branch/develop/windows-zip-x86/VCMI-branch-develop-$matchCommit.zip",
+                "hash": {
+                    "url": "https://builds.vcmi.download/branch/develop/metadata/VCMI-branch-develop-$matchCommit.json",
+                    "jsonpath": "$.builds['windows-x86'].package.sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://download.vcmi.eu/branch/develop/windows-zip-arm64/VCMI-branch-develop-$matchCommit.zip",
+                "hash": {
+                    "url": "https://builds.vcmi.download/branch/develop/metadata/VCMI-branch-develop-$matchCommit.json",
+                    "jsonpath": "$.builds['windows-arm64'].package.sha256"
+                }
+            }
+        }
+    }
+}

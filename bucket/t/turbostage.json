@@ -1,0 +1,31 @@
+{
+    "version": "0.12.1",
+    "description": "MS-DOS game library frontend for DOSBox Staging",
+    "homepage": "https://github.com/jberclaz/turbostage",
+    "license": "Apache-2.0",
+    "notes": "Set the DOSBox Staging path in File > Settings (or let TurboStage download it).",
+    "suggest": {
+        "DOSBox Staging": "dosbox-staging"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jberclaz/turbostage/releases/download/v0.12.1/turbostage.exe",
+            "hash": "2de9ff4fd9caee25725dc999f659e83a28e74acf04664e5041210043e6bfe1c2"
+        }
+    },
+    "bin": "turbostage.exe",
+    "shortcuts": [
+        [
+            "turbostage.exe",
+            "TurboStage"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jberclaz/turbostage/releases/download/v$version/turbostage.exe"
+            }
+        }
+    }
+}

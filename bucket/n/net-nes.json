@@ -1,0 +1,43 @@
+{
+    "version": "1.0.0",
+    "description": "Nintendo Entertainment System emulator written in C#",
+    "homepage": "https://github.com/BotRandomness/NET-NES",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/BotRandomness/NET-NES/releases/download/v1.0.0/NET-NES-v1.0.0-win-x64.zip",
+            "hash": "513df9653b4836388718e47c57f34f6d012edbbc11d8bdc0398ad70f8a46dba1",
+            "extract_dir": "NET-NES-v1.0.0-win-x64"
+        },
+        "32bit": {
+            "url": "https://github.com/BotRandomness/NET-NES/releases/download/v1.0.0/NET-NES-v1.0.0-win-x86.zip",
+            "hash": "362f12756aa2b05d419c11ef246502c986d13fc0c0f3dfa7817df0848c62bd1f",
+            "extract_dir": "NET-NES-v1.0.0-win-x86"
+        }
+    },
+    "bin": [
+        [
+            "NET-NES.exe",
+            "net-nes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NET-NES.exe",
+            "NET-NES"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/BotRandomness/NET-NES/releases/download/v$version/NET-NES-v$version-win-x64.zip",
+                "extract_dir": "NET-NES-v$version-win-x64"
+            },
+            "32bit": {
+                "url": "https://github.com/BotRandomness/NET-NES/releases/download/v$version/NET-NES-v$version-win-x86.zip",
+                "extract_dir": "NET-NES-v$version-win-x86"
+            }
+        }
+    }
+}

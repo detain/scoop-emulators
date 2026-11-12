@@ -1,0 +1,19 @@
+{
+    "version": "0.9.9.1",
+    "description": "Emulator for East German (GDR) home and small computers such as the KC85, Z1013 and LC-80",
+    "homepage": "http://www.jens-mueller.org/jkcemu/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "http://www.jens-mueller.org/jkcemu/download/jkcemu-0.9.9.1.jar#/jkcemu.jar",
+    "hash": "cb4ef8cfe7abd9af2fbf934f75b80b1f5d85846b8c4a76bf365c24dbba5eca1d",
+    "bin": "jkcemu.jar",
+    "checkver": {
+        "url": "http://www.jens-mueller.org/jkcemu/download.html",
+        "regex": "jkcemu-([\\d.]+)\\.jar"
+    },
+    "autoupdate": {
+        "url": "http://www.jens-mueller.org/jkcemu/download/jkcemu-$version.jar#/jkcemu.jar"
+    }
+}

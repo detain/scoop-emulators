@@ -1,0 +1,29 @@
+{
+    "version": "2.1.10",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in Java and Kotlin (bundled Java runtime)",
+    "homepage": "https://github.com/trekawek/coffee-gb",
+    "license": "MIT",
+    "url": "https://github.com/trekawek/coffee-gb/releases/download/coffee-gb-2.1.10/coffee-gb-2.1.10-windows-x86-64.msi",
+    "hash": "5c5cad123defb8bf2392b2ceb1bf5e5ad0fd74837e978ef13228de02956f26d2",
+    "extract_dir": "Coffee GB",
+    "bin": [
+        [
+            "Coffee GB.exe",
+            "coffee-gb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Coffee GB.exe",
+            "Coffee GB"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/trekawek/coffee-gb/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "coffee-gb-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/trekawek/coffee-gb/releases/download/coffee-gb-$version/coffee-gb-$version-windows-x86-64.msi"
+    }
+}

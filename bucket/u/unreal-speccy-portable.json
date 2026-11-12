@@ -1,0 +1,30 @@
+{
+    "version": "0.0.87",
+    "description": "Portable Sinclair ZX Spectrum emulator (Z80 128K Pentagon, AY/YM, Beta Disk, tape, snapshots)",
+    "homepage": "https://github.com/djdron/UnrealSpeccyP",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/djdron/UnrealSpeccyP/releases/download/v0.0.87/unreal-speccy-portable_0.0.87_win32_sdl2_gles2_angle.zip",
+    "hash": "12be4b23c45ff740652a858f525672a9a3b78e786096720214dcc6da27ec4214",
+    "extract_dir": "unreal-speccy-portable_0.0.87_win32_sdl2_gles2_angle",
+    "bin": [
+        [
+            "unreal_speccy_portable.exe",
+            "unreal-speccy-portable"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "unreal_speccy_portable.exe",
+            "Unreal Speccy Portable"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/djdron/UnrealSpeccyP/releases?per_page=100",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/v([\\d.]+)/unreal-speccy-portable_[\\d.]+_win32_sdl2_gles2_angle\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/djdron/UnrealSpeccyP/releases/download/v$version/unreal-speccy-portable_$version_win32_sdl2_gles2_angle.zip",
+        "extract_dir": "unreal-speccy-portable_$version_win32_sdl2_gles2_angle"
+    }
+}

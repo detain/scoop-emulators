@@ -1,0 +1,29 @@
+{
+    "version": "rr2-beta25",
+    "description": "Super Nintendo (bsnes core) and Game Boy (Gambatte core) rerecording emulator for tool-assisted speedruns",
+    "homepage": "https://lsnes.tasbot.net/",
+    "license": "GPL-3.0-only",
+    "url": "https://lsnes.tasbot.net/lsnes-rr2-beta25.7z",
+    "hash": "fded149d81387cc7664b199cea111714068888049a2555d4547f169c7a4e0655",
+    "bin": [
+        "lsnes-bsnes.exe",
+        "lsnes-gambatte.exe"
+    ],
+    "shortcuts": [
+        [
+            "lsnes-bsnes.exe",
+            "lsnes (bsnes)"
+        ],
+        [
+            "lsnes-gambatte.exe",
+            "lsnes (Gambatte)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://lsnes.tasbot.net/",
+        "regex": "href=\"/lsnes-(rr2-beta[\\d]+(?:b\\d+)?)\\.7z\""
+    },
+    "autoupdate": {
+        "url": "https://lsnes.tasbot.net/lsnes-$version.7z"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "version": "0.95B",
+    "description": "Sinclair ZX Spectrum 48/128/+2/+3, Pentagon and Scorpion emulator (open alpha)",
+    "homepage": "https://web.archive.org/web/20140828034542/http://www.indigobanquet.adsl24.co.uk/x128wip/x128wip.htm",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed. x128w.exe is the Windows (DirectX) build; x128.exe is the DOS build.",
+    "url": "https://web.archive.org/web/20140905062232id_/http://indigobanquet.adsl24.co.uk/x128wip/x128w_v095b_open_alpha.zip",
+    "hash": "d30b3bbf56bad317d294209628062c0e3cc083a5ce22085951fed2a3e0b3482f",
+    "bin": [
+        [
+            "x128w.exe",
+            "x128"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "x128w.exe",
+            "X128"
+        ]
+    ],
+    "persist": [
+        "SCRSHOT",
+        "X128.INI"
+    ]
+}

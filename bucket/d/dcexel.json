@@ -6,20 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcexel/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcexel/emulator_screen_01.jpg"
     ],
-    "version": "2012.04",
-    "description": "DCEXEL is an emulator for Exelvision 8bit computers: EXL100, Exeltel, Exetel VS, VX Exeltel Amper and Comtel. The Help File is in French.",
-    "homepage": "http://dcexel.free.fr",
+    "version": "2024.05.12",
+    "description": "Exelvision EXL100 / Exeltel emulator (French help file)",
+    "homepage": "http://dcexel.free.fr/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/dcexel/2012.04.7z",
-    "hash": "30856b4fcf32bf1e520b4d60892d1b081ec42f2f4b97050e4bd529bf437e702a",
-    "bin": [
-        "DC_EXEL.exe"
+    "url": "http://dcexel.free.fr/telechargement/prog/dcexel_20240512.zip",
+    "hash": "02710cc3168ca5f05007cfd1c95aa6923fafeffe74c8d47895a3f879e24606de",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\dcexel_*.exe\" | Rename-Item -NewName 'dcexel.exe'",
+        "Get-ChildItem \"$dir\\dcexel_*.html\" | Rename-Item -NewName 'dcexel.html'"
+    ],
+    "bin": "dcexel.exe",
+    "shortcuts": [
+        [
+            "dcexel.exe",
+            "DCEXEL"
+        ]
     ],
     "checkver": {
-        "url": "http://dcexel.free.fr/",
-        "regex": "<a href=\"DC_EXEL([^\"]*)\">"
+        "url": "http://dcexel.free.fr/telechargement/index.html",
+        "regex": "prog/dcexel_(\\d{4})(\\d{2})(\\d{2})\\.zip",
+        "replace": "${1}.${2}.${3}"
     },
     "autoupdate": {
-        "url": "http://dcexel.free.fr/"
+        "url": "http://dcexel.free.fr/telechargement/prog/dcexel_$cleanVersion.zip"
     }
 }

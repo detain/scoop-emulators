@@ -1,0 +1,19 @@
+{
+    "version": "1.4.43",
+    "description": "Multi-system emulator (NES, SNES, Game Boy, GBA, PC Engine, SMS/Game Gear, WonderSwan) with TAS editor, based on Mesen",
+    "homepage": "https://github.com/TheAnsarya/Nexen",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/TheAnsarya/Nexen/releases/download/v1.4.43/Nexen-Windows-x64-v1.4.43.exe#/Nexen.exe",
+    "hash": "b54b3d1543b2cbc2ff0f106bc384813f59d7b15972fd5be8b1fb2785730450f2",
+    "bin": "Nexen.exe",
+    "shortcuts": [
+        [
+            "Nexen.exe",
+            "Nexen"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/TheAnsarya/Nexen/releases/download/v$version/Nexen-Windows-x64-v$version.exe#/Nexen.exe"
+    }
+}

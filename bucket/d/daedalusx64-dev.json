@@ -1,0 +1,34 @@
+{
+    "version": "584-20261010-580c0c4",
+    "description": "Nintendo 64 emulator (development version)",
+    "homepage": "https://github.com/DaedalusX64/daedalus",
+    "license": "GPL-2.0-or-later",
+    "url": "https://nightly.link/DaedalusX64/daedalus/workflows/compilation/master/DaedalusX64-Win.zip",
+    "hash": "3819d26da911af1451570ca880b85b685d99eb7b2c4c1ff0424f52b81572c8a1",
+    "bin": [
+        [
+            "daedalus.exe",
+            "daedalusx64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "daedalus.exe",
+            "DaedalusX64 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/DaedalusX64/daedalus/actions/workflows/compilation.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/DaedalusX64/daedalus/workflows/compilation/master/DaedalusX64-Win.zip"
+    }
+}

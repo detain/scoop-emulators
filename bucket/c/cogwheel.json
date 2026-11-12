@@ -6,31 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cogwheel/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cogwheel/emulator_screen_01.jpg"
     ],
-    "version": "1.0.3.0beta3",
-    "description": "A software emulator primarily for 8-bit Sega hardware, such as the Sega Master System, Sega Game Gear and SG-1000. The ColecoVision is also supported.",
-    "homepage": "http://benryves.com/products/cogwheel",
+    "version": "1.0.4.0",
+    "description": "Sega Master System, Game Gear, SG-1000 and ColecoVision emulator",
+    "homepage": "https://benryves.com/products/cogwheel",
     "license": "MIT",
-    "url": "https://consolo.is.cc/emu/cogwheel/1.0.3.0beta3.7z",
-    "hash": "55399c38538200bfd1554f46b3e7a9c979737700083ab381a9539970a6b86691",
+    "notes": "Requires the .NET Framework and the SlimDX end-user runtime (https://slimdx.org).",
+    "url": "https://benryves.com/bin/cogwheel/download/1.0.4.0/Cogwheel.zip",
+    "hash": "2366bbaf9593eb2075747f43f765875a642adf00ef3b51d387dc601ede8edab3",
     "bin": [
-        "cogwheel.exe"
+        [
+            "Cogwheel Interface.exe",
+            "cogwheel"
+        ]
     ],
-    "architecture": {
-        "32bit": {
-            "url": "http://www.benryves.com/bin/cogwheel-win32.zip",
-            "hash": "sha256:61053e1cfb249f193fa6d3b7f2b9823f75d1d13c0a0a3b023cba5e5c5d56272d"
-        },
-        "64bit": {
-            "url": "http://www.benryves.com/bin/cogwheel-win64.zip",
-            "hash": "sha256:d9e8600c6482d2f3f3c3b2d8a1b0dc4365df387ad5a1a9a4b4ed4b4fddcfe25d"
-        }
-    },
-    "notes": "Cogwheel is a Sinclair ZX Spectrum emulator for Microsoft Windows.",
+    "shortcuts": [
+        [
+            "Cogwheel Interface.exe",
+            "Cogwheel"
+        ]
+    ],
     "checkver": {
-        "url": "http://benryves.com/products/cogwheel/latestversion.txt",
-        "regex": "Cogwheel Version (\\d+\\.\\d+\\.\\d+)"
+        "url": "https://benryves.com/products/cogwheel",
+        "regex": "/bin/cogwheel/download/([\\d.]+)/Cogwheel\\.zip"
     },
     "autoupdate": {
-        "url": "http://benryves.com/products/cogwheel/latestversion.txt"
+        "url": "https://benryves.com/bin/cogwheel/download/$version/Cogwheel.zip"
     }
 }

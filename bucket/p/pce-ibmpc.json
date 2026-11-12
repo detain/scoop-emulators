@@ -1,0 +1,36 @@
+{
+    "version": "0.2.2",
+    "description": "IBM PC and PC/XT emulator (PCE/ibmpc)",
+    "homepage": "http://www.hampa.ch/pce/pce-ibmpc.html",
+    "license": "GPL-2.0-only",
+    "notes": "Development snapshots of the whole PCE suite are available as the 'pce' manifest.",
+    "url": "http://www.hampa.ch/pub/pce/pce-0.2.2-ibmpc.zip",
+    "hash": "2ff001b00054dc47d2558a73dfb480a90c3a568f7b7a41939ab166f4407fa8e0",
+    "bin": [
+        [
+            "bin\\pce-ibmpc.exe",
+            "pceibmpc"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "pce-ibmpc.bat",
+            "PCE-IBMPC"
+        ]
+    ],
+    "persist": [
+        "pce-ibmpc.cfg",
+        "cas1.cas",
+        "fd0.img",
+        "fd1.pfdc",
+        "hd0.img",
+        "hd1.img"
+    ],
+    "checkver": {
+        "url": "http://www.hampa.ch/pce/download.html",
+        "regex": "pce-([\\d.]+)-ibmpc\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://www.hampa.ch/pub/pce/pce-$version-ibmpc.zip"
+    }
+}

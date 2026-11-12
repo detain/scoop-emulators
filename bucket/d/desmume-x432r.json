@@ -1,0 +1,62 @@
+{
+    "version": "2015-04-19",
+    "description": "Nintendo DS emulator, an unofficial DeSmuME build with high-resolution 3D rendering",
+    "homepage": "https://web.archive.org/web/20150920170430/http://shikaver01.webcrow.jp/desmume_x432r/index.html",
+    "license": "GPL-2.0-or-later",
+    "notes": "This emulator is no longer developed. The download is an Internet Archive snapshot of the original site.",
+    "architecture": {
+        "64bit": {
+            "url": "https://web.archive.org/web/20160303153408id_/http://shikaver01.webcrow.jp/desmume_x432r/DeSmuME%20X432R%202015-04-19-0.7z",
+            "hash": "0b6f335bba98ed0bebc8f7cd1ec8be3701db07b2149dc5a4aaf30a85fae03e30",
+            "bin": [
+                [
+                    "DeSmuME_X432R_x64.exe",
+                    "desmume-x432r"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DeSmuME_X432R_x64.exe",
+                    "DeSmuME X432R"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://web.archive.org/web/20160303153408id_/http://shikaver01.webcrow.jp/desmume_x432r/DeSmuME%20X432R%202015-04-19-0.7z",
+            "hash": "0b6f335bba98ed0bebc8f7cd1ec8be3701db07b2149dc5a4aaf30a85fae03e30",
+            "bin": [
+                [
+                    "DeSmuME_X432R_x86.exe",
+                    "desmume-x432r"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DeSmuME_X432R_x86.exe",
+                    "DeSmuME X432R"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "'DeSmuME_X432R_x64.ini', 'DeSmuME_X432R_x86.ini' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {",
+        "        New-Item \"$dir\\$_\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "persist": [
+        "AviFiles",
+        "Battery",
+        "Cheats",
+        "Firmware",
+        "Lua",
+        "Roms",
+        "Screenshots",
+        "SramImportExport",
+        "States",
+        "StateSlots",
+        "DeSmuME_X432R_x64.ini",
+        "DeSmuME_X432R_x86.ini"
+    ]
+}

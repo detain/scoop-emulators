@@ -1,0 +1,15 @@
+{
+    "version": "1.1.2",
+    "description": "Nintendo Entertainment System emulator and emulation library written in Rust",
+    "homepage": "https://github.com/josefwaller/yane",
+    "license": "MIT",
+    "notes": "Command line emulator: run 'yane ines path\\to\\rom.nes'. Configuration is stored in $env:USERPROFILE\\.yane",
+    "url": "https://github.com/josefwaller/yane/releases/download/v1.1.2/windows.zip",
+    "hash": "058d0556850c0632329a26287ce5b537c66c8abb167608f773f25fc200076b4c",
+    "extract_dir": "windows",
+    "bin": "yane.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/josefwaller/yane/releases/download/v$version/windows.zip"
+    }
+}

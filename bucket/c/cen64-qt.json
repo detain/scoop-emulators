@@ -1,0 +1,27 @@
+{
+    "version": "20241110",
+    "description": "Qt frontend for the CEN64 cycle-accurate Nintendo 64 emulator",
+    "homepage": "https://github.com/dh4/cen64-qt",
+    "license": "BSD-3-Clause",
+    "notes": "CEN64-Qt is only a launcher; point it at a cen64.exe (e.g. 'scoop install cen64') and a PIF ROM in its settings.",
+    "suggest": {
+        "CEN64": "cen64"
+    },
+    "url": "https://github.com/dh4/cen64-qt/releases/download/20241110-alpha/cen64-qt_win_20241110-alpha.zip",
+    "hash": "1963c21a70da85f470369a33a7a558c3fe7ed305a8b83a963484c4867d46fbdf",
+    "bin": "cen64-qt.exe",
+    "shortcuts": [
+        [
+            "cen64-qt.exe",
+            "CEN64-Qt"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/dh4/cen64-qt/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "(\\d{8})-alpha"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dh4/cen64-qt/releases/download/$version-alpha/cen64-qt_win_$version-alpha.zip"
+    }
+}

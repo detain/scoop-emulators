@@ -1,0 +1,40 @@
+{
+    "version": "5.0",
+    "description": "Arcade emulator (MAME fork) with advanced video support for TVs, arcade and fixed-frequency monitors; includes AdvanceMESS and AdvanceMENU",
+    "homepage": "https://www.advancemame.it/",
+    "license": {
+        "identifier": "Other",
+        "url": "https://github.com/amadvance/advancemame/blob/v5.0/COPYING"
+    },
+    "notes": [
+        "On Windows the configuration files (advmame.rc, advmess.rc, advmenu.rc) are created in the current working directory.",
+        "Set the 'dir_rom' option in advmame.rc to point to your ROMs."
+    ],
+    "url": "https://github.com/amadvance/advancemame/releases/download/v5.0/advancemame-5.0-windows-x86.zip",
+    "hash": "18ba2d37fa638eab85b41c782074b61658950a8a1e33f6050b533214545a57c7",
+    "bin": [
+        "advmame.exe",
+        "advmess.exe",
+        "advmenu.exe"
+    ],
+    "shortcuts": [
+        [
+            "advmame.exe",
+            "AdvanceMAME"
+        ],
+        [
+            "advmess.exe",
+            "AdvanceMESS"
+        ],
+        [
+            "advmenu.exe",
+            "AdvanceMENU"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/amadvance/advancemame"
+    },
+    "autoupdate": {
+        "url": "https://github.com/amadvance/advancemame/releases/download/v$version/advancemame-$version-windows-x86.zip"
+    }
+}

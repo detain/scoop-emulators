@@ -1,0 +1,22 @@
+{
+    "version": "1.2.0",
+    "description": "Portable CHIP-8 and Super-CHIP emulator written in C99",
+    "homepage": "https://github.com/AlfonsoJLuna/chip8swemu",
+    "license": "MIT",
+    "url": "https://github.com/AlfonsoJLuna/chip8swemu/releases/download/v1.2.0/chip8swemu-v1.2.0-win64.zip",
+    "hash": "9e781a3a9a409fc92396c93228097fe7b6b9977756705808c0f163c93a6c4aaa",
+    "extract_dir": "chip8swemu-v1.2.0-win64",
+    "bin": "chip8swemu.exe",
+    "shortcuts": [
+        [
+            "chip8swemu.exe",
+            "chip8swemu"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/AlfonsoJLuna/chip8swemu/releases/download/v$version/chip8swemu-v$version-win64.zip",
+        "extract_dir": "chip8swemu-v$version-win64"
+    }
+}

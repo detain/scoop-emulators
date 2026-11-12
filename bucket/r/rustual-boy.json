@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0-alpha",
+    "description": "Nintendo Virtual Boy emulator written in Rust (command line)",
+    "homepage": "https://github.com/emu-rs/rustual-boy",
+    "license": "MIT|Apache-2.0",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Usage: rustual-boy <rom file>"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/emu-rs/rustual-boy/releases/download/v0.2.0-alpha/rustual-boy-v0.2.0-alpha-x86_64-pc-windows-msvc.zip",
+            "hash": "b0e6e10463e8bcce3d8274795e3466de17e1261aaebef64033eb280f253c8e17"
+        },
+        "32bit": {
+            "url": "https://github.com/emu-rs/rustual-boy/releases/download/v0.2.0-alpha/rustual-boy-v0.2.0-alpha-i686-pc-windows-msvc.zip",
+            "hash": "018e121056c83550e3fc67b28fa371ae44f41cab37936393a4ededaa5f615a21"
+        }
+    },
+    "bin": [
+        [
+            "rustual-boy-cli.exe",
+            "rustual-boy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/emu-rs/rustual-boy/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/emu-rs/rustual-boy/releases/download/v$version/rustual-boy-v$version-x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/emu-rs/rustual-boy/releases/download/v$version/rustual-boy-v$version-i686-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

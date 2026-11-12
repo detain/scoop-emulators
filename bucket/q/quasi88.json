@@ -6,26 +6,60 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/quasi88/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/quasi88/emulator_screen_01.jpg"
     ],
-    "version": "0.6.4",
-    "description": "Quasi88 is an emulator for the NEC PC-8801 series of computers.",
-    "homepage": "http://www.eonet.ne.jp/~showtime/quasi88/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/quasi88/0.6.4.7z",
-    "hash": "264d03503dc22f0ba4cc1f64350aa3a18da46b8297561365150cd729446f9dce",
-    "bin": [
-        "quasi88"
-    ],
+    "version": "0.7.4",
+    "description": "NEC PC-8801 series emulator",
+    "homepage": "https://www.eonet.ne.jp/~showtime/quasi88/",
+    "license": "BSD-3-Clause",
+    "notes": "Place the PC-8801 ROM images (N88.ROM, N88SUB.ROM, etc.) in $persist_dir\\ROM",
     "architecture": {
         "64bit": {
-            "url": "https://consolo.is.cc/emu/quasi88/0.6.4.7z",
-            "hash": "264d03503dc22f0ba4cc1f64350aa3a18da46b8297561365150cd729446f9dce"
+            "url": "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.7.4-win32.zip",
+            "hash": "9ad632f8d5851a5e41b8534e386c27db838e4c0c0bb5ca11886acf1d32f07f2f",
+            "extract_dir": "quasi88-0.7.4-win32\\x64"
+        },
+        "32bit": {
+            "url": "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.7.4-win32.zip",
+            "hash": "9ad632f8d5851a5e41b8534e386c27db838e4c0c0bb5ca11886acf1d32f07f2f",
+            "extract_dir": "quasi88-0.7.4-win32\\x86"
         }
     },
+    "bin": [
+        [
+            "QUASI88.exe",
+            "quasi88"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "QUASI88.exe",
+            "QUASI88"
+        ]
+    ],
+    "persist": [
+        "ROM",
+        "DISK",
+        "TAPE",
+        "INI",
+        "SNAP",
+        "STATE",
+        "QUASI88.ini",
+        "KEYCONF.ini",
+        "TOUCHKEY.ini"
+    ],
     "checkver": {
-        "url": "http://www.eonet.ne.jp/~showtime/quasi88/",
-        "regex": "href=\"quasi88[\\d.]*\\.zip\">"
+        "url": "https://www.eonet.ne.jp/~showtime/quasi88/download.html",
+        "regex": "quasi88-([\\d.]+)-win32\\.zip"
     },
     "autoupdate": {
-        "url": "http://www.eonet.ne.jp/~showtime/quasi88/quasi88.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-$version-win32.zip",
+                "extract_dir": "quasi88-$version-win32\\x64"
+            },
+            "32bit": {
+                "url": "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-$version-win32.zip",
+                "extract_dir": "quasi88-$version-win32\\x86"
+            }
+        }
     }
 }

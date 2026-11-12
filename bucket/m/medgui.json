@@ -1,0 +1,29 @@
+{
+    "version": "1.99999",
+    "description": "Front end for the Mednafen multi-system emulator",
+    "homepage": "https://sourceforge.net/projects/medgui/",
+    "license": "Public Domain",
+    "notes": [
+        "MedGui is no longer developed; its successor is MedGui Reborn (scoop install medgui-reborn).",
+        "Mednafen is required and not included. Install it with: scoop install mednafen"
+    ],
+    "suggest": {
+        "Mednafen": "mednafen"
+    },
+    "url": "https://downloads.sourceforge.net/project/medgui/Executable/0.9.X%20Series/MedGui_v1.99999.zip",
+    "hash": "sha1:88660a8cce883d6c7457f5434fd28f849d0cd49b",
+    "bin": "MedGui.exe",
+    "shortcuts": [
+        [
+            "MedGui.exe",
+            "MedGui"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/medgui/rss?path=/Executable",
+        "regex": "MedGui_v([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/medgui/Executable/0.9.X%20Series/MedGui_v$version.zip"
+    }
+}

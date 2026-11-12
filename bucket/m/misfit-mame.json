@@ -1,0 +1,35 @@
+{
+    "version": "0.128b",
+    "description": "MAME 0.128 derivative with arcade ROM hacks, gambling games and simulations not in regular MAME",
+    "homepage": "https://misfitmame.mameworld.info/",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0128/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "url": "https://web.archive.org/web/20150810012036id_/http://misfitmame.mameworld.info/MIS128B.rar",
+    "hash": "f6f7ac0bfbbbcebfeb999c75dcc0d14225fa574f8bd9a90975d07ce1a6d0a678",
+    "bin": [
+        [
+            "mis.exe",
+            "misfitmame"
+        ],
+        [
+            "misui32.exe",
+            "misfitmameui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "misui32.exe",
+            "MisfitMAME"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "inp"
+    ]
+}

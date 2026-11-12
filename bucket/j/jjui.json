@@ -1,0 +1,41 @@
+{
+    "version": "2.1.7",
+    "description": "Simple frontend for MAME (arcade list and software lists)",
+    "homepage": "https://github.com/gdicnng/JJui",
+    "license": "GPL-2.0-only",
+    "notes": "JJui is a frontend only. On first launch select your MAME executable.",
+    "url": "https://github.com/gdicnng/JJui/releases/download/v2.1.7/JJui_v2.1.7_windows-2019_python_3.11_x64.7z",
+    "hash": "ecf110683f5fb9cfdbaa7436ea45947a90073018c73082577b686e9cacaeec3f",
+    "bin": [
+        [
+            "JJui\\JJui.exe",
+            "jjui"
+        ],
+        [
+            "JJui_sl\\JJui_sl.exe",
+            "jjui-sl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "JJui\\JJui.exe",
+            "JJui"
+        ],
+        [
+            "JJui_sl\\JJui_sl.exe",
+            "JJui (Software List)"
+        ]
+    ],
+    "persist": [
+        "JJui\\.jjui",
+        "JJui_sl\\.jjui"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/gdicnng/JJui/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/JJui_v[\\d.]+_(?<build>windows-[\\d]+_python_[\\d.]+)_x64\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://github.com/gdicnng/JJui/releases/download/v$version/JJui_v$version_$matchBuild_x64.7z"
+    }
+}

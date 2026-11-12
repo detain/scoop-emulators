@@ -1,0 +1,28 @@
+{
+    "version": "25.1",
+    "description": "Arcade ROM set manager for MAME and FBNeo: filter romsets, pick best games, install overlays",
+    "homepage": "https://cosmo0.github.io/arcade-manager/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/cosmo0/arcade-manager/releases/download/v25.1/ArcadeManager-win-25.1.0-win.zip",
+    "hash": "da4c0c41b126ec69ede39770b6d14d76a0e592f11ad1dec46052c25409bcef5a",
+    "bin": [
+        [
+            "ArcadeManager.exe",
+            "arcademanager"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ArcadeManager.exe",
+            "ArcadeManager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/cosmo0/arcade-manager/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/ArcadeManager-win-(?<file>[\\d.]+)-win\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/cosmo0/arcade-manager/releases/download/v$version/ArcadeManager-win-$matchFile-win.zip"
+    }
+}

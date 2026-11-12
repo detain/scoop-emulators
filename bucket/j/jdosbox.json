@@ -1,0 +1,34 @@
+{
+    "version": "0.74.28",
+    "description": "x86 PC / MS-DOS emulator written in Java, a port of DOSBox",
+    "homepage": "https://jdosbox.sourceforge.net/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a Java runtime."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/jdosbox/jDosbox/0.74.28/jdosbox.jar",
+    "hash": "sha1:d111b0c46e3d13f15953aacc873a3c52f263e346",
+    "bin": [
+        [
+            "jdosbox.jar",
+            "jdosbox"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "jdosbox.jar",
+            "jDosbox"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/jdosbox/rss?path=/jDosbox",
+        "regex": "jDosbox/([\\d.]+)/jdosbox\\.jar"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/jdosbox/jDosbox/$version/jdosbox.jar"
+    }
+}

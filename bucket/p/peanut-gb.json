@@ -1,0 +1,41 @@
+{
+    "version": "1.3.0",
+    "description": "Nintendo Game Boy emulator (SDL frontend for the Peanut-GB single-header library)",
+    "homepage": "https://projects.deltabeard.com/peanutgb/",
+    "license": "MIT",
+    "notes": "Usage: peanut-sdl <rom.gb> [save.sav]. A DMG/MGB boot ROM is optional.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/deltabeard/Peanut-GB/releases/download/v1.3.0/Windows7-x86_64-RelWithDebInfo-44d85f6.zip",
+            "hash": "56f589a86454de19073c5a3b849c573d3ff72fbd78fd99677bc09efe409a6608"
+        },
+        "32bit": {
+            "url": "https://github.com/deltabeard/Peanut-GB/releases/download/v1.3.0/WindowsXP-i386-RelWithDebInfo-44d85f6.zip",
+            "hash": "4583d15da7398477c338d474f3bb0ba24fb78531c72846a567dbb603821d7ea3"
+        }
+    },
+    "extract_dir": "RelWithDebInfo",
+    "bin": "peanut-sdl.exe",
+    "shortcuts": [
+        [
+            "peanut-sdl.exe",
+            "Peanut-GB"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/deltabeard/Peanut-GB/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+)/Windows7-x86_64-RelWithDebInfo-(?<commit>[0-9a-f]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/deltabeard/Peanut-GB/releases/download/v$version/Windows7-x86_64-RelWithDebInfo-$matchCommit.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/deltabeard/Peanut-GB/releases/download/v$version/WindowsXP-i386-RelWithDebInfo-$matchCommit.zip"
+            }
+        },
+        "extract_dir": "RelWithDebInfo"
+    }
+}

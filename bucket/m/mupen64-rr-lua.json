@@ -1,0 +1,42 @@
+{
+    "version": "1.5.0-8",
+    "description": "Nintendo 64 emulator for TASing with re-recording and Lua scripting (Mupen64-RR)",
+    "homepage": "https://mupen64.com/",
+    "license": "GPL-2.0-or-later",
+    "notes": "Video, audio, input and RSP plugins are not included; get them from the repack at https://mupen64.com/",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mupen64/mupen64-rr-lua/releases/download/1.5.0-8/mupen-windows-x64.zip",
+            "hash": "ec6bf9aa4e6b7c4f5b66dd3f08d02a5fd086d41af7566d9b35829f5dd71a7514"
+        },
+        "32bit": {
+            "url": "https://github.com/mupen64/mupen64-rr-lua/releases/download/1.5.0-8/mupen-windows-x86.zip",
+            "hash": "7d64e7c63a6828121e4289da699608c0ebca732f26c0d689d07533240d38e8fa"
+        }
+    },
+    "bin": [
+        [
+            "mupen64.exe",
+            "mupen64-rr-lua"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mupen64.exe",
+            "Mupen64-RR Lua"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mupen64/mupen64-rr-lua"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mupen64/mupen64-rr-lua/releases/download/$version/mupen-windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/mupen64/mupen64-rr-lua/releases/download/$version/mupen-windows-x86.zip"
+            }
+        }
+    }
+}

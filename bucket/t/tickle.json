@@ -1,0 +1,24 @@
+{
+    "version": "0.92",
+    "description": "Arcade emulator for classic Z80/8080 games such as Pac-Man, Galaxian and Space Invaders",
+    "homepage": "https://ascotti.org/programming/tickle/tickle.htm",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Place MAME-compatible ROM zips in $persist_dir\\roms and sound samples in $persist_dir\\samples."
+    ],
+    "url": "https://web.archive.org/web/20060713020755id_/http://www.ascotti.org:80/programming/tickle/zip/tickle_092_win32.zip",
+    "hash": "344c3a4be8b370c69bd3187b0f9759732ff615bb4780f27ce6985d4bcd49f10f",
+    "bin": "tickle.exe",
+    "shortcuts": [
+        [
+            "tickle.exe",
+            "Tickle"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "samples",
+        "tickle.ini"
+    ]
+}

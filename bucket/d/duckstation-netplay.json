@@ -1,0 +1,55 @@
+{
+    "version": "0.4",
+    "description": "Sony PlayStation emulator (DuckStation fork with rollback netplay)",
+    "homepage": "https://github.com/HeatXD/duckstation-netplay",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "DuckStation requires a PSX BIOS to function.",
+        "Place the BIOS file in $persist_dir\\bios"
+    ],
+    "url": "https://github.com/HeatXD/duckstation-netplay/releases/download/0.4/duckstation-netplay-win-31-07-23.zip",
+    "hash": "5730a819e483fd13d1ed9cc4170715df8b539432b7e2f2ee6c5cb4693e6de478",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.ini\")) {",
+        "    New-Item \"$dir\\settings.ini\" -Type File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
+        "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "duckstation-qt-x64-ReleaseLTCG.exe",
+            "duckstation-netplay"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "duckstation-qt-x64-ReleaseLTCG.exe",
+            "DuckStation Netplay"
+        ]
+    ],
+    "persist": [
+        "bios",
+        "cache",
+        "cheats",
+        "covers",
+        "dump",
+        "inputprofiles",
+        "memcards",
+        "savestates",
+        "screenshots",
+        "shaders",
+        "textures",
+        "portable.txt",
+        "settings.ini"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/HeatXD/duckstation-netplay/releases",
+        "script": "Write-Output $page",
+        "regex": "download/(?<version>[\\d.]+)/(?<file>duckstation-netplay-win[^/\"]+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/HeatXD/duckstation-netplay/releases/download/$version/$matchFile"
+    }
+}

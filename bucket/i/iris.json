@@ -1,0 +1,32 @@
+{
+    "version": "0.20-alpha",
+    "description": "Sony PlayStation 2 emulator",
+    "homepage": "https://github.com/allkern/iris",
+    "license": "MIT",
+    "notes": "A PlayStation 2 BIOS dump is required; select it in the settings.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/allkern/iris/releases/download/0.20-alpha/iris-0.20-alpha-windows.zip",
+            "hash": "d386fddc2e7d1bc7201596d64cffe3081025a5003119a44c743a957a70ed01ff"
+        }
+    },
+    "bin": "iris.exe",
+    "shortcuts": [
+        [
+            "iris.exe",
+            "Iris"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/allkern/iris/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?([\\d.]+(?:-[a-z]+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/allkern/iris/releases/download/$version/iris-$version-windows.zip"
+            }
+        }
+    }
+}

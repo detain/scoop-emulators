@@ -1,0 +1,58 @@
+{
+    "version": "1.2.38-1-g94068da",
+    "description": "Atari Lynx emulator, debugger and embedded MCP server (development version)",
+    "homepage": "https://github.com/drhelius/Gearlynx",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Gearlynx requires an Atari Lynx BIOS (lynxboot.img); load it from the Emulator menu.",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.38-1-g94068da-desktop-windows-x64.zip",
+            "hash": "661cd03b4da5cb0437aec37de62ddff07c2d744ce50b5df95899c87ad2b8ccf6"
+        },
+        "arm64": {
+            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.38-1-g94068da-desktop-windows-arm64.zip",
+            "hash": "79b2c66fcaebdf8c212512476c8968be11e73a9e647876253d13853c0cbdcf89"
+        }
+    },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "Gearlynx.exe",
+            "gearlynx-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Gearlynx.exe",
+            "Gearlynx (dev)"
+        ]
+    ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": {
+        "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main",
+        "regex": "Gearlynx-([\\d.]+(?:-\\d+-g[0-9a-f]+)?)-desktop-windows-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-$version-desktop-windows-arm64.zip"
+            }
+        }
+    }
+}

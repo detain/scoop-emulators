@@ -1,0 +1,22 @@
+{
+    "version": "2.3d",
+    "description": "Input plugin for Nintendo 64 emulators (Zilmar input spec) with Mempak, Rumble Pak and Transfer Pak support",
+    "homepage": "https://sourceforge.net/projects/nragev20/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This is an input plugin for N64 emulators (Project64, 1964, Apollo, etc.).",
+        "Copy NRage_Input_V2.dll from $dir into your emulator's plugin directory."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2010": "extras/vcredist2010"
+    },
+    "url": "https://downloads.sourceforge.net/project/nragev20/Nrage%20v2/Nrage%20Input%20v2.3/NRage_Input_V2.3d.zip",
+    "hash": "c140e115ced13badd0d116675e81f860254ca30d29bf6596b5429bf4608b31ca",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/nragev20/rss?path=/",
+        "regex": "Nrage%20Input%20v(?<dir>[\\d.]+)/NRage_Input_V(?<version>[\\d.]+[a-z]?)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/nragev20/Nrage%20v2/Nrage%20Input%20v$matchDir/NRage_Input_V$version.zip"
+    }
+}

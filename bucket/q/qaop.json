@@ -1,0 +1,27 @@
+{
+    "version": "1.4",
+    "description": "Sinclair ZX Spectrum 48K emulator written in Java",
+    "homepage": "http://wizard.ae.krakow.pl/~jb/qaop/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Requires a Java runtime that still includes the Applet API (Java 25 or older)."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://web.archive.org/web/20180422095754id_/http://wizard.ae.krakow.pl:80/~jb/qaop/qaop.jar",
+    "hash": "53b2f852cb8b36ec778e8dcf6419fc2229e8ce08a143c60bf9cc1b84fbb4cdb8",
+    "bin": [
+        [
+            "qaop.jar",
+            "qaop"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "qaop.jar",
+            "Qaop"
+        ]
+    ]
+}

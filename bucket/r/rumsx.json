@@ -1,0 +1,35 @@
+{
+    "version": "0.84",
+    "description": "Microsoft MSX, MSX2, MSX2+ and turbo R emulator",
+    "homepage": "https://www.lexlechz.at/en/software.html#RuMSX",
+    "license": "Freeware",
+    "notes": "RuMSX stores SRAM and user data in %APPDATA%\\Lex Lechz\\RuMSX.",
+    "url": "https://www.lexlechz.at/download/RUINSTAL.zip",
+    "hash": "9fd7ff48d6711445f2c16e2fbad93a8f0432e39bb8a0e972f798a1a3fdd03ae3",
+    "pre_install": [
+        "Expand-MsiArchive \"$dir\\RuMSX.msi\" \"$dir\" -Removal",
+        "if (Test-Path \"$dir\\APPDIR\") {",
+        "    Get-ChildItem \"$dir\\APPDIR\" | Move-Item -Destination \"$dir\" -Force",
+        "    Remove-Item \"$dir\\APPDIR\" -Recurse -Force",
+        "}"
+    ],
+    "bin": [
+        [
+            "MSX.exe",
+            "rumsx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MSX.exe",
+            "RuMSX"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.lexlechz.at/en/software.html",
+        "regex": "RuMSX, v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.lexlechz.at/download/RUINSTAL.zip"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "version": "2012-08-20",
+    "description": "NEC PC-9821 emulator based on QEMU (experimental)",
+    "homepage": "https://takeda-toshiya.my.coocan.jp/qemu/index.html",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Place the PC-98 ROM images (pc98font.bin, pc98bios.bin or pc98itf.bin, pc98ide.bin) and the YM2608 rhythm wav files in $dir",
+        "Start with: qemu-9821 -M pc98 (C-Bus only) or -M pc98pci (with PCI)"
+    ],
+    "url": "https://takeda-toshiya.my.coocan.jp/qemu/qemu-20120820-pc9821.zip",
+    "hash": "ac2e66adcc2b35b79905a6ee34abe37d33beb28b33b534fa00358ba92f6e2cda",
+    "extract_dir": "qemu-20120820-pc9821",
+    "bin": [
+        [
+            "qemu.exe",
+            "qemu-9821"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "qemu.exe",
+            "QEMU-9821"
+        ]
+    ],
+    "checkver": {
+        "url": "https://takeda-toshiya.my.coocan.jp/qemu/index.html",
+        "regex": "qemu-(?<year>\\d{4})(?<month>\\d{2})(?<day>\\d{2})-pc9821\\.zip",
+        "replace": "${year}-${month}-${day}"
+    },
+    "autoupdate": {
+        "url": "https://takeda-toshiya.my.coocan.jp/qemu/qemu-$matchYear$matchMonth$matchDay-pc9821.zip",
+        "extract_dir": "qemu-$matchYear$matchMonth$matchDay-pc9821"
+    }
+}

@@ -6,30 +6,64 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/winvice/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/winvice/emulator_screen_01.jpg"
     ],
-    "version": "r42517",
-    "description": "VICE is a program that emulates the Commodore C64, the Commodore C64DTV, the Commodore C128, the Commodore VIC20, almost all Commodore PET models, the Commodore PLUS4 and the Commodore CBM-II (aka C610).",
-    "homepage": "http://vice-emu.sourceforge.net",
+    "version": "3.10.0",
+    "description": "Commodore 8-bit emulator collection (C64, C64DTV, C128, VIC-20, PET, Plus/4, CBM-II), SDL2 version",
+    "homepage": "https://vice-emu.sourceforge.io/",
     "license": "GPL-2.0-or-later",
-    "url": "https://github.com/Zibri/VICE/releases/download/r42517/SDL2VICE-3.6.2-dev-win64-r42517.7z",
-    "hash": "d017e25afaa888ac680eb22878b662f549141a42bbbe3521030676df7bd6da56",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/VICE-Team/svn-mirror/releases/download/3.10.0/SDL2VICE-3.10-win64.zip",
+            "hash": "dfa7e0223ea1357bae988b5c88b332c3b8f80dc3c7a2b51233f50bab5263dca5",
+            "extract_dir": "SDL2VICE-3.10-win64"
+        }
+    },
     "bin": [
+        "c1541.exe",
+        "cartconv.exe",
+        "petcat.exe",
         "vsid.exe",
-        "x64.exe",
-        "x64sc.exe",
-        "x64dtv.exe",
         "x128.exe",
-        "xvic.exe",
-        "xpet.exe",
-        "xplus4.exe",
+        "x64dtv.exe",
+        "x64sc.exe",
         "xcbm2.exe",
         "xcbm5x0.exe",
-        "xscpu64.exe"
+        "xpet.exe",
+        "xplus4.exe",
+        "xscpu64.exe",
+        "xvic.exe"
+    ],
+    "shortcuts": [
+        [
+            "x64sc.exe",
+            "VICE C64 (SDL2)"
+        ],
+        [
+            "x128.exe",
+            "VICE C128 (SDL2)"
+        ],
+        [
+            "xvic.exe",
+            "VICE VIC-20 (SDL2)"
+        ],
+        [
+            "xplus4.exe",
+            "VICE Plus4 (SDL2)"
+        ],
+        [
+            "xpet.exe",
+            "VICE PET (SDL2)"
+        ]
     ],
     "checkver": {
-        "github": "https://github.com/Zibri/VICE/",
-        "regex": "/releases/tag/(r[\\d.]+)"
+        "github": "https://github.com/VICE-Team/svn-mirror",
+        "regex": "^([\\d.]+)$"
     },
     "autoupdate": {
-        "url": "https://github.com/Zibri/VICE/releases/download/$version/SDL2VICE-3.6.2-dev-win64-$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/VICE-Team/svn-mirror/releases/download/$version/SDL2VICE-$majorVersion.$minorVersion-win64.zip",
+                "extract_dir": "SDL2VICE-$majorVersion.$minorVersion-win64"
+            }
+        }
     }
 }

@@ -1,0 +1,43 @@
+{
+    "version": "20261014",
+    "description": "Nintendo GameCube and Wii emulator and debugger written in Rust",
+    "homepage": "https://github.com/ioncodes/gecko",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Data (config.toml, system files, Wii NAND) is stored relative to the working directory, or GECKO_DATA_DIR when set.",
+        "Optional DSP ROM dumps and a GameCube IPL can be imported via Settings -> Guided Setup."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ioncodes/gecko/releases/download/release/gecko-windows-x86_64.zip",
+            "hash": "7a57f14568f37785a6a1ef20024f56d9b2d1471f9d59eae5dd86745f92863d08"
+        },
+        "arm64": {
+            "url": "https://github.com/ioncodes/gecko/releases/download/release/gecko-windows-arm64.zip",
+            "hash": "4c577100223398369aa011bb24deae60577d7354b354dab0ba38352c47ef19cb"
+        }
+    },
+    "bin": "gecko.exe",
+    "shortcuts": [
+        [
+            "gecko.exe",
+            "Gecko"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/ioncodes/gecko/releases/tags/release",
+        "jsonpath": "$.published_at",
+        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})",
+        "replace": "${year}${month}${day}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ioncodes/gecko/releases/download/release/gecko-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ioncodes/gecko/releases/download/release/gecko-windows-arm64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.4.0",
+    "description": "Nintendo Game Boy and Game Boy Color emulator written in Rust",
+    "homepage": "https://xkev.io/gameboy",
+    "license": "MIT",
+    "url": "https://github.com/xkevio/kevboy/releases/download/v0.4.0/kevboy.exe",
+    "hash": "e22d4777e8cc4f8984193b8d80a58c8ccb623ae173aa5f4594e2ecc3e06285b7",
+    "bin": "kevboy.exe",
+    "shortcuts": [
+        [
+            "kevboy.exe",
+            "Kevboy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/xkevio/kevboy"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xkevio/kevboy/releases/download/v$version/kevboy.exe"
+    }
+}

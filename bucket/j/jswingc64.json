@@ -1,0 +1,25 @@
+{
+    "version": "1.10.4",
+    "description": "Commodore 64 emulator written in Java (Swing desktop version of JME C64)",
+    "homepage": "https://sourceforge.net/projects/jmec64/",
+    "license": "GPL-2.0-only",
+    "notes": "This emulator is no longer developed.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/jmec64/jswingC64/JSwing%20C64%20v1.10.4/JSwingC64-1.10.4.jar#/JSwingC64.jar",
+    "hash": "sha1:a6a9cb22f25758f11b8af60bbf369f5d292f66fe",
+    "bin": [
+        [
+            "JSwingC64.jar",
+            "jswingc64"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/jmec64/rss?path=/jswingC64",
+        "regex": "JSwingC64-([\\d.]+)\\.jar"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/jmec64/jswingC64/JSwing%20C64%20v$version/JSwingC64-$version.jar#/JSwingC64.jar"
+    }
+}

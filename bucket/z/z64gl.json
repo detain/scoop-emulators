@@ -1,0 +1,16 @@
+{
+    "version": "3",
+    "description": "Nintendo 64 low-level RDP graphics plugin for zilmar-spec emulators",
+    "homepage": "https://github.com/purplemarshmallow/z64",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is a graphics plugin, not a standalone emulator.",
+        "Copy z64gl.dll, z64gl.conf and SDL.dll from $dir into your emulator's plugin directory (e.g. Project64 Plugin\\GFX)."
+    ],
+    "url": "https://github.com/purplemarshmallow/z64/releases/download/3/z64gl.zip",
+    "hash": "a184e395f1dafa65ad14a07c543ed1dcca1a4cf7f25b17dad462161c2783a400",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/purplemarshmallow/z64/releases/download/$version/z64gl.zip"
+    }
+}

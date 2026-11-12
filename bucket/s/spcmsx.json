@@ -1,0 +1,32 @@
+{
+    "version": "2013.04.30",
+    "description": "MSX1 and ColecoVision emulator from the Soviet PC Sandbox project",
+    "homepage": "http://soviet-pc.narod.ru/sandbox_ru.html",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Place the BIOS files (msx.rom, coleco.rom) in $dir"
+    ],
+    "url": "http://soviet-pc.narod.ru/SPCMSX_300413.zip",
+    "hash": "a3cfb1646f9a85f2d728b74d3a057f8a3b806563c05a127cdc99253524cbeba1",
+    "bin": [
+        [
+            "SPCMSX.exe",
+            "spcmsx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SPCMSX.exe",
+            "SPC MSX"
+        ]
+    ],
+    "checkver": {
+        "url": "http://soviet-pc.narod.ru/sandbox_ru.html",
+        "regex": "SPCMSX_(?<day>\\d{2})(?<month>\\d{2})(?<year>\\d{2})\\.zip",
+        "replace": "20${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "http://soviet-pc.narod.ru/SPCMSX_$matchDay$matchMonth$matchYear.zip"
+    }
+}

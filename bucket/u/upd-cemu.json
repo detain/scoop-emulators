@@ -1,0 +1,35 @@
+{
+    "version": "beta2",
+    "description": "Graphic packs updater utility for the Cemu Nintendo Wii U emulator",
+    "homepage": "https://github.com/nosklo/cemu_utils",
+    "license": "LGPL-3.0-only",
+    "notes": "This utility is no longer developed. It is considered alpha software, back up your Cemu data before using it.",
+    "url": "https://github.com/nosklo/cemu_utils/releases/download/upd_cemu_beta2/upd_cemu_exe_beta2_win64.zip",
+    "hash": "542afb44a61f85aeef1b3eee0cf1e727ef5219c15f204a9437a8a89341f889bd",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\upd_cemu.json\")) {",
+        "    New-Item \"$dir\\upd_cemu.json\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "upd_cemu.exe",
+            "upd-cemu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "upd_cemu.exe",
+            "upd_cemu"
+        ]
+    ],
+    "persist": "upd_cemu.json",
+    "checkver": {
+        "github": "https://api.github.com/repos/nosklo/cemu_utils/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/upd_cemu_([\\w]+)/upd_cemu_exe_[\\w]+_win64\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nosklo/cemu_utils/releases/download/upd_cemu_$version/upd_cemu_exe_$version_win64.zip"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "version": "0.6",
+    "description": "Super Nintendo (SNES) emulator, a Snes9x fork with a rebuilt Qt front-end",
+    "homepage": "https://github.com/Deathsoul56/snes9xrd",
+    "license": {
+        "identifier": "Snes9x",
+        "url": "https://github.com/Deathsoul56/snes9xrd/blob/master/LICENSE"
+    },
+    "url": "https://github.com/Deathsoul56/snes9xrd/releases/download/V0.6/snes9xrd-v0.6-win64.zip",
+    "hash": "1d74e6a1ed58f0a4f80293c4c31b5172d48968d88dd0827ae44fa4a86dbfc4d2",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\snes9xrd-qt.conf\")) {",
+        "    New-Item \"$dir\\snes9xrd-qt.conf\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "snes9x-qt.exe",
+            "snes9xrd"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "snes9x-qt.exe",
+            "Snes9xrd"
+        ]
+    ],
+    "persist": "snes9xrd-qt.conf",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Deathsoul56/snes9xrd/releases/download/V$version/snes9xrd-v$version-win64.zip"
+    }
+}

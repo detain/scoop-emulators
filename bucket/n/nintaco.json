@@ -1,0 +1,27 @@
+{
+    "version": "2024.10.27",
+    "description": "Nintendo Entertainment System/Famicom/Dendy emulator written in Java",
+    "homepage": "https://nintaco.com/",
+    "license": "LGPL-2.1-only",
+    "notes": "Nintaco requires a Java runtime.",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://nintaco.com/Nintaco_bin_2024-10-27.zip",
+    "hash": "81b2d3a2c5a0bf5260176b961feb34bceb6cce5ab8e41c15d25590762b7252b3",
+    "bin": "Nintaco.jar",
+    "shortcuts": [
+        [
+            "Nintaco.jar",
+            "Nintaco"
+        ]
+    ],
+    "checkver": {
+        "url": "https://nintaco.com/",
+        "regex": "Nintaco_bin_(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\.zip",
+        "replace": "${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "https://nintaco.com/Nintaco_bin_$dashVersion.zip"
+    }
+}

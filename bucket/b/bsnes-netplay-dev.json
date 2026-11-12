@@ -1,0 +1,44 @@
+{
+    "version": "20260809-g516b748",
+    "description": "Nintendo SNES emulator, a bsnes build with GekkoNet rollback netplay (development version)",
+    "homepage": "https://github.com/HeatXD/bsnes-netplay",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/HeatXD/bsnes-netplay/releases/download/nightly/bsnes-windows.zip",
+    "hash": "8bed82acdb71e4c861eac88ab981720ac47f152b0c85a27c577fa54a43767fde",
+    "extract_dir": "bsnes-nightly",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\settings.bml\")) {",
+        "    New-Item \"$dir\\settings.bml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "bsnes.exe",
+            "bsnes-netplay-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bsnes.exe",
+            "bsnes-netplay (dev)"
+        ]
+    ],
+    "persist": [
+        "Firmware",
+        "settings.bml"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/HeatXD/bsnes-netplay/commits/nightly",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/HeatXD/bsnes-netplay/releases/download/nightly/bsnes-windows.zip",
+        "extract_dir": "bsnes-nightly"
+    }
+}

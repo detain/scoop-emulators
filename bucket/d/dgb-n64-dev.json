@@ -1,0 +1,35 @@
+{
+    "version": "1268-20261021-cd84737",
+    "description": "Experimental low-level Nintendo 64 emulator (development version)",
+    "homepage": "https://github.com/Dillonb/n64",
+    "license": "Unknown",
+    "notes": "Requires a GPU with Vulkan 1.1 support.",
+    "url": "https://nightly.link/Dillonb/n64/workflows/build/master/n64-windows.zip",
+    "hash": "99a8eb8dc9f16b6db0461489acb4897f20f5516fe0bec8f545a75f634dd86296",
+    "bin": [
+        [
+            "n64.exe",
+            "dgb-n64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "n64.exe",
+            "dgb-n64 (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Dillonb/n64/actions/workflows/build.yml/runs?branch=master&status=success&event=push",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/Dillonb/n64/workflows/build/master/n64-windows.zip"
+    }
+}

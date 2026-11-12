@@ -7,20 +7,35 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pcsp/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/PCSP-PSP-Emulator.jpg"
     ],
-    "version": "0.5.4",
-    "description": "PCSP is a PSP emulator that is only really able to run homebrew applications. PCSP does not have enough development to be able to run commercial roms.",
-    "homepage": "https://consolo.is.cc/emulator/pcsp",
+    "version": "0.5.5",
+    "description": "Sony PlayStation Portable emulator",
+    "homepage": "https://github.com/shadowsGarbage/pcsp",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/pcsp/0.5.4.7z",
-    "hash": "682c54a609c9eeb85457e3f4a190046bb4c22bbeb787d5592d1fe04b79e6a271",
-    "bin": [
-        "pcsp.exe"
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2010": "extras/vcredist2010"
+    },
+    "url": "https://github.com/shadowsGarbage/pcsp/releases/download/v.0.5.5/pcsp_v0.5.5.zip",
+    "hash": "52aa925fb9c4c337872b7c38c2690e614fe7f17a5cf930f5a6adfe7e3544bc99",
+    "extract_dir": "pcsp v0.5.5",
+    "bin": "pcsp.exe",
+    "shortcuts": [
+        [
+            "pcsp.exe",
+            "PCSP"
+        ]
+    ],
+    "persist": [
+        "ms0",
+        "decrypted",
+        "screenshots",
+        "settings.xml"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pcsp/",
-        "regex": "([\\d.]+)\\.7z"
+        "github": "https://github.com/shadowsGarbage/pcsp",
+        "regex": "v\\.([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pcsp/$version.7z"
+        "url": "https://github.com/shadowsGarbage/pcsp/releases/download/v.$version/pcsp_v$version.zip",
+        "extract_dir": "pcsp v$version"
     }
 }

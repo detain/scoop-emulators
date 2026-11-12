@@ -1,0 +1,27 @@
+{
+    "version": "1.4",
+    "description": "aMIC (Romanian 1983 Z80 computer) emulator written in Java",
+    "homepage": "https://code.google.com/archive/p/my-amic/",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Launch BASIC with G0800 or VIS-Z80 with G8000."
+    ],
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/my-amic/amic_emu.1.4.jar#/amic_emu.jar",
+    "hash": "1ac69ad21820d1d8e4e22f9694e8d4f3839d4ce6737d74c0051bb403c79e5e8b",
+    "bin": [
+        [
+            "amic_emu.jar",
+            "my-amic"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "amic_emu.jar",
+            "my-amic"
+        ]
+    ]
+}

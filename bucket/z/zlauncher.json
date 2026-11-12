@@ -1,0 +1,24 @@
+{
+    "version": "0.3",
+    "description": "Cemu launcher for The Legend of Zelda: Breath of the Wild with CPU affinity, speedhack and cutscene playback",
+    "homepage": "https://github.com/tkashkin/ZLauncher",
+    "license": "Unknown",
+    "notes": [
+        "This launcher is no longer developed.",
+        "Edit $persist_dir\\zlauncher.ini to set the Cemu and game paths."
+    ],
+    "url": "https://github.com/tkashkin/ZLauncher/releases/download/v0.3/ZLauncher.v0.3.zip",
+    "hash": "0f5dc8a5430bb700fe7d92828bd19adee0021c7cd604a0b101c0de43c20e74de",
+    "bin": "zlauncher.exe",
+    "shortcuts": [
+        [
+            "zlauncher.exe",
+            "ZLauncher"
+        ]
+    ],
+    "persist": "zlauncher.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tkashkin/ZLauncher/releases/download/v$version/ZLauncher.v$version.zip"
+    }
+}

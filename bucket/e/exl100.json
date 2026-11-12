@@ -1,0 +1,22 @@
+{
+    "version": "0.8d",
+    "description": "Exelvision EXL 100 computer emulator",
+    "homepage": "http://www.alternative-system.com/",
+    "license": "Freeware",
+    "notes": "This emulator is no longer developed. The required ROMs are included in the bios folder.",
+    "url": "http://www.alternative-system.com/files/exl100_emulator/binary/exl100_allegro_a08d.zip",
+    "hash": "9cf58b4c143ff104acdf575babc757df6aba23114e067582440f5f6ccb1ae192",
+    "extract_dir": "exl100_allegro",
+    "bin": [
+        [
+            "exl100_alleg.exe",
+            "exl100"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "exl100_alleg.exe",
+            "EXL100"
+        ]
+    ]
+}

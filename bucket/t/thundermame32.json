@@ -1,0 +1,31 @@
+{
+    "version": "0.106X-20190330",
+    "description": "Japanese MAME derivative (ThunderMAME32+) based on MAME 0.106",
+    "homepage": "http://www.geocities.co.jp/SiliconValley-Sunnyvale/8595/",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0160/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed; this is the last build archived from the original GeoCities site.",
+    "url": "https://web.archive.org/web/20190331021619id_/http://www.geocities.co.jp/SiliconValley-Sunnyvale/8595/tmamep.7z",
+    "hash": "9f9cbb601f2c5c909f2bfeadbf71300e7ab37c355c8bff3c8d1318f51ae5cfc6",
+    "bin": [
+        [
+            "ThunderMAME32+.exe",
+            "thundermame32"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ThunderMAME32+.exe",
+            "ThunderMAME32+"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ]
+}

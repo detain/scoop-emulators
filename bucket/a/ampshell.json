@@ -1,0 +1,23 @@
+{
+    "version": "1.3.8",
+    "description": "DOSBox front-end for Windows",
+    "homepage": "https://github.com/maximilien-noal/AmpShell",
+    "license": "GPL-3.0-or-later",
+    "notes": "This front-end is no longer developed. It requires DOSBox, which it locates automatically.",
+    "suggest": {
+        "DOSBox": "dosbox"
+    },
+    "url": "https://github.com/maximilien-noal/AmpShell/releases/download/v1.3.8/AmpShell.zip",
+    "hash": "15e39d607f429bbd7ac3a264c2b17b7edb696bf53ea0024d7a2d335f928bca77",
+    "bin": "AmpShell.exe",
+    "shortcuts": [
+        [
+            "AmpShell.exe",
+            "AmpShell"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/maximilien-noal/AmpShell/releases/download/v$version/AmpShell.zip"
+    }
+}

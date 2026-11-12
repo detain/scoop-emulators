@@ -1,0 +1,40 @@
+{
+    "version": "20261106-g1fa4d43",
+    "description": "Arachnoid video plugin for the Mupen64Plus Nintendo 64 emulator (development version)",
+    "homepage": "https://github.com/mupen64plus/mupen64plus-video-arachnoid",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "This is a video plugin, not a standalone emulator.",
+        "Copy the DLL files from $dir into your Mupen64Plus folder, or pass --gfx mupen64plus-video-arachnoid to mupen64plus-ui-console."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-video-arachnoid/releases/download/nightly-build/mupen64plus-video-arachnoid-msys2-mingw64-x64-g1fa4d43.zip",
+            "hash": "d668958303ec2928fdb9430fe1e07a9cba533b0330eb0ea13eb87becdccedbc0"
+        },
+        "32bit": {
+            "url": "https://github.com/mupen64plus/mupen64plus-video-arachnoid/releases/download/nightly-build/mupen64plus-video-arachnoid-msys2-mingw32-x86-g1fa4d43.zip",
+            "hash": "c7c0229d031092a448a3f7163c48773302bd17ff0861d91e2c9e5b73d85b79cd"
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/mupen64plus/mupen64plus-video-arachnoid/releases/tags/nightly-build",
+        "script": [
+            "$r = $page | ConvertFrom-Json",
+            "$a = $r.assets | Where-Object { $_.name -match '-msys2-mingw64-x64-g[0-9a-f]+\\.zip$' } | Select-Object -First 1",
+            "Write-Output \"$(([datetime]$a.updated_at).ToUniversalTime().ToString('yyyyMMdd')) $($a.name)\""
+        ],
+        "regex": "^(?<date>\\d{8}) .+-(?<commit>g[0-9a-f]+)\\.zip$",
+        "replace": "${date}-${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-video-arachnoid/releases/download/nightly-build/mupen64plus-video-arachnoid-msys2-mingw64-x64-$matchCommit.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/mupen64plus/mupen64plus-video-arachnoid/releases/download/nightly-build/mupen64plus-video-arachnoid-msys2-mingw32-x86-$matchCommit.zip"
+            }
+        }
+    }
+}

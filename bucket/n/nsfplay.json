@@ -1,0 +1,24 @@
+{
+    "version": "2.6",
+    "description": "Nintendo NES/Famicom NSF music player and Winamp plugin",
+    "homepage": "https://bbbradsmith.github.io/nsfplay/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/bbbradsmith/nsfplay/blob/master/readme.txt"
+    },
+    "url": "https://github.com/bbbradsmith/nsfplay/releases/download/2.6/nsfplay26.zip",
+    "hash": "19e277893ef22efbdb836af72a36e942f54daed7ca4be8bc4fdd35895d8eb393",
+    "bin": "nsfplay.exe",
+    "shortcuts": [
+        [
+            "nsfplay.exe",
+            "NSFPlay"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/bbbradsmith/nsfplay"
+    },
+    "autoupdate": {
+        "url": "https://github.com/bbbradsmith/nsfplay/releases/download/$version/nsfplay$cleanVersion.zip"
+    }
+}

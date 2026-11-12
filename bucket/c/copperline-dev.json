@@ -1,0 +1,65 @@
+{
+    "version": "2112-20261111-a14e9ee",
+    "description": "Commodore Amiga (OCS/ECS/AGA) cycle-driven emulator written in Rust (development version)",
+    "homepage": "https://github.com/CopperlineHQ/Copperline",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Boots the bundled AROS Kickstart replacement by default. Settings and quick-saves are kept in %USERPROFILE%\\Documents\\Copperline.",
+        "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 90 days after the last successful build."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-x64.zip",
+            "hash": "441d16757d224654757a13464d14523acd17f5465ebad1cafdd8d11671ccf15e"
+        },
+        "arm64": {
+            "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-arm64.zip",
+            "hash": "8930e85165a9c1a33c392b68411dec78a9cdb2e0800c1e815aa84271251f4c05"
+        }
+    },
+    "pre_install": [
+        "$zip = Get-ChildItem \"$dir\\Copperline-*.zip\" | Select-Object -First 1",
+        "Expand-7zipArchive $zip.FullName \"$dir\" -ExtractDir $zip.BaseName -Removal"
+    ],
+    "bin": [
+        [
+            "copperline.exe",
+            "copperline-dev"
+        ],
+        [
+            "copperline-ctl.exe",
+            "copperline-ctl-dev"
+        ],
+        [
+            "copperline-import-uae.exe",
+            "copperline-import-uae-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "copperline.exe",
+            "Copperline (dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/CopperlineHQ/Copperline/actions/workflows/windows.yml/runs?branch=main&event=push&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-arm64.zip"
+            }
+        }
+    }
+}

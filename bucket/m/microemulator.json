@@ -1,0 +1,28 @@
+{
+    "version": "2.0.4",
+    "description": "Java ME (J2ME MIDP/CLDC) mobile phone emulator written in pure Java",
+    "homepage": "http://www.microemu.org/",
+    "license": "LGPL-2.1-only|Apache-2.0",
+    "notes": [
+        "This emulator is no longer developed.",
+        "A Java runtime is required. Run a MIDlet with: microemulator <file.jad>"
+    ],
+    "suggest": {
+        "JRE": [
+            "java/openjdk",
+            "java/temurin-jre"
+        ]
+    },
+    "url": "https://downloads.sourceforge.net/project/microemulator/microemulator/2.0.4/microemulator-2.0.4.zip",
+    "hash": "sha1:07a3ede56590edf21a68af2a8174d505e3b2d8e4",
+    "extract_dir": "microemulator-2.0.4",
+    "bin": "microemulator.jar",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/microemulator/rss?path=/microemulator",
+        "regex": "microemulator-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/microemulator/microemulator/$version/microemulator-$version.zip",
+        "extract_dir": "microemulator-$version"
+    }
+}

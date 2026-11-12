@@ -6,20 +6,39 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc6001vx/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc6001vx/emulator_screen_01.jpg"
     ],
-    "version": "2.30.0",
-    "description": "PC6001VX is an NEC PC-6000 series emulator based on PC6001V by Yumitaro. NOTE: Website is in Japanese.",
-    "homepage": "http://eighttails.seesaa.net",
-    "license": "MIT",
-    "url": "https://consolo.is.cc/emu/pc6001vx/2.30.0.7z",
-    "hash": "f3da43e1b3a69101842a10eb81fd0de3c8c3167fda77032a22e1d2843f1ace45",
-    "bin": [
-        "PC6001VX.exe"
+    "version": "4.6.0",
+    "description": "NEC PC-6001 series emulator (Qt port of PC6001V)",
+    "homepage": "https://github.com/eighttails/PC6001VX",
+    "license": "LGPL-2.1-only",
+    "notes": "Place the PC-6001 series ROM files in $persist_dir\\rom (a built-in compatible ROM can be enabled in the settings)",
+    "url": "https://github.com/eighttails/PC6001VX/releases/download/v4.6.0/PC6001VX_4.6.0_win_64bit.zip",
+    "hash": "23556ec965897045c8826e95403f41f396de80a6571885e11bd4f0369ec86609",
+    "extract_dir": "PC6001VX_4.6.0_win_64bit",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\pc6001v.ini\")) {",
+        "    New-Item \"$dir\\pc6001v.ini\" -Type File | Out-Null",
+        "}"
     ],
-    "checkver": {
-        "url": "http://eighttails.seesaa.net/",
-        "regex": "Download\\s*PC6001VX\\s*(\\d+\\.\\d+\\.\\d+)"
-    },
+    "bin": "PC6001VX.exe",
+    "shortcuts": [
+        [
+            "PC6001VX.exe",
+            "PC6001VX"
+        ]
+    ],
+    "persist": [
+        "rom",
+        "tape",
+        "disk",
+        "extrom",
+        "img",
+        "wave",
+        "doko",
+        "pc6001v.ini"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "http://eighttails.seesaa.net/"
+        "url": "https://github.com/eighttails/PC6001VX/releases/download/v$version/PC6001VX_$version_win_64bit.zip",
+        "extract_dir": "PC6001VX_$version_win_64bit"
     }
 }

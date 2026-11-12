@@ -1,0 +1,53 @@
+{
+    "version": "20261111-gf929cbd",
+    "description": "Nintendo DS/DSi emulator, a melonDS fork with built-in RetroAchievements support (development version)",
+    "homepage": "https://github.com/ppkkkkk/melonRA",
+    "license": "GPL-3.0-or-later",
+    "notes": [
+        "Portable mode is enabled: settings and data are kept in $persist_dir\\portable",
+        "BIOS/firmware dumps are optional; place them in $persist_dir\\portable if needed."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ppkkkkk/melonRA/releases/download/nightly/melonRA-windows-x86_64.zip",
+            "hash": "8408ae1ee22f4e1252b126ba1cbe661c55db2b7b4ca0b1eb57499555216eb26c"
+        },
+        "arm64": {
+            "url": "https://github.com/ppkkkkk/melonRA/releases/download/nightly/melonRA-windows-arm64.zip",
+            "hash": "bf31b0db606b6d478c0babe77116ae440ec91b882c6365fc385efdb051dfa9c7"
+        }
+    },
+    "bin": [
+        [
+            "melonRA.exe",
+            "melonra-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "melonRA.exe",
+            "melonRA (dev)"
+        ]
+    ],
+    "persist": "portable",
+    "checkver": {
+        "github": "https://api.github.com/repos/ppkkkkk/melonRA/commits/nightly",
+        "script": [
+            "$sha = json_path $page $.sha",
+            "$date = json_path $page $.commit.committer.date",
+            "Write-Output \"$date $sha\""
+        ],
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}-g${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ppkkkkk/melonRA/releases/download/nightly/melonRA-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ppkkkkk/melonRA/releases/download/nightly/melonRA-windows-arm64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "1.6.0",
+    "description": "Sega Genesis / Mega Drive / Master System / Game Gear emulator (basic Win32 SDL port of Genesis Plus GX)",
+    "homepage": "https://code.google.com/archive/p/genplus-gx",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/ekeeke/Genesis-Plus-GX/blob/master/LICENSE.txt"
+    },
+    "notes": [
+        "This Windows port is no longer developed and was intended for testing purposes only (keyboard only, no joystick support).",
+        "For an up-to-date Genesis Plus GX use the libretro core in RetroArch."
+    ],
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/genplus-gx/genplus-sdl-1.6.0.zip",
+    "hash": "6f12a73aafde1bf03f23b0e1eed0b1871d4654188c717ad8fed3c29dd1a46045",
+    "bin": [
+        [
+            "gen_sdl.exe",
+            "genesis-plus-sdl"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gen_sdl.exe",
+            "Genesis Plus SDL"
+        ]
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "version": "1.6.4",
+    "description": "Nintendo 64 emulator, a continuation of the original Project64 1.6 source",
+    "homepage": "https://www.project64-legacy.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/pj64team/Project64-Legacy/blob/master/About.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/pj64team/Project64-Legacy/releases/download/Project64-1.6.4/Project64.Legacy.v1.6.4.The.End.-.2024.06.22.zip",
+    "hash": "3fcc9c248d5d87969ab85464b71b4aae68b414eda97d36538582db0dff763eeb",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\Project64_*.exe\" | Rename-Item -NewName 'Project64.exe'",
+        "if (!(Test-Path \"$persist_dir\\Config\\Project64.apps\")) {",
+        "    New-Item \"$dir\\Config\\Project64.apps\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "Project64.exe",
+            "project64-legacy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Project64.exe",
+            "Project64 Legacy"
+        ]
+    ],
+    "persist": [
+        "Save",
+        "Screenshots",
+        "Config\\Project64.apps"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/pj64team/Project64-Legacy/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/Project64-(?<version>[\\d.]+)/(?<file>[^/\"]+\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pj64team/Project64-Legacy/releases/download/Project64-$version/$matchFile"
+    }
+}

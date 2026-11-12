@@ -1,0 +1,40 @@
+{
+    "version": "1.0",
+    "description": "Sega Dreamcast, Naomi, Naomi 2 and Atomiswave emulator derived from Flycast",
+    "homepage": "https://github.com/OrangeFox86/Hollycast",
+    "license": "GPL-2.0-only",
+    "notes": "Place the Dreamcast BIOS files (dc_boot.bin, dc_flash.bin) and Naomi/Atomiswave BIOS zips in $persist_dir\\data",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/OrangeFox86/Hollycast/releases/download/v1.0/Hollycast-v1.0-windows-x64.zip",
+            "hash": "7b48fc848ef3dd7e1b72d0eaf1fee09615b6a8b10172951328ca73c117656caa",
+            "extract_dir": "Hollycast-v1.0-windows-x64"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\emu.cfg\")) {",
+        "    New-Item \"$dir\\emu.cfg\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "Hollycast.exe",
+    "shortcuts": [
+        [
+            "Hollycast.exe",
+            "Hollycast"
+        ]
+    ],
+    "persist": [
+        "emu.cfg",
+        "data",
+        "mappings"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/OrangeFox86/Hollycast/releases/download/v$version/Hollycast-v$version-windows-x64.zip",
+                "extract_dir": "Hollycast-v$version-windows-x64"
+            }
+        }
+    }
+}

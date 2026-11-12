@@ -1,0 +1,59 @@
+{
+    "version": "0.139",
+    "description": "Arcade emulator, unofficial MAMEUI build with hiscore saving and extra features",
+    "homepage": "http://www.mamext.net/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://raw.githubusercontent.com/mamedev/mame/mame0139/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "architecture": {
+        "64bit": {
+            "url": "https://web.archive.org/web/20111006190020id_/http://www.mamext.net/xt/mame/MameXT64_0.139_(Two_in_One).exe#/dl.7z",
+            "hash": "a173bdc19595ed4234f2c60880e6ea20cdcc482de03b17b9397b3b5e93cf73ec",
+            "extract_dir": "MameXT64_0.139_(Two_in_One)",
+            "bin": [
+                [
+                    "MameXT64.exe",
+                    "mamext"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "MameXT64.exe",
+                    "MAMEXT"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://web.archive.org/web/20111006173256id_/http://www.mamext.net/xt/mame/MameXT32_0.139_(Two_in_One).exe#/dl.7z",
+            "hash": "ae155906709e670936b8a4e7b6ff25780db4290d772ac666d8c60f43c859d91f",
+            "extract_dir": "MameXT32_0.139_(Two_in_One)",
+            "bin": [
+                [
+                    "MameXT32.exe",
+                    "mamext"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "MameXT32.exe",
+                    "MAMEXT"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "roms",
+        "samples",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap",
+        "ini",
+        "inp",
+        "memcard",
+        "diff",
+        "scores"
+    ]
+}

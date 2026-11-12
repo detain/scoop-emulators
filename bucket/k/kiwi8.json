@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "description": "CHIP-8 interpreter with a graphical user interface",
+    "homepage": "https://github.com/Diesel-Net/kiwi-8",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Diesel-Net/kiwi-8/releases/download/2.0.0/Kiwi8-2.0.0-Windows-x64.zip",
+            "hash": "57afe085e21b97828523b9f00db9d6733050bf7d624b9cae2938f0c0f1dbe893"
+        },
+        "arm64": {
+            "url": "https://github.com/Diesel-Net/kiwi-8/releases/download/2.0.0/Kiwi8-2.0.0-Windows-arm64.zip",
+            "hash": "b8e5dea3e88f8cb999d26925d546d4ede57f09c85c7b8d9ed8c7fb7f2a1695c2"
+        }
+    },
+    "bin": "Kiwi8.exe",
+    "shortcuts": [
+        [
+            "Kiwi8.exe",
+            "Kiwi8"
+        ]
+    ],
+    "persist": "profiles.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Diesel-Net/kiwi-8/releases/download/$version/Kiwi8-$version-Windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Diesel-Net/kiwi-8/releases/download/$version/Kiwi8-$version-Windows-arm64.zip"
+            }
+        }
+    }
+}

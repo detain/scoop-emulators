@@ -1,0 +1,42 @@
+{
+    "version": "0.1-beta",
+    "description": "Arcade emulator (MAME 0.139) with re-recording features for tool-assisted speedruns",
+    "homepage": "https://github.com/TASEmulators/mame-rr",
+    "license": {
+        "identifier": "MAME",
+        "url": "https://github.com/TASEmulators/mame-rr/blob/master/docs/license.txt"
+    },
+    "notes": "This emulator is no longer developed.",
+    "url": "https://github.com/TASEmulators/mame-rr/releases/download/v0.1-beta/mame-rr-0.139-v0.1-beta.zip",
+    "hash": "562e94474bafcb73349da1e446ba13bba1d9302bcebcd5b517ec7eddc78b0dea",
+    "extract_dir": "mame-rr-0.139-v0.1-beta",
+    "bin": [
+        [
+            "mame-rr.exe",
+            "mame-rr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mame-rr.exe",
+            "MAME Rerecording"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "inp",
+        "cfg",
+        "nvram",
+        "sta",
+        "snap"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/TASEmulators/mame-rr/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<version>[\\d.]+-[a-z]+)/mame-rr-(?<base>[\\d.]+)-v[\\d.]+-[a-z]+\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/TASEmulators/mame-rr/releases/download/v$version/mame-rr-$matchBase-v$version.zip",
+        "extract_dir": "mame-rr-$matchBase-v$version"
+    }
+}

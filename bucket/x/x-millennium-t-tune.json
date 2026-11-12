@@ -1,0 +1,32 @@
+{
+    "version": "0.26-tt1.43",
+    "description": "Sharp X1 series emulator (tuned build of X millennium with cassette, EMM and HDD image support)",
+    "homepage": "http://x1center.org/emu.html",
+    "license": "Freeware",
+    "notes": [
+        "This emulator is no longer developed.",
+        "Optional X1 ROM images (IPLROM.X1, IPLROM.X1T, FNT0808.X1, FNT0816.X1, FNT1616.X1) go next to Xmillennium.exe in $dir"
+    ],
+    "url": "http://x1center.org/emu/xmil026_tt143.ZIP",
+    "hash": "146c72fb1c89975cf3601774b7436f826c9c49b43b5404d55cc6403f8f6088b4",
+    "bin": [
+        [
+            "Xmillennium.exe",
+            "xmillennium-t-tune"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Xmillennium.exe",
+            "X millennium T-tune"
+        ]
+    ],
+    "checkver": {
+        "url": "http://x1center.org/emu.html",
+        "regex": "emu/xmil(?<xmil>(?<va>\\d)(?<vb>\\d{2}))_tt(?<tt>(?<vc>\\d)(?<vd>\\d{2}))\\.ZIP",
+        "replace": "${va}.${vb}-tt${vc}.${vd}"
+    },
+    "autoupdate": {
+        "url": "http://x1center.org/emu/xmil$matchXmil_tt$matchTt.ZIP"
+    }
+}

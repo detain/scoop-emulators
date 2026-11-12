@@ -1,0 +1,27 @@
+{
+    "version": "0.321",
+    "description": "Super Nintendo (SNES) emulator by the original ZSNES developers, rewritten from scratch with a GPU-powered PPU",
+    "homepage": "https://www.zsnes.com/",
+    "license": "Freeware",
+    "url": "https://www.zsnes.com/files/SuperZSNES_v0.321.zip",
+    "hash": "e4170b6721fed02701be4c167b3df85a92d27bdfabc8c889166f8baabd332af3",
+    "bin": [
+        [
+            "SUPERZSNES.exe",
+            "superzsnes"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SUPERZSNES.exe",
+            "SuperZSNES"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.zsnes.com/",
+        "regex": "SuperZSNES_v([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://www.zsnes.com/files/SuperZSNES_v$version.zip"
+    }
+}

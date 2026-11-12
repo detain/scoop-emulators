@@ -1,0 +1,34 @@
+{
+    "version": "1.1.0",
+    "description": "Nintendo 3DS emulator, a fork of Azahar focused on game compatibility",
+    "homepage": "https://github.com/GamesExObscura/AzaharX",
+    "license": "GPL-2.0-or-later",
+    "notes": "Portable mode is enabled: user data is kept in $persist_dir\\user",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GamesExObscura/AzaharX/releases/download/v1.1.0/AzaharX-v1.1.0-win64.zip",
+            "hash": "13fc1935c7659c955065ddebb0fa971a60b407c6b0eda0433da230abd804edfc",
+            "extract_dir": "AzaharX-v1.1.0"
+        }
+    },
+    "bin": "azaharx.exe",
+    "shortcuts": [
+        [
+            "azaharx.exe",
+            "AzaharX"
+        ]
+    ],
+    "persist": "user",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GamesExObscura/AzaharX/releases/download/v$version/AzaharX-v$version-win64.zip",
+                "extract_dir": "AzaharX-v$version"
+            }
+        }
+    }
+}

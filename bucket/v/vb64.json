@@ -6,20 +6,33 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/vb64/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vb64/emulator_screen_01.jpg"
     ],
-    "version": "2.0",
-    "description": "VB64 is a Commodore 64 emulator written in VisualBasic.",
-    "homepage": "http://vb64.emuunlim.com/",
+    "version": "2.1",
+    "description": "Commodore 64 emulator written in Visual Basic",
+    "homepage": "https://vb64.emuunlim.com/",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/vb64/2.0.7z",
-    "hash": "0255412023c9058fe7df1389e04bd184cb3e1d97d65aa2ed5bbe071026220043",
+    "notes": "VB64 2.7 is only offered as a VB6 setup program; this manifest uses the last portable build (2.1).",
+    "url": "http://vb64.emuunlim.com/files/vb64v21.zip",
+    "hash": "278b29062673c1242839429a33618d9314737a6974c9a7fdc1df8533f66e1c58",
+    "extract_dir": "vb64",
     "bin": [
-        "vb64.exe"
+        [
+            "vb64.exe",
+            "vb64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "vb64.exe",
+            "VB64"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/vb64/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://vb64.emuunlim.com/download.html",
+        "regex": "files/vb64v(?<file>\\d+)\\.zip\">Download VB64 V(?<version>[\\d.]+)</a>",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vb64/$version.7z"
+        "url": "http://vb64.emuunlim.com/files/vb64v$matchFile.zip",
+        "extract_dir": "vb64"
     }
 }

@@ -1,0 +1,30 @@
+{
+    "version": "1.9",
+    "description": "Frontend and DOS application launcher for DOSBox",
+    "homepage": "https://loonies.narod.ru/dosshell.htm",
+    "license": "Freeware",
+    "notes": "Set the DOSBox folder in Edit -> Preferences.",
+    "suggest": {
+        "DOSBox": "dosbox"
+    },
+    "url": "https://loonies.narod.ru/releases/dosshell-portable.zip",
+    "hash": "be146deb52a208b3ce765e93918781e835eb05971b8c07157c7dcab6dead6874",
+    "bin": "DOSShell.exe",
+    "shortcuts": [
+        [
+            "DOSShell.exe",
+            "DOSShell"
+        ]
+    ],
+    "persist": [
+        "DOSShell.ini",
+        "apps.txt"
+    ],
+    "checkver": {
+        "url": "https://loonies.narod.ru/dosshell.htm",
+        "regex": "Version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://loonies.narod.ru/releases/dosshell-portable.zip"
+    }
+}

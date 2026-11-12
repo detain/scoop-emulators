@@ -6,25 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/reddragon/emulator_screen_01.jpg"
     ],
     "version": "0.38",
-    "description": "RedDragon is a Dragon 32/64 and Tandy CoCo emulator for Windows.",
-    "homepage": "http://www.vtemulation.net/emulators/windows/vb.php",
+    "description": "Nintendo Virtual Boy emulator based on Reality Boy",
+    "homepage": "https://web.archive.org/web/2006/http://www.vtemulation.net/emulators/windows/vb.php",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/reddragon/0.38.7z",
-    "hash": "b3b677d352570dea881ce5cbd51f13d3deda9fc8a55376335f7d9f2ce8ff8579",
+    "url": "https://web.archive.org/web/20060512062108id_/http://www.vtemulation.net:80/emulators/vb/reddragon-0.38.zip",
+    "hash": "e8302f60248b0e49c3c449c47292fcc75df37a6c585096088fa83040ad70f68d",
     "bin": [
-        "redragon.exe"
+        [
+            "rdragon.exe",
+            "reddragon"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/reddragon/0.38.7z",
-            "hash": "b3b677d352570dea881ce5cbd51f13d3deda9fc8a55376335f7d9f2ce8ff8579"
-        }
-    },
-    "checkver": {
-        "url": "http://www.vtemulation.net/files/redragon/latest.txt",
-        "regex": "Version ([0-9\\.]+)"
-    },
-    "autoupdate": {
-        "url": "http://www.vtemulation.net/files/redragon/redragon.zip"
-    }
+    "shortcuts": [
+        [
+            "rdragon.exe",
+            "Red Dragon"
+        ]
+    ]
 }

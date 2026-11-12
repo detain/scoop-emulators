@@ -1,0 +1,35 @@
+{
+    "version": "5.0.0",
+    "description": "Microsoft Xbox 360 game manager and launcher for the Xenia emulator",
+    "homepage": "https://github.com/xenia-manager/xenia-manager",
+    "license": "BSD-3-Clause",
+    "url": "https://github.com/xenia-manager/xenia-manager/releases/download/5.0.0/xenia_manager.zip",
+    "hash": "763ea989fdcc52b2b3c21595f6e568dfa2f5bc8b4eadbbdd418befdad30f4836",
+    "bin": [
+        [
+            "XeniaManager.exe",
+            "xenia-manager"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "XeniaManager.exe",
+            "Xenia Manager"
+        ],
+        [
+            "XeniaManager.BigScreen.exe",
+            "Xenia Manager (Big Screen)"
+        ]
+    ],
+    "persist": [
+        "Backup",
+        "Config",
+        "Emulators",
+        "GameData",
+        "Games"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/xenia-manager/xenia-manager/releases/download/$version/xenia_manager.zip"
+    }
+}

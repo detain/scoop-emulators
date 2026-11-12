@@ -1,0 +1,31 @@
+{
+    "version": "717",
+    "description": "Nintendo Game Boy and Game Boy Color emulator, a Gambatte fork for speedrunning",
+    "homepage": "https://github.com/pokemon-speedrunning/gambatte-speedrun",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "Requires Game Boy / Game Boy Color boot ROMs, selected on first launch.",
+        "This is the non-PSR build; Pokemon speedrunners submitting to the PSR leaderboards should use the Game Boy Player platform."
+    ],
+    "url": "https://github.com/pokemon-speedrunning/gambatte-speedrun/releases/download/r717/gambatte-speedrun-r717-theothers.zip",
+    "hash": "54890763a6e91ffa9dd77247c282ef58c2107cd1d9c52eb2a7f583b4f37faf47",
+    "bin": [
+        [
+            "gambatte_speedrun.exe",
+            "gambatte-speedrun"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gambatte_speedrun.exe",
+            "Gambatte-Speedrun"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/pokemon-speedrunning/gambatte-speedrun",
+        "regex": "r(\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pokemon-speedrunning/gambatte-speedrun/releases/download/r$version/gambatte-speedrun-r$version-theothers.zip"
+    }
+}

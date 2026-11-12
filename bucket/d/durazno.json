@@ -1,0 +1,53 @@
+{
+    "version": "0.6-43",
+    "description": "XInput to XInput wrapper that allows customization of XInput controllers",
+    "homepage": "https://github.com/KrossX/Durazno",
+    "license": "MIT",
+    "notes": [
+        "Run Durazno to create an INI with the desired settings, then copy the INI and the matching xinput DLL",
+        "from $dir (32-bit) or $dir\\x64 (64-bit) next to the game's executable."
+    ],
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
+    "url": "https://github.com/KrossX/Durazno/releases/download/v0.6/Durazno.v0.6-43.7z",
+    "hash": "69cc8cf93e1c30ffb686e104081ee720dc2d33fe08e8749ff9a3e3755dc1aef3",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "x64\\Durazno.exe",
+                    "durazno"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "x64\\Durazno.exe",
+                    "Durazno"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "Durazno.exe",
+                    "durazno"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Durazno.exe",
+                    "Durazno"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/KrossX/Durazno/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "download/v(?<tag>[\\d.]+)/Durazno\\.v(?<version>[\\d.]+-\\d+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://github.com/KrossX/Durazno/releases/download/v$matchTag/Durazno.v$version.7z"
+    }
+}

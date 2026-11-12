@@ -1,0 +1,31 @@
+{
+    "version": "0.89.10",
+    "description": "Kaillera netplay client (kailleraclient.dll) for emulators, unofficial continuation of Supraclient",
+    "homepage": "https://github.com/God-Weapon/SupraclientC",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "This package only provides kailleraclient.dll; copy it into the folder of a Kaillera-capable emulator.",
+        "64-bit DLL: $dir\\x64\\kailleraclient.dll, 32-bit DLL: $dir\\x86\\kailleraclient.dll (match the emulator's bitness)."
+    ],
+    "url": [
+        "https://github.com/God-Weapon/SupraclientC/releases/download/0.89.10/Supraclient_v0.89.10_Win64.zip",
+        "https://github.com/God-Weapon/SupraclientC/releases/download/0.89.10/Supraclient_v0.89.10_Win32.zip"
+    ],
+    "hash": [
+        "8b5c12e2066532525b096ad4d90618f4b8f1c16e0f49ae8b6de77d80ece13ed2",
+        "1ecfd8889135e2d8e55f0c7882e01e2680cee72d8aab2228082fe132c2203fe6"
+    ],
+    "extract_to": [
+        "x64",
+        "x86"
+    ],
+    "checkver": {
+        "github": "https://github.com/God-Weapon/SupraclientC"
+    },
+    "autoupdate": {
+        "url": [
+            "https://github.com/God-Weapon/SupraclientC/releases/download/$version/Supraclient_v$version_Win64.zip",
+            "https://github.com/God-Weapon/SupraclientC/releases/download/$version/Supraclient_v$version_Win32.zip"
+        ]
+    }
+}
