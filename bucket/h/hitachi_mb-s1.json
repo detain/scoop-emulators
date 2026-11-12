@@ -1,32 +1,51 @@
 {
     "##": "name:HITACHI MB-S1",
     "version": "094",
-    "description": [
-        "HITACHI MB-S1 is a emulator for Model05 Emulator from Hitachi.",
-        "",
-        "Download: HITACHI MB-S1 v0.7.2 x86"
-    ],
+    "description": "Hitachi MB-S1 (Basic Master Level 3 Mark 5 successor) emulator",
     "homepage": "http://s-sasaji.ddo.jp/bml3mk5/download.htm",
-    "license": "",
+    "license": "Freeware",
+    "notes": "Requires real MB-S1 ROM images (e.g. S1BAS1.ROM, L3BAS.ROM, FONT.ROM); see readme.txt in $dir.",
     "architecture": {
-        "32bit": {
-            "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win32_093.zip",
-            "hash": "12c8fbac0a79010cd6dda63a3ddf8ddee11ff359c77a7cfcaccf261f35d1628c"
-        },
         "64bit": {
-            "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win64_093.zip",
-            "hash": "46e99993fc61b74346d9d6dc2e0f40be6b4d803c3c855f48cd3903843355f0f2"
+            "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win64_094.zip",
+            "hash": "f394fd0c5ee8a1d99c43393688bb5b65e6a414d889fd1be72e2f32b5e4f90d65"
+        },
+        "32bit": {
+            "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win32_094.zip",
+            "hash": "fb7793c83bfb8f101a5eb1453b109a76a2f62d964c844b3a29acd831d57b2824"
         }
     },
-    "bin": [
-        "mbs1/mbs1.exe",
-        "MBS1"
+    "extract_dir": "mbs1",
+    "pre_install": [
+        "foreach ($f in @('mbs1.ini', 'keybind.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": "mbs1.exe",
+    "shortcuts": [
+        [
+            "mbs1.exe",
+            "Hitachi MB-S1"
+        ]
+    ],
+    "persist": [
+        "mbs1.ini",
+        "keybind.ini"
     ],
     "checkver": {
         "url": "http://s-sasaji.ddo.jp/bml3mk5/download.htm",
-        "regex": "mbs1_win32_(\\d+).zip"
+        "regex": "mbs1_win64_(\\d+)\\.zip"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win64_$version.zip"
+            },
+            "32bit": {
+                "url": "http://s-sasaji.ddo.jp/bml3mk5/mbs1_win32_$version.zip"
+            }
+        }
     }
 }

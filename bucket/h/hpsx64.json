@@ -6,27 +6,31 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/hpsx64/emulator_screen_01.jpg"
     ],
     "version": "019",
-    "description": "HPSX (Highly-Experimental Playstation Simulator) is a Sony Playstation 1 & Playstation 2 emulator. NOTE: 64bit ONLY and PS2 emulator is still in Alpha.",
+    "description": "Sony PlayStation and PlayStation 2 (alpha) emulator, 64-bit only",
     "homepage": "https://sourceforge.net/projects/hpsx64/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/hpsx64/019.7z",
-    "hash": "85519a117ef111d014935479ff5fd643e0d18de4a74541ea11b030ba0b35a994",
-    "bin": [
-        "hpsx64.exe"
-    ],
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://consolo.is.cc/emu/hpsx64/019.7z",
             "hash": "85519a117ef111d014935479ff5fd643e0d18de4a74541ea11b030ba0b35a994"
         }
     },
+    "bin": "hps1x64.exe",
+    "shortcuts": [
+        [
+            "hps1x64.exe",
+            "hpsx64"
+        ]
+    ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/hpsx64/rss",
-        "regex": "<link>.+?/hpsx64-(\\d+\\.\\d+(\\.\\d+)?)\\.zip/download</link>",
-        "matchIndex": 1
+        "url": "https://consolo.is.cc/emu/hpsx64/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/hpsx64/files/latest/download",
-        "hash": "sha256:INSERT_HASH_HERE"
+        "architecture": {
+            "64bit": {
+                "url": "https://consolo.is.cc/emu/hpsx64/$version.7z"
+            }
+        }
     }
 }

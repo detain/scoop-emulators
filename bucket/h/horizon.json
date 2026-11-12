@@ -7,19 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/horizon/emulator_screen_01.jpg"
     ],
     "version": "2.1",
-    "description": "Horizon emulates the Acorn BBC Micro (Model B) with 32K RAM. B+ and Master models are not supported.",
-    "homepage": "https://consolo.is.cc/emulator/horizon",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/horizon/2.1.7z",
-    "hash": "346e40dcbd454e676932d44a7b61cb285543ec6a0eec26d14cb4037f7a89c236",
+    "description": "Acorn BBC Micro Model B emulator",
+    "homepage": "http://www.chrislam.co.uk/horizon-bbc-emulator.htm",
+    "license": "Freeware",
+    "url": "https://web.archive.org/web/20140708185107id_/http://www.chrislam.co.uk/sw/horizon210.zip",
+    "hash": "4381ad48d9dac61e9f319d06965f68a076db86297623332d4214fb14b2d1ed59",
+    "extract_dir": "Horizon 2.1",
     "bin": [
-        "Horizon 2.1.exe"
+        [
+            "Horizon 2.1.exe",
+            "horizon"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/horizon/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/horizon/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "Horizon 2.1.exe",
+            "Horizon"
+        ]
+    ],
+    "persist": "horizon.config"
 }

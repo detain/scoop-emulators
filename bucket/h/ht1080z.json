@@ -6,20 +6,47 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/ht1080z/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ht1080z/emulator_screen_01.jpg"
     ],
-    "version": "1.6.4-win64",
-    "description": "HT-1080Z is a VideoGenie I, System-80, TRS-80 and HT-1080Z emulator.",
+    "version": "1.7.0",
+    "description": "HT-1080Z, Video Genie, System-80 and TRS-80 Model I emulator",
     "homepage": "http://gaia.atilia.eu/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ht1080z/1.6.4-win64.7z",
-    "hash": "08a6d814fa0b6151aba675c0b0d19eec0e24e24a4170f56e16588a982bd60418",
-    "bin": [
-        "HT1080Z.exe"
-    ],
+    "url": "http://gaia.atilia.eu/download/ht1080z1.7.0.zip",
+    "hash": "6576a39300b93f2c8d76a8aa85567a83a2a74b0cdfa9cd90e4f19bb005fa9e0b",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "HT1080Zx64.exe",
+                    "ht1080z"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "HT1080Zx64.exe",
+                    "HT1080Z"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "HT1080Z.exe",
+                    "ht1080z"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "HT1080Z.exe",
+                    "HT1080Z"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ht1080z/",
-        "regex": "([\\d.]+-win64)\\.7z"
+        "url": "http://gaia.atilia.eu/downloads.html",
+        "regex": "download/ht1080z([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ht1080z/$version.7z"
+        "url": "http://gaia.atilia.eu/download/ht1080z$version.zip"
     }
 }

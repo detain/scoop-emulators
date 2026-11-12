@@ -5,21 +5,21 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/hhugboy/emulator_screen_01.jpg"
     ],
-    "version": "1.1.8",
-    "description": "a Game Boy/Game Boy Color emulator for Windows.",
-    "homepage": "http://hhug.me",
-    "license": "GPL-3.0-only",
-    "url": "https://consolo.is.cc/emu/hhugboy/1.1.8.7z",
-    "hash": "a8815fe3d6acd5a5a40a1501c32afa7f27eec3b9b89aa623dab7a30152e195e0",
-    "bin": [
-        "hhugboy.exe"
+    "version": "1.4.2",
+    "description": "Nintendo Game Boy / Game Boy Color emulator based on GEST, with unlicensed mapper support",
+    "homepage": "https://github.com/tzlion/hhugboy",
+    "license": "GPL-2.0-or-later",
+    "url": "https://github.com/tzlion/hhugboy/releases/download/v1.4.2/hhugboy-1.4.2.zip",
+    "hash": "440aff14f532584ff1686666b3c74372d60085da535ceb5835e74065382d9003",
+    "bin": "hhugboy.exe",
+    "shortcuts": [
+        [
+            "hhugboy.exe",
+            "hhugboy"
+        ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/davidgiven/hhugboy/releases/latest",
-        "regex": "hhugboy-v(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/davidgiven/hhugboy/releases/download/hhugboy-v{version}/hhugboy-v{version}-win32.zip",
-        "hash": "sha256"
+        "url": "https://github.com/tzlion/hhugboy/releases/download/v$version/hhugboy-$version.zip"
     }
 }

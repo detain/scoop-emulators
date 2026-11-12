@@ -7,21 +7,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/hugo/emulator_screen_01.jpg"
     ],
     "version": "2.12",
-    "description": "Good pce emulator. Plays sounds, support fullscreen. Plays most roms!",
-    "homepage": "http://www.zeograd.com",
+    "description": "NEC PC Engine / TurboGrafx-16 emulator",
+    "homepage": "https://www.zeograd.com/parse.php?src=hugof&path=0,1,",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/hugo/2.12.7z",
     "hash": "fc3aa0e88a8b29fb24c01d19d3826b2d459e45a5436c8d50fa61a06eda03eb69",
-    "bin": [
-        "hugo.exe"
-    ],
-    "extract_dir": "hugo-win32-2.12",
-    "autoupdate": {
-        "url": "http://www.zeograd.com/wp-content/uploads/2021/09/hugo-win32-latest.zip",
-        "hash": "sha256:76e49b6c25e91d9e9c9d4064fc4da3be74b8ecadfa18112d6b64df6b40f6fb9d"
-    },
+    "bin": "hugo.exe",
     "checkver": {
-        "url": "http://www.zeograd.com/releases/hugo/win32/",
-        "regex": "hugo-win32-(\\d+\\.\\d+).zip"
+        "url": "https://consolo.is.cc/emu/hugo/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/hugo/$version.7z"
     }
 }

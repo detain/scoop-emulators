@@ -5,20 +5,47 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/homelab/emulator_screen_01.jpg"
     ],
-    "version": "1.2",
-    "description": "HomeLAB is an HomeLAB4 emulator for Windows",
-    "homepage": "http://gaia.atilia.eu/content/view/3/4/",
+    "version": "1.4.1",
+    "description": "HomeLab Model II, III and IV emulator",
+    "homepage": "http://gaia.atilia.eu/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/homelab/1.2.7z",
-    "hash": "0d4a0881f2a8cd7269c759bf48c827da6662c3e58ac521c10a8dfb37629b2af2",
-    "bin": [
-        "Homelab.exe"
-    ],
+    "url": "http://gaia.atilia.eu/download/Homelab1.4.1.zip",
+    "hash": "138443b5313ecd5f4734989d3b0b906243bd3e35c0731983ccc14599b493c3a2",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "HomelabX64.exe",
+                    "homelab"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "HomelabX64.exe",
+                    "Homelab"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "Homelab.exe",
+                    "homelab"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Homelab.exe",
+                    "Homelab"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/homelab/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://gaia.atilia.eu/downloads.html",
+        "regex": "download/Homelab([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/homelab/$version.7z"
+        "url": "http://gaia.atilia.eu/download/Homelab$version.zip"
     }
 }

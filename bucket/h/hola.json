@@ -7,19 +7,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/hola/emulator_screen_01.jpg"
     ],
     "version": "2.2b",
-    "description": "Hola! is a HomeLab Model 4 emulator. The Emulator and all documentation is in Hungarian.",
+    "description": "HomeLab Model 4 and Aircomp 16 emulator (Hungarian)",
     "homepage": "http://gaia.atilia.eu/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/hola/2.2b.7z",
-    "hash": "3452a8f6e695cd7fbb4068f308aed159b2872a10b30e1c1258016e52c63520b8",
+    "url": "http://gaia.atilia.eu/download/HoLa2.2b.zip",
+    "hash": "e1385d989197d96a6c07e7984e0705415611a7d9038c0366c065847d06ea42b5",
     "bin": [
-        "HomeLab.exe"
+        [
+            "HomeLab.exe",
+            "hola"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/hola/",
-        "regex": "([\\d.]+[a-zA-Z]*)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/hola/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "HomeLab.exe",
+            "HoLa!"
+        ]
+    ]
 }
