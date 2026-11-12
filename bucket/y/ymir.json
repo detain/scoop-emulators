@@ -1,32 +1,58 @@
 {
     "version": "0.4.1",
-    "description": "A work-in-progress Sega Saturn emulator",
-    "homepage": "https://github.com/StrikerX3/Ymir",
-    "license": "GPL-2.0-or-later",
+    "description": "Sega Saturn emulator",
+    "homepage": "https://github.com/ymir-emu/Ymir",
+    "license": "GPL-3.0-only",
+    "notes": "Ymir requires a Saturn IPL (BIOS) ROM. Place it in $persist_dir\\roms\\ipl",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/StrikerX3/Ymir/releases/download/v0.3.1/ymir-windows-x86_64-AVX2-v0.3.1.zip",
-            "hash": "3c5464c06d39e914eae2edd1865f0aa63591fcbfa08516cbb378d6fcf20617fa"
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/v0.4.1/ymir-windows-x86_64-AVX2-v0.4.1.zip",
+            "hash": "7a62443beef7905dd55268c7aa017db0c07a4f51f65085eb633b49fb7ae0d8e0"
+        },
+        "arm64": {
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/v0.4.1/ymir-windows-ARM64-v0.4.1.zip",
+            "hash": "96f3e7ad1bf8024e337b5c689704a801e0f3ab32c46558ec39e5bd0bf4cf6118"
         }
     },
-    "extract_dir": "ymir-windows-x86_64-AVX2-v0.3.1",
-    "bin": "Ymir.exe",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Ymir.toml\")) {",
+        "    New-Item \"$dir\\Ymir.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "ymir-sdl3.exe",
+            "ymir",
+            "-p \"$dir\""
+        ]
+    ],
     "shortcuts": [
         [
-            "Ymir.exe",
-            "Ymir"
+            "ymir-sdl3.exe",
+            "Ymir",
+            "-p \"$dir\""
         ]
     ],
     "persist": [
         "Ymir.toml",
-        "saves",
-        "states"
+        "roms",
+        "backup",
+        "state",
+        "savestates",
+        "screenshots"
     ],
-    "checkver": {
-        "url": "https://github.com/StrikerX3/Ymir/releases/latest",
-        "regex": "Ymir v(?<version>[\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ymir-emu/Ymir/releases/download/v$version/ymir-windows-x86_64-AVX2-v$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ymir-emu/Ymir/releases/download/v$version/ymir-windows-ARM64-v$version.zip"
+            }
+        }
     }
 }

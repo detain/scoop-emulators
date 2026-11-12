@@ -2,7 +2,7 @@
     "version": "4176",
     "description": "A Yuzu Early Access fork with Linux-specific patches",
     "homepage": "https://github.com/pineappleEA/pineapple-src",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/pineappleEA/pineapple-src/releases/download/EA-4176/Windows-Yuzu-EA-4176.zip",
@@ -45,5 +45,11 @@
         "github": "https://github.com/pineappleEA/pineapple-src",
         "regex": "EA-(\\d+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pineappleEA/pineapple-src/releases/download/EA-$version/Windows-Yuzu-EA-$version.zip"
+            }
+        }
+    }
 }
