@@ -6,19 +6,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/gamelad/emulator_screen_01.jpg"
     ],
     "version": "1.6.1",
-    "description": "GameLad is an emulator aimed at developers. This emulator is equipped with both a debugger and a disassembler and has the ability to throttle the emulation process on the fly. It also has the ability to run multiple virtual GameBoys at once. This emulator requires Direct X 8.0 or better and has link cable support.",
-    "homepage": "http://gamelad.emuunlim.com/",
+    "description": "Nintendo Game Boy emulator aimed at developers, with debugger, disassembler and link cable support",
+    "homepage": "https://gamelad.emuunlim.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/gamelad/1.6.1.7z",
-    "hash": "304a3e273c6c544d129e4108661f1f9b5f3a07517c6e8807c6756759022e9c92",
+    "url": "https://gamelad.emuunlim.com/gamelad161.zip",
+    "hash": "93abeae25fbfd52d2c1d37bbca654b8badd1a05c38771512d9e2a10c337549ce",
     "bin": [
-        "GameEx.exe"
+        [
+            "Game Lad.exe",
+            "gamelad"
+        ]
     ],
-    "extract_dir": "GameExEvolutionInstall",
+    "shortcuts": [
+        [
+            "Game Lad.exe",
+            "GameLad"
+        ]
+    ],
     "checkver": {
-        "method": "regex",
-        "url": "https://www.gameex.com/download/",
-        "regex": "href=\"(https:\\/\\/www\\.gameex\\.com\\/files\\/gameex\\/GameExEvolutionInstall\\.exe)\""
+        "url": "https://gamelad.emuunlim.com/",
+        "regex": "gamelad(\\d)(\\d)(\\d)\\.zip",
+        "replace": "${1}.${2}.${3}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://gamelad.emuunlim.com/gamelad$cleanVersion.zip"
+    }
 }

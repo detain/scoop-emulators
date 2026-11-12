@@ -1,15 +1,26 @@
 {
     "version": "1.7.6",
-    "description": "ColecoVision emulator and debugger for macOS, Windows, Linux, BSD and RetroArch.",
+    "description": "ColecoVision emulator and debugger",
     "homepage": "https://github.com/drhelius/Gearcoleco",
-    "license": "GPL-3.0-only",
+    "license": "GPL-3.0-or-later",
+    "notes": "Gearcoleco requires a ColecoVision BIOS (colecovision.rom); load it from the Emulator menu.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.6.1/Gearcoleco-1.6.1-desktop-windows-x64.zip",
-            "hash": "3856136f3c3fcc0b5498ebfddca3792597cd5598b37a19fe61c74f6d098cc3df",
-            "extract_dir": "Gearcoleco-1.6.1-desktop-windows-x64"
+            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.7.6/Gearcoleco-1.7.6-desktop-windows-x64.zip",
+            "hash": "84318e141ec0d4dc2dbfe5d1e926be13a89dc8354daf908fca50ae315b9aa7e0"
+        },
+        "arm64": {
+            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.7.6/Gearcoleco-1.7.6-desktop-windows-arm64.zip",
+            "hash": "e963fde125ddedba727ff47cf2099545461efafca61507db9f7bc47588cbc884"
         }
     },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
     "bin": "Gearcoleco.exe",
     "shortcuts": [
         [
@@ -17,10 +28,20 @@
             "Gearcoleco"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/drhelius/Gearcoleco"
-    },
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drhelius/Gearcoleco/releases/download/$version/Gearcoleco-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/drhelius/Gearcoleco/releases/download/$version/Gearcoleco-$version-desktop-windows-arm64.zip"
+            }
+        }
     }
 }

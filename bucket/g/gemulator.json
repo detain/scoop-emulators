@@ -7,18 +7,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/gemulator/emulator_screen_01.jpg"
     ],
     "version": "9.0",
-    "description": "Gemulator 9.0 is an Atari 800, Atari ST and Apple Macintosh Classic emulator. NOTE: BIOS files ARE required for Atari ST and Apple Macintosh emulation.",
-    "homepage": "https://github.com/shonumi/gekko-gc-emu",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/gemulator/9.0.7z",
-    "hash": "73cf071b1fd63a69dfa32d0fd2a6ce211584ba866f57dba7cf542618f33c4e59",
+    "description": "Atari 800 and Atari ST emulator",
+    "homepage": "http://www.emulators.com/",
+    "license": "Freeware",
+    "notes": "Atari ST emulation requires TOS ROM images (or EmuTOS); place them next to gemul8r9.exe in $dir.",
+    "url": "http://www.emulators.com/freefile/gem900.zip",
+    "hash": "946f692dcfbfd1e3fb4e77dd29fbd8d19738462a11ef02770ccbc31294f7403c",
     "bin": [
-        "gekko.exe"
+        [
+            "gemul8r9.exe",
+            "gemulator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "gemul8r9.exe",
+            "Gemulator"
+        ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/shonumi/gekko-gc-emu/releases/latest",
-        "regex": "/tag/v(.*)\"",
-        "match": 1
+        "url": "http://www.emulators.com/download.htm",
+        "regex": "Gemulator ([\\d.]+) Community Release[\\s\\S]*?freefile/(?<file>gem\\d+)\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://www.emulators.com/freefile/$matchFile.zip"
+    }
 }

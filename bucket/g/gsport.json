@@ -6,19 +6,32 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/gsport/emulator_screen_01.jpg"
     ],
     "version": "0.31",
-    "description": "GSport is an Apple IIGS emulator based on the KEGS cross-platform IIgs emulator by Kent Dickey.",
-    "homepage": "http://gsport.sourceforge.net/index.html",
+    "description": "Apple IIGS emulator based on KEGS",
+    "homepage": "https://gsport.sourceforge.net/",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/gsport/0.31.7z",
-    "hash": "727f42d7eecd4b15ba1d9f3f3d0b6392957de4c5b128a43273a616689a6a8933",
+    "notes": "An Apple IIGS ROM file (ROM.01 or ROM.03) is required; place it next to GSport.exe in $dir",
+    "url": "https://downloads.sourceforge.net/project/gsport/GSport-0.31/gsport_0.31.zip",
+    "hash": "2698ba9f28c51abbde2b0587d52769557324ffe99273feff96a1aac2514ee2bd",
+    "extract_dir": "gsport_0.31",
     "bin": [
-        "GSport.exe"
+        [
+            "GSport.exe",
+            "gsport"
+        ]
     ],
+    "shortcuts": [
+        [
+            "GSport.exe",
+            "GSport"
+        ]
+    ],
+    "persist": "config.txt",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/gsport/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://sourceforge.net/projects/gsport/rss?path=/",
+        "regex": "GSport-([\\d.]+)/gsport_[\\d.]+\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/gsport/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/gsport/GSport-$version/gsport_$version.zip",
+        "extract_dir": "gsport_$version"
     }
 }

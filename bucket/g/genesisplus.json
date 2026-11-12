@@ -8,21 +8,28 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/GenesisPlus-SEGA-Genesis-Emulator-Pic-01.png"
     ],
     "version": "1.2a",
-    "description": "Genesis Plus is a popular accurate SEGA Genesis emulator. It makes use of the MAME projects CPU and SOUND cores to help its emulation. It is regarded as one of the most accurate Genesis emulators.",
+    "description": "Accurate Sega Genesis / Mega Drive emulator using MAME CPU and sound cores",
     "homepage": "http://www.techno-junk.org/",
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/genesisplus/1.2a.7z",
     "hash": "8d60427139bed6652f15649cf9ef935d26c98ad94910c30d05dc01c5ef2dae28",
     "bin": [
-        "GenesisPlus"
+        [
+            "gen.exe",
+            "genesisplus"
+        ]
     ],
-    "extract_dir": "{bin}",
-    "autoupdate": {
-        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest/download/GenesisPlus-GX.dmg"
-    },
+    "shortcuts": [
+        [
+            "gen.exe",
+            "Genesis Plus"
+        ]
+    ],
     "checkver": {
-        "url": "https://github.com/drhelius/Genesis-Plus-GX/releases/latest",
-        "regex": "GenesisPlus-GX.dmg.{1,30}([0-9a-fA-F]+)",
-        "version_format": "regex:$1"
+        "url": "https://consolo.is.cc/emu/genesisplus/",
+        "regex": "([\\d.]+[a-z]?)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/genesisplus/$version.7z"
     }
 }

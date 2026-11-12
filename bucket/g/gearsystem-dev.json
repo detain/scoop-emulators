@@ -1,31 +1,55 @@
 {
-    "version": "384-20240225-aa79432",
-    "description": "Sega Master System / Game Gear / SG-1000 emulator for iOS, macOS, Raspberry Pi, Windows, Linux, BSD and RetroArch. ",
+    "version": "3.9.24-12-g1be9a12",
+    "description": "Sega Master System / Game Gear / SG-1000 emulator and debugger (development version)",
     "homepage": "https://github.com/drhelius/Gearsystem",
-    "license": "GPL-3.0-only",
-    "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Windows%20binary.zip",
-    "hash": "e28b17cff6f643612f5dd452a35fdf192ecd74a1ac881a55219733868103898c",
-    "extract_dir": "Gearsystem",
-    "bin": "Gearsystem.exe",
+    "license": "GPL-3.0-or-later",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-12-g1be9a12-desktop-windows-x64.zip",
+            "hash": "dc9ce959ce5776b508d13e6948d85992d8979cd5f2e614f314d05fd70c2d8ba2"
+        },
+        "arm64": {
+            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-12-g1be9a12-desktop-windows-arm64.zip",
+            "hash": "a2a462fa4d456437391c78f56053a511b985717862adf6f138b3642ce2646fae"
+        }
+    },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "Gearsystem.exe",
+            "gearsystem-dev"
+        ]
+    ],
     "shortcuts": [
         [
             "Gearsystem.exe",
-            "GearSystem (dev)"
+            "Gearsystem (dev)"
         ]
     ],
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
     "checkver": {
-        "url": "https://api.github.com/repos/drhelius/Gearsystem/actions/workflows/gearsystem.yml/runs?branch=master&status=success",
-        "script": [
-            "$sha = json_path $page $.workflow_runs[0].head_sha",
-            "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$date = json_path $page $.workflow_runs[0].created_at",
-            "Write-Output \"$runId $date $sha\""
-        ],
-        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
-        "replace": "${version}-${year}${month}${day}-${hash}"
+        "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master",
+        "regex": "Gearsystem-([\\d.]+(?:-\\d+-g[0-9a-f]+)?)-desktop-windows-x64\\.zip"
     },
     "autoupdate": {
-        "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Windows%20binary.zip",
-        "extract_dir": "Gearsystem"
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-$version-desktop-windows-arm64.zip"
+            }
+        }
     }
 }

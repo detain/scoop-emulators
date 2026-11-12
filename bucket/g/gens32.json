@@ -8,37 +8,28 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/Gens32-Surreal-SEGA-Genesis-Emulator-Pic-01.png"
     ],
     "version": "1.90-std",
-    "description": "Gens32 Surreal is a highly capable Sega Genesis emulator. It is regarded as one of the most well rounded Genesis emulators available and even has netplay capabilities.",
+    "description": "Sega Genesis / Mega Drive emulator based on Gens, with netplay support",
     "homepage": "http://gens.consolemul.com/",
-    "license": "Freeware",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
     "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e",
     "bin": [
-        "gens32.exe"
+        [
+            "Gens32Surreal.exe",
+            "gens32"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
-            "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/gens32/1.90-std.7z",
-            "hash": "f347e196b3e77328ce57271f465f8d277a5a132a4b8d9213855b4d9e0238355e"
-        }
-    },
-    "extract_dir": "gens32",
-    "app_path": "",
-    "environment": {
-        "Path": "{{env PATH}};{{installDir}}",
-        "APPDATA": "{{appData}}\\gens32"
-    },
-    "working_dir": "{{appData}}\\gens32",
-    "autoupdate": {
-        "url": "http://gens.consolemul.com/download/gens32_surreal_v270_complete.rar",
-        "extract_dir": "gens32"
-    },
+    "shortcuts": [
+        [
+            "Gens32Surreal.exe",
+            "Gens32 Surreal"
+        ]
+    ],
     "checkver": {
-        "url": "http://gens.consolemul.com/",
-        "regex": "<a href=\"download/gens32_surreal_v(\\d+)_complete.rar\">"
+        "url": "https://consolo.is.cc/emu/gens32/",
+        "regex": "([\\d.]+-[a-z]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/gens32/$version.7z"
     }
 }

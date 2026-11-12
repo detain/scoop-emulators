@@ -1,28 +1,34 @@
 {
     "version": "1.1.42",
-    "description": "Gopher64 is an N64 emulator focused on accuracy and compatibility",
+    "description": "Nintendo 64 emulator focused on accuracy and compatibility",
     "homepage": "https://github.com/gopher64/gopher64",
-    "license": "GPL-3",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/gopher64/gopher64/releases/download/v1.1.20/gopher64-windows-x86_64.exe",
-            "hash": "d006dbc6da39e9da28c21024360256d6ed8109956994bdaaa62a18e551d9ce8f",
-            "bin": [
-                [
-                    "gopher64-windows-x86_64.exe",
-                    "Gopher64"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "gopher64-windows-x86_64.exe",
-                    "Gopher64"
-                ]
-            ]
+            "url": "https://github.com/gopher64/gopher64/releases/download/v1.1.42/gopher64-windows-x86_64.exe#/gopher64.exe",
+            "hash": "38ae758816bc26a255a0fb59197148001cc59c8b764af3439566147ee57cad68"
+        },
+        "arm64": {
+            "url": "https://github.com/gopher64/gopher64/releases/download/v1.1.42/gopher64-windows-aarch64.exe#/gopher64.exe",
+            "hash": "1727e6da5db9284ebd1330aa7978399bd9a35e1776c7ec023b83270ec8a58835"
         }
     },
+    "bin": "gopher64.exe",
+    "shortcuts": [
+        [
+            "gopher64.exe",
+            "Gopher64"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gopher64/gopher64/releases/download/v$version/gopher64-windows-x86_64.exe#/gopher64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/gopher64/gopher64/releases/download/v$version/gopher64-windows-aarch64.exe#/gopher64.exe"
+            }
+        }
     }
 }

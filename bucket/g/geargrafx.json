@@ -1,15 +1,26 @@
 {
     "version": "1.8.7",
-    "description": "PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator, debugger, and embedded MCP server for macOS, Windows, Linux, BSD and RetroArch.",
+    "description": "NEC PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator and debugger",
     "homepage": "https://github.com/drhelius/Geargrafx",
-    "license": "GPL-3.0-only",
+    "license": "GPL-3.0-or-later",
+    "notes": "CD-ROM2 games require a System Card BIOS; load it from the Emulator menu.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.7.7/Geargrafx-1.7.7-desktop-windows-x64.zip",
-            "hash": "23b75001ff39e2b04cf1e8e81b48d79a044fd9d94e4c37fc521d65b0f2f30912",
-            "extract_dir": "Geargrafx-1.7.7-desktop-windows-x64"
+            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.7/Geargrafx-1.8.7-desktop-windows-x64.zip",
+            "hash": "b42ed37502b18cd816841d8cfecc36fe2814d1e8ba3e6afdf90bb9862fb10236"
+        },
+        "arm64": {
+            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.7/Geargrafx-1.8.7-desktop-windows-arm64.zip",
+            "hash": "30b7ca03932b902320f13910715301d52f5fb5a80961063a8ca9c57644addb25"
         }
     },
+    "pre_install": [
+        "foreach ($f in @('portable.ini', 'config.ini', 'imgui.ini')) {",
+        "    if (!(Test-Path \"$persist_dir\\$f\")) {",
+        "        New-Item \"$dir\\$f\" -Type File | Out-Null",
+        "    }",
+        "}"
+    ],
     "bin": "Geargrafx.exe",
     "shortcuts": [
         [
@@ -17,10 +28,20 @@
             "Geargrafx"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/drhelius/Geargrafx"
-    },
+    "persist": [
+        "portable.ini",
+        "config.ini",
+        "imgui.ini"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drhelius/Geargrafx/releases/download/$version/Geargrafx-$version-desktop-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/drhelius/Geargrafx/releases/download/$version/Geargrafx-$version-desktop-windows-arm64.zip"
+            }
+        }
     }
 }

@@ -6,20 +6,24 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/geepee32/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/geepee32/emulator_screen_01.jpg"
     ],
-    "version": "0.43",
-    "description": "GeePee32 is a Game-Park GP32 handheld console.",
-    "homepage": "http://users.skynet.be/firefly/gp32/",
+    "version": "0.44",
+    "description": "GamePark GP32 handheld emulator",
+    "homepage": "https://www.schuerewegen.tk/gp32/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/geepee32/0.43.7z",
-    "hash": "add4a8a3392a4aad38cf630aedb2e907c2d628adb1db5593095afc8cc2d465bc",
-    "bin": [
-        "geepee32.exe"
+    "notes": "Place the GP32 firmware files in $persist_dir\\system\\gp32\\firmware",
+    "url": "https://web.archive.org/web/20220213224558id_/https://www.schuerewegen.tk/download/geepee32_044_win32_directx.zip",
+    "hash": "dc867eafaf1d80f54be1d0377974543bbfa9d44ddb0f050b55b63747a708f3c7",
+    "bin": "geepee32.exe",
+    "shortcuts": [
+        [
+            "geepee32.exe",
+            "GeePee32"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/geepee32/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/geepee32/$version.7z"
-    }
+    "persist": [
+        "control.ini",
+        "geepee32.ini",
+        "system\\gp32\\firmware",
+        "system\\gp32\\screenshot"
+    ]
 }

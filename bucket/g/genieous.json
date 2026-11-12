@@ -6,20 +6,47 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/genieous/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/genieous/emulator_screen_01.jpg"
     ],
-    "version": "1.0.3",
-    "description": "Genieous is an EACA EG2000 Color Genie emulator. The current version only supports the unexpanded Color Genie.",
+    "version": "1.1.0",
+    "description": "EACA EG2000 Colour Genie emulator",
     "homepage": "http://gaia.atilia.eu/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/genieous/1.0.3.7z",
-    "hash": "4401d42829ac133f0c0f44fda1384b9d0dfbc64fec3481d46716687ab20fdf5d",
-    "bin": [
-        "Genieous.exe"
-    ],
+    "url": "http://gaia.atilia.eu/download/Genieous1.1.0.zip",
+    "hash": "7576e118875a83808d9bad2b801596c90809779a29ece0f9d13cf3c1f759fe5e",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "Genieousx64.exe",
+                    "genieous"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Genieousx64.exe",
+                    "Genieous"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "Genieous.exe",
+                    "genieous"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Genieous.exe",
+                    "Genieous"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/genieous/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://gaia.atilia.eu/downloads.html",
+        "regex": "download/Genieous([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/genieous/$version.7z"
+        "url": "http://gaia.atilia.eu/download/Genieous$version.zip"
     }
 }

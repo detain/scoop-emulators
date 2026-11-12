@@ -1,12 +1,12 @@
 {
     "version": "3.10.0",
-    "description": "VICE is an emulator collection which emulates the C64, the C64-DTV, the C128, the VIC20, practically all PET models, the PLUS4 and the CBM-II (aka C610)",
-    "homepage": "https://github.com/VICE-Team/svn-mirror",
+    "description": "Commodore 8-bit emulator collection (C64, C64DTV, C128, VIC-20, PET, Plus/4, CBM-II), GTK3 version",
+    "homepage": "https://vice-emu.sourceforge.io/",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/VICE-Team/svn-mirror/releases/download/3.10.0/GTK3VICE-3.10-win64.zip",
-            "hash": "sha256:beb3791d90e98f7e012c0028f26fbaa6545c8fce676f852a67f8ad893dee9d08",
+            "hash": "beb3791d90e98f7e012c0028f26fbaa6545c8fce676f852a67f8ad893dee9d08",
             "extract_dir": "GTK3VICE-3.10-win64"
         }
     },
@@ -16,7 +16,6 @@
         "bin\\petcat.exe",
         "bin\\vsid.exe",
         "bin\\x128.exe",
-        "bin\\x64.exe",
         "bin\\x64dtv.exe",
         "bin\\x64sc.exe",
         "bin\\xcbm2.exe",
@@ -28,10 +27,20 @@
     ],
     "shortcuts": [
         [
-            "bin\\x64.exe",
-            "GTK3VICE"
+            "bin\\x64sc.exe",
+            "VICE C64 (GTK3)"
         ]
     ],
-    "checkver": "github",
-    "autoupdate": {}
+    "checkver": {
+        "github": "https://github.com/VICE-Team/svn-mirror",
+        "regex": "^([\\d.]+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/VICE-Team/svn-mirror/releases/download/$version/GTK3VICE-$majorVersion.$minorVersion-win64.zip",
+                "extract_dir": "GTK3VICE-$majorVersion.$minorVersion-win64"
+            }
+        }
+    }
 }

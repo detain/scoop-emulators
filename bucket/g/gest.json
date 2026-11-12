@@ -8,30 +8,23 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-01.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-02.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-03.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-04.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-05.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/GEST-GBC-Emulator-Pic-06.gif"
     ],
     "version": "1.1.1",
-    "description": "GEST is a highly compatible and somewhat accurate Game Boy Color emulator that was built upon the Visual Boy Advance codebase. GEST improved upon the original VBA code by increasing the amount of features it emulated.",
+    "description": "Nintendo Game Boy / Game Boy Color emulator",
     "homepage": "http://koti.mbnet.fi/gest_emu/",
-    "license": "GPL-3.0-only",
+    "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/gest/1.1.1.7z",
     "hash": "ab8fc4af0d621df16d63d3c41f9a5d14b09a025fc05a9d3347e811883756e0cb",
-    "bin": [
-        "gest.exe"
+    "bin": "GEST.exe",
+    "shortcuts": [
+        [
+            "GEST.exe",
+            "GEST"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/gest/1.1.1.7z",
-            "hash": "ab8fc4af0d621df16d63d3c41f9a5d14b09a025fc05a9d3347e811883756e0cb"
-        }
-    },
     "checkver": {
-        "url": "http://koti.mbnet.fi/gest_emu/",
-        "regex": "Download\\s*gest\\s*(\\d+\\.\\d+(?:\\.\\d+)?)"
+        "url": "https://consolo.is.cc/emu/gest/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "http://koti.mbnet.fi/~atpat/gest/gest.zip",
-        "hash": "sha256:9f9d3d3aa7652cbe1e28968d944cc57aa12a0c77e04e0b776d2fbc609df1b013"
-    },
-    "env_add_path": [
-        "$dir"
-    ],
-    "bin_symlink": true
+        "url": "https://consolo.is.cc/emu/gest/$version.7z"
+    }
 }
