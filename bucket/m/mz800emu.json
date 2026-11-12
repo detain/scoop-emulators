@@ -5,27 +5,39 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mz800emu/emulator_screen_01.jpg"
     ],
-    "version": "1.0.3",
-    "description": "MZ800Emu is a Sharp MZ-700 and MZ-800 emulator.",
-    "homepage": "http://sourceforge.net/projects/mz800emu/",
+    "version": "2.0.6",
+    "description": "Sharp MZ-700, MZ-800 and MZ-1500 emulator",
+    "homepage": "https://sourceforge.net/projects/mz800emu/",
     "license": "GPL-3.0-or-later",
-    "url": "https://consolo.is.cc/emu/mz800emu/1.0.3.7z",
-    "hash": "6e67a29ac0ea2fdc2956bc3658c9654d11ff355a20639abd403fcad41827ca0c",
+    "url": "https://downloads.sourceforge.net/project/mz800emu/Sharp%20MZ-800%20Emulator/mz800emu-2.0.6/mz800emu-v2.0.6.rar",
+    "hash": "sha1:9f1515c76ee1a141f3547b29f3760ad400d3a15d",
+    "extract_dir": "mz800emu-v2.0.6",
     "bin": [
-        "mz800emu.exe"
+        "mz800emu.exe",
+        "mz1500emu.exe",
+        "mz700emu-pal.exe",
+        "mz700emu-ntsc.exe"
     ],
-    "architecture": {
-        "32bit": {
-            "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win32-stable-1.0.8-rev_237.rar/download"
-        },
-        "64bit": {
-            "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-1.0.8/mz800emu-win64-stable-1.0.8-rev_237.rar/download"
-        }
-    },
+    "shortcuts": [
+        [
+            "mz800emu.exe",
+            "MZ-800 Emulator"
+        ],
+        [
+            "mz1500emu.exe",
+            "MZ-1500 Emulator"
+        ],
+        [
+            "mz700emu-pal.exe",
+            "MZ-700 Emulator (PAL)"
+        ]
+    ],
     "checkver": {
         "url": "https://sourceforge.net/projects/mz800emu/rss?path=/",
-        "regex": "mz800emu-win64-stable-([\\d\\.]+).rar"
+        "regex": "/mz800emu-v([\\d.]+)\\.rar"
     },
-    "extract_dir": "mz800emu-{version}",
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/mz800emu/Sharp%20MZ-800%20Emulator/mz800emu-$version/mz800emu-v$version.rar",
+        "extract_dir": "mz800emu-v$version"
+    }
 }

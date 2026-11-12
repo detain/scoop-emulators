@@ -1,32 +1,39 @@
 {
     "##": "name:MARK5 Emulator",
     "version": "214",
-    "description": [
-        "MARK5 is an emulator for the japanese MB 6892 / Basic Master Level-3 Mark-5 computer from Hitachi.",
-        "",
-        "Download: MARK5 Emulator v1.9.2 x86"
-    ],
+    "description": "Hitachi MB-6892 / Basic Master Level-3 Mark-5 emulator",
     "homepage": "http://s-sasaji.ddo.jp/bml3mk5/",
-    "license": "",
+    "license": "Freeware",
     "architecture": {
-        "32bit": {
-            "url": "http://s-sasaji.ddo.jp/bml3mk5/bml3mk5_win32_213.zip",
-            "hash": "e8d66079e3970ff2bc7437910b73e38f9baf506fc579c1d6a498af764d157dea"
-        },
         "64bit": {
-            "url": "http://s-sasaji.ddo.jp/bml3mk5/bml3mk5_win64_213.zip",
-            "hash": "b4823efa689b343a196e271e44c728013fa887be46f4b24cc026e62ad7e8f80c"
+            "url": "https://github.com/bml3mk5/EmuB-6892/releases/download/V2.1.4/bml3mk5_win64_214.zip",
+            "hash": "490060a44fe18bf1fb284c728045364064acd2a098790c128547002699b4ebbf"
+        },
+        "32bit": {
+            "url": "https://github.com/bml3mk5/EmuB-6892/releases/download/V2.1.4/bml3mk5_win32_214.zip",
+            "hash": "81e375af0429db3ed76d45478b1923bf045b03c71ca549cd5c694aef69644531"
         }
     },
-    "bin": [
-        "bml3mk5/bml3mk5.exe",
-        "bml3mk5"
+    "bin": "bml3mk5\\bml3mk5.exe",
+    "shortcuts": [
+        [
+            "bml3mk5\\bml3mk5.exe",
+            "MARK5"
+        ]
     ],
     "checkver": {
-        "url": "http://s-sasaji.ddo.jp/bml3mk5/download.htm",
-        "regex": "bml3mk5_win32_(\\d+).zip"
+        "github": "https://api.github.com/repos/bml3mk5/EmuB-6892/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/bml3mk5_win64_(?<version>\\d+)\\.zip"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bml3mk5/EmuB-6892/releases/download/$matchTag/bml3mk5_win64_$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/bml3mk5/EmuB-6892/releases/download/$matchTag/bml3mk5_win32_$version.zip"
+            }
+        }
     }
 }

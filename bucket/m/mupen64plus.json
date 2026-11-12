@@ -6,27 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_screen_01.jpg"
     ],
-    "version": "2.5.9",
-    "description": "Mupen64Plus is a Nintendo 64 emulator.",
+    "version": "2.6.0",
+    "description": "Nintendo 64 emulator",
     "homepage": "https://mupen64plus.org",
     "license": "GPL-2.0-or-later",
-    "suggest": {
-        "Needed?": "extras/vcredist2015"
-    },
-    "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/2.5.9/mupen64plus-bundle-win32-2.5.9.zip",
-    "hash": "4d87e9e4a9ccb3fb5f48936322b490af61fee70c88a7acd5217045bcc5c6cd86",
-    "bin": "mupen64plus-ui-console.exe",
+    "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/2.6.0/mupen64plus-bundle-win64-2.6.0.zip",
+    "hash": "8292c68d6ffc3428d4181ac09b1368ef2adb2cc568325545aac78cb6c1e66e21",
+    "extract_dir": "Release",
+    "bin": [
+        [
+            "mupen64plus-ui-console.exe",
+            "mupen64plus"
+        ]
+    ],
     "shortcuts": [
         [
             "mupen64plus-ui-console.exe",
-            "Mupen64+ UI Console"
+            "Mupen64Plus"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/mupen64plus/mupen64plus-core/releases",
-        "jsonpath": "$.[1].tag_name"
+        "github": "https://github.com/mupen64plus/mupen64plus-core"
     },
     "autoupdate": {
-        "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/$version/mupen64plus-bundle-win32-$version.zip"
+        "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/$version/mupen64plus-bundle-win64-$version.zip",
+        "extract_dir": "Release"
     }
 }

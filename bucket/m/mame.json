@@ -1,32 +1,31 @@
 {
     "version": "0.289",
     "description": "Arcade machine emulator",
-    "homepage": "http://mamedev.org",
-    "license": "GPL-2.0-only",
+    "homepage": "https://www.mamedev.org/",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mamedev/mame/releases/download/mame0280/mame0280b_64bit.exe#/dl.7z",
-            "hash": "67cb5049e497fcd551ca052d815ba4a581435f49d405b501c6ac01ec7610073d",
-            "pre_install": [
-                "if(!(Test-Path \"$persist_dir\\mame.ini\")) {",
-                "   Start-Process \"$dir\\mame.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"-createconfig\"",
-                "   Start-Sleep -Seconds 5",
-                "}"
-            ],
-            "bin": [
-                [
-                    "mame.exe",
-                    "mame"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "mame.exe",
-                    "MAME"
-                ]
-            ]
+            "url": "https://github.com/mamedev/mame/releases/download/mame0289/mame0289b_x64.exe#/dl.7z",
+            "hash": "a1aa7912168c9d1b05e611906bc21b8b9be3935822aead36d12a1da363150b7d"
+        },
+        "arm64": {
+            "url": "https://github.com/mamedev/mame/releases/download/mame0289/mame0289b_arm64.exe#/dl.7z",
+            "hash": "f4cb463256c34b6772aee5bc553e770aca8204c31f1f947e849d8f8495bc6346"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\mame.ini\")) {",
+        "    Start-Process \"$dir\\mame.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"-createconfig\"",
+        "    Start-Sleep -Seconds 5",
+        "}"
+    ],
+    "bin": "mame.exe",
+    "shortcuts": [
+        [
+            "mame.exe",
+            "MAME"
+        ]
+    ],
     "persist": [
         "ctrlr",
         "plugins",
@@ -37,9 +36,17 @@
     ],
     "checkver": {
         "github": "https://github.com/mamedev/mame",
-        "regex": "MAME ([\\d.]+)"
+        "regex": "mame(\\d)(\\d+)",
+        "replace": "$1.$2"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mamedev/mame/releases/download/mame$cleanVersion/mame$cleanVersionb_x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/mamedev/mame/releases/download/mame$cleanVersion/mame$cleanVersionb_arm64.exe#/dl.7z"
+            }
+        }
     }
 }

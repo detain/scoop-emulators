@@ -1,12 +1,20 @@
 {
     "version": "3551-20261104-497aa6c",
-    "description": "Nintendo DS emulator",
-    "homepage": "http://melonds.kuribo64.net/",
+    "description": "Nintendo DS emulator (development version)",
+    "homepage": "https://melonds.kuribo64.net/",
     "license": "GPL-3.0-only",
+    "notes": [
+        "ATTENTION: MelonDS requires BIOS and firmware files dumped from a Nintendo DS to function.",
+        "Builds are GitHub Actions artifacts (via nightly.link) and expire after 90 days."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
-            "hash": "19ecbf833d488962ea2d79c13a80e9d92f0dd714772d9c477fa8d4c81e9deb81"
+            "hash": "0f4241993009e72a7b2b12cc3719b1e5bf7e0011dbedc5a4edd7a879721264a4"
+        },
+        "arm64": {
+            "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-arm64.zip",
+            "hash": "4b0afabf5eb14f4e54e7d73f7654230bb43fae335ef25c422df4d49ba39e7fb1"
         }
     },
     "installer": {
@@ -17,7 +25,12 @@
             "}"
         ]
     },
-    "bin": "melonDS.exe",
+    "bin": [
+        [
+            "melonDS.exe",
+            "melonds-dev"
+        ]
+    ],
     "shortcuts": [
         [
             "melonDS.exe",
@@ -26,21 +39,24 @@
     ],
     "persist": "melonDS.ini",
     "checkver": {
-        "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&status=success",
+        "github": "https://api.github.com/repos/melonDS-emu/melonDS/actions/workflows/build-windows.yml/runs?event=push&branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
-            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "$cont = (Invoke-WebRequest $artUrl).Content | ConvertFrom-Json",
-            "$artId = $cont.artifacts[0].id",
-            "Write-Output \"$runId $date $suiteId $artId $sha\""
+            "Write-Output \"$runId $date $sha\""
         ],
-        "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[\\da-f]{7})",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-arm64.zip"
+            }
+        }
     }
 }

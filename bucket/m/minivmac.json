@@ -6,20 +6,45 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/minivmac/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/minivmac/emulator_screen_01.jpg"
     ],
-    "version": "3.3.3-win64",
-    "description": "Mini vMac is an Apple Macintosh (using Motorola 680x0 processors) emulator.",
-    "homepage": "http://minivmac.sourceforge.net",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/minivmac/3.3.3-win64.7z",
-    "hash": "2cac213d91d600f7d64f846fc336c6c64b2ba9beb29a5aefde8614c432d536e7",
+    "version": "36.04",
+    "description": "Apple Macintosh Plus emulator",
+    "homepage": "https://www.gryphel.com/c/minivmac/",
+    "license": "GPL-2.0-only",
+    "notes": "Place the Macintosh Plus ROM image as 'vMac.ROM' in $dir",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.gryphel.com/d/minivmac/minivmac-36.04/minivmac-36.04-wx64.bin.zip",
+            "hash": "b98e104d3162611d32c821b26be2d16691a657207e51b034e04a430a225eb676"
+        },
+        "32bit": {
+            "url": "https://www.gryphel.com/d/minivmac/minivmac-36.04/minivmac-36.04-wx86.bin.zip",
+            "hash": "1173ac3a54da7f562ccaed59713ed7db017c6cca797ec058d7365db9186b6481"
+        }
+    },
     "bin": [
-        "Mini vMac.exe"
+        [
+            "Mini vMac.exe",
+            "minivmac"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Mini vMac.exe",
+            "Mini vMac"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/minivmac/",
-        "regex": "([\\d.-]+)\\.7z"
+        "url": "https://www.gryphel.com/c/minivmac/dnld_std.html",
+        "regex": "minivmac-([\\d.]+)-wx64\\.bin\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/minivmac/$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.gryphel.com/d/minivmac/minivmac-$version/minivmac-$version-wx64.bin.zip"
+            },
+            "32bit": {
+                "url": "https://www.gryphel.com/d/minivmac/minivmac-$version/minivmac-$version-wx86.bin.zip"
+            }
+        }
     }
 }

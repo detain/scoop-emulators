@@ -6,19 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/minus4/emulator_screen_01.jpg"
     ],
     "version": "2.6",
-    "description": "Minus / 4 is a C16 / Plus/4 emulator for Windows.",
-    "homepage": "http://minus4.plus4.net",
+    "description": "Commodore 16 and Plus/4 emulator",
+    "homepage": "https://web.archive.org/web/2016/http://www.javalemmings.com/minus4/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/minus4/2.6.7z",
-    "hash": "408f9af5654f050499a7c04cc693f19a7523d51775bae6590f48606069d9ca96",
-    "bin": [
-        "minus4w.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/minus4/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/minus4/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20160629231104id_/http://www.javalemmings.com/minus4/files/minus4w.zip",
+    "hash": "96ef21475927ed58043bf15f8f5e1014f1c0c20d97af93ded294f4b347fbe2ea",
+    "extract_dir": "minus4w",
+    "bin": "minus4w.exe",
+    "shortcuts": [
+        [
+            "minus4w.exe",
+            "Minus4w"
+        ]
+    ]
 }

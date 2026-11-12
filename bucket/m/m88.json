@@ -1,24 +1,30 @@
 {
     "##": [
         "name:M88",
-        "author:rururutan",
+        "author:cisc",
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/m88/emulator_screen_01.jpg"
     ],
     "version": "2.21a",
-    "description": "M88 is an NEC PC8001 emulator. NOTE: The emulator is in Japanese.",
-    "homepage": "http://github.com/rururutan/m88",
-    "license": "NewBSD",
-    "url": "https://consolo.is.cc/emu/m88/2.21a.7z",
-    "hash": "4ce5ce5d934d2808bae71b3a3f522042313bb4891fd00d021288a7b5adb8776a",
-    "bin": [
-        "M88.exe"
+    "description": "NEC PC-8801 series emulator (Japanese interface)",
+    "homepage": "http://retropc.net/cisc/m88/",
+    "license": "Freeware",
+    "notes": "Requires PC-8801 BIOS ROM files placed next to M88.exe.",
+    "url": "http://retropc.net/cisc/m88/dl/M88_221a.lzh",
+    "hash": "19f7a921e9667a0666c2f600f9156b9589b6f95836518d662591db2c31b2b2e4",
+    "bin": "M88.exe",
+    "shortcuts": [
+        [
+            "M88.exe",
+            "M88"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/m88/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://retropc.net/cisc/m88/download.html",
+        "regex": "dl/M88_(?<major>\\d)(?<minor>\\d+[a-z]*)\\.lzh",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/m88/$version.7z"
+        "url": "http://retropc.net/cisc/m88/dl/M88_$cleanVersion.lzh"
     }
 }

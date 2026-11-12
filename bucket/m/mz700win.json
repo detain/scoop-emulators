@@ -5,20 +5,25 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mz700win/emulator_screen_01.jpg"
     ],
-    "version": "0.56",
-    "description": "mz700win - an MZ-700 emulator.",
-    "homepage": "http://www.retropc.net/mz-memories/mz700/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/mz700win/0.56.7z",
-    "hash": "d8ca72c041469e37a485815be550919f90c66bad392050e2ff1a3b233fcb22a9",
-    "bin": [
-        "mz700win.exe"
+    "version": "0.58",
+    "description": "Sharp MZ-700/MZ-1500 emulator",
+    "homepage": "http://mzakd.cool.coocan.jp/mz-memories/mz700win.html",
+    "license": "MIT",
+    "url": "http://mzakd.cool.coocan.jp/mz-memories/arc/mz700win_058.7z",
+    "hash": "02f0c5abe5f30c3a8ea87181f7afb8227d04f2e2b738236161992f4b30c8bf0f",
+    "bin": "mz700win.exe",
+    "shortcuts": [
+        [
+            "mz700win.exe",
+            "MZ700WIN"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/mz700win/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://mzakd.cool.coocan.jp/mz-memories/mz700win.html",
+        "regex": "arc/mz700win_(?<file>[\\w.]+)\\.7z\">mz700win version (?<version>[\\d.]+[a-z]?)<",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/mz700win/$version.7z"
+        "url": "http://mzakd.cool.coocan.jp/mz-memories/arc/mz700win_$matchFile.7z"
     }
 }

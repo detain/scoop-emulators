@@ -7,19 +7,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/minimon/emulator_screen_01.jpg"
     ],
     "version": "2005-01-20",
-    "description": "This is the world first Pokemon Mini emulator.",
-    "homepage": "http://www.sublab.net/minimon/minimon.html",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/minimon/2005-01-20.7z",
-    "hash": "137c376d9ee67dc16b09b6a24f49e4017bd0e071f29976a179745b335a14f711",
-    "bin": [
-        "Minimon.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/minimon/",
-        "regex": "([\\d-]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/minimon/$version.7z"
-    }
+    "description": "Nintendo Pokemon Mini emulator",
+    "homepage": "https://web.archive.org/web/20080215202326/http://www.sublab.net/minimon/minimon.html",
+    "license": "GPL-2.0-only",
+    "url": "https://web.archive.org/web/20060721043328id_/http://www.sublab.net:80/minimon/minimon.bin.zip",
+    "hash": "3b169233de7d708427a0a1faa50c4b93519f9f7f0cd71ffa256e9b104a586625",
+    "bin": "Minimon.exe",
+    "shortcuts": [
+        [
+            "Minimon.exe",
+            "Minimon"
+        ]
+    ]
 }

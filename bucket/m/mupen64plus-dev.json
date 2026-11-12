@@ -6,42 +6,108 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/mupen64plus/emulator_screen_01.jpg"
     ],
-    "version": "78-20230207-g7ee312c",
-    "description": "Mupen64Plus is a Nintendo 64 emulator.",
+    "version": "20261111-ga9ca8ec",
+    "description": "Nintendo 64 emulator (development version)",
     "homepage": "https://mupen64plus.org",
     "license": "GPL-2.0-or-later",
-    "suggest": {
-        "Needed?": "extras/vcredist2015"
-    },
+    "notes": "Assembled from the nightly-build releases of mupen64plus core, ui-console, audio-sdl, input-sdl, rsp-hle, video-rice and video-glide64mk2.",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-g7ee312c.zip",
-            "hash": "d098c995f9221a7e483957eda9a87fed7b5279ef1ddbb7dacdebc9113255a9d2"
-        },
         "64bit": {
-            "url": "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-g7ee312c.zip",
-            "hash": "d608e0ea4789c90b1c990504fea172981fdbca316977818fd2718aee7c48d1eb"
+            "url": [
+                "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-ga9ca8ec.zip",
+                "https://github.com/mupen64plus/mupen64plus-ui-console/releases/download/nightly-build/mupen64plus-ui-console-msvc-x64-gc8ac486.zip",
+                "https://github.com/mupen64plus/mupen64plus-audio-sdl/releases/download/nightly-build/mupen64plus-audio-sdl-msvc-x64-g9fbc24c.zip",
+                "https://github.com/mupen64plus/mupen64plus-input-sdl/releases/download/nightly-build/mupen64plus-input-sdl-msvc-x64-g842c39e.zip",
+                "https://github.com/mupen64plus/mupen64plus-rsp-hle/releases/download/nightly-build/mupen64plus-rsp-hle-msvc-x64-g4cdc305.zip",
+                "https://github.com/mupen64plus/mupen64plus-video-rice/releases/download/nightly-build/mupen64plus-video-rice-msvc-x64-g19c72e6.zip",
+                "https://github.com/mupen64plus/mupen64plus-video-glide64mk2/releases/download/nightly-build/mupen64plus-video-glide64mk2-msvc-x64-g3d32324.zip"
+            ],
+            "hash": [
+                "74893c7e04abacbb4f9c909f6c65ff75bcef9df689c8ca5826b79eb44c06fe32",
+                "25241b67676beb5b25b1bed5cadde5c07b7bd9a64c3d79a3122ff6a29fddb000",
+                "df6f119f99c19693719dfd4245bd2e2c648c28f53178e7567173c291ac42d6e6",
+                "7bb991d5fabeeaf37ed67845821565f0686205604ee7b549ecbdfa828ee29cf8",
+                "739c3ab0527eaa03158c0dba5fcb9ca9078235c24949c3dd4d7966055e685684",
+                "1abe300e8b70c2a8a0e676bae84a0c75b474b39fe8b9a7f3e217cb95bae52470",
+                "6f183b5d3169afa3c07288aac5b5c480010f88e5f2bee445eb6097eea0ecf901"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-ga9ca8ec.zip",
+                "https://github.com/mupen64plus/mupen64plus-ui-console/releases/download/nightly-build/mupen64plus-ui-console-msvc-x86-gc8ac486.zip",
+                "https://github.com/mupen64plus/mupen64plus-audio-sdl/releases/download/nightly-build/mupen64plus-audio-sdl-msvc-x86-g9fbc24c.zip",
+                "https://github.com/mupen64plus/mupen64plus-input-sdl/releases/download/nightly-build/mupen64plus-input-sdl-msvc-x86-g842c39e.zip",
+                "https://github.com/mupen64plus/mupen64plus-rsp-hle/releases/download/nightly-build/mupen64plus-rsp-hle-msvc-x86-g4cdc305.zip",
+                "https://github.com/mupen64plus/mupen64plus-video-rice/releases/download/nightly-build/mupen64plus-video-rice-msvc-x86-g19c72e6.zip",
+                "https://github.com/mupen64plus/mupen64plus-video-glide64mk2/releases/download/nightly-build/mupen64plus-video-glide64mk2-msvc-x86-g3d32324.zip"
+            ],
+            "hash": [
+                "8f8ccfdab2a234f466a3a3147292140d05fb9de3d4168a499563579525718da6",
+                "27344eeabbc6b7422d5023fb370ce7fee0be8003b77bcee8073dfb94d90bb4b0",
+                "edd3ebcfa8db3c6ddfded3d47ea83e21ae137a42c5609c734112335d214807a9",
+                "f3c15e323df2d2d1df1712188a9fab608f78f613ae61d1d942f421675eb35fa4",
+                "4a20903e96d38cb8ab57ac3435a331aed066b56245df58ec064411811bf35dba",
+                "73dd66c287c053cf9a8c46137575a54b2caab1645da839e18ff62cba3c2cf701",
+                "ba9ad3670ea76062f78c19e41268b1316b043b53241b3648c8aa8dc85b9d62c9"
+            ]
         }
     },
-    "bin": "mupen64plus-ui-console.exe",
+    "bin": [
+        [
+            "mupen64plus-ui-console.exe",
+            "mupen64plus-dev"
+        ]
+    ],
     "shortcuts": [
         [
             "mupen64plus-ui-console.exe",
-            "Mupen64+ UI Console (dev)"
+            "Mupen64Plus (dev)"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/mupen64plus/mupen64plus-core/actions/workflows/build.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/mupen64plus/mupen64plus-core/releases/tags/nightly-build",
         "script": [
-            "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$date = json_path $page $.workflow_runs[0].created_at",
-            "$url = 'https://api.github.com/repos/mupen64plus/mupen64plus-core/releases'",
-            "$cont = (Invoke-WebRequest $url).Content | ConvertFrom-Json",
-            "$file = $cont.assets[0].name",
-            "Write-Output \"$runId $date $file\""
+            "$h = @{}",
+            "$t = Get-GitHubToken",
+            "if ($t) { $h['Authorization'] = \"token $t\" }",
+            "$dates = @()",
+            "$ids = @()",
+            "foreach ($c in 'core', 'ui-console', 'audio-sdl', 'input-sdl', 'rsp-hle', 'video-rice', 'video-glide64mk2') {",
+            "    $r = Invoke-RestMethod -Headers $h -Uri \"https://api.github.com/repos/mupen64plus/mupen64plus-$c/releases/tags/nightly-build\"",
+            "    $a = $r.assets | Where-Object { $_.name -match '-msvc-x64-g[0-9a-f]+\\.zip$' } | Select-Object -First 1",
+            "    $ids += [regex]::Match($a.name, '-(g[0-9a-f]+)\\.zip$').Groups[1].Value",
+            "    $dates += ([datetime]$a.updated_at).ToUniversalTime().ToString('yyyyMMdd')",
+            "}",
+            "Write-Output \"$(($dates | Sort-Object)[-1]) $($ids -join ' ')\""
         ],
-        "regex": "^(?<version>[^ ]+) (?<year>[^ ]+)-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ mupen64plus-core-msvc-x64-(?<hash>[^\\.]+)\\.zip$",
-        "replace": "${version}-${year}${month}${day}-${hash}"
+        "regex": "^(?<date>\\d{8}) (?<core>g[0-9a-f]+) (?<ui>g[0-9a-f]+) (?<audio>g[0-9a-f]+) (?<input>g[0-9a-f]+) (?<rsp>g[0-9a-f]+) (?<rice>g[0-9a-f]+) (?<glide>g[0-9a-f]+)$",
+        "replace": "${date}-${core}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x64-$matchCore.zip",
+                    "https://github.com/mupen64plus/mupen64plus-ui-console/releases/download/nightly-build/mupen64plus-ui-console-msvc-x64-$matchUi.zip",
+                    "https://github.com/mupen64plus/mupen64plus-audio-sdl/releases/download/nightly-build/mupen64plus-audio-sdl-msvc-x64-$matchAudio.zip",
+                    "https://github.com/mupen64plus/mupen64plus-input-sdl/releases/download/nightly-build/mupen64plus-input-sdl-msvc-x64-$matchInput.zip",
+                    "https://github.com/mupen64plus/mupen64plus-rsp-hle/releases/download/nightly-build/mupen64plus-rsp-hle-msvc-x64-$matchRsp.zip",
+                    "https://github.com/mupen64plus/mupen64plus-video-rice/releases/download/nightly-build/mupen64plus-video-rice-msvc-x64-$matchRice.zip",
+                    "https://github.com/mupen64plus/mupen64plus-video-glide64mk2/releases/download/nightly-build/mupen64plus-video-glide64mk2-msvc-x64-$matchGlide.zip"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/mupen64plus/mupen64plus-core/releases/download/nightly-build/mupen64plus-core-msvc-x86-$matchCore.zip",
+                    "https://github.com/mupen64plus/mupen64plus-ui-console/releases/download/nightly-build/mupen64plus-ui-console-msvc-x86-$matchUi.zip",
+                    "https://github.com/mupen64plus/mupen64plus-audio-sdl/releases/download/nightly-build/mupen64plus-audio-sdl-msvc-x86-$matchAudio.zip",
+                    "https://github.com/mupen64plus/mupen64plus-input-sdl/releases/download/nightly-build/mupen64plus-input-sdl-msvc-x86-$matchInput.zip",
+                    "https://github.com/mupen64plus/mupen64plus-rsp-hle/releases/download/nightly-build/mupen64plus-rsp-hle-msvc-x86-$matchRsp.zip",
+                    "https://github.com/mupen64plus/mupen64plus-video-rice/releases/download/nightly-build/mupen64plus-video-rice-msvc-x86-$matchRice.zip",
+                    "https://github.com/mupen64plus/mupen64plus-video-glide64mk2/releases/download/nightly-build/mupen64plus-video-glide64mk2-msvc-x86-$matchGlide.zip"
+                ]
+            }
+        }
+    }
 }

@@ -1,24 +1,30 @@
 {
-    "version": "0.248",
-    "description": "MAMEUI is the x64 GUI version of MAME on the Windows platform.",
-    "homepage": "http://www.mameui.info/",
-    "license": "https://raw.githubusercontent.com/Robbbert/messui/master/COPYING",
+    "version": "0.289.5",
+    "description": "Arcade machine emulator (MAME) with an integrated Windows GUI front-end",
+    "homepage": "https://messui.1emulation.com/",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "http://www.mameui.info/MAMEUI248.7z",
-            "hash": "5b7cca7dbcb6c84cb1f06ae613b0f043f3e672c3aa197fd40bc91b56a617885e",
-            "extract_dir": "MAMEUI",
-            "shortcuts": [
-                [
-                    "MAMEUI.exe",
-                    "MAMEUI"
-                ]
-            ]
+            "url": "https://messui.1emulation.com/mameui2895.7z",
+            "hash": "7a1920f31fd288cd4001d1f7ef1ee1eb95eb7e367500c754bfaf8f3cf79f5fcb"
         }
     },
+    "bin": "mameui.exe",
+    "shortcuts": [
+        [
+            "mameui.exe",
+            "MAMEUI"
+        ]
+    ],
     "checkver": {
-        "regex": "href=\"(?<file>[^\"]+\\.7z)\"><strong>MAMEUI v?\\.(?<ver>[\\d]+) ",
-        "replace": "0.${ver}"
+        "url": "https://messui.1emulation.com/",
+        "regex": "href=\"(?<file>mameui\\d+\\.7z)\"><img[^>]*>&nbsp;&nbsp;MAMEUI64 (?<version>[\\d.]+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://messui.1emulation.com/$matchFile"
+            }
+        }
+    }
 }

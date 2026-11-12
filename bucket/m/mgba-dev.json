@@ -5,14 +5,14 @@
     "license": "MPL-2.0",
     "architecture": {
         "32bit": {
-            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-04-27-win32-9061-b19b557a78930ede7ee7f5dcbc880f9ff2533ffe.7z",
-            "hash": "2e5f50c538c9acf1bcf7ac15b43463770f52692cf4bb3a9bbeb8ff2013c9f8cf",
-            "extract_dir": "mGBA-build-2026-04-27-win32-9061-b19b557a78930ede7ee7f5dcbc880f9ff2533ffe"
+            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-11-06-win32-9178-662dada8b79070bde93829a44d583c517fc5ec2d.7z",
+            "hash": "3a7f242b40c528d914a2a0f3db7a819453b823d4d577742b77ddc39263b8475e",
+            "extract_dir": "mGBA-build-2026-11-06-win32-9178-662dada8b79070bde93829a44d583c517fc5ec2d"
         },
         "64bit": {
-            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-04-27-win64-9061-b19b557a78930ede7ee7f5dcbc880f9ff2533ffe.7z",
-            "hash": "0e34447d8e569de2e8613ada8d1c09c82b20d5dffe98ae70e4f247cc11b6fda8",
-            "extract_dir": "mGBA-build-2026-04-27-win64-9061-b19b557a78930ede7ee7f5dcbc880f9ff2533ffe"
+            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-11-06-win64-9178-662dada8b79070bde93829a44d583c517fc5ec2d.7z",
+            "hash": "aaecb5486e0779bb2331a4a2bff4656c486813a17a3de43b41c673dd9ae63638",
+            "extract_dir": "mGBA-build-2026-11-06-win64-9178-662dada8b79070bde93829a44d583c517fc5ec2d"
         }
     },
     "pre_install": [
@@ -64,9 +64,18 @@
     "checkver": {
         "url": "https://mgba.io/builds/1/",
         "regex": "build-(?<year>20\\d{2})-(?<month>\\d{2})-(?<day>\\d{2})-win32-(?<ver>[\\d]+)-(?<git>\\w{40})\\.7z",
-        "replace": "$4-$1$2$3"
+        "replace": "${ver}-${year}${month}${day}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "32bit": {
+                "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit.7z",
+                "extract_dir": "mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit"
+            },
+            "64bit": {
+                "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-$matchYear-$matchMonth-$matchDay-win64-$matchVer-$matchGit.7z",
+                "extract_dir": "mGBA-build-$matchYear-$matchMonth-$matchDay-win64-$matchVer-$matchGit"
+            }
+        }
     }
 }
