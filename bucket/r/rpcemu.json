@@ -7,18 +7,44 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/rpcemu/emulator_screen_01.jpg"
     ],
     "version": "0.9.5",
-    "description": "RPCEmu allows you to emulate classic Acorn systems, such as the Risc PC and A7000, on multiple platforms including Windows, Linux and Mac OS X",
-    "homepage": "http://www.marutan.net/rpcemu/",
+    "description": "Acorn Risc PC and A7000 emulator",
+    "homepage": "https://www.marutan.net/rpcemu/",
     "license": "GPL-2.0-only",
-    "url": "https://www.marutan.net/rpcemu/cgi/download.php?sFName=0.9.5/rpcemu-win32-archive-0.9.5.zip",
+    "notes": "Place the RISC OS ROM image files in $persist_dir\\roms",
+    "url": "https://www.marutan.net/rpcemu/0.9.5/rpcemu-win32-archive-0.9.5.zip",
     "hash": "bc57d19713b90baf9d9f8be51dec2b9ab158ec74eedc3fc0a84b6d3fd8510329",
-    "bin": "rpcemu",
-    "repository": "https://github.com/user/repo",
+    "extract_dir": "RPCEmu",
+    "bin": [
+        [
+            "RPCEmu-Recompiler.exe",
+            "rpcemu"
+        ],
+        [
+            "RPCEmu-Interpreter.exe",
+            "rpcemu-interpreter"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "RPCEmu-Recompiler.exe",
+            "RPCEmu"
+        ],
+        [
+            "RPCEmu-Interpreter.exe",
+            "RPCEmu (Interpreter)"
+        ]
+    ],
+    "persist": [
+        "roms",
+        "hostfs",
+        "cmos.ram",
+        "rpc.cfg"
+    ],
     "checkver": {
         "url": "https://www.marutan.net/rpcemu/index.php",
-        "regex": "Version ([\\d\\.]+)"
+        "regex": "Binary Packages \\(Version ([\\d.]+)\\)"
     },
     "autoupdate": {
-        "url": "https://www.marutan.net/rpcemu/cgi/download.php?sFName=$version/rpcemu-win32-archive-$version.zip"
+        "url": "https://www.marutan.net/rpcemu/$version/rpcemu-win32-archive-$version.zip"
     }
 }

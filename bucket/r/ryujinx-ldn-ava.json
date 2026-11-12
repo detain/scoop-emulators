@@ -4,6 +4,7 @@
     "homepage": "https://ryujinx.org/",
     "license": "MIT",
     "notes": [
+        "DEPRECATED: the original Ryujinx project shut down in 2024 and the Patreon LDN builds are gone; LDN multiplayer is built into the 'ryujinx' (Ryubing) manifest.",
         "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
         "Learn more at https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide"
     ],
@@ -36,26 +37,5 @@
         "   }",
         "}"
     ],
-    "persist": "portable",
-    "checkver": {
-        "script": [
-            "$url = 'https://github.com/Ryujinx/Ryujinx/wiki/Multiplayer-(LDN-Local-Wireless)-Guide'",
-            "$fileMatch = 'Link--primary.*Windows: https://www.patreon.com/([^<]*)<'",
-            "$avaMatch = 'Link--primary.*Windows.*Avalonia.*: https://www.patreon.com/([^<]*)<'",
-            "$verMatch = 'Link--primary.*Download LDN (.*) here'",
-            "$cont = (Invoke-WebRequest $url -UseBasicParsing).Content",
-            "if(!($cont -match $fileMatch)) { error \"Could not match windows dl url '$fileMatch' on '$url'\"; break }",
-            "$fileUrl = $matches[1]",
-            "$fileUrl = $fileUrl.Replace('&amp;', '&')",
-            "if(!($cont -match $avaMatch)) { error \"Could match ava ui build dl url '$avaMatch' on '$url'\"; break }",
-            "$avaUrl = $matches[1]",
-            "$avaUrl = $avaUrl.Replace('&amp;', '&')",
-            "if(!($cont -match $verMatch)) { error \"Could match '$verMatch' on '$url'\"; break }",
-            "$version = $matches[1]",
-            "Write-Output \"$fileUrl $avaUrl $version\""
-        ],
-        "regex": "^(?<file>[^ ]+) (?<ava>[^ ]+) (?<version>.*)$",
-        "replace": "1.1.0-ldn${version}"
-    },
-    "autoupdate": {}
+    "persist": "portable"
 }

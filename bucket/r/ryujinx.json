@@ -1,26 +1,20 @@
 {
-    "version": "1.1.1403",
-    "description": "A simple, experimental Nintendo Switch emulator",
-    "homepage": "https://ryujinx.org/",
+    "version": "1.3.3",
+    "description": "Nintendo Switch emulator (Ryubing community continuation of Ryujinx)",
+    "homepage": "https://ryujinx.app/",
     "license": "MIT",
     "notes": [
         "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
-        "Learn more at https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide"
+        "The original Ryujinx project shut down in 2024; this manifest now tracks the Ryubing continuation (https://git.ryujinx.app/projects/Ryubing).",
+        "Learn more at https://ryujinx.app/"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Ryujinx/release-channel-master/releases/download/1.1.1403/ryujinx-1.1.1403-win_x64.zip",
-            "hash": "9cc815591e77f5f2ca0e7a74c0b374a5b3778078635722d5918e78ed1e99daef"
+            "url": "https://git.ryujinx.app/projects/Ryubing/releases/download/1.3.3/ryujinx-1.3.3-win_x64.zip",
+            "hash": "baa93f48b012eefeca339a78a39844599ccd194c109093f354a4b9d1e03a056e"
         }
     },
     "extract_dir": "publish",
-    "bin": "Ryujinx.exe",
-    "shortcuts": [
-        [
-            "Ryujinx.exe",
-            "Ryujinx"
-        ]
-    ],
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-Item \"$persist_dir\\portable\" -ItemType Directory | Out-Null",
@@ -31,9 +25,24 @@
         "   }",
         "}"
     ],
+    "bin": "Ryujinx.exe",
+    "shortcuts": [
+        [
+            "Ryujinx.exe",
+            "Ryujinx"
+        ]
+    ],
     "persist": "portable",
     "checkver": {
-        "github": "https://github.com/Ryujinx/release-channel-master"
+        "url": "https://git.ryujinx.app/api/v1/repos/projects/Ryubing/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "([\\d.]+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://git.ryujinx.app/projects/Ryubing/releases/download/$version/ryujinx-$version-win_x64.zip"
+            }
+        }
+    }
 }

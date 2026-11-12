@@ -7,24 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/regen/emulator_screen_01.jpg"
     ],
     "version": "0.972",
-    "description": "Regen is an emulator which can emulate the following systems with very high accuracy: Sega Genesis/MegaDrive, Sega Master System, GameGear, SG-1000 & SC-3000. It also contains many other useful features and stuff including debuggers.",
+    "description": "Sega Genesis/Mega Drive, Master System, Game Gear, SG-1000 and SC-3000 emulator",
     "homepage": "http://aamirm.hacking-cult.org",
-    "license": "GPL-2.0-only",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/regen/0.972.7z",
     "hash": "6847c1c44f7a8769e015ae84b23b3e7b9baf37ae189796fe1b891ffa81cb30ae",
-    "bin": [
-        "regen.exe"
-    ],
-    "extract_dir": "regen",
-    "args": [
-        "--fullscreen"
+    "bin": "Regen.exe",
+    "shortcuts": [
+        [
+            "Regen.exe",
+            "Regen"
+        ]
     ],
     "checkver": {
-        "url": "http://aamirm.hacking-cult.org/Download/",
-        "pattern": "regen(\\d{4})\\.zip",
-        "index": 1
+        "url": "https://consolo.is.cc/emu/regen/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "http://aamirm.hacking-cult.org/Download/"
+        "url": "https://consolo.is.cc/emu/regen/$version.7z"
     }
 }

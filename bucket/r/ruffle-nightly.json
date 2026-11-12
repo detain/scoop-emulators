@@ -1,30 +1,43 @@
 {
-    "version": "2026-11-11",
+    "version": "2026-11-12",
     "description": "A Flash Player emulator written in Rust",
     "homepage": "https://ruffle.rs/",
-    "license": "MIT",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2026-05-14/ruffle-nightly-2026_05_14-windows-x86_64.zip",
-            "hash": "396b7e9100803b2b6285a1208b8bcb29c3eb8c871780843b5b27761b349e3693"
+            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2026-11-12/ruffle-nightly-2026_11_12-windows-x86_64.zip",
+            "hash": "f9078e6dd477ea077bd55902cffff7d3ac92401db83dac1eead3580952b90bcc"
         },
         "32bit": {
-            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2026-05-14/ruffle-nightly-2026_05_14-windows-x86_32.zip",
-            "hash": "12e94f0e5fc1a71c1e47ad5a4475edbe32798aa98ad39933425ac0f415ca3b5e"
+            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2026-11-12/ruffle-nightly-2026_11_12-windows-x86_32.zip",
+            "hash": "8fc5b3095a15a4b5265688647549dfd7ba956649fcbce4d64e0c5594ddfb9a64"
         }
     },
-    "bin": "ruffle.exe",
+    "bin": [
+        [
+            "ruffle.exe",
+            "ruffle-nightly"
+        ]
+    ],
     "shortcuts": [
         [
             "ruffle.exe",
-            "Ruffle"
+            "Ruffle (nightly)"
         ]
     ],
     "checkver": {
-        "url": "https://github.com/ruffle-rs/ruffle/releases",
-        "regex": "tree/nightly-([\\d-]+)"
+        "github": "https://api.github.com/repos/ruffle-rs/ruffle/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "nightly-([\\d-]+)"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_32.zip"
+            }
+        }
     }
 }

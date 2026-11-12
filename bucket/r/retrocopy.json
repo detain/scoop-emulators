@@ -6,20 +6,27 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/retrocopy/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/retrocopy/emulator_screen_01.jpg"
     ],
-    "version": "0.960-win64",
-    "description": "RetroCopy emulates home consoles and arcade systems so that you can play the games made for those different machines on your PC. RetroCopy simulates hardware extremely accurately which ensures that these classic games are represented exactly like they were on the real systems.",
-    "homepage": "http://www.retrocopy.com/",
+    "version": "0.960",
+    "description": "Multi-system emulator for Sega 8/16-bit consoles, NES and arcade systems",
+    "homepage": "https://web.archive.org/web/2011/http://www.retrocopy.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/retrocopy/0.960-win64.7z",
-    "hash": "16c032c7805e1eaeb5153876308485e6c5a111ebbe4884815d198ab30c68d14f",
-    "bin": [
-        "retrocopy.exe"
-    ],
-    "checkver": {
-        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/",
-        "regex": "retrocopy-(\\d+\\.\\d+(?:\\.\\d+)?)\\.zip"
+    "architecture": {
+        "64bit": {
+            "url": "https://web.archive.org/web/20110812024116id_/http://www.retrocopy.com/downloads/retrocopy_win64_0960.exe",
+            "hash": "96705801c52c5222b3330c7ba99b0891692d3e824ab17007c1e3fd7d316d4a9f"
+        }
     },
-    "autoupdate": {
-        "url": "https://sourceforge.net/projects/retrocopy/rss?path=/"
-    }
+    "innosetup": true,
+    "bin": [
+        [
+            "retrocopy64.exe",
+            "retrocopy"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "retrocopy64.exe",
+            "RetroCopy"
+        ]
+    ]
 }

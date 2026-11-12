@@ -6,30 +6,24 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/redmsx/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/redmsx/emulator_screen_01.jpg"
     ],
-    "version": [
-        "iewport\" content=\"width=device-width,initial-scale=1.0\">",
-        ""
-    ],
-    "description": "RedMSX is an MSX emulator with advanced support for Windows 10",
-    "homepage": "http://redmsx.msxblue.com/index.htm",
+    "version": "1.4",
+    "description": "MSX, MSX2 and MSX2+ emulator",
+    "homepage": "https://msxblue.com/redmsx/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/redmsx/1.4.7z",
     "hash": "f520f186e6a8ed281ab7a8880c812ce0f70f85ab7a86d69cdb218b262b9b8d6c",
     "bin": "RedMSX.exe",
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/redmsx/1.4.7z",
-            "hash": "f520f186e6a8ed281ab7a8880c812ce0f70f85ab7a86d69cdb218b262b9b8d6c"
-        }
-    },
+    "shortcuts": [
+        [
+            "RedMSX.exe",
+            "RedMSX"
+        ]
+    ],
     "checkver": {
-        "url": "http://www.msxblue.com/files/RedMSXSetup.exe",
-        "type": "msi",
-        "command": "$version = [System.Diagnostics.FileVersionInfo]::GetVersionInfo('$dirpath\\RedMSX.exe').FileVersion; Write-Output $version",
-        "expect": "^\\d+\\.\\d+\\.\\d+$",
-        "extract": "$dirpath = (Get-Item $installer).DirectoryName"
+        "url": "https://consolo.is.cc/emu/redmsx/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        
+        "url": "https://consolo.is.cc/emu/redmsx/$version.7z"
     }
 }

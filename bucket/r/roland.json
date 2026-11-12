@@ -13,11 +13,13 @@
     "architecture": {
         "32bit": {
             "url": "https://www.rolandemu.de/files/public/downloads/roland/0.70/roland-0.70-win32-Release.exe#/dl.7z",
-            "hash": "c167767f2e904622adf34c86e36723a6f72afa2fdd868d454f4b0571424c9846"
+            "hash": "c167767f2e904622adf34c86e36723a6f72afa2fdd868d454f4b0571424c9846",
+            "extract_dir": "roland-0.70-win32-Release"
         },
         "64bit": {
             "url": "https://www.rolandemu.de/files/public/downloads/roland/0.70/roland-0.70-win64-Release.exe#/dl.7z",
-            "hash": "63e707e2348efa990032ffd7cd46a686887dc4b15730111be9a05bf8a440ac84"
+            "hash": "63e707e2348efa990032ffd7cd46a686887dc4b15730111be9a05bf8a440ac84",
+            "extract_dir": "roland-0.70-win64-Release"
         }
     },
     "bin": "roland.exe",
@@ -30,5 +32,16 @@
     "checkver": {
         "github": "https://github.com/raldus/roland"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://www.rolandemu.de/files/public/downloads/roland/$version/roland-$version-win32-Release.exe#/dl.7z",
+                "extract_dir": "roland-$version-win32-Release"
+            },
+            "64bit": {
+                "url": "https://www.rolandemu.de/files/public/downloads/roland/$version/roland-$version-win64-Release.exe#/dl.7z",
+                "extract_dir": "roland-$version-win64-Release"
+            }
+        }
+    }
 }

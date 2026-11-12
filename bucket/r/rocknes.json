@@ -6,20 +6,32 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/rocknes/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/rocknes/emulator_screen_01.jpg"
     ],
-    "version": "5.41",
-    "description": "RockNES is a Nintendo Entertainment System (NES) emulator that supports both PAL and NTSC modes.",
-    "homepage": "http://rocknes.web.fc2.com",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/rocknes/5.41.7z",
-    "hash": "2e4efe02b3929fce931de27a8c3936e151e6717da4f8630c8e535c9279d4b323",
-    "bin": [
-        "rocknes.exe"
+    "version": "5.80",
+    "description": "Nintendo NES / Famicom and Famicom Disk System emulator",
+    "homepage": "http://rocknes.web.fc2.com/",
+    "license": "Freeware",
+    "url": "https://www.dropbox.com/s/jbgawyvryfrndr5/rnes580.zip?dl=1#/dl.zip",
+    "hash": "5d5d04ee49b3689119a00c67edef727009838caddacdb9ac003cb919fbc4ab79",
+    "extract_dir": "rnes580",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\RockNES.ini\")) {",
+        "    New-Item \"$dir\\RockNES.ini\" -Type File | Out-Null",
+        "}"
     ],
+    "bin": "RockNES.exe",
+    "shortcuts": [
+        [
+            "RockNES.exe",
+            "RockNES"
+        ]
+    ],
+    "persist": "RockNES.ini",
     "checkver": {
-        "url": "http://rocknes.web.fc2.com/download.html",
-        "regex": "<td>RockNES (\\d+\\.\\d+\\.\\d+)<\\/td>"
+        "url": "http://rocknes.web.fc2.com/",
+        "regex": "Latest version</b><br>\\s*<a href=\"https://www\\.dropbox\\.com/s/(?<id>[a-z0-9]+)/rnes(?<num>[0-9a-z]+)\\.zip\\?dl=1\">RockNES ([\\d.]+[A-Za-z]?) \\(Windows\\)"
     },
     "autoupdate": {
-        "url": "http://rocknes.web.fc2.com/download.html"
+        "url": "https://www.dropbox.com/s/$matchId/rnes$matchNum.zip?dl=1#/dl.zip",
+        "extract_dir": "rnes$matchNum"
     }
 }

@@ -4,6 +4,7 @@
     "homepage": "https://ryujinx.org/",
     "license": "MIT",
     "notes": [
+        "DEPRECATED: the original Ryujinx project and its release channels were shut down in 2024 and this build is no longer downloadable. The Avalonia UI is now the only UI; use the 'ryujinx' (Ryubing) manifest instead.",
         "ATTENTION: Ryujinx requires Nintendo Switch firmware and a prod.keys file to function.",
         "Learn more at https://github.com/Ryujinx/Ryujinx/wiki/Ryujinx-Setup-&-Configuration-Guide"
     ],
@@ -31,9 +32,5 @@
         "   }",
         "}"
     ],
-    "persist": "portable",
-    "checkver": {
-        "github": "https://github.com/Ryujinx/release-channel-master"
-    },
-    "autoupdate": {}
+    "persist": "portable"
 }

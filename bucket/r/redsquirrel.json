@@ -7,19 +7,29 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/redsquirrel/emulator_screen_01.jpg"
     ],
     "version": "0.6",
-    "description": "This is another Acorn Archimedes emulator for Windows. You will need to obtain copies of the RISC OS 3.1 roms before you can use Red Squirrel.",
-    "homepage": "http://www.red-squirrel.org/",
+    "description": "Acorn Archimedes and Risc PC emulator",
+    "homepage": "https://web.archive.org/web/2006/http://www.redsquirrel.fsnet.co.uk/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/redsquirrel/0.6.7z",
-    "hash": "d0e55d8a09d3b542435e49f452ce7362b100d8eb2580b33d7a87e734dcdd0821",
+    "notes": "RISC OS ROMs are not included. Place them in $persist_dir\\Romsets (e.g. Romsets\\Riscos311).",
+    "url": "https://web.archive.org/web/20060304040442id_/http://www.redsquirrel.fsnet.co.uk/downloads/RedSquirrel0.6.zip",
+    "hash": "3265e7d02784578b576bf1afe72e57454f9f49362c9d3a4e7d6fb8cfef6ab375",
+    "extract_dir": "RedSquirrel Release",
     "bin": [
-        "RedSquirrel.exe"
+        [
+            "RedSquirrel.exe",
+            "redsquirrel"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/redsquirrel/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/redsquirrel/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "RedSquirrel.exe",
+            "Red Squirrel"
+        ]
+    ],
+    "persist": [
+        "Romsets",
+        "Hostfs",
+        "Models",
+        "RedSquirrel.cfg"
+    ]
 }

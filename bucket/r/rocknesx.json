@@ -7,19 +7,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/rocknesx/emulator_screen_01.jpg"
     ],
     "version": "2.0",
-    "description": "RockNES X is a Nintendo Entertainment System emulator based on an old version of RockNES by Fx3.",
-    "homepage": "https://consolo.is.cc/emulator/rocknesx",
+    "description": "Nintendo NES emulator, Windows port of an early RockNES",
+    "homepage": "https://web.archive.org/web/2003/http://rocknes.kinox.org/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/rocknesx/2.0.7z",
-    "hash": "0c6b4794838d2b43b363097c0b962672be3d6785b26fac763609adbe7b1990bd",
-    "bin": [
-        "RockNESX.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/rocknesx/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/rocknesx/$version.7z"
-    }
+    "url": "https://web.archive.org/web/20030403142324id_/http://rocknes.kinox.org:80/rocknesx20f.zip",
+    "hash": "d968949ddc7fdf8c61abbc6df305aca04872888c0bc3dfdf036ab61536442596",
+    "bin": "RockNESX.exe",
+    "shortcuts": [
+        [
+            "RockNESX.exe",
+            "RockNES X"
+        ]
+    ]
 }
