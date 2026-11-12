@@ -3,22 +3,28 @@
         "name:Emu Loader",
         "logo:https://4.bp.blogspot.com/-PcHRxZdD-Uw/VwznVfN6XFI/AAAAAAAAU5E/IiPPb4IdsY0PGRarqyg7yTl93Ehkw4u8gCLcB/s320/logo.png"
     ],
-    "version": "5.0.6",
-    "description": "Emu Loader was created to manage an arcade games emulator called M.A.M.E. With this frontend, you can change practically any option that is available in the emulator, like the screen resolution, sound quality, game options, etc. There are lots of extra features that makes your life much more easier, like the snapshots viewer where all captured images from M.A.M.E. games can be viewed when selecting games.",
-    "homepage": "http://emuloader.mameworld.info/",
-    "license": "MIT",
-    "hash": "b6ce5e8a326a43f67a70e9a364173855329adeda7d1adabdb86e4cc919b2458c",
-    "url": "https://emuloader.mameworld.info/files/el506-bin.rar",
-    "bin": [
-        "EmuLoader.exe",
-        "Emu Loader"
+    "version": "8.9.4",
+    "description": "Frontend for MAME and other arcade, console and computer emulators",
+    "homepage": "https://emuloader.mameworld.info/",
+    "license": "Freeware",
+    "notes": "The official site went offline in July 2026; the download is served from the Internet Archive.",
+    "suggest": {
+        "MAME": "mame"
+    },
+    "url": "https://web.archive.org/web/2024id_/https://emuloader.mameworld.info/files/el894-bin.rar",
+    "hash": "a438299c421735049898f30c95b21b90c34ac21e3474d78c9eacefb20371d174",
+    "bin": "EmuLoader.exe",
+    "shortcuts": [
+        [
+            "EmuLoader.exe",
+            "Emu Loader"
+        ]
     ],
     "checkver": {
-        "url": "https://emuloader.mameworld.info/changelog.htm",
-        "regex": "(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://web.archive.org/web/20260709183106/https://emuloader.mameworld.info/changelog.htm",
+        "regex": "Version ([\\d.]+) Change Log - [A-Z]"
     },
     "autoupdate": {
-        "url": "https://emuloader.mameworld.info/files/el$cleanVersion-bin.rar"
-    },
-    "dependencies": "mame"
+        "url": "https://web.archive.org/web/2024id_/https://emuloader.mameworld.info/files/el$cleanVersion-bin.rar"
+    }
 }

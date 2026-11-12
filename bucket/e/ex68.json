@@ -7,18 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ex68/emulator_screen_01.jpg"
     ],
     "version": "215",
-    "description": "EX68 is a Sharp X68000 emulator. NOTE: Emulator and Help Files are in Japanese.",
+    "description": "Sharp X68000 emulator (Japanese only)",
     "homepage": "http://www.ksky.ne.jp/~yamama/emul/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/ex68/215.7z",
-    "hash": "86fad23292493c1b3279f9cd1082eb16701084bfbedb4b8d307285cb4bab7cbb",
-    "bin": [
-        "EX68.exe"
+    "license": "Freeware",
+    "notes": "Requires the X68000 BIOS ROM and CG ROM images.",
+    "url": "http://www.ksky.ne.jp/~yamama/emul/ex68v215.lzh",
+    "hash": "9a3982e34c3a544fa5505e53894225ed4e3f5cba72b2643a382c14849a7b5f03",
+    "bin": "EX68.EXE",
+    "shortcuts": [
+        [
+            "EX68.EXE",
+            "EX68"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ex68/"
+        "url": "http://www.ksky.ne.jp/~yamama/emul/",
+        "regex": "ex68v(\\d+)\\.lzh"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ex68/$version.7z"
+        "url": "http://www.ksky.ne.jp/~yamama/emul/ex68v$version.lzh"
     }
 }

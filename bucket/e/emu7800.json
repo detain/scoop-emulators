@@ -1,6 +1,6 @@
 {
     "version": "5.7.0.0",
-    "description": "EMU7800 emulates the Atari 7800 ProSystem video game console",
+    "description": "Atari 7800 ProSystem emulator",
     "homepage": "https://emu7800.github.io/",
     "license": "GPL-2.0-only",
     "innosetup": true,
@@ -8,6 +8,7 @@
         "64bit": {
             "url": "https://github.com/emu7800/emu7800.github.io/releases/download/v5.7.0.0/EMU7800Setup-x64-5.7.0.exe",
             "hash": "3b7a1b349dbc587754db7f88e9b5c2d403d25102dab2c9c968f55a750f08fab1",
+            "bin": "EMU7800.exe",
             "shortcuts": [
                 [
                     "EMU7800.exe",
@@ -19,5 +20,11 @@
     "checkver": {
         "github": "https://github.com/emu7800/emu7800.github.io"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/emu7800/emu7800.github.io/releases/download/v$version/EMU7800Setup-x64-$majorVersion.$minorVersion.$patchVersion.exe"
+            }
+        }
+    }
 }

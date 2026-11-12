@@ -7,18 +7,27 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/enter/emulator_screen_01.jpg"
     ],
     "version": "2002.01.19",
-    "description": "ENTER is an Enterprise Computers Enterprise emulator.",
+    "description": "Enterprise 64/128 computer emulator",
     "homepage": "http://enter.emuunlim.com/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/enter/2002.01.19.7z",
-    "hash": "4f2347a70fd8a472e7d3b829ca58db489c016603d070a056aa5f865e02768eb2",
-    "bin": [
-        "enter.exe"
+    "license": "GPL-2.0-only",
+    "url": "http://enter.emuunlim.com/enter.zip",
+    "hash": "3c0708bf2642ba272490c3de98160566c305fbc6e62d5c86bf82ce21cf5a6df4",
+    "extract_dir": "enter",
+    "bin": "enter.exe",
+    "shortcuts": [
+        [
+            "enter.exe",
+            "ENTER"
+        ]
     ],
+    "persist": "enter.cfg",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/enter/"
+        "url": "http://enter.emuunlim.com/",
+        "regex": "the latest version \\(26-June-2000\\)",
+        "replace": "2002.01.19"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/enter/$version.7z"
+        "url": "http://enter.emuunlim.com/enter.zip",
+        "extract_dir": "enter"
     }
 }

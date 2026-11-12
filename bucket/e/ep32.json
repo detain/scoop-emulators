@@ -7,30 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ep32/emulator_screen_01.jpg"
     ],
     "version": "1.20",
-    "description": "EP32 is a freeware EP128 and OP128 emulator for Windows",
+    "description": "Enterprise 64/128 computer emulator",
     "homepage": "http://www.ep128.hu/Ep_Emulator_eng.htm",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ep32/1.20.7z",
-    "hash": "ad84b41c9c1a58c3ca47a9d2660d910279d5e2f502850f978be1e0dbfa3ae887",
-    "bin": [
-        "ep32/ep32.exe"
+    "license": "GPL-2.0-only",
+    "url": "http://www.ep128.hu/Emu/Ep32-120.rar",
+    "hash": "6c08ad49eb7bc5f388dad7c9c36804f20556d223f29f4c43a06a21bd6d28738f",
+    "bin": "ep32.exe",
+    "shortcuts": [
+        [
+            "ep32.exe",
+            "EP32"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "http://www.ep128.hu/downloads/ep32v100win64.zip",
-            "hash": "f1086ca84835eab94c6fca71e211204849c8a9d61d0ce10a79f5393b92c3d7b3"
-        },
-        "32bit": {
-            "url": "http://www.ep128.hu/downloads/ep32v100win32.zip",
-            "hash": "9f0c9a77b64e08e8c0e0a76ea6805e0b6f89a6df09753d58b9c02f8c8b46d087"
-        }
+    "persist": [
+        "configs",
+        "snapshots"
+    ],
+    "checkver": {
+        "url": "http://www.ep128.hu/Ep_Emulator_eng.htm",
+        "regex": "Emu/Ep32-(?<major>\\d)(?<minor>\\d+)\\.rar",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "http://www.ep128.hu/versions/ep32version.txt"
-    },
-    "checkver": {
-        "url": "http://www.ep128.hu/versions/ep32version.txt",
-        "regex": "Version ([0-9\\.]+)",
-        "match_index": 1
+        "url": "http://www.ep128.hu/Emu/Ep32-$cleanVersion.rar"
     }
 }

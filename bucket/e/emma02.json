@@ -6,19 +6,52 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/emma02/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/emma02/emulator_screen_01.jpg"
     ],
-    "version": "1.23-win64",
+    "version": "2.00",
     "description": "the Emma 02 emulator is currently emulating the following computers: COMX-35, Cosmac Elf 2000, Cosmac VIP, Cosmac VIP II, Cosmicos, Cosmac Elf, Netronics Elf II, Quest Super Elf, Membership Card, VELF, RCA Studio II, Visicom COM-100, Victoy MPT-02, Cidelsa, Telmac TMC-600, Telmac 1800, Telmac 2000, Pecom 32 and 64, ETI 660",
-    "homepage": "http://emma02.hobby-site.com/download.html",
-    "license": "GNU LGPL 2.1",
-    "url": "https://consolo.is.cc/emu/emma02/1.23-win64.7z",
-    "hash": "0bd174c2b77ab45ebdb458c04e62cbf7c80d56fb1d75836f9c79ec1acc8a4559",
+    "homepage": "https://www.emma02.hobby-site.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_x64_windows.exe",
+            "hash": "7ad92d47216f954dbea597ba8a6026546ef5436bcfd0edee470dabebdd4dd56f"
+        },
+        "32bit": {
+            "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_x86_windows.exe",
+            "hash": "48b141d6fc7cc75eef99a3c60cabc32ae03f6de8e64339a07933e3521aa4de5b"
+        },
+        "arm64": {
+            "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_arm_windows.exe",
+            "hash": "7eb4613e14eb75d68d62fa9b57213ee839a7c8815b9d3485be6fc407b739eb8a"
+        }
+    },
+    "innosetup": true,
     "bin": [
-        "Emma 02.exe"
+        [
+            "Emma 02.exe",
+            "emma02"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Emma 02.exe",
+            "Emma 02"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/emma02/"
+        "url": "https://www.emma02.hobby-site.com/download.html",
+        "regex": "Emma 02 release V([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/emma02/$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_x64_windows.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_x86_windows.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/etxmato/emma_02_installation/raw/main/Current_release/emma_02_arm_windows.exe"
+            }
+        }
     }
 }

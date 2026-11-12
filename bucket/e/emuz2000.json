@@ -7,20 +7,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/emuz2000/emulator_screen_01.jpg"
     ],
     "version": "0.95.5",
-    "description": "EmuZ-2000 is a Sharp MZ-2000, MZ-2200, MZ-80B and MZ-80B2 emulator. All documentation is in Japanese.",
+    "description": "Sharp MZ-2000, MZ-2200, MZ-80B and MZ-80B2 emulator (Japanese only)",
     "homepage": "http://www5d.biglobe.ne.jp/~object/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/emuz2000/0.95.5.7z",
     "hash": "e95d20fb096580a6c311976fc2fe51f77bf30a77cfc5793dee15149409eef3d8",
-    "bin": [
-        {
-            "url": "http://www5d.biglobe.ne.jp/~object/emuz2000_v{version}.zip",
-            "hash": "sha256:0517af6b8a0cddc34d0f1c9a1e8cfe332bae0d958aee7f77e33f82a7e78b365e"
-        }
-    ],
+    "bin": "EmuZ2000TF.exe",
     "checkver": {
-        "url": "http://www5d.biglobe.ne.jp/~object/",
-        "regex": "href=\"emuz2000_v(\\d+\\.\\d+\\.\\d+)\\.zip\""
+        "url": "https://consolo.is.cc/emu/emuz2000/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/emuz2000/$version.7z"
+    }
 }

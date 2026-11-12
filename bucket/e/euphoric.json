@@ -5,19 +5,34 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/euphoric/emulator_screen_01.jpg"
     ],
-    "version": "Build-1019",
-    "description": "Euphoric is a Dos/Windows emulator for the Oric computer",
+    "version": "1020",
+    "description": "Oric-1, Oric Atmos and Telestrat emulator",
     "homepage": "http://oric.free.fr/emulator.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/euphoric/Build-1019.7z",
-    "hash": "76a96f524b369bd813c866575dff1414f887e1517eb9780d9ba56b37100f282d",
+    "notes": "euphoric.exe is a DOS (DJGPP) program; on 64-bit Windows run it through DOSBox. configuratoric.exe is a native Windows configuration front end.",
+    "url": "http://oric.free.fr/EMULATORS/Euphoric.zip",
+    "hash": "5f8c25f430b274574bf593b265a20701bc8bbc71a689e2b57d2c3ba8101f52f2",
+    "extract_dir": "Euphoric",
     "bin": [
-        "euphoric.exe"
+        "euphoric.exe",
+        "configuratoric.exe"
+    ],
+    "shortcuts": [
+        [
+            "configuratoric.exe",
+            "Configuratoric (Euphoric)"
+        ]
+    ],
+    "persist": [
+        "config",
+        "EUPHORIC.INI"
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/euphoric/"
+        "url": "http://oric.free.fr/emulator.html",
+        "regex": "for DOS \\(build (\\d+)\\)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/euphoric/$version.7z"
+        "url": "http://oric.free.fr/EMULATORS/Euphoric.zip",
+        "extract_dir": "Euphoric"
     }
 }

@@ -1,13 +1,24 @@
 {
-    "version": "766-20240331-1def6f6",
+    "version": "1709-20261111-4591fe1",
     "description": "EKA2L1 is a Experimental Symbian OS emulator, written in C++ 17. The emulator currently emulates Symbian OS's EKA2 behavior (with planned EKA1 support), and reimplement most of its critical app servers. It can already boot many EKA2's apps and games, with EKA1 being worked on at the moment.",
     "homepage": "https://github.com/EKA2L1/EKA2L1",
-    "license": "GPL-3",
-    "url": "https://github.com/EKA2L1/EKA2L1/releases/download/continous/windows-latest.zip",
-    "hash": "5e52a38922c4eb06209d872fa89d5ee2f128c0fb70a9264b2293b27ba66989a2",
-    "bin": "",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/EKA2L1/EKA2L1/releases/download/continous/EKA2L1-Windows-x86_64.zip",
+    "hash": "edd0e858bbd3f64a459d6cf2f1c8b8e80c24a835144609e8005e5091839bf5f6",
+    "bin": [
+        [
+            "eka2l1_qt.exe",
+            "eka2l1"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "eka2l1_qt.exe",
+            "EKA2L1"
+        ]
+    ],
     "checkver": {
-        "url": "https://api.github.com/repos/EKA2L1/EKA2L1/actions/workflows/build.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/EKA2L1/EKA2L1/actions/workflows/build.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
@@ -18,6 +29,6 @@
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        "url": "https://github.com/EKA2L1/EKA2L1/releases/download/continous/windows-latest.zip"
+        "url": "https://github.com/EKA2L1/EKA2L1/releases/download/continous/EKA2L1-Windows-x86_64.zip"
     }
 }
