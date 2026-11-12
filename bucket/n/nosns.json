@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nosns/emulator_screen_01.jpg"
     ],
     "version": "1.6",
-    "description": "nocash SNES/Super Famicom emulator/debugger for windows.",
-    "homepage": "http://problemkaputt.de/index.htm",
+    "description": "Nintendo SNES/Super Famicom emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/sns.htm",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nosns/1.6.7z",
-    "hash": "359e5b54e95e8e9d897e504ffc5c374c7dc4f11f77a834623765c3831410752b",
+    "url": "https://problemkaputt.de/no%24sns.zip",
+    "hash": "f67b9c7d96a13ff712e759016a0fbcc3d9ce7f9991a124a57f55e043e7c55cad",
     "bin": [
-        "NO$SNS.exe"
+        [
+            "NO$SNS.EXE",
+            "nosns"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$SNS.EXE",
+            "no$sns"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nosns/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://problemkaputt.de/sns.htm",
+        "regex": "Download no\\$sns v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nosns/$version.7z"
+        "url": "https://problemkaputt.de/no%24sns.zip"
     }
 }

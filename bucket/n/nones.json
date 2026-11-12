@@ -6,20 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nones/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nones/emulator_screen_01.jpg"
     ],
-    "version": "1.1",
-    "description": "nocash NES/FDS/PC10/VS emulator/debugger for windows.",
-    "homepage": "http://problemkaputt.de/index.htm",
+    "version": "1.2",
+    "description": "Nintendo NES, Famicom Disk System, PlayChoice-10 and VS System emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/nes.htm",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nones/1.1.7z",
-    "hash": "34ba846dfb244f6875f518a869832b1843bfad788fb51dd2b93c5d56f8c1ba2f",
+    "url": "https://problemkaputt.de/no%24nes-w.zip",
+    "hash": "35025e91ac7b2bcb23f61afd18e369d7969a6e40c1eac5af044a04998c0e6c94",
     "bin": [
-        "NO$NES.exe"
+        [
+            "NO$NES.EXE",
+            "nones"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$NES.EXE",
+            "no$nes"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nones/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://problemkaputt.de/nes.htm",
+        "regex": "no\\$nes v([\\d.]+), windows"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nones/$version.7z"
+        "url": "https://problemkaputt.de/no%24nes-w.zip"
     }
 }

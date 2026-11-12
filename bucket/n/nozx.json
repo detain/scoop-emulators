@@ -7,19 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nozx/emulator_screen_01.jpg"
     ],
     "version": "2.0",
-    "description": "nocash ZX81 & ZX Spectrum emulator/debugger for windows.",
-    "homepage": "http://problemkaputt.de/index.htm",
-    "license": "Custom",
-    "url": "https://consolo.is.cc/emu/nozx/2.0.7z",
-    "hash": "13e7a166e774a00eb39a660eb6813142447c0e398bd271715dca256a17329a86",
-    "bin": [
-        "no2k6.exe"
+    "description": "Sinclair ZX80/ZX81, ZX Spectrum, Lambda and Jupiter ACE emulator and debugger",
+    "homepage": "http://problemkaputt.de/zx.htm",
+    "license": "Freeware",
+    "url": "http://problemkaputt.de/no%24zx-4f.zip",
+    "hash": "0d96ba806d1666d8d3318e3d8540db5118b981fc921a22154085bdd1caab37db",
+    "pre_install": "Copy-Item -LiteralPath \"$dir\\NO`$ZX.EXE\" -Destination \"$dir\\nozx.exe\" -Force",
+    "bin": "nozx.exe",
+    "shortcuts": [
+        [
+            "nozx.exe",
+            "no$zx"
+        ]
     ],
     "checkver": {
-        "url": "http://problemkaputt.de/2k6.htm",
-        "regex": "<A HREF=\"no2k6(\\d{2})\\.zip\">"
+        "url": "http://problemkaputt.de/zx.htm",
+        "regex": "HREF=\"no\\$zx-(?<file>[^\"]+)\\.zip\"><B>no\\$zx v(?<version>[\\d.]+) windows"
     },
     "autoupdate": {
-        "url": "http://problemkaputt.de/no2k6${version}.zip"
+        "url": "http://problemkaputt.de/no%24zx-$matchFile.zip"
     }
 }

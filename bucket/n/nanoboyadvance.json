@@ -1,14 +1,21 @@
 {
     "version": "1.8.3",
-    "description": "NanoBoyAdvance is a Game Boy Advance emulator focused on accuracy.",
-    "homepage": "https://github.com/nba-emu/NanoBoyAdvance",
+    "description": "Nintendo Game Boy Advance emulator focused on accuracy",
+    "homepage": "https://codeberg.org/nba-emu/NanoBoyAdvance",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/nba-emu/NanoBoyAdvance/releases/download/v1.8.2/NanoBoyAdvance-1.8.2-win64.zip",
-            "hash": "c3845b695c96d1e962de3e43e674d3436fc4b9a42cfe1d45070beff952dea13e"
-        }
-    },
+    "url": "https://codeberg.org/nba-emu/NanoBoyAdvance/releases/download/v1.8.3/NanoBoyAdvance-Windows-x64.zip",
+    "hash": "47ff4fc83aa507e319e150b39037352fefc679ead92f6e9c161151a1089bf9bc",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.toml\")) {",
+        "    New-Item \"$dir\\config.toml\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "NanoBoyAdvance.exe",
+            "nanoboyadvance"
+        ]
+    ],
     "shortcuts": [
         [
             "NanoBoyAdvance.exe",
@@ -16,8 +23,12 @@
         ]
     ],
     "persist": "config.toml",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://codeberg.org/api/v1/repos/nba-emu/NanoBoyAdvance/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
-        
+        "url": "https://codeberg.org/nba-emu/NanoBoyAdvance/releases/download/v$version/NanoBoyAdvance-Windows-x64.zip"
     }
 }

@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nomsx/emulator_screen_01.jpg"
     ],
     "version": "1.5",
-    "description": "No$msx is a MSX1 + MSX2 emulator for DOS and Windows, like the other no$-emulators it's including a comfortable debugger, so that it's more a serious development tool than just a emulator. Beside for the development part, the most important goals are: User-friendly GUI and lots of options, and the complete lack of overload - the program is written in raw assembler language, sized about 150 KBytes, and works fine on 33MHz computers.",
-    "homepage": "http://problemkaputt.de/index.htm",
-    "license": "Shareware",
-    "url": "https://consolo.is.cc/emu/nomsx/1.5.7z",
-    "hash": "d0d1916d8b01d188f6215aea3348093339d74c0d1bed1a70e85e56115ff4fa16",
+    "description": "MSX1 and MSX2 emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/msx.htm",
+    "license": "Freeware",
+    "url": "https://problemkaputt.de/no%24msx4f.zip",
+    "hash": "941d55be5e0ff428660563c221bea6e5db648ab07b8a00eea6d1a75bc20f70eb",
     "bin": [
-        "NO$MSX.exe"
+        [
+            "NO$MSX.EXE",
+            "nomsx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$MSX.EXE",
+            "no$msx"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nomsx/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://problemkaputt.de/msx.htm",
+        "regex": "No\\$msx - version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nomsx/$version.7z"
+        "url": "https://problemkaputt.de/no%24msx4f.zip"
     }
 }

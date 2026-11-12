@@ -7,21 +7,31 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nesterj/emulator_screen_01.jpg"
     ],
     "version": "0.51b",
-    "description": "nesterJ is a Nintendo Entertainment System and Famicom emulator based on 'nester public beta 3' by Darren Ranalli.",
+    "description": "Nintendo NES/Famicom emulator based on nester public beta 3",
     "homepage": "http://www.dcn.ne.jp/~otim2/nesterj/en/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nesterj/0.51b.7z",
-    "hash": "e0eb46904d99533931cc50a5ee217cd8f905e729af34c64cc5bc29322b0ef97e",
+    "license": "GPL-2.0-or-later",
+    "url": "http://www.dcn.ne.jp/~otim2/nesterj/bin/nj051b_en.zip",
+    "hash": "77c4d8583cd04cfeea5171ccbc50189c0c35847d89dde8067eac36617e4912b1",
+    "extract_dir": "nj051b_en",
     "bin": [
-        "nesterj.exe"
+        [
+            "nesterJ.exe",
+            "nesterj"
+        ]
     ],
-    "extract_dir": "nesterj",
+    "shortcuts": [
+        [
+            "nesterJ.exe",
+            "nesterJ"
+        ]
+    ],
     "checkver": {
-        "url": "http://www.dcn.ne.jp/~otim2/nesterj/en/",
-        "regex": "NesterJ Version (\\d+\\.\\d+)\\s",
-        "match": 1
+        "url": "http://www.dcn.ne.jp/~otim2/nesterj/en/dl.html",
+        "regex": "nj(?<major>\\d)(?<minor>\\d{2})(?<suffix>[a-z]?)_en\\.zip",
+        "replace": "${major}.${minor}${suffix}"
     },
     "autoupdate": {
-        "url": "http://www.dcn.ne.jp/~otim2/nesterj/en/"
+        "url": "http://www.dcn.ne.jp/~otim2/nesterj/bin/nj$cleanVersion_en.zip",
+        "extract_dir": "nj$cleanVersion_en"
     }
 }

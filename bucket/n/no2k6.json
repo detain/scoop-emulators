@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/no2k6/emulator_screen_01.jpg"
     ],
     "version": "1.1",
-    "description": "nocash Atari 2600 emulator/debugger for windows.",
-    "homepage": "http://problemkaputt.de/index.htm",
+    "description": "Atari 2600 emulator and debugger",
+    "homepage": "http://problemkaputt.de/2k6.htm",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/no2k6/1.1.7z",
-    "hash": "26df7eff167f4cdfdc2382447b5a95efc63c240c4708002d26eb0de72ef1ac2f",
+    "url": "http://problemkaputt.de/no%242k6-w.zip",
+    "hash": "e7b989f179c5c04634b1866104855cc154d48ec3c229175021c2b7602943fc56",
     "bin": [
-        "NO$2K6.exe"
+        [
+            "NO$2K6.EXE",
+            "no2k6"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$2K6.EXE",
+            "no$2k6"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/no2k6/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://problemkaputt.de/2k6.htm",
+        "regex": "HREF=\"no\\$2k6-w\\.zip\">no\\$2k6 v(?<version>[\\d.]+) Windows"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/no2k6/$version.7z"
+        "url": "http://problemkaputt.de/no%242k6-w.zip"
     }
 }

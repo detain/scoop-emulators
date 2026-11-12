@@ -4,30 +4,25 @@
         "author:James Slepicka",
         "cmd:%BIN% %ROM%",
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nemulator/emulator_logo.png",
-        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nemulator/emulator_screen_01.jpg",
-        "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-03.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-04.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-05.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/Nemulator-SEGA-Master-System-Emulator-NES-Emulator-Pic-06.png"
+        "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nemulator/emulator_screen_01.jpg"
     ],
-    "version": "4.2",
-    "description": "Nemulator is regarded as one of the best NES emulators around. Nemulator offers support for almost all of the NES's features including undocumented and unofficial features.",
-    "homepage": "https://sourceforge.net/projects/mz800emu/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/nemulator/4.2.7z",
-    "hash": "08e80c002d2e74e22f6526ff1ddc39d9141acf6c33ee0be68f96ee78a6df7c77",
-    "bin": [
-        "mz800emu.exe"
+    "version": "7.0",
+    "description": "Multi-system emulator (NES/FDS, Master System, Game Gear, Genesis, TurboGrafx-16, Game Boy/Color)",
+    "homepage": "https://github.com/jslepicka/nemulator",
+    "license": "BSD-2-Clause",
+    "notes": "Configure ROM paths and options in $persist_dir\\nemulator.ini (default ROM location is C:\\roms\\<system>).",
+    "url": "https://github.com/jslepicka/nemulator/releases/download/7.0/nemulator7.0.zip",
+    "hash": "bea017cb9cea551bedafc99448a66a6a07481d2f3eeb9684d3d6804adb6eab5b",
+    "bin": "nemulator.exe",
+    "shortcuts": [
+        [
+            "nemulator.exe",
+            "Nemulator"
+        ]
     ],
-    "architecture": {
-        "x64": {
-            "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-win64-stable-$version.rar/download"
-        },
-        "x86": {
-            "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/mz800emu-win32-stable-$version.rar/download"
-        }
-    },
-    "checkver": {
-        "url": "https://sourceforge.net/projects/mz800emu/files/Sharp%20MZ-800%20Emulator/",
-        "regex": "mz800emu-win64-stable-([\\d\\.]+).rar"
-    },
-    "extract_dir": "mz800emu-{version}",
-    "autoupdate": {}
+    "persist": "nemulator.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jslepicka/nemulator/releases/download/$version/nemulator$version.zip"
+    }
 }

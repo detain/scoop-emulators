@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nocpc/emulator_screen_01.jpg"
     ],
     "version": "1.8",
-    "description": "nocash Amstrad/Schneider CPC Emulator/Debugger for DOS/Windows.",
-    "homepage": "http://problemkaputt.de/index.htm",
+    "description": "Amstrad/Schneider CPC emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/cpc.htm",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nocpc/1.8.7z",
-    "hash": "c5fdc8141544bf56cb1bf9a52b556cce3dad87b3b2680495e620a0a50d1e1a09",
+    "url": "https://problemkaputt.de/no%24cpc.zip",
+    "hash": "7f924fdf600467380adfdfd8be88ad31f3d6e0f144bd9de1a8319fa9dac3b3b4",
     "bin": [
-        "NO$CPC.exe"
+        [
+            "NO$CPC.EXE",
+            "nocpc"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$CPC.EXE",
+            "no$cpc"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nocpc/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://problemkaputt.de/cpc.htm",
+        "regex": "NO\\$CPC - version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nocpc/$version.7z"
+        "url": "https://problemkaputt.de/no%24cpc.zip"
     }
 }

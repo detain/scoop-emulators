@@ -8,19 +8,31 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/NullDC-SEGA-Dreamcast-Emulator-Pic-01.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/nulldc-SEGA-Dreamcast-Emulator-Pic-02.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/nulldc-SEGA-Dreamcast-Emulator-Pic-03.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/nulldc-SEGA-Dreamcast-Emulator-Pic-04.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/08/nulldc-SEGA-Dreamcast-Emulator-Pic-05.jpg"
     ],
     "version": "1.04_r136",
-    "description": "NullDC is a Dreamcast emulator that boasts a high compatibility rate and stable performance. It is a great Dreamcast emulator for those on Windows and Linux based systems.",
-    "homepage": "http://github.com/skmp/nulldc",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/nulldc/1.04_r136.7z",
+    "description": "Sega Dreamcast emulator",
+    "homepage": "https://github.com/skmp/nulldc",
+    "license": "GPL-2.0-only",
+    "notes": "Place the Dreamcast BIOS files (dc_boot.bin, dc_flash.bin) in $persist_dir\\data",
+    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nulldc/nullDC_104_r136.7z",
     "hash": "fdaec53d0dbbd30a4b28af862f056d71176db94d3ec67035c31346b584864742",
     "bin": [
-        "nullDC_Win32_Release-NoTrace.exe"
+        [
+            "nullDC_Win32_Release-NoTrace.exe",
+            "nulldc"
+        ]
     ],
+    "shortcuts": [
+        [
+            "nullDC_Win32_Release-NoTrace.exe",
+            "nullDC"
+        ]
+    ],
+    "persist": "data",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nulldc/",
-        "regex": "([\\d._]+)\\.7z"
+        "url": "https://storage.googleapis.com/google-code-archive/v2/code.google.com/nulldc/downloads-page-1.json",
+        "regex": "\"nullDC_(?<maj>\\d)(?<min>\\d+)_(?<rev>r\\d+)\\.7z\"",
+        "replace": "${maj}.${min}_${rev}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nulldc/$version.7z"
+        "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/nulldc/nullDC_$matchMaj$matchMin_$matchRev.7z"
     }
 }

@@ -6,21 +6,22 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nesemu/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nesemu/emulator_screen_01.jpg"
     ],
-    "version": "1.3",
-    "description": "nes-emu is a Nintendo Entertainment System emulator.",
-    "homepage": "https://github.com/amaiorano/nes-emu/",
+    "version": "1.4.1",
+    "description": "Nintendo NES emulator",
+    "homepage": "https://github.com/amaiorano/nes-emu",
     "license": "MIT",
-    "url": "https://consolo.is.cc/emu/nesemu/1.3.7z",
-    "hash": "d405714a0091360326d3c6652feed6ece2fefb921f879a53ca5aaf4199ced227",
-    "bin": [
-        "nesemu.exe"
+    "url": "https://github.com/amaiorano/nes-emu/releases/download/v1.4.1/nes-emu-v1.4.1.zip",
+    "hash": "597338e669d58d186407a867c5ee93a8ef7510e4d51c8716bed7af5f8aeb96ba",
+    "extract_dir": "nes-emu",
+    "bin": "nes-emu.exe",
+    "shortcuts": [
+        [
+            "nes-emu.exe",
+            "nes-emu"
+        ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/amaiorano/nes-emu/releases/latest",
-        "regex": "nes-emu-([\\d\\.]+)-windows\\.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/amaiorano/nes-emu/releases/latest/download/nes-emu-{version}-windows.zip",
-        "hash": "sha256"
+        "url": "https://github.com/amaiorano/nes-emu/releases/download/v$version/nes-emu-v$version.zip"
     }
 }

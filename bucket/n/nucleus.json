@@ -6,20 +6,37 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/nucleus/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nucleus/emulator_screen_01.jpg"
     ],
-    "version": "0.1.0-win64",
-    "description": "Nucleus is a Sony Playstation 3 emulator. NOTE: This emulator requires PS3 firmware keys to be placed in a file named 'keys.xml' next to the executable.",
-    "homepage": "https://github.com/AlexAltea/nucleus/releases",
-    "license": "MIT",
-    "url": "https://consolo.is.cc/emu/nucleus/0.1.0-win64.7z",
-    "hash": "38058a889769bc768aecabc880def0b008d6246be78ae1bbf0792b8a7a98fb5b",
-    "bin": [
-        "nucleus.exe"
-    ],
-    "checkver": {
-        "url": "https://github.com/AlexAltea/nucleus/releases/latest",
-        "regex": "nucleus-v(\\d+\\.\\d+\\.\\d+)-windows-x86_64\\.7z"
+    "version": "0.1.0",
+    "description": "Experimental Sony PlayStation 3 emulator",
+    "homepage": "https://github.com/AlexAltea/nucleus",
+    "license": "GPL-2.0-only",
+    "notes": "Requires PS3 firmware keys in a file named 'keys.xml' next to the executable.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AlexAltea/nucleus/releases/download/v0.1.0/nucleus-v0.1.0-win64.zip",
+            "hash": "153a8272ca7296d4c88297a93b27c4df5e35cb07e09d61b8350e9b9318cccf59",
+            "extract_dir": "nucleus-v0.1.0-win64"
+        }
     },
+    "bin": [
+        [
+            "nucleus-windows.exe",
+            "nucleus"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nucleus-windows.exe",
+            "Nucleus"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/AlexAltea/nucleus/releases/latest/download/nucleus-v${version}-windows-x86_64.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AlexAltea/nucleus/releases/download/v$version/nucleus-v$version-win64.zip",
+                "extract_dir": "nucleus-v$version-win64"
+            }
+        }
     }
 }

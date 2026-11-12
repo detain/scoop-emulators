@@ -6,7 +6,7 @@
     "architecture": {
         "32bit": {
             "url": "https://problemkaputt.de/psxtny.zip",
-            "hash": "7e76d34b898680498721fb0230856859cfb30d4a3638c53f69a3c15aeca01eb7"
+            "hash": "42abf1a11aadd9d693fb363e3da62b7925f431fa0f1e073f5899630ca588c02f"
         }
     },
     "bin": [
@@ -20,6 +20,10 @@
         "replace": "${ver}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "32bit": {
+                "url": "https://problemkaputt.de/psxtny.zip"
+            }
+        }
     }
 }

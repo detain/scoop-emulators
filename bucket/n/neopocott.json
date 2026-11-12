@@ -8,29 +8,16 @@
     ],
     "version": "0.38b",
     "description": "NeoPocott is an SNK Neo Geo Pocket and Neo Geo Pocket Color emulator.",
-    "homepage": "http://neopocott.emuunlim.com",
-    "license": "GPL-2.0-only",
+    "homepage": "https://neopocott.emuunlim.com",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/neopocott/0.38b.7z",
     "hash": "569e1fc8b76999a62ce632fe06889b94366711015295ae13b122811793597c76",
-    "bin": [
-        "neopocott.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/neopocott/0.38b.7z",
-            "hash": "569e1fc8b76999a62ce632fe06889b94366711015295ae13b122811793597c76"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/neopocott/0.38b.7z",
-            "hash": "569e1fc8b76999a62ce632fe06889b94366711015295ae13b122811793597c76"
-        }
-    },
+    "bin": "NeoPocott.exe",
     "checkver": {
-        "url": "http://neopocott.emuunlim.com",
-        "regex": "href=\".*neopocott-(.*).zip\""
+        "url": "https://consolo.is.cc/emu/neopocott/",
+        "regex": "([\\d.]+[a-z]?)\\.7z"
     },
     "autoupdate": {
-        "url": "http://neopocott.emuunlim.com/downloads/neopocott.zip",
-        "hash": "sha256"
+        "url": "https://consolo.is.cc/emu/neopocott/$version.7z"
     }
 }

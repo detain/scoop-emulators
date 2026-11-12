@@ -7,19 +7,28 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/nogmb/emulator_screen_01.jpg"
     ],
     "version": "2.5",
-    "description": "No$gmb is a emulator for gameboy, pocket gameboy, super gameboy, and color gameboy, like the other no$-emulators it's including a comfortable debugger, so that it's more a serious development tool than just a emulator.",
-    "homepage": "http://problemkaputt.de/index.htm",
-    "license": "Shareware",
-    "url": "https://consolo.is.cc/emu/nogmb/2.5.7z",
-    "hash": "4b8ef52835e34821fc9b5c64e561d2533289c3addb0cff1d9eb56733abdae1fa",
+    "description": "Nintendo Game Boy, Game Boy Color and Super Game Boy emulator and debugger (nocash)",
+    "homepage": "https://problemkaputt.de/gmb.htm",
+    "license": "Freeware",
+    "url": "https://problemkaputt.de/no%24gmb.zip",
+    "hash": "18bd77da6423b0a924a50c34c396d481136d104854a8e6bdbbeec8fdc94702f9",
     "bin": [
-        "GMB.BAT"
+        [
+            "NO$GMB.EXE",
+            "nogmb"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "NO$GMB.EXE",
+            "no$gmb"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/nogmb/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://problemkaputt.de/gmb.htm",
+        "regex": "NO\\$GMB - version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/nogmb/$version.7z"
+        "url": "https://problemkaputt.de/no%24gmb.zip"
     }
 }
