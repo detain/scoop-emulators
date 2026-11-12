@@ -8,15 +8,14 @@
     ],
     "version": "073u1",
     "description": "BSNES Classic is a Nintendo Entertainment System, Famicom, SNES, Super Famicom, Game Boy Color, BS-X Satellaview and Sufami Turbo emulator based on BSNES.",
-    "homepage": "http://github.com/awjackson/bsnes-classic",
+    "homepage": "https://github.com/awjackson/bsnes-classic",
     "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/bsnesclassic/073u1.7z",
     "hash": "55879294b77d39a2b82812ca9d722fb4ebca23bb3dc1f7e866ff27455bf7b25a",
-    "bin": [
-        "bsnes.exe"
-    ],
+    "bin": "bsnes.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/bsnesclassic/"
+        "url": "https://consolo.is.cc/emu/bsnesclassic/",
+        "regex": "([\\d.]+(?:u\\d+)?)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/bsnesclassic/$version.7z"

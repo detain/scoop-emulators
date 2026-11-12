@@ -1,5 +1,5 @@
 {
-    "version": "v7.1",
+    "version": "7.1",
     "description": "A remapping program for Nintendo Switch controllers",
     "homepage": "https://github.com/Davidobot/BetterJoy",
     "license": "MIT",
@@ -29,15 +29,12 @@
         "BetterJoyForCemu.exe.config",
         "settings"
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/Davidobot/BetterJoy/releases/latest",
-        "script": [
-            "$version = json_path $page $.tag_name",
-            "$file = json_path $page $.assets[0].name",
-            "Write-Output \"$version $file\""
-        ],
-        "regex": "(?<version>[^ ]+) (?<file>.*)",
-        "replace": "${version}"
-    },
-    "autoupdate": {}
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Davidobot/BetterJoy/releases/download/v$version/BetterJoy_v$version.zip"
+            }
+        }
+    }
 }

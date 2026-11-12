@@ -2,7 +2,7 @@
     "version": "115",
     "description": "Nintendo SNES (Super Nintendo Entertainment System) emulator",
     "homepage": "https://github.com/bsnes-emu/bsnes",
-    "license": "GPL-2.0-only",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/bsnes-emu/bsnes/releases/download/v115/bsnes_v115-windows.zip",
@@ -21,11 +21,13 @@
         "Firmware",
         "settings.bml"
     ],
-    "checkver": {
-        "github": "https://github.com/bsnes-emu/bsnes",
-        "regex": ".*bsnes_v(?<version>[\\d\\w.]+)-windows.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bsnes-emu/bsnes/releases/download/v$version/bsnes_v$version-windows.zip"
+            }
+        },
         "extract_dir": "bsnes_v$version-windows"
     }
 }

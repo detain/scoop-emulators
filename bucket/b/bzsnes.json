@@ -8,25 +8,16 @@
     ],
     "version": "1.51",
     "description": "bZSNES is a Nintendo SNES and Super Famicom emulator based on BSNES containing the optional inaccuracies of ZSNES. It was released as an April Fool's joke.",
-    "homepage": "http://byuu.org/",
+    "homepage": "https://byuu.org/",
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/bzsnes/1.51.7z",
     "hash": "96c798bdeea6851c62a3e612fddb876b96ce2cd96ec04275d2eae61102b05549",
-    "bin": [
-        "bzsnes.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/bzsnes/1.51.7z",
-            "hash": "96c798bdeea6851c62a3e612fddb876b96ce2cd96ec04275d2eae61102b05549"
-        }
-    },
+    "bin": "bzsnes.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/byuu/bass/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://consolo.is.cc/emu/bzsnes/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {},
-    "env": {
-        "PATH": "{PATH};$dir"
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/bzsnes/$version.7z"
     }
 }

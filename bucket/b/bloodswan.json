@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/bloodswan/0.2a.7z",
     "hash": "264ed70282ec456ee5042ec3aebe32b6808969bef05104692a22fe776fb97833",
-    "bin": [
-        "BLooDsWan.exe"
-    ],
+    "bin": "BLooDsWan.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/bloodswan/"
+        "url": "https://consolo.is.cc/emu/bloodswan/",
+        "regex": "([\\d.]+[a-z]?)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/bloodswan/$version.7z"

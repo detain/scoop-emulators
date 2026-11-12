@@ -16,8 +16,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/14287310098/artifacts/download?file_type=archive#dl.zip",
-            "hash": "c9230dd59bccbf0eda06a97f825834176d1aa9f28d37c5b134a9977ec636aa3c"
+            "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/17660009348/artifacts/download?file_type=archive#/dl.zip",
+            "hash": "ae16cb2a5f563930070b6f67a53eb4d81756c27e559a2e5867664276c6a2af5c"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" | Out-Null }",
@@ -94,13 +94,17 @@
             "$date = json_path $page $.pipelines[0].created_at",
             "$url = 'https://gitlab.com/TASVideos/BizHawk/-/pipelines/' + $id + '.json'",
             "$cont = (Invoke-WebRequest $url).Content | ConvertFrom-Json",
-            "$run = $cont.details.stages[2].groups[1].jobs[0].id",
+            "$run = ($cont.details.stages.groups.jobs | Where-Object { $_.name -eq 'package_devbuild_windows' } | Select-Object -First 1).id",
             "Write-Output \"$iid $date $hash $run\""
         ],
         "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>[^ ]+) (?<run>.*)",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://gitlab.com/TASVideos/BizHawk/-/jobs/$matchRun/artifacts/download?file_type=archive#/dl.zip"
+            }
+        }
     }
 }

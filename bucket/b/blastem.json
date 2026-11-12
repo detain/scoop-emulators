@@ -7,21 +7,43 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/blastem/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/08/BlastEm-SEGA-Genesis-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/BlastEm-SEGA-Genesis-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/BlastEm-SEGA-Genesis-Emulator-Pic-03.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/BlastEm-SEGA-Genesis-Emulator-Pic-04.png,https://cdn.emulationking.com/wp-content/uploads/2016/08/BlastEm-SEGA-Genesis-Emulator-Pic-05.png"
     ],
-    "version": "0.4.1",
-    "description": "BlastEM is an extremely accurate SEGA Genesis emulator. Thanks to its accuracy, it has support for almost every Genesis game. BlastEM is heavily optimized and can run on weaker systems.",
-    "homepage": "http://rhope.retrodev.com/files/blastem.html",
+    "version": "1.0.0",
+    "description": "Highly accurate Sega Genesis/Mega Drive emulator",
+    "homepage": "https://www.retrodev.com/blastem/",
     "license": "GPL-3.0-only",
-    "url": "https://consolo.is.cc/emu/blastem/0.4.1.7z",
-    "hash": "1ae4efa8aa2517fa97253a5737c2d72091cc2da0aeaa7d58ccadc15c718dd314",
-    "bin": [
-        "blastem.exe"
+    "architecture": {
+        "64bit": {
+            "url": "https://www.retrodev.com/blastem/blastem-win64-1.0.0.zip",
+            "hash": "fa9d988e2c7d0eb7fa2ccda8337918c46b9dcd3106222fbcdb0020505f121908",
+            "extract_dir": "blastem-win64-1.0.0"
+        },
+        "32bit": {
+            "url": "https://www.retrodev.com/blastem/blastem-win32-1.0.0.zip",
+            "hash": "24285a794eff4c8cded37ee5b5bcb186a4505b05070872fd207ccd36087b28cd",
+            "extract_dir": "blastem-win32-1.0.0"
+        }
+    },
+    "bin": "blastem.exe",
+    "shortcuts": [
+        [
+            "blastem.exe",
+            "BlastEm"
+        ]
     ],
     "checkver": {
-        "url": "http://rhope.retrodev.com/files/blastem.html",
-        "regex": "Latest version: (\\d+\\.\\d+\\.\\d+)"
+        "url": "https://www.retrodev.com/blastem/downloads.html",
+        "regex": "blastem-win64-([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "http://rhope.retrodev.com/files/blastem.html"
-    },
-    "binroot": ""
+        "architecture": {
+            "64bit": {
+                "url": "https://www.retrodev.com/blastem/blastem-win64-$version.zip",
+                "extract_dir": "blastem-win64-$version"
+            },
+            "32bit": {
+                "url": "https://www.retrodev.com/blastem/blastem-win32-$version.zip",
+                "extract_dir": "blastem-win32-$version"
+            }
+        }
+    }
 }

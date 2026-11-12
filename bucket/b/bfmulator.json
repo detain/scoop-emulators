@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/bfmulator/2.07.7z",
     "hash": "a4c12dc921759a5e84b883e08874a4c53e63ce6af751dd2d1a1cb57c792537e3",
-    "bin": [
-        "BFMulator.exe"
-    ],
+    "bin": "BFMulator.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/bfmulator/"
+        "url": "https://consolo.is.cc/emu/bfmulator/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/bfmulator/$version.7z"
