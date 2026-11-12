@@ -1,23 +1,29 @@
 {
     "version": "0.8.3",
-    "description": "A cross-platform Sony PlayStation 1 emulator written in Rust.",
+    "description": "Sony PlayStation emulator written in Rust",
     "homepage": "https://github.com/kaezrr/starpsx",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/kaezrr/starpsx/releases/download/v0.8.3/StarPSX-0.8.3-windows-x86_64.zip",
-            "hash": "c38c3f77f9f2c85cc00a8611420aa335048ee0826249c23b137384d368e5fdf8"
+            "hash": "c38c3f77f9f2c85cc00a8611420aa335048ee0826249c23b137384d368e5fdf8",
+            "extract_dir": "StarPSX-0.8.3-windows-x86_64"
         }
     },
-    "bin": "StarPSX.exe",
+    "bin": "starpsx.exe",
     "shortcuts": [
         [
-            "StarPSX.exe",
+            "starpsx.exe",
             "StarPSX"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/kaezrr/starpsx"
-    },
-    "autoupdate": {}
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kaezrr/starpsx/releases/download/v$version/StarPSX-$version-windows-x86_64.zip",
+                "extract_dir": "StarPSX-$version-windows-x86_64"
+            }
+        }
+    }
 }

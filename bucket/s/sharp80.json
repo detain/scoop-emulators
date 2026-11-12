@@ -6,20 +6,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sharp80/emulator_screen_01.jpg"
     ],
     "version": "1.1.0.99",
-    "description": "This is a full-featured emulator of a TRS-80 Model III microcomputer. It is free of charge and all source code is publically available.",
-    "homepage": "http://www.sharp80.com/",
-    "license": "MIT",
+    "description": "Tandy TRS-80 Model III emulator",
+    "homepage": "https://sharp80.com/",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/sharp80/1.1.0.99.7z",
     "hash": "e0b98b1d8009379dab831c1c1d7232c440a053688bdfee2ff8109978ac57c810",
-    "bin": [
-        "sharp80.exe"
+    "bin": "Sharp80.exe",
+    "shortcuts": [
+        [
+            "Sharp80.exe",
+            "Sharp80"
+        ]
     ],
     "checkver": {
-        "url": "http://www.sharp80.com/downloads",
-        "regex": "sharp80_(\\d+\\.\\d+\\.\\d+\\.\\d+)_win32\\.zip"
+        "url": "https://consolo.is.cc/emu/sharp80/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "http://www.sharp80.com/downloads/sharp80.zip",
-        "hash": "sha256:101517d6dd69af4f4b6dcdce6e4d6f56ed6a39e85c46451d925b7993871c1a07"
+        "url": "https://consolo.is.cc/emu/sharp80/$version.7z"
     }
 }

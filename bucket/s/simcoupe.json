@@ -6,25 +6,38 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/simcoupe/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/simcoupe/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "SimCoupe is a SAM Coupé emulator for Windows, Linux and Mac OS X.",
-    "homepage": "http://simcoupe.org",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/simcoupe/1.0.7z",
-    "hash": "12e55c1cc0bed30e1c2633f15029921320256a26641ead8a66f9edfe5def3c76",
-    "bin": [
-        "simcoupe.exe"
-    ],
+    "version": "1.2.17",
+    "description": "MGT SAM Coupé emulator",
+    "homepage": "https://simonowen.com/simcoupe/",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://consolo.is.cc/emu/simcoupe/1.0.7z",
-            "hash": "12e55c1cc0bed30e1c2633f15029921320256a26641ead8a66f9edfe5def3c76"
+            "url": "https://github.com/simonowen/simcoupe/releases/download/v1.2.17/SimCoupe-1.2.17-win_x64.zip",
+            "hash": "b6c61e9c0fc17848bde612e1b021520507759fa5142e458a5b79c2714c93396b"
+        },
+        "32bit": {
+            "url": "https://github.com/simonowen/simcoupe/releases/download/v1.2.17/SimCoupe-1.2.17-win_x86.zip",
+            "hash": "85e78e4c5b9917ca5ae6d1161ac0ce4df2a34a785c1425618ca59f6e1d35cc91"
         }
     },
+    "bin": "SimCoupe.exe",
+    "shortcuts": [
+        [
+            "SimCoupe.exe",
+            "SimCoupe"
+        ]
+    ],
     "checkver": {
-        "url": "https://simcoupe.org/latest.txt",
-        "regex": "simcoupe-(\\d+(?:\\.\\d+)*).zip",
-        "matchIndex": 1
+        "github": "https://github.com/simonowen/simcoupe"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/simonowen/simcoupe/releases/download/v$version/SimCoupe-$version-win_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/simonowen/simcoupe/releases/download/v$version/SimCoupe-$version-win_x86.zip"
+            }
+        }
+    }
 }

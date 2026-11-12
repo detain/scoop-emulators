@@ -5,20 +5,49 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/simh/emulator_screen_01.jpg"
     ],
-    "version": "3.9",
-    "description": "SIMH is a multi-system emulator for the following systems: Data General Nova, Eclipse : Digital Equipment Corporation PDP-1, PDP-4, PDP-7, PDP-8, PDP-9, PDP-10, PDP-11, PDP-15, VAX : GRI Corporation GRI-909, GRI-99 : IBM 1401, 1620, 1130,  7090/7094, System 3 : Interdata (Perkin-Elmer) 16b and 32b systems : Hewlett-Packard 2114, 2115, 2116, 2100, 21MX, 1000 : Honeywell H316/H516 : MITS Altair 8800, with both 8080 and Z80 : Royal-Mcbee LGP-30, LGP-21 : Scientific Data Systems SDS 940 : SWTP 6800.",
+    "version": "3.9-0",
+    "description": "Multi-system simulator for historical computers (DEC PDP/VAX, Data General, IBM, HP, Altair and more)",
     "homepage": "http://simh.trailing-edge.com/",
-    "license": "BSD-3-Clause",
-    "url": "https://consolo.is.cc/emu/simh/3.9.7z",
-    "hash": "07b02d71428fca26118af0c558c59008c836dc1b5bd0c5fd6bc08779c4bd0a50",
+    "license": "X11",
+    "url": "http://simh.trailing-edge.com/sources/archive/simhv39-0-exe.zip",
+    "hash": "e98bd5f86c0d15321c155781ace724201cb8790b6108951c8131e985338b4e38",
     "bin": [
-        "BIN/simhv39-0.exe"
+        "altair.exe",
+        "altairz80.exe",
+        "eclipse.exe",
+        "gri.exe",
+        "h316.exe",
+        "hp2100.exe",
+        "i1401.exe",
+        "i1620.exe",
+        "i7094.exe",
+        "ibm1130.exe",
+        "id16.exe",
+        "id32.exe",
+        "lgp.exe",
+        "nova.exe",
+        "pdp1.exe",
+        "pdp10.exe",
+        "pdp11.exe",
+        "pdp15.exe",
+        "pdp4.exe",
+        "pdp7.exe",
+        "pdp8.exe",
+        "pdp9.exe",
+        "s3.exe",
+        "sds.exe",
+        "swtp6800mp-a.exe",
+        "swtp6800mp-a2.exe",
+        "vax.exe",
+        "vax780.exe"
     ],
-    "extract_dir": "simhv39-0",
     "checkver": {
-        "url": "http://simh.trailing-edge.com/sources/README.TXT",
-        "regex": "SIMH V(\\d+\\.\\d+)",
-        "match_index": 1
+        "url": "http://simh.trailing-edge.com/sources/archive/",
+        "regex": "simhv(?<major>\\d)(?<minor>\\d+)-(?<patch>\\d+)-exe\\.zip",
+        "reverse": true,
+        "replace": "${major}.${minor}-${patch}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://simh.trailing-edge.com/sources/archive/simhv$matchMajor$matchMinor-$matchPatch-exe.zip"
+    }
 }

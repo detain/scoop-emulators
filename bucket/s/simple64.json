@@ -1,6 +1,6 @@
 {
     "version": "2024.12.1",
-    "description": "simple64 is an emulator based on a heavily modified version of mupen64plus-core, and ParaLLEl RSP/RDP. It includes a GUI, netplay, automatic updater, controller configuration, and much more! It should give you the best out-of-the-box experience available for N64 gaming. There are no plugins to download.",
+    "description": "Nintendo 64 emulator based on mupen64plus-core and ParaLLEl RSP/RDP",
     "homepage": "https://simple64.github.io/",
     "license": "GPL-3.0-only",
     "architecture": {
@@ -32,7 +32,7 @@
     ],
     "persist": "config",
     "checkver": {
-        "url": "https://api.github.com/repos/simple64/simple64/releases/latest",
+        "github": "https://api.github.com/repos/simple64/simple64/releases/latest",
         "script": [
             "$version = json_path $page $.tag_name",
             "$file = json_path $page $.assets[0].name",
@@ -41,5 +41,11 @@
         "regex": "v(?<version>[^ ]+) (?<file>.*)",
         "replace": "${version}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/simple64/simple64/releases/download/v$matchVersion/$matchFile"
+            }
+        }
+    }
 }

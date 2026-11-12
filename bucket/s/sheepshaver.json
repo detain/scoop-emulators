@@ -6,18 +6,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sheepshaver/emulator_screen_01.jpg"
     ],
     "version": "2013.05.06",
-    "description": "SheepShaver is a MacOS run-time environment for BeOS and Linux that allows you to run classic MacOS applications inside the BeOS/Linux multitasking environment.",
+    "description": "PowerPC classic Mac OS emulator (Mac OS 7.5.2 through 9.0.4)",
     "homepage": "http://sheepshaver.cebix.net/",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "url": "https://consolo.is.cc/emu/sheepshaver/2013.05.06.7z",
     "hash": "77d06184c719e2c601e7684371e88bbd685ec1bb7d3efea19ee88b13b78acbc8",
-    "bin": [
-        "SheepShaver.app/Contents/MacOS/SheepShaver.exe"
+    "bin": "SheepShaver.exe",
+    "shortcuts": [
+        [
+            "SheepShaver.exe",
+            "SheepShaver"
+        ]
     ],
     "checkver": {
-        "url": "http://www.emaculation.com/sheepshaverforum/viewforum.php?f=20",
-        "regex": "SheepShaver ([\\d.-]+)",
-        "index": 1
+        "url": "https://consolo.is.cc/emu/sheepshaver/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/sheepshaver/$version.7z"
+    }
 }

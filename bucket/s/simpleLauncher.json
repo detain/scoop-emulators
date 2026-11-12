@@ -1,25 +1,42 @@
 {
     "version": "5.8.4",
-    "description": "Simple Launcher is a high-performance, open-source emulator frontend built with C# and WPF.",
+    "description": "High-performance, open-source emulator frontend built with C# and WPF",
     "homepage": "https://github.com/drpetersonfernandes/SimpleLauncher",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release5.4.0/release_5.4.0_win-x64.zip",
-            "hash": "dc60ce940e4e7ffb597223f6c0f5f8e84e3b59f5b9fdda7ea27999f78e2db00c"
+            "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release5.8.4/release_5.8.4_win-x64.zip",
+            "hash": "3c1334a9136be3865d8a6df9d6881dde1847d6eef6b5da78f29927b43389e502"
+        },
+        "arm64": {
+            "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release5.8.4/release_5.8.4_win-arm64.zip",
+            "hash": "54908b5c43092332cbfdd00e93237f3e26a7adc98bf011225196d266bce50c24"
         }
     },
-    "bin": "Simple Launcher.exe",
+    "bin": [
+        [
+            "SimpleLauncher.exe",
+            "simplelauncher"
+        ]
+    ],
     "shortcuts": [
         [
-            "Simple Launcher.exe",
-            "SimpleLauncher"
+            "SimpleLauncher.exe",
+            "Simple Launcher"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/drpetersonfernandes/SimpleLauncher"
+        "github": "https://github.com/drpetersonfernandes/SimpleLauncher",
+        "regex": "release([\\d.]+)"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release$version/release_$version_win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/drpetersonfernandes/SimpleLauncher/releases/download/release$version/release_$version_win-arm64.zip"
+            }
+        }
     }
 }

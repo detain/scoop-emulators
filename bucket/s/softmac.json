@@ -1,12 +1,30 @@
 {
     "version": "8.20",
-    "description": "Macintosh Emulator for Microsoft Windows",
-    "homepage": "http://emulators.com/",
-    "license": "Unknown",
+    "description": "Apple Macintosh 68K emulator for Windows",
+    "homepage": "http://emulators.com/softmac.htm",
+    "license": "Freeware",
+    "notes": "SoftMac requires a Macintosh ROM image and a Mac OS startup disk.",
     "url": "http://emulators.com/freefile/softmac.zip",
     "hash": "fbfcaf6b41e5ec085ef94b42909f2528513d7f036044d2174b51f6718c6ba1be",
     "bin": [
-        "softmac.exe",
-        "softmac2.exe"
-    ]
+        "SOFTMAC.EXE",
+        "SOFTMAC2.EXE"
+    ],
+    "shortcuts": [
+        [
+            "SOFTMAC.EXE",
+            "SoftMac"
+        ],
+        [
+            "SOFTMAC2.EXE",
+            "SoftMac Xpress"
+        ]
+    ],
+    "checkver": {
+        "url": "http://emulators.com/softmac.htm",
+        "regex": "XP</font> version ([\\d.]+) Suite"
+    },
+    "autoupdate": {
+        "url": "http://emulators.com/freefile/softmac.zip"
+    }
 }

@@ -1,21 +1,31 @@
 {
     "version": "8b02e081",
-    "description": "ScummVM is a program which allows you to run certain classic graphical adventure and role-playing games",
+    "description": "ScummVM is a program which allows you to run certain classic graphical adventure and role-playing games (nightly build)",
     "homepage": "https://www.scummvm.org/",
-    "license": "GPL-3.0-only",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "32bit": {
-            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-7afe1d9b.zip",
-            "hash": "",
-            "extract_dir": "windows-x86-master-7afe1d9b"
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-8b02e081.zip",
+            "hash": "ddf44f59dc9166eb04828024c13705b962960e16a310d298997481124900f379",
+            "extract_dir": "windows-x86-master-8b02e081\\win32dist-mingw"
         },
         "64bit": {
-            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-7afe1d9b.zip",
-            "hash": "",
-            "extract_dir": "windows-x86-64-master-7afe1d9b"
+            "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-8b02e081.zip",
+            "hash": "3c2189f6c008b8695d0b653f8fb7ae5cef9b031d90d3bbd0772a6f7466841c0b",
+            "extract_dir": "windows-x86-64-master-8b02e081\\win32dist-mingw"
         }
     },
-    "bin": "win32dist-mingw/scummvm.exe",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\scummvm.ini\")) {",
+        "    New-Item \"$dir\\scummvm.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": [
+        [
+            "scummvm.exe",
+            "scummvm-nightly"
+        ]
+    ],
     "shortcuts": [
         [
             "scummvm.exe",
@@ -30,11 +40,18 @@
     ],
     "checkver": {
         "url": "https://buildbot.scummvm.org/dailybuilds/master/?C=M;O=D",
-        "regex": "windows-x86-64-master-([a-f0-9]{8}).zip"
+        "regex": "windows-x86-64-master-([a-f0-9]{8})\\.zip"
     },
     "autoupdate": {
-        "hash": {
-            "url": "$url.sha256"
+        "architecture": {
+            "32bit": {
+                "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-master-$version.zip",
+                "extract_dir": "windows-x86-master-$version\\win32dist-mingw"
+            },
+            "64bit": {
+                "url": "https://buildbot.scummvm.org/dailybuilds/master/windows-x86-64-master-$version.zip",
+                "extract_dir": "windows-x86-64-master-$version\\win32dist-mingw"
+            }
         }
     }
 }

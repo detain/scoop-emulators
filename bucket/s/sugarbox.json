@@ -6,21 +6,32 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/sugarbox/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/sugarbox/emulator_screen_01.jpg"
     ],
-    "version": "0.26",
-    "description": "Sugarbox is a emulator for Amstrad CPC.",
-    "homepage": "http://sugarbox.free.fr/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/sugarbox/0.26.7z",
-    "hash": "d759e8fe7e7da14454faddeba4f3b61efc5363f7ca91b5a04e304a083a271eb7",
-    "bin": [
-        "Sugarbox.exe"
-    ],
-    "checkver": {
-        "url": "http://sugarbox.free.fr/Sugarbox_LATEST_VERSION.txt",
-        "regex": "(\\d+\\.\\d+\\.\\d+)"
+    "version": "2.1.1",
+    "description": "Amstrad CPC emulator",
+    "homepage": "https://github.com/Tom1975/SugarboxV2",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tom1975/SugarboxV2/releases/download/v2.1.1/Sugarbox-2.1.1-win64.7z",
+            "hash": "5ecee11006d3a7a2016171dc824691e80dc4f1c4907776a99fb4af569d105f0d",
+            "extract_dir": "Sugarbox-2.1.1-win64"
+        }
     },
+    "bin": "Sugarbox.exe",
+    "shortcuts": [
+        [
+            "Sugarbox.exe",
+            "Sugarbox"
+        ]
+    ],
+    "persist": "Sugarbox.ini",
+    "checkver": "github",
     "autoupdate": {
-        "url": "http://sugarbox.free.fr/Sugarbox_LATEST_VERSION.zip",
-        "hash": "sha256:4dd3f50d7c903e92945f6f0cb6c4ad6e79c6d4b1887a4a3dc07959d108be51bb"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Tom1975/SugarboxV2/releases/download/v$version/Sugarbox-$version-win64.7z",
+                "extract_dir": "Sugarbox-$version-win64"
+            }
+        }
     }
 }

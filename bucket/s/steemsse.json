@@ -5,9 +5,9 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.2/v4.2.0/Steem.SSE.4.2.0.Win64.D3D.R1.zip",
-            "hash": "sha1:9ebeefb06debc73fe0cabf2d016e03e2ff73b687",
-            "extract_dir": "Steem.SSE.4.2.0.Win64.D3D",
+            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.2/v4.2.1/Steem.SSE.4.2.1.Win64.D3D.R3.zip",
+            "hash": "sha1:d8520dd422e5877d8ab7fcbdb53e81fe615a073a",
+            "extract_dir": "Steem.SSE.4.2.1.Win64.D3D",
             "bin": "Steem64D3D.exe",
             "shortcuts": [
                 [
@@ -17,9 +17,9 @@
             ]
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.2/v4.2.0/Steem.SSE.4.2.0.Win32.D3D.R1.zip",
-            "hash": "sha1:36a66c0500b6ebe4c630309588cf176ac00d8507",
-            "extract_dir": "Steem.SSE.4.2.0.Win32.D3D",
+            "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%204.2/v4.2.1/Steem.SSE.4.2.1.Win32.D3D.R3.zip",
+            "hash": "sha1:94370d416f528b83cea111d307bee1c2c4728e30",
+            "extract_dir": "Steem.SSE.4.2.1.Win32.D3D",
             "bin": "Steem32D3D.exe",
             "shortcuts": [
                 [
@@ -31,9 +31,18 @@
     },
     "checkver": {
         "url": "https://sourceforge.net/projects/steemsse/rss",
-        "re": "/Steem\\.SSE\\.(?<version>[\\d.]+)\\.Win64\\.(?<tag>D3D\\.R[\\d\\.]+)\\.zip"
+        "regex": "/Steem\\.SSE\\.(?<version>[\\d.]+)\\.Win64\\.(?<tag>D3D[._]R\\d+)\\.zip"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%20$majorVersion.$minorVersion/v$version/Steem.SSE.$version.Win64.$matchTag.zip",
+                "extract_dir": "Steem.SSE.$version.Win64.D3D"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/steemsse/Steem%20SSE%20$majorVersion.$minorVersion/v$version/Steem.SSE.$version.Win32.$matchTag.zip",
+                "extract_dir": "Steem.SSE.$version.Win32.D3D"
+            }
+        }
     }
 }

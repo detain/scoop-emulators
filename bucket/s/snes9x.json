@@ -2,7 +2,10 @@
     "version": "1.63",
     "description": "Nintendo SNES (Super Nintendo Entertainment System) emulator",
     "homepage": "http://www.snes9x.com/",
-    "license": "Non-commercial",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/snes9xgit/snes9x/blob/master/LICENSE"
+    },
     "architecture": {
         "32bit": {
             "url": "https://github.com/snes9xgit/snes9x/releases/download/1.63/snes9x-1.63-win32.zip",
@@ -52,5 +55,14 @@
     "checkver": {
         "github": "https://github.com/snes9xgit/snes9x"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/snes9xgit/snes9x/releases/download/$version/snes9x-$version-win32.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/snes9xgit/snes9x/releases/download/$version/snes9x-$version-win32-x64.zip"
+            }
+        }
+    }
 }
