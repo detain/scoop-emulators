@@ -7,16 +7,15 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpspemu/emulator_screen_01.jpg"
     ],
     "version": "r555",
-    "description": "CPSPEmu is a Sony Playstation Portable emulator.",
+    "description": "Sony PlayStation Portable emulator",
     "homepage": "http://pspemu.soywiz.com",
-    "license": "GPL-3.0-or-later",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/cpspemu/r555.7z",
     "hash": "18e3369dca12c451f6c632cc2905861be3c5281a6fc58c6688a6e4e3c3b1199f",
-    "bin": [
-        "cspspemu.exe"
-    ],
+    "bin": "cspspemu.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/cpspemu/"
+        "url": "https://consolo.is.cc/emu/cpspemu/",
+        "regex": "(r\\d+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/cpspemu/$version.7z"

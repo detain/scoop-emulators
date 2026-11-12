@@ -6,28 +6,34 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpcemu/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpcemu/emulator_screen_01.jpg"
     ],
-    "version": "1.7",
-    "description": "CPCEMU emulates an Amstrad CPC on your computer. You need at least an AT 386 with VGA graphics.",
-    "homepage": "http://www.cpc-emu.org/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
-    "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef",
+    "version": "3.0.2",
+    "description": "Amstrad CPC emulator",
+    "homepage": "https://cpc-emu.org/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://cpc-emu.org/licence.html"
+    },
+    "url": "https://cpc-emu.org/Release/2025-04-24/cpcemu_portable-win32-x86-3.0.2.zip",
+    "hash": "fa2cde7da210b0db7faf945f3550a2fb9a811df14dc8391d5833b810587ab54e",
+    "extract_dir": "cpcemu-3.0.2",
     "bin": [
-        "CPCemu.exe"
+        [
+            "cpcemu_portable.exe",
+            "cpcemu"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
-            "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/cpcemu/1.7.7z",
-            "hash": "f21b99399a53f214d48d7518b2567f8e13ce9480a86e8e61aadf4dd90a604eef"
-        }
-    },
+    "shortcuts": [
+        [
+            "cpcemu_portable.exe",
+            "CPCemu"
+        ]
+    ],
     "checkver": {
-        "url": "http://www.cpc-emu.org/download/",
-        "regex": "href=\"CPCemu-v(\\d+\\.\\d+).zip\""
+        "url": "https://cpc-emu.org/download.html",
+        "regex": "Release/(?<date>[\\d-]+)/cpcemu_portable-win32-x86-(?<version>[\\d.]+)\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://cpc-emu.org/Release/$matchDate/cpcemu_portable-win32-x86-$version.zip",
+        "extract_dir": "cpcemu-$version"
+    }
 }

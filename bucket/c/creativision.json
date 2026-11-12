@@ -5,21 +5,34 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/creativision/emulator_screen_01.jpg"
     ],
-    "version": "2016.04.24",
-    "description": "creatiVision Emulator is an emulator for the VTech Creativision, Dick Smith Wizzard, Hanimex Rameses, VTech Laser 2001, Salora Manager and homebrew CSL Cartridge.",
+    "version": "2023.09.18",
+    "description": "VTech CreatiVision, Dick Smith Wizzard, Laser 2001 and Salora Manager emulator",
     "homepage": "https://sourceforge.net/projects/creativisionemulator/",
-    "license": "GPL-3.0-only",
-    "url": "https://consolo.is.cc/emu/creativision/2016.04.24.7z",
-    "hash": "c9e1fb3f051e2c56e9a6185ff99f1d00aad53e7b5bfd0c5fd7403f306518ab24",
+    "license": "Freeware",
+    "notes": "Place the BIOS files in $persist_dir\\bios",
+    "url": "https://downloads.sourceforge.net/project/creativisionemulator/creatiVision-230918.7z",
+    "hash": "sha1:e4ccacf24f37969be6a4c89fba699c6b5255a950",
+    "extract_dir": "cv230918-Win64",
     "bin": [
-        "creativision\\*"
+        [
+            "creatiVision.exe",
+            "creativision"
+        ]
     ],
+    "shortcuts": [
+        [
+            "creatiVision.exe",
+            "creatiVision"
+        ]
+    ],
+    "persist": "bios",
     "checkver": {
         "url": "https://sourceforge.net/projects/creativisionemulator/rss",
-        "regex": "Creativision Emulator (\\d+\\.\\d+\\.\\d+)"
+        "regex": "/creatiVision-(?<y>\\d{2})(?<m>\\d{2})(?<d>\\d{2})\\.7z",
+        "replace": "20${y}.${m}.${d}"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/creativisionemulator/files/latest/download/creativision.zip",
-        "hash": "sha256:9e69b4c90e4f4c1f973b66d6b191e6b1c6e3a6d60c34f19c55dbf1b8a3e99c00"
+        "url": "https://downloads.sourceforge.net/project/creativisionemulator/creatiVision-$matchY$matchM$matchD.7z",
+        "extract_dir": "cv$matchY$matchM$matchD-Win64"
     }
 }

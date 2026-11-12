@@ -6,21 +6,37 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpmbox/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpmbox/emulator_screen_01.jpg"
     ],
-    "version": "1.62b-win64",
-    "description": "CP/M Box is an Amstrad PCW series emulator.",
-    "homepage": "http://www.habisoft.com/pcw/",
+    "version": "1.12.0",
+    "description": "Amstrad PCW series emulator",
+    "homepage": "https://www.habisoft.com/pcw/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/cpmbox/1.62b-win64.7z",
-    "hash": "5e9aedee2d17dfb7d8479f426ab7e0b15fa3e5453d101490c1eb46f0a0d4b8f6",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.habisoft.com/pcw/pcw-112-win64.zip",
+            "hash": "735871240e3b72a3845abf67647c0b9c82b14f3dd639c3f5b0a9468994e71e93"
+        }
+    },
     "bin": [
-        "cpmbox.exe"
+        [
+            "PCW.exe",
+            "cpmbox"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PCW.exe",
+            "CPM Box"
+        ]
     ],
     "checkver": {
-        "url": "http://www.habisoft.com/pcw/",
-        "regex": "cpmbox-v(\\d+\\.\\d+\\.\\d+)",
-        "matchIndex": 1
+        "url": "https://www.habisoft.com/pcw/en.htm",
+        "regex": "<td>(?<version>[\\d.]+)<br><a href=\"(?<file>pcw-\\w+-win64\\.zip)\""
     },
     "autoupdate": {
-        "url": "http://www.habisoft.com/pcw/download.html"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.habisoft.com/pcw/$matchFile"
+            }
+        }
     }
 }

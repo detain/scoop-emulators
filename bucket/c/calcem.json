@@ -7,18 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/calcem/emulator_screen_01.jpg"
     ],
     "version": "0.51",
-    "description": "CalcEm is a Texas Instruments TI-82, TI-83 and TI-85 emulator.",
-    "homepage": "http://calcem.sourceforge.net/calcem/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/calcem/0.51.7z",
-    "hash": "1c0c49b0137dade47db17afb3404528792dd296a00fbf5011953f89198b712a7",
-    "bin": [
-        "CalcEm.exe"
+    "description": "Texas Instruments TI-82, TI-83 and TI-85 calculator emulator",
+    "homepage": "https://calcem.sourceforge.net/calcem/",
+    "license": "GPL-2.0-only",
+    "url": "https://downloads.sourceforge.net/project/calcem/calcem-binary/0.51/calcem051.zip",
+    "hash": "sha1:6a1aa4443c08988aeae250b0d9ecb0f62b33da27",
+    "bin": "CalcEm.exe",
+    "shortcuts": [
+        [
+            "CalcEm.exe",
+            "CalcEm"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/calcem/"
+        "sourceforge": "calcem/calcem-binary",
+        "regex": "([\\d.]+)/calcem\\d+\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/calcem/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/calcem/calcem-binary/$version/calcem$cleanVersion.zip"
     }
 }

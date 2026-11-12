@@ -7,7 +7,7 @@
     "hash": "0a098f7f6755442dca9324ce2f2256f6be281af8c442c9475b2896f2238faed9",
     "bin": "cen64.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/n64dev/cen64/actions/workflows/msys2-windows.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/n64dev/cen64/actions/workflows/msys2-windows.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",

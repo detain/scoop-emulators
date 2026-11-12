@@ -6,19 +6,20 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpcalive/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cpcalive/emulator_screen_01.jpg"
     ],
-    "version": "1.16",
+    "version": "1.20e",
     "description": "CpcAlive is a programming environment Amstrad CPC compatible for graphics animations creation. The originality of the emulator is that it can work with all media wich accept the Dos emulator \"Dosbox\".",
     "homepage": "http://www.cpcalive.com/cpcalive_en.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/cpcalive/1.16.7z",
-    "hash": "79f08d77196c497b9c0eeabfcbf03dc6a0369a478dd88b7414ff37d4950b4d84",
-    "bin": [
-        "CpcAlive (Vista,7).bat"
-    ],
+    "url": "http://www.cpcalive.com/CpcAliveForWindowsV1.20e.zip",
+    "hash": "3c501d985a3620970b1ed68bcb8625cfc7c843fccfbaed830decd30c02db4a46",
+    "extract_dir": "CpcAliveV1.20e",
+    "bin": "CpcAlive (Win10,11).bat",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/cpcalive/"
+        "url": "http://www.cpcalive.com/cpcalive_en.html",
+        "regex": "CpcAliveForWindowsV([\\d.]+[a-z]?)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/cpcalive/$version.7z"
+        "url": "http://www.cpcalive.com/CpcAliveForWindowsV$version.zip",
+        "extract_dir": "CpcAliveV$version"
     }
 }

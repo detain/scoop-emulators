@@ -6,18 +6,45 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/caprice32/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/caprice32/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "Caprice32 is a software emulator of the Amstrad CPC 8bit home computer series. The emulator faithfully imitates the CPC464, CPC664, and CPC6128 models. By recreating the operations of all hardware components at a low level, the emulator achieves a high degree of compatibility with original CPC software.",
-    "homepage": "http://sourceforge.net/projects/caprice32/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/caprice32/4.2.0.7z",
-    "hash": "9b902364cf96bcae583e819c700e23cc3260b8c0de7112d1af2e00ebe0379ffd",
+    "version": "4.6.0",
+    "description": "Amstrad CPC 464, 664 and 6128 emulator",
+    "homepage": "https://github.com/ColinPitrat/caprice32",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ColinPitrat/caprice32/releases/download/v4.6.0/cap32-win64.zip",
+            "hash": "eab70906671a06bee9834376bb787f2cc4f48b6aa014135f41bdd298e02b40dc",
+            "extract_dir": "release\\cap32-win64"
+        },
+        "32bit": {
+            "url": "https://github.com/ColinPitrat/caprice32/releases/download/v4.6.0/cap32-win32.zip",
+            "hash": "fd07dfc962ca24e62eef99b5bfbc6ecf40836e8070939f53f8252cab147f69ef",
+            "extract_dir": "release\\cap32-win32"
+        }
+    },
     "bin": "cap32.exe",
+    "shortcuts": [
+        [
+            "cap32.exe",
+            "Caprice32"
+        ]
+    ],
+    "persist": "cap32.cfg",
     "checkver": {
-        "url": "https://sourceforge.net/projects/caprice32/rss?path=/caprice32",
-        "pattern": "<title>caprice32 ([\\d.]+) released<\\/title>"
+        "github": "https://api.github.com/repos/ColinPitrat/caprice32/releases",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ColinPitrat/caprice32/releases/download/v$version/cap32-win64.zip",
+                "extract_dir": "release\\cap32-win64"
+            },
+            "32bit": {
+                "url": "https://github.com/ColinPitrat/caprice32/releases/download/v$version/cap32-win32.zip",
+                "extract_dir": "release\\cap32-win32"
+            }
+        }
     }
 }

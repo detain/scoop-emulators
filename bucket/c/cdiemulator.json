@@ -6,19 +6,33 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/cdiemulator/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/cdiemulator/emulator_screen_01.jpg"
     ],
-    "version": "0.5.3beta2",
-    "description": "CCS64 is a Commodore 64 Emulator for PC and also in the future other platforms. It was developed by me, Per Håkan Sundell, as my Master Thesis at my university in 1995 and have been expanded a lot since then. My personal  interest in the C64 has been very intensive since 1983 when I was spending nearly all my time with it, and I was deeply involved in the so called 'Scene'. When I later in 1987 bought my Amiga 500, I missed the old good times I had with my C64 and since then I have tried my very best to make all the old programs to work on my new machines.",
+    "version": "0.5.3-beta10",
+    "description": "Philips CD-i emulator (time-limited free edition)",
     "homepage": "http://www.cdiemu.org/",
-    "license": "Shareware (Limited edition)",
-    "url": "https://consolo.is.cc/emu/cdiemulator/0.5.3beta2.7z",
-    "hash": "d2198beac18842fa1678d9a75f05d7bf0c31c917f315f4993220c106bae7ae99",
+    "license": "Shareware",
+    "notes": "The free Limited edition builds stop working on a set date; update to the newest beta when that happens.",
+    "url": "http://www.cdiemu.org/download/cdiemu-0.5.3-beta10.zip",
+    "hash": "f80e6e057197a24df11557e3424deb779899925376c97a69282cf3b7e79af860",
+    "installer": {
+        "script": "Get-ChildItem \"$dir\\wcdiemu-v*.exe\" | Rename-Item -NewName 'wcdiemu.exe'"
+    },
     "bin": [
-        "wcdiemu-v053b2.exe"
+        [
+            "wcdiemu.exe",
+            "cdiemu"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "wcdiemu.exe",
+            "CD-i Emulator"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/cdiemulator/"
+        "url": "http://www.cdiemu.org/site/download.htm",
+        "regex": "cdiemu-([\\d.]+-beta\\d+)\\.zip</A></TD>\\s*<TD>[^<]*Limited edition, will stop working"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/cdiemulator/$version.7z"
+        "url": "http://www.cdiemu.org/download/cdiemu-$version.zip"
     }
 }

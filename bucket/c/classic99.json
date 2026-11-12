@@ -6,28 +6,28 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/classic99/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/classic99/emulator_screen_01.jpg"
     ],
-    "version": "3.94",
-    "description": "Classic99 is an open-source Texas Instruments TI-99/4A home computer emulator for Windows.",
-    "homepage": "http://www.harmlesslion.com/classic99",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/classic99/3.94.7z",
-    "hash": "b24345e6b1dc621dcce6d7a5fc4b1cb407c128675012613427e385d6254f6cd5",
-    "bin": [
-        "classic99.exe"
-    ],
-    "architectures": [
-        "x64",
-        "ia32"
+    "version": "399.096",
+    "description": "Texas Instruments TI-99/4A home computer emulator",
+    "homepage": "https://github.com/tursilion/classic99",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/tursilion/classic99/raw/main/dist/Classic99%20Manual.pdf"
+    },
+    "url": "https://github.com/tursilion/classic99/raw/main/dist/classic99.zip",
+    "hash": "2908314671792eed1228e2e3d92d6ccf176cc9c82344a4cfac9f05060428176a",
+    "extract_dir": "classic99",
+    "bin": "classic99.exe",
+    "shortcuts": [
+        [
+            "classic99.exe",
+            "Classic99"
+        ]
     ],
     "checkver": {
-        "url": "http://www.harmlesslion.com/cgi-bin/checkver.pl?product=classic99",
-        "regex": "href=.*?Classic99.*?>(.*?)<",
-        "matchIndex": 1,
-        "splitter": " ",
-        "stripHTML": true
+        "url": "https://raw.githubusercontent.com/tursilion/classic99/main/readme.md",
+        "regex": "^([\\d.]+)"
     },
     "autoupdate": {
-        "url": "http://www.harmlesslion.com/cgi-bin/update.pl?product=classic99&version=__VERSION__",
-        "hash": "sha256"
+        "url": "https://github.com/tursilion/classic99/raw/main/dist/classic99.zip"
     }
 }

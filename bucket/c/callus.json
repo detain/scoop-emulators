@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/callus/0.42.7z",
     "hash": "7d00f05d8f7597d3169166f99420bb1c24a96d4511b2a45eb0c24f8b250b444b",
-    "bin": [
-        "callus95.exe"
-    ],
+    "bin": "callus95.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/callus/"
+        "url": "https://consolo.is.cc/emu/callus/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/callus/$version.7z"

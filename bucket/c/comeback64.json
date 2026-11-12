@@ -9,16 +9,18 @@
     "version": "0.9z",
     "description": "CB64 is a software emulator for the C64 Computer.",
     "homepage": "https://sourceforge.net/projects/comeback64/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/comeback64/0.9z.7z",
-    "hash": "dc8f71089c81003427669757e98a4af2c8645da50d62cda01564b68510c331bb",
-    "bin": [
-        "CB64.EXE"
-    ],
+    "license": "GPL-2.0-only",
+    "url": "https://downloads.sourceforge.net/project/comeback64/comeback64/cb6409z/cb6409z.zip",
+    "hash": "sha1:88e0186321cd6e0c0b6d739d110b7ab24acc7ee7",
+    "extract_dir": "cb6409z",
+    "bin": "CB64.EXE",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/comeback64/"
+        "sourceforge": "comeback64/comeback64",
+        "regex": "cb64(?<major>\\d)(?<minor>\\d+[a-z]*)/cb64",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/comeback64/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/comeback64/comeback64/cb64$cleanVersion/cb64$cleanVersion.zip",
+        "extract_dir": "cb64$cleanVersion"
     }
 }
