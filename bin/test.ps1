@@ -46,13 +46,16 @@ if ($ListFile) {
 
 $repo = (Resolve-Path "$PSScriptRoot\..").Path
 
-# 1. Syntax and file-style checks for the helper scripts (same scope as before).
+# 1. Syntax and file-style checks (CRLF, final newline, no trailing whitespace)
+#    for the helper scripts and every manifest.
 #    Pester is imported here rather than via #Requires: a script with
 #    '#Requires -Modules Pester' always exits 0, which would hide failures
 #    reported by the validator child processes.
 Import-Module Pester -MinimumVersion 5.2.0 -ErrorAction Stop
-$container = New-PesterContainer -Path "$env:SCOOP_HOME\test\Scoop-00File.Tests.ps1" -Data @{ TestPath = $PSScriptRoot }
-$pester = Invoke-Pester -Container $container -Output Detailed -PassThru
+$containers = foreach ($dir in $PSScriptRoot, "$repo\bucket") {
+    New-PesterContainer -Path "$env:SCOOP_HOME\test\Scoop-00File.Tests.ps1" -Data @{ TestPath = $dir }
+}
+$pester = Invoke-Pester -Container $containers -Output Detailed -PassThru
 if ($pester.FailedCount -gt 0) {
     Write-Host "$($pester.FailedCount) file test(s) failed" -ForegroundColor Red
     exit 1
