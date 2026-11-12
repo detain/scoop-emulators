@@ -2,29 +2,31 @@
     "version": "22.0",
     "description": "Cycle-accurate MSX emulator",
     "homepage": "https://openmsx.org/",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "notes": "User data are stored in C:\\Users\\[USERNAME]\\Documents\\openMSX",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openMSX/openMSX/releases/download/RELEASE_21_0/openmsx-21.0-windows-vc-x64-bin.zip",
-            "hash": "0a41664e7b2e3bdd195dd6bc804b9ca2e51bc6b02fb3b5507849e9edd22d7fe4"
+            "url": "https://github.com/openMSX/openMSX/releases/download/RELEASE_22_0/openmsx-22.0-windows-vc-x64-bin.zip",
+            "hash": "7168fe87d868915e49cca006a9e6132198cedf393be973b58d53fe0df286f7c9"
         }
     },
     "bin": "openmsx.exe",
     "shortcuts": [
         [
             "openmsx.exe",
-            "openMSX\\openMSX"
-        ],
-        [
-            "Catapult\\bin\\Catapult.exe",
-            "openMSX\\Catapult"
+            "openMSX"
         ]
     ],
     "checkver": {
-        "regex": "openmsx-([\\d.]+)-windows-vc-x64-bin\\.zip"
+        "github": "https://api.github.com/repos/openMSX/openMSX/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>RELEASE_[^/]+)/openmsx-(?<version>[\\d.]+)-windows-vc-x64-bin\\.zip"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/openMSX/openMSX/releases/download/$matchTag/openmsx-$version-windows-vc-x64-bin.zip"
+            }
+        }
     }
 }

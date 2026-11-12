@@ -1,35 +1,44 @@
 {
-    "version": "19.1-450-g0dcc41318",
-    "description": "Cycle-accurate MSX emulator (Development builds)",
-    "homepage": "https://openmsx.fixato.net/",
-    "license": "GPL-2.0-only",
-    "notes": "User data are stored in C:\\Users\\[USERNAME]\\Documents\\openMSX",
+    "version": "22.0-184-g45f172602",
+    "description": "Cycle-accurate MSX emulator (development version)",
+    "homepage": "https://openmsx.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "User data are stored in C:\\Users\\[USERNAME]\\Documents\\openMSX",
+        "Development builds come from GitHub Actions artifacts via nightly.link; artifacts expire after ~90 days."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://openmsx.fixato.net/builds/windows/x64/openmsx-19.1-450-g0dcc41318-windows-vc-x64-bin.zip",
-            "hash": "e219e6d3ad8aae753e3c6f5729c0ed1c67a71e394c932afb0885e216446248d3"
+            "url": "https://nightly.link/openMSX/openMSX/workflows/build_snapshots/master/openmsx-22.0-184-g45f172602-windows-vc-x64-bin.zip",
+            "hash": "7d6ff8a3a015ebdc9dea53cdadfeba1048b2c83e992384eb1b8c24ee2c00139e"
         }
     },
+    "pre_install": [
+        "Get-ChildItem \"$dir\\openmsx-*-bin.zip\" | ForEach-Object {",
+        "    Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal",
+        "}"
+    ],
     "bin": [
         [
             "openmsx.exe",
-            "openmex-dev"
+            "openmsx-dev"
         ]
     ],
     "shortcuts": [
         [
             "openmsx.exe",
-            "openMSX\\openMSX (dev)"
-        ],
-        [
-            "Catapult\\bin\\Catapult.exe",
-            "openMSX\\Catapult (dev)"
+            "openMSX (dev)"
         ]
     ],
     "checkver": {
-        "url": "https://openmsx.fixato.net/builds/windows/x64/",
-        "regex": "openmsx-(?<ver>[\\d.]+)-(?<build>[\\d]+)-g(?<commit>[^-]+)-windows-vc-x64-bin\\.zip",
-        "replace": "${ver}-${build}-g${commit}"
+        "url": "https://nightly.link/openMSX/openMSX/workflows/build_snapshots/master",
+        "regex": "master/openmsx-(?<version>[\\d.]+-\\d+-g[0-9a-f]+)-windows-vc-x64-bin\\.zip\""
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/openMSX/openMSX/workflows/build_snapshots/master/openmsx-$version-windows-vc-x64-bin.zip"
+            }
+        }
+    }
 }

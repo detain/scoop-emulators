@@ -4,42 +4,53 @@
     "homepage": "https://www.openttd.org/",
     "license": "GPL-2.0-or-later",
     "architecture": {
-        "32bit": {
+        "64bit": {
             "url": [
                 "https://cdn.openttd.org/openttd-releases/15.3/openttd-15.3-windows-win64.zip",
-                "https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
                 "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
                 "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
             ],
             "hash": [
                 "61c0a6a43d81008c7ff4330fb56351bbf66a980cdad041f1d0e08b51f2eeb34c",
-                "928fcf34efd0719a3560cbab6821d71ce686b6315e8825360fba87a7a94d7846",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
                 "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
                 "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
             ],
             "extract_dir": "openttd-15.3-windows-win64"
         },
-        "64bit": {
+        "32bit": {
             "url": [
                 "https://cdn.openttd.org/openttd-releases/15.3/openttd-15.3-windows-win32.zip",
-                "https://cdn.openttd.org/opengfx-releases/7.1/opengfx-7.1-all.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
                 "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
                 "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
             ],
             "hash": [
                 "3f092edc8f381c3d2d3a59458703899da6f876345b3850a3c76c0dffe68f0e74",
-                "928fcf34efd0719a3560cbab6821d71ce686b6315e8825360fba87a7a94d7846",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
                 "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
                 "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
             ],
             "extract_dir": "openttd-15.3-windows-win32"
+        },
+        "arm64": {
+            "url": [
+                "https://cdn.openttd.org/openttd-releases/15.3/openttd-15.3-windows-arm64.zip",
+                "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+            ],
+            "hash": [
+                "8b4eb443e425ed3046ca94336008fef78ce7c535fd607ae2ec79630e6d6dba96",
+                "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
+                "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
+                "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
+            ],
+            "extract_dir": "openttd-15.3-windows-arm64"
         }
     },
-    "pre_install": [
-        "Move-Item \"$dir\\opengfx-7.1.tar\" \"$dir\\baseset\"",
-        "Move-Item \"$dir\\opensfx-1.0.3.tar\" \"$dir\\baseset\"",
-        "Move-Item \"$dir\\openmsx-0.4.2.tar\" \"$dir\\baseset\""
-    ],
+    "pre_install": "Get-ChildItem \"$dir\\*.tar\" | Move-Item -Destination \"$dir\\baseset\" -Force",
     "bin": "openttd.exe",
     "shortcuts": [
         [
@@ -47,6 +58,39 @@
             "OpenTTD"
         ]
     ],
-    "checkver": "Download stable \\(([\\d\\.]+)\\)",
-    "autoupdate": {}
+    "checkver": {
+        "url": "https://cdn.openttd.org/openttd-releases/latest.yaml",
+        "regex": "version: ([\\d.]+)\\s+name: stable"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-releases/$version/openttd-$version-windows-win64.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$version-windows-win64"
+            },
+            "32bit": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-releases/$version/openttd-$version-windows-win32.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$version-windows-win32"
+            },
+            "arm64": {
+                "url": [
+                    "https://cdn.openttd.org/openttd-releases/$version/openttd-$version-windows-arm64.zip",
+                    "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
+                    "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
+                    "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
+                ],
+                "extract_dir": "openttd-$version-windows-arm64"
+            }
+        }
+    }
 }

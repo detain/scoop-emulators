@@ -7,19 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/oricutron/emulator_screen_01.jpg"
     ],
     "version": "1.2",
-    "description": "Oricutron is an Oric Atmos, Oric-1, Telestrat and Pravetz 8D emulator.",
-    "homepage": "https://consolo.is.cc/emulator/oricutron",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/oricutron/1.2.7z",
-    "hash": "483c7b5687b9f73a462d101d0e3e1a85daae39aa89a2ce58fa30cdcf1def94f1",
-    "bin": [
-        "oricutron.exe"
+    "description": "Tangerine Oric-1, Oric Atmos, Telestrat and Pravetz 8D emulator",
+    "homepage": "http://www.petergordon.org.uk/oricutron/",
+    "license": "GPL-2.0-only",
+    "url": "http://www.petergordon.org.uk/oricutron/files/Oricutron_win32_v12.zip",
+    "hash": "0efcac032645d246b9dc363097a64d97ae5eaab7db6d73d43e5102865f2e4781",
+    "bin": "oricutron.exe",
+    "shortcuts": [
+        [
+            "oricutron.exe",
+            "Oricutron"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/oricutron/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/oricutron/$version.7z"
-    }
+    "persist": [
+        "snapshots",
+        "tapes",
+        "teledisks",
+        "oricutron.cfg"
+    ]
 }
