@@ -6,19 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/infovectrex/emulator_screen_01.jpg"
     ],
     "version": "0.3j",
-    "description": "InfoVectrex is a Bandai Vectrex emulator.",
+    "description": "GCE Vectrex emulator",
     "homepage": "https://github.com/jay-kumogata/InfoVectrex",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/infovectrex/0.3j.7z",
-    "hash": "b2d7816db08b604fc710b56b4ac1526e9ffe21452174209e31506c4f418297be",
-    "bin": [
-        "InfoVectrex.exe"
-    ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/infovectrex/",
-        "regex": "([\\d.]+[a-zA-Z]*)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/infovectrex/$version.7z"
-    }
+    "license": "Apache-2.0",
+    "notes": "Place the Vectrex BIOS file (rom.dat, vecx format without header) next to InfoVectrex.exe in $dir",
+    "url": "https://raw.githubusercontent.com/jay-kumogata/InfoVectrex/31548f60388dbf6c0fbc5ce3cd26c81b6393b2c4/bin/InfoVectrex.exe",
+    "hash": "ea2f4d66215a56a11c228e60a9017557130231eaf5a968e0728ae8b236b01554",
+    "bin": "InfoVectrex.exe",
+    "shortcuts": [
+        [
+            "InfoVectrex.exe",
+            "InfoVectrex"
+        ]
+    ]
 }

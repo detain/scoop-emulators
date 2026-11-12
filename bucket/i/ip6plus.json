@@ -7,19 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ip6plus/emulator_screen_01.jpg"
     ],
     "version": "4.7",
-    "description": "iP6 Plus is an NEC PC-6001, PC-6001 mk2, PC-6601, PC-6601mk2SR, PC-6601SR, PC-6006SR and PC-6007SR emulator based on the iP6 emulator by Mr Ishioka.",
-    "homepage": "http://www.kisweb.ne.jp/personal/windy/computer/pc6001/ip6.html",
+    "description": "NEC PC-6001, PC-6001mkII, PC-6601 and PC-6601SR emulator based on iP6",
+    "homepage": "http://www.kisweb.ne.jp/personal/windy/pc6001/ip6plus/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ip6plus/4.7.7z",
-    "hash": "e12171344a9550b298d1ae07567c8b92aa91e158332d407e5d9d5c1289cfad51",
+    "notes": "PC-6001 series ROM images are required; place them in $persist_dir\\rom",
+    "url": "https://web.archive.org/web/20071006060707id_/http://www.kisweb.ne.jp/personal/windy/pc6001/ip6plus/P6-4.7.zip",
+    "hash": "018d49520d31c6cdfa71f71b367f857b5bd5622d96b5bca0e4738a9caa46cdac",
     "bin": [
-        "iP6.exe"
+        [
+            "iP6.exe",
+            "ip6plus"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/ip6plus/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ip6plus/$version.7z"
-    }
+    "shortcuts": [
+        [
+            "iP6.exe",
+            "iP6 Plus"
+        ]
+    ],
+    "persist": "rom"
 }

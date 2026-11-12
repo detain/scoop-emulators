@@ -6,19 +6,31 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/ip6/emulator_screen_01.jpg"
     ],
     "version": "0.63release6",
-    "description": "iP6 is an NEC PC-6001 emulator.",
+    "description": "NEC PC-6001 and PC-6001mkII emulator",
     "homepage": "http://p6ers.net/mm/pc-6001/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/ip6/0.63release6.7z",
-    "hash": "738693246e2a94e9bbcf77e366dd8a8f51a6c79f0d420d34aa04bdeae1908c09",
+    "notes": "PC-6001 ROM images (BASICROM.60, CGROM60.60, ...) are required; place them next to ip6Win.exe in $dir",
+    "url": "http://p6ers.net/mm/pc-6001/ip6win063rel6.lzh",
+    "hash": "87e6ef90358c9d0ef2af687067144a1ef1fe983d0db919ab6fc823880cb34377",
     "bin": [
-        "ip6Win.exe"
+        [
+            "ip6Win.exe",
+            "ip6"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ip6Win.exe",
+            "iP6"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/ip6/",
-        "regex": "([\\d.]+[a-zA-Z]*)\\s*\\.7z"
+        "url": "http://p6ers.net/mm/pc-6001/",
+        "regex": "ip6win(?<file>(?<major>\\d)(?<minor>\\d+)rel(?<rel>\\d+))\\.lzh",
+        "replace": "${major}.${minor}release${rel}",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/ip6/$version.7z"
+        "url": "http://p6ers.net/mm/pc-6001/ip6win$matchFile.lzh"
     }
 }

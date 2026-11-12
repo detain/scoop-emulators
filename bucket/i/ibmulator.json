@@ -1,28 +1,28 @@
 {
     "version": "0.20",
-    "description": "IBMulator is an IBM PC/XT (5150) emulator focusing on early hardware and software compatibility",
+    "description": "IBM PS/1 emulator focusing on early hardware and software compatibility",
     "homepage": "https://github.com/barotto/IBMulator",
-    "license": "GPL-3",
+    "license": "GPL-3.0-or-later",
+    "notes": "Requires an IBM PS/1 ROM set. On first launch ibmulator.ini is created in your user profile; set [system]:romset there.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/barotto/IBMulator/releases/download/v0.19/ibmulator-0.19-windows.x86_64.zip",
-            "hash": "sha256:bd87b931ff487e6d515ed8d40fd1388085c5d254add4d990363d9e95adf03014",
-            "extract_dir": "ibmulator-0.19-windows.x86_64"
+            "url": "https://github.com/barotto/IBMulator/releases/download/v0.20/ibmulator-0.20-windows.x86_64.zip",
+            "hash": "a7094df1cb35d2b59d39e2724dc8a49773f11ece8633dbe5a6cbb48a087caa40"
         }
     },
-    "bin": "IBMulator.exe",
+    "bin": "bin\\ibmulator.exe",
     "shortcuts": [
         [
-            "IBMulator.exe",
+            "bin\\ibmulator.exe",
             "IBMulator"
         ]
     ],
-    "persist": [
-        "ibmulator.ini",
-        "keymap.map"
-    ],
     "checkver": "github",
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/barotto/IBMulator/releases/download/v$version/ibmulator-$version-windows.x86_64.zip"
+            }
+        }
     }
 }
