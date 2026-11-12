@@ -7,13 +7,14 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/fbalpha/emulator_screen_01.jpg"
     ],
     "version": "0.2.97.43",
-    "description": "FB Alpha is an arcade emulator supporting the following platforms: Capcom CPS1, CPS2 and CPS3, Cave, Data East DEC-0, DEC-8 and DECO IC16 based games, Galaxian based hardware, Irem M62, M63, M72, M90, M92 and M107 hardware, Kaneko 16, Konami, SNK NeoGeo, NMK16, Pacman based hardware, PGM, Psikyo 68EC020 and SH-2 based hardware, Sega System 1, System 16 (and similar), System 18, X-Board and Y-Board, Super Kaneko Nova System, Toaplan 1 and 2, Taito F2, X, Z and others. It has miscellaneous drivers for lots of other hardware and has WIP console drivers for Sega Megadrive/Genesis, ColecoVision, Sega SG-1000, Sega Master System/Game Gear and also PC-Engine/TurboGrafx 16/SuperGrafx.",
+    "description": "Arcade emulator (CPS1/2/3, Neo Geo, Cave, Toaplan, Sega System 16 and more); predecessor of FinalBurn Neo",
     "homepage": "http://www.fbalpha.com",
     "license": "Freeware",
+    "notes": "FB Alpha is discontinued and its site is gone; downloads come from the Internet Archive (served gzip-wrapped, unpacked in pre_install). Consider fbneo instead.",
     "architecture": {
         "32bit": {
-            "url": "https://static.fbalpha.com/files/fba_029743.7z",
-            "hash": "6b74908a4740c0009222797ee9f8395a9712aad9e6946c861c350cb3e83be350",
+            "url": "https://web.archive.org/web/2022id_/https://static.fbalpha.com/files/fba_029743.7z#/fba.7z.gz",
+            "hash": "0aca5e62444baa90eec9a1c23ef9a48acb78def6cf3b307c3ccfca612a6949fb",
             "bin": "fba.exe",
             "shortcuts": [
                 [
@@ -23,8 +24,8 @@
             ]
         },
         "64bit": {
-            "url": "https://static.fbalpha.com/files/fba64_029743.7z",
-            "hash": "da779c1aa0018b8acd0d38a4a3bc7545c47805a771b7469ca5d77e7045569ae7",
+            "url": "https://web.archive.org/web/2023id_/https://static.fbalpha.com/files/fba64_029743.7z#/fba64.7z.gz",
+            "hash": "ce7afb417a6a3054086ebf89459d39fe0105b532b678d1efd398650800ff9276",
             "bin": "fba64.exe",
             "shortcuts": [
                 [
@@ -34,9 +35,19 @@
             ]
         }
     },
+    "pre_install": "Get-ChildItem \"$dir\\*.7z\" | ForEach-Object { Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal }",
     "checkver": {
-        "url": "https://www.fbalpha.com/downloads/",
+        "url": "https://web.archive.org/web/20240710050625/https://www.fbalpha.com/downloads/",
         "regex": "Current Version: <span class=\"bold\">(?<version>[\\d\\.]+)<"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://web.archive.org/web/2022id_/https://static.fbalpha.com/files/fba_$cleanVersion.7z#/fba.7z.gz"
+            },
+            "64bit": {
+                "url": "https://web.archive.org/web/2023id_/https://static.fbalpha.com/files/fba64_$cleanVersion.7z#/fba64.7z.gz"
+            }
+        }
+    }
 }

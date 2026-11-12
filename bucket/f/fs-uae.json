@@ -6,21 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/fsuae/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/fsuae/emulator_screen_01.jpg"
     ],
-    "version": "2.8.3-win64",
-    "description": "FS-UAE is an Amiga emulator for Windows, Linux and Mac OS X based on UAE/WinUAE, with a focus on emulating games. Features include emulation of Amiga 500, 1200, 4000, CD32 and CDTV, perfectly smooth scrolling on 50Hz displays, support for floppy images in ADF and IPF formats, CD-ROM images in ISO or BIN/CUE format, mounting folders on your computer as Amiga hard drives, support for Picasso 96 drivers for high-color and high-resolution Workbench displays, and more....",
-    "homepage": "http://fs-uae.net/",
+    "version": "3.2.35",
+    "description": "Commodore Amiga emulator based on UAE/WinUAE, focused on emulating games (A500, A1200, A4000, CD32, CDTV)",
+    "homepage": "https://fs-uae.net/",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/fs-uae/2.8.3-win64.7z",
-    "hash": "76fc35dce8c839281c663e6ce55465a7670558517c78098316198a27b0d6bbb5",
+    "url": "https://github.com/FrodeSolheim/fs-uae/releases/download/v3.2.35/FS-UAE_3.2.35_Windows_x86-64.zip",
+    "hash": "b402e2802d518a085c878be96c5c0a656fa3dec57dcf0019d226f3285069063e",
+    "extract_dir": "FS-UAE",
     "bin": [
-        "fs-uae"
+        [
+            "Windows\\x86-64\\fs-uae.exe",
+            "fs-uae"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Windows\\x86-64\\fs-uae.exe",
+            "FS-UAE"
+        ]
     ],
     "checkver": {
-        "url": "https://fs-uae.net/stable/latest-version.txt",
-        "regex": "([0-9\\.]+)"
+        "github": "https://github.com/FrodeSolheim/fs-uae"
     },
     "autoupdate": {
-        "url": "https://fs-uae.net/stable/latest/windows",
-        "hash": "sha256"
+        "url": "https://github.com/FrodeSolheim/fs-uae/releases/download/v$version/FS-UAE_$version_Windows_x86-64.zip",
+        "extract_dir": "FS-UAE"
     }
 }

@@ -4,35 +4,34 @@
     "homepage": "http://www.fceux.com",
     "license": "GPL-2.0-only",
     "architecture": {
-        "32bit": {
-            "url": "http://sourceforge.net/projects/fceultra/files/Binaries/2.6.4/fceux-2.6.4-win32.zip/download#/fceux.zip",
-            "hash": "780000c8c1ff47b609f0dc392beacd37680c1c3d285571459224f382def78e74",
+        "64bit": {
+            "url": "https://github.com/TASEmulators/fceux/releases/download/fceux-2.7.0/fceux-2.7.0-win64.zip",
+            "hash": "f851d608fc21bc7d289d25ef92cb29ca6c96a21c3df28f82aab2a8328df1f9ff",
             "bin": [
                 [
-                    "fceux.exe",
+                    "fceux64.exe",
                     "fceux"
                 ]
             ],
             "shortcuts": [
                 [
-                    "fceux.exe",
+                    "fceux64.exe",
                     "FCEUX"
                 ]
             ]
         },
-        "64bit": {
-            "url": "http://sourceforge.net/projects/fceultra/files/Binaries/2.6.4/qfceux-2.6.4-win64.zip/download#/qfceux.zip",
-            "hash": "6d38511c57d7c24c22ebd1268c70de9073fc24a2de150a50673cc88bc245f891",
-            "extract_dir": "bin",
+        "32bit": {
+            "url": "https://github.com/TASEmulators/fceux/releases/download/fceux-2.7.0/fceux-2.7.0-win32.zip",
+            "hash": "a8bb8bbc1cbd8b20f3433cc90b653d5809eb44f6e8c4d59812f2430cae193f34",
             "bin": [
                 [
-                    "qfceux.exe",
+                    "fceux.exe",
                     "fceux"
                 ]
             ],
             "shortcuts": [
                 [
-                    "qfceux.exe",
+                    "fceux.exe",
                     "FCEUX"
                 ]
             ]
@@ -56,6 +55,13 @@
         "regex": "fceux-([\\d.]+)"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TASEmulators/fceux/releases/download/fceux-$version/fceux-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/TASEmulators/fceux/releases/download/fceux-$version/fceux-$version-win32.zip"
+            }
+        }
     }
 }

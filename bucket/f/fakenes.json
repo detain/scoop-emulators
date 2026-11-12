@@ -7,23 +7,30 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/fakenes/emulator_screen_01.jpg"
     ],
     "version": "0.5.9b3",
-    "description": "FakeNES is a portable, Open Source Nintendo Entertainment System and Famicom emulator.",
-    "homepage": "http://fakenes.sourceforge.net/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/fakenes/0.5.9b3.7z",
-    "hash": "aa2cbcd13f164a5f9fa6fb83d7d4c85c12fc1dc3ddcb1193a318ff8e0240cced",
+    "description": "Nintendo Entertainment System and Famicom emulator",
+    "homepage": "https://fakenes.sourceforge.net/",
+    "license": "Zlib",
+    "url": "https://downloads.sourceforge.net/project/fakenes/FakeNES/0.5.9%20beta%203/fakenesw059b3.zip",
+    "hash": "sha1:680b0a6b91af1c0d9e7fcc4f00fe7cfe55078161",
     "bin": [
-        "fakenes.exe",
-        "fakenes"
-    ],
-    "checkver": {
-        "url": "http://downloads.sourceforge.net/project/fakenes/fakenes/",
-        "regex": "fakenes-(\\d+\\.\\d+)-src\\.tar\\.bz2",
-        "bin": [
-            {
-                "regex": "fakenes-(\\d+\\.\\d+)-bin\\.zip"
-            }
+        [
+            "fakenesw.exe",
+            "fakenes"
         ]
+    ],
+    "shortcuts": [
+        [
+            "fakenesw.exe",
+            "FakeNES"
+        ]
+    ],
+    "persist": "fakenesw.cfg",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/fakenes/rss?path=/FakeNES",
+        "regex": "FakeNES/(?<ver>[\\d.]+) beta (?<beta>\\d+)/fakenesw(?<clean>\\d+)b\\d+\\.zip",
+        "replace": "${ver}b${beta}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/fakenes/FakeNES/$matchVer%20beta%20$matchBeta/fakenesw$matchCleanb$matchBeta.zip"
+    }
 }

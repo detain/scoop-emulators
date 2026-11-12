@@ -6,20 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/futurepinball/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/futurepinball/emulator_screen_01.jpg"
     ],
-    "version": "-",
-    "description": "Future Pinball is a real time Pinball Development System. It allows you to design and play your very own pinball simulation in True real time 3D. It uses Advanced Physics to provide the best possible Simulation of a true to life pinball machine.",
+    "version": "1.9.1.20101231",
+    "description": "Real-time 3D pinball simulator and table design system",
     "homepage": "https://futurepinball.com/",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/futurepinball/1.9.1.20101231.7z",
     "hash": "0f2dce52cfc1c93aed40561446628216e3ac1826c39a8056c0f7fd7852e76a6a",
-    "bin": "FuturePinball.exe",
-    "autoupdate": {
-        
-    },
+    "bin": [
+        [
+            "Future Pinball.exe",
+            "futurepinball"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Future Pinball.exe",
+            "Future Pinball"
+        ]
+    ],
     "checkver": {
-        "url": "https://futurepinball.com/download.html",
-        "pattern": "Download Future Pinball v(\\d+\\.\\d+\\.\\d+\\.\\d+)",
-        "transform": "v$1",
-        "matchIndex": 0
+        "url": "https://consolo.is.cc/emu/futurepinball/",
+        "regex": "([\\d.]+)\\.7z"
+    },
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/futurepinball/$version.7z"
     }
 }

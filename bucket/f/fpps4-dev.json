@@ -4,30 +4,26 @@
         "logo:https://github.com/red-prig/fpPS4/raw/main/icons/logo.png"
     ],
     "version": "695-20241001-04cefd4",
-    "description": "PS4 compatibility layer (emulator) on Free Pascal. This project is at the beginning and started for fun.",
+    "description": "Sony PlayStation 4 compatibility layer written in Free Pascal (development version)",
     "homepage": "https://github.com/red-prig/fpPS4",
-    "license": "",
+    "license": "LGPL-2.1-only",
     "url": "https://nightly.link/red-prig/fpPS4/workflows/main/trunk/fpPS4.zip",
     "hash": "008fffd12c49fe1e8f9be1eee97985937c70831345ae78063b5316701b6ba28d",
     "bin": [
         [
             "fpPS4.exe",
-            "fpPS4-dev"
+            "fpps4-dev"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/red-prig/fpPS4/actions/workflows/main.yml/runs?branch=trunk&status=success",
+        "github": "https://api.github.com/repos/red-prig/fpPS4/actions/workflows/main.yml/runs?branch=trunk&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
-            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "$cont = (Invoke-WebRequest $artUrl).Content | ConvertFrom-Json",
-            "$artId = $cont.artifacts[0].id",
-            "Write-Output \"$runId $date $suiteId $artId $sha\""
+            "Write-Output \"$runId $date $sha\""
         ],
-        "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
+        "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {

@@ -1,12 +1,31 @@
 {
     "version": "5590-20261111-c549714",
-    "description": "Emulator for arcade games and select consoles",
+    "description": "Emulator for arcade games and select consoles (development version)",
     "homepage": "https://github.com/finalburnneo/FBNeo",
-    "license": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt"
+    },
     "architecture": {
+        "64bit": {
+            "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-x86_64.zip",
+            "hash": "687eb8cc3dd2cc8d7de2859c0494c5deccfdbb65d0bceda26248af8970d7169a",
+            "bin": [
+                [
+                    "fbneo64.exe",
+                    "fbneo-dev"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "fbneo64.exe",
+                    "FinalBurn Neo (dev)"
+                ]
+            ]
+        },
         "32bit": {
-            "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/Windows.x32.zip",
-            "hash": "87cff4fcb4d196203130b543e931e99064fad3b7cd5122a6af57a80754c5365f",
+            "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-x86_32.zip",
+            "hash": "405a8ffccd8582a08efeb4db0d58af1dfe5f59f40f8b3b85d3c71435a7d84be5",
             "bin": [
                 [
                     "fbneo.exe",
@@ -20,18 +39,18 @@
                 ]
             ]
         },
-        "64bit": {
-            "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/Windows.x64.zip",
-            "hash": "6776eb1541f3510f571551809a0afbb3e7ea9556a91be2ecbb4997ef4e6df382",
+        "arm64": {
+            "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-arm64.zip",
+            "hash": "49828932bbb72d57ccb0469a04df3d3a00b2605e37eee6408ad25146356dbca3",
             "bin": [
                 [
-                    "fbneo64.exe",
+                    "fbneoarm64.exe",
                     "fbneo-dev"
                 ]
             ],
             "shortcuts": [
                 [
-                    "fbneo64.exe",
+                    "fbneoarm64.exe",
                     "FinalBurn Neo (dev)"
                 ]
             ]
@@ -48,7 +67,7 @@
         "support"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/finalburnneo/FBNeo/actions/workflows/nightly-release.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/finalburnneo/FBNeo/actions/workflows/nightly-release.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
@@ -59,6 +78,16 @@
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-x86_32.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/finalburnneo/FBNeo/releases/download/latest/windows-arm64.zip"
+            }
+        }
     }
 }
