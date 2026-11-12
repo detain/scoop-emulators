@@ -7,22 +7,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/lisaem/emulator_screen_01.jpg"
     ],
     "version": "1.2.6",
-    "description": "LisaEm is an Apple Lisa emulator.",
-    "homepage": "http://lisaem.sunder.net/",
+    "description": "Apple Lisa emulator",
+    "homepage": "https://lisaem.sunder.net/",
     "license": "GPL-2.0-only",
     "url": "https://consolo.is.cc/emu/lisaem/1.2.6.7z",
     "hash": "e24e2a6026b72cd279e4172f641d635dcd58200f40fa30d9025fbf0b42d19a28",
-    "bin": [
-        "lisaem.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/lisaem/1.2.6.7z",
-            "hash": "e24e2a6026b72cd279e4172f641d635dcd58200f40fa30d9025fbf0b42d19a28"
-        }
+    "bin": "lisaem.exe",
+    "checkver": {
+        "url": "https://consolo.is.cc/emu/lisaem/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "extract_dir": "lisaem-$version-win64",
-    "checksum_type": "sha256",
-    "checkver": true,
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/lisaem/$version.7z"
+    }
 }

@@ -3,11 +3,18 @@
         "name:LaunchBox",
         "logo:https://1.bp.blogspot.com/-HxpqrUaxUvA/UjwN8f71ELI/AAAAAAAAN5Y/hKCqxfLB8_0/s1600/Logo.png"
     ],
-    "version": "",
-    "description": "LaunchBox is a portable, box-art-based games database and launcher for DOSBox, emulators, arcade cabinets, and PC Games.",
-    "homepage": null,
-    "license": "",
-    "url": "",
-    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
-    "bin": []
+    "version": "14.1",
+    "description": "Box-art-based games database and launcher for DOSBox, emulators and PC games",
+    "homepage": "https://www.launchbox-app.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.launchbox-app.com/"
+    },
+    "notes": "LaunchBox is only distributed through an email-gated download form; download the installer manually from https://www.launchbox-app.com/download",
+    "url": "https://www.launchbox-app.com/download#/download.html",
+    "pre_install": "abort 'LaunchBox cannot be downloaded automatically (the download link is sent by email). Get it from https://www.launchbox-app.com/download'",
+    "checkver": {
+        "url": "https://www.launchbox-app.com/about/changelog",
+        "regex": "Version ([\\d.]+)"
+    }
 }
