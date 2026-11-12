@@ -1,5 +1,5 @@
 {
-    "version": "41759-20261112-80cfa43",
+    "version": "41768-20261112-dc3e63c",
     "description": "Arcade machine emulator (development version)",
     "homepage": "https://www.mamedev.org/",
     "license": "GPL-2.0-or-later",
@@ -10,12 +10,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/mamedev/mame/actions/runs/43149823063/mame-windows-gcc-x64-80cfa430dd2ee64d855fa9780ba2b1474b61e659.zip",
-            "hash": "9f48fbe6705f986cb7ae9c0f92da92c9618f3695fe9a8cfbf7bf3c1e8caded9f"
+            "url": "https://nightly.link/mamedev/mame/actions/runs/43226459724/mame-windows-gcc-x64-dc3e63cc20c8e1e7afafdc32d67e216f2acb628c.zip",
+            "hash": "9a67958af776ec0b5e01c1c5f26f362a647061ac109c1a05bf5aba69875b250c"
         },
         "arm64": {
-            "url": "https://nightly.link/mamedev/mame/actions/runs/43149823063/mame-windows-clang-arm64-80cfa430dd2ee64d855fa9780ba2b1474b61e659.zip",
-            "hash": "d0b5f13c1841e0d60bd960e0b05fb4e55b4e631727aef54694f5ab4aba6bc84a"
+            "url": "https://nightly.link/mamedev/mame/actions/runs/43226459724/mame-windows-clang-arm64-dc3e63cc20c8e1e7afafdc32d67e216f2acb628c.zip",
+            "hash": "09b53785e95a8c8df6493003076354acf7650d56700f083ade098905f2952f19"
         }
     },
     "bin": [
