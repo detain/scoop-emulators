@@ -6,19 +6,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/w88/emulator_screen_01.jpg"
     ],
     "version": "0.05",
-    "description": "PC98 emulator for windows.",
-    "homepage": "http://www.cug.net/~anonB/w88/",
+    "description": "NEC PC-8801 emulator (modified M88 1.9e with PAR cheat support)",
+    "homepage": "https://www.cug.net/~anonB/w88/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/w88/0.05.7z",
-    "hash": "80883255e80bcd4516e6436e7c4426bcad0fba9d5d8066dcb5a6a011345f2faf",
-    "bin": [
-        "W88.EXE"
+    "url": "https://www.cug.net/~anonB/w88/dat/w88_005t.lzh",
+    "hash": "741fd976120cc87992d503436fccf1c20619d0872c3be68c1613c5f3ede0483c",
+    "bin": "W88.EXE",
+    "shortcuts": [
+        [
+            "W88.EXE",
+            "W88"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/w88/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://www.cug.net/~anonB/w88/",
+        "regex": "w88_(?<major>\\d)(?<minor>\\d+)t\\.lzh",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/w88/$version.7z"
+        "url": "https://www.cug.net/~anonB/w88/dat/w88_$cleanVersiont.lzh"
     }
 }

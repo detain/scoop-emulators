@@ -6,20 +6,25 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/wataroo/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/wataroo/emulator_screen_01.jpg"
     ],
-    "version": "0.7.0.2",
-    "description": "Wataroo is a Watara SuperVision emulator. It was written after I lost a bet with Brandon Cobb of Super Fighter Team. As with a genuine SuperVision, the best way to use this software is not at all.",
+    "version": "0.8.0.0",
+    "description": "Watara Supervision emulator",
     "homepage": "http://tailchao.com/Wataroo/index.php",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/wataroo/0.7.0.2.7z",
-    "hash": "7abbbb8944418cd32878ee2eb57c77c530f4dc2b74091e0f82fd0fb5aceae1c0",
-    "bin": [
-        "Wataroo.exe"
+    "url": "http://tailchao.com/Wataroo/Wataroo_v0-8-0-0.zip",
+    "hash": "f00e32eaa5af0535190cef6f27c209f25c43dae47a5ab4d317df03ff4ab329e0",
+    "bin": "Wataroo.exe",
+    "shortcuts": [
+        [
+            "Wataroo.exe",
+            "Wataroo"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/wataroo/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://tailchao.com/Wataroo/index.php",
+        "regex": "Wataroo_v(?<a>\\d+)-(?<b>\\d+)-(?<c>\\d+)-(?<d>\\d+)\\.zip",
+        "replace": "${a}.${b}.${c}.${d}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/wataroo/$version.7z"
+        "url": "http://tailchao.com/Wataroo/Wataroo_v$dashVersion.zip"
     }
 }

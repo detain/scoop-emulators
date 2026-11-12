@@ -6,35 +6,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/wincpc/emulator_screen_01.jpg"
     ],
     "version": "0.9.26",
-    "description": "WinCPC is the Borland Delphi port of an Amstrad CPC emulator called vbCPC.",
-    "homepage": "http://www.wincpc.ch/?topic=projects-wincpc",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/wincpc/0.9.26.7z",
-    "hash": "a060aae86db74e791c6f65d35661b4f965dfac13bdd64e65c11c9af8e1f1d024",
-    "bin": [
-        "wincpc.zip"
+    "description": "Amstrad CPC emulator (Delphi port of vbCPC)",
+    "homepage": "https://www.wincpc.ch/?topic=projects-wincpc",
+    "license": "Freeware",
+    "url": "https://www.wincpc.ch/wincpc.zip",
+    "hash": "637d88f02764eeba465dc0ac9bdf5ded803879203a6ee38660fc0dc8cd99362b",
+    "bin": "WinCPC.exe",
+    "shortcuts": [
+        [
+            "WinCPC.exe",
+            "WinCPC"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/wincpc/0.9.26.7z",
-            "hash": "a060aae86db74e791c6f65d35661b4f965dfac13bdd64e65c11c9af8e1f1d024"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/wincpc/0.9.26.7z",
-            "hash": "a060aae86db74e791c6f65d35661b4f965dfac13bdd64e65c11c9af8e1f1d024"
-        }
-    },
+    "persist": "WinCPC.INI",
     "checkver": {
-        "url": "http://www.wincpc.ch/?topic=projects-wincpc",
-        "regex": "<p>Latest version: ([0-9.]+)</p>"
+        "url": "https://www.wincpc.ch/index.php?topic=projects-wincpc-download",
+        "regex": "WinCPC ([\\d.]+) / build"
     },
     "autoupdate": {
-        "url": "http://www.wincpc.ch/files/wincpc.zip"
-    },
-    "keywords": [
-        "emulator",
-        "amstrad",
-        "cpc",
-        "wincpc"
-    ]
+        "url": "https://www.wincpc.ch/wincpc.zip"
+    }
 }

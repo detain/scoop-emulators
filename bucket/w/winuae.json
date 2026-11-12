@@ -1,12 +1,12 @@
 {
-    "version": "4.9.1",
+    "version": "6.0.3",
     "description": "WinUAE Amiga emulator",
     "homepage": "https://www.winuae.net",
-    "license": "MIT",
+    "license": "GPL-2.0-only",
     "architecture": {
         "32bit": {
-            "url": "https://download.abime.net/winuae/releases/InstallWinUAE4910.msi",
-            "hash": "decfaa2fcce91f0be265743837b730eb1d7414d7f192f8f3e6bf761dcafd2765",
+            "url": "https://download.abime.net/winuae/releases/InstallWinUAE6030.msi",
+            "hash": "77ba52c1aeddfd52adebb7e2ae6fec9cc0b8b740ba56c545ed7e16f81b04a07c",
             "bin": "WinUAE\\winuae.exe",
             "shortcuts": [
                 [
@@ -16,8 +16,8 @@
             ]
         },
         "64bit": {
-            "url": "https://download.abime.net/winuae/releases/InstallWinUAE4910_x64.msi",
-            "hash": "4a8d5ee09e99bd247badea79903a79ef98895cef31062a07e01682f8552d7b1e",
+            "url": "https://download.abime.net/winuae/releases/InstallWinUAE6030_x64.msi",
+            "hash": "cef8b95e82af2a82921b2b94a5560e5394518ec9320b34f349502e9abd2e39b2",
             "bin": "WinUAE\\winuae64.exe",
             "shortcuts": [
                 [
@@ -28,8 +28,17 @@
         }
     },
     "checkver": {
-        "url": "https://www.winuae.net/category/news/",
-        "regex": "WinUAE ([\\d.]+) \\("
+        "url": "https://www.winuae.net/download/",
+        "regex": "Download WinUAE ([\\d.]+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://download.abime.net/winuae/releases/InstallWinUAE$cleanVersion0.msi"
+            },
+            "64bit": {
+                "url": "https://download.abime.net/winuae/releases/InstallWinUAE$cleanVersion0_x64.msi"
+            }
+        }
+    }
 }

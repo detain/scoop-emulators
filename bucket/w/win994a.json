@@ -6,19 +6,31 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/win994a/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/win994a/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "Win994a is a TI-99/4A simulator written by Cory Burr that installs and runs in the Windows environment.  It was written to simulate  the TI-99/4A, not to emulate it perfectly.",
-    "homepage": "http://www.99er.net/win994a.shtml",
+    "version": "3.010",
+    "description": "Texas Instruments TI-99/4A simulator",
+    "homepage": "https://www.99er.net/win994a.shtml",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/win994a/3.010-win64.7z",
-    "hash": "c989df8c5300f8e224ba2aa7cd666c27f6199e48b3d236bdd091c3f50f38b46c",
-    "bin": "Win994a/Win994a.exe",
-    "vendor": "99er.net",
+    "url": "https://www.99er.net/files/win994a/Win994a_Install_V3010_%28x64%29.zip",
+    "hash": "e908448b85ce06062d21cd378f7e2ec2bf6e4ebda206b4c417cc01ffc0c485c6",
+    "pre_install": "Get-ChildItem \"$dir\\*.msi\" | ForEach-Object { Expand-MsiArchive $_.FullName \"$dir\" -Removal }",
+    "bin": [
+        [
+            "Win994a_x64.exe",
+            "win994a"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Win994a_x64.exe",
+            "Win994a"
+        ]
+    ],
     "checkver": {
-        "url": "http://www.99er.net/download/win994a_latest.txt",
-        "regex": "(\\d+(\\.\\d+)+)"
+        "url": "https://www.99er.net/win994a.shtml",
+        "regex": "Win994a_Install_V(\\d)(\\d+)_%28x64%29\\.zip",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        
+        "url": "https://www.99er.net/files/win994a/Win994a_Install_V$cleanVersion_%28x64%29.zip"
     }
 }

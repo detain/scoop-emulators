@@ -6,18 +6,31 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/winape/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/winape/emulator_screen_01.jpg"
     ],
-    "version": "20.55.117",
-    "description": "WinAPE is a Sinclair ZX Spectrum emulator for Windows. It supports all Spectrum models, including 128, +2, and +3, as well as the Russian Pentagon and Scorpion models. It also emulates the ZX Printer, Kempston Joystick, and other peripherals.",
-    "homepage": "http://www.winape.net/",
+    "version": "2.0B2",
+    "description": "Amstrad CPC and CPC Plus emulator",
+    "homepage": "https://www.winape.net/",
     "license": "Freeware",
-    "url": "http://www.winape.net/files/winape-{version}-full.zip",
-    "hash": "bca1e2cbff54b1d2bf0dd704e61ca8fb0267f49efdae5d53f1072b5c1f4dd7df",
-    "bin": "WinAPE.exe",
+    "url": "https://www.winape.net/download/WinAPE20B2.zip",
+    "hash": "7cc113c15dcf3342ff6593cdce5f29dc1f7d46966d4199d0a4c4a47e36e9a55c",
+    "bin": [
+        [
+            "WinApe.exe",
+            "winape"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "WinApe.exe",
+            "WinAPE"
+        ]
+    ],
+    "persist": "WinAPE.ini",
     "checkver": {
-        "url": "http://www.winape.net/files/latest.txt",
-        "regex": "(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://www.winape.net/downloads",
+        "regex": "download/WinAPE(\\d)(\\d)([AB]\\d+[a-z]?)\\.zip",
+        "replace": "${1}.${2}${3}"
     },
     "autoupdate": {
-        "url": "http://www.winape.net/files/winape-{version}-full.zip"
+        "url": "https://www.winape.net/download/WinAPE$cleanVersion.zip"
     }
 }
