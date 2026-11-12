@@ -1,12 +1,16 @@
 {
-    "version": "0.8.132",
+    "version": "0.8.139",
     "description": "Original Xbox Emulator",
     "homepage": "https://xemu.app",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mborgerson/xemu/releases/download/v0.8.131/xemu-win-release.zip",
-            "hash": "e137fc85735a5cdd15f4584306cb476e1f4dd67c201219f25c8feac2fe1b3a7b"
+            "url": "https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-windows-x86_64.zip",
+            "hash": "fbb14dd7ea08120ca9ec99c955758786645af16a5058250553b3b7d7592e8701"
+        },
+        "arm64": {
+            "url": "https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-windows-arm64.zip",
+            "hash": "869509a5544f75bf2eda4043c931869c6a04bc8f2421236137ae89ad94c86324"
         }
     },
     "pre_install": [
@@ -14,6 +18,9 @@
         "   New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
         "   New-Item \"$persist_dir\\bios\" -ItemType Directory | Out-Null",
         "   New-Item \"$persist_dir\\data\" -ItemType Directory | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\xemu.toml\")) {",
+        "    New-Item \"$dir\\xemu.toml\" -Type File | Out-Null",
         "}"
     ],
     "bin": "xemu.exe",
@@ -25,12 +32,20 @@
     ],
     "persist": [
         "bios",
-        "data"
+        "data",
+        "xemu.toml"
     ],
     "checkver": {
-        "github": "https://github.com/mborgerson/xemu"
+        "github": "https://github.com/xemu-project/xemu"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xemu-project/xemu/releases/download/v$version/xemu-$version-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/xemu-project/xemu/releases/download/v$version/xemu-$version-windows-arm64.zip"
+            }
+        }
     }
 }

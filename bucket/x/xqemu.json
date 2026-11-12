@@ -7,31 +7,18 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xqemu/emulator_screen_01.jpg"
     ],
     "version": "2016.08.11",
-    "description": "XQEMU is a low-level, full-system emulator which emulates the Xbox and Xbox 360 consoles, as well as the XDK (Xbox Development Kit) and the XNA Game Studio (Xbox 360 development kit).",
-    "homepage": "http://xqemu.com",
+    "description": "Microsoft Xbox emulator (discontinued, superseded by xemu)",
+    "homepage": "https://github.com/xqemu/xqemu",
     "license": "GPL-2.0-only",
+    "notes": "XQEMU is no longer developed; consider the xemu package instead.",
     "url": "https://consolo.is.cc/emu/xqemu/2016.08.11.7z",
     "hash": "0bc49be6e57ae8db105bd3c0bfcfec19285d9ff291bdb310f97e764b8aee2bac",
-    "bin": [
-        "xqemu.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/xqemu/2016.08.11.7z",
-            "hash": "0bc49be6e57ae8db105bd3c0bfcfec19285d9ff291bdb310f97e764b8aee2bac"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/xqemu/2016.08.11.7z",
-            "hash": "0bc49be6e57ae8db105bd3c0bfcfec19285d9ff291bdb310f97e764b8aee2bac"
-        }
-    },
-    "extract_dir": "xqemu-{{version}}",
+    "bin": "qemu-system-xbox.exe",
     "checkver": {
-        "url": "https://github.com/xqemu/xqemu/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://consolo.is.cc/emu/xqemu/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/xqemu/{{version}}.7z",
-        "hash": "auto"
+        "url": "https://consolo.is.cc/emu/xqemu/$version.7z"
     }
 }

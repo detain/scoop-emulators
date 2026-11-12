@@ -6,32 +6,31 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/xmillenium/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xmillenium/emulator_screen_01.jpg"
     ],
-    "version": "0.26",
-    "description": "xMil is a multi-system emulator for Windows and Linux that emulates a variety of classic computer systems, including the Sharp X68000, the NEC PC-8801, and the NEC PC-9801.",
+    "version": "0.26d",
+    "description": "Sharp X1 series emulator",
     "homepage": "http://www.retropc.net/yui/xmil.html",
-    "license": "MIT",
-    "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
-    "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a",
+    "license": "Freeware",
+    "notes": "Place the X1 BIOS ROM files next to Xmillennium.exe in $dir",
+    "url": "http://retropc.net/yui/xmilwin/xmil026d.zip",
+    "hash": "f4b40417ac17d356c5a3498ca4b52a943429667128c587b42e87bde459234a06",
     "bin": [
-        "xmil.exe"
+        [
+            "Xmillennium.exe",
+            "xmillennium"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
-            "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/xmillenium/0.26.7z",
-            "hash": "d684daefb7d3c184caacd70119b39457c398ccf072d7ef0e483641ff658aff6a"
-        }
-    },
-    "extract_dir": "xmil{{version}}",
+    "shortcuts": [
+        [
+            "Xmillennium.exe",
+            "X millennium"
+        ]
+    ],
     "checkver": {
         "url": "http://www.retropc.net/yui/xmil.html",
-        "regex": "Version (\\d+\\.\\d+\\.\\d+)"
+        "regex": "xmilwin/\\s*xmil(\\d)(\\d{2})([a-rt-z])\\.zip",
+        "replace": "${1}.${2}${3}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/xmillenium/{{version}}.7z",
-        "hash": "auto"
+        "url": "http://retropc.net/yui/xmilwin/xmil$cleanVersion.zip"
     }
 }

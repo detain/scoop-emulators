@@ -1,12 +1,12 @@
 {
-    "version": "20261111172058-58df556",
+    "version": "20261112005610-07839d4",
     "description": "Xbox 360 Research Emulator (development version)",
     "homepage": "https://xenia.jp",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xenia-canary/xenia-canary/releases/download/a4412ad/xenia_canary.zip",
-            "hash": "d78aaf63eb2dd3520b81e218b30d1653ddd43f53978aa01644905bec7977774d"
+            "url": "https://github.com/xenia-canary/xenia-canary/releases/download/07839d4/xenia_canary_windows.7z",
+            "hash": "b8b8a56922627533f033edd40be2d7020db7e45baf79dbcebb93155ec6a7b7b3"
         }
     },
     "pre_install": [
@@ -35,17 +35,16 @@
         "cache"
     ],
     "checkver": {
-        "url": "https://github.com/xenia-canary/xenia-canary/releases.atom",
-        "script": [
-            "$xml = [xml]$page",
-            "$updated = ($xml.feed.entry | Where-Object {$_.title -ne 'canary_experimental'} | Sort-Object -Descending { $_.updated })[0].updated",
-            "$title = ($xml.feed.entry | Where-Object {$_.title -ne 'canary_experimental'} | Sort-Object -Descending { $_.updated })[0].title",
-            "Write-Output \"$updated $title\""
-        ],
-        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)_canary_experimental",
+        "github": "https://api.github.com/repos/xenia-canary/xenia-canary/releases/latest",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\"(?<commit>[0-9a-f]+)\"[\\s\\S]*?\"published_at\":\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z\"",
         "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary_windows.7z"
+            }
+        }
     }
 }

@@ -4,23 +4,20 @@
         "logo:https://2.bp.blogspot.com/-yPwVNXceWCQ/V1PvWilKhMI/AAAAAAAAVEI/Pxgpoe8tfhgGGo_YqsVbyA6x_ggm-69PACLcB/s320/xboxControllerFront.png"
     ],
     "version": "4.29.0.0",
-    "description": "Xbox 360 Controller Emulator (a wrapper library that translates the xinput calls to directinput calls) which allows your controller (GamePad, Joystick, Wheel, ...) to function like an Xbox 360 controller on a Windows PC. For example it allows you to play Grand Theft Auto (GTA) game with Logitech wheel.",
+    "description": "Xbox 360 controller emulator that lets DirectInput gamepads, joysticks and wheels work as XInput controllers",
     "homepage": "https://github.com/x360ce/x360ce",
-    "license": "",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/x360ce/x360ce/releases/download/3.2.9.82/x360ce_x86.zip",
-            "hash": "cf95565386be437b73793f323b4516ebc2afb48c7dc9ec393118c7c256f4c24c",
-            "bin": "x360ce_x86.exe"
-        },
-        "64bit": {
-            "url": "https://github.com/x360ce/x360ce/releases/download/3.2.9.82/x360ce_x64.zip",
-            "hash": "04516120c48a8c1f8b390d3741cb1df9c51076139ce1787f85f570c1b00cf9ab",
-            "bin": "x360ce_x64.exe"
-        }
-    },
+    "license": "LGPL-3.0-only",
+    "url": "https://github.com/x360ce/x360ce/releases/download/4.29.0.0/x360ce.zip",
+    "hash": "c0da28c7225c7251e67b97b3abf2bdb7ccae967062541c1db015ef4a8d50d71f",
+    "bin": "x360ce.exe",
+    "shortcuts": [
+        [
+            "x360ce.exe",
+            "Xbox 360 Controller Emulator"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
-        
+        "url": "https://github.com/x360ce/x360ce/releases/download/$version/x360ce.zip"
     }
 }

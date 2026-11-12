@@ -6,32 +6,27 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/xpeccy/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xpeccy/emulator_screen_01.jpg"
     ],
-    "version": "0.6.20170406",
-    "description": "Xpeccy is a ZX Spectrum, Russian Clone and MSX-1 emulator. NOTE: BIOS images are required for ALL emulated systems except for the 48K Spectrum. These files must be placed in a 'roms' subdirectory and the emulator configured accordingly (Right-Click on screen to access menu).",
+    "version": "0.6.20260820",
+    "description": "ZX Spectrum, Russian Spectrum clones and MSX-1 emulator",
     "homepage": "https://github.com/samstyle/Xpeccy",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
-    "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4",
-    "bin": [
-        "xpeccy.exe"
+    "license": "MIT",
+    "notes": "BIOS images are required for all emulated systems except the 48K Spectrum. Place them in a 'roms' folder and configure them in the emulator (right-click on the screen to open the menu).",
+    "url": "https://github.com/samstyle/Xpeccy/releases/download/0.6.20260820/xpeccy_0.6.20260820_win32_qt5.5.1.zip",
+    "hash": "efe6f98d59852326088915132f9066d8c8bf386d39195d7ccdd7997b051ee111",
+    "bin": "xpeccy.exe",
+    "shortcuts": [
+        [
+            "xpeccy.exe",
+            "Xpeccy"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
-            "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/xpeccy/0.6.20170406.7z",
-            "hash": "6b9156e1b7732f93ae335d70c9251cb13b826f4bea35c6989e2bf3a860eaf4b4"
-        }
-    },
-    "extract_dir": "xpeccy-{{version}}",
     "checkver": {
-        "url": "https://github.com/samstyle/Xpeccy/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+        "github": "https://api.github.com/repos/samstyle/Xpeccy/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/(?<file>xpeccy_(?<version>[\\d.]+)_win32[^/]*\\.zip)",
+        "replace": "${version}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/xpeccy/{{version}}.7z",
-        "hash": "auto"
+        "url": "https://github.com/samstyle/Xpeccy/releases/download/$matchTag/$matchFile"
     }
 }

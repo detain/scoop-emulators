@@ -1,12 +1,12 @@
 {
-    "version": "cb5ad9a",
+    "version": "20261112004122-3737cc4",
     "description": "Yet another experimental fork of the Xenia emulator, mainly based on Xenia Canary with quicker iteration and improvements to Vulkan backend",
     "homepage": "https://github.com/has207/xenia-edge",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/has207/xenia-edge/releases/download/cb5ad9a/xenia_edge_windows.zip",
-            "hash": "4c599a626472d99b4d17256ad15b6daf318b61eb89d4684a5fb52d655e7ca688"
+            "url": "https://github.com/has207/xenia-edge/releases/download/3737cc4/xenia_edge_windows.zip",
+            "hash": "a7363095e1c0a0f4df9c4ab4050887fbb057985b8df69a59a898d8f0b87e2ed4"
         }
     },
     "pre_install": [
@@ -35,11 +35,16 @@
         "cache"
     ],
     "checkver": {
-        "url": "https://github.com/has207/xenia-edge/releases.atom",
-        "regex": "(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z (?<commit>[a-f0-9]+)",
+        "github": "https://api.github.com/repos/has207/xenia-edge/releases/latest",
+        "script": "Write-Output $page",
+        "regex": "\"tag_name\":\"(?<commit>[0-9a-f]+)\"[\\s\\S]*?\"published_at\":\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T(?<hour>\\d{2}):(?<minute>\\d{2}):(?<second>\\d{2})Z\"",
         "replace": "${year}${month}${day}${hour}${minute}${second}-${commit}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
+            }
+        }
     }
 }
