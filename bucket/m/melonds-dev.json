@@ -9,11 +9,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip",
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/41929249442/melonDS-windows-x86_64.zip",
             "hash": "0f4241993009e72a7b2b12cc3719b1e5bf7e0011dbedc5a4edd7a879721264a4"
         },
         "arm64": {
-            "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-arm64.zip",
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/41929249442/melonDS-windows-arm64.zip",
             "hash": "4b0afabf5eb14f4e54e7d73f7654230bb43fae335ef25c422df4d49ba39e7fb1"
         }
     },
@@ -44,18 +44,27 @@
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "Write-Output \"$runId $date $sha\""
+            "$id = json_path $page $.workflow_runs[0].id",
+            "Write-Output \"$runId $date $id $sha\""
         ],
-        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[\\da-f]{7})",
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<runid>\\d+) (?<commit>[\\da-f]{7})",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-x86_64.zip"
+                "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/$matchRunid/melonDS-windows-x86_64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/runs/$matchRunid/artifacts",
+                    "regex": "\"name\":\\s*\"melonDS-windows-x86_64\"[\\s\\S]*?\"digest\":\\s*\"sha256:$sha256\""
+                }
             },
             "arm64": {
-                "url": "https://nightly.link/melonDS-emu/melonDS/workflows/build-windows/master/melonDS-windows-arm64.zip"
+                "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/$matchRunid/melonDS-windows-arm64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/melonDS-emu/melonDS/actions/runs/$matchRunid/artifacts",
+                    "regex": "\"name\":\\s*\"melonDS-windows-arm64\"[\\s\\S]*?\"digest\":\\s*\"sha256:$sha256\""
+                }
             }
         }
     }

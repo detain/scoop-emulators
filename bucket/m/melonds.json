@@ -44,6 +44,10 @@
             "arm64": {
                 "url": "https://github.com/melonDS-emu/melonDS/releases/download/$version/melonDS-$version-windows-aarch64.zip"
             }
+        },
+        "hash": {
+            "url": "https://api.github.com/repos/melonDS-emu/melonDS/releases/tags/$version",
+            "regex": "\"name\":\\s*\"$basename\"[\\s\\S]*?\"digest\":\\s*\"sha256:$sha256\""
         }
     }
 }
