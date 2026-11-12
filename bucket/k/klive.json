@@ -7,30 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/klive/emulator_screen_01.jpg"
     ],
     "version": "1.1",
-    "description": "Klive is a ZX Spectrum Emulator that runs in your web browser",
-    "homepage": "https://github.com/hsaturn/klive",
-    "license": "MIT",
-    "url": "https://consolo.is.cc/emu/klive/1.1.7z",
-    "hash": "1a4f2342d32cf60e46d20e23a4f899de3c4063b371cc02e9ea2b39d37a2db460",
-    "bin": [
-        "Klive.exe"
+    "description": "Sinclair ZX Spectrum emulator",
+    "homepage": "https://spectrumcomputing.co.uk/tool/42/Klive",
+    "license": "Freeware",
+    "url": "https://archive.org/download/World_of_Spectrum_June_2017_Mirror/World%20of%20Spectrum%20June%202017%20Mirror.zip/World%20of%20Spectrum%20June%202017%20Mirror/sinclair/emulators/pc/windows/Klive11.zip",
+    "hash": "92073cfb3fa9d01c663c7f7b6915a352beaec965b305242a391ef5e34c4da479",
+    "bin": "Klive.exe",
+    "shortcuts": [
+        [
+            "Klive.exe",
+            "Klive"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/klive/1.1.7z",
-            "hash": "1a4f2342d32cf60e46d20e23a4f899de3c4063b371cc02e9ea2b39d37a2db460"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/klive/1.1.7z",
-            "hash": "1a4f2342d32cf60e46d20e23a4f899de3c4063b371cc02e9ea2b39d37a2db460"
-        }
-    },
-    "extract_dir": "Klive",
     "checkver": {
-        "url": "https://api.github.com/repos/hsaturn/klive/releases/latest",
-        "regex": "Klive-(.*?)-"
+        "url": "https://spectrumcomputing.co.uk/tool/42/Klive",
+        "regex": "(?<file>Klive(?<major>\\d)(?<minor>\\d+)\\.zip)",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://github.com/hsaturn/klive/releases/latest"
+        "url": "https://archive.org/download/World_of_Spectrum_June_2017_Mirror/World%20of%20Spectrum%20June%202017%20Mirror.zip/World%20of%20Spectrum%20June%202017%20Mirror/sinclair/emulators/pc/windows/$matchFile"
     }
 }

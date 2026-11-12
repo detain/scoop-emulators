@@ -7,19 +7,32 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kigb/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-01.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-02.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-03.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-04.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-05.gif,https://cdn.emulationking.com/wp-content/uploads/2015/03/KiGB-GBC-Emulator-Pic-06.gif"
     ],
-    "version": "2.0.5",
-    "description": "KiGB is a cross-platform GBC Emulator. KiGB is designed to emulate the Game Boy Color as accurate as possible, managing to emulate features of the GBC that were difficult to replicate without precise emulation of the hardware.",
-    "homepage": "http://kigb.emuunlim.com",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/kigb/2.0.5.7z",
-    "hash": "1ebe2a55d8010ec0c67eec0f1cfd970512775878bafcb739b7f19562a06628ff",
-    "bin": [
-        "kigb.exe"
+    "version": "2.05",
+    "description": "Nintendo Game Boy, Game Boy Color and Super Game Boy emulator",
+    "homepage": "https://kigb.emuunlim.com/",
+    "license": "Freeware",
+    "url": "https://kigb.emuunlim.com/kigb_win.zip",
+    "hash": "f5086d4b8800cd6f2975a8f99f924af08f1ec1acf5541246fcab3dbbaf27e190",
+    "bin": "kigb.exe",
+    "shortcuts": [
+        [
+            "kigb.exe",
+            "KiGB"
+        ]
+    ],
+    "persist": [
+        "cfg",
+        "inp",
+        "rom",
+        "save",
+        "snap",
+        "state"
     ],
     "checkver": {
-        "url": "http://kigb.emuunlim.com/download.html",
-        "regex": "<a href=\"kigb_(\\d+(?:\\.\\d+)+)_win\\.zip\">",
-        "match": 1
+        "url": "https://kigb.emuunlim.com/downloads.htm",
+        "regex": "v(\\d+\\.\\d+)"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://kigb.emuunlim.com/kigb_win.zip"
+    }
 }

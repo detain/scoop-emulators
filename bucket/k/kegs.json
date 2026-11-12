@@ -5,20 +5,33 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kegs/emulator_screen_01.jpg"
     ],
-    "version": "0.91",
-    "description": "KEGS is an Apple IIgs emulator for Mac OS X, Linux, and Win32. The Apple IIgs was the most powerful computer in the Apple II line. It first was sold in 1986.  An Apple IIgs has the capability to run almost all Apple II, Apple IIe, and Apple IIc programs.",
-    "homepage": "http://kegs.sourceforge.net/",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/kegs/0.91.7z",
-    "hash": "fd6a6351f3022ab12dafa7878b8a7e7deff0b30b3e684eeeb7ff2549a84e43bc",
+    "version": "1.38",
+    "description": "Apple IIgs emulator",
+    "homepage": "https://kegs.sourceforge.net/",
+    "license": "GPL-3.0-only",
+    "notes": "Requires an Apple IIgs ROM file named ROM.01 or ROM.03, placed in your home directory (%USERPROFILE%) or selected from the KEGS configuration panel (F4).",
+    "url": "https://kegs.sourceforge.net/kegs.1.38.zip",
+    "hash": "d54c04cef80cc2d0dbd605210130047c03c5c2a89edc13745b74d16aa97d97ff",
+    "extract_dir": "kegs.1.38",
     "bin": [
-        "kegswin.exe"
+        [
+            "kegswin.exe",
+            "kegs"
+        ]
     ],
+    "shortcuts": [
+        [
+            "kegswin.exe",
+            "KEGS"
+        ]
+    ],
+    "persist": "config.kegs",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/kegs/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://kegs.sourceforge.net/",
+        "regex": "kegs\\.([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/kegs/$version.7z"
+        "url": "https://kegs.sourceforge.net/kegs.$version.zip",
+        "extract_dir": "kegs.$version"
     }
 }

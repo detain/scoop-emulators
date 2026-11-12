@@ -6,18 +6,26 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/kindred/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kindred/emulator_screen_01.jpg"
     ],
-    "version": "1.08",
-    "description": "Kindred is an emulator for the Nintendo Entertainment System, Famicom Disk System, Super Nintendo Entertainment System, Super Famicom and Game Boy and the Sega Master System. It is also designed to aid in the development of software for these systems.",
+    "version": "1.12c",
+    "description": "Multi-system emulator and development tool for NES/Famicom Disk System, SNES, Game Boy, Sega Master System and more",
     "homepage": "http://www.crazysmart.net.au/kindred/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/kindred/1.08.7z",
-    "hash": "f8ce3aeb7034aefe2a4ccef67150b1a87fd1225217d4f5ffa22ca4e29aba6e8d",
-    "bin": [
-        "kindred.exe"
+    "license": "Freeware",
+    "url": "http://www.crazysmart.net.au/kindred/files/kindred1r12c.zip",
+    "hash": "5df562d7e38777adefe1ea50fa87e8f552f86d6e9d88dc6e4003a19adebe28f2",
+    "bin": "kindred.exe",
+    "shortcuts": [
+        [
+            "kindred.exe",
+            "Kindred"
+        ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/kindredemu/kindred/releases/latest",
-        "regex": "Kindred v(\\d+\\.\\d+\\.\\d+)"
+        "url": "http://www.crazysmart.net.au/kindred/mainframe.html",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "regex": "files/(?<file>kindred(?<major>\\d)r(?<minor>\\d+)(?<build>[a-z]?)\\.zip)",
+        "replace": "${major}.${minor}${build}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://www.crazysmart.net.au/kindred/files/$matchFile"
+    }
 }

@@ -7,29 +7,35 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kat5200/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/09/Kat5200-Atari-5200-Emulator-Pic-01.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Kat5200-Atari-5200-Emulator-Pic-03.jpg"
     ],
-    "version": "0.7.1",
-    "description": "Kat5200 is an advanced open-source Atari 5200 emulator. Unlike most Atari 5200 emulators, Kat5200 requires the Atari 5200’s BIOS to be able to function.",
+    "version": "1.0.2",
+    "description": "Atari 5200 and Atari 8-bit computer emulator",
     "homepage": "http://kat5200.jillybunch.com/",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
-    "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c",
-    "bin": [
-        "kat5200.exe"
-    ],
+    "notes": "kat5200 requires the Atari 5200 / Atari 8-bit BIOS images.",
     "architecture": {
         "64bit": {
-            "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
-            "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/kat5200/0.7.1.7z",
-            "hash": "1e464b7765c3d17b4d74f9c4d9a0b788f7765dfc8e37f7e8ff9441df11280f2c"
+            "url": "http://kat5200.jillybunch.com/downloads/kat5200-1.0.2-win64-portable.zip",
+            "hash": "7083f395657401bc5684d2474c3ca78d8a37e49886405b190563c9a6e5a6d29b",
+            "extract_dir": "kat5200-1.0.2-win64-portable"
         }
     },
-    "extract_dir": "kat5200-{version}-win",
+    "bin": "kat5200.exe",
+    "shortcuts": [
+        [
+            "kat5200.exe",
+            "kat5200"
+        ]
+    ],
     "checkver": {
-        "url": "https://github.com/jillybunch/kat5200/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+        "url": "http://kat5200.jillybunch.com/",
+        "regex": "kat5200-([\\d.]+)-win64-portable\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://kat5200.jillybunch.com/downloads/kat5200-$version-win64-portable.zip",
+                "extract_dir": "kat5200-$version-win64-portable"
+            }
+        }
+    }
 }

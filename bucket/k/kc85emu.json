@@ -7,19 +7,36 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/kc85emu/emulator_screen_01.jpg"
     ],
     "version": "0.85.3",
-    "description": "KC85EMU is an emulator for the home computer, the number KC85 from the VEB microelectronics \"Wilhelm Pieck\" Mühlhausen. In addition to the computers KC85 / 3 and / 4, it can also the great-KC HC900 (KC85 / 2) and the fully developed KC85 / 4 emulate with 256k RAM and KC-CAOS 4.5 (KC85 / 5).",
+    "description": "Robotron KC85/2, KC85/3, KC85/4 and KC85/5 home computer emulator",
     "homepage": "http://www.kc85emu.de",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/kc85emu/0.85.3.7z",
-    "hash": "97a49fb64b6d2989b1a554b7e1236ce66001ead4455cb67a8793177943b81460",
+    "license": "Freeware",
+    "notes": "KC85EMU is a DOS program; on 64-bit Windows run KC85EMU.EXE inside DOSBox.",
+    "suggest": {
+        "DOSBox": "dosbox"
+    },
+    "url": "http://www.kc85emu.de/Download/kc85emu.zip",
+    "hash": "4f45cf5396131b17bbfbcb75b3e9859d9d5940fe5062e24db7df9bb6ed17d7b0",
+    "extract_dir": "KC85EMU",
     "bin": [
-        "KC85EMU.EXE"
+        [
+            "KC85EMU.EXE",
+            "kc85emu"
+        ]
     ],
+    "shortcuts": [
+        [
+            "KC85EMU.EXE",
+            "KC85EMU"
+        ]
+    ],
+    "persist": "Kc85emu.conf",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/kc85emu/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "http://www.kc85emu.de/Download/Download.htm",
+        "regex": "Version:\\s*(?<major>[\\d.]+)</font></font>(?<minor>[\\d.]*)",
+        "replace": "${major}${minor}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/kc85emu/$version.7z"
+        "url": "http://www.kc85emu.de/Download/kc85emu.zip",
+        "extract_dir": "KC85EMU"
     }
 }
