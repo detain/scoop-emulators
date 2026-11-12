@@ -6,19 +6,21 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vss/emulator_screen_01.jpg"
     ],
     "version": "0.82",
-    "description": "VSS is an Atari 5200 Super System emulator for MSDOS. The current version runs about 95% of the ROM images I have almost flawlessly, and at a reasonable speed. To use the emulator you will need a copy of the 5200's 2K BIOS ROM, and 5200 ROM cart images",
-    "homepage": "http://www.atarihq.com/danb",
+    "description": "Atari 5200 SuperSystem emulator for MS-DOS",
+    "homepage": "https://atarihq.com/danb/a5200.shtml",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vss/0.82.7z",
-    "hash": "8a80bfa4b639323903a842a110850616a6921c10dc872687887168378438adfc",
-    "bin": [
-        "5200.exe"
+    "notes": [
+        "VSS is an MS-DOS program; run it under DOSBox on modern Windows.",
+        "Requires the Atari 5200 BIOS ROM renamed to 5200.bin in $dir."
     ],
+    "url": "https://atarihq.com/danb/files/vss82.zip",
+    "hash": "c1f94340fcde0a7c70e89409a2d625e2863951d3c5f7128eba7441216959c8ed",
+    "bin": "5200.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/vss/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://atarihq.com/danb/a5200.shtml",
+        "regex": "VSS V([\\d.]+) \\(Virtual Super System\\)"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vss/$version.7z"
+        "url": "https://atarihq.com/danb/files/vss$minorVersion.zip"
     }
 }

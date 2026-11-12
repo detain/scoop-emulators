@@ -7,24 +7,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vace3d/emulator_screen_01.jpg"
     ],
     "version": "1.0",
-    "description": "Vace3D is a Jupiter Cantab Jupiter Ace emulator. This is a truly weird emulator as the Computer and Screen are rendered in a 3D environment! It is hard to use and is mainly here for novelty value.",
+    "description": "Jupiter Cantab Jupiter Ace emulator rendered in a 3D environment",
     "homepage": "https://www.jupiter-ace.co.uk/emulators_win.html",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vace3d/1.0.7z",
-    "hash": "a9661a472e1b43de9ca35dad811ee121c7bfae7522c3be1d15378806febc0d12",
-    "bin": [
-        "vace3d.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/vace3d/1.0.7z",
-            "hash": "a9661a472e1b43de9ca35dad811ee121c7bfae7522c3be1d15378806febc0d12"
-        }
-    },
-    "checkver": {
-        "url": "https://www.jupiter-ace.co.uk/downloads/vace3d.zip",
-        "type": "sha256",
-        "pattern": "\"checksum\": \"([a-f0-9]{64})\""
-    },
-    "autoupdate": {}
+    "license": "GPL-2.0-only",
+    "url": "https://www.jupiter-ace.co.uk/graphics/vace/vace3d.zip",
+    "hash": "e7659dba8e668ce029da39f0959025ac7cfc3b972fda46e1fc725ad4aa9dae72",
+    "bin": "vace3d.exe",
+    "shortcuts": [
+        [
+            "vace3d.exe",
+            "Vace3D"
+        ]
+    ]
 }

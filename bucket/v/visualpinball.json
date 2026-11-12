@@ -6,27 +6,34 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/visualpinball/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/visualpinball/emulator_screen_01.jpg"
     ],
-    "version": "10.1",
-    "description": "Visual Pinball can more or less faithfully reproduce the gameplay of most pinball tables created before 1990.  More modern tables tend to use complicated engineering which is beyond that supported by VP.  Of course, every table has it's own gimmicks, which usually can be reproduced with varying degrees of success.",
-    "homepage": "http://www.randydavis.com/vp/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/visualpinball/10.1.7z",
-    "hash": "md5:3d9e5e5dcd1cc36670a5b5f5b5a390fe",
+    "version": "10.8.0-2051-28dd6c3",
+    "description": "Pinball table editor and simulator (Visual Pinball X, OpenGL build)",
+    "homepage": "https://github.com/vpinball/vpinball",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/vpinball/vpinball/blob/master/LICENSE"
+    },
+    "url": "https://github.com/vpinball/vpinball/releases/download/v10.8.0-2051-28dd6c3/Developer.VPinballX_GL-10.8.0-2051-28dd6c3-Release-win-x64.zip",
+    "hash": "2ded7a9bbab141d230c5326e886f48534fee4f7cc728bb02da87d5d562a398a1",
     "bin": [
-        "VPinballX.exe",
-        "VPinMAME.dll",
-        "VPinMAME.xml",
-        "VPinMAME.in",
-        "VPinMAME.chm",
-        "VPinMAME.pdf",
-        "VPinMAME.exe",
-        "VPTest.exe",
-        "Setup.exe"
+        [
+            "VPinballX_GL64.exe",
+            "vpinballx"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VPinballX_GL64.exe",
+            "Visual Pinball X"
+        ]
     ],
     "checkver": {
-        "url": "http://www.randydavis.com/vp/",
-        "regex": "<td>Visual Pinball ([\\d\\.]+)<\\/td>",
-        "index": 1
+        "github": "https://api.github.com/repos/vpinball/vpinball/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<tag>[\\d.]+-\\d+-[0-9a-f]+)/(?<file>[^/\"]*VPinballX_GL-[^/\"]*(?:Release-win-x64|windows-x64-Release)\\.zip)",
+        "replace": "${tag}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://github.com/vpinball/vpinball/releases/download/v$version/$matchFile"
+    }
 }

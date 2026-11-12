@@ -4,25 +4,17 @@
         "logo:https://1.bp.blogspot.com/-PC87lKTCTK8/YDTqiY_LmPI/AAAAAAAAYDc/V0vG06iccb4oq8qeNfDoUmmraioNAJwGwCLcBGAsYHQ/s320/vvctre.png"
     ],
     "version": "1.0.0",
-    "description": "A Nintendo DS emulator",
+    "description": "Nintendo 3DS emulator based on Citra (discontinued, upstream repository removed)",
     "homepage": "https://github.com/vvanelslande/vvctre",
-    "license": "GPL-2.0-only",
-    "url": "",
-    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
-    "bin": "vvctre.exe",
+    "license": "GPL-2.0-or-later",
+    "notes": "Upstream repository was deleted; no hashes are available for these release files. checkver/autoupdate removed so a re-registered repository cannot push new versions.",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/vvanelslande/vvctre/releases/download/v{version}/vvctre_win32_{version}.zip",
-            "hash": "sha256:{hash}"
-        },
         "64bit": {
-            "url": "https://github.com/vvanelslande/vvctre/releases/download/v{version}/vvctre_win64_{version}.zip",
-            "hash": "sha256:{hash}"
+            "url": "https://github.com/vvanelslande/vvctre/releases/download/v1.0.0/vvctre_win64_1.0.0.zip"
+        },
+        "32bit": {
+            "url": "https://github.com/vvanelslande/vvctre/releases/download/v1.0.0/vvctre_win32_1.0.0.zip"
         }
     },
-    "checkver": {
-        "url": "https://github.com/vvanelslande/vvctre/releases/latest",
-        "regex": "vvctre_win(?:32|64)_([\\d.]+).zip"
-    },
-    "autoupdate": {}
+    "bin": "vvctre.exe"
 }

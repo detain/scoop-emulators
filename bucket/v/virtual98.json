@@ -6,28 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtual98/emulator_screen_01.jpg"
     ],
     "version": "0.28",
-    "description": "Emulator for the NEC PC-9800 series",
+    "description": "NEC PC-9800 series emulator (requires MMX)",
     "homepage": "http://hwbb.gyao.ne.jp/soltin/virtual98.html",
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/virtual98/0.28.7z",
     "hash": "2ded9b0d1743d96b2af55375da9e4816d28f8e405c77ae097498d34b50987566",
-    "bin": [
-        "Virtual98.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/virtual98/0.28.7z",
-            "hash": "2ded9b0d1743d96b2af55375da9e4816d28f8e405c77ae097498d34b50987566"
-        }
-    },
+    "bin": "VIRTUAL9.EXE",
     "checkver": {
-        "url": "http://hwbb.gyao.ne.jp/soltin/virtual98.html",
-        "regex": "Latest version: ([\\d.]+)"
+        "url": "https://consolo.is.cc/emu/virtual98/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "http://hwbb.gyao.ne.jp/soltin/virtual98.html"
-    },
-    "extract_dir": "Virtual98",
-    "app_path": "Virtual98\\Virtual98.exe",
-    "app_args": []
+        "url": "https://consolo.is.cc/emu/virtual98/$version.7z"
+    }
 }

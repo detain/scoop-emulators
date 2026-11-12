@@ -7,17 +7,25 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vbjin-ovr/emulator_screen_01.jpg"
     ],
     "version": "3.0",
-    "description": "VBjin-OVR is a Virtual Boy Emulator for Windows with support for the Oculus Rift VR display device.",
+    "description": "Nintendo Virtual Boy emulator with Oculus Rift support",
     "homepage": "https://github.com/braindx/vbjin-ovr",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/vbjin-ovr/3.0.7z",
-    "hash": "29759bd0cb73e7c98230f0fafc9ef9287a1fb8f98ce24ee9a5f8b6ddda4d676f",
+    "url": "https://github.com/braindx/vbjin-ovr/releases/download/3.0/VBjin-OVR.exe",
+    "hash": "b70eb521687a5816f91b685f1657bc35c86dc08b8b263f47ebcf2d724617f4b4",
     "bin": [
-        "vbjin.exe"
+        [
+            "VBjin-OVR.exe",
+            "vbjin-ovr"
+        ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/braindx/vbjin-ovr/releases/latest",
-        "regex": "v(\\d+\\.\\d+\\.\\d+)"
-    },
-    "autoupdate": {}
+    "shortcuts": [
+        [
+            "VBjin-OVR.exe",
+            "VBjin-OVR"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/braindx/vbjin-ovr/releases/download/$version/VBjin-OVR.exe"
+    }
 }

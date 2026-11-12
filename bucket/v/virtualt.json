@@ -6,20 +6,26 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtualt/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtualt/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "Virtual T is a TRS-80 Model 100/102/200 emulator that runs on Windows, Linux, and Macintosh. The goal of Virtual T is to provide 100% hardware emulation so any existing programs will run. It also adds powerful development and debugging tools.",
+    "version": "1.7",
+    "description": "TRS-80 Model 100/102/200, NEC PC-8201/8300 and Kyotronic KC-85 emulator with development and debugging tools",
     "homepage": "https://sourceforge.net/projects/virtualt/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/virtualt/1.7.7z",
-    "hash": "b67ca3ae6b954712efa33f32851cc3b678bd992a78963d032d8e4c6e4fdb1aff",
-    "bin": [
-        "VirtualT.exe"
+    "license": "BSD-3-Clause",
+    "url": "https://downloads.sourceforge.net/project/virtualt/Win32/v1.7/virtualt-win32-v1.7.zip",
+    "hash": "sha1:cb2cbe9e2e1909b845ea11ed2157bf53d3c60b4a",
+    "extract_dir": "virtualt-win32-v1.7",
+    "bin": "VirtualT.exe",
+    "shortcuts": [
+        [
+            "VirtualT.exe",
+            "Virtual T"
+        ]
     ],
     "checkver": {
         "url": "https://sourceforge.net/projects/virtualt/rss?path=/Win32",
-        "regex": "v([^<]*)<"
+        "regex": "Win32/v([\\d.]+)/virtualt-win32-v[\\d.]+\\.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/virtualt/files/Win32/v$version/virtualt-win32-v$version.zip/download"
+        "url": "https://downloads.sourceforge.net/project/virtualt/Win32/v$version/virtualt-win32-v$version.zip",
+        "extract_dir": "virtualt-win32-v$version"
     }
 }

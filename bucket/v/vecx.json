@@ -6,24 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vecx/emulator_screen_01.jpg"
     ],
     "version": "2002.03.02",
-    "description": "vecx is a GCE Vectrex emulator.",
+    "description": "GCE Vectrex emulator",
     "homepage": "https://github.com/jhawthorn/vecx",
-    "license": "GPL-2.0-only",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/vecx/2002.03.02.7z",
     "hash": "9c37ea95d71cd8ae318b3c691c10e848e40c84ccf020d073523dda62aa553155",
-    "bin": [
-        "vecx.exe"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jhawthorn/vecx.git"
-    },
+    "bin": "vecx.exe",
     "checkver": {
-        "url": "https://github.com/jhawthorn/vecx/releases/latest",
-        "pattern": "Vecx-(.*?)\\.zip"
+        "url": "https://consolo.is.cc/emu/vecx/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://github.com/jhawthorn/vecx/releases/download/Vecx-{version}/Vecx-{version}.zip",
-        "extract_dir": "Vecx-{version}"
+        "url": "https://consolo.is.cc/emu/vecx/$version.7z"
     }
 }

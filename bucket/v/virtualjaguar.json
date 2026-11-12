@@ -25,5 +25,14 @@
         "url": "https://icculus.org/virtualjaguar",
         "regex": "The latest official release is ([\\d.]+)\\."
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://icculus.org/virtualjaguar/tarballs/virtualjaguar-$version-win64.rar"
+            },
+            "32bit": {
+                "url": "https://icculus.org/virtualjaguar/tarballs/virtualjaguar-$version-win32.rar"
+            }
+        }
+    }
 }

@@ -1,22 +1,29 @@
 {
     "##": "name:VB81 XuR",
-    "version": "-",
-    "description": "vb81_xur is a ZX81 emulator for Windows",
+    "version": "2025.08.28",
+    "description": "Sinclair ZX81 emulator and toolbox (unofficial VB81 release)",
     "homepage": "http://zx81.vb81.free.fr/",
     "license": "GPL-2.0-only",
+    "notes": "Requires the Visual Basic 5 runtime.",
     "url": "http://zx81.vb81.free.fr/download/VB81_XuR_EXE.zip",
     "hash": "1cac720dced7ec57b25541fa9541469c0b71194a1f6634b2eec4a71abb007062",
     "extract_dir": "Vb81_XuR",
     "bin": [
-        "Vb81_XuR.exe",
-        "Vb81_XuR"
+        [
+            "Vb81_XuR.exe",
+            "vb81xur"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Vb81_XuR.exe",
+            "VB81 XuR"
+        ]
     ],
     "checkver": {
         "url": "http://zx81.vb81.free.fr/",
-        "regex": [
-            "vb81 Version",
-            "\\s*(\\d[\\.\\d]+)"
-        ]
+        "regex": "UPDATE\\s+(?<day>\\d{2})/(?<month>\\d{2})/(?<year>\\d{4})",
+        "replace": "${year}.${month}.${day}"
     },
     "autoupdate": {
         "url": "http://zx81.vb81.free.fr/download/VB81_XuR_EXE.zip"

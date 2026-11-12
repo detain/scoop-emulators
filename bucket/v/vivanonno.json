@@ -7,19 +7,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vivanonno/emulator_screen_01.jpg"
     ],
     "version": "22.0.3",
-    "description": "viva nonno is a namco system 22 emulator for Windows and DirectX.",
+    "description": "Namco System 22 arcade emulator",
     "homepage": "http://vivanonno.vg-network.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/vivanonno/22.0.3.7z",
-    "hash": "1f2ea240a34485c0b90f65bb376cecad9a34e8b4c654a1000462eb3e974a3e02",
-    "bin": [
-        "vivanonno.exe"
+    "notes": "Place ROM images in $persist_dir\\roms",
+    "url": "https://web.archive.org/web/20051215145403id_/http://vivanonno.vg-network.com:80/files/viva2203.zip",
+    "hash": "50912047d8e035513c22b96bcb3d164140f6fa24c95bbcfdd356ec56614323e8",
+    "extract_dir": "vivanonno",
+    "bin": "vivanonno.exe",
+    "shortcuts": [
+        [
+            "vivanonno.exe",
+            "viva nonno"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/vivanonno/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/vivanonno/$version.7z"
-    }
+    "persist": [
+        "roms",
+        "eeprom"
+    ]
 }

@@ -6,24 +6,27 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/vbarr/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/vbarr/emulator_screen_01.jpg"
     ],
-    "version": "23.6",
-    "description": "VBA-ReRecording is the re-recording branch of the stable 1.7.2 version of VisualBoyAdvance, The primary function of this branch is to expand features related to the creation of Tool-assisted movies.",
-    "homepage": "https://github.com/visualboyadvance-m/visualboyadvance-m",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/visualboyadvance-rr/23.6.7z",
-    "hash": "820662d259f41dda866273a48559057a9943296dadc704bf9a8bc0622cfff825",
-    "bin": [
-        "vba-v24m-svn480.exe"
+    "version": "480LRC4",
+    "description": "Nintendo Game Boy / Game Boy Advance emulator with re-recording features for tool-assisted speedruns (VBA-rr)",
+    "homepage": "https://github.com/TASEmulators/vba-rerecording",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/TASEmulators/vba-rerecording/releases/download/480LRC4/vba-v24m-svn480.LRC4-xp140.7z",
+    "hash": "b605afa9dad369889e940e0fb1579f49fa99be96c531b309cf94e4685c369589",
+    "pre_install": "Get-ChildItem \"$dir\\vba-v24m-*.exe\" | Rename-Item -NewName 'vba-rr.exe'",
+    "bin": "vba-rr.exe",
+    "shortcuts": [
+        [
+            "vba-rr.exe",
+            "VisualBoyAdvance ReRecording"
+        ]
     ],
-    "extract_dir": "VisualBoyAdvance-M",
     "checkver": {
-        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",
-        "pattern": "/visualboyadvance-m/visualboyadvance-m/releases/tag/v(\\d+\\.\\d+\\.\\d+)",
-        "transform": "\\1"
+        "github": "https://api.github.com/repos/TASEmulators/vba-rerecording/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/(?<file>vba-v24m-[^/\"]+\\.7z)",
+        "replace": "${tag}"
     },
     "autoupdate": {
-        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/latest/download/VisualBoyAdvance-M.zip",
-        "hash": "sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        "extract_dir": "VisualBoyAdvance-M"
+        "url": "https://github.com/TASEmulators/vba-rerecording/releases/download/$matchTag/$matchFile"
     }
 }

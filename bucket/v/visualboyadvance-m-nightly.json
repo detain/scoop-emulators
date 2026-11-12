@@ -1,14 +1,17 @@
 {
     "version": "nightly",
-    "description": "VisualBoyAdvance-M (VBA-M) is a fork of the discontinued VisualBoyAdvance project, adding many enhancements and features.",
-    "homepage": "https://vba-m.com/",
-    "license": "GPL-2.0-or-later",
+    "description": "Nintendo Game Boy Advance emulator (nightly build)",
+    "homepage": "https://vba-m.com",
+    "license": "GPL-2.0-only",
     "architecture": {
-        "32bit": {
-            "url": "https://nightly.vba-m.com/visualboyadvance-m-Win-x86_32.zip"
-        },
         "64bit": {
-            "url": "https://nightly.vba-m.com/visualboyadvance-m-Win-x86_64.zip"
+            "url": "https://nightly.visualboyadvance-m.org/visualboyadvance-m-Win-x86_64.zip"
+        },
+        "32bit": {
+            "url": "https://nightly.visualboyadvance-m.org/visualboyadvance-m-Win-x86_32.zip"
+        },
+        "arm64": {
+            "url": "https://nightly.visualboyadvance-m.org/visualboyadvance-m-Win-ARM64.zip"
         }
     },
     "pre_install": [
@@ -21,7 +24,10 @@
         "}"
     ],
     "bin": [
-        "VisualBoyAdvance-M.exe"
+        [
+            "visualboyadvance-m.exe",
+            "visualboyadvance-m-nightly"
+        ]
     ],
     "shortcuts": [
         [
@@ -33,14 +39,7 @@
         "Battery",
         "Recording",
         "Screenshot",
-        "State"
-    ],
-    "autoupdate": {
-        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v$version/VisualBoyAdvance-M-$version-Windows.7z",
-        "hash": "sha256"
-    },
-    "checkver": {
-        "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases",
-        "regex": "<a href=\"/visualboyadvance-m/visualboyadvance-m/releases/tag/[^\"]+\"[^>]*>VisualBoyAdvance-M v?([\\d.]+)[^<]+<"
-    }
+        "State",
+        "vbam.ini"
+    ]
 }

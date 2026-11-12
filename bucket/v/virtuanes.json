@@ -7,19 +7,16 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/virtuanes/emulator_screen_01.jpg"
     ],
     "version": "0.97e",
-    "description": "VirtuaNES is an emulator for the Nintendo NES and Famicom. The website is a mixture of English and Japanese.",
-    "homepage": "http://virtuanes.s1.xrea.com:8080/",
+    "description": "Nintendo NES / Famicom emulator",
+    "homepage": "http://virtuanes.s1.xrea.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/virtuanes/0.97e.7z",
-    "hash": "7e00138599deb638432c385db890139076dbeee2697716c57957654a5976816b",
-    "bin": [
-        "VirtuaNES.exe"
-    ],
-    "checkver": {
-        "url": "http://virtuanes.s1.xrea.com:8080/",
-        "regex": "<h3>Download VirtuaNES ([\\d.]+) Released!<\\/h3>"
-    },
-    "autoupdate": {
-        "url": "http://virtuanes.s1.xrea.com:8080/"
-    }
+    "url": "https://web.archive.org/web/20160828212019id_/http://virtuanes.s1.xrea.com/bin/virtuanes097e.zip",
+    "hash": "e256e35ab14c5bdd1b4ae3a421154b9d6d3947a173eb9957159d8154ed9da6cd",
+    "bin": "VirtuaNES.exe",
+    "shortcuts": [
+        [
+            "VirtuaNES.exe",
+            "VirtuaNES"
+        ]
+    ]
 }
