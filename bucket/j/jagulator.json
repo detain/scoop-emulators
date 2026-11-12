@@ -8,19 +8,22 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-01.png,https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-02.png,https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-03.png,https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-04.png,https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-05.png,https://cdn.emulationking.com/wp-content/uploads/2016/09/Jagulator-Atari-Jaguar-Emulator-Pic-06.png"
     ],
     "version": "2.0.2",
-    "description": "Jagulator was the very first publicly available Atari Jaguar emulator. Jagulator is capable of running most commercial Atari Jaguar games without any significant issues.",
-    "homepage": "https://consolo.is.cc/emulator/jagulator",
+    "description": "Atari Jaguar emulator, the first publicly available one",
+    "homepage": "https://web.archive.org/web/2011/http://www.jagulator.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/jagulator/2.0.2.7z",
-    "hash": "0e013e5db0b0509fab733e4641702c677bdbb052bb8edc1d061bd97eb4d5b621",
-    "bin": [
-        "jagulator.exe"
+    "notes": "The official site jagulator.com is gone; this package is the original official download archived by the Wayback Machine.",
+    "url": "https://web.archive.org/web/20110713074551id_/http://www.jagulator.com/download/jagulator-2.0.2.zip",
+    "hash": "f82a7926357291e1f7f2c399ad9c2f98c2c497b9aa82279c37315e9ab34f90ec",
+    "extract_dir": "jagulator",
+    "bin": "jagulator.exe",
+    "shortcuts": [
+        [
+            "jagulator.exe",
+            "Jagulator"
+        ]
     ],
-    "checkver": {
-        "url": "https://consolo.is.cc/emu/jagulator/",
-        "regex": "([\\d.]+)\\.7z"
-    },
-    "autoupdate": {
-        "url": "https://consolo.is.cc/emu/jagulator/$version.7z"
-    }
+    "persist": [
+        "roms",
+        "jagulator.ini"
+    ]
 }

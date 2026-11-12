@@ -7,20 +7,41 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/jnes/emulator_screen_01.jpg",
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-01.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-02.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-03.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-04.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-05.png,https://cdn.emulationking.com/wp-content/uploads/2014/05/jnes-nes-emulator-screenshot-06.png"
     ],
-    "version": "1.2.1-win64",
-    "description": "Jnes is an emulator for the original 8-bit Nintendo Entertainment System (NES) with an enjoyable and intuitive user interface which has been translated into 20 languages.",
-    "homepage": "http://www.jabosoft.com/jnes/",
+    "version": "1.2.1",
+    "description": "Nintendo Entertainment System emulator",
+    "homepage": "https://www.jabosoft.com/jnes",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/jnes/1.2.1-win64.7z",
-    "hash": "eb24c27edd2006735564f0fc86c602e29eaab72f6a96b39fe3db693b52bf12d6",
-    "bin": [
-        "jnes.exe"
-    ],
-    "autoupdate": {
-        "url": "http://jabosoft.com/files/jnes/latest.html"
+    "architecture": {
+        "64bit": {
+            "url": "https://www.jabosoft.com/gallery/jnes-1.2.1-x64.zip",
+            "hash": "66c478dbe20c5abf7dac72d960320ccd55bcb086e0af042e049095362367a028"
+        }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Jnes.ini\")) {",
+        "    New-Item \"$dir\\Jnes.ini\" -Type File | Out-Null",
+        "}"
+    ],
+    "bin": "Jnes.exe",
+    "shortcuts": [
+        [
+            "Jnes.exe",
+            "Jnes"
+        ]
+    ],
+    "persist": [
+        "saves",
+        "Jnes.ini"
+    ],
     "checkver": {
-        "url": "http://jabosoft.com/files/jnes/latest.html",
-        "regex": "<a href=\"(http://jabosoft.com/files/jnes/jnes[0-9\\.]+.zip)\">"
+        "url": "https://www.jabosoft.com/jnes/downloads",
+        "regex": "gallery/jnes-([\\d.]+)-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.jabosoft.com/gallery/jnes-$version-x64.zip"
+            }
+        }
     }
 }

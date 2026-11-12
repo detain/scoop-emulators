@@ -6,21 +6,21 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/jzintv/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/jzintv/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "jzIntv is an Intellivision emulator.",
-    "homepage": "http://spatula-city.org/~im14u2c/intv",
+    "version": "20200712",
+    "description": "Mattel Intellivision emulator and SDK",
+    "homepage": "http://spatula-city.org/~im14u2c/intv/",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/jzintv/1.0.7z",
-    "hash": "1fd9dcd03e8667f67c250ce0a9f1c3bfdc54dd3b9d2b221719f4c545fee62dbd",
-    "bin": [
-        "jzintv.exe"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/jzintv/1.0.7z",
-            "hash": "1fd9dcd03e8667f67c250ce0a9f1c3bfdc54dd3b9d2b221719f4c545fee62dbd"
-        }
+    "notes": "jzIntv requires the Intellivision EXEC and GROM images (exec.bin, grom.bin) in $dir\\rom.",
+    "url": "http://spatula-city.org/~im14u2c/intv/dl/jzintv-20200712-win32-sdl2.zip",
+    "hash": "94a43f74c42f228bbd71981dea113570b842ec884bec7bb23677bb62dfd1a4dd",
+    "extract_dir": "jzintv-20200712-win32-sdl2",
+    "bin": "bin\\jzintv.exe",
+    "checkver": {
+        "url": "http://spatula-city.org/~im14u2c/intv/",
+        "regex": "jzintv-(\\d+)-win32-sdl2\\.zip"
     },
-    "checkver": true,
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://spatula-city.org/~im14u2c/intv/dl/jzintv-$version-win32-sdl2.zip",
+        "extract_dir": "jzintv-$version-win32-sdl2"
+    }
 }

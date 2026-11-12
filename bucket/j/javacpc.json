@@ -6,20 +6,50 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/javacpc/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/javacpc/emulator_screen_01.jpg"
     ],
-    "version": "2.9.5e",
-    "description": "JavaCPC is a Java-based CPC emulator that has a complete Desktop environment.",
-    "homepage": "http://cpc-live.com/news.php",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/javacpc/2.9.5e.7z",
-    "hash": "bd717e624704bece5fa4593560d212e7e298e1343c75495961cc7a92a5c1a610",
-    "bin": [
-        "JavaCPC.exe"
-    ],
+    "version": "3.0.2",
+    "description": "Amstrad CPC emulator written in Java, with a complete desktop environment",
+    "homepage": "https://sourceforge.net/projects/javacpc/",
+    "license": "GPL-2.0-only",
+    "suggest": {
+        "Java Runtime Environment": "java/temurin-lts-jre"
+    },
+    "url": "https://downloads.sourceforge.net/project/javacpc/JavaCPC%20Desktop/JavaCPC_Desktop_3.0.2.zip",
+    "hash": "5f411750a8d5a5e5d92392807821b010402019a69fddb38f63d1c506d069a618",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "JavaCPC64.exe",
+                    "javacpc"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "JavaCPC64.exe",
+                    "JavaCPC"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "JavaCPC32.exe",
+                    "javacpc"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "JavaCPC32.exe",
+                    "JavaCPC"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "url": "https://consolo.is.cc/emu/javacpc/",
-        "regex": "([\\d.]+[a-zA-Z]*)\\.7z"
+        "url": "https://sourceforge.net/projects/javacpc/rss?path=/JavaCPC%20Desktop",
+        "regex": "JavaCPC_Desktop_([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/javacpc/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/javacpc/JavaCPC%20Desktop/JavaCPC_Desktop_$version.zip"
     }
 }

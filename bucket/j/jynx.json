@@ -7,13 +7,46 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/jynx/emulator_screen_01.jpg"
     ],
     "version": "1.0.8",
-    "description": "Jynx is an emulator for the Camputers Lynx computer. See http://jynxemulator.wordpress.com/ for more information.",
+    "description": "Camputers Lynx 48K/96K emulator",
     "homepage": "https://github.com/jonathan-markland/Jynx",
-    "license": "MIT",
-    "url": "https://consolo.is.cc/emu/jynx/1.0.8.7z",
-    "hash": "f7ecb391f5a2781ce1207d6fb2dfc24c707f38e09fd3194f33c02047d8b18ca7",
-    "bin": "jynx.exe",
-    "extract_dir": "Jynx",
-    "checkver": true,
-    "autoupdate": {}
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/jonathan-markland/Jynx/releases/download/v1.0.8/Jynx.for.GitHub.1.0.8.zip",
+    "hash": "5aa7f36333ca3628d00d9510c20f855d26ada713c18277b70314e2460aac2441",
+    "extract_dir": "GitHub",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "Jynx-Windows-64bit.exe",
+                    "jynx"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Jynx-Windows-64bit.exe",
+                    "Jynx"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "Jynx-Windows-32bit.exe",
+                    "jynx"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "Jynx-Windows-32bit.exe",
+                    "Jynx"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/jonathan-markland/Jynx"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jonathan-markland/Jynx/releases/download/v$version/Jynx.for.GitHub.$version.zip"
+    }
 }

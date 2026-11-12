@@ -1,35 +1,55 @@
 {
     "version": "158-20260924-00ac4d6",
-    "description": "PSP Emulator written in Java ",
+    "description": "Sony PSP emulator written in Java (development version)",
     "homepage": "https://github.com/jpcsp/jpcsp",
-    "license": "GPL-2.0-only",
+    "license": "GPL-3.0-or-later",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days. Requires Java with JAVA_HOME set.",
+    "suggest": {
+        "JRE": "java/openjdk"
+    },
+    "depends": "7zip",
     "architecture": {
         "32bit": {
             "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip",
-            "hash": "94408a17f04e3e183f47c0a3606089fd1eb1dec61cb94e75ece36e73d143ba6b",
-            "bin": "start-windows-x86.bat",
+            "hash": "285617522af4ee7201eb13cc8c81165728788fe3bfaa7cc8665bbfa546be0d34",
+            "bin": [
+                [
+                    "start-windows-x86.bat",
+                    "jpcsp-dev"
+                ]
+            ],
             "shortcuts": [
                 [
                     "start-windows-x86.bat",
-                    "jpcsp"
+                    "jpcsp (dev)"
                 ]
             ]
         },
         "64bit": {
             "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip",
-            "hash": "c7c8e59b472b15c8acb3771bcfafe7971e9f8cfbfea8632aa48c892d17cc8126",
-            "bin": "start-windows-amd64.bat",
+            "hash": "cf47d3daf157ee52f9314498dbd7c748031a5c5ff4160067da6d4f3288ce9a8c",
+            "bin": [
+                [
+                    "start-windows-amd64.bat",
+                    "jpcsp-dev"
+                ]
+            ],
             "shortcuts": [
                 [
                     "start-windows-amd64.bat",
-                    "jpcsp"
+                    "jpcsp (dev)"
                 ]
             ]
         }
     },
-    "extract_dir": "jpcsp",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\jpcsp-*-windows-*.7z\" | ForEach-Object {",
+        "    $sub = $_.BaseName -replace '^jpcsp-[0-9a-f]+-', 'jpcsp-'",
+        "    Expand-7zipArchive $_.FullName $dir -ExtractDir $sub -Removal",
+        "}"
+    ],
     "checkver": {
-        "url": "https://api.github.com/repos/jpcsp/jpcsp/actions/workflows/main.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/jpcsp/jpcsp/actions/workflows/main.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
@@ -40,6 +60,13 @@
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "32bit": {
+                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip"
+            },
+            "64bit": {
+                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip"
+            }
+        }
     }
 }
