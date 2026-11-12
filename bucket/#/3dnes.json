@@ -8,15 +8,14 @@
     ],
     "version": "1.2.1",
     "description": "3DNes is an emulator that renders Nintendo Entertainment System games in 3D with a VR option on the way. If you really want to see something a bit special, it's definitely worth trying this emulator.",
-    "homepage": "http://geod.itch.io/3dnes",
-    "license": "Donationware",
+    "homepage": "https://geod.itch.io/3dnes",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/3dnes/1.2.1.7z",
     "hash": "ecc90a15587708609146528f9a331a2e41c20ef4313bf47c40097f1fa80d0981",
-    "bin": [
-        "3DNes.exe"
-    ],
+    "bin": "3DNes.exe",
     "checkver": {
-        "url": "http://geod.itch.io/3dnes"
+        "url": "https://consolo.is.cc/emu/3dnes/",
+        "regex": "([\\d.]+)\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/3dnes/$version.7z"
