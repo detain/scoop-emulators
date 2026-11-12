@@ -12,6 +12,7 @@ jobs:
   test_powershell:
     name: WindowsPowerShell
     runs-on: windows-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@main
@@ -23,11 +24,6 @@ jobs:
         with:
           repository: ScoopInstaller/Scoop
           path: scoop_core
-      - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@v6.2.1
-        with:
-          modules-to-cache: BuildHelpers
-          shell: powershell
       - name: Test Bucket
         shell: powershell
         run: |
@@ -36,6 +32,7 @@ jobs:
   test_pwsh:
     name: PowerShell
     runs-on: windows-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout Bucket
         uses: actions/checkout@main
@@ -47,11 +44,6 @@ jobs:
         with:
           repository: ScoopInstaller/Scoop
           path: scoop_core
-      - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@v6.2.1
-        with:
-          modules-to-cache: BuildHelpers
-          shell: pwsh
       - name: Test Bucket
         shell: pwsh
         run: |
