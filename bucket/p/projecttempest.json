@@ -8,19 +8,28 @@
         "screenshots:https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-01.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-02.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-03.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-04.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-05.jpg,https://cdn.emulationking.com/wp-content/uploads/2016/09/Project-Tempest-Atari-Jaguar-Emulator-Pic-06.jpg"
     ],
     "version": "0.95",
-    "description": "Project Tempest was one of the very first Atari Jaguar emulators. It managed even successfully to emulate several commercial games completely.",
-    "homepage": "http://pt.emuunlim.com/",
+    "description": "Atari Jaguar emulator",
+    "homepage": "https://pt.emuunlim.com/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/projecttempest/0.95.7z",
-    "hash": "37bc0239be0ad483f22d72dffff820a14e2582ba393321014908209c507ad4c8",
+    "url": "https://pt.emuunlim.com/PTv0.95.zip",
+    "hash": "b63d9d36bd04aa07b66e8f8178b8659c8cf41e8b5f9c355c07b783b596c80202",
     "bin": [
-        "PT.exe"
+        [
+            "PT.exe",
+            "projecttempest"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PT.exe",
+            "Project Tempest"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/projecttempest/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://pt.emuunlim.com/",
+        "regex": "PTv([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/projecttempest/$version.7z"
+        "url": "https://pt.emuunlim.com/PTv$version.zip"
     }
 }

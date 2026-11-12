@@ -6,21 +6,33 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/picodrive/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/picodrive/emulator_screen_01.jpg"
     ],
-    "version": "1.45a",
-    "description": "Picodrive is a Sega 32X, Sega Megadrive / Genesis, Sega Master System & Sega MegaCD emulator, originally coded for handheld devices.",
-    "homepage": "http://notaz.gp2x.de/svp.php",
-    "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/picodrive/1.45a.7z",
-    "hash": "4f4984f735a8336f08c82f5f80b316d67029b8ab2eb85ac2d13f9235e14a100d",
+    "version": "2.05",
+    "description": "Sega Mega Drive/Genesis, Mega CD, 32X and Master System emulator",
+    "homepage": "https://github.com/irixxxx/picodrive",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/irixxxx/picodrive/blob/master/COPYING"
+    },
+    "url": "https://github.com/irixxxx/picodrive/releases/download/v2.05/PicoDrive-win32-2.05-7cbcd41.zip",
+    "hash": "be7fc401666040f9f165a7c44897264bb103cb0afc4d9844125b754aa553efee",
     "bin": [
-        "picodrive.exe"
+        [
+            "PicoDrive.exe",
+            "picodrive"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PicoDrive.exe",
+            "PicoDrive"
+        ]
     ],
     "checkver": {
-        "url": "https://github.com/notaz/picodrive/releases/latest",
-        "regex": "href=\\\".*?/v?((\\d+\\.)*\\d+)/",
-        "matchIndex": 1
+        "github": "https://api.github.com/repos/irixxxx/picodrive/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "download/v(?<tag>[^/]+)/PicoDrive-win32-(?<version>[\\d.]+)-(?<commit>[0-9a-f]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/notaz/picodrive/releases/download/v{version}/picodrive_win32_{version}.zip"
+        "url": "https://github.com/irixxxx/picodrive/releases/download/v$matchTag/PicoDrive-win32-$version-$matchCommit.zip"
     }
 }

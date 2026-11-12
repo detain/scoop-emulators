@@ -9,14 +9,14 @@
             "hash": "dd2be96dca16c75e63ec854ba98dfd2684036b21ae3339820ee28c7ceabc6eb7",
             "bin": [
                 [
-                    "punes.exe",
-                    "puNES (OpenGL)",
+                    "punes32.exe",
+                    "punes-opengl",
                     "--portable"
                 ]
             ],
             "shortcuts": [
                 [
-                    "punes.exe",
+                    "punes32.exe",
                     "puNES (OpenGL)",
                     "--portable"
                 ]
@@ -28,7 +28,7 @@
             "bin": [
                 [
                     "punes64.exe",
-                    "puNES (OpenGL)",
+                    "punes-opengl",
                     "--portable"
                 ]
             ],
@@ -41,6 +41,11 @@
             ]
         }
     },
+    "pre_install": [
+        "'input.cfg', 'puNES.cfg', 'recent.cfg' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType File | Out-Null }",
+        "}"
+    ],
     "persist": [
         "bios",
         "cheat",
@@ -57,5 +62,14 @@
         "recent.cfg"
     ],
     "checkver": "github",
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/punesemu/puNES/releases/download/v$version/punes-$version-i686-win-opengl.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/punesemu/puNES/releases/download/v$version/punes-$version-x86_64-win-opengl.zip"
+            }
+        }
+    }
 }

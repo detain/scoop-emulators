@@ -6,30 +6,22 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc88win/emulator_screen_01.jpg"
     ],
     "version": "1.14",
-    "description": "a NEC - PC8801 Emulator on the Windows platform.",
+    "description": "NEC PC-8801 emulator",
     "homepage": "http://hwbb.gyao.ne.jp/soltin/pc88win.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/pc88win/1.14.7z",
-    "hash": "d98de53fb4c3ba3ad44d817e9ca0864b9bd94a0774abe315c6ac42d2290a487e",
+    "notes": "The original site is offline; this downloads the official archive from the Internet Archive.",
+    "url": "https://web.archive.org/web/20160415072647id_/http://hwbb.gyao.ne.jp/soltin/pc88w114.lzh",
+    "hash": "83bda2ca00cd7fb2633aa6a7373dfb35225036e1a8c2b594d4ed29df9ccdf1a0",
     "bin": [
-        "pc88win.exe"
+        [
+            "PC88WIN.EXE",
+            "pc88win"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/pc88win/1.14.7z",
-            "hash": "d98de53fb4c3ba3ad44d817e9ca0864b9bd94a0774abe315c6ac42d2290a487e"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/pc88win/1.14.7z",
-            "hash": "d98de53fb4c3ba3ad44d817e9ca0864b9bd94a0774abe315c6ac42d2290a487e"
-        }
-    },
-    "checkver": {
-        "url": "http://hwbb.gyao.ne.jp/soltin/pc88win.html",
-        "regex": "Latest version: (\\d+\\.\\d+(\\.\\d+)?)",
-        "matchIndex": 1
-    },
-    "autoupdate": {
-        "url": "http://hwbb.gyao.ne.jp/soltin/pc88win.html"
-    }
+    "shortcuts": [
+        [
+            "PC88WIN.EXE",
+            "PC88Win"
+        ]
+    ]
 }

@@ -3,27 +3,41 @@
         "name:PCSX-Redux",
         "logo:https://1.bp.blogspot.com/-sOIbENTD55M/YROzTC82NMI/AAAAAAAAYLo/M1rx8MedU_s_ZanD_nJtuTclRXqnPhpdwCLcBGAsYHQ/s320/3a810ac7-0de3-43b8-bde1-43b14f008743.png"
     ],
-    "version": "1.0.0",
-    "description": "An actively developed fork of PCSX-Reloaded",
+    "version": "30928.20261111.31",
+    "description": "Sony PlayStation emulator and development/debugging tool, a modernized fork of PCSX-Reloaded",
     "homepage": "https://github.com/grumpycoders/pcsx-redux",
-    "license": "GPL-2.0-only",
-    "url": "",
-    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
-    "bin": [
-        "pcsx.exe"
-    ],
-    "checkver": true,
+    "license": "GPL-2.0-or-later",
+    "notes": "PCSX-Redux only publishes rolling development builds (dev channel on distrib.app).",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/grumpycoders/pcsx-redux/releases/download/v{{version}}/pcsx-redux-v{{version}}-win64.7z",
-            "hash": "sha256:5d303035bbd29e1f30e68231c04f8e2e34a9f7d1f1e19fa785a20c0a14d7f2b2"
+            "url": "https://distrib.app/storage/assets/3ca/d80/72f/8402c7f84987c5c381069511a866bfeaf5ffc289aa51f9b83a6949c/pcsx-redux-nightly-30928.20261111.31-x64.zip",
+            "hash": "863bcfccfe4c4e4779e3f392cfc18ffcb7bf8932c67deea8f9d3316643d9504e"
         }
     },
-    "autoupdate": {},
-    "environment": {
-        "PATH": ";$dir$"
+    "bin": "pcsx-redux.exe",
+    "shortcuts": [
+        [
+            "pcsx-redux.exe",
+            "PCSX-Redux"
+        ]
+    ],
+    "checkver": {
+        "url": "https://distrib.app/storage/manifests/pcsx-redux/dev-win-x64/manifest.json",
+        "script": [
+            "$id = json_path $page '$.builds[0].id'",
+            "$build = (New-Object System.Net.WebClient).DownloadString(\"https://distrib.app/storage/manifests/pcsx-redux/dev-win-x64/manifest-$id.json\")",
+            "json_path $build '$.path'"
+        ],
+        "regex": "/storage/assets/(?<path>[0-9a-f/]+)/pcsx-redux-nightly-(?<version>[\\d.]+)-x64\\.zip"
     },
-    "suggest": {
-        "psxgames": "A bucket that contains PSX game ROMs to play with pcsx-redux."
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://distrib.app/storage/assets/$matchPath/pcsx-redux-nightly-$version-x64.zip"
+            }
+        }
     }
 }

@@ -6,18 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pom1/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pom1/emulator_screen_01.jpg"
     ],
-    "version": "1.0.0",
-    "description": "Pom1 is an Apple 1 emulator. It uses SDL and works on most platforms.",
-    "homepage": "http://pom1.sourceforge.net/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/pom1/files/pom1/1.0.0/pom1-1.0.0-win32.zip/download",
-    "hash": "4db5b03c37e10d9b421d7ddf0f0f13a776acbcf5b0e826971370434a7fe73eba",
-    "bin": "pom1.exe",
-    "checkver": {
-        "url": "https://sourceforge.net/projects/pom1/rss?path=/",
-        "regex": "pom1-(\\d[\\d\\.]*)-win32"
-    },
+    "version": "1.9.7",
+    "description": "Apple 1 emulator",
+    "homepage": "https://github.com/habib256/POM1",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/habib256/POM1/releases/download/1.9.7/POM1-Windows-v1.9.7.zip",
+    "hash": "5d4029e9dec5ed4e426317f86ee695a61f0ec87bce4a354e41e2304fbbda4d51",
+    "bin": [
+        [
+            "POM1.exe",
+            "pom1"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "POM1.exe",
+            "POM1"
+        ]
+    ],
+    "persist": [
+        "sdcard",
+        "cfcard"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/pom1/files/pom1/$version/pom1-$version-win32.zip/download"
+        "url": "https://github.com/habib256/POM1/releases/download/$version/POM1-Windows-v$version.zip"
     }
 }

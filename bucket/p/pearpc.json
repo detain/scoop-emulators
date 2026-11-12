@@ -7,17 +7,23 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pearpc/emulator_screen_01.jpg"
     ],
     "version": "0.5",
-    "description": "PearPC (PowerPC Architecture Emulator) is an PowerPC emulator. NOTE: PearPC requires a client OS (such as Darwin for PowerPC, Mac OS X or Mandrake Linux 9.1 for PowerPC) that runs in the emulator.",
-    "homepage": "https://github.com/sebastianbiallas/pearpc",
+    "description": "PowerPC architecture emulator capable of running Mac OS X, Darwin and Linux for PowerPC",
+    "homepage": "https://pearpc.sourceforge.net/",
     "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/pearpc/0.5.7z",
-    "hash": "025d76bb4a5b8b09c2949336fd4804dc6c43dc938d6eef85e95459df9d2ae25f",
+    "notes": "PearPC needs a guest OS (Mac OS X, Darwin or Linux for PowerPC). See ppccfg.example for configuration.",
+    "url": "https://downloads.sourceforge.net/project/pearpc/pearpc/0.5.0/pearpc-0.5-win32-jitc.zip",
+    "hash": "5ffe63c97b63edbe4d0c91bdf471ad7ea3004f44b4ba1a1c880d3817376ca6f3",
     "bin": [
-        "ppc.exe"
+        [
+            "ppc.exe",
+            "pearpc"
+        ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/sebastianbiallas/pearpc/releases/latest",
-        "regex": "\"tag_name\": \"([^\"]+)\""
+        "url": "https://sourceforge.net/projects/pearpc/rss?path=/pearpc",
+        "regex": "pearpc/(?<dir>[\\d.]+)/pearpc-(?<version>[\\d.]+)-win32-jitc\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/pearpc/pearpc/$matchDir/pearpc-$version-win32-jitc.zip"
+    }
 }

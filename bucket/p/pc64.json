@@ -6,19 +6,34 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pc64/emulator_screen_01.jpg"
     ],
     "version": "2.14",
-    "description": "Runs 50% of the C64 games, has sound, supports fastloaders, contains database with 4000 games. Recommended system is a Pentium-100 with 256 KB PB-Cache and a PCI graphics card with hardware scaling and a DirectDraw driver.",
+    "description": "Commodore 64 emulator (Personal C64 for Windows)",
     "homepage": "http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/msdos/pc64/PC64-en.html",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/pc64/2.14.7z",
-    "hash": "4134855935a106f8057212937ca37079bad4cfa1edbbd0bd84f8cf14b9ca8ff7",
+    "url": "http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/msdos/pc64/pc64w214.zip",
+    "hash": "a5cafaf6cadc2eae15c24454c9c35a3a9dbf830188b00e0d0e693081fd82faef",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\pc64w*.exe\" | ForEach-Object {",
+        "    Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal",
+        "}"
+    ],
     "bin": [
-        "PC64.exe"
+        [
+            "PC64WIN.EXE",
+            "pc64"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PC64WIN.EXE",
+            "Personal C64"
+        ]
     ],
     "checkver": {
         "url": "http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/msdos/pc64/",
-        "regex": "<a href=\"PC64-([\\d.]+)-en.zip\">"
+        "regex": "href=\"pc64w(?<major>\\d)(?<minor>\\d+)\\.zip\"",
+        "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/<your-username>/<your-repo>/main/pc64/pc64.json"
+        "url": "http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/msdos/pc64/pc64w$cleanVersion.zip"
     }
 }

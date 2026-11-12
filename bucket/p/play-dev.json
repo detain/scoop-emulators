@@ -1,23 +1,23 @@
 {
-    "version": "20241114-aad9ef7f",
-    "description": "A newer experimental ps2 emulator.",
-    "homepage": "https://purei.org",
+    "version": "20261026-1f272327",
+    "description": "Sony PlayStation 2 emulator (development version)",
+    "homepage": "https://purei.org/",
     "license": "BSD-2-Clause",
     "architecture": {
         "32bit": {
-            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/aad9ef7f/Play-x86-32.exe#/dl.7z",
-            "hash": "52f8f363b5ca6a697670a7eb1b8258b2aa704f757d8374e4c9496837141016bf"
+            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/1f272327/Play-x86-32.exe#/dl.7z",
+            "hash": "1b07b922130e619b215d9991c51861c843c2c9c945f969c82c2c8a9a0099851c"
         },
         "64bit": {
-            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/aad9ef7f/Play-x86-64.exe#/dl.7z",
-            "hash": "44dc539b8765b05290ec2feb1df554bff3c31200cc3be42e685d770942c543ea"
+            "url": "https://s3.us-east-2.amazonaws.com/playbuilds/1f272327/Play-x86-64.exe#/dl.7z",
+            "hash": "0e32432b9dca5954d89703feafb2f059353498212ea42810d4f824a20e2cc40e"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
     "bin": [
         [
             "Play.exe",
-            "Play (dev)"
+            "play-dev"
         ]
     ],
     "shortcuts": [
@@ -27,14 +27,23 @@
         ]
     ],
     "checkver": {
-        "url": "https://services.purei.org/api/builds",
+        "github": "https://api.github.com/repos/jpd002/Play-/actions/workflows/build-windows.yaml/runs?branch=master&status=success&per_page=1",
         "script": [
-            "$commit = json_path $page $.commitHash",
-            "$time = json_path $page $.timestamp",
-            "Write-Output \"$time $commit\""
+            "$sha = json_path $page '$.workflow_runs[0].head_sha'",
+            "$date = json_path $page '$.workflow_runs[0].created_at'",
+            "Write-Output \"$date $sha\""
         ],
-        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<commit>.*)$",
+        "regex": "^(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[0-9a-f]{8})",
         "replace": "${year}${month}${day}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$matchCommit/Play-x86-32.exe#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://s3.us-east-2.amazonaws.com/playbuilds/$matchCommit/Play-x86-64.exe#/dl.7z"
+            }
+        }
+    }
 }

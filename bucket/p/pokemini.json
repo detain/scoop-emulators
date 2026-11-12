@@ -6,17 +6,32 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pokemini/emulator_screen_01.jpg"
     ],
     "version": "0.60",
-    "description": "Poke Mini is a Nintendo Pokemon-Mini emulator.",
-    "homepage": "http://sourceforge.net/projects/pokemini/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/pokemini/files/0.60/pokemini_060_win32.zip/download",
-    "hash": "c3f8a64caa53d460ea691a6d2e5e0177ba5025af262ea9066a0f7677b500af91",
-    "bin": "pokemini.exe",
+    "description": "Nintendo Pokemon Mini emulator",
+    "homepage": "https://sourceforge.net/projects/pokemini/",
+    "license": "GPL-3.0-or-later",
+    "notes": "Optionally place the real BIOS as bios.min in $dir (FreeBIOS is used otherwise)",
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2010": "extras/vcredist2010"
+    },
+    "url": "https://downloads.sourceforge.net/project/pokemini/0.60/pokemini_060_win32.zip",
+    "hash": "sha1:8d7c3280a22ffddcee3bdb825bb1a013ccff0b85",
+    "bin": [
+        [
+            "PokeMini.exe",
+            "pokemini"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PokeMini.exe",
+            "PokeMini"
+        ]
+    ],
     "checkver": {
         "url": "https://sourceforge.net/projects/pokemini/rss?path=/",
-        "regex": "/files/(\\d[\\.\\d]*)/"
+        "regex": "/files/([\\d.]+)/pokemini_[\\d]+_win32\\.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/pokemini/files/$version/pokemini_$cleanVersion_win32.zip/download"
+        "url": "https://downloads.sourceforge.net/project/pokemini/$version/pokemini_$cleanVersion_win32.zip"
     }
 }

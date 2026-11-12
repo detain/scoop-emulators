@@ -6,20 +6,31 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pk201/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pk201/emulator_screen_01.jpg"
     ],
-    "version": "2009.09.09",
-    "description": "PK201 is a Sony PocketStation emulator.",
-    "homepage": "https://consolo.is.cc/emulator/pk201",
+    "version": "2020.04.28",
+    "description": "Sony PocketStation emulator",
+    "homepage": "https://drhell.web.fc2.com/pocket/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/pk201/2009.09.09.7z",
-    "hash": "1e4eb6187eeddb783be35e00713d10db6d94855b33ca5db1d33895b5a867e664",
+    "notes": "Dump the kernel ROM and flash ROM from a real PocketStation, rename them to KROM and FROM, and place them in $dir",
+    "url": "https://drhell.web.fc2.com/pocket/pk201_200428.zip",
+    "hash": "b0350fdb7f5cbee609189cdfdf574b0ab89bb536ea44ddbbde3ce3e14b1e6673",
     "bin": [
-        "PK201.EXE"
+        [
+            "PK201.EXE",
+            "pk201"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PK201.EXE",
+            "PK201"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/pk201/",
-        "regex": "([\\d.]+)\\.7z"
+        "url": "https://drhell.web.fc2.com/pocket/",
+        "regex": "pk201_(?<yy>\\d{2})(?<mm>\\d{2})(?<dd>\\d{2})\\.zip",
+        "replace": "20${yy}.${mm}.${dd}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/pk201/$version.7z"
+        "url": "https://drhell.web.fc2.com/pocket/pk201_$matchYy$matchMm$matchDd.zip"
     }
 }

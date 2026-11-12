@@ -13,10 +13,15 @@
             "hash": "876b3eb12f2ecc6d632c9f7a64d13e8cfacb7e822edb9ce4e98c144271b39276"
         }
     },
+    "pre_install": [
+        "'input.cfg', 'puNES.cfg', 'recent.cfg' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType File | Out-Null }",
+        "}"
+    ],
     "bin": [
         [
             "punes.exe",
-            "puNES (OpenGL) (dev)",
+            "punes-opengl-dev",
             "--portable"
         ]
     ],
@@ -43,20 +48,24 @@
         "recent.cfg"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",
+        "github": "https://api.github.com/repos/punesemu/puNES/actions/workflows/build.yml/runs?branch=master&status=success",
         "script": [
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$suiteId = json_path $page $.workflow_runs[0].check_suite_id",
-            "$artUrl = json_path $page $.workflow_runs[0].artifacts_url",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "$cont = (Invoke-WebRequest $artUrl).Content | ConvertFrom-Json",
-            "$art32Id = $cont.artifacts[0].id",
-            "$art64Id = $cont.artifacts[2].id",
-            "Write-Output \"$runId $date $suiteId $art32Id $art64Id $sha\""
+            "Write-Output \"$runId $date $sha\""
         ],
-        "regex": "^(?<run>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<suite>\\d+) (?<artifact32>\\d+) (?<artifact64>\\d+) (?<commit>[\\da-f]{7})(?<sha>[\\da-f]+)$",
+        "regex": "^(?<run>\\d+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})\\S* (?<commit>[\\da-f]{7})",
         "replace": "${run}-${year}${month}${day}-${commit}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes32.wip.opengl.zip"
+            },
+            "64bit": {
+                "url": "https://nightly.link/punesemu/puNES/workflows/build/master/punes64.wip.opengl.zip"
+            }
+        }
+    }
 }

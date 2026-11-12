@@ -1,7 +1,7 @@
 {
     "version": "0.72",
-    "description": "A newer experimental ps2 emulator.",
-    "homepage": "https://purei.org",
+    "description": "Sony PlayStation 2 emulator",
+    "homepage": "https://purei.org/",
     "license": "BSD-2-Clause",
     "architecture": {
         "32bit": {
@@ -13,7 +13,7 @@
             "hash": "466e3bebc4839726682c95c63004847b43244cbe74fb0afcbbba413561fb0f3a"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue",
     "bin": "Play.exe",
     "shortcuts": [
         [
@@ -25,5 +25,14 @@
         "url": "https://purei.org/downloads/play/stable/?C=M;O=D",
         "regex": ">([\\d.]+)/<"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://purei.org/downloads/play/stable/$version/Play-x86-32.exe#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://purei.org/downloads/play/stable/$version/Play-x86-64.exe#/dl.7z"
+            }
+        }
+    }
 }

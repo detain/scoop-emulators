@@ -6,19 +6,30 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/pmd85/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/pmd85/emulator_screen_01.jpg"
     ],
-    "version": "1.3p",
-    "description": "PMD85 is an emulator for the Tesla Piestany and Bratislava PMD85 computers and their clones. NOTE: Emulator and Website are in Czechoslovakian.",
+    "version": "1.3",
+    "description": "Tesla PMD 85 computer emulator (also Didaktik Alfa and Mato clones). Emulator and website are in Czech.",
     "homepage": "http://www.schotek.cz/pmd/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/pmd85/1.3p.7z",
-    "hash": "424fb57a1cdb203cba018f17af81f31be89c716b2909bdd53b2410f2fbcee95e",
+    "license": "Freeware",
+    "url": "http://www.schotek.cz/pmd/pmd85v13.zip",
+    "hash": "a901603013eb5b475576394d2897a28601d38177581b8c1ba5521f3acdfa9e20",
     "bin": [
-        "pmd85.exe"
+        [
+            "PMD85v13.exe",
+            "pmd85"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PMD85v13.exe",
+            "PMD 85"
+        ]
     ],
     "checkver": {
         "url": "http://www.schotek.cz/pmd/",
-        "regex": "href=\\\"files/pmd85-(\\d+(\\.\\d+)+)\\.zip",
-        "matchIndex": 1
+        "regex": "HREF=\"pmd85v(?<major>\\d)(?<minor>\\d+)\\.zip\"",
+        "replace": "${major}.${minor}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://www.schotek.cz/pmd/pmd85v$cleanVersion.zip"
+    }
 }

@@ -5,18 +5,40 @@
         "cmd:%BIN% %ROM%",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/plus4emu/emulator_screen_01.jpg"
     ],
-    "version": "1.2.9.2",
-    "description": "plus4emu is an open source, portable emulator of the Commodore 264 family of computers (C16, C116, and Plus/4), written in C++, and supporting Windows and POSIX platforms (32 bit Windows, 32 and 64 bit Linux, and MacOS X have been tested). It implements accurate, high quality hardware emulation, however, the system requirements are higher than that of most other emulators",
-    "homepage": "http://plus4emu.sourceforge.net/",
-    "license": "GPL-2.0-only",
-    "url": "https://sourceforge.net/projects/plus4emu/files/plus4emu/plus4emu-1.2.9.2/plus4emu-1.2.9.2-i686.exe/download",
-    "hash": "7c6db58edf410c535f7dd16a09bad7511af475a0adc29b3693483deaff44dfbd",
-    "bin": "plus4emu.exe",
-    "checkver": {
-        "url": "https://sourceforge.net/projects/plus4emu/files/",
-        "regex": "plus4emu-(\\d[\\d\\.]*)"
+    "version": "1.2.10.1",
+    "description": "Commodore 264 family (C16, C116, Plus/4) emulator",
+    "homepage": "https://github.com/istvan-v/plus4emu",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/istvan-v/plus4emu/releases/download/1.2.10.1/plus4emu-1.2.10.1-x64.exe#/dl.7z",
+            "hash": "3c2a9b7036330c186692223f11299c6205078a6eb15d23d8269fcfa0abb5b89f"
+        },
+        "32bit": {
+            "url": "https://github.com/istvan-v/plus4emu/releases/download/1.2.10.1/plus4emu-1.2.10.1-x86.exe#/dl.7z",
+            "hash": "07b0be0fed3dee616d0f3ae4abd73250101df2f186e2982f87c20bb72cdadbc7"
+        }
     },
+    "bin": [
+        "plus4emu.exe",
+        "makecfg.exe",
+        "tapconv.exe"
+    ],
+    "shortcuts": [
+        [
+            "plus4emu.exe",
+            "plus4emu"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/plus4emu/files/plus4emu/plus4emu-$version/plus4emu-$version-i686.exe/download"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/istvan-v/plus4emu/releases/download/$version/plus4emu-$version-x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/istvan-v/plus4emu/releases/download/$version/plus4emu-$version-x86.exe#/dl.7z"
+            }
+        }
     }
 }

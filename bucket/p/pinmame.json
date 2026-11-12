@@ -1,24 +1,31 @@
 {
-    "version": "3.5-217-bd54096",
-    "description": "PinMAME emulates the hardware found in almost every solid state pinball machine created from the earliest days of CPU-controlled machines (mid 1970's) through 2014 (Stern SAM), with around 750 emulated unique Pinball machines and many more clones/revisions (overall more than 2500 sets). ",
+    "version": "3.6.0-1227-ecd032e",
+    "description": "Pinball machine emulator covering solid state pinball machines from the mid 1970s through 2014",
     "homepage": "https://github.com/vpinball/pinmame",
     "license": "BSD-3-Clause",
-    "url": "https://github.com/vpinball/pinmame/releases/download/v3.5-217-bd54096/Main.Download.-.VPinMAME35.zip",
-    "hash": "29ea0f3791b2d8e22f1b6af3e1b08489104e8b0c83f5c8944401f7b2a5c2ad20",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/vpinball/pinmame/releases/download/v3.6.0-1227-ecd032e/PinMAME-3.6.0-1227-ecd032e-win-x64.zip",
+            "hash": "07e438be484ce82dd704cd07f4cdac97c09c301cb929a4591db928f5232b467e"
+        },
+        "32bit": {
+            "url": "https://github.com/vpinball/pinmame/releases/download/v3.6.0-1227-ecd032e/PinMAME-3.6.0-1227-ecd032e-win-x86.zip",
+            "hash": "54e7f926ed0462a8f2feb79b69c4a27c818f41c59454918e6711ed27afdb2388"
+        }
+    },
     "bin": "PinMAME.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/vpinball/pinmame/releases/latest",
-        "script": [
-            "$name = json_path $page $.tag_name",
-            "$w64 = json_path $page $.assets[7].browser_download_url",
-            "$w32 = json_path $page $.assets[8].browser_download_url",
-            "$main = json_path $page $.assets[9].browser_download_url",
-            "Write-Output \"$name $w64 $w32 $main\""
-        ],
-        "regex": "^v(?<version>[^ ]+) (?<w64>[^ ]+) (?<w32>[^ ]+) (?<main>[^ ]+)$",
-        "replace": "${version}"
+        "github": "https://github.com/vpinball/pinmame",
+        "regex": "v([\\d.]+-\\d+-[0-9a-f]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/vpinball/pinmame/releases/download/v$version/Main.Download.-.VPinMAME$majorVersion$minorVersion.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/vpinball/pinmame/releases/download/v$version/PinMAME-$version-win-x86.zip"
+            }
+        }
     }
 }
