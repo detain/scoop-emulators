@@ -11,7 +11,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip",
-            "hash": "e3ebe0d4214492e9b68f5f0014b6c84ca490c4f2370981f44ad3ad2c6aa0526f",
+            "hash": "ca02e8eac40c0c6de801638f6b16bec80b605b5df32e406fe2fba7f21016b14b",
             "bin": "duckstation-qt-x64-ReleaseLTCG.exe",
             "shortcuts": [
                 [
@@ -22,7 +22,7 @@
         },
         "arm64": {
             "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-arm64-release.zip",
-            "hash": "eaf833e7fbd721f6315f98c344f18e003f178abd0508006066575658a67f182e",
+            "hash": "d6caa5fd775dac8506365408b3f794c0ecfb1dca0069c30763b466dc76a2a52f",
             "bin": "duckstation-qt-ARM64-ReleaseLTCG.exe",
             "shortcuts": [
                 [
@@ -64,6 +64,13 @@
         "replace": "${year}${month}${day}-g${commit}"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-arm64-release.zip"
+            }
+        }
     }
 }

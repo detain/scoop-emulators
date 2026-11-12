@@ -6,18 +6,46 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcvg5k/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcvg5k/emulator_screen_01.jpg"
     ],
-    "version": "2012.04.13",
-    "description": "DCVG5K is a Philips, Radiola and Schneider VG5000 emulator.",
-    "homepage": "http://dcvg5k.free.fr",
-    "license": "GPL-3.0-only",
-    "url": "https://consolo.is.cc/emu/dcvg5k/2012.04.13.7z",
-    "hash": "1acbf2359c51faaca8198d122e920605b56b975134e28ae5abd9a097ec32f220",
+    "version": "2023.04.12",
+    "description": "Philips, Radiola and Schneider VG5000 emulator",
+    "homepage": "https://dcvg5k.pages-perso.free.fr/",
+    "license": "Freeware",
+    "url": "https://dcvg5k.pages-perso.free.fr/download/emu/dcvg5k_20230412.zip",
+    "hash": "9becba34ff2e349e5d876abacf2bbe57a49ea322ab534ac65a564279e6e06d2d",
     "bin": [
-        "dcvg5k.exe"
+        [
+            "dcvg5k_20230412.exe",
+            "dcvg5k"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "dcvg5k_20230412.exe",
+            "DCVG5K"
+        ]
     ],
     "checkver": {
-        "url": "http://dcvg5k.free.fr/download.html",
-        "regex": "dcvg5k-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+        "url": "https://dcvg5k.pages-perso.free.fr/download/index.html",
+        "script": [
+            "$m = [regex]::Matches($page, 'emu/dcvg5k_(\\d{8})\\.zip') | ForEach-Object { $_.Groups[1].Value } | Sort-Object | Select-Object -Last 1",
+            "Write-Output $m"
+        ],
+        "regex": "^(?<y>\\d{4})(?<m>\\d{2})(?<d>\\d{2})$",
+        "replace": "${y}.${m}.${d}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://dcvg5k.pages-perso.free.fr/download/emu/dcvg5k_$cleanVersion.zip",
+        "bin": [
+            [
+                "dcvg5k_$cleanVersion.exe",
+                "dcvg5k"
+            ]
+        ],
+        "shortcuts": [
+            [
+                "dcvg5k_$cleanVersion.exe",
+                "DCVG5K"
+            ]
+        ]
+    }
 }

@@ -9,15 +9,15 @@
     "version": "0.1",
     "description": "This project is the work of Gerrie, the author of Xega. All the hardware is not emulated and it's very buggy. The emulator was developed for fun and it will not go on, know that its sources are available, if someone is interested in resuming the project ...",
     "homepage": "http://xega.emucamp.com/",
-    "license": "GPL-3.0-only",
+    "license": "Freeware",
     "url": "https://consolo.is.cc/emu/dreamvmu/0.1.7z",
     "hash": "c8818a725598382a8f8822b1a94b0a84bd6b174c350e5469eef99a6955be6d6b",
-    "bin": [
-        "dreamvmu.exe"
-    ],
+    "bin": "DreamVMU.exe",
     "checkver": {
-        "url": "http://xega.emucamp.com/downloads/",
-        "regex": "dreamvmu-(\\d+\\.\\d+\\.\\d+)-win32\\.zip"
+        "url": "https://consolo.is.cc/emu/dreamvmu/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dreamvmu/$version.7z"
+    }
 }

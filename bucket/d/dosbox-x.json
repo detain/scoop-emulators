@@ -1,31 +1,42 @@
 {
-    "version": "4723-20261111-e7e94fd",
+    "version": "2026.10.01",
     "description": "DOSBox-x is a branch of DOSBox. DOSBox emulates an Intel x86 PC, complete with sound, graphics, mouse, joystick, modem, etc., necessary for running many old MS-DOS games that simply cannot be run on modern PCs and operating systems, such as Microsoft Windows XP, Windows Vista, Linux and FreeBSD.",
     "homepage": "https://github.com/joncampbell123/dosbox-x",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "architecture": {
-        "32bit": {
-            "url": "https://nightly.link/joncampbell123/dosbox-x/workflows/vsbuild32/master/dosbox-x-vsbuild-win32-20221031163854.zip",
-            "hash": "e45e7c646b12d4006aee450d909df251d61075eccffd1cbea49ece22f00d44fd"
-        },
         "64bit": {
-            "url": "https://nightly.link/joncampbell123/dosbox-x/workflows/vsbuild64/master/dosbox-x-vsbuild-win64-20221031163852.zip",
-            "hash": "7fcb0e592f2c98634671b2fa1eaf0059f32329a0f85ff8986b75072cb03eb766"
+            "url": "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v2026.10.01/dosbox-x-vsbuild-win64-2026.10.01-portable.zip",
+            "hash": "3c50915e63aefe35777d65ebb4391a06b4a2c2342e4c75cbee6bbda4c6916e33",
+            "extract_dir": "bin\\x64\\Release"
+        },
+        "32bit": {
+            "url": "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v2026.10.01/dosbox-x-vsbuild-win32-2026.10.01-portable.zip",
+            "hash": "25724d9949cc28e97b7f1eea7d655908904212559eaa153a329688966b2370be",
+            "extract_dir": "bin\\Win32\\Release"
         }
     },
     "bin": "dosbox-x.exe",
+    "shortcuts": [
+        [
+            "dosbox-x.exe",
+            "DOSBox-X"
+        ]
+    ],
+    "persist": "dosbox-x.conf",
     "checkver": {
-        "url": "https://api.github.com/repos/joncampbell123/dosbox-x/actions/workflows/vsbuild64.yml/runs?branch=master&status=success",
-        "script": [
-            "$sha = json_path $page $.workflow_runs[0].head_sha",
-            "$runId = json_path $page $.workflow_runs[0].run_number",
-            "$date = json_path $page $.workflow_runs[0].created_at",
-            "Write-Output \"$runId $date $sha\""
-        ],
-        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
-        "replace": "${version}-${year}${month}${day}-${hash}"
+        "github": "https://github.com/joncampbell123/dosbox-x",
+        "regex": "dosbox-x-v([\\d.]+)"
     },
     "autoupdate": {
-        
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v$version/dosbox-x-vsbuild-win64-$version-portable.zip",
+                "extract_dir": "bin\\x64\\Release"
+            },
+            "32bit": {
+                "url": "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v$version/dosbox-x-vsbuild-win32-$version-portable.zip",
+                "extract_dir": "bin\\Win32\\Release"
+            }
+        }
     }
 }

@@ -6,26 +6,57 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmoto/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmoto/emulator_screen_01.jpg"
     ],
-    "version": "2012.11.23",
-    "description": "DCMOTO is an emulator for all Thomson 8 bit computers: MO5, MO5E, German MO5E, MO5NR, MO6, Olivetti Prodest PC128, T9000, French QWERTY TO7, German QWERTY TO7, TO7/70, Arabic TO7/70, TO9, German TO9, TO8, TO8D and TO9+.",
-    "homepage": "http://dcmoto.free.fr",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/dcmoto/2012.11.23.7z",
-    "hash": "29cc28fc33bc24ecdf1c3cad67227d64f73ce692128ba8a3b3795a6543b029d1",
-    "bin": [
-        "dcmoto64.exe"
-    ],
+    "version": "2026.10.25",
+    "description": "Emulator for all Thomson 8-bit computers (MO5, MO6, TO7, TO8, TO9 and variants)",
+    "homepage": "https://dcmoto.pages-perso.free.fr/",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://consolo.is.cc/emu/dcmoto/2012.11.23.7z",
-            "hash": "29cc28fc33bc24ecdf1c3cad67227d64f73ce692128ba8a3b3795a6543b029d1"
+            "url": "https://dcmoto.pages-perso.free.fr/emulateur/dcmoto_20261025.zip",
+            "hash": "a14e80572281ea14abc4a6e8820b31d64dca1c341aa48dec97d60eb8dbd21fa5",
+            "extract_dir": "dcmoto-64"
+        },
+        "32bit": {
+            "url": "https://dcmoto.pages-perso.free.fr/emulateur/dcmoto_20261025.zip",
+            "hash": "a14e80572281ea14abc4a6e8820b31d64dca1c341aa48dec97d60eb8dbd21fa5",
+            "extract_dir": "dcmoto-32"
         }
     },
-    "autoupdate": {
-        "url": "http://dcmoto.free.fr/files/dcmoto_{version}_x64.zip"
+    "installer": {
+        "script": [
+            "$out = [IO.File]::Create(\"$dir\\dcmoto.exe\")",
+            "Get-ChildItem \"$dir\\*.dat\" | Sort-Object Name | ForEach-Object {",
+            "    $bytes = [IO.File]::ReadAllBytes($_.FullName)",
+            "    $out.Write($bytes, 0, $bytes.Length)",
+            "}",
+            "$out.Close()",
+            "Remove-Item \"$dir\\*.dat\", \"$dir\\install.bat\""
+        ]
     },
+    "bin": "dcmoto.exe",
+    "shortcuts": [
+        [
+            "dcmoto.exe",
+            "DCMOTO"
+        ]
+    ],
     "checkver": {
-        "url": "http://dcmoto.free.fr/",
-        "regex": "Download Version ([0-9\\.]+)"
+        "url": "https://dcmoto.pages-perso.free.fr/emulateur/index.html",
+        "script": [
+            "$m = [regex]::Matches($page, 'href=\"((?:prog/)?)dcmoto_(\\d{8})\\.zip\"') | Sort-Object { $_.Groups[2].Value } | Select-Object -Last 1",
+            "Write-Output \"$($m.Groups[2].Value) path=$($m.Groups[1].Value)\""
+        ],
+        "regex": "^(?<y>\\d{4})(?<m>\\d{2})(?<d>\\d{2}) path=(?<path>\\S*)",
+        "replace": "${y}.${m}.${d}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dcmoto.pages-perso.free.fr/emulateur/$matchPathdcmoto_$cleanVersion.zip"
+            },
+            "32bit": {
+                "url": "https://dcmoto.pages-perso.free.fr/emulateur/$matchPathdcmoto_$cleanVersion.zip"
+            }
+        }
     }
 }

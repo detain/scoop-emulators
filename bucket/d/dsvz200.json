@@ -12,11 +12,10 @@
     "license": "Freeware",
     "url": "https://consolo.is.cc/emu/dsvz200/2016.10.24.7z",
     "hash": "436db6ed221a016d4f2bec3d66ba3f892c3118b1014f06e46ff5e49b45657ba1",
-    "bin": [
-        "Z80.exe"
-    ],
+    "bin": "Z80.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/dsvz200/"
+        "url": "https://consolo.is.cc/emu/dsvz200/",
+        "regex": "(\\d{4}\\.\\d{2}\\.\\d{2})\\.7z"
     },
     "autoupdate": {
         "url": "https://consolo.is.cc/emu/dsvz200/$version.7z"

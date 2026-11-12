@@ -6,18 +6,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dapple2-emuii/emulator_screen_01.jpg"
     ],
     "version": "0.40",
-    "description": "Dapple2-emuII is an enhanced Apple II emulator for Windows",
+    "description": "Enhanced Apple II emulator",
     "homepage": "https://sourceforge.net/projects/dapple/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/dapple2-emuii/0.40.7z",
-    "hash": "7fcb03dd567fbf0dbf0d5ba072b38e994122b6c637b6b11f76f3b97ec063bd09",
-    "bin": [
-        "emu2.exe"
-    ],
+    "license": "GPL-2.0-or-later",
+    "url": "https://downloads.sourceforge.net/project/dapple/dapple2-emuii/0.40/emu2-0.40.zip",
+    "hash": "sha1:0d7c649e17a73cc99904a6fb8f6d4b352c3bb5b2",
+    "bin": "emu2.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/dapple2-emuii/"
+        "url": "https://sourceforge.net/projects/dapple/rss?path=/dapple2-emuii",
+        "regex": "/dapple2-emuii/([\\d.]+)/emu2-[\\d.]+\\.zip"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/dapple2-emuii/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/dapple/dapple2-emuii/$version/emu2-$version.zip"
     }
 }

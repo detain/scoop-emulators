@@ -6,19 +6,41 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcalice/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcalice/emulator_screen_01.jpg"
     ],
-    "version": "2014.01.23",
-    "description": "DCALICE is a Tandy MC10 and Matra-Hachette Alice emulator. NOTE: The emulator toolbar and all documentation is in French.",
-    "homepage": "http://alice32.free.fr/",
+    "version": "2026.05.04",
+    "description": "Tandy MC-10 and Matra-Hachette Alice emulator",
+    "homepage": "https://alice32.pages-perso.free.fr/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/dcalice/2014.01.23.7z",
-    "hash": "dd5c7bed6a1690026b787a3f05d43ed56529050f9fa428a0abba6b4e27edf402",
-    "bin": [
-        "dcalice.exe"
+    "notes": "The emulator interface and documentation are in French.",
+    "url": "https://alice32.pages-perso.free.fr/emulateur/prog/dcalice_20260504.zip",
+    "hash": "211bc193316c54dc1447d4cbb4a7c3f2ede7c869e86e5438af42628e19a59a4a",
+    "installer": {
+        "script": [
+            "$out = [IO.File]::Create(\"$dir\\dcalice.exe\")",
+            "Get-ChildItem \"$dir\\*.dat\" | Sort-Object Name | ForEach-Object {",
+            "    $bytes = [IO.File]::ReadAllBytes($_.FullName)",
+            "    $out.Write($bytes, 0, $bytes.Length)",
+            "}",
+            "$out.Close()",
+            "Remove-Item \"$dir\\*.dat\", \"$dir\\install.bat\""
+        ]
+    },
+    "bin": "dcalice.exe",
+    "shortcuts": [
+        [
+            "dcalice.exe",
+            "DCAlice"
+        ]
     ],
     "checkver": {
-        "url": "https://consolo.is.cc/emu/dcalice/"
+        "url": "https://alice32.pages-perso.free.fr/emulateur/index.html",
+        "script": [
+            "$m = [regex]::Matches($page, 'prog/dcalice_(\\d{8})\\.zip') | ForEach-Object { $_.Groups[1].Value } | Sort-Object | Select-Object -Last 1",
+            "Write-Output $m"
+        ],
+        "regex": "^(?<y>\\d{4})(?<m>\\d{2})(?<d>\\d{2})$",
+        "replace": "${y}.${m}.${d}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/dcalice/$version.7z"
+        "url": "https://alice32.pages-perso.free.fr/emulateur/prog/dcalice_$cleanVersion.zip"
     }
 }

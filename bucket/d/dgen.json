@@ -6,18 +6,44 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dgen/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dgen/emulator_screen_01.jpg"
     ],
-    "version": "1.33-win64",
-    "description": "A Sega Genesis/Mega Drive emulator for Windows.",
-    "homepage": "http://sourceforge.net/projects/dgen/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/dgen/1.33-win64.7z",
-    "hash": "c34685a140661ffbc53df1a22d65d3f5c6a122225b9497f480947a1a139d57a8",
-    "bin": [
-        "dgen.exe"
+    "version": "1.33",
+    "description": "Sega Genesis/Mega Drive emulator",
+    "homepage": "https://sourceforge.net/projects/dgen/",
+    "license": "BSD-3-Clause",
+    "notes": "Configuration is stored in %APPDATA%\\DGen\\dgen.cfg",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/dgen/dgen/1.33/dgen-sdl-1.33-w64-x86_64.zip",
+            "hash": "sha1:5e632037b5fc2c06c6b1d8395bcab21552c3253d",
+            "extract_dir": "dgen-sdl-1.33-w64-x86_64"
+        },
+        "32bit": {
+            "url": "https://downloads.sourceforge.net/project/dgen/dgen/1.33/dgen-sdl-1.33-w32-x86%2BSSE2.zip",
+            "hash": "sha1:931727d2da9b94bb5a44cc98d6755ae803a038b4",
+            "extract_dir": "dgen-sdl-1.33-w32-x86+SSE2"
+        }
+    },
+    "bin": "dgen.exe",
+    "shortcuts": [
+        [
+            "dgen.exe",
+            "DGen"
+        ]
     ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/dgen/rss",
-        "regex": "dgen-(\\d+\\.\\d+\\.\\d+)-win32.zip"
+        "url": "https://sourceforge.net/projects/dgen/rss?path=/dgen",
+        "regex": "/dgen/([\\d.]+)/dgen-sdl-[\\d.]+-w64"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/dgen/dgen/$version/dgen-sdl-$version-w64-x86_64.zip",
+                "extract_dir": "dgen-sdl-$version-w64-x86_64"
+            },
+            "32bit": {
+                "url": "https://downloads.sourceforge.net/project/dgen/dgen/$version/dgen-sdl-$version-w32-x86%2BSSE2.zip",
+                "extract_dir": "dgen-sdl-$version-w32-x86+SSE2"
+            }
+        }
+    }
 }

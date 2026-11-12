@@ -6,18 +6,24 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/daphne/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/daphne/emulator_screen_01.jpg"
     ],
-    "version": "1.0.0",
-    "description": "Daphne is a LaserDisc Arcade Game emulator. As at v1.0.0 it can play the following games: Astron Belt, Badlands, Bega's Battle, Cliff Hanger, Cobra Command, Dragon's Lair, Dragon's Lair II: Timewarp, Esh's Aurunmilla, Galaxy Ranger, GP World, Interstellar, M.A.C.H. 3, Road Blaster, Space Ace, Star Blazer, Super Don Quix-ote, Thayer's Quest and Us vs Them.",
+    "version": "1.0",
+    "description": "LaserDisc arcade game emulator (Dragon's Lair, Space Ace, Cliff Hanger and more)",
     "homepage": "http://www.daphne-emu.com/",
     "license": "GPL-2.0-or-later",
-    "url": "https://consolo.is.cc/emu/daphne/1.0.0.7z",
-    "hash": "bee1ef3bc4eb69f6af29b32ec59c57155246599ce6a265f734d11a933786b143",
-    "bin": [
-        "daphne.exe"
+    "url": "http://www.daphne-emu.com/download/daphne-1.0v-win32.zip",
+    "hash": "4b388339f683b5d42e631d5ad69a2cd87ef477431abfeca7219688150a84915f",
+    "bin": "daphne.exe",
+    "shortcuts": [
+        [
+            "DaphneLoader.exe",
+            "Daphne"
+        ]
     ],
     "checkver": {
-        "url": "https://github.com/DavidGriffith/daphne/releases/latest",
-        "re": "v(\\d+\\.\\d+\\.\\d+)"
+        "url": "http://www.daphne-emu.com/site3/",
+        "regex": "download/daphne-([\\d.]+)v-win32\\.zip"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "http://www.daphne-emu.com/download/daphne-$versionv-win32.zip"
+    }
 }

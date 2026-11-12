@@ -6,31 +6,29 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmicro/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmicro/emulator_screen_01.jpg"
     ],
-    "version": "1.0",
-    "description": "DCMicroColor is a Tandy MC10 and Matra-Hachette Alice 4K emulator.",
-    "homepage": "http://alice32.free.fr/",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/dcmicro/1.0.7z",
-    "hash": "ceaf7b83e70dc3480787f04021dfc7f452701631745c6d8013462ab60efaf344",
-    "bin": [
-        "dcalice.exe"
+    "version": "2012.11.08",
+    "description": "Tandy MC-10 and Matra-Hachette Alice 4K emulator",
+    "homepage": "https://alice32.pages-perso.free.fr/",
+    "license": "Freeware",
+    "url": "https://alice32.pages-perso.free.fr/emulateur/prog/dcmicrocolor_20121108.zip",
+    "hash": "fd95762494fb598651137d4a3e1118fd47f0f66e6e1fe70f81279a71a3d6398a",
+    "bin": "dcmicrocolor.exe",
+    "shortcuts": [
+        [
+            "dcmicrocolor.exe",
+            "DCMicroColor"
+        ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://consolo.is.cc/emu/dcmicro/1.0.7z",
-            "hash": "ceaf7b83e70dc3480787f04021dfc7f452701631745c6d8013462ab60efaf344"
-        },
-        "32bit": {
-            "url": "https://consolo.is.cc/emu/dcmicro/1.0.7z",
-            "hash": "ceaf7b83e70dc3480787f04021dfc7f452701631745c6d8013462ab60efaf344"
-        }
-    },
     "checkver": {
-        "url": "http://alice32.free.fr/",
-        "regex": "<a href=\"dcalice-win32-64-(.*?)\\.zip\">"
+        "url": "https://alice32.pages-perso.free.fr/emulateur/index.html",
+        "script": [
+            "$m = [regex]::Matches($page, 'prog/dcmicrocolor_(\\d{8})\\.zip') | ForEach-Object { $_.Groups[1].Value } | Sort-Object | Select-Object -Last 1",
+            "Write-Output $m"
+        ],
+        "regex": "^(?<y>\\d{4})(?<m>\\d{2})(?<d>\\d{2})$",
+        "replace": "${y}.${m}.${d}"
     },
     "autoupdate": {
-        "url": "http://alice32.free.fr/dcalice-win32-64-latest.zip",
-        "hash": "sha256:<HASH>"
+        "url": "https://alice32.pages-perso.free.fr/emulateur/prog/dcmicrocolor_$cleanVersion.zip"
     }
 }

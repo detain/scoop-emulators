@@ -6,18 +6,18 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dapple/emulator_screen_01.jpg"
     ],
     "version": "1.42_v1.5a3",
-    "description": "Dapple is an Apple II emulator for Windows",
+    "description": "Apple II emulator",
     "homepage": "https://sourceforge.net/projects/dapple/",
-    "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/dapple/1.42_v1.5a3.7z",
-    "hash": "20f145ec30b9a74025a6f82593fc2c0f944be576eac76ba379c99b4d7694f25a",
-    "bin": [
-        "dap.exe"
-    ],
+    "license": "GPL-2.0-or-later",
+    "url": "https://downloads.sourceforge.net/project/dapple/dapple/1.42%20(1.5%20Alpha%203)/dapl142-15a3.zip",
+    "hash": "sha1:7cf1d95846524c16ddcffcd77176b6239044f092",
+    "bin": "dap.exe",
     "checkver": {
-        "url": "https://consolo.is.cc/emu/dapple/"
+        "url": "https://sourceforge.net/projects/dapple/rss?path=/dapple",
+        "regex": "/dapple/(?<v>[\\d.]+) \\((?<rel>[\\d.]+) Alpha (?<a>\\d+)\\)/(?<file>[\\w.-]+\\.zip)",
+        "replace": "${v}_v${rel}a${a}"
     },
     "autoupdate": {
-        "url": "https://consolo.is.cc/emu/dapple/$version.7z"
+        "url": "https://downloads.sourceforge.net/project/dapple/dapple/$matchV%20($matchRel%20Alpha%20$matchA)/$matchFile"
     }
 }

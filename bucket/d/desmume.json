@@ -1,8 +1,8 @@
 {
     "version": "0.9.13",
-    "description": "Most used NDS emulator",
+    "description": "Nintendo DS emulator",
     "homepage": "https://desmume.org/",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "notes": "No wifi emulation, most likey will never be",
     "architecture": {
         "64bit": {
@@ -11,7 +11,7 @@
             "bin": [
                 [
                     "DeSmuME_0.9.13_x64.exe",
-                    "DeSmuME"
+                    "desmume"
                 ]
             ],
             "shortcuts": [
@@ -45,5 +45,23 @@
         "regex": "release_([^_]*)_([^_]*)_([^_\"]*)",
         "replace": "${1}.${2}.${3}"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TASEmulators/desmume/releases/download/release_$underscoreVersion/desmume-$version-win64.zip",
+                "bin": [
+                    [
+                        "DeSmuME_$version_x64.exe",
+                        "desmume"
+                    ]
+                ],
+                "shortcuts": [
+                    [
+                        "DeSmuME_$version_x64.exe",
+                        "DeSmuME"
+                    ]
+                ]
+            }
+        }
+    }
 }

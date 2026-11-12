@@ -7,21 +7,24 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dchector/emulator_screen_01.jpg"
     ],
     "version": "0.1",
-    "description": "DCHector is an Interact Home Computer System emulator and several other computers including the Victor and the Hector.",
-    "homepage": "http://dchector.free.fr",
+    "description": "Interact Home Computer, Victor and Hector computers emulator",
+    "homepage": "https://dchector.pages-perso.free.fr/",
     "license": "Freeware",
-    "url": "https://consolo.is.cc/emu/dchector/0.1.7z",
-    "hash": "c965a4107b4c39006dc64bed7d7c6ae5d810887b8bd63c7297505d2f474b0f25",
-    "bin": [
-        "dchector.exe"
+    "url": "https://dchector.pages-perso.free.fr/download/dchector_v0.1.zip",
+    "hash": "eb4c69ff01e033523d11113b64cef38a78b804c56abe71cb2788129737b28c1d",
+    "bin": "dchector.exe",
+    "shortcuts": [
+        [
+            "dchector.exe",
+            "DCHector"
+        ]
     ],
     "checkver": {
-        "url": "http://dchector.free.fr/version.txt",
-        "regex": "(\\d+\\.\\d+\\.\\d+)"
+        "url": "https://dchector.pages-perso.free.fr/",
+        "regex": "download/dchector_v([\\d.]+)\\.zip",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "http://dchector.free.fr/download.html"
-    },
-    "extract_dir": "dchector-v1.0.0",
-    "working_dir": "."
+        "url": "https://dchector.pages-perso.free.fr/download/dchector_v$version.zip"
+    }
 }

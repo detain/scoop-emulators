@@ -7,17 +7,17 @@
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dmgboy/emulator_screen_01.jpg"
     ],
     "version": "2.0",
-    "description": "DMGBoy (Dot Matrix Game Boy) is a Game Boy emulator written in C++. It uses wxWidgets for the user interface and SDL and portaudio for the audio. Is Cross-Platform: Windows, Linux and Mac OS X builds are available.",
+    "description": "Nintendo Game Boy and Game Boy Color emulator",
     "homepage": "https://code.google.com/archive/p/dmgboy/",
-    "license": "MIT",
+    "license": "GPL-3.0-only",
     "url": "https://consolo.is.cc/emu/dmgboy/2.0.7z",
     "hash": "7eaae02c1e9d0785b35674ccf0e0c4535e8d2eff1c502dd798b31de773ab39fe",
-    "bin": [
-        "dmgboy.exe"
-    ],
+    "bin": "DMGBoy.exe",
     "checkver": {
-        "url": "https://github.com/marcosd4s/dmgboy/releases",
-        "regex": "dmgboy-win-x64-(\\d+\\.\\d+\\.\\d+)\\.zip"
+        "url": "https://consolo.is.cc/emu/dmgboy/",
+        "regex": "([\\d.]+)\\.7z"
     },
-    "autoupdate": {}
+    "autoupdate": {
+        "url": "https://consolo.is.cc/emu/dmgboy/$version.7z"
+    }
 }

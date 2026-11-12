@@ -1,12 +1,11 @@
 {
-    "##": [
-        "name:DobieStation"
-    ],
-    "version": "",
-    "description": "A young PS2 emulator with plans for an optimized Android port, as well as a fast, accurate, and easy-to-use PC port. A large portion of the PS2's library can boot or get to menus. Some titles can even go in-game, including high-profile ones such as Final Fantasy X and Shadow of the Colossus. Not intended for general use.",
-    "homepage": null,
-    "license": "",
-    "url": "",
-    "hash": "0220f27cc32b92c2c9cc909e4704873e155cd78e88f77d802f7a9945e1ba74f3",
-    "bin": []
+    "##": "name:DobieStation",
+    "version": "0.0.1619",
+    "description": "Sony PlayStation 2 emulator (discontinued, source only)",
+    "homepage": "https://github.com/PSI-Rockin/DobieStation",
+    "license": "GPL-3.0-only",
+    "notes": "DobieStation development stopped in 2021 and its CI build artifacts have expired; no Windows binary is downloadable. This installs the final source snapshot only.",
+    "url": "https://github.com/PSI-Rockin/DobieStation/archive/83f0814af263c0514cf0b045f1a1ff11e0f55605.zip",
+    "hash": "a7422b7a9eedd0649011e97faa276ba48eb63d84d4a252c59585c11f32709608",
+    "extract_dir": "DobieStation-83f0814af263c0514cf0b045f1a1ff11e0f55605"
 }

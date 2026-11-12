@@ -6,21 +6,36 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmo5/emulator_logo.png",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/dcmo5/emulator_screen_01.jpg"
     ],
-    "version": "11",
-    "description": "DCMO5 is a Thomson MO5 emulator for Windows, MacOS X, Linux, and Raspberry Pi.",
-    "homepage": "http://dcmo5.free.fr",
-    "license": "GPL-2.0-only",
-    "url": "https://consolo.is.cc/emu/dcmo5/11.7z",
-    "hash": "e105c200955f6d24856390abb00bebc700c0bb7da29b2e7587e4fc4217fb7de8",
-    "bin": [
-        "dcmo5"
+    "version": "2024.10.28",
+    "description": "Thomson MO5 emulator",
+    "homepage": "https://dcmo5.pages-perso.free.fr/",
+    "license": "Freeware",
+    "url": "https://dcmoto.pages-perso.free.fr/emulateur/prog/dcmo5_20241028.zip",
+    "hash": "562cbe87276b4c836552a75ef21380cf54b5f643a4cedc58c462d7c904bc32e3",
+    "installer": {
+        "script": [
+            "$out = [IO.File]::Create(\"$dir\\dcmo5.exe\")",
+            "Get-ChildItem \"$dir\\*.dat\" | Sort-Object Name | ForEach-Object {",
+            "    $bytes = [IO.File]::ReadAllBytes($_.FullName)",
+            "    $out.Write($bytes, 0, $bytes.Length)",
+            "}",
+            "$out.Close()",
+            "Remove-Item \"$dir\\*.dat\", \"$dir\\install.bat\""
+        ]
+    },
+    "bin": "dcmo5.exe",
+    "shortcuts": [
+        [
+            "dcmo5.exe",
+            "DCMO5"
+        ]
     ],
     "checkver": {
-        "url": "http://dcmo5.free.fr/releases/",
-        "regex": "dcmo5-([\\d\\.]+)-src\\.tar\\.gz"
+        "url": "https://dcmoto.pages-perso.free.fr/emulateur/index.html",
+        "regex": "prog/dcmo5_(?<y>\\d{4})(?<m>\\d{2})(?<d>\\d{2})\\.zip",
+        "replace": "${y}.${m}.${d}"
     },
     "autoupdate": {
-        "url": "http://dcmo5.free.fr/releases/dcmo5-{version}-src.tar.gz",
-        "hash": "sha256"
+        "url": "https://dcmoto.pages-perso.free.fr/emulateur/prog/dcmo5_$cleanVersion.zip"
     }
 }
