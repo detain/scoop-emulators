@@ -1,11 +1,11 @@
 {
-    "version": "667-20261111-1400ff6",
+    "version": "671-20261112-91c3e56",
     "description": "Microsoft Xbox 360 emulator (Xenia Canary fork with online multiplayer) (development version)",
     "homepage": "https://github.com/AdrianCassar/xenia-canary",
     "license": "BSD-3-Clause",
     "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after ~90 days without new commits.",
     "url": "https://nightly.link/AdrianCassar/xenia-canary/workflows/Orchestrator/netplay_canary_experimental/xenia_canary_netplay_windows.zip",
-    "hash": "f3f383284e56af11e172521e36389633dcad0f4a780208bed03917ff7426af4a",
+    "hash": "69b619012781f3866412be42cd95f4c6c9ab220a01c93eb13be66ca08c672834",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\portable.txt\")) {",
         "    New-Item \"$dir\\portable.txt\" -Type File | Out-Null",
