@@ -1,5 +1,5 @@
 {
-    "version": "607-20261112-4dd0593",
+    "version": "608-20261113-656fe03",
     "description": "HomeBrew MAME with the MAMEUI Windows interface (development version)",
     "homepage": "http://hbmame.1emulation.com/",
     "license": "GPL-2.0-only",
@@ -7,8 +7,8 @@
         "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 28 days after the build.",
         "The artifact contains only hbmameui.exe (no plugins, language or hash files)."
     ],
-    "url": "https://nightly.link/Robbbert/hbmame/actions/runs/43227298270/hbmameui-windows-gcc-4dd05939fa2c723c011eab20c6aae8e19b5b3a00.zip",
-    "hash": "c3bc503b531ce419ca907c9a6e8cc4c09c793c4b6fce02582db687c0f72fc984",
+    "url": "https://nightly.link/Robbbert/hbmame/actions/runs/43380578317/hbmameui-windows-gcc-656fe03bf71facf5a4fb5a26fbb85641ab82f71c.zip",
+    "hash": "54c0d56052b3130f58897737851fefaa2c587a051c3a03ff9e491629854d8424",
     "bin": [
         [
             "hbmameui.exe",
