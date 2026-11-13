@@ -1,5 +1,5 @@
 {
-    "version": "160",
+    "version": "177",
     "description": "Nintendo Switch and Switch 2 emulator (fork of Eglantine/Eden/yuzu)",
     "homepage": "https://github.com/zortos293/Lichii",
     "license": "GPL-3.0-or-later",
@@ -7,8 +7,8 @@
     "suggest": {
         "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://github.com/zortos293/Lichii/releases/download/build-160/lichii-windows-x86_64.zip",
-    "hash": "215459edfbd9f6c542b4548cabf4c16d487feca8ce1003a1094f9beda5f02460",
+    "url": "https://github.com/zortos293/Lichii/releases/download/build-177/lichii-windows-x86_64.zip",
+    "hash": "e6ac8c09ddd00cb64e539f2a85f9f9f32d579c772b3619aed0d4d3910a93e833",
     "pre_install": "Remove-Item \"$dir\\vc_redist.x64.exe\" -Force -ErrorAction SilentlyContinue",
     "bin": [
         "lichii.exe",
