@@ -1,5 +1,5 @@
 {
-    "version": "872-20261113-6c66738",
+    "version": "875-20261114-9f46ee4",
     "description": "Sega Mega Drive/Genesis, Mega CD, 32X and Master System emulator (development version)",
     "homepage": "https://github.com/irixxxx/picodrive",
     "license": {
@@ -8,7 +8,7 @@
     },
     "notes": "Development builds come from GitHub Actions artifacts via nightly.link; artifacts expire after ~90 days.",
     "url": "https://nightly.link/irixxxx/picodrive/workflows/ci/master/Win32.zip",
-    "hash": "15120e9a0754e64b59b4b9758bfda40918b62bb55670c369fea5ad7716a9e6a0",
+    "hash": "0f2f3804d9f96089855881298e8e4e98a5639cc121e9cc983cbeb29ac750eb5d",
     "pre_install": [
         "Get-ChildItem \"$dir\\PicoDrive-win32-*.zip\" | ForEach-Object {",
         "    Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal",
