@@ -1,17 +1,17 @@
 {
-    "version": "3.9.24-13-g5bcc428",
+    "version": "3.9.24-19-g52a93be",
     "description": "Sega Master System / Game Gear / SG-1000 emulator and debugger (development version)",
     "homepage": "https://github.com/drhelius/Gearsystem",
     "license": "GPL-3.0-or-later",
     "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-13-g5bcc428-desktop-windows-x64.zip",
-            "hash": "88cd8472593ef538657a414c9999c9038f7aaafc81259b065d83178f3a36b8da"
+            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-19-g52a93be-desktop-windows-x64.zip",
+            "hash": "40011e434e23c2361d38cceaabd4abf9109870ef71286451023b73851cdd0d32"
         },
         "arm64": {
-            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-13-g5bcc428-desktop-windows-arm64.zip",
-            "hash": "724103c4c19ef29aae22f4e89e39adb10d2cd957c1c42443ca9f9033f5723991"
+            "url": "https://nightly.link/drhelius/Gearsystem/workflows/gearsystem/master/Gearsystem-3.9.24-19-g52a93be-desktop-windows-arm64.zip",
+            "hash": "1350e3eb55cd3b6c9a50d6007e7d98e0da029148fd7bbd4d99783c86f9e5e7e9"
         }
     },
     "pre_install": [
