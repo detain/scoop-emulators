@@ -1,14 +1,14 @@
 {
-    "version": "0.83.0",
+    "version": "0.83.1",
     "description": "This repository attempts to modernize the DOSBox project by using current development practices and tools, fixing issues, adding features that better support today's systems, and sending patches upstream.",
     "homepage": "https://github.com/dosbox-staging/dosbox-staging",
     "license": "GPL-2.0-or-later",
     "notes": "For config file examples, see: https://github.com/dosbox-staging/dosbox-staging/wiki/Config-file-examples",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.83.0/dosbox-staging-windows-x64-v0.83.0.zip",
-            "hash": "725b915e325a6d410ce30a10989fd492fdad07f6611fff40ff77f160478810f4",
-            "extract_dir": "dosbox-staging-v0.83.0"
+            "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.83.1/dosbox-staging-windows-x64-v0.83.1.zip",
+            "hash": "22026101687c74f6d7b5443a114a3236f419d3651b20d09aec973031e8a1aec0",
+            "extract_dir": "dosbox-staging-v0.83.1"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\dosbox-staging.conf\")) { New-Item -ItemType File \"$dir\\dosbox-staging.conf\" | Out-Null }",
