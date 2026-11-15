@@ -6,21 +6,21 @@
         "logo:https://consolo.is.cc/images/emuDownloadCenter/hooks/xroar/emulator_logo.jpg",
         "screenshot:https://consolo.is.cc/images/emuDownloadCenter/hooks/xroar/emulator_screen_01.jpg"
     ],
-    "version": "1.13",
+    "version": "1.13.1",
     "description": "Dragon 32/64, Tandy CoCo 1/2/3 and MC-10 emulator",
     "homepage": "https://www.6809.org.uk/xroar/",
     "license": "GPL-3.0-or-later",
     "notes": "Firmware ROM images are required. Place them in %LOCALAPPDATA%\\XRoar\\roms",
     "architecture": {
         "64bit": {
-            "url": "https://www.6809.org.uk/xroar/dl/xroar-1.13-w64.zip",
-            "hash": "96d4b861dfa65e06eb4127f554a72f5baf6b57f902a21002de9970e954f4c17e",
-            "extract_dir": "xroar-1.13-w64"
+            "url": "https://www.6809.org.uk/xroar/dl/xroar-1.13.1-w64.zip",
+            "hash": "d550d2268d38045a8c238c7a811b57e674daeb03e54326ee53f08fe3e3eee050",
+            "extract_dir": "xroar-1.13.1-w64"
         },
         "32bit": {
-            "url": "https://www.6809.org.uk/xroar/dl/xroar-1.13-w32.zip",
-            "hash": "a3c2081b68bf6fe051944bf169a56e8d8d97c21693b32e7241d61bdf71bd9637",
-            "extract_dir": "xroar-1.13-w32"
+            "url": "https://www.6809.org.uk/xroar/dl/xroar-1.13.1-w32.zip",
+            "hash": "5ab145d263ad64850a73498d998ac0e103bc59c5028c4749d10d25bd8ddee782",
+            "extract_dir": "xroar-1.13.1-w32"
         }
     },
     "bin": "xroar.exe",
