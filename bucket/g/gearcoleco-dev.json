@@ -1,17 +1,17 @@
 {
-    "version": "1.7.6-29-g14dd189",
+    "version": "1.8.0-5-g97950bc",
     "description": "ColecoVision emulator and debugger (development version)",
     "homepage": "https://github.com/drhelius/Gearcoleco",
     "license": "GPL-3.0-or-later",
     "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.7.6-29-g14dd189-desktop-windows-x64.zip",
-            "hash": "5d2940092e5e17bb6ddc7e87cfbc8d285d8afa0097475f80bd1db687da7b1e10"
+            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.8.0-5-g97950bc-desktop-windows-x64.zip",
+            "hash": "1e067d692fb04c87d061b46ac7b5299124c912a640c0c9b03f3d7962c9765d58"
         },
         "arm64": {
-            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.7.6-29-g14dd189-desktop-windows-arm64.zip",
-            "hash": "297f920c0af2732d9393f068362f7cf80348cbede1842614ca6f0b955aaf1404"
+            "url": "https://nightly.link/drhelius/Gearcoleco/workflows/gearcoleco/main/Gearcoleco-1.8.0-5-g97950bc-desktop-windows-arm64.zip",
+            "hash": "1585c8c8823be7c19d4074547a4192e9edb51a908751fba03fdd722deb37202e"
         }
     },
     "pre_install": [
