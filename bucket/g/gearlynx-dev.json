@@ -1,5 +1,5 @@
 {
-    "version": "1.2.38-5-g11a7696",
+    "version": "1.2.39-4-g1a10b2b",
     "description": "Atari Lynx emulator, debugger and embedded MCP server (development version)",
     "homepage": "https://github.com/drhelius/Gearlynx",
     "license": "GPL-3.0-or-later",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.38-5-g11a7696-desktop-windows-x64.zip",
-            "hash": "3d4e2d9fbc1283527751aa09c15c0df206fa4ec70a39f8c1664fd15f7e8ddf58"
+            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.39-4-g1a10b2b-desktop-windows-x64.zip",
+            "hash": "bb6f65c4824d63305d74eeca786a96fa84e0b9cf2c6739cba9a889e215f55a1a"
         },
         "arm64": {
-            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.38-5-g11a7696-desktop-windows-arm64.zip",
-            "hash": "febd91a56ba23403d58cedc01d90059689bf6a87988eab8425b4de1ffbe81ffc"
+            "url": "https://nightly.link/drhelius/Gearlynx/workflows/gearlynx/main/Gearlynx-1.2.39-4-g1a10b2b-desktop-windows-arm64.zip",
+            "hash": "ae96d7ad10b3adf7c19142fca6a5f07b87cc601786b0fba2c6e654722ef33336"
         }
     },
     "pre_install": [
