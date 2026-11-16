@@ -1,13 +1,13 @@
 {
-    "version": "2026-11-12-b38cf17",
+    "version": "2026-11-16-a53dad5",
     "description": "Custom online server for the shadPS4 Sony PlayStation 4 emulator (development build)",
     "homepage": "https://github.com/shadps4-emu/shadNet",
     "license": "GPL-2.0-or-later",
     "suggest": {
         "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://github.com/shadps4-emu/shadNet/releases/download/pre-release-shadnet-2026-11-12-b38cf175ed2215456972356196f46b82c171e987/shadnet-win64-2026-11-12-b38cf17.zip",
-    "hash": "bfa83e8f7e87312d50877809251bdd57002de07469ffb6ac44e296d66d6de029",
+    "url": "https://github.com/shadps4-emu/shadNet/releases/download/pre-release-shadnet-2026-11-16-a53dad52ae04aba321e62bcff8dc3743ba3e4814/shadnet-win64-2026-11-16-a53dad5.zip",
+    "hash": "bf9e5bba34f4e6251ce89dc635e870f2bdfd3fba9d0ed3f8e947cf4a8d22da82",
     "pre_install": "Remove-Item \"$dir\\vc_redist.x64.exe\" -Force -ErrorAction SilentlyContinue",
     "bin": "shadnet.exe",
     "checkver": {
