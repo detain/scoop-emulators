@@ -1,5 +1,5 @@
 {
-    "version": "1.8.7-20-g299d7a7",
+    "version": "1.8.7-26-g151d401",
     "description": "NEC PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator and debugger (development version)",
     "homepage": "https://github.com/drhelius/Geargrafx",
     "license": "GPL-3.0-or-later",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-20-g299d7a7-desktop-windows-x64.zip",
-            "hash": "cfde32c9ab6a5a4a95950ec62e05a48343d8cb89f0af69f4c81ce7defd3a7fd9"
+            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-26-g151d401-desktop-windows-x64.zip",
+            "hash": "4490e71c788f6f5c32e198ac57eceacfbae21c401c811621dc4d9481ba848f97"
         },
         "arm64": {
-            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-20-g299d7a7-desktop-windows-arm64.zip",
-            "hash": "711677ed7f57c9a2aae7cfb0b00f32a36cd45b4d005f624355c24fed45590fe7"
+            "url": "https://nightly.link/drhelius/Geargrafx/workflows/geargrafx/main/Geargrafx-1.8.7-26-g151d401-desktop-windows-arm64.zip",
+            "hash": "f0ae98b96d1b77e5a363aad5bf668a6f98b54f94fe7816a7114222da6a9f8262"
         }
     },
     "pre_install": [
