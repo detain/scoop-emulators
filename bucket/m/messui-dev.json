@@ -1,5 +1,5 @@
 {
-    "version": "194-20261115-2908e2b",
+    "version": "195-20261116-98323a1",
     "description": "Multi-system computer and console emulator (MAME/MESS) with the MESSUI Windows interface (development version)",
     "homepage": "http://messui.1emulation.com/",
     "license": "GPL-2.0-or-later",
@@ -7,8 +7,8 @@
         "Development builds come from GitHub Actions artifacts of Robbbert/messui (via nightly.link), which expire about 9 days after the build.",
         "The artifact contains only messui.exe (no plugins, language, hash or artwork files)."
     ],
-    "url": "https://nightly.link/Robbbert/messui/actions/runs/43665936631/messui-windows-gcc-2908e2b574bd1757d1cb398346975d821732b5af.zip",
-    "hash": "712122cf97553ebea83d271d2196915b5ebce995ab4f417e7b1900c876901fa0",
+    "url": "https://nightly.link/Robbbert/messui/actions/runs/43784177931/messui-windows-gcc-98323a13f66919977fbbed3bd1e6d9b4c54a2366.zip",
+    "hash": "9da214c19b27553a58115e39ef63c87084d44904e6099eaf48e0751d267140f6",
     "bin": [
         [
             "messui.exe",
