@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0.6",
+    "description": "Arcade emulator / compatibility layer for modern PC-based arcade games (via the official TPBootstrapper web installer)",
+    "homepage": "https://teknoparrot.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://teknoparrot.com/"
+    },
+    "notes": [
+        "Run 'teknoparrot' (or the TeknoParrot shortcut). On first run the official TPBootstrapper opens:",
+        "click 'Full Install' to download TeknoParrot and its cores into $persist_dir\\TeknoParrot.",
+        "Afterwards 'teknoparrot' launches TeknoParrotUi directly. Run 'teknoparrot-setup' to update or add cores."
+    ],
+    "url": "https://github.com/nzgamer41/TPBootstrapper/releases/download/2.0.0.6/TPBootstrapper.zip",
+    "hash": "5358f89fa5e49f95326c7476250c26a979d088a6096dfcb76922d3fa6c965c37",
+    "pre_install": [
+        "Remove-Item \"$dir\\TPBootstrapper.pdb\" -ErrorAction SilentlyContinue",
+        "Set-Content \"$dir\\teknoparrot.cmd\" -Encoding Ascii -Value @(",
+        "    '@echo off',",
+        "    'set \"TP=%~dp0TeknoParrot\"',",
+        "    'if not exist \"%TP%\" mkdir \"%TP%\"',",
+        "    'if exist \"%TP%\\TeknoParrotUi.exe\" (start \"\" /D \"%TP%\" \"%TP%\\TeknoParrotUi.exe\" %*) else (start \"\" /D \"%TP%\" \"%~dp0TPBootstrapper.exe\")'",
+        ")",
+        "Set-Content \"$dir\\teknoparrot-setup.cmd\" -Encoding Ascii -Value @(",
+        "    '@echo off',",
+        "    'set \"TP=%~dp0TeknoParrot\"',",
+        "    'if not exist \"%TP%\" mkdir \"%TP%\"',",
+        "    'start \"\" /D \"%TP%\" \"%~dp0TPBootstrapper.exe\"'",
+        ")"
+    ],
+    "bin": [
+        "teknoparrot.cmd",
+        "teknoparrot-setup.cmd"
+    ],
+    "shortcuts": [
+        [
+            "teknoparrot.cmd",
+            "TeknoParrot",
+            "",
+            "TPBootstrapper.exe"
+        ],
+        [
+            "teknoparrot-setup.cmd",
+            "TeknoParrot Setup (TPBootstrapper)",
+            "",
+            "TPBootstrapper.exe"
+        ]
+    ],
+    "persist": "TeknoParrot",
+    "checkver": {
+        "github": "https://github.com/nzgamer41/TPBootstrapper"
+    },
+    "autoupdate": {
+        "url": "https://github.com/nzgamer41/TPBootstrapper/releases/download/$version/TPBootstrapper.zip"
+    }
+}
