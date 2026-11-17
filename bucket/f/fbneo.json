@@ -2,7 +2,10 @@
     "version": "1.0.0.2",
     "description": "Emulator for arcade games and select consoles",
     "homepage": "https://github.com/finalburnneo/FBNeo",
-    "license": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/finalburnneo/FBNeo/blob/master/src/license.txt"
+    },
     "notes": [
         "",
         "Some users will get an error message when they start the emulator because the default renderer is using Direct3D 7.",
@@ -30,7 +33,10 @@
         "screenshots",
         "support"
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/finalburnneo/FBNeo/releases",
+        "regex": "/releases/tag/v([\\d.]+)\""
+    },
     "autoupdate": {
         "url": "https://github.com/finalburnneo/FBNeo/releases/download/v$version/fbneo.zip"
     }
