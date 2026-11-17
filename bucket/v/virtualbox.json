@@ -28,17 +28,18 @@
             "Start-Process msiexec -ArgumentList @('/i', \"`\"$dir\\setup.msi`\"\", '/qn', '/norestart', \"INSTALLDIR=`\"$dir`\"\") -Wait -Verb RunAs | Out-Null",
             "Start-Process icacls -ArgumentList @(\"`\"$dir`\"\", '/grant', 'Everyone:F', '/T') -Wait -Verb RunAs | Out-Null",
             "Remove-Item \"$dir\\setup.exe\", \"$dir\\setup.msi\"",
-            "Remove-Item \"$env:PUBLIC\\Desktop\\Oracle VM VirtualBox.lnk\"",
-            "Remove-Item -Recurse \"$([Environment]::GetFolderPath('commonstartmenu'))\\Programs\\Oracle VM VirtualBox\""
+            "'Oracle VM VirtualBox', 'Oracle VirtualBox' | ForEach-Object {",
+            "    Remove-Item \"$env:PUBLIC\\Desktop\\$_.lnk\" -Force -ErrorAction SilentlyContinue",
+            "    Remove-Item \"$([Environment]::GetFolderPath('commonstartmenu'))\\Programs\\$_\" -Recurse -Force -ErrorAction SilentlyContinue",
+            "}"
         ]
     },
     "uninstaller": {
         "script": [
             "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-            "$id_array = wmic product where \"name like 'Oracle VM VirtualBox%'\" get IdentifyingNumber",
-            "if (!($id_array[2] -match '({[0-9A-F-]+})')) { error 'Could not find product ID'; break }",
-            "$id = $matches[1]",
-            "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$id\", '/qn', '/norestart') -RunAs | Out-Null"
+            "$product = Get-ChildItem 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall' | Get-ItemProperty | Where-Object { $_.DisplayName -like 'Oracle*VirtualBox*' -and $_.PSChildName -match '^{[0-9A-F-]+}$' } | Select-Object -First 1",
+            "if (!$product) { error 'Could not find product ID'; break }",
+            "Invoke-ExternalCommand msiexec -ArgumentList @('/x', $product.PSChildName, '/qn', '/norestart') -RunAs | Out-Null"
         ]
     },
     "bin": [
@@ -47,13 +48,11 @@
         "VBoxDTrace.exe",
         "VBoxExtPackHelperApp.exe",
         "VBoxHeadless.exe",
-        "vbox-img.exe",
         "VBoxManage.exe",
         "VBoxNetDHCP.exe",
         "VBoxNetNAT.exe",
         "VBoxSDS.exe",
         "VBoxSVC.exe",
-        "VBoxTestOGL.exe",
         "VBoxWebSrv.exe",
         "VirtualBox.exe",
         "VirtualBoxVM.exe"
