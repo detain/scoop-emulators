@@ -1,5 +1,5 @@
 {
-    "version": "1006-20261116-6a21212",
+    "version": "1007-20261117-0c966fd",
     "description": "Commodore Amiga emulator (development version)",
     "homepage": "https://www.winuae.net",
     "license": "GPL-2.0-only",
@@ -10,7 +10,7 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20x64.zip",
-            "hash": "559133a67f1c488eaae535dbed08eb50ad3e570dfa90c499636090beb90a8cfc",
+            "hash": "fc350c0a48a32edcfa799be726a9c0ac1026a722dba32f6c560001334b9eae96",
             "bin": [
                 [
                     "winuae64.exe",
@@ -26,7 +26,7 @@
         },
         "32bit": {
             "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%2032-bit.zip",
-            "hash": "ff7b4bd9bf39c461b5d9ad777f1afd53e3c1b8fa3b3592ee0720a30f630253bc",
+            "hash": "2c386524963d5c87897dd181713424d0d8ba8cc48ac8d36b2c2b60943011ecdd",
             "bin": [
                 [
                     "winuae.exe",
@@ -42,7 +42,7 @@
         },
         "arm64": {
             "url": "https://nightly.link/tonioni/WinUAE/workflows/build-winuae-binary/master/WinUAE%20ARM64.zip",
-            "hash": "ff2372abf48cdf81010c810dd025ab44b1fb13734e498ce40a73ca44f263b675",
+            "hash": "99da57371910714faba1d33c50a370ea615d5bdcaa0adcdbf709ef53040e49b1",
             "bin": [
                 [
                     "winuaearm64.exe",
