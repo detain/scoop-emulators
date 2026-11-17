@@ -3,14 +3,14 @@
     "description": "Sony PSP emulator written in Java (development version)",
     "homepage": "https://github.com/jpcsp/jpcsp",
     "license": "GPL-3.0-or-later",
-    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days. Requires Java with JAVA_HOME set.",
+    "notes": "Development builds come from GitHub Actions artifacts (via nightly.link) pinned to a specific workflow run; artifacts expire after about 90 days. Requires Java with JAVA_HOME set.",
     "suggest": {
         "JRE": "java/openjdk"
     },
     "depends": "7zip",
     "architecture": {
         "32bit": {
-            "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip",
+            "url": "https://nightly.link/jpcsp/jpcsp/actions/runs/35998146930/Windows%2032-bit%20build.zip",
             "hash": "285617522af4ee7201eb13cc8c81165728788fe3bfaa7cc8665bbfa546be0d34",
             "bin": [
                 [
@@ -26,7 +26,7 @@
             ]
         },
         "64bit": {
-            "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip",
+            "url": "https://nightly.link/jpcsp/jpcsp/actions/runs/35998146930/Windows%2064-bit%20build.zip",
             "hash": "cf47d3daf157ee52f9314498dbd7c748031a5c5ff4160067da6d4f3288ce9a8c",
             "bin": [
                 [
@@ -54,18 +54,19 @@
             "$sha = json_path $page $.workflow_runs[0].head_sha",
             "$runId = json_path $page $.workflow_runs[0].run_number",
             "$date = json_path $page $.workflow_runs[0].created_at",
-            "Write-Output \"$runId $date $sha\""
+            "$id = json_path $page $.workflow_runs[0].id",
+            "Write-Output \"$runId $date $sha $id\""
         ],
-        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})[^ ]* (?<runid>\\d+)$",
         "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2032-bit%20build.zip"
+                "url": "https://nightly.link/jpcsp/jpcsp/actions/runs/$matchRunid/Windows%2032-bit%20build.zip"
             },
             "64bit": {
-                "url": "https://nightly.link/jpcsp/jpcsp/workflows/main/master/Windows%2064-bit%20build.zip"
+                "url": "https://nightly.link/jpcsp/jpcsp/actions/runs/$matchRunid/Windows%2064-bit%20build.zip"
             }
         }
     }
