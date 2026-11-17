@@ -1,23 +1,62 @@
 {
-    "version": "XLinkKai-v1.0",
-    "description": "PSP Emulator written in Java ",
+    "version": "2024-08",
+    "description": "Sony PSP emulator written in Java",
     "homepage": "https://github.com/jpcsp/jpcsp",
     "license": "GPL-2.0-only",
-    "url": "https://github.com/jpcsp/jpcsp/releases/download/XLinkKai-v1.0/jpcsp-d9de3122-windows-amd64.7z",
-    "hash": "d7cb8346ee7a58b6ee8474cb59b00e907113e4034a5e752f95607210b1fd3473",
-    "extract_dir": "jpcsp-windows-amd64",
-    "bin": "start-windows-amd64.bat",
-    "shortcuts": [
-        [
-            "start-windows-amd64.bat",
-            "jpcsp"
-        ]
-    ],
+    "notes": "Requires Java with JAVA_HOME set.",
+    "suggest": {
+        "JRE": "java/openjdk"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jpcsp/jpcsp/releases/download/2024-08/jpcsp-bb94cd4-windows-amd64.7z",
+            "hash": "7e748790455d095b5c6c1a89589c155b5103f5e2fe4127c9e7fc36d5d686028f",
+            "extract_dir": "jpcsp-windows-amd64",
+            "bin": [
+                [
+                    "start-windows-amd64.bat",
+                    "jpcsp"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "start-windows-amd64.bat",
+                    "jpcsp"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/jpcsp/jpcsp/releases/download/2024-08/jpcsp-bb94cd4-windows-x86.7z",
+            "hash": "4258c2ce4c70b52e0308030034734bfdb0b5e4010b68a5b3e62d11536175fc6f",
+            "extract_dir": "jpcsp-windows-x86",
+            "bin": [
+                [
+                    "start-windows-x86.bat",
+                    "jpcsp"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "start-windows-x86.bat",
+                    "jpcsp"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "github": "https://github.com/jpcsp/jpcsp",
-        "re": "\\/releases\\/tag\\/([a-zA-Z0-9\\-\\.]+)"
+        "url": "https://api.github.com/repos/jpcsp/jpcsp/releases/latest",
+        "regex": "(?s)\"tag_name\":\\s*\"(?<version>[^\"]+)\".*?jpcsp-(?<commit>[0-9a-f]+)-windows-amd64\\.7z"
     },
     "autoupdate": {
-        "url": "https://github.com/jpcsp/jpcsp/releases/download/$version/jpcsp-d9de3122-windows-amd64.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jpcsp/jpcsp/releases/download/$version/jpcsp-$matchCommit-windows-amd64.7z",
+                "extract_dir": "jpcsp-windows-amd64"
+            },
+            "32bit": {
+                "url": "https://github.com/jpcsp/jpcsp/releases/download/$version/jpcsp-$matchCommit-windows-x86.7z",
+                "extract_dir": "jpcsp-windows-x86"
+            }
+        }
     }
 }
