@@ -1,11 +1,11 @@
 {
-    "version": "0.84.0-alpha-76ef0",
+    "version": "0.84.0-alpha-3acfd",
     "description": "Modernized DOSBox fork: MS-DOS / x86 PC emulator (development version)",
     "homepage": "https://github.com/dosbox-staging/dosbox-staging",
     "license": "GPL-2.0-or-later",
     "notes": "For config file examples, see: https://github.com/dosbox-staging/dosbox-staging/wiki/Config-file-examples",
-    "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/dev-latest/dosbox-staging-windows-x64-0.84.0-alpha-76ef0.zip",
-    "hash": "142c8bed8792ae68172f9c188bde55cdcb2b0299b7431786c90665c5470a1fa3",
+    "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/dev-latest/dosbox-staging-windows-x64-0.84.0-alpha-3acfd.zip",
+    "hash": "8b8c7074eeb5a6057785d15732d7c427591df3d7cba5ad18c595a6cfd3d8864f",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\dosbox-staging.conf\")) {",
         "    New-Item \"$dir\\dosbox-staging.conf\" -Type File | Out-Null",
