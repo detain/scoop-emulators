@@ -1,5 +1,5 @@
 {
-    "version": "2026-11-16",
+    "version": "2026-11-15",
     "description": "Frontend for emulators, game engines and media players (nightly)",
     "homepage": "https://www.retroarch.com/",
     "license": "GPL-3.0-only",
@@ -10,19 +10,24 @@
     ],
     "architecture": {
         "32bit": {
-            "url": "https://buildbot.libretro.com/nightly/windows/x86/RetroArch.7z",
+            "url": "https://buildbot.libretro.com/nightly/windows/x86/2026-11-15_RetroArch.7z",
             "hash": "c622d9e202f1abdf0df27c7ac0d4284ef9d34fda2150ed19f6d1c4a07656153b",
             "extract_dir": "RetroArch-Win32"
         },
         "64bit": {
-            "url": "https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch.7z",
+            "url": "https://buildbot.libretro.com/nightly/windows/x86_64/2026-11-15_RetroArch.7z",
             "hash": "e82b459b45461d17154572de097093e8b32046bb4b9bba7be268e0a519a53093",
             "extract_dir": "RetroArch-Win64"
         }
     },
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\retroarch.cfg\")) {",
-        "    New-Item \"$persist_dir\\retroarch.cfg\" -Type File | Out-Null",
+        "# Clean up empty folders left behind by older versions of this manifest (they break RetroArch's config loading)",
+        "'retroarch.cfg', 'content_favorites.lpl', 'content_history.lpl' | ForEach-Object {",
+        "    if ((Test-Path \"$persist_dir\\$_\" -PathType Container) -and !(Get-ChildItem \"$persist_dir\\$_\" -Force)) { Remove-Item \"$persist_dir\\$_\" -Force }",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\retroarch.cfg\")) { Copy-Item \"$dir\\retroarch.default.cfg\" \"$dir\\retroarch.cfg\" }",
+        "'favorites', 'history' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\content_$_.lpl\")) { New-Item \"$dir\\content_$_.lpl\" -ItemType File | Out-Null }",
         "}"
     ],
     "bin": [
@@ -39,6 +44,7 @@
     ],
     "persist": [
         "assets\\wallpapers",
+        "config",
         "cores",
         "cheats",
         "overlays",
@@ -63,10 +69,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://buildbot.libretro.com/nightly/windows/x86/RetroArch.7z"
+                "url": "https://buildbot.libretro.com/nightly/windows/x86/$version_RetroArch.7z"
             },
             "64bit": {
-                "url": "https://buildbot.libretro.com/nightly/windows/x86_64/RetroArch.7z"
+                "url": "https://buildbot.libretro.com/nightly/windows/x86_64/$version_RetroArch.7z"
             }
         }
     }
