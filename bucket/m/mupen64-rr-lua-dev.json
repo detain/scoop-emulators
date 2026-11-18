@@ -1,5 +1,5 @@
 {
-    "version": "95-20261117-d96606e",
+    "version": "96-20261118-d96606e",
     "description": "Nintendo 64 emulator for TASing with re-recording and Lua scripting (Mupen64-RR) (development version)",
     "homepage": "https://mupen64.com/",
     "license": "GPL-2.0-or-later",
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x64.zip",
-            "hash": "2f0a85ded42905cc27473b8e66671f937c998cd4e179fe0c5ad7655a80a93396"
+            "hash": "df56a97505966e42fb34b2fc238c40507dea6c436bb56142d77ee25cf6a316f4"
         },
         "32bit": {
             "url": "https://nightly.link/mupen64/mupen64-rr-lua/workflows/build-nightly/main/mupen-release-nightly-windows-x86.zip",
-            "hash": "851272d4924d5a04ee3549523ddfe936046e4aee5d96da2bb92dcf56a60dcb1b"
+            "hash": "b8553122dc6b790361f577f17210c2ded041a5878a030fafe204ff8687976cea"
         }
     },
     "bin": [
