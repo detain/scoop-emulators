@@ -1,5 +1,5 @@
 {
-    "version": "630-20261117-3bc0880",
+    "version": "631-20261118-7da7d3a",
     "description": "HomeBrew MAME: MAME derivative with hacks and homebrew games not included in MAME (development version)",
     "homepage": "http://hbmame.1emulation.com/",
     "license": "GPL-2.0-only",
@@ -7,8 +7,8 @@
         "Development builds come from GitHub Actions artifacts (via nightly.link), which expire about 28 days after the build.",
         "The artifact contains only hbmame.exe (no plugins, language or hash files)."
     ],
-    "url": "https://nightly.link/Robbbert/hbmame/actions/runs/44106143970/hbmame-windows-gcc-3bc088052456891008b84a5108a64c8c4fb8d6a2.zip",
-    "hash": "8f26921b9ab6d3773001a69393f96b53840c917589f679546dfaf5268f237b3d",
+    "url": "https://nightly.link/Robbbert/hbmame/actions/runs/44230312369/hbmame-windows-gcc-7da7d3a1a1b208f3834fd0a4b21d62bc9145e468.zip",
+    "hash": "3f1516fd6a5bc131feb631c158636cdd6c41f69817a7138e018953582525b7e6",
     "bin": [
         [
             "hbmame.exe",
