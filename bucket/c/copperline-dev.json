@@ -1,5 +1,5 @@
 {
-    "version": "2338-20261115-0ca2ec1",
+    "version": "2342-20261118-4575404",
     "description": "Commodore Amiga (OCS/ECS/AGA) cycle-driven emulator written in Rust (development version)",
     "homepage": "https://github.com/CopperlineHQ/Copperline",
     "license": "GPL-3.0-or-later",
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-x64.zip",
-            "hash": "301c4300d8e4f5a8846cb44682493a9f9a5a20fbd222017d946971d3ab1d69cb"
+            "hash": "85184c00034ac8c75b7c0b7b99acb9837ef0dabc219c5c8f3f621eae97791561"
         },
         "arm64": {
             "url": "https://nightly.link/CopperlineHQ/Copperline/workflows/windows/main/copperline-windows-arm64.zip",
-            "hash": "31f63f19c5bd7eee7cd19c78aa51a861f7295ba9bf55e3344b47b57396f68b50"
+            "hash": "628c73c0dfe76acd3fef4b5642e2bf989358a62b336581f536068c2ef3dd659e"
         }
     },
     "pre_install": [
