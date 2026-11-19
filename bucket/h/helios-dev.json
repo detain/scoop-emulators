@@ -1,5 +1,5 @@
 {
-    "version": "683-20261113-5cf0230",
+    "version": "684-20261118-c7491a9",
     "description": "Sega Mega Drive/Genesis, 32X, Master System, Game Gear, SG-1000, ColecoVision, MSX and NES emulator written in Java (development version)",
     "homepage": "https://github.com/fedex81/helios",
     "license": "GPL-3.0-or-later",
@@ -10,8 +10,8 @@
     "suggest": {
         "Java Runtime Environment": "java/temurin-lts-jre"
     },
-    "url": "https://nightly.link/fedex81/helios/actions/runs/43477260888/helios-SNAPSHOT-5cf023035b3a2771a5d022dc7cc748b8e9b9ac20-683.zip",
-    "hash": "c597b8c72b20f3a0e919f592dbd9dea2f7f7d7094d6874e3893890c7f3d7b012",
+    "url": "https://nightly.link/fedex81/helios/actions/runs/44389460097/helios-SNAPSHOT-c7491a9d73edc9ad0398dd8d77364e8001310d3f-684.zip",
+    "hash": "fc8e1b2075a645230160f8a7bdb6915946fd531a31d323922e82eee96d140959",
     "pre_install": [
         "Get-ChildItem \"$dir\\helios-*.zip\" | ForEach-Object { Expand-ZipArchive $_.FullName \"$dir\" -Removal }",
         "$cmd = (Get-Content \"$dir\\launcher.bat\" | Where-Object { $_ -match '^java ' }) -replace '\"%1\"', '\"%ROM%\"'",
