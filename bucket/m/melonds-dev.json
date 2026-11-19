@@ -1,5 +1,5 @@
 {
-    "version": "3551-20261104-497aa6c",
+    "version": "3560-20261118-361ffa9",
     "description": "Nintendo DS emulator (development version)",
     "homepage": "https://melonds.kuribo64.net/",
     "license": "GPL-3.0-only",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/41929249442/melonDS-windows-x86_64.zip",
-            "hash": "0f4241993009e72a7b2b12cc3719b1e5bf7e0011dbedc5a4edd7a879721264a4"
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/44354887244/melonDS-windows-x86_64.zip",
+            "hash": "755055bd144601fda61abd72f460d89b45f9841601041fdba49731073c8c48fb"
         },
         "arm64": {
-            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/41929249442/melonDS-windows-arm64.zip",
-            "hash": "4b0afabf5eb14f4e54e7d73f7654230bb43fae335ef25c422df4d49ba39e7fb1"
+            "url": "https://nightly.link/melonDS-emu/melonDS/actions/runs/44354887244/melonDS-windows-arm64.zip",
+            "hash": "f143a5496fbfdf99cb611ccba9e0927070487c0c7ac07845b2bf9c98cf4b3788"
         }
     },
     "installer": {
