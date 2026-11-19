@@ -1,5 +1,5 @@
 {
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Philips CD-i emulator written in Rust (standalone and libretro core)",
     "homepage": "https://github.com/sigsantilio/opencdi",
     "license": "MIT",
@@ -7,8 +7,8 @@
         "OpenCDi requires a Philips CD-i BIOS (e.g. cdi220b.rom or cdimono1.zip).",
         "Place the BIOS files in $persist_dir\\bios"
     ],
-    "url": "https://github.com/sigsantilio/opencdi/releases/download/v0.4.0/opencdi-v0.4.0-windows-x64.zip",
-    "hash": "be339c18f58abe4893344438fbd56590411a43e01520968e570ff4df7dab2ede",
+    "url": "https://github.com/sigsantilio/opencdi/releases/download/v0.4.1/opencdi-v0.4.1-windows-x64.zip",
+    "hash": "d0d339f75b0f53adc580f422633fb442cf0e903b8c1e4f246ac11ff04ffb3c3a",
     "bin": "opencdi.exe",
     "shortcuts": [
         [
