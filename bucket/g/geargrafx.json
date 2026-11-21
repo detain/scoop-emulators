@@ -1,17 +1,17 @@
 {
-    "version": "1.8.8",
+    "version": "1.8.9",
     "description": "NEC PC Engine / TurboGrafx-16 / SuperGrafx / PCE CD-ROM2 emulator and debugger",
     "homepage": "https://github.com/drhelius/Geargrafx",
     "license": "GPL-3.0-or-later",
     "notes": "CD-ROM2 games require a System Card BIOS; load it from the Emulator menu.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.8/Geargrafx-1.8.8-desktop-windows-x64.zip",
-            "hash": "b32a919571e6d10b614175a191f8fe20ff12ef584bd722c57c38b117d19d7e55"
+            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.9/Geargrafx-1.8.9-desktop-windows-x64.zip",
+            "hash": "6e8901aab822393b6ecceb43e456b2d77bd10f587095a866110ee66897fee364"
         },
         "arm64": {
-            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.8/Geargrafx-1.8.8-desktop-windows-arm64.zip",
-            "hash": "879171be4dbb6c506b0f8288a6e556259bc5b73cef7fff7eddf3a2c22d0de06f"
+            "url": "https://github.com/drhelius/Geargrafx/releases/download/1.8.9/Geargrafx-1.8.9-desktop-windows-arm64.zip",
+            "hash": "b37260343cf49571a19b1987a9f10ee658779d8bf0f098b55abc3eb3c7f220b3"
         }
     },
     "pre_install": [
