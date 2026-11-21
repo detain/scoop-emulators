@@ -1,19 +1,19 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Commodore Amiga (OCS/ECS/AGA) cycle-driven emulator written in Rust",
     "homepage": "https://github.com/CopperlineHQ/Copperline",
     "license": "GPL-3.0-or-later",
     "notes": "Boots the bundled AROS Kickstart replacement by default. Settings and quick-saves are kept in %USERPROFILE%\\Documents\\Copperline.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CopperlineHQ/Copperline/releases/download/v1.1.0/Copperline-1.1.0-win-x64.zip",
-            "hash": "8dae9b7800fb1daf256743dcf5377b7171603b70db04c1c598f9acbca8a7a980",
-            "extract_dir": "Copperline-1.1.0-win-x64"
+            "url": "https://github.com/CopperlineHQ/Copperline/releases/download/v1.2.0/Copperline-1.2.0-win-x64.zip",
+            "hash": "a0ae3d18475bcba654eba0133078a06589966a56a88084aba6e6c46134a062df",
+            "extract_dir": "Copperline-1.2.0-win-x64"
         },
         "arm64": {
-            "url": "https://github.com/CopperlineHQ/Copperline/releases/download/v1.1.0/Copperline-1.1.0-win-arm64.zip",
-            "hash": "912b43f188a885929d3567e214bbb57bd64cba9e38babe2b16b8c29a4136d7cc",
-            "extract_dir": "Copperline-1.1.0-win-arm64"
+            "url": "https://github.com/CopperlineHQ/Copperline/releases/download/v1.2.0/Copperline-1.2.0-win-arm64.zip",
+            "hash": "473c94d63df44e275f1229db1fe019bb0b54a2ca18e5301bec257d6beefa7886",
+            "extract_dir": "Copperline-1.2.0-win-arm64"
         }
     },
     "bin": [
