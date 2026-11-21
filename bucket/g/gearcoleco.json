@@ -1,17 +1,17 @@
 {
-    "version": "1.8.0",
+    "version": "1.8.1",
     "description": "ColecoVision emulator and debugger",
     "homepage": "https://github.com/drhelius/Gearcoleco",
     "license": "GPL-3.0-or-later",
     "notes": "Gearcoleco requires a ColecoVision BIOS (colecovision.rom); load it from the Emulator menu.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.8.0/Gearcoleco-1.8.0-desktop-windows-x64.zip",
-            "hash": "bcae27da3d587d533b60ee9458bdc034c0ba0a26f0288bba24b20aa8c8389468"
+            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.8.1/Gearcoleco-1.8.1-desktop-windows-x64.zip",
+            "hash": "3cc42f1d6613fb3e79383d9192d695b1a31b56073d9fc825be354d771f8d4374"
         },
         "arm64": {
-            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.8.0/Gearcoleco-1.8.0-desktop-windows-arm64.zip",
-            "hash": "e991d52013e031888b2cf0dcaf7c1ec3dca2b12848ea43e9b3b91c43ee02da62"
+            "url": "https://github.com/drhelius/Gearcoleco/releases/download/1.8.1/Gearcoleco-1.8.1-desktop-windows-arm64.zip",
+            "hash": "6590e4ff667a15e6c8c23aa599ebde2bb49f9162f479bcd890d084b4add1d225"
         }
     },
     "pre_install": [
