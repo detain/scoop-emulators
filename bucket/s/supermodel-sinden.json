@@ -1,10 +1,10 @@
 {
-    "version": "0.4-34ede1c",
+    "version": "0.4-7a3ccb6",
     "description": "Sega Model 3 arcade emulator, a Supermodel fork with native Sinden light gun support",
     "homepage": "https://github.com/DirtBagXon/model3emu-code-sinden",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/DirtBagXon/model3emu-code-sinden/releases/download/d7cf0c5/supermodel-Windows-0.4-34ede1c.zip",
-    "hash": "3048dc8135d894412651e733678fefad62d306abcdb7fdecc5c56c2067b9b9cb",
+    "url": "https://github.com/DirtBagXon/model3emu-code-sinden/releases/download/6676dd4/supermodel-Windows-0.4-7a3ccb6.zip",
+    "hash": "2f0b3062227f4fe10ae28b67be95234bbaad1316d53e32ab0e94aaa77387708f",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\Config\\Supermodel.ini\")) {",
         "    New-Item \"$dir\\Config\\Supermodel.ini\" -Type File -Force | Out-Null",
