@@ -1,11 +1,11 @@
 {
-    "version": "1420-20261123-95422df",
+    "version": "1421-20261123-bb4fccd",
     "description": "Multi-console emulator for Sega Genesis/CD/32X, Master System, Game Gear, NES, SNES, Game Boy/GBA and PC Engine (development version)",
     "homepage": "https://github.com/jsgroth/jgenesis",
     "license": "GPL-3.0-only",
     "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
     "url": "https://nightly.link/jsgroth/jgenesis/workflows/rust/master/windows-x86_64-exe.zip",
-    "hash": "372d02afbed36d082a25b2b5175ec36d97fd28e6ca9352d25d7aed0e9925be14",
+    "hash": "2f97308e675281d658dc22c23dc0ba37fe66ae2a6f338f0768db4e0e49a992cb",
     "pre_install": [
         "Get-ChildItem \"$dir\\jgenesis-*-windows-x86_64.zip\" | ForEach-Object {",
         "    Expand-ZipArchive $_.FullName $dir -Removal",
