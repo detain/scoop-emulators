@@ -1,17 +1,17 @@
 {
-    "version": "20261117-g6d32a6c",
+    "version": "20261122-ga99ca83",
     "description": "RPG Maker 2000/2003 game interpreter (development version)",
     "homepage": "https://easyrpg.org/player/",
     "license": "GPL-3.0-or-later",
     "notes": "Continuous builds from the EasyRPG Jenkins CI (https://ci.easyrpg.org).",
     "architecture": {
         "64bit": {
-            "url": "https://ci.easyrpg.org/job/player-win64/2001/artifact/bin/easyrpg_windows_x64.zip",
-            "hash": "d6f68d1cd229ce23dc8ddb9f2572d810415d4c3d374554c48ab2b694499a42a0"
+            "url": "https://ci.easyrpg.org/job/player-win64/2002/artifact/bin/easyrpg_windows_x64.zip",
+            "hash": "2b17c553b84710dc68d982d827abba6314f5a813fb3d899c0e0ada6e044b4a48"
         },
         "32bit": {
-            "url": "https://ci.easyrpg.org/job/player-win32/2056/artifact/bin/easyrpg_windows.zip",
-            "hash": "af99725a4b067d881fac1a39955cfed4c51fb926c2092cae1f5cd13adca1f291"
+            "url": "https://ci.easyrpg.org/job/player-win32/2057/artifact/bin/easyrpg_windows.zip",
+            "hash": "b625d1990be9c96e3e9733d320b3940fccb3b0e4a3f84e865bfaf9a7aa67edd1"
         }
     },
     "bin": [
