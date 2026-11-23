@@ -1,5 +1,5 @@
 {
-    "version": "20261122-g3cc9920",
+    "version": "20261122-gbb42a42",
     "description": "Open-source engine for Heroes of Might and Magic III (development version)",
     "homepage": "https://vcmi.eu/",
     "license": "GPL-2.0-or-later",
@@ -10,16 +10,16 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x64/VCMI-branch-develop-3cc9920.zip",
-            "hash": "1016c8c85ac9e03c1e6ab3364e7bee5b5fcca011814d25985788025b54839152"
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x64/VCMI-branch-develop-bb42a42.zip",
+            "hash": "8dc84a7efe6446bd1b5bd51af4892ed1679c4b356e2efd0c0ce44ad090be29d2"
         },
         "32bit": {
-            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x86/VCMI-branch-develop-3cc9920.zip",
-            "hash": "2c5eb598740bfeda0604069b5a94347c140166d49908087f8d348a320c748924"
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-x86/VCMI-branch-develop-bb42a42.zip",
+            "hash": "f6e55112a9dc88d77c9c95b03fce0a0d851b836a637c92820d46a13d33bae9f6"
         },
         "arm64": {
-            "url": "https://download.vcmi.eu/branch/develop/windows-zip-arm64/VCMI-branch-develop-3cc9920.zip",
-            "hash": "90054d6a2bf852487884f91a61382ee5a0a00385d7ab6795ee39e15f766b5df7"
+            "url": "https://download.vcmi.eu/branch/develop/windows-zip-arm64/VCMI-branch-develop-bb42a42.zip",
+            "hash": "5942ec5e94099ced43372a2005b0bd68fafa7da4aecca9acdccaec65fafc8fd2"
         }
     },
     "pre_install": [
