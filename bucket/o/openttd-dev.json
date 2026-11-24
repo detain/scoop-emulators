@@ -1,53 +1,53 @@
 {
-    "version": "20261112-gbcbec5e63f",
+    "version": "20261123-g1c55c72fd0",
     "description": "Simulation game based upon Transport Tycoon Deluxe (development version)",
     "homepage": "https://www.openttd.org/",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
             "url": [
-                "https://cdn.openttd.org/openttd-nightlies/2026/20261112-master-gbcbec5e63f/openttd-20261112-master-gbcbec5e63f-windows-win64.zip",
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261123-master-g1c55c72fd0/openttd-20261123-master-g1c55c72fd0-windows-win64.zip",
                 "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
                 "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
                 "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
             ],
             "hash": [
-                "39374e2ef12321fc12e0b909ecce2b7c536a95fc04096c252cbb99841d469a4a",
+                "444c4e9170d48f9fbebfc811371f72c4a72ad9b0764cc8b243db2a8f491ecbe7",
                 "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
                 "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
                 "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
             ],
-            "extract_dir": "openttd-20261112-master-gbcbec5e63f-windows-win64"
+            "extract_dir": "openttd-20261123-master-g1c55c72fd0-windows-win64"
         },
         "32bit": {
             "url": [
-                "https://cdn.openttd.org/openttd-nightlies/2026/20261112-master-gbcbec5e63f/openttd-20261112-master-gbcbec5e63f-windows-win32.zip",
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261123-master-g1c55c72fd0/openttd-20261123-master-g1c55c72fd0-windows-win32.zip",
                 "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
                 "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
                 "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
             ],
             "hash": [
-                "d7464d6c7340fb05b471851565406cfbb0a1c77f3f7d1ad8511701d56abe9841",
+                "abb103624cb8feced08527c1a535f1585c756b11bfc5a66e30703252b3a75858",
                 "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
                 "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
                 "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
             ],
-            "extract_dir": "openttd-20261112-master-gbcbec5e63f-windows-win32"
+            "extract_dir": "openttd-20261123-master-g1c55c72fd0-windows-win32"
         },
         "arm64": {
             "url": [
-                "https://cdn.openttd.org/openttd-nightlies/2026/20261112-master-gbcbec5e63f/openttd-20261112-master-gbcbec5e63f-windows-arm64.zip",
+                "https://cdn.openttd.org/openttd-nightlies/2026/20261123-master-g1c55c72fd0/openttd-20261123-master-g1c55c72fd0-windows-arm64.zip",
                 "https://cdn.openttd.org/opengfx-releases/8.0/opengfx-8.0-all.zip",
                 "https://cdn.openttd.org/opensfx-releases/1.0.3/opensfx-1.0.3-all.zip",
                 "https://cdn.openttd.org/openmsx-releases/0.4.2/openmsx-0.4.2-all.zip"
             ],
             "hash": [
-                "20e6e072a46909404806f0a8591353ee35b465b18abfdc6de9431588df3770e1",
+                "6262f36a034d679b4ca17824a9a21b37830d39a8dd94b97b82260e15b98deea6",
                 "43a0c1dabf39cb865394f3a6cc36d4da5c10ecfaaf55652043104806810903be",
                 "e0a218b7dd9438e701503b0f84c25a97c1c11b7c2f025323fb19d6db16ef3759",
                 "5a4277a2e62d87f2952ea5020dc20fb2f6ffafdccf9913fbf35ad45ee30ec762"
             ],
-            "extract_dir": "openttd-20261112-master-gbcbec5e63f-windows-arm64"
+            "extract_dir": "openttd-20261123-master-g1c55c72fd0-windows-arm64"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\\*.tar\" | Move-Item -Destination \"$dir\\baseset\" -Force",
