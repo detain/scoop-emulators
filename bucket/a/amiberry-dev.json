@@ -1,5 +1,5 @@
 {
-    "version": "5651-20261121-aa439f5",
+    "version": "5668-20261124-4ab698a",
     "description": "Commodore Amiga emulator based on WinUAE (development version)",
     "homepage": "https://amiberry.com/",
     "license": "GPL-3.0-only",
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-x64.zip",
-            "hash": "12c91dd40768bde40733752cee4593e2fc429f58f753d3ec3e6bfe573fdf1554"
+            "hash": "b374326bccbbf2788e39e313cdee2c4e18be36a50cd7b1ada38402a7d5a39d7b"
         },
         "arm64": {
             "url": "https://nightly.link/BlitterStudio/amiberry/workflows/c-cpp/master/amiberry-windows-arm64.zip",
-            "hash": "3a02c8f0373a6c19e78276b7f6e9928e902b371d0c705b4c06e9b5432caaf0da"
+            "hash": "91cca11ea23a4ac4effae0ab843e86e722444a0f7d8806e375224b1025cca50d"
         }
     },
     "pre_install": [
