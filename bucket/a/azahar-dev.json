@@ -1,5 +1,5 @@
 {
-    "version": "2127.0-rc5",
+    "version": "2127.0",
     "description": "Nintendo 3DS emulator based on Citra (development version)",
     "homepage": "https://azahar-emu.org/",
     "license": "GPL-3.0-or-later",
@@ -12,9 +12,9 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/azahar-emu/azahar/releases/download/2127.0-rc5/azahar-windows-msvc-2127.0-rc5.zip",
-            "hash": "8176efeda51844b58a293c5eb0c4ab0ffdc06ae07b91dc2f4bb3f6edd68ff035",
-            "extract_dir": "azahar-windows-msvc-2127.0-rc5"
+            "url": "https://github.com/azahar-emu/azahar/releases/download/2127.0/azahar-windows-msvc-2127.0.zip",
+            "hash": "fd34263acf91fe5ed9099955a91fa66a18cb1138b8dcb5fe424534f8650b481f",
+            "extract_dir": "azahar-windows-msvc-2127.0"
         }
     },
     "bin": [
