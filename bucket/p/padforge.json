@@ -1,5 +1,5 @@
 {
-    "version": "6.0.0",
+    "version": "6.0.1",
     "description": "Controller mapping utility that exposes any input device as virtual Xbox 360, DualShock 4, DirectInput or MIDI controllers",
     "homepage": "https://padforge.org/",
     "license": "CC-BY-NC-SA-4.0",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hifihedgehog/PadForge/releases/download/v6.0.0/PadForge-v6.0.0-win-x64.zip",
-            "hash": "4c3d61ce9f384d2a6fe10170f689490a3536882b5a8b1bf7bfda3b7dec40b106"
+            "url": "https://github.com/hifihedgehog/PadForge/releases/download/v6.0.1/PadForge-v6.0.1-win-x64.zip",
+            "hash": "28c9900e1515a7fbba019e96c4da52e7fd81b31537e8554ed1dd25c1cc334fed"
         },
         "arm64": {
-            "url": "https://github.com/hifihedgehog/PadForge/releases/download/v6.0.0/PadForge-v6.0.0-win-arm64.zip",
-            "hash": "44d03a95e67c32a5bf48fb841aea624e4b76f1d9585240019d218fbcf4f4b16f"
+            "url": "https://github.com/hifihedgehog/PadForge/releases/download/v6.0.1/PadForge-v6.0.1-win-arm64.zip",
+            "hash": "6703c6fd8e64d819625b4834b6be58f0330f43ca5d90ddccba2e964c9f53fdc3"
         }
     },
     "bin": "PadForge.exe",
