@@ -1,5 +1,5 @@
 {
-    "version": "20261122-467ab6441a",
+    "version": "20261124-b5d668560b",
     "description": "Nintendo Switch emulator (Yuzu fork) (development version)",
     "homepage": "https://eden-emu.dev/",
     "license": "GPL-3.0-or-later",
@@ -13,12 +13,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.eden-emu.dev/v1795388465.467ab6441a/Eden-Windows-467ab6441a-amd64-msvc-standard.zip",
-            "hash": "6af311a325db3b4afca5034425c3d88e4097037fbfd51806e4154c335dd7525d"
+            "url": "https://nightly.eden-emu.dev/v1795491592.b5d668560b/Eden-Windows-b5d668560b-amd64-msvc-standard.zip",
+            "hash": "ebb769ea2a6cb12bb3b7a17b401ce11d1a550fbc7af694a34599fcb2c5bee383"
         },
         "arm64": {
-            "url": "https://nightly.eden-emu.dev/v1795388465.467ab6441a/Eden-Windows-467ab6441a-arm64-clang-standard.zip",
-            "hash": "6fec7e875c64ae27cbabd7aa3bf95a93230c9de4f3b1bd17ffcb6c485d37098a"
+            "url": "https://nightly.eden-emu.dev/v1795491592.b5d668560b/Eden-Windows-b5d668560b-arm64-clang-standard.zip",
+            "hash": "f0ebb0c24d4f43f2d56e00f9e988df8ba7b94441add4b8ab2ef5a1c63ca2680a"
         }
     },
     "bin": [
