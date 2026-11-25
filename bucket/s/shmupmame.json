@@ -1,10 +1,10 @@
 {
-    "version": "5.4",
+    "version": "5.5",
     "description": "Arcade emulator, a MAME fork with reduced input lag and fixes for shoot 'em ups",
     "homepage": "https://shmupmame.wordpress.com/",
     "license": "GPL-2.0-or-later",
-    "url": "https://storage.googleapis.com/stormoid.xyz/shmupmame/shmupmame_5.4_win64.7z",
-    "hash": "708fb62fc949936218e49194e134de626ba5265f7d84ed50ed243b6c5b808625",
+    "url": "https://storage.googleapis.com/stormoid.xyz/shmupmame/shmupmame_5.5_win64.7z",
+    "hash": "5122930837b710aff81ea5ea31030ab2629c62191455d87d637301cc629ff30a",
     "pre_install": "Rename-Item \"$dir\\shmupmame_$version.exe\" 'shmupmame.exe'",
     "bin": "shmupmame.exe",
     "shortcuts": [
