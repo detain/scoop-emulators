@@ -1,16 +1,16 @@
 {
-    "version": "0.19.0",
+    "version": "1.0.0",
     "description": "Nintendo Entertainment System (NES) emulator written in Rust using wgpu",
     "homepage": "https://github.com/lukexor/tetanes",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v0.19.0/tetanes-0.19.0-x86_64-pc-windows-msvc.zip",
-            "hash": "b36df9363c017608bd63e55234b5aa2bac1c11fc81b443ea8172b9f54f4fed3c"
+            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v1.0.0/tetanes-1.0.0-x86_64-pc-windows-msvc.zip",
+            "hash": "3515091ecc81b37f1a028e131b8742726449c8660c6011d263f5d7ffec1cc46e"
         },
         "arm64": {
-            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v0.19.0/tetanes-0.19.0-aarch64-pc-windows-msvc.zip",
-            "hash": "9f8548c5fadf5c135c33375db492818434abd0927d88b7a90b37fe1ad6a558aa"
+            "url": "https://github.com/lukexor/tetanes/releases/download/tetanes-v1.0.0/tetanes-1.0.0-aarch64-pc-windows-msvc.zip",
+            "hash": "4a5f06d1df054e52da600fafa13f8340539233c86004bfa046b763eb5782af7c"
         }
     },
     "installer": {
