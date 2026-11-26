@@ -1,10 +1,10 @@
 {
-    "version": "1.2.13",
+    "version": "1.2.14",
     "description": "Microsoft Xbox emulator with a console-style dashboard",
     "homepage": "https://github.com/crazyriddler/xbased",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/crazyriddler/xbased/releases/download/v1.2.13/xbased-1.2.13-windows-x64.zip",
-    "hash": "433dfab40a13b8354d5f34f49125e251d39eb8850a81b21644ffb93189b16d04",
+    "url": "https://github.com/crazyriddler/xbased/releases/download/v1.2.14/xbased-1.2.14-windows-x64.zip",
+    "hash": "903e2564b74a54aaa568d36f1e20c215c0514341d23fe6ac7f98731354035cca",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\xbased.ini\")) {",
         "    New-Item \"$dir\\xbased.ini\" -Type File | Out-Null",
