@@ -1,5 +1,5 @@
 {
-    "version": "0.4.2-20261126-459959f2",
+    "version": "0.4.2-20261127-1526ade4",
     "description": "Sega Saturn emulator (development version)",
     "homepage": "https://github.com/ymir-emu/Ymir",
     "license": "GPL-3.0-only",
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-x86_64-AVX2-v0.4.2-dev_459959f2.zip",
-            "hash": "5b50185963f3e6812d988de93f32361bb8738c58d76757673702e86d3db1bf00"
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-x86_64-AVX2-v0.4.2-dev_1526ade4.zip",
+            "hash": "ea708c2315f8ff4258f0d6bc92e0963a91e19f2f530cdc04ef9ab47f488ba8e1"
         },
         "arm64": {
-            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-ARM64-v0.4.2-dev_459959f2.zip",
-            "hash": "ad160193c96e4f669dd1b2b945208a8642f625c1c6ac1c971e74319455b2e393"
+            "url": "https://github.com/ymir-emu/Ymir/releases/download/latest-nightly/ymir-windows-ARM64-v0.4.2-dev_1526ade4.zip",
+            "hash": "3b628fea23d1bc79bcd6738519eb18adfa46cb1727538c905768747ff54156dd"
         }
     },
     "pre_install": [
