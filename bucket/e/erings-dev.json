@@ -1,5 +1,5 @@
 {
-    "version": "115-20261113-6e60d8c",
+    "version": "116-20261126-200e41d",
     "description": "Sega Saturn emulator (development version)",
     "homepage": "https://github.com/user-none/erings",
     "license": "GPL-3.0-only",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-6e60d8c-windows-amd64.zip",
-            "hash": "2b1d313311f23eb9c4b81fa0f42ad0b4a0ca5740ef901ae52b6cd7dcbfc446d8"
+            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-200e41d-windows-amd64.zip",
+            "hash": "d2f750fa2974bfacf0afe789c7e76cdccc1b7ca3abab893c083f66f5bb3aed5c"
         },
         "arm64": {
-            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-6e60d8c-windows-arm64.zip",
-            "hash": "c82d4793cb979c615cd638b900233621020c72c5bde0909f7271738f7039aa90"
+            "url": "https://nightly.link/user-none/erings/workflows/build/main/erings-200e41d-windows-arm64.zip",
+            "hash": "26cd6577540d9cf0fdf5a2104e05aa08a9749c915f4310ae6cfc2ebb29bf38f8"
         }
     },
     "bin": [
