@@ -1,17 +1,17 @@
 {
-    "version": "3.8.22-7-gad6fa70",
+    "version": "3.8.22-10-gd931cc2",
     "description": "Nintendo Game Boy / Game Boy Color emulator and debugger (development version)",
     "homepage": "https://github.com/drhelius/Gearboy",
     "license": "GPL-3.0-or-later",
     "notes": "Development builds come from GitHub Actions artifacts (via nightly.link), which expire after about 90 days.",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/drhelius/Gearboy/workflows/gearboy/master/Gearboy-3.8.22-7-gad6fa70-desktop-windows-x64.zip",
-            "hash": "be4d2a12bfb47fa57c9e2352df39e8fd934ce8683d7dbdad1288e67da5672a30"
+            "url": "https://nightly.link/drhelius/Gearboy/workflows/gearboy/master/Gearboy-3.8.22-10-gd931cc2-desktop-windows-x64.zip",
+            "hash": "67b796763e5b1159100f73bc1a5de093817893297ceccfb284ab00cef8cc4662"
         },
         "arm64": {
-            "url": "https://nightly.link/drhelius/Gearboy/workflows/gearboy/master/Gearboy-3.8.22-7-gad6fa70-desktop-windows-arm64.zip",
-            "hash": "1d4bd98ee09380caa21f42bfc74767498bdca86353ba1200aec99113085c9a14"
+            "url": "https://nightly.link/drhelius/Gearboy/workflows/gearboy/master/Gearboy-3.8.22-10-gd931cc2-desktop-windows-arm64.zip",
+            "hash": "ded23c1192f936d35491dd3d93f676be4f79dd8d9bc62f26e6d95591356fff43"
         }
     },
     "pre_install": [
