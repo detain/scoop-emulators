@@ -1,5 +1,5 @@
 {
-    "version": "859-20261127-9f4c29c",
+    "version": "860-20261127-6db4de7",
     "description": "Arcade machine emulator (MAME) with an integrated Windows GUI front-end (development version)",
     "homepage": "https://messui.1emulation.com/",
     "license": "GPL-2.0-or-later",
@@ -7,8 +7,8 @@
         "Development builds come from GitHub Actions artifacts of Robbbert/mameui (via nightly.link), which expire about 14 days after the build.",
         "The artifact contains only mameui.exe (no plugins, language, hash or artwork files)."
     ],
-    "url": "https://nightly.link/Robbbert/mameui/actions/runs/45924000927/mameui-windows-gcc-9f4c29c8b6ca18e5e3b49bae56b0cab8bec05f41.zip",
-    "hash": "31a133e8cf77d01ef07102842fb54ba09b9ad5d889d55d3acd0e889db836fad7",
+    "url": "https://nightly.link/Robbbert/mameui/actions/runs/46079831233/mameui-windows-gcc-6db4de701c71031f230d034c025fd874403f9d03.zip",
+    "hash": "b6ecea4997ce687d3d0d3c761892dc92e0fdebb89edd04c42008a0b4e37d025d",
     "bin": [
         [
             "mameui.exe",
