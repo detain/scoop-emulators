@@ -1,5 +1,5 @@
 {
-    "version": "60-20261118-f52c444",
+    "version": "62-20261127-81683d2",
     "description": "Sony PlayStation 2 emulator (development version)",
     "homepage": "https://github.com/allkern/iris",
     "license": "MIT",
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-amd64.zip",
-            "hash": "fb8ad8465476dd4f54e844dde7932ba005acae40157b96f3a8825738ea87a6f1"
+            "hash": "4d678359d5b1973a5fb96dd8c47c90acf2e508a28e83f5b116bef7f9d887acda"
         },
         "arm64": {
             "url": "https://nightly.link/allkern/iris/workflows/build/dev/iris-latest-windows-arm64.zip",
-            "hash": "a6e7687f1b2bf046b8bc21eaeb93466a47db87b2759d6524901c32c46b21eab9"
+            "hash": "09b239e6523266fbebdc163ed1c4312e4a3711d40e005ea42db94d0365fc40ed"
         }
     },
     "bin": [
